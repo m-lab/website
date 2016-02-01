@@ -4,9 +4,6 @@ The examples below query the M-Lab data in various ways to demonstrate effective
 
 # Basic counting — How many users?
 
- * The multiplication by `POW(10, 6)` is due to the fact that `STRFTIME_UTC_USEC` expects a timestamp in microseconds, while `web100_log_entry.log_time` is in seconds.
- * The [BigQuery Query Reference][13] describes the `STRFTIME_UTC_USEC` function.
-
 Let's start with something simple. How many distinct users (distinct IPs for simplicity) have ever run an **NDT** test?
 
 ```sql
@@ -28,6 +25,8 @@ Result:
 
 By slightly modifying the previous query, it is possible to compute how the number of users changed over time.
 
+ * The multiplication by `POW(10, 6)` is due to the fact that `STRFTIME_UTC_USEC` expects a timestamp in microseconds, while `web100_log_entry.log_time` is in seconds. The [BigQuery Query Reference][13] describes the `STRFTIME_UTC_USEC` function.
+
 ```sql
 SELECT
   STRFTIME_UTC_USEC(web100_log_entry.log_time * INTEGER(POW(10, 6)),
@@ -36,7 +35,7 @@ SELECT
 FROM
   plx.google:m_lab.ndt.all
 WHERE
-  AND web100_log_entry.connection_spec.remote_ip IS NOT NULL
+  web100_log_entry.connection_spec.remote_ip IS NOT NULL
 GROUP BY
   day
 ORDER BY
