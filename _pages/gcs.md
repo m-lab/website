@@ -1,3 +1,9 @@
+---
+layout: page
+title: GCS
+permalink: /gcs/
+---
+
 # Overview
 M-Lab publishes all data it collected in raw form as archives on Google Cloud Storage (GCS) at the following location:
 

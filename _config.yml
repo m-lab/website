@@ -1,0 +1,11 @@
+# Site settings
+title: Measurement Lab
+email: support@measurementlab.net
+baseurl: /
+
+# Build settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+kramdown:
+  input: GFM
