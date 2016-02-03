@@ -1,3 +1,9 @@
+---
+layout: page
+title: BigQuery Examples
+permalink: /bigquery/examples/
+---
+
 # Overview
 
 The examples below query the M-Lab data in various ways to demonstrate effective use of the M-Lab BigQuery dataset.
