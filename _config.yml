@@ -1,7 +1,7 @@
 # Site settings
 title: Measurement Lab
 email: support@measurementlab.net
-baseurl: /
+baseurl: ""
 
 # Build settings
 sass:
