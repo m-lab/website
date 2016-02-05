@@ -1,0 +1,12 @@
+ <h2>Recent Blog Posts</h2>
+ {% for post in site.posts limit: 10 %}
+ <div class="blog-container">
+  <h3><a href="{{ post.url }}" class="blog-teaser-title">{{ post.title }}</a></h3>
+  {% if post.teaser_image %}<img src="/files/{{ post.teaser_image }}" style="width:15%; height: auto; float: right;" />{% endif %}
+  <p class="blog-pubdata">{{ post.date | date: "%B %d, %Y" }} {{ post.post_author }}</p>
+  <p class="blog-excerpt">{{ post.content | split:'<!--more-->' | first | strip_html }}</p>
+  <a href="{{ post.url }}">Read More</a>
+ <div class="floatright">{{ post.categories | category_links }}</div>
+  <hr>
+ </div>
+ {% endfor %}
