@@ -1,0 +1,12 @@
+    <div class="right-third">
+{% case page.site_section %}
+{% when 'about' %}
+<h3><a  href="/about">About</a></h3>
+<% include about_menu.html %}
+{% when 'help' %}
+<h3><a href="/docs">Documentation</a></h3>
+<% include docs_menu.html %}
+{% else %}
+... else ...
+{% endcase %}
+    </div>

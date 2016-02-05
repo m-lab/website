@@ -1,0 +1,7 @@
+{% for post in site.posts limit: 2 %}
+<div class="blog-container">
+<h4><a href="{{ post.url }}" class="blog-teaser-title">{{ post.title }}</a></h4>
+<p class="blog-pubdata">{% if post.teaser_image %}<img src="/files/{{ post.teaser_image }}" style="width:15%; height: auto; float: right;" />{% endif %} {{ post.date | date: "%B %d, %Y" }} {{ post.post_author }}</p>
+<p class="blog-excerpt">{{ post.content | split:'<!--more-->' | first | strip_html }}</p>
+</div>
+{% endfor %}

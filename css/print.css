@@ -1,0 +1,112 @@
+.navbar, #navbar, .navbar-inners {
+    display:none; 
+}
+
+.containercontent {
+    background: #fff;
+}
+
+div#logo {
+    position: relative;
+    float: right;
+}
+
+div#logo img {
+    width: 200px;
+}
+
+#slideshow {
+    display: none;
+}
+
+.contentcontainer {
+    background: #ffffff;
+}
+
+dt {
+    margin-top:10px;
+}
+
+.contentcontainer a:link, .contentcontainer a:visited, {
+    font-size 14px;
+    border-bottom: dotted 2px #FF739C;
+}
+
+a {
+    font-size: 14px;
+}
+
+.contentcontainer {
+    background: #ffffff;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 35px;
+}
+.contentcontainer a:link, .contentcontainer a:visited {
+    border-bottom: 2px dotted #FF739C;
+    color: #4D4D4D;
+    text-decoration: none;
+    background: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.contentcontainer a:hover, .contentcontainer a:visited {
+    border-bottom: 2px dotted #FF739C;
+    color: #4D4D4D;
+    background: none;
+}
+
+.right-twothird {
+    width: 97%;
+}
+
+.left-twothird {
+    width: 97%;
+}
+
+.right-third {
+    display: none;
+}
+
+.left-third {
+    display: none;
+}
+    
+div.pageheadings h1.pageheadings, div.pageheadings {
+    color: #000000;
+    background: #ffffff;
+}
+
+div.pageheadings hr {
+    height: 0px;
+}
+
+/* images and paragraphs shouldn't break */
+
+img, p {
+    page-break-before: auto;
+    page-break-after: auto; 
+    page-break-inside: avoid; /* could also be auto, but avoid is more explicit */
+}
+
+#download-button-block { 
+    display: none;
+}
+
+#twitter-widget-0, #twitter-wjs {
+    display: none;
+}
+
+.external-resources ul {
+    color: #000000;
+}
+
+.footer-wrapper {
+    background: #ffffff;
+}
+
+.footer-wrapper ul.menu {
+    display: none;
+}
+

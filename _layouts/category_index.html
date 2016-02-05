@@ -1,0 +1,12 @@
+---
+layout: category_page
+---
+<div class="blog-index">
+    <ul>
+    {% for post in site.categories[page.category] %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a><br />
+    <span class="index-day">{{ post.date | date_to_html_string }}</span> / <span class="author">{{ post.post_author }}</span><br />
+    <span class="tag"> Tags: {{ post.categories | category_links }}</span></li>
+    {% endfor %}
+    </ul>
+</div>
