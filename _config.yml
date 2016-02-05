@@ -6,11 +6,12 @@ encoding: "utf-8"
 baseurl: ""
 
 # Build settings
-sass:
-  sass_dir: _sass
-include: ['_pages']
-kramdown:
-  input: GFM
+#sass:
+#  sass_dir: _sass
+#include: ['_pages']
+markdown: kramdown
+#kramdown:
+#  input: GFM
 
 permalink: /blog/:year/:month/:day/:title
 category_dir: /blog/category
