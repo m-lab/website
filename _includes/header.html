@@ -1,0 +1,34 @@
+{% assign header = site.data.header-footer-content.header %}
+
+<header class="header-section">
+
+  <div class="l-span1">
+    <h1 class="main-logo"><a href="{{ site.baseurl }}/">{{ header.logo-title }}</a></h1>
+  </div>
+
+  {% for item in header.ctas %}
+    <div class="l-span1">
+      <a href="{{ item.link }}" class="header-cta {{ item.class }}">
+        <h2>{{ item.h2 }}</h2>
+        <h3>{{ item.h3 }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+
+</header>
+
+<nav class="main-nav-section">
+  <div class="nav-ctn">
+    <ul class="main-nav">
+
+      {% for page in site.pages %}
+        {% if page.menu-item %}
+          <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+
+    </ul>
+  </div>
+</nav>
+
+<div class="preloader"></div>
