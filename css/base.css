@@ -1746,8 +1746,8 @@ label,.label {
     padding: 17px 0 0
 }
 
-.intro-section .section-heading {
-    padding-bottom: 16px
+.subpage-content h1 {
+    padding: 16px 0px;
 }
 
 .intro-section p {
