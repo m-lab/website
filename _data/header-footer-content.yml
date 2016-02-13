@@ -12,6 +12,27 @@ header:
     h2: "Read about our projects"
     h3: "Research Wiki"
     class: "learn-cta"
+  category: 
+    -
+      title: "about"
+      sub-nav:
+        - text: "What is Measurement Lab?"
+          url:  "/about/"
+        - text: "FAQ"
+          url:  "/faq/"
+        - text: "Who we are"
+          url:  "/who/"
+        - text: "Contact"
+          url:  "/contact/"
+    -
+      title: "visualizations"
+      sub-nav:
+        - text: "Performance"
+          url:  "/visualizations/"
+        - text: "Transparency"
+          url:  "/transparency/"
+        - text: "State"
+          url:  "/state/"
 footer:
   subscribe:
     title: "Subscribe for M-Lab updates"

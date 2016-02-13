@@ -1,4 +1,6 @@
 {% assign header = site.data.header-footer-content.header %}
+{% assign current_page = page.url %}
+{% assign active_link = page.breadcrumb | append: "/" | prepend: "/" %}
 
 <header class="header-section">
 
@@ -17,18 +19,37 @@
 
 </header>
 
+<!-- Top Navigation -->
 <nav class="main-nav-section">
   <div class="nav-ctn">
     <ul class="main-nav">
 
       {% for page in site.pages %}
         {% if page.menu-item %}
-          <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+          <li{% if page.url == current_page or page.url == active_link %} class="is-active"{% endif %}><a href="{{ page.url | prepend: site.basurl}}">{{ page.title }}</a>
+          </li>
         {% endif %}
       {% endfor %}
 
     </ul>
   </div>
+
+  {% for cat in header.category %}
+    {% if cat.title == page.breadcrumb %}
+    <!-- Sub Navigation -->
+    <div class="sub-nav-ctn">
+      <ul class="sub-nav">
+
+      {% for link in cat.sub-nav %}
+        <li{% if link.url == current_page %} class="is-active"{% endif %}><a href="{{link.url | prepend: site.basurl}}">{{link.text}}</a></li>
+      {% endfor %}
+
+      </ul>
+    </div>
+
+    {% endif %}
+  {% endfor %}
+
 </nav>
 
 <div class="preloader"></div>

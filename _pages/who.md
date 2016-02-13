@@ -1,7 +1,8 @@
 ---
 layout: page
 permalink: /who/
-title: "Who"
+title: "Who we are"
+breadcrumb: "about"
 ---
 
 Who content here
