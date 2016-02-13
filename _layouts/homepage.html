@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+
+<meta data-id="enhancer" data-classname="HomePageEnhancer">
+<meta data-video-id="{{ page.videoid }}">
+
+<div class="about-section info-segment">
+  <div class="info-segment-inner">
+    <section class="what-is-col l-span2">
+        <h2 class="info-heading initial-heading">{{ page.info-heading }}</h2>
+        <article class="video-entry">
+            <h3 class="info-subheading">{{ page.info-subheading }}</h3>
+            <div class="video-placeholder">
+              <div class="player-ctn">
+                <div id="video"></div>
+                <a href="http://youtu.be/{{ page.videoid }}" class="player-overlay" target="_blank">
+                  <span class="btn-play player-control"><i class="icon icon-play icon-middle"></i></span>
+                </a>
+              </div>
+            </div>
+        </article>
+    </section>
+
+    <aside class="mission-col l-span1">
+      <div>
+        <h2 class="info-heading">{{ page.mission-heading }}</h2>
+        <article class="mission-entry">
+          <h3 class="info-subheading">{{ page.mission-subheading }}</h3>
+          <div class="segment-description">
+            {{ content }}
+          </div>
+        </article>
+      </div>
+    </aside>
+  </div>
+</div>
