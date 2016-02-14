@@ -1,0 +1,43 @@
+{% comment %} 
+<!--
+  "Tools" Grid Feature
+
+  This file constitutes a dynamic grid feature displaying images and blurbs 
+  grouped by a category.  The grid will display up to 3 items per row and will 
+  automatically handle overflows of items to subsequent rows.
+
+  In order to include this grid, a page needs to have:
+  - grid-section yml value
+  - grid-items within each grid section
+
+  An example of this feature is found on the /tests/ page displaying measurement
+  tools and is currently included as part of the page.html layout
+--> 
+{% endcomment %}
+
+{% if page.grid-section %}
+  {% for grid in page.grid-section %}
+
+  <section class="info-section grid-section first-child {{ grid.group-heading | downcase | replace: " ", "-" }}">
+    <h2 class="grid-header" id="{{ grid.group-heading | downcase | replace: " ", "-" }}">{{ grid.group-heading }}</h2>
+    <ul class="l-grid l-3col">
+
+      {% for item in grid.grid-items %}
+      <li class="grid-group">
+        <a href="{{ item.link | prepend: site.baseurl }}" class="grid-link is-plain">
+
+          <div class="grid-img"><img src="{{ site.baseurl }}/images/tests/{{ item.image }}" alt="{{ item.heading }}" class=""></div>
+          <div class="grid-info">
+            <h3 class="grid-heading">{{ item.heading }}</h3>
+            <div class="grid-description"><p>{{ item.desc }}</p></div>
+          </div>
+        
+        </a>
+      </li>
+      {% endfor %}
+
+    </ul>
+  </section>
+
+  {% endfor %}
+{% endif %}
