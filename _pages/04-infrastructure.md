@@ -10,11 +10,11 @@ menu-item: true
 
 ## Server Map
 
-<p><iframe src="http://mlab-ns.appspot.com/admin/map/ipv4/all" width="960" height="660" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" align="left"></iframe></p>
+<p><iframe src="https://mlab-ns.appspot.com/admin/map/ipv4/all" width="960" height="660" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" align="left"></iframe></p>
 
 ## Server status
 
-<p><iframe src="http://mlab-ns.appspot.com/admin/sliver_tools" width="960" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes"></iframe></p>
+<p><iframe src="https://mlab-ns.appspot.com/admin/sliver_tools" width="960" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes"></iframe></p>
 
 ## M-Lab NS
 
