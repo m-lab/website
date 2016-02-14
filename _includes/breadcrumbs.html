@@ -1,0 +1,28 @@
+{% assign header = site.data.header-footer-content.header %}
+
+{% comment %}<!-- Determine breadcrumb hierarchy for sub navs -->{% endcomment %}
+{% assign active_link = page.breadcrumb | append: "/" | prepend: "/" %}
+{% assign last_crumb = page.title %}
+
+{% if active_link == page.url %}
+	{% for cat in header.category %}
+    {% if cat.title == page.breadcrumb %}
+    	{% for link in cat.sub-nav %}
+    		{% if link.url == page.url %}
+    			{% assign last_crumb = link.text %}
+    		{% endif %}
+    	{% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="subpage-content full-width {{page.breadcrumb}}-page">
+<nav class="breadcrumbs">
+  <a href="/" class="breadcrumb">Home</a> /
+  
+  {% if page.breadcrumb %}
+  <a href="{{ site.baseurl }}/{{ page.breadcrumb }}/" class="breadcrumb">{{ page.breadcrumb | capitalize }}</a> /
+  {% endif %}
+
+  <a href="{{ page.url | prepend: site.baseurl }}" class="breadcrumb">{{ last_crumb }}</a>
+</nav>

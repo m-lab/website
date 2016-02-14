@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /terms/
-title: "Terms"
+title: "Terms &amp; Conditions"
 ---
 
 Terms content here

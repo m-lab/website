@@ -1,8 +1,7 @@
 ---
-layout: page
+layout: default
 audience: homepage
 permalink: /
-title: "Home"
 ---
 
 Home page content here

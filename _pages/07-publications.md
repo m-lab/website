@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 permalink: /publications/
 title: "Publications"
 menu-item: true

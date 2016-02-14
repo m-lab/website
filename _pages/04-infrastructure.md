@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 permalink: /infrastructure/
 title: "Infrastructure"
 menu-item: true
