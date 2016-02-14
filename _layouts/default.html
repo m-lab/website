@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
-  {% include head.html %} 
+{% include head.html %} 
 
   <body>
   <!--[if lt IE 7]>
@@ -27,7 +27,9 @@
   </div>
   <!-- // .push -->
 
-  {% include footer.html %}
+  {% if page.audience != "observatory" %}
+    {% include footer.html %}
+  {% endif %}
 
   </body>
 
