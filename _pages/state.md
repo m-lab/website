@@ -6,7 +6,7 @@ breadcrumb: visualizations
 accordion: 
   - heading: "RIPEstat Widgets to Explore Networks&#39; Activity"
   - heading: "How many M-Lab tests? How much M-Lab data?"
-  - Distribution of NDT tests
+  - heading: "Distribution of NDT tests"
 ---
 
 # State
@@ -22,6 +22,8 @@ Here we highlight visualizations that illuminate the state of networks and M-Lab
 
 As a random example, check out the bandwidth distribution in Germany (the top chart) and the distribution of active users within 193.0.0.0/10 (the bottom chart).
 
+<p dir="ltr"></p>
+<p dir="ltr"></p>
 <script src="https://stat.ripe.net/widgets/widget_api.js" type="text/javascript"></script>
 <div class="statwdgtauto">
 <script type="text/javascript">// <![CDATA[
@@ -36,7 +38,6 @@ ripestat.init("network-activity",{"resource":"193.0.0.0/10"},null,{"show_control
 </div>
 <div class="statwdgtauto"></div>
 <div class="statwdgtauto"></div>
-
 
 {% endcapture %}
 
