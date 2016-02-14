@@ -17,7 +17,7 @@ Here we highlight visualizations that illuminate the state of networks and M-Lab
 
 [RIPEstat](https://stat.ripe.net/){:target="_blank"} is a web-based interface developed by the [RIPE NCC](http://www.ripe.net/){:target="_blank"} featuring visualization widgets and data APIs dedicated to making sense of Internet data. RIPEstat now includes:
 
-- The **[Observed Network Activity widget](https://stat.ripe.net/widget/network-activity){:target="_blank"}**, which shows the distribution of actively used IP addresses within a specific country or network, during a user-defined time period. An IP address is considered &ldquo;active&rdquo; if it originated an [NDT](){{ site.basurl }}/tools/ndt/{:target="_blank"} test.
+- The **[Observed Network Activity widget](https://stat.ripe.net/widget/network-activity){:target="_blank"}**, which shows the distribution of actively used IP addresses within a specific country or network, during a user-defined time period. An IP address is considered &ldquo;active&rdquo; if it originated an [NDT]({{ site.basurl }}/tools/ndt/){:target="_blank"} test.
 - The **[Observed Bandwidth Capacity widget](https://stat.ripe.net/widget/bandwidth){:target="_blank"}**, which shows the bandwidth distribution within a specific country or network during a user-defined time period, as measured by NDT.
 
 As a random example, check out the bandwidth distribution in Germany (the top chart) and the distribution of active users within 193.0.0.0/10 (the bottom chart).
