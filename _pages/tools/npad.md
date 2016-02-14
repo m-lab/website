@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /tools/npad/
-title: "NPAD (Network Path & Application Diagnostics)"
+title: "NPAD (Network Path &amp; Application Diagnostics)"
 breadcrumb: tests
 ---
 
