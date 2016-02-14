@@ -1,0 +1,60 @@
+---
+header:
+  logo-title: "M-Lab"
+  ctas:
+  -
+    link: "/contribute/" 
+    h2: "Help us grow and improve"
+    h3: "Contribute to M-Lab"
+    class: "assist-cta"
+  -
+    link: "https://github.com/m-lab/mlab-wikis" 
+    h2: "Read about our projects"
+    h3: "Research Wiki"
+    class: "learn-cta"
+footer:
+  subscribe:
+    title: "Subscribe for M-Lab updates"
+    items:
+    -
+      link: "https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss"
+      link-title: "Google"
+      link-class: "google-share"
+    -
+      link: "mailto:support@measurementlab.net?subject=Inquiry about Measurement Lab"
+      link-title: "Email"
+      link-class: "email-share"
+    -
+      link: "/"
+      link-title: "RSS"
+      link-class: "rss-share"
+  other-links:
+    column-one:
+      items:
+      -
+        link: "/about/"
+        link-title: "About Us"
+      -
+        link: "/contact/"
+        link-title: "Contact"
+      -
+        link: "/faq/"
+        link-title: "FAQ"
+      -
+        link: "/blog/"
+        link-title: "Blog"
+    column-two:
+      items:
+      -
+        link: "/privacy"
+        link-title: "Privacy Policy"
+      -
+        link: "/terms/"
+        link-title: "Terms"
+      -
+        link: "/"
+        link-title: "RSS Feed"
+  privacy:
+    title: "Privacy Policy &amp; Acceptable Use Policy."
+    link: "/privacy/"
+    blurb: "All original material on Measurement Lab by New America Foundation is licensed under a <a href=\"http://creativecommons.org/licenses/by-nc-sa/3.0/us/\" target=\"_blank\">Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States License.</a> M-Lab is a <a href=\"/who/\">collaborative effort</a> led by researchers in partnership with companies and other institutions."

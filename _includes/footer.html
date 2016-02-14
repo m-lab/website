@@ -1,0 +1,48 @@
+{% assign footer = site.data.header-footer-content.footer %}
+
+<footer class="footer-section">
+  <span class="footer-shadow"></span>
+
+  <!-- Footer - Social Media -->
+  <div class="footer-ctn">
+    <div class="callout-col l-span1">
+      <h2>{{ footer.subscribe.title }}</h2>
+      <nav>
+        <ul class="callout-ctn social-ctn">
+
+			  {% for item in footer.subscribe.items %}
+          <li><a href="{{ item.link }}" class="btn-social {{ item.link-class }}" target="_blank">{{ item.link-title }}</a>
+          </li>
+			  {% endfor %}
+
+        </ul>
+      </nav>
+    </div>
+
+  <!-- Footer - Navigational Links -->
+    <div class="footer-nav-col l-span1">
+      <ul class="footer-links">
+			  
+			  {% for item in footer.other-links.column-one.items %}
+          <li><a href="{{ item.link }}">{{ item.link-title }}</a>
+          </li>
+			  {% endfor %}
+
+      </ul>
+      <ul class="footer-links">
+        
+			  {% for item in footer.other-links.column-two.items %}
+          <li><a href="{{ item.link }}">{{ item.link-title }}</a>
+          </li>
+			  {% endfor %}
+      
+      </ul>
+    </div>
+
+  <!-- Footer - Privacy Policy -->
+    <div class="privacy-policy">
+      <small><a href="{{ footer.privacy.link }}" class="policy-heading" target="_blank">{{ footer.privacy.title }}</a></small>
+      <small>{{ footer.privacy.blurb }}</small>
+    </div>
+  </div>
+</footer>
