@@ -1819,6 +1819,10 @@ label,.label {
     padding-bottom: 26px
 }
 
+.blog-entry p.center {
+    text-align: center;
+}
+
 .blog-entry .meta {
     padding-top: 14px
 }
@@ -1829,7 +1833,17 @@ label,.label {
 
 .blog-entry img {
     max-width: 100%;
-    width: auto
+    width: auto;
+}
+
+.blog-entry img.pull-right {
+    float: right;
+}
+
+.blog-entry ul {
+    list-style-type: square;
+    margin-left: 15px;
+    padding-left: 15px;
 }
 
 .blog-entry .visualisation-error {
@@ -1853,7 +1867,7 @@ label,.label {
 }
 
 .blogroll-navigation {
-    margin-top: -20px
+    margin-top: 20px
 }
 
 .blogroll-navigation h2 {

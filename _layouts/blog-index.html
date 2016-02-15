@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+{% include breadcrumbs.html %}
+
+<div class="l-span2 blogroll">
+
+  {% for post in paginator.posts %}
+
+  <article class="blog-entry">
+
+    {{ post.content }}
+
+    <footer class="meta">
+      <small>Posted by <b class="author">{{ post.author }}</b> on <span class="published">{{ post.date | date: "%Y-%m-%d" }}</span> filed under 
+        <span class="categories">
+	      
+        {% for cat in post.categories %}
+          <a href="{{ site.baseurl }}/blog/category/{{ cat | replace: ' ', '-' }}/">{{ cat }}</a>{% unless forloop.last %},{% endunless %}
+        {% endfor %}                            
+				
+        </span>
+      </small>
+    </footer>
+
+  </article> <!-- .blog-entry -->
+  
+  {% endfor %}
+
+  {% if paginator.total_pages > 1 %}
+  <ol class="pagination">
+    {% if paginator.next_page %}
+      <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="next dir is-plain">Next<i class="icon icon-triangle icon-right icon-after"></i></a></li>
+    {% endif %}
+
+    {% if paginator.previous_page %}
+      <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous dir is-plain"><i class="icon icon-triangle icon-left icon-before"></i>Previous</a></li>
+    {% endif %}
+
+  </ol> <!-- .pagination -->
+  {% endif %}
+
+</div> <!-- .blogroll -->
+
+{% include siderail.html %}
+

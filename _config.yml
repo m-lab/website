@@ -2,8 +2,10 @@
 title: M-Lab
 email: support@measurementlab.net
 baseurl: ""
+excerpt_separator: <!--more-->
 
 # Build settings
+permalink: "/blog/:title/"
 sass:
   sass_dir: _sass
 include: ['_pages']
@@ -12,3 +14,8 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+
+# Gems
+gems: ['jekyll-paginate']
+paginate: 1
+paginate_path: "/blog/page/:num"

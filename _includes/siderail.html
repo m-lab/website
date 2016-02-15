@@ -1,0 +1,56 @@
+{% comment %} 
+<!--
+  Siderail Feature
+
+  This file contains the code needed to generate a siderail consisting of blog
+  archives for categories as well as for months/years.
+
+  Currently the siderail is included on all 3 of the blog layouts, i.e. -
+  blog index, blog page, and blog archives page.
+--> 
+{% endcomment %}
+
+<!-- Siderail -->
+<div class="blogroll-navigation l-span1 last">
+
+  <!-- Category Archives -->
+  <div class="filter-col-ctn blog-cat-col">
+    <h2>Categories</h2>
+    <ul class="filter-col">
+    {% assign sorted_cats = (site.categories | sort:0) %}
+    {% for cat in sorted_cats %}
+
+      {% capture same_page %}/blog/category/{{ cat[0] }}/{% endcapture %}
+	      
+      <li><a href="{{ same_page | prepend: site.baseurl }}" {% if page.url == "same_page" %}class="is-active"{% endif %}>{{ cat[0] | capitalize }}</a> <span class="count">({{ cat[1].size }})</span></li>
+
+    {% endfor %}
+
+    </ul>
+  </div> <!-- .blog-cat-col -->
+
+  <!-- Archives -->
+  <div class="filter-col-ctn blog-date-col">
+    <h2>Archive</h2>
+    <ul class="filter-col">
+
+    {% assign counter = 0 %}
+    {% for post in site.posts %}
+      {% assign thisyear = post.date | date: "%B %Y" %}
+      {% assign prevyear = post.previous.date | date: "%B %Y" %}
+      {% assign counter = counter | plus: 1 %}
+    	
+      {% if thisyear != prevyear %}
+        {% capture same_page %}/blog/{{ post.date | date: "%Y" }}/{{ post.date | date: "%m"}}/{% endcapture %}
+
+        <li><a href="{{ same_page | prepend: site.baseurl }}" {% if page.url == same_page %}class="is-active"{% endif %}>{{ thisyear }}</a> <span class="count">({{ counter }})</span>
+
+        {% assign counter = 0 %}
+      {% endif %}
+  
+    {% endfor %}
+    
+    </ul>
+  </div> <!-- .blog-date-col -->
+
+</div> <!-- .blogroll-navigation -->
