@@ -2002,3 +2002,8 @@ label,.label {
 }
 
 .hidden { display: none; }
+
+.performance-page .accordion-content ul {
+    list-style-type: circle;
+    padding-left: 30px;
+}

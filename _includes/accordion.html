@@ -1,0 +1,15 @@
+<div class="info-section accordion-section">
+  <ul class="accordion is-collapsed">
+
+  	{% for entry in page.accordion %}
+  		{% capture accordion_section %}accordion_entry_{{ forloop.index }}{% endcapture %}
+    
+    <li class="accordion-entry">
+      <h2 class="tabbed-heading">{{ entry.heading }}</h2>
+      <div class="accordion-content">{{ [accordion_section] | markdownify }}</div>
+    </li>
+    
+    {% endfor %}
+
+  </ul>
+</div>
