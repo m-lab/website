@@ -1,8 +1,39 @@
+{% comment %} 
+<!--
+  Accordion Feature
+
+  This partial can be included in any markdown file that needs accordion behavior.
+  In the markdown file that includes this partial, there needs to be an array of the 
+  different accordion entries per accordion needed.  Then within the markdown, each
+  entry can be captured using the liquid " capture accordion_entry_XX " where "XX"
+  is the number cooresponding to the accordion entry begining with 1.  This information 
+  is what this partial keys on and loops through to build the accordion.
+
+	If including multiple accordions in the markdown, the "accordion_entry_XX" XX numbering
+	system should restart at 1.
+
+  Parameters:
+    acc_section (string, optional):
+      ID signifying specific accordion to build.  Defaults to generic "accordion" name 
+      if not specified.
+
+--> 
+{% endcomment %}
+
+
+{% comment %} <!-- Check to see if there is a specifc accordion name being passed in. --> {% endcomment %}
+{% if include.acc_section %}
+	{% capture acc_name %}{{ include.acc_section }}-accordion{% endcapture %}
+{% else %}
+  {% assign acc_name = "accordion" %}
+{% endif %}
+
+
 <div class="info-section accordion-section">
   <ul class="accordion is-collapsed">
 
-  	{% for entry in page.accordion %}
-  		{% capture accordion_section %}accordion_entry_{{ forloop.index }}{% endcapture %}
+    {% for entry in page.[acc_name] %}
+      {% capture accordion_section %}accordion_entry_{{ forloop.index }}{% endcapture %}
     
     <li class="accordion-entry">
       <h2 class="tabbed-heading">{{ entry.heading }}</h2>

@@ -14,7 +14,7 @@ carousel-items:
     alt: "This research reveals that consumer access and performance are directly affected by the business relationships between interconnecting Internet Service Providers (ISPs)."
     heading: "ISP Interconnection and its Impact on Consumer Internet Performance"
     caption: "Read the M-Lab research team's report on ISP Interconnection pointing to consumer harm."
-    link: "/publications/isp-interconnection.pdf"
+    link: "/publications/isp-interconnection-impact.pdf"
     link-text: "Read the report!"
   - image: "ndt.jpg"
     heading: "NDT (Network Diagnostic Test)"
