@@ -1,1 +1,28 @@
-{% comment %} Will put carousel code here {% endcomment %}
+<div class="carousel-section">
+	<i class="carousel-preloader"></i>
+  <div class="carousel-ctn flexslider">
+
+      <ul class="slides">
+
+      	{% for entry in page.carousel-items %}
+      		{% if entry.alt %}
+      			{% assign alt_text = entry.alt %}
+      		{% else %}
+      			{% assign alt_text = entry.caption %}
+      		{% endif %}
+
+        <li class="carousel-entry">
+          <img src="{{ site.baseurl }}/images/carousel/{{ entry.image }}" alt="{{ alt_text }}" class="fluid-img">
+          <div class="carousel-infobox">
+            <h2 class="carousel-heading">{{ entry.heading }}</h2>
+            <div class="carousel-caption"><p>{{ entry.caption }}</p></div>
+            <a href="{{ entry.link | prepend: site.baseurl }}" class="btn btn-left btn-cta is-plain">{{ entry.link-text }}</a>
+          </div>
+        </li>
+
+        {% endfor %}
+
+      </ul>
+
+  </div>
+</div>
