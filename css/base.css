@@ -2003,3 +2003,17 @@ label,.label {
     list-style-type: circle;
     padding-left: 30px;
 }
+
+.runlink:after {
+    content: '';
+    background: url('/images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
+    width: 9px;
+    height: 12px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    margin-left: 10px;
+    position: relative;
+    top: -1px;
+}
