@@ -825,7 +825,7 @@ ol ol {
 
 .quick-links {
     width: 660px;
-    padding: 38px 0 23px
+    padding: 38px 0 0px
 }
 
 .quick-links>ul:last-child {
@@ -1936,10 +1936,6 @@ label,.label {
     padding-bottom: 76px
 }
 
-.tests-page .intro-section {
-    padding-top: 30px
-}
-
 .tests-page .grid-section {
     padding-top: 23px
 }
@@ -2003,7 +1999,7 @@ label,.label {
 
 .hidden { display: none; }
 
-.performance-page .accordion-content ul {
+.performance-page .accordion-content ul, .tests-page .intro-section ul {
     list-style-type: circle;
     padding-left: 30px;
 }

@@ -5,8 +5,29 @@ layout: default
 {% include breadcrumbs.html %}
 
 <meta data-id="enhancer" data-classname="SubPageEnhancer">
-<section class="intro-section">   
-    {{ content }}
+
+{% if page.grid-section %}
+<nav class="quick-links l-span2">
+	<ul class="l-span1">
+          	
+  	{% for grid in page.grid-section %}
+
+		<li><a href="#{{ grid.group-heading | downcase | replace: " ", "-" }}" data-proofer-ignore><i class="icon icon-triangle icon-right icon-before"></i>{{ grid.group-heading }}</a></li>
+
+		{% endfor %}
+
+	</ul>
+</nav>
+{% endif %}
+
+<section class="intro-section">
+
+  {{ content }}
+
 </section>
+
+{% if page.grid-section %}
+	{% include grid.html %}
+{% endif %}
 
 </div>
