@@ -68,7 +68,7 @@ Since the dawn of M-Lab (2009), see every NDT test ever run appear over time as 
 
 ![Every NDT test ever run over time chart]({{ site.baseurl}}/images/visualizations/ndt-test.png)
 
-For more information about how the chart was created, see [http://dmadev.com/2012/11/19/visualizing-m-lab-data-with-bigquery/](http://dmadev.com/2012/11/19/visualizing-m-lab-data-with-bigquery/).
+For more information about how the chart was created, see [http://dominichamon.com/blog/2012/12/visualizing-m-lab-data-with-bigquery-part-two/](http://dominichamon.com/blog/2012/12/visualizing-m-lab-data-with-bigquery-part-two/).
 
 {% endcapture %}
 
