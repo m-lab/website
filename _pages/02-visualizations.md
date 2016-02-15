@@ -69,7 +69,7 @@ View a quick and dreamy video showing packet loss, as measured by M-Lab's NDT.
 
 <p><iframe class="customIframe" src="https://docs.google.com/file/d/0B0dPEIVgbGveU1JjcnU3LXNNYXM/preview" name="customIframe_0" width="800" height="400" frameborder="0" marginwidth="800" marginheight="400"></iframe></p>
 
-If you're inspired to learn more, and maybe want to create your own, go to:  [https://dmadev.com/2012/12/10/visualizing-m-lab-data-with-bigquery-part-two/](https://dmadev.com/2012/12/10/visualizing-m-lab-data-with-bigquery-part-two/).
+If you're inspired to learn more, and maybe want to create your own, go to:  [http://dominichamon.com/blog/2012/12/visualizing-m-lab-data-with-bigquery-part-two/](http://dominichamon.com/blog/2012/12/visualizing-m-lab-data-with-bigquery-part-two/).
 
 {% endcapture %}
 
