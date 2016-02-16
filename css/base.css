@@ -2004,6 +2004,11 @@ label,.label {
     padding-left: 30px;
 }
 
+.sidestream-page .intro-section ul {
+    list-style-type: circle;
+    margin-left: 30px;
+}
+
 .runlink:after {
     content: '';
     background: url('/images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
