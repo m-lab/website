@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+{% assign archive = page.archive-name | downcase %}
+
+{% if page.archive-type == 'Category' %}
+  {% assign posts = site.categories.[archive] %}
+{% elsif page.archive-type == 'Monthly' %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% include breadcrumbs.html %}
+
+<div class="l-span2 blogroll">
+
+{% for post in posts %}
+
+  {% assign show-post = true %}
+
+  {% if page.archive-type == 'Monthly' %}
+    {% assign thisyear = post.date | date: "%B %Y" %}
+    {% if thisyear != page.archive-name %}
+      {% assign show-post = false %}
+    {% endif %}
+  {% endif %}
+
+  {% if show-post %}
+
+    <article class="blog-entry">
+      {% if post.content contains '<!--more-->' %}
+          {{ post.content | split:'<!--more-->' | first }}
+      {% else %}
+          {{ post.excerpt }}
+      {% endif %}
+      <p><a href="{{ site.baseurl }}{{ post.url }}" class="info-link">Read More</a></p>
+    </article>
+
+  {% endif %}
+
+{% endfor %}
+
+</div>
+
+{% include siderail.html %}
+
