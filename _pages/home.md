@@ -34,7 +34,7 @@ carousel-items:
   - image: "neubot.jpg"
     heading: "Neubot"
     caption: "Perform long-term testing of network performance and application-specific traffic throttling"
-    link: "/tools/neubot2/"
+    link: "/tools/neubot/"
     link-text: "Go to Neubot"
 ---
 
