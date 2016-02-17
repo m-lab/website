@@ -14,7 +14,7 @@ grid-section:
         image: "npad.png"
         heading: "NPAD (Network Path &amp; Application Diagnostics)"
         desc: "Diagnose common problems that impact last-mile broadband networks."
-      - link: "/tools/neubot2/"
+      - link: "/tools/neubot/"
         image: "neubot.png"
         heading: "Neubot"
         desc: "Performs periodic tests to measure network performance and traffic throttling."

@@ -12,8 +12,8 @@ that emulates BitTorrent; and \`raw\`, that performs a raw TCP test.
 
 **[Download and run Neubot (Linux, MacOSX, and Windows)](http://www.neubot.org/neubot-install-guide){:.runlink}**
 
-**Data** collected by Neubot is available in raw format at <https://storage.cloud.google.com/m-lab/neubot>, and at <http://www.neubot.org/data>.
+**Data** collected by Neubot is available in raw format at <https://storage.cloud.google.com/m-lab/neubot> and at <http://www.neubot.org/data>.
 
 **Source code** is available at <http://www.neubot.org/download>.
 
-**More information** here <http://www.neubot.org/>.
+**More information** at <http://www.neubot.org/>.
