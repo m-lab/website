@@ -1895,13 +1895,18 @@ label,.label {
     padding-top: 37px
 }
 
-.publications-section .tabbed-heading {
+.publications-page .tabbed-heading {
     color: #767676;
     margin-bottom: 24px
 }
 
+.publications-page .info-section h3 {
+    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+    color: #767676;
+}
+
 .paper {
-    margin-bottom: 38px
+    margin-bottom: 13px
 }
 
 .paper .paper-title {
@@ -1909,7 +1914,7 @@ label,.label {
     color: #767676
 }
 
-.paper .paper-author {
+.publications-page .paper-author {
     font-family: "Proxima Nova Bold",Arial,Helvetica,sans-serif;
     font-size: 13px;
     color: #767676;
@@ -1917,13 +1922,25 @@ label,.label {
     padding: 0
 }
 
-.paper .paper-download {
+.publications-page .paper-download {
     display: block;
     margin-top: 16px
 }
 
-.paper .paper-description {
+.publications-page .paper-description {
     padding-bottom: 0
+}
+
+.publications-page p {
+    padding-bottom: 38px;
+}
+
+.publications-page p.intro-blurb {
+    padding-bottom: 25px;
+}
+
+.publications-page #presentations {
+    padding-top: 38px;
 }
 
 .about-page .info-section {
