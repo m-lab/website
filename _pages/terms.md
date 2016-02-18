@@ -4,4 +4,6 @@ permalink: /terms/
 title: "Terms &amp; Conditions"
 ---
 
-Terms content here
+# Terms &amp; Conditions
+
+Terms &amp; Conditions
