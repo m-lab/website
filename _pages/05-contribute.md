@@ -9,7 +9,7 @@ menu-item: true
 
 M-Lab welcomes the participation of industries, institutions, and researchers who would like to help expand the platform and ensure its growth and success.
 
-If you are a researcher who is interested in deploying tools on M-Lab, or a company or institution interested in providing resources to extend the platform, please read this document outlining [M-Lab's conceptual and technical scope and policies](https://docs.google.com/uc?export=download&id=0B1Z3slE8kdgmYnB0QThkT3RkU0k), as well as [M-Lab's Roles & Responsibilities](https://docs.google.com/uc?export=download&id=0B1Z3slE8kdgmQkczWDMtaktlR00) for new researchers. If your project fits within the guidelines and principles, we invite you to apply for M-Lab hosting below. You can also participate in [our public mailing list](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss).
+If you are a researcher who is interested in deploying tools on M-Lab, or a company or institution interested in providing resources to extend the platform, please read this document outlining [M-Lab's conceptual and technical scope and policies]({{ site.baseurl }}/publications/mlab-founding-vision.pdf), as well as [M-Lab's Roles & Responsibilities]({{ site.baseurl }}/publications/mlab-roles-responsibilities.pdf) for new researchers. If your project fits within the guidelines and principles, we invite you to apply for M-Lab hosting below. You can also participate in [our public mailing list](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss).
 
 ## Hosting an Experiment
 
@@ -17,7 +17,7 @@ Please [submit this application](https://docs.google.com/a/opentechinstitute.org
 
 ## Hosting a Site
 
-Please [submit this application](https://docs.google.com/a/measurementlab.net/spreadsheet/viewform?formkey=dHNMZ2p0OU5TckxIUFg0RVNhSk5teEE6MQ#gid=0) if you are interested in hosting servers for an M-Lab site. Groups hosting an M-Lab site will also find the document [how to deploy a new M-Lab site](https://docs.google.com/uc?export=download&id=0B1Z3slE8kdgmRUlGbTJ0YnNIa0E) useful.
+Please [submit this application](https://docs.google.com/a/measurementlab.net/spreadsheet/viewform?formkey=dHNMZ2p0OU5TckxIUFg0RVNhSk5teEE6MQ#gid=0) if you are interested in hosting servers for an M-Lab site. Groups hosting an M-Lab site will also find the document [how to deploy a new M-Lab site]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf) useful.
 
 ## Analyze and visualize the M-Lab data
 
