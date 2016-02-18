@@ -5,6 +5,8 @@ author: "Chris Ritzo"
 breadcrumb: blog
 categories: 
   - bigquery
+  - performance 
+  - data
 ---
 
 

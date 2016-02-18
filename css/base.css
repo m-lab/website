@@ -1878,6 +1878,10 @@ label,.label {
     margin-bottom: 35px
 }
 
+.blogroll-navigation .filter-col a {
+    text-transform: capitalize;
+}
+
 .filter-col {
     padding-bottom: 6px
 }

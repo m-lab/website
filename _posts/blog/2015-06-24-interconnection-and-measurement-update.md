@@ -4,7 +4,14 @@ title: "New Opportunities for Test Deployment and Continued Analysis of Intercon
 author: "Collin Anderson"
 breadcrumb: blog
 categories: 
-  - bigquery
+  - consumer internet
+  - data analysis 
+  - interconnection 
+  - observatory 
+  - open source 
+  - research 
+  - transparency 
+  - visualization
 ---
 
 # New Opportunities for Test Deployment and Continued Analysis of Interconnection Performance 
