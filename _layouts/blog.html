@@ -15,7 +15,7 @@ layout: default
         <span class="categories">
 	      
         {% for cat in page.categories %}
-          <a href="{{ site.baseurl }}/blog/category/{{ cat | replace: ' ', '-' }}/">{{ cat }}</a>{% unless forloop.last %},{% endunless %}
+          <a href="{{ site.baseurl }}/blog/category/{{ cat | capitalize | replace: ' ', '-' }}/">{{ cat }}</a>{% unless forloop.last %},{% endunless %}
         {% endfor %}                            
 				
         </span>

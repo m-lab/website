@@ -20,7 +20,7 @@
     {% assign sorted_cats = (site.categories | sort:0) %}
     {% for cat in sorted_cats %}
 
-      {% capture same_page %}/blog/category/{{ cat[0] }}/{% endcapture %}
+      {% capture same_page %}/blog/category/{{ cat[0] | replace: ' ', '-' }}/{% endcapture %}
 	      
       <li><a href="{{ same_page | prepend: site.baseurl }}" {% if page.url == "same_page" %}class="is-active"{% endif %}>{{ cat[0] | capitalize }}</a> <span class="count">({{ cat[1].size }})</span></li>
 
