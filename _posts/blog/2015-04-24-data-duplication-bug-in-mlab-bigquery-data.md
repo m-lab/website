@@ -45,8 +45,8 @@ This bug affected the data that researchers used in last year’s [M-Lab Interco
 
 Why did this bug not impact the study finding? Most of the researchers’ analysis was based on median values of different performance metrics. Given that duplicating every element of a set does not change its median, the values we calculated for per-day medians remained the same. The images below show one of the graphs from the original report and below it the amended version of that graph after removing duplicates. The sample size changes, but the throughput values are identical. (Thank you to Collin Anderson and others for helping perform and verify this analysis.)
 
-[![median graph]({{ site.baseurl }}/images/blog/median-download-cogent-1.png){:style="border:1px solid black"}]({{ site.baseurl }}/images/blog/median-download-cogent-1.png){:target="_blank"}
-[![median graph]({{ site.baseurl }}/images/blog/median-download-cogent-2.png){:style="border:1px solid black"}]({{ site.baseurl }}/images/blog/median-download-cogent-2.png){:target="_blank"}
+[![median graph]({{ site.baseurl }}/images/blog/median-download-1.png){:style="border:1px solid black"}]({{ site.baseurl }}/images/blog/median-download-1.png){:target="_blank"}
+[![median graph]({{ site.baseurl }}/images/blog/median-download-2.png){:style="border:1px solid black"}]({{ site.baseurl }}/images/blog/median-download-2.png){:target="_blank"}
 
 While not significant, instances where researchers calculated the monthly median of different metrics were not as straightforward as daily medians. In instances where only certain days of the month contained duplicates, calculated medians were skewed toward the duplicated days. After correcting for the duplicate values and working with M-Lab researchers to re-run the analysis, we confirmed that the effect on calculated values was not significant. At its most pronounced, we see a change in values of no more than 10%, generally much lower. The graph below provides an example of slight changes to the round-trip times after correcting for duplicate data. Here and in all cases, after correction the trends reflected in the graphs remain exactly the same.
 
