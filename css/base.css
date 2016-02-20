@@ -66,6 +66,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,su
     direction: ltr
 }
 
+.italicised {
+    font-style: italic;
+}
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1840,6 +1844,10 @@ label,.label {
     width: auto;
 }
 
+.blog-entry img.inherit-width {
+    max-width: inherit;
+}
+
 .blog-entry img.pull-right {
     float: right;
 }
@@ -2076,4 +2084,9 @@ label,.label {
     margin-left: 10px;
     position: relative;
     top: -1px;
+}
+
+.gsoc ul {
+    list-style: circle;
+    margin-left: 30px;
 }
