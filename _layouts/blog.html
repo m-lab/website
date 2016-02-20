@@ -26,14 +26,10 @@ layout: default
 
 
   <ol class="pagination">
-	  
-  {% if page.next.url %}
-    <li><a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="next dir is-plain">Next<i class="icon icon-triangle icon-right icon-after"></i></a></li>
-  {% endif %}
-
-  {% if page.previous.url %}
-    <li><a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" class="previous dir is-plain"><i class="icon icon-triangle icon-left icon-before"></i>Previous</a></li>
-  {% endif %}
+  
+    <li>{% if page.next.url %}<a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="next dir is-plain">Next<i class="icon icon-triangle icon-right icon-after"></i></a>{% endif %}</li>
+  
+    <li>{% if page.previous.url %}<a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" class="previous dir is-plain"><i class="icon icon-triangle icon-left icon-before"></i>Previous</a>{% endif %}</li>
 
   </ol> <!-- .pagination -->
 
