@@ -617,6 +617,10 @@ small {
     text-indent: 0
 }
 
+.pagination>li:nth-child(odd) {
+    float:right;
+}
+
 .pagination>li a {
     font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
     display: block;
@@ -1844,6 +1848,22 @@ label,.label {
     list-style-type: square;
     margin-left: 15px;
     padding-left: 15px;
+}
+
+.blog-entry tr {
+    color: #767676;
+}
+
+.blog-entry th {
+    border: 1px solid black; 
+    padding: 5px; 
+    font-weight: bold; 
+    width: 200px;
+}
+
+.blog-entry td {
+    border: 1px solid black; 
+    padding: 5px; 
 }
 
 .blog-entry .visualisation-error {
