@@ -3,8 +3,10 @@ layout: page
 permalink: /tests/
 title: "Tests"
 menu-item: true
+grid-quick-links: true
 grid-section:
   - group-heading: "Performance"
+    group-list-class: "l-grid l-3col"
     grid-items:
       - link: "/tools/ndt/"
         image: "ndt.png"
@@ -31,6 +33,7 @@ grid-section:
         heading: "SideStream"
         desc: "Collects statistics about the TCP connections running on the M-Lab platform."
   - group-heading: "Performance Mobile"
+    group-list-class: "l-grid l-3col"
     grid-items:
       - link: "/tools/mobiperf/"
         image: "mobile.png"
@@ -41,6 +44,7 @@ grid-section:
         heading: "Windrider"
         desc: "Windrider has been decommissioned on 01/17/2013. The source code is still available"
   - group-heading: "Transparency"
+    group-list-class: "l-grid l-3col"
     grid-items:
       - link: "/tools/ooni/"
         image: "ooni.png"
@@ -55,6 +59,7 @@ grid-section:
         heading: "Neubot"
         desc: "Performs periodic tests to measure network performance and application-specific traffic throttling."
   - group-heading: "State"
+    group-list-class: "l-grid l-3col"
     grid-items:
       - link: "/tools/paris_traceroute/"
         image: "arrow-swoop.png"
