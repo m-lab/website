@@ -44,7 +44,7 @@
             <div class="grid-description"><p>{{ item.desc }}</p></div>
           </div>
           {% else %}
-          <img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.heading }}" class="grid-link is-plain">
+          <img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.alt }}" class="grid-link is-plain">
           {% endif %}
         
         {% if item.link %}

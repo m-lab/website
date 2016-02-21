@@ -118,7 +118,7 @@ grid-section:
       - link: "http://www.top-ix.org/"
         image: "top-ix.png"
         alt: "TOP-IX Consortium Logo"
-      - link: "google.com"
+      - link: "http://google.com"
         image: "google.jpg"
         alt: "Google Logo"
       - link: "https://www.rtr.at/"
