@@ -16,6 +16,6 @@ exclude:
   - Gemfile.lock
 
 # Gems
-gems: ['jekyll-paginate']
+gems: ['jekyll-paginate', 'jekyll-feed']
 paginate: 1
 paginate_path: "/blog/page/:num"

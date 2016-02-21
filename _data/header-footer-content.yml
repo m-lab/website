@@ -46,7 +46,7 @@ footer:
       link-title: "Email"
       link-class: "email-share"
     -
-      link: "/"
+      link: "/feed.xml"
       link-title: "RSS"
       link-class: "rss-share"
   other-links:
@@ -73,7 +73,7 @@ footer:
         link: "/terms/"
         link-title: "Terms"
       -
-        link: "/"
+        link: "/feed.xml"
         link-title: "RSS Feed"
   privacy:
     title: "Privacy Policy &amp; Acceptable Use Policy."
