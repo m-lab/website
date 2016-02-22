@@ -121,7 +121,7 @@ If you'd like to get involved as an M-Lab supporting partner, [contact]({{ site.
 {% include accordion.html acc_section = "company" %}
 
 {:.contact-mlab}
-#Contact MLab
+# Contact MLab
 
 {% capture accordion_entry_1 %}
 You can [contact us here.]({{ site.baseurl }}/contact/)
