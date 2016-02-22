@@ -95,7 +95,7 @@ Right now, users can access 12 tools to measure their broadband connection speed
 # I am a researcher
 
 {% capture accordion_entry_1 %}
-If you're interested in deploying a tool, please first read [our document]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf)outlining M-Lab's requiremetns and procedures for accepting new tools on the platform.
+If you're interested in deploying a tool, please first read [our document]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf) outlining M-Lab's requiremetns and procedures for accepting new tools on the platform.
 
 You can then prepare an application and [contact]({{ site.baseurl }}/contact/) the M-Lab Operations Committee, who will review the application and help guide you through the process.
 {% endcapture %}
