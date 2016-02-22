@@ -912,7 +912,7 @@ ol ol {
     margin-right: -15px
 }
 
-.grid-section img.grid-img {
+.grid-section .grid-img img {
     width: 104px;
     float: none;
     display: inline-block;
@@ -979,7 +979,10 @@ ol ol {
 }
 
 .grid-section .partner-logos img {
-    width: 80px
+    width: 80px;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .thumb-grid {
@@ -1989,6 +1992,14 @@ label,.label {
 
 .about-page .learn-more-grid {
     padding-top: 40px
+}
+
+.about-h2 {
+    margin-top: 20px;
+}
+
+.about-h3 {
+    color:#767676;
 }
 
 .l-grid h3 {

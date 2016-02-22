@@ -15,24 +15,41 @@
 --> 
 {% endcomment %}
 
+{% assign img_dir = "" %}
+
+{% if page.url == '/tests/' %}
+  {% assign img_dir = "/tests" %}
+{% elsif page.url == '/who/' %}
+  {% assign img_dir = "/about" %}
+{% endif %}
+
 {% if page.grid-section %}
   {% for grid in page.grid-section %}
 
   <section class="info-section grid-section first-child {{ grid.group-heading | downcase | replace: " ", "-" }}">
     <h2 class="grid-header" id="{{ grid.group-heading | downcase | replace: " ", "-" }}">{{ grid.group-heading }}</h2>
-    <ul class="l-grid l-3col">
+    <ul class="{{ grid.group-list-class }}">
 
       {% for item in grid.grid-items %}
-      <li class="grid-group">
-        <a href="{{ item.link | prepend: site.baseurl }}" class="grid-link is-plain">
+      <li{% if grid.group-list-class == "l-grid l-3col" %} class="grid-group"{% endif %}>
 
-          <div class="grid-img"><img src="{{ site.baseurl }}/images/tests/{{ item.image }}" alt="{{ item.heading }}" class=""></div>
+        {% if item.link %}
+        <a href="{{ item.link | prepend: site.baseurl }}" class="grid-link is-plain">
+        {% endif %}
+
+          {% if grid.group-list-class == "l-grid l-3col" %}
+          <div class="grid-img{{ grid.grid-img-class }}"><img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.heading }}" class=""></div>
           <div class="grid-info">
             <h3 class="grid-heading">{{ item.heading }}</h3>
             <div class="grid-description"><p>{{ item.desc }}</p></div>
           </div>
+          {% else %}
+          <img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.alt }}" class="grid-link is-plain">
+          {% endif %}
         
+        {% if item.link %}
         </a>
+        {% endif %}
       </li>
       {% endfor %}
 

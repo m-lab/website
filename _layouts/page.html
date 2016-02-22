@@ -6,7 +6,7 @@ layout: default
 
 <meta data-id="enhancer" data-classname="SubPageEnhancer">
 
-{% if page.grid-section %}
+{% if page.grid-section and page.grid-quick-links %}
 <nav class="quick-links l-span2">
 	<ul class="l-span1">
           	
@@ -17,6 +17,20 @@ layout: default
 		{% endfor %}
 
 	</ul>
+</nav>
+{% elsif page.accordion-quick-links %}
+<nav class="quick-links l-span2">
+	{% for col in page.quick-links-section %}	
+	<ul class="l-span1">
+          	
+  	{% for link in col.column %}
+
+		<li><a href="#{{ link.group-heading | downcase | replace: " ", "-" }}" data-proofer-ignore><i class="icon icon-triangle icon-right icon-before"></i>{{ link.group-heading }}</a></li>
+
+		{% endfor %}
+
+	</ul>
+	{% endfor %}
 </nav>
 {% endif %}
 
