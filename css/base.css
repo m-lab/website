@@ -1022,7 +1022,7 @@ ul.square-list ol,ul[style*="list-style-type: square;"] li ol {
     padding-bottom: 0
 }
 
-ul.circle-list,ul[style*="list-style-type: circle;"] li {
+ul.circle-list,ul[style*="list-style-type: circle;"] li, .blog-entry ul.circle-list {
     margin-left: 15px;
     list-style: circle
 }
