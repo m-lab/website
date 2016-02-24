@@ -8,6 +8,11 @@ info-heading: "What is M-Lab?"
 info-subheading: "A short introduction"
 mission-heading: "Mission Statement"
 mission-subheading: "Open Internet Measurement"
+blog-aside-heading: "Highlighted Visualisation"
+blog-aside-subheading: "Internet Observatory"
+blog-aside-img: "mlab_observatory/static/observatory/images/graphExample.png"
+blog-aside-description : "Compare how different ISPs performed across varying locations in the US."
+blog-aside-link: "/observatory/"
 carousel: true
 carousel-items:
   - image: "isp.jpg"

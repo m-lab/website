@@ -36,3 +36,48 @@ layout: default
     </aside>
   </div>
 </div>
+
+<div class="communication-section info-segment is-inverse">
+  <div class="info-segment-inner">
+    <section class="blog-col l-span2">
+      <h2 class="info-heading initial-heading">Latest Blog Post</h2>
+
+    {% for post in site.posts limit:2 %}
+
+      <article class="blog-post">
+        <h3 class="info-subheading">{{ post.title }}</h3>
+        <div class="segment-description">
+
+        {% if post.content contains '<!--more-->' %}
+            {% assign blog_content = post.content | split:'<!--more-->' | first | split:'</h1>' | last | strip_html %}
+        {% else %}
+            {% assign blog_content = post.excerpt %}
+        {% endif %}
+        {% assign word_count = blog_content | number_of_words %}
+
+        {% if word_count > 40 %}
+          <p>{{ blog_content }}</p>
+        {% else %}
+          <div>{{ blog_content }}</div>
+        {% endif %}
+
+        </div>
+        <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link info-link">Read More</a></p>
+      </article>
+
+    {% endfor %}
+
+    </section>
+
+    <aside class="data-col l-span1">
+      <h2 class="info-heading">{{ page.blog-aside-heading }}</h2>
+      <article class="data-entry">
+        <h3 class="info-subheading">{{ page.blog-aside-subheading }}</h3>
+        <div class="segment-description">
+            <p><img src="{{ site.baseurl }}{{ page.blog-aside-img }}" alt="M-LabInternetObservatory"></p>
+            <p>{{ page.blog-aside-description }}<br><a class="info-link" href="{{ page.blog-aside-link }}">Read more</a></p>
+        </div>
+      </article>
+    </aside>
+  </div>
+</div>
