@@ -1,9 +1,10 @@
 ---
 layout: blog
 title: "Explore M-Lab's data using the new RIPEstat widgets"
-author: "Meredith Whittaker"
+author: "Tiziana Refice, Vasco Asturiano, Robert Kisteleki"
 breadcrumb: blog
 categories: 
+  - visualization
   - data analysis
   - ripe
 ---
