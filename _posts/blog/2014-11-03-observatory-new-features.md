@@ -5,7 +5,7 @@ author: "Chris Ritzo"
 breadcrumb: blog
 categories: 
   - observatory
-  - feature
+  - features
   - visualization
 ---
 

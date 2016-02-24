@@ -108,6 +108,7 @@ You can then prepare an application and [contact]({{ site.baseurl }}/contact/) t
 {% capture accordion_entry_1 %}
 Companies and institutions can help in a number of key ways, including:
 
+{:.disc-list}
 -   Provide servers for the platform and purchase
     network connectivity.
 -   Provide resources for data hosting, aggregation and publication.

@@ -1793,6 +1793,11 @@ label,.label {
     padding-bottom: 40px
 }
 
+.accordion-content .disc-list {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
 .embed .embed-info {
     text-align: center
 }
