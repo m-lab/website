@@ -1,3 +1,13 @@
+{% comment %} 
+<!--
+  Header
+
+  This partial is included on every page except the observatory page to consistently
+  display the same header on each page.
+  
+--> 
+{% endcomment %}
+
 {% assign header = site.data.header-footer-content.header %}
 {% assign current_page = page.url %}
 {% assign active_link = page.breadcrumb | append: "/" | prepend: "/" %}

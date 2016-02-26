@@ -1,3 +1,26 @@
+{% comment %} 
+<!--
+  Carousel Feature
+
+  This partial can be included in any markdown file that needs carousel behavior.
+  Currently, this include has been referenced in the default layout and checks to 
+  see if a post has the carousel frontmatter key.  If it does, then it will include
+  the carousel feature into the page.
+
+  The format for frontmatter keys for carousels is as follows:
+  carousel: true
+  carousel-items:
+  - image: "image to show for each carousel item"
+    alt: "alt tag description for each image"
+    heading: "The heading to be shown on each carousel item"
+    caption: "Additional description text to be shown on each carousel item"
+    link: "If there is a URL that the carousel item should link too"
+    link-text: "The text that is clickable for each carousel item"
+  - repeat above items for however many carousel items should be shown
+  
+--> 
+{% endcomment %}
+
 <div class="carousel-section">
 	<i class="carousel-preloader"></i>
   <div class="carousel-ctn flexslider">

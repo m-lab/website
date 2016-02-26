@@ -1,3 +1,17 @@
+{% comment %} 
+<!--
+  Breadcrumbs Feature
+
+  This partial can be included in any markdown file that needs accordion behavior.
+  Currently, this include has been referenced in the page, blog, blog-index, and blog-archive
+  layouts, but can be included in future and other layouts if deemed necessary.
+
+  If included for other pages/layouts, then it would be best to have breadcrumb and title 
+  in the page's frontmatter to display as the breadcrumbs.
+
+--> 
+{% endcomment %}
+
 {% assign header = site.data.header-footer-content.header %}
 
 {% comment %}<!-- Determine breadcrumb hierarchy for sub navs -->{% endcomment %}
