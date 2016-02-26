@@ -25,6 +25,7 @@ Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-l
 | fonts | Contains the customized font libraries for the project. |
 | js | Contains the js libraries for the project. |
 | images | Contains all the image files for the site |
+| publications | Contains all the pdfs and docs that the site links too |
 
 ## Code Standards
 

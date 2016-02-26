@@ -3,6 +3,7 @@ layout: homepage
 audience: homepage
 permalink: /
 title: "Home"
+keywords: "measurement, broadband measurement, internet measurement, open data, open science, performance test, speed test, throughput measurement"
 videoid: "RnIVMfBP4So"
 info-heading: "What is M-Lab?"
 info-subheading: "A short introduction"

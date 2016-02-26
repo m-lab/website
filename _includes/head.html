@@ -1,9 +1,23 @@
+{% comment %} 
+<!--
+  HEAD
+
+  This partial is included on every page to consistently display the same HEAD tag 
+  information on each page.  
+  
+--> 
+{% endcomment %}
+
 <head>
 
   <!-- General metadata -->
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
-  <meta name="keywords" content="measurement, broadband measurement, internet measurement, open data, open science, performance test, speed test, throughput measurement" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}" >
+  {% endif %}
+
   <meta name="viewport" content="width=1000px">
   <title>{% if page.page-title %}{{ page.page-title }} - {{ site.title }}{% elsif page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
