@@ -1,0 +1,15 @@
+---
+layout: "String"
+title: "String"
+permalink: "String"
+archive-name: "String"
+archive-type: "String"
+breadcrumb: "String"
+config:
+  path: ['_pages/categories']
+  ignore:
+  - README.md
+  - ..
+  - .
+  - .DS_Store
+---

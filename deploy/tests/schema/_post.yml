@@ -1,0 +1,14 @@
+---
+layout: "String"
+title: "String"
+author: "String"
+breadcrumb: "String"
+config:
+  path: '_posts/blog'
+  ignore:
+  - README.md
+  - ..
+  - .
+  - .DS_Store
+  optional: ['categories']
+---
