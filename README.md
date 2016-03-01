@@ -9,8 +9,12 @@ Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-l
 **Please Note** This repository contains a submodule, so after cloning this repo, you will also need to run `git submodule init` and `git submodule update` to pull down the submodule files as well.
 
 1. Install dependencies `bundle install`
-2. Run Jekyll server to preview in development mode `jekyll serve`.  To regenerate the site automatically use the watcher option `-w`.
+2. Run Jekyll server to preview in development mode `jekyll serve`.
 3. View the generated site by going to [http://localhost:4000/](http://localhost:4000/)
+
+### HTML Compression
+
+This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the ``layout: compress`` from the default template in the _layouts folder.  
 
 ## Site Structure
 
