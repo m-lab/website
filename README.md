@@ -14,7 +14,7 @@ Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-l
 
 ### HTML Compression
 
-This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the ``layout: compress`` from the default template in the _layouts folder.  Please ensure to re-enable compression, however, before commiting code for review.
+This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the ``layout: compress`` from the default template in the _layouts folder.  
 
 ## Site Structure
 
