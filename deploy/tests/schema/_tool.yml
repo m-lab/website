@@ -1,0 +1,13 @@
+---
+layout: "String"
+title: "String"
+permalink: "String"
+breadcrumb: "String"
+config:
+  path: ['_pages/tools']
+  ignore:
+  - README.md
+  - ..
+  - .
+  - .DS_Store
+---

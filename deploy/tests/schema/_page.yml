@@ -1,0 +1,13 @@
+---
+layout: "String"
+title: "String"
+permalink: "String"
+config:
+  path: ['_pages']
+  ignore:
+  - README.md
+  - ..
+  - .
+  - .DS_Store
+  optional: ['breadcrumb', 'sub-nav', 'audience', 'heading', 'menu-item', 'page-title', 'accordion', 'grid-quick-links', 'grid-section']
+---

@@ -1,9 +1,16 @@
-language: ruby
-rvm:
-  - 2.1
+language: node_js
+node_js:
+  - 4.2
+before_install:
+# execute commands before dependencies can be installed
+  - rvm install 2.1  
+  - npm install -g grunt-cli
+install:
+# install dependencies
+  - bundle install
+  - npm install
 script:
-  - bundle exec jekyll build
-  - bundle exec htmlproof ./_site --only-4xx --check-html --ignore-script-embeds --file-ignore "/mlab_observatory/"
+  - grunt test
 branches:
   only:
   - master

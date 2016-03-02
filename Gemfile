@@ -9,3 +9,7 @@ gem 'liquid'
 gem 'jekyll'
 gem 'jekyll-paginate'
 gem 'html-proofer'
+
+group :jekyll_plugins do
+	gem 'jekyll_frontmatter_tests', '0.0.6', :path => 'jekyll_frontmatter_tests-0.0.6'
+end

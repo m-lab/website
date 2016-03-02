@@ -8,9 +8,18 @@ Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-l
 
 **Please Note** This repository contains a submodule, so after cloning this repo, you will also need to run `git submodule init` and `git submodule update` to pull down the submodule files as well.
 
-1. Install dependencies `bundle install`
-2. Run Jekyll server to preview in development mode `jekyll serve`.
-3. View the generated site by going to [http://localhost:4000/](http://localhost:4000/)
+1. Install ruby dependencies `bundle install` (only needed upon initially cloning or when gemfile is updated)
+2. Install grunt `npm install -g grunt-cli` (only needed upon initially cloning or when package.json is updated)
+3. Install node dependencies which are used for linting/testing `npm install`
+4. Execute the grunt task from chart [below](#grunt-tasks) or simply run Jekyll server to preview in development mode `jekyll serve`.  To regenerate the site automatically use the watcher option `-w`.
+5. View the generated site by going to [http://localhost:4000/](http://localhost:4000/)
+
+### Grunt tasks
+| Task | Description |
+| ------------- |:------------- |
+| grunt | This is the default task that will validate all yml and then build the site |
+| grunt serve | This task is generally used for development and is equivalent to `jekyll serve` |
+| grunt test | This task is run during CI and should always be run before pull requests are made |
 
 ### HTML Compression
 

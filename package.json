@@ -1,0 +1,13 @@
+{
+  "name": "M-Lab",
+  "description": "Jekyll site that serves http://www.measurementlab.net/",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-shell": "^1.1.2",
+    "load-grunt-tasks": "~0.6.0",
+    "time-grunt": "~0.4.0",
+    "grunt-yaml-validator": "~0.9.0"
+  }
+}
