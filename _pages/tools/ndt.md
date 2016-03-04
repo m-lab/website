@@ -24,7 +24,7 @@ NOTE: if the test does not run or takes longer than 60 seconds, please
 read the [FAQ entry](http://measurementlab.net/faq) for "troubleshooting
 the NDT speed test".
 
-<p><iframe src="{{ site.baseurl }}/p/ndt-ws.html" width="750" height="500" align="middle"></iframe></p>
+<p><iframe src="https://opentechinstitute.github.io/ndt-ws-frontend/index.html" width="750" height="500" align="middle"></iframe></p>
 
 **[Download command line client](https://code.google.com/p/ndt/source/){:.download-link .is-plain}**
 
