@@ -9,7 +9,7 @@ breadcrumb: tests
 
 Reverse traceroute measures the network path back to a user from selected network endpoints, and provides a rich source of information on network routing and topology.
 
-## [**Run Reserve Traceroute**](http://revtr.cs.washington.edu/)
+## [**Run Reverse Traceroute**](http://revtr.cs.washington.edu/)
 
 **Data** collected by Reverse traceroute in raw format at <https://storage.cloud.google.com/m-lab_revtr>.
 
