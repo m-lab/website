@@ -34,7 +34,7 @@
       <li{% if grid.group-list-class == "l-grid l-3col" %} class="grid-group"{% endif %}>
 
         {% if item.link %}
-        <a href="{{ item.link | prepend: site.baseurl }}" class="grid-link is-plain">
+        <a href="{% if item.link contains "http" %}{{ item.link }}{% else %}{{ item.link | prepend: site.baseurl }}{% endif %}" class="grid-link is-plain">
         {% endif %}
 
           {% if grid.group-list-class == "l-grid l-3col" %}
