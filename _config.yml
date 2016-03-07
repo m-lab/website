@@ -8,6 +8,7 @@ excerpt_separator: <!--more-->
 permalink: "/blog/:title/"
 sass:
   sass_dir: _sass
+markdown: kramdown
 include: ['_pages']
 exclude:
   - .gitignore

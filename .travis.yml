@@ -1,9 +1,9 @@
 language: ruby
 rvm:
-  - 2.1
+  - 2.2.3
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproof ./_site --only-4xx --check-html --ignore-script-embeds --file-ignore "/mlab_observatory/"
+  - bundle exec htmlproofer ./_site --only-4xx --check-html --file-ignore "/mlab_observatory/"
 branches:
   only:
   - master
