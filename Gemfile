@@ -8,4 +8,4 @@ gem 'github-pages', versions['github-pages']
 gem 'liquid'
 gem 'jekyll'
 gem 'jekyll-paginate'
-gem 'html-proofer'
+gem 'html-proofer', '3.0.2'
