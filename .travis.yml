@@ -2,8 +2,7 @@ language: ruby
 rvm:
   - 2.2.3
 before_script:
-  - sed -f _scripts/baseurl.sed _config.yml > _scripts/_config.yml
-  - mv _scripts/_config.yml _config.yml 
+  - sed -ie '/baseurl/s/\/m-lab\.github\.io//' _config.yml # sets baseurl to "" in _config for deploying w/o unnecessary url paths
 script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --only-4xx --check-html --file-ignore "/mlab_observatory/"
