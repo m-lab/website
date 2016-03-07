@@ -1,7 +1,7 @@
 # Site settings
 title: M-Lab
 email: support@measurementlab.net
-baseurl: "/m-lab.github.io"
+baseurl: ""
 excerpt_separator: <!--more-->
 
 # Build settings
