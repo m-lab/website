@@ -25,6 +25,19 @@ header:
         - text: "Contact"
           url:  "/contact/"
     -
+      title: "data"
+      sub-nav:
+        - text: "Overview"
+          url:  "/data/"
+        - text: "Google Cloud Storage"
+          url:  "/data/gcs/"
+        - text: "BigQuery QuickStart"
+          url:  "/data/bq/quickstart/"
+        - text: "BigQuery Examples"
+          url:  "/data/bq/examples/"
+        - text: "BigQuery Schema"
+          url:  "/data/bq/schema/"
+    -
       title: "visualizations"
       sub-nav:
         - text: "Performance"
