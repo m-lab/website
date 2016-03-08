@@ -97,7 +97,7 @@ body {
 }
 
 .preloader {
-    background: #fff url('/images/preloader.gif') no-repeat center center;
+    background: #fff url('../images/preloader.gif') no-repeat center center;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -135,24 +135,24 @@ body {
 
 @font-face {
     font-family: 'Proxima Nova Bold';
-    src: url("/fonts/proxima-nova/bold/proximanova-bold-webfont.eot");
-    src: url("/fonts/proxima-nova/bold/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"),url("/fonts/proxima-nova/bold/proximanova-bold-webfont.woff") format("woff"),url("/fonts/proxima-nova/bold/proximanova-bold-webfont.ttf") format("truetype"),url("/fonts/proxima-nova/bold/proximanova-bold-webfont.svg#wf") format("svg");
+    src: url("../fonts/proxima-nova/bold/proximanova-bold-webfont.eot");
+    src: url("../fonts/proxima-nova/bold/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/proxima-nova/bold/proximanova-bold-webfont.woff") format("woff"),url("../fonts/proxima-nova/bold/proximanova-bold-webfont.ttf") format("truetype"),url("../fonts/proxima-nova/bold/proximanova-bold-webfont.svg#wf") format("svg");
     font-weight: normal;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Proxima Nova Semi Bold';
-    src: url("/fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.eot");
-    src: url("/fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.eot?#iefix") format("embedded-opentype"),url("/fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.woff") format("woff"),url("/fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.ttf") format("truetype"),url("/fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.svg#wf") format("svg");
+    src: url("../fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.eot");
+    src: url("../fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.woff") format("woff"),url("../fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.ttf") format("truetype"),url("../fonts/proxima-nova/semi-bold/proximanova-semibold-webfont.svg#wf") format("svg");
     font-weight: normal;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Proxima Nova Regular';
-    src: url("/fonts/proxima-nova/regular/proximanova-reg-webfont.eot");
-    src: url("/fonts/proxima-nova/regular/proximanova-reg-webfont.eot?#iefix") format("embedded-opentype"),url("/fonts/proxima-nova/regular/proximanova-reg-webfont.woff") format("woff"),url("/fonts/proxima-nova/regular/proximanova-reg-webfont.ttf") format("truetype"),url("/fonts/proxima-nova/regular/proximanova-reg-webfont.svg#wf") format("svg");
+    src: url("../fonts/proxima-nova/regular/proximanova-reg-webfont.eot");
+    src: url("../fonts/proxima-nova/regular/proximanova-reg-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/proxima-nova/regular/proximanova-reg-webfont.woff") format("woff"),url("../fonts/proxima-nova/regular/proximanova-reg-webfont.ttf") format("truetype"),url("../fonts/proxima-nova/regular/proximanova-reg-webfont.svg#wf") format("svg");
     font-weight: normal;
     font-style: normal
 }
@@ -331,7 +331,7 @@ small {
 .btn-social::after {
     content: '';
     position: absolute;
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat;
     top: 0;
     right: 0;
     bottom: 0;
@@ -383,14 +383,14 @@ small {
 }
 
 .btn-lang {
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat;
     width: 22px;
     height: 16px;
     position: relative
 }
 
 .btn-lang>span {
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat;
     position: absolute;
     top: 0;
     left: 0;
@@ -460,7 +460,7 @@ small {
 
 .info-link:before {
     content: '';
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat -14px -131px;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -14px -131px;
     width: 6px;
     height: 8px;
     display: -moz-inline-stack;
@@ -557,7 +557,7 @@ small {
 
 .btn.btn-cta:before {
     content: '';
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat -14px -112px;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -14px -112px;
     width: 6px;
     height: 8px;
     display: -moz-inline-stack;
@@ -581,7 +581,7 @@ small {
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
     width: 9px;
     height: 12px;
     display: -moz-inline-stack;
@@ -647,7 +647,7 @@ small {
 
 .download-link:after {
     content: '';
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
     width: 9px;
     height: 12px;
     display: -moz-inline-stack;
@@ -670,7 +670,7 @@ small {
     vertical-align: middle;
     *vertical-align: auto;
     zoom:1;*display: inline;
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat;
     opacity: 1;
     pointer-events: none;
     -webkit-transition: -webkit-transform 200ms ease-in-out;
@@ -1196,7 +1196,7 @@ label,.label {
 }
 
 .main-logo a {
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat -7px -7px;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -7px -7px;
     width: 100px;
     height: 31px
 }
@@ -1223,7 +1223,7 @@ label,.label {
 
 .header-cta:before {
     content: '';
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat;
     float: left;
     margin-right: 15px;
     position: relative;
@@ -1387,7 +1387,7 @@ label,.label {
     z-index: 10;
     width: 40px;
     height: 40px;
-    background: url('/images/carousel-loader.gif') no-repeat 0 0
+    background: url('../images/carousel-loader.gif') no-repeat 0 0
 }
 
 .carousel-ctn {
@@ -1469,7 +1469,7 @@ label,.label {
 }
 
 .player-overlay {
-    background: url('/images/youtube-placeholder.jpg') no-repeat 0 0;
+    background: url('../images/youtube-placeholder.jpg') no-repeat 0 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -1516,14 +1516,14 @@ label,.label {
 
 .info-segment {
     position: relative;
-    background: url(/images/textured-bg.jpg) repeat
+    background: url(../images/textured-bg.jpg) repeat
 }
 
 .info-segment:before {
     content: '';
     width: 100%;
     height: 50px;
-    background: url('/images/ie/info-segment.jpg') repeat-x 0 0;
+    background: url('../images/ie/info-segment.jpg') repeat-x 0 0;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5f5f5), color-stop(75%, #e6e6e6));
     background-image: -webkit-linear-gradient(#f5f5f5,#e6e6e6 75%);
     background-image: -moz-linear-gradient(#f5f5f5,#e6e6e6 75%);
@@ -1553,7 +1553,7 @@ label,.label {
 }
 
 .is-inverse.info-segment:before {
-    background: url('/images/ie/info-segment-inverse.jpg') repeat-x 0 0;
+    background: url('../images/ie/info-segment-inverse.jpg') repeat-x 0 0;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4e4e4e), color-stop(75%, #3a3a3a));
     background-image: -webkit-linear-gradient(#4e4e4e,#3a3a3a 75%);
     background-image: -moz-linear-gradient(#4e4e4e,#3a3a3a 75%);
@@ -1636,7 +1636,7 @@ label,.label {
 
 .visualisation-error .error-text::before {
     content: '';
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat -273px -8px;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -273px -8px;
     width: 100px;
     height: 58px;
     display: -moz-inline-stack;
@@ -1650,7 +1650,7 @@ label,.label {
 
 .footer-section {
     clear: both;
-    background: url(/images/textured-bg.jpg) repeat;
+    background: url(../images/textured-bg.jpg) repeat;
     padding: 10px 0 30px;
     position: relative;
     z-index: 10;
@@ -1664,7 +1664,7 @@ label,.label {
     height: 29px;
     margin: auto;
     display: block;
-    background: url('/images/footer-shadow.png') no-repeat 0 0;
+    background: url('../images/footer-shadow.png') no-repeat 0 0;
     padding-bottom: 1px
 }
 
@@ -2090,7 +2090,7 @@ label,.label {
 
 .runlink:after {
     content: '';
-    background: url('/images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
     width: 9px;
     height: 12px;
     display: -moz-inline-stack;

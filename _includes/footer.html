@@ -21,7 +21,7 @@
         <ul class="callout-ctn social-ctn">
 
 			  {% for item in footer.subscribe.items %}
-          <li><a href="{{ item.link }}" class="btn-social {{ item.link-class }}" target="_blank">{{ item.link-title }}</a>
+          <li><a href="{% if item.link | slice: 0 = "/" %}{{ item.link | prepend: site.baseurl }}{% else %}{{ item.link }}{% endif %}" class="btn-social {{ item.link-class }}" target="_blank">{{ item.link-title }}</a>
           </li>
 			  {% endfor %}
 
@@ -34,7 +34,7 @@
       <ul class="footer-links">
 			  
 			  {% for item in footer.other-links.column-one.items %}
-          <li><a href="{{ item.link }}">{{ item.link-title }}</a>
+          <li><a href="{{ item.link | prepend: site.baseurl }}">{{ item.link-title }}</a>
           </li>
 			  {% endfor %}
 
@@ -42,7 +42,7 @@
       <ul class="footer-links">
         
 			  {% for item in footer.other-links.column-two.items %}
-          <li><a href="{{ item.link }}">{{ item.link-title }}</a>
+          <li><a href="{{ item.link | prepend: site.baseurl }}">{{ item.link-title }}</a>
           </li>
 			  {% endfor %}
       
@@ -51,7 +51,7 @@
 
   <!-- Footer - Privacy Policy -->
     <div class="privacy-policy">
-      <small><a href="{{ footer.privacy.link }}" class="policy-heading" target="_blank">{{ footer.privacy.title }}</a></small>
+      <small><a href="{{ footer.privacy.link | prepend: site.baseurl }}" class="policy-heading" target="_blank">{{ footer.privacy.title }}</a></small>
       <small>{{ footer.privacy.blurb }}</small>
     </div>
   </div>
