@@ -20,7 +20,7 @@
 
   {% for item in header.ctas %}
     <div class="l-span1">
-      <a href="{% if item.link contains "http" %}{{ item.link }}{% else %}{{ item.link | prepend: site.baseurl }}{% endif %}" class="header-cta {{ item.class }}">
+      <a href="{% if item.link | slice: 0 = "/" %}{{ item.link | prepend: site.baseurl }}{% else %}{{ item.link }}{% endif %}" class="header-cta {{ item.class }}">
         <h2>{{ item.h2 }}</h2>
         <h3>{{ item.h3 }}</h3>
       </a>
