@@ -2,7 +2,10 @@ language: ruby
 rvm:
   - 2.2.3
 before_script:
-  - sed -ie '/baseurl/s/\/m-lab\.github\.io//' _config.yml # sets baseurl to "" in _config for deploying w/o unnecessary url paths
+  # Github Pages needs the baseurl field to be "m-lab.github.io" to render properly in forked 
+  # repos, but when we deploy to production, we need the baseurl field to be empty. This 
+  # command replaces "m-lab.github.io" with an empty string.
+  - sed -ie '/^baseurl/s/\/m-lab\.github\.io//' _config.yml 
 script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --only-4xx --check-html --file-ignore "/mlab_observatory/"

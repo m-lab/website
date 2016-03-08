@@ -5,7 +5,8 @@ excerpt_separator: <!--more-->
 
 # Default baseurl used for gh-pages branches.
 # Travis will change it to "" before deploying.
-# For local development pass in blank baseurl to simulate prod-like environment: `jekyll serve --baseurl`
+# For local development pass in blank baseurl to simulate prod-like environment: 
+# $ jekyll serve --baseurl
 baseurl: "/m-lab.github.io"
 
 # Build settings
