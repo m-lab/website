@@ -1,0 +1,110 @@
+// Grid Component
+
+.grid-section {
+  padding: 64px 0 0 0;
+
+  ul {
+    margin-right: -15px;
+  }
+
+  &.first-child {
+    padding-top: 40px;
+  }
+
+  > .grid-header {
+    margin-bottom: 30px;
+  }
+
+  .grid-link {
+    color: #767676;
+    display: block;
+
+    &:hover .grid-img, &:hover .grid-info {
+      opacity: .65;
+    }
+  }
+
+  .grid-img, .grid-info {
+    -webkit-transition: opacity 300ms linear;
+    -moz-transition: opacity 300ms linear;
+    -o-transition: opacity 300ms linear;
+    transition: opacity 300ms linear;
+  }
+
+/*    ul {
+    
+}*/
+
+  .grid-img img {
+    width: 104px;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  div.grid-img {
+    width: 104px;
+    height: 104px;
+    position: relative;
+    overflow: hidden;
+    line-height: 104px;
+    text-align: center;
+
+    &.framed {
+      width: 102px;
+      height: 102px;
+      line-height: 102px;
+      border: 1px solid #d7d7d7;
+
+      img {
+        width: 102px;
+      }
+    }
+
+    &.is-logo {
+      width: 92px;
+      height: 92px;
+      line-height: 92px;
+
+      img {
+        width: 78px;
+      }
+    }
+  }
+
+  .grid-info {
+    width: 190px;
+
+    .grid-heading {
+      font-size: 16px;
+      line-height: 16px;
+      color: #454545;
+    }
+
+    .grid-description, p {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  .partner-logos {
+    font-size: 0px;
+
+    li {
+      display: inline-block;
+      width: 94px;
+      height: 94px;
+      line-height: 94px;
+      margin: 0 14px 14px 0;
+      outline: 1px solid #d7d7d7;
+      text-align: center;
+    }
+
+    img {
+      width: 80px;
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

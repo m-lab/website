@@ -1,0 +1,56 @@
+// Contains header layout styles
+
+.main-nav, .sub-nav {
+  width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  height: 50px;
+  overflow: hidden;
+
+  >li {
+    background: #9bd2c7;
+    border-right: 1px solid #79a199;
+    -webkit-box-shadow: 1px 0 0 #a1d5ca;
+    -moz-box-shadow: 1px 0 0 #a1d5ca;
+    box-shadow: 1px 0 0 #a1d5ca;
+    -webkit-transition: background-color 300ms ease-in-out;
+    -moz-transition: background-color 300ms ease-in-out;
+    -o-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+
+    &:hover, >li.is-active {
+      background: #afdbd2;
+    }
+  }
+
+  li {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom:1;*display: inline;
+    margin-right: -4px;
+    -webkit-transition: background-color 300ms ease-in-out;
+    -moz-transition: background-color 300ms ease-in-out;
+    -o-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+
+    a {
+      line-height: 52px;
+      color: #fff;
+      padding: 0 20px;
+      display: block;
+      white-space: nowrap;
+      overflow-x: visible;
+    }
+
+    ul {
+      width: 960px;
+      margin: auto   	
+    }
+  }
+
+  li:first-child {
+    border-left: 1px solid #79a199
+  }
+}

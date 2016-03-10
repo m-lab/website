@@ -1,0 +1,17 @@
+// main body layout elements
+
+.intro-section, .blog-entry {
+  ul {
+  	margin: 0px 0px 25px 15px;
+  	padding: 0px 0px 0px 15px;
+
+    @include list_bullets(disc, 0px, 0px, 24px, outside);
+
+  	ul {
+ 	    padding-bottom: 0px;
+ 	    margin-bottom: 0px;
+
+ 	    @include list_bullets(circle);
+    }
+  }
+}

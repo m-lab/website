@@ -13,6 +13,7 @@ baseurl: "/m-lab.github.io"
 permalink: "/blog/:title/"
 sass:
   sass_dir: _sass
+  style: compressed
 markdown: kramdown
 include: ['_pages']
 exclude:
