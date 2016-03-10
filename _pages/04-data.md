@@ -7,18 +7,26 @@ menu-item: true
 breadcrumb: data
 ---
 
-# About M-Lab's Data  
+# About M-Lab's Data
 
-M-Lab stores our canonical raw data in [Google Cloud Storage](https://console.developers.google.com/storage/browser/m-lab/). Google Cloud Storage contains all of our data in raw form (no parsing). Additionally, we parse a copy of our raw data for a subset of our tests into [BigQuery tables](https://bigquery.cloud.google.com/queries/measurement-lab), so that the data is queryable through a SQL interface. 
+M-Lab publishes its data in two different forms:
 
-Raw data is updated hourly and BigQuery tables are updated every day with data from M-Lab logs collected the day before. As a consequence, there is typically at least a 24-hour delay between data collection and data publication.
+-  Google Cloud Storage (raw files)
+   -   M-Lab publishes raw output from its measurement tools on Google Cloud Storage as file archives.
+   -   See the [M-Lab Google Cloud Storage documentation](/data/gcs) for more information.
+
+-  Google BigQuery (SQL queryable)
+   - M-Lab parses data for a subset of its tools and publishes the data on BigQuery, so that users can run SQL queries over the data.
+   - See the [M-Lab BigQuery QuickStart](/data/bq/quickstart) for more information.
+
+There is typically at least a 24-hour delay between data collection and data publication.
 
 ## Data License and Citing M-Lab Data
 
 All data collected by M-Lab tests are available to the public without restriction under a [No Rights Reserved Creative Commons Zero Waiver](http://creativecommons.org/about/cc0).
 
 Please cite M-Lab datasets as follows:
- 
+
 - The M-Lab _test name_ Dataset, _date range used_. _M-Lab test URL_
 
 For example:

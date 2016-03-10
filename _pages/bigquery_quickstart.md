@@ -10,7 +10,7 @@ breadcrumb: data
 Whether you want to access M-Lab's raw data, search it using BigQuery, or build your own application using it, follow these quick steps to get started:
 
 -   Choose a Google account to use for your queries or application
--   Subscribe that account to [M-Lab's Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss). 
+-   Subscribe that account to [M-Lab's Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
 -   Enable billing for the account in the [Google Cloud Platform Console](https://console.developers.google.com/)
 
 Any Gmail, Google Apps account (Business, Non-profit, etc.), can be used, however developer "service accounts" are not supported. In any case, the email address you choose should be the one also used with your Google Cloud Platform Console.
@@ -29,9 +29,9 @@ M-Lab data is easily queried using Google’s [web interface to BigQuery](https:
 
 You may also run queries at the command line using BigQuery tools in the Google Cloud SDK.
 
-Download and Install [Google’s Cloud SDK](https://cloud.google.com/sdk/) using the Installation and Quick Start instructions for your operating system. 
+Download and Install [Google’s Cloud SDK](https://cloud.google.com/sdk/) using the Installation and Quick Start instructions for your operating system.
 
-After installation, authentication and restarting your terminal, BigQuery’s command line tools are available in your shell. If you are new to BigQuery, we suggest that you next consult the resources below to get started: 
+After installation, authentication and restarting your terminal, BigQuery’s command line tools are available in your shell. If you are new to BigQuery, we suggest that you next consult the resources below to get started:
 
 -   [Google’s BigQuery documentation](https://cloud.google.com/bigquery/what-is-bigquery)
 -   [Google's bq Command-Line Tool Quickstart documentation](https://cloud.google.com/bigquery/bq-command-line-tool-quickstart)
