@@ -8,10 +8,10 @@
     @include list_bullets(disc, 0px, 0px, 24px, outside);
 
   	ul {
- 	    padding-bottom: 0px;
- 	    margin-bottom: 0px;
+ 	    margin: 0px;
+ 	    padding: 0px 0px 0px 15px;
 
- 	    @include list_bullets(circle);
+ 	    @include list_bullets(circle, 0px, 0px 0px 0px 15px, 24px, outside);
     }
   }
 }
