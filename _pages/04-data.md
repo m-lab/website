@@ -32,14 +32,3 @@ Please cite M-Lab datasets as follows:
 For example:
 
 - The M-Lab NDT Dataset 2009-02-11 - 2015-12-21. [https://measurementlab.net/tools/ndt](https://measurementlab.net/tools/ndt)
-
-## Choose how you want to access M-Lab data
-
-M-Lab data can be queried using BigQuery, using the command line tools available in the Google Cloud SDK, or by a custom application that uses the Google Cloud SDK.
-
-For more information, please review our other documentation in this section:
-
--   [Google Cloud Storage](/data/gcs)
--   [BigQuery QuickStart](/data/bq/quickstart)
--   [BigQuery Examples](/data/bq/examples)
--   [BigQuery Schema](/data/bq/schema)

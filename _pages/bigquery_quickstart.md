@@ -7,19 +7,19 @@ breadcrumb: data
 
 ## BigQuery QuickStart - Using M-Lab Data
 
-Whether you want to access M-Lab's raw data, search it using BigQuery, or build your own application using it, follow these quick steps to get started:
+To search M-Lab's data using BigQuery, follow these quick steps to get started:
 
--   Choose a Google account to use for your queries or application
--   Subscribe that account to [M-Lab's Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
--   Enable billing for the account in the [Google Cloud Platform Console](https://console.developers.google.com/)
+### Configure Google Cloud Platform Project
 
-Any Gmail, Google Apps account (Business, Non-profit, etc.). Choose the account that is used with your Google Cloud Platform Console.
-
-Subscribing to [M-Lab's Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss) whitelists the account so no query charges are incurred when searching the M-Lab dataset.
-
-Because BigQuery is a part of the Google Cloud Platform, in order to use BigQuery you must have a Google account and enable billing from within [Google Cloud Platform Console](https://console.developers.google.com/).
+Create a project and enable billing in [Google Cloud Platform Console](https://console.developers.google.com/) (or use an existing project with billing enabled)
 
 You will **not** be charged for queries against tables in the M-Lab dataset. M-Lab is committed to open data and offering our data free of charge is part of that commitment.
+
+### Configure M-Lab Table Access
+
+Using the same Google account as your GCP account, subscribe to 
+
+Join the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss) with the same account you used to create your Google Cloud Platform project. Joining this group whitelists your account so that you can make queries against M-Lab's BigQuery tables.
 
 ### Using a Service Account
 
@@ -33,16 +33,16 @@ BigQuery offers a web interface so that you can query M-Lab BigQuery data from y
 
 Try the following query as an example:
 
-	-- Calculate how many NDT tests were performed per day since M-Lab epoch
-	SELECT
-	  STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') AS day,
-	  COUNT(*) AS num_tests
-	FROM
-	  plx.google:m_lab.ndt.all
-	GROUP BY
-	  day
-	ORDER BY
-	  day ASC;
+  -- Calculate how many NDT tests were performed per day since M-Lab epoch
+  SELECT
+    STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') AS day,
+      COUNT(*) AS num_tests
+    FROM
+      plx.google:m_lab.ndt.all
+    GROUP BY
+      day
+    ORDER BY
+      day ASC;
 
 ## BigQuery tools in the Google Cloud SDK
 
@@ -54,18 +54,18 @@ After installation, authentication and restarting your terminal, BigQuery’s co
 
 Try the following query as an example:
 
-	$ bq query --format=csv "
-	-- Calculate how many NDT tests were performed per day since M-Lab epoch
-	SELECT
-	  STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') 	AS day,
-	  COUNT(*) AS num_tests
-	FROM
-	  plx.google:m_lab.ndt.all
-	GROUP BY
-	  day
-	ORDER BY
-	  day ASC
-	"
+  $ bq query --format=csv "
+  -- Calculate how many NDT tests were performed per day since M-Lab epoch
+  SELECT
+    STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') 	AS day,
+    COUNT(*) AS num_tests
+  FROM
+    plx.google:m_lab.ndt.all
+  GROUP BY
+    day
+  ORDER BY
+    day ASC
+  "
 
 If you are new to BigQuery, we suggest that you next consult the resources below to get started:
 
