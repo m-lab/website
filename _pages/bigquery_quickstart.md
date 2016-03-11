@@ -33,16 +33,18 @@ BigQuery offers a web interface so that you can query M-Lab BigQuery data from y
 
 Try the following query as an example:
 
-  -- Calculate how many NDT tests were performed per day since M-Lab epoch
-  SELECT
-    STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') AS day,
-      COUNT(*) AS num_tests
-    FROM
-      plx.google:m_lab.ndt.all
-    GROUP BY
-      day
-    ORDER BY
-      day ASC;
+~~~sql
+-- Calculate how many NDT tests were performed per day since M-Lab epoch
+SELECT
+  STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') AS day,
+    COUNT(*) AS num_tests
+  FROM
+    plx.google:m_lab.ndt.all
+  GROUP BY
+    day
+  ORDER BY
+    day ASC;
+~~~
 
 ## BigQuery tools in the Google Cloud SDK
 
@@ -54,18 +56,20 @@ After installation, authentication and restarting your terminal, BigQuery’s co
 
 Try the following query as an example:
 
-  $ bq query --format=csv "
-  -- Calculate how many NDT tests were performed per day since M-Lab epoch
-  SELECT
-    STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') 	AS day,
-    COUNT(*) AS num_tests
-  FROM
-    plx.google:m_lab.ndt.all
-  GROUP BY
-    day
-  ORDER BY
-    day ASC
-  "
+~~~sql
+$ bq query --format=csv "
+-- Calculate how many NDT tests were performed per day since M-Lab epoch
+SELECT
+  STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') 	AS day,
+  COUNT(*) AS num_tests
+FROM
+  plx.google:m_lab.ndt.all
+GROUP BY
+  day
+ORDER BY
+  day ASC
+"
+~~~
 
 If you are new to BigQuery, we suggest that you next consult the resources below to get started:
 
