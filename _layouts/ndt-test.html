@@ -14,18 +14,9 @@
     </style>
     <![endif]-->
     <script>
-        <!--
-            This variable is a flag to the 'new Worker()' invocation in
-            ndt-wrapper.js in the ndt submodule. Worker() only takes an absolute
-            path as an argument, so we need to be able to tell it where to look
-            if the file it needs is not located in the webroot.
-        -->
-        var ndtScriptPath = "{{ site.baseurl }}/ndt/HTML5-frontend/";
-        <!--
-            The gauge.min.js in the ndt submodule wants the font digital-7-mono,
-            and by default looks for it in the /fonts directory.  Setting this
-            variable tells it where to look.
-        -->
+        // The gauge.min.js in the ndt submodule wants the font digital-7-mono,
+        // and by default looks for it in the /fonts directory.  Setting this
+        // variable tells it where to look.
         var CANV_GAUGE_FONTS_PATH = "../fonts/digital-7-mono";
     </script>
     <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js"></script>
