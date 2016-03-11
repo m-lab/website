@@ -46,6 +46,7 @@ SELECT
     day ASC;
 ~~~
 
+
 ## BigQuery tools in the Google Cloud SDK
 
 You may also run queries at the command line using BigQuery tools in the Google Cloud SDK.
@@ -67,8 +68,7 @@ FROM
 GROUP BY
   day
 ORDER BY
-  day ASC
-"
+  day ASC"
 ~~~
 
 If you are new to BigQuery, we suggest that you next consult the resources below to get started:
