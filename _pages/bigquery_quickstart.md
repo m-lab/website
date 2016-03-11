@@ -17,8 +17,6 @@ You will **not** be charged for queries against tables in the M-Lab dataset. M-L
 
 ### Configure M-Lab Table Access
 
-Using the same Google account as your GCP account, subscribe to 
-
 Join the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss) with the same account you used to create your Google Cloud Platform project. Joining this group whitelists your account so that you can make queries against M-Lab's BigQuery tables.
 
 ### Using a Service Account
@@ -61,7 +59,7 @@ Try the following query as an example:
 $ bq query --format=csv "
 -- Calculate how many NDT tests were performed per day since M-Lab epoch
 SELECT
-  STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') 	AS day,
+  STRFTIME_UTC_USEC(web100_log_entry.log_time * 1000000, '%Y-%m-%d') AS day,
   COUNT(*) AS num_tests
 FROM
   plx.google:m_lab.ndt.all
