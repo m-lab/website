@@ -1,0 +1,11 @@
+// All Mixins
+
+@mixin list_bullets($type: none, $padding: 0px, $margin: 0px, $line-height: 24px, $pos: inside) {
+  li {
+    list-style-type: $type;
+    list-style-position: $pos;
+    padding: $padding;
+    margin: $margin;
+    line-height: $line-height;
+  }
+}
