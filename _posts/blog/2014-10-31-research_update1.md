@@ -3,9 +3,9 @@ layout: blog
 title: "Research Updates: Beginning to Observe Network Management Practices as a Third Party"
 author: "Collin Anderson"
 breadcrumb: blog
-categories: 
+categories:
   - research
-  - tos 
+  - tos
   - interconnection
 ---
 
@@ -30,7 +30,7 @@ Using the New York Cogent site as an indicator, at the beginning of February 201
 Below we show an example of the ToS field in the IP header of packets received from a Verizon FIOS customers on February 28, 2014 from the data we extracted. Those wishing to explore this more fully are welcome to access the NDT data archives from [BigStore](https://console.developers.google.com/storage/m-lab/ndt/). Each M-Lab site should have an extensive sample of ndttrace files.
 
     16:21:09.973746 IP (tos 0x48, ttl 55, id 23787, offset 0, flags [DF], proto TCP (6), length 1500)
-        pool-108-41-239-212.nycmny.fios.verizon.net.57090 > 38.106.70.160.40047: Flags [P.], seq 3337041:3338489, ack 0, win 8235, options [nop, nop,TS[|tcp]>                                                            
+        pool-108-41-239-212.nycmny.fios.verizon.net.57090 > 38.106.70.160.40047: Flags [P.], seq 3337041:3338489, ack 0, win 8235, options [nop, nop,TS[|tcp]>
              0x0000:  4548 05dc 5ceb 4000 3706 17e1 6c29 efd4  EH..\.@.7...l)..
              0x0010:  266a 46a0 df02 9c6f 241b 4941 fb8f 03bf  &jF....o$.IA....
              0x0020:  8018 202b f194 0000 0101 080a            ...+........
@@ -44,6 +44,6 @@ We will be exploring this topic and others in upcoming research, looking across 
 
 Collin Anderson, on behalf of M-Lab researchers
 
-------------------------------------------------------------------------
+---
 
 > ***Footnote:** Since the publication of this blogpost, an informative discussion has occurred* *[on the Measurement Lab mailing list](https://groups.google.com/a/measurementlab.net/forum/#%21topic/discuss/vcQnaZJO6nQ)regarding the scope of this network management policy and operational decisions behind its implementation. M-Lab is committed to reproducible and open research on network performance that can be derived from measurement, which often limit our ability to interrogate questions of why a policy is in place. We are happy to see that open data has lead to extensive conversations by not only a small community of network researchers or policy advocates, but the broader public and even network operators. We look forward to expanding this research over the course of the next year and appreciate the feedback we have received from a diversity of voices.*

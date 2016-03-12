@@ -3,7 +3,7 @@ layout: page
 permalink: /transparency/
 title: "Transparency"
 breadcrumb: visualizations
-accordion: 
+accordion:
   - heading: "Network neutrality map using Glasnost data"
   - heading: "Deep packet inspection using Glasnost data"
 ---
@@ -11,7 +11,6 @@ accordion:
 # Transparency
 
 Transparency visualizations showcase ways in which people have used M-Lab data to expose what's going on under the hood. From ISP throttling to deep packet inspection, we invite those interested to shed sunlight, and we highlight the results here.
-
 
 {% capture accordion_entry_1 %}
 
@@ -35,4 +34,4 @@ For a full description of the study and more results, go to [http://dpi.ischool.
 
 {% endcapture %}
 
-{% include accordion.html %}        
+{% include accordion.html %}

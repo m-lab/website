@@ -3,11 +3,11 @@ layout: blog
 title: "ISP Interconnection and its Impact on Consumer Internet Performance: Introducing A New M-Lab Consortium Technical Report"
 author: "Chris Ritzo"
 breadcrumb: blog
-categories: 
+categories:
   - research
   - interconnection
   - consumer internet
-  - performance 
+  - performance
 ---
 
 # ISP Interconnection and its Impact on Consumer Internet Performance: Introducing A New M-Lab Consortium Technical Report

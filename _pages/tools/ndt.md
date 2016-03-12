@@ -30,24 +30,18 @@ the NDT speed test".
 
 **Data** collected by NDT is available...
 
--   in raw format at <https://storage.cloud.google.com/m-lab/ndt>
--   via an SQL interface
-    (see <https://github.com/m-lab/mlab-wikis/blob/master/BigQueryMLabDataset.md>).
--   Visualized in [Public Data
-    Explorer](https://www.google.com/publicdata/explore?ds=e9krd11m38onf_&ctype=m&strail=false&bcs=d&nselm=s&met_s=number_of_tests&scale_s=lin&ind_s=false&ifdim=country&hl=en_US&dl=en_US&ind=false&xMax=180&xMin=-180&yMax=-54.423985288271695&yMin=81.24033645136825&mapType=t&icfg&iconSize=0.5).
--   Please cite this dataset as follows: **The MLab NDT Dataset,
-    &lt;date range used&gt;. http://measurementlab.net/tools/ndt**
+- in raw format at <https://storage.cloud.google.com/m-lab/ndt>
+- via an SQL interface
+  (see <https://github.com/m-lab/mlab-wikis/blob/master/BigQueryMLabDataset.md>).
+- Visualized in [Public Data
+  Explorer](https://www.google.com/publicdata/explore?ds=e9krd11m38onf_&ctype=m&strail=false&bcs=d&nselm=s&met_s=number_of_tests&scale_s=lin&ind_s=false&ifdim=country&hl=en_US&dl=en_US&ind=false&xMax=180&xMin=-180&yMax=-54.423985288271695&yMin=81.24033645136825&mapType=t&icfg&iconSize=0.5).
+- Please cite this dataset as follows: **The MLab NDT Dataset,
+  &lt;date range used&gt;. http://measurementlab.net/tools/ndt**
 
 **Source code** is available at <http://code.google.com/p/ndt/source/>.
 
 **More information** at <http://code.google.com/p/ndt/>
 and <http://www.internet2.edu/performance/ndt/>.
-
-
-<div id="mcePasteBin"
-style="position: absolute; top: 0px; left: 0; background: red; width: 1px; height: 1px; overflow: hidden;"
-contenteditable="false">
-
 
 NOTE: if the test does not run or takes longer than 60 seconds,\
 please read the FAQ entry for "troubleshooting the NDT speed test".

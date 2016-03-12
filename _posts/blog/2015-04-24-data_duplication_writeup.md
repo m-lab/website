@@ -3,9 +3,9 @@ layout: blog
 title: "Data Duplication Bug in M-Lab BigQuery Data"
 author: "Michael Lynch"
 breadcrumb: blog
-categories: 
+categories:
   - data
-  - transparency 
+  - transparency
 ---
 
 # Data Duplication Bug in M-Lab BigQuery Data
@@ -31,13 +31,12 @@ The table below details the effect of the duplication bug on each of the BigQuer
 |:-|:-
 | Feb. 2009 - Dec. 2011 |Unaffected
 | Jan. 2012 |Affected, but only during a brief window. Only queries performed between Jan. 12, 2015 to Jan. 30, 2015 for data in Jan. 2012 would have returned duplicate results.
-| Feb. 2012 - Apr. 2013 |Unaffected 
-| May 2013 - Feb. 2014 |Affected 
-| Mar. 2014 |Unaffected 
-| Apr. 2014 - May 2014 |Affected 
+| Feb. 2012 - Apr. 2013 |Unaffected
+| May 2013 - Feb. 2014 |Affected
+| Mar. 2014 |Unaffected
+| Apr. 2014 - May 2014 |Affected
 | Jun. 2014 - Jul. 2014 |Affected, but only for data collected from sites lba01 (Leeds, UK) and tun01 (Tunis, Tunisia).
-| Aug. 2014 - Present |Unaffected 
-
+| Aug. 2014 - Present |Unaffected
 
 # Impact on M-Lab 2014 Interconnection Study
 
@@ -53,17 +52,17 @@ While not significant, instances where researchers calculated the monthly median
 [![rtt graph]({{ site.baseurl }}/images/blog/rtt-download-1.png){:style="border:1px solid black"}]({{ site.baseurl }}/images/blog/rtt-download-1.png){:target="_blank"}
 [![rtt graph]({{ site.baseurl }}/images/blog/rtt-download-2.png){:style="border:1px solid black"}]({{ site.baseurl }}/images/blog/rtt-download-2.png){:target="_blank"}
 
-# Actions Taken 
+# Actions Taken
 
 We take problems in data archives very seriously, and we have taken the following actions to address this issue:
 
 {:style="list-style-type: circle"}
--   Fixed the underlying bug that was causing duplicate tests to appear in BigQuery.
+- Fixed the underlying bug that was causing duplicate tests to appear in BigQuery.
 
--   Reprocessed the affected tables in our BigQuery dataset to cleanse the dataset of duplicates.
+- Reprocessed the affected tables in our BigQuery dataset to cleanse the dataset of duplicates.
 
--   Notified M-Lab researchers and consumers of our data via the <discuss@measurementlab.net> mailing list.
+- Notified M-Lab researchers and consumers of our data via the <discuss@measurementlab.net> mailing list.
 
--   Worked with researchers to update the [M-Lab Observatory]({{ site.baseurl }}/observatory/) with the corrected data.
+- Worked with researchers to update the [M-Lab Observatory]({{ site.baseurl }}/observatory/) with the corrected data.
 
 Worked with researchers to publish [amended graphs and raw data](https://console.developers.google.com/storage/m-lab/interconnection-study-2014/) from the M-Lab 2014 Interconnection Study on Google Cloud Storage.

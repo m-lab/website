@@ -3,11 +3,10 @@ layout: blog
 title: "Assessing Typhoon Haiyan's impact on core Internet infrastructure: measurement tells a story"
 author: "Meredith Whittaker"
 breadcrumb: blog
-categories: 
+categories:
   - data analysis
   - ripe
 ---
-
 
 # Assessing Typhoon Haiyan's impact on core Internet infrastructure: measurement tells a story
 

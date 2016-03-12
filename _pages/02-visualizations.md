@@ -5,7 +5,7 @@ title: "Visualizations"
 page-title: "Performance"
 menu-item: true
 breadcrumb: visualizations
-accordion: 
+accordion:
   - heading: "Broadband performance statistics using NDT data"
   - heading: "Packet loss video using NDT data"
 ---
@@ -17,7 +17,6 @@ don't have to ask permission before doing meaningful analysis. Below are
 some ways in which smart people have turned open data into powerful
 visualizations.
 
-
 {% capture accordion_entry_1 %}
 <p><iframe class="customIframe" style="font-size: 11px; line-height: 24px;" src="https://www.google.com/publicdata/embed?ds=e9krd11m38onf_&amp;ctype=m&amp;strail=false&amp;bcs=d&amp;nselm=s&amp;met_s=number_of_tests&amp;scale_s=lin&amp;ind_s=false&amp;met_c=download_throughput&amp;scale_c=lin&amp;ind_c=false&amp;ifdim=country&amp;hl=en_US&amp;dl=en_US&amp;ind=false&amp;xMax=180&amp;xMin=-180&amp;yMax=-79.97571094413946&amp;yMin=84.17339026552769&amp;mapType=t&amp;icfg&amp;iconSize=0.5" name="customIframe_0" width="960" height="500" frameborder="0" marginwidth="960" marginheight="500"></iframe></p>
 
@@ -28,7 +27,6 @@ The metrics are aggregated by
 - **Geography** (country -&gt; region -&gt; city)
 - **Internet Service Provider** (ISP)
 - **Vantage point** (i.e., M-Lab site)
-
 
 A chart can visualize one or more metrics at different levels of aggregation at the same time. Below there are a few examples of how metrics and aggregation criteria can be combined to provide interesting visualizations. If you're interested, you can find a detailed description of how the aggregated statistics are computed at [https://code.google.com/p/m-lab/wiki/PDEChartsNDT](https://code.google.com/p/m-lab/wiki/PDEChartsNDT).
 

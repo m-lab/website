@@ -16,8 +16,8 @@ network mile and end-users' systems.
 
 **Data** collected by NPAD is available...
 
--   in raw format at <https://storage.cloud.google.com/m-lab/npad>
--   via an SQL interface
+- in raw format at <https://storage.cloud.google.com/m-lab/npad>
+- via an SQL interface
     (see <https://github.com/m-lab/mlab-wikis/blob/master/BigQueryMLabDataset.md>).
 
 **Source code** is available at
