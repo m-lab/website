@@ -3,13 +3,23 @@ layout: page
 title: Google Cloud Storage
 permalink: /data/gcs/
 breadcrumb: data
+accordion-quick-links: true
+quick-links-section:
+  - column:
+    - group-heading: "Overview"
+    - group-heading: "File Layout"
+    - group-heading: "Project Data"
+    - group-heading: "Accessing Data Programmatically"
 ---
 
+{:.overview}
 # Overview
+
 M-Lab publishes all data it collected in raw form as archives on Google Cloud Storage (GCS) at the following location:
 
 * [https://console.developers.google.com/storage/browser/m-lab/](https://console.developers.google.com/storage/browser/m-lab/)
 
+{:.file-layout}
 # File Layout
 
 All M-Lab files are packaged up in compressed tarballs. They are placed in folders and named according to the following schema:
@@ -27,6 +37,7 @@ If the data collected during one day by one tool on one server are more than 1GB
 
 For example, the tarball `20090218T000000Z-mlab1-lga01-ndt-0000.tgz` contains the first 1 GB of data collected by all the NDT tests that were served by the M-Lab server mlab1-lga01 on Feb 18, 2009.
 
+{:.project-data}
 # Project Data
 
 Direct links to each M-Lab project's raw data are available below:
@@ -64,6 +75,7 @@ Direct links to each M-Lab project's raw data are available below:
   * mlab-collectd is a monitoring tool for M-Lab slices that collects resource utilization information about all M-Lab servers.
   * More information is available on [Github](https://github.com/m-lab/collectd-mlab).
 
+{:.accessing-data-programmatically}
 # Accessing Data Programmatically
 
 ## Accessing Data with `gsutil`

@@ -3,12 +3,24 @@ layout: page
 title: "BigQuery Examples"
 permalink: /data/bq/examples/
 breadcrumb: data
+accordion-quick-links: true
+quick-links-section:
+  - column:
+    - group-heading: "Overview"
+    - group-heading: "Basic counting"
+    - group-heading: "Computing statistics over time"
+  - column:
+    - group-heading: "Dealing with IP addresses"
+    - group-heading: "Comparing NDT and NPAD tests"
+    - group-heading: "Computing distributions of tests across users"
 ---
 
+{:.overview}
 # Overview
 
 The examples below query the M-Lab data in various ways to demonstrate effective use of the M-Lab BigQuery dataset.
 
+{:.basic-counting}
 # Basic counting — How many users?
 
 Let's start with something simple. How many distinct users (distinct IPs for simplicity) have ever run an **NDT** test?
@@ -28,6 +40,7 @@ Result:
 |-------------|
 | 110814220   |
 
+{:.computing-statistics-over-time}
 # Computing statistics over time — How many users per day?
 
 By slightly modifying the previous query, it is possible to compute how the number of users changed over time.
@@ -62,6 +75,7 @@ ORDER BY
 | 2015-12-27  |       52995 |
 | 2015-12-28  |       50751 |
 
+{:.dealing-with-ip-addresses}
 # Dealing with IP addresses — How many users from distinct subnets?
 
 BigQuery supports various functions to parse IP addresses in different formats. You can use such functions to aggregate the number of users per subnet and compute how many subnets have ever initiated a test.
@@ -83,6 +97,7 @@ FROM
 |-------------|
 | 4548859     |
 
+{:.comparing-ndt-and-npad-tests}
 # Comparing NDT and NPAD tests — How many users have run both NDT and NPAD tests?
 
 * The following query computes the number of distinct IP addresses that have run tests using both NDT and NPAD.
@@ -114,6 +129,7 @@ FROM
 |----------------|
 |           74535|
 
+{:.computing-distributions-of-tests-across-users}
 # Computing distributions of tests across users — How many users have run a certain number of tests?
 
 Now let's try something a bit more complex.
