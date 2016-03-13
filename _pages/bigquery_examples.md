@@ -3,6 +3,16 @@ layout: page
 title: "BigQuery Examples"
 permalink: /data/bq/examples/
 breadcrumb: data
+accordion-quick-links: true
+quick-links-section:
+  - column:
+    - group-heading: "Overview"
+    - group-heading: "Basic counting"
+    - group-heading: "Computing statistics over time"
+  - column:
+    - group-heading: "Dealing with IP addresses"
+    - group-heading: "Comparing NDT and NPAD tests"
+    - group-heading: "Computing distributions of tests across users"
 ---
 
 # BigQuery Examples
