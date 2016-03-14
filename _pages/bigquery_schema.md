@@ -15,7 +15,7 @@ breadcrumb: data
 * Each table row represents a **single Web100 snapshot** collected during a test.
 * For each test, the table contains **one or more rows** (one row for each Web100 snapshot collected during that test).
 
-The following table is an example of the BigQuery M-Lab table. Rows ` a1`, `a2`, `a3` have been collected during the test `a`, while rows `b1` and `b2` have been collected during the test `b`. The next section explains what each field represents.
+The following table is an example of the BigQuery M-Lab table. Rows `a1`, `a2`, `a3` have been collected during the test `a`, while rows `b1` and `b2` have been collected during the test `b`. The next section explains what each field represents.
 
 |               |               |  test_id |  web100_log_entry.log_time |  web100_log_entry.snap.MinRTT |  ... |
 | --------------|:-------------:| :-------:|:--------------------------:| :----------------------------:|-----:|
