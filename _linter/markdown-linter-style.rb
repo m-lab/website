@@ -3,7 +3,11 @@ all
 
 #  Rule Modifications
 #  ----------------------------------------------------------------------------
-## MD029 mod - tells linter not to fail if order list items don't start with 1
+## MD029 - tells linter to allow ordered lists that will increment by 1.  By 
+## default (w/o modification) the linter doesn't accept lists structured like:
+## 1. List item #1
+## 2. List item #2
+## 3. List item #3
 rule 'MD029', :style => :ordered
 
 
