@@ -24,6 +24,25 @@
     <script src="{{ site.baseurl }}/ndt/HTML5-frontend/script.js"></script>
     <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-browser-client.js"></script>
     <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-wrapper.js"></script>
+    <script>
+        // Lookup a suitable NDT server using mlab-ns. The variable ndtServer is
+        // used by script.js in the ndt submodule
+        var ndtServer;
+        var mlabNsService = 'https:' == location.protocol ? 'ndt_ssl' : 'ndt';
+        var mlabNsUrl = 'https://mlab-ns.appspot.com/';
+        $.ajax({
+            url: mlabNsUrl + mlabNsService + '?format=json',
+            dataType: 'json',
+            async: false,
+            success: function(resp) {
+                console.log('Using NDT server: ' + resp.fqdn);
+                ndtServer = resp.fqdn;
+            },
+            error: function(resp) {
+                console.log('mlab-ns lookup failed.');
+            }
+        });
+    </script>
 </head>
 <body class="initializing">
 <div class="header"></div>
