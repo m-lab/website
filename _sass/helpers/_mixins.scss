@@ -9,3 +9,9 @@
     line-height: $line-height;
   }
 }
+
+@mixin tables($min-width) {
+  th {
+    min-width: $min-width;
+  }
+}
