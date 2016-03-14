@@ -7,7 +7,7 @@ breadcrumb: tests
 
 # Windrider
 
-Windrider has been decommissioned on 01/17/2013. The source code will be still available at the link provided below.
+**Windrider has been decommissioned on 01/17/2013. The source code will be still available at the link provided below.**
 
 WindRider attempts to detect whether your mobile provider is performing application or service specific differentiation, such as prioritizing or slowing traffic to certain websites, applications, or content.
 
