@@ -162,4 +162,4 @@ The converted query performs significantly faster than the original:
 
 ## Questions / Feedback
 
-If you have questions or feedback about using the new, fast tables, please send an email to [support@measurementlab.net](support@measurementlab.net).
+If you have questions or feedback about using the new, fast tables, please send an email to [support@measurementlab.net](mailto:support@measurementlab.net).
