@@ -21,6 +21,7 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - hooks
 
 # Display blog posts even if they're future-dated.
 future: true
