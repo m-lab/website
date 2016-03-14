@@ -8,7 +8,7 @@ before_script:
   - sed -ie '/^baseurl/s/\/m-lab\.github\.io//' _config.yml 
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site --only-4xx --check-html --file-ignore "/mlab_observatory/, /ndt/"
+  - bundle exec htmlproofer ./_site --only-4xx --check-html --file-ignore "/mlab_observatory/","/ndt/"
 branches:
   only:
   - master
