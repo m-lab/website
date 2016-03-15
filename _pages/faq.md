@@ -13,23 +13,23 @@ quick-links-section:
     - group-heading: "I am a researcher"
     - group-heading: "I am a company or institution"
     - group-heading: "Contact MLab"
-gq-accordion: 
+gq-accordion:
   - heading: "What and who are M-lab's supporting partners?"
   - heading: "What's M-Lab's origin story?"
   - heading: "Who's behind M-Lab? Can I get involved?"
   - heading: "What is M-Lab, and why?"
-iu-accordion: 
+iu-accordion:
   - heading: "How can I troubleshoot the NDT speed test?"
   - heading: "A test isn't working. Whom do I contact?"
   - heading: "What data will be collected when I run a test?"
   - heading: "Will these tests monitor my private Internet activity, like email, browsing, search?"
   - heading: "Are the measurement results always right?"
   - heading: "What measurement tests can I run?"
-researcher-accordion: 
+researcher-accordion:
   - heading: "Can I deploy a new tool on the M-Lab platform?"
-company-accordion: 
+company-accordion:
   - heading: "How can I get involved?"
-contact-accordion: 
+contact-accordion:
   - heading: "How can I contact M-Lab?"
 ---
 
@@ -43,7 +43,7 @@ Supporting partners are companies and institutions that have committed resources
 {% capture accordion_entry_2 %}
 In 2008, [Vint Cerf](http://www.google.com/corporate/execs.html#vint) initiated conversations with network researchers to learn more about challenges to the effective study of broadband networks. Researchers identified several problems, including a lack of widely-deployed servers and ample connectivity to support active network measurement tools, and an inability to easily share large data sets with one another. M-Lab was founded by these researchers to help address these problems.
 {% endcapture %}
- 
+
 {% capture accordion_entry_3 %}
 M-Lab was [founded](http://measurementlab.net/who) by the New America Foundation's Open Technology Institute (OTI), the PlanetLab Consortium, Google Inc. and a large body of academic researchers. The founding researchers collectively make up the steering committee that leads development of M-Lab's organizational policies. M-Lab is a community-based effort. We currently receive assistance from M-Lab [supporting partners]({{ site.baseurl }}/who/), and we welcome others who would like to contribute to the platform's growth and success. In order for M-Lab to achieve its objectives, it relies on the participation of additional companies, institutions and researchers. Learn how to [get involved]({{ site.baseurl }}/contribute/).
 {% endcapture %}
@@ -103,18 +103,17 @@ You can then prepare an application and [contact]({{ site.baseurl }}/contact/) t
 {% include accordion.html acc_section = "researcher" %}
 
 {:.i-am-a-company-or-institution}
-# I am a company or institution 
+# I am a company or institution
 
 {% capture accordion_entry_1 %}
 Companies and institutions can help in a number of key ways, including:
 
 {:.disc-list}
--   Provide servers for the platform and purchase
-    network connectivity.
--   Provide resources for data hosting, aggregation and publication.
--   Provide data analysis resources.
--   Embed an M-Lab client-side tool in an application or service.
--   Provide funding to support the above.
+- Provide servers for the platform and purchase network connectivity.
+- Provide resources for data hosting, aggregation and publication.
+- Provide data analysis resources.
+- Embed an M-Lab client-side tool in an application or service.
+- Provide funding to support the above.
 
 If you'd like to get involved as an M-Lab supporting partner, [contact]({{ site.baseurl }}/contact/) the M-lab steering committee and join the [public mailing list](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss).
 {% endcapture %}

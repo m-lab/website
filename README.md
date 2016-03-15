@@ -14,7 +14,7 @@ Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-l
 
 ### HTML Compression
 
-This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the ``layout: compress`` from the default template in the _layouts folder.  
+This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the ``layout: compress`` from the default template in the _layouts folder.
 
 ## Site Structure
 
@@ -36,12 +36,15 @@ This site enables HTML Compression for optimizing performance.  If it is desired
 This section highlights the coding standards to be used for this project to ensure consistency across the codebase for current and future development
 
 ### Filename conventions
+
 - Should be all lowercase and words are concatenated with a hypen
 
 ### Variable naming conventions
+
 - All yml frontmatter keys should be lowercase and words concatenated with a hyphen
 
 ### Liquid
+
 - All liquid variables are following an underscore pattern so they can be easier to differentiate from yml frontmatter variables
 - All liquid tags, objects, and filtesr will have spaces in front of and following whatever is contained within braces
 
@@ -52,6 +55,6 @@ Travis is configured (via .travis.yml) to take the following actions after a pus
 - Build a static Jekyll site from the source.
 - Deploy the built site to Amazon S3.
 
-In order to [deploy to S3](https://docs.travis-ci.com/user/deployment/s3/), the secret key for the Amazon AWS [IAM account](https://aws.amazon.com/iam/) to be used must be encrypted in .travis.yml. The secret key is [encrypted](https://docs.travis-ci.com/user/encryption-keys/) using the public key for the repository in Travis CI. If the Amazon credentials change, then the keys in .travis.yml will need to be updated. The ```access_key_id``` can be entered in plain text, but the secret key should be encryped using the [travis CLI utility](https://github.com/travis-ci/travis.rb) like so:
+In order to [deploy to S3](https://docs.travis-ci.com/user/deployment/s3/), the secret key for the Amazon AWS [IAM account](https://aws.amazon.com/iam/) to be used must be encrypted in .travis.yml. The secret key is [encrypted]( https://docs.travis-ci.com/user/encryption-keys/) using the public key for the repository in Travis CI. If the Amazon credentials change, then the keys in .travis.yml will need to be updated. The ```access_key_id``` can be entered in plain text, but the secret key should be encryped using the [travis CLI utility](https://github.com/travis-ci/travis.rb) like so:
 
 ```$ travis encrypt secret_access_key:<SECRET KEY> -r m-lab/m-lab.github.io```

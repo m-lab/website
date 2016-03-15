@@ -3,12 +3,11 @@ layout: blog
 title: "Announcing improved performance for M-Lab BigQuery data"
 author: "Chris Ritzo"
 breadcrumb: blog
-categories: 
+categories:
   - bigquery
-  - performance 
+  - performance
   - data
 ---
-
 
 # Announcing improved performance for M-Lab BigQuery data
 
@@ -21,10 +20,10 @@ Today, M-Lab is happy to announce the public beta of new M-Lab BigQuery tables. 
 <div>
 While M-Lab's historical BigQuery tables have been partitioned by month (e.g. <span style="font-family: monospace,monospace;">m\_lab.2016\_01</span>), the new tables are partitioned by M-Lab project:
 </div>
--   plx.google:m\_lab.ndt.all
--   plx.google:m\_lab.npad.all
--   plx.google:m\_lab.sidestream.all
--   plx.google:m\_lab.paris\_traceroute.all
+- plx.google:m\_lab.ndt.all
+- plx.google:m\_lab.npad.all
+- plx.google:m\_lab.sidestream.all
+- plx.google:m\_lab.paris\_traceroute.all
 
 Each table contains data for a single M-Lab project (NDT, NPAD, SideStream, or Paris Traceroute) across all time. This makes it much easier to write queries over long time ranges, as changing the time interval no longer requires changing the specified BigQuery table.
 

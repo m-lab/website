@@ -3,10 +3,10 @@ layout: blog
 title: "Internet Observatory Updates and Improvements"
 author: "Collin Anderson"
 breadcrumb: blog
-categories: 
+categories:
   - interconnection
   - research
-  - observatory 
+  - observatory
 ---
 
 # Internet Observatory Updates and Improvements
