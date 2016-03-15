@@ -11,7 +11,8 @@ all
 rule 'MD029', :style => :ordered
 
 
-#  Exclude these rules by design
+#  Exclude the following linter rules that conflict with the team's Markdown 
+#  writing preferences.
 #  ----------------------------------------------------------------------------
 ## MD013 - Line length.  Disabled unless can determine automated way to fix.
 exclude_rule 'MD013'
