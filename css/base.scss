@@ -15,9 +15,7 @@
 @import 'components/accordions';
 @import 'components/quick-links';
 @import 'components/grids';
-
-// Include unique page elements
-@import 'pages/blog';
+@import 'components/tables';
 
 html,body,div,span,applet,object,iframe,h1,.carousel-caption p,.error-msg .error-text,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
