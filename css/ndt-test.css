@@ -3,11 +3,6 @@
   src: url("../fonts/league-gothic/league_gothic.otf") format("opentype");
 }
 
-body * {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   margin: 0;
   padding: 0;
