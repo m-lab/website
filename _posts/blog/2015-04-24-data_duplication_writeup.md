@@ -26,6 +26,7 @@ This issue was introduced into the dataset sometime in May 2014. We fixed the ro
 
 The table below details the effect of the duplication bug on each of the BigQuery tables. Note that the table is organized not by time of query, but according to the time the M-Lab test occurred, as that is how M-Lab data is partitioned into tables in BigQuery.
 
+{:#bigquery-schema-fields}
 |---
 | Month / BigQuery Table | Impact
 |:-|:-
