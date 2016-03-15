@@ -29,23 +29,24 @@
         // ndtServer is used by by the backend javascript to determine which
         // server to test against.
         var ndtServer;
-        setMlabServer();
-        function setMlabServer() {
+        (function () {
             var mlabNsService = 'https:' == location.protocol ? 'ndt_ssl' : 'ndt';
             var mlabNsUrl = 'https://mlab-ns.appspot.com/';
             $.ajax({
                 url: mlabNsUrl + mlabNsService + '?format=json',
                 dataType: 'json',
+                // async is intentionally set to false to make sure that the
+                // mlab-ns request completes before the test can be run.
                 async: false,
                 success: function(resp) {
                     console.log('Using NDT server: ' + resp.fqdn);
                     ndtServer = resp.fqdn;
                 },
                 error: function(jqXHR, errStatus, errText) {
-                    console.log('mlab-ns lookup failed: ' + errStatus + errText);
+                    console.log('mlab-ns lookup failed: ' + errStatus + ' ' + errText);
                 }
             });
-        }
+        })();
     </script>
 </head>
 <body class="initializing">
