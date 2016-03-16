@@ -5,11 +5,11 @@ permalink: /data/bq/examples/
 breadcrumb: data
 ---
 
-# Overview
+# BigQuery Examples
 
 The examples below query the M-Lab data in various ways to demonstrate effective use of the M-Lab BigQuery dataset.
 
-# Basic counting — How many users?
+## Basic counting — How many users?
 
 Let's start with something simple. How many distinct users (distinct IPs for simplicity) have ever run an **NDT** test?
 
@@ -22,17 +22,17 @@ WHERE
   web100_log_entry.connection_spec.remote_ip IS NOT NULL;
 ~~~
 
-Result:
+**Result**
 
 | num_clients |
 |-------------|
 | 110814220   |
 
-# Computing statistics over time — How many users per day?
+## Computing statistics over time — How many users per day?
 
 By slightly modifying the previous query, it is possible to compute how the number of users changed over time.
 
- * The multiplication by `POW(10, 6)` is due to the fact that `STRFTIME_UTC_USEC` expects a timestamp in microseconds, while `web100_log_entry.log_time` is in seconds. The [BigQuery Query Reference][13] describes the `STRFTIME_UTC_USEC` function.
+* The multiplication by `POW(10, 6)` is due to the fact that `STRFTIME_UTC_USEC` expects a timestamp in microseconds, while `web100_log_entry.log_time` is in seconds. The [BigQuery Query Reference][13] describes the `STRFTIME_UTC_USEC` function.
 
 ~~~sql
 SELECT
@@ -62,7 +62,7 @@ ORDER BY
 | 2015-12-27  |       52995 |
 | 2015-12-28  |       50751 |
 
-# Dealing with IP addresses — How many users from distinct subnets?
+## Dealing with IP addresses — How many users from distinct subnets?
 
 BigQuery supports various functions to parse IP addresses in different formats. You can use such functions to aggregate the number of users per subnet and compute how many subnets have ever initiated a test.
 
@@ -83,7 +83,7 @@ FROM
 |-------------|
 | 4548859     |
 
-# Comparing NDT and NPAD tests — How many users have run both NDT and NPAD tests?
+## Comparing NDT and NPAD tests — How many users have run both NDT and NPAD tests?
 
 * The following query computes the number of distinct IP addresses that have run tests using both NDT and NPAD.
 * The inner query is an inner join between the NDT and NPAD tables containing the rows where the remote IP field in both tables match.
@@ -114,14 +114,14 @@ FROM
 |----------------|
 |           74535|
 
-# Computing distributions of tests across users — How many users have run a certain number of tests?
+## Computing distributions of tests across users — How many users have run a certain number of tests?
 
 Now let's try something a bit more complex.
 
 Some IP addresses may have many initiated tests, while others only have a few tests. To assess the representation of each IP address, we can classify the IP addresses based on the number of tests they have initiated.
 
 * The following query computes the number of NDT tests initiated by each client IP address, groups the IP addresses by the number of tests run, and returns the number of IP addresses in each group.
-* The inner query calculates the number of NDT tests that each client performed in December 2015. The query uses the `GROUP BY` clause to collapse all the rows with the same `remote_ip`. The [BigQuery Query Reference][15] describes the `GROUP BY` command.
+* The inner query calculates the number of NDT tests that each client performed. The query uses the `GROUP BY` clause to collapse all the rows with the same `remote_ip`. The [BigQuery Query Reference][15] describes the `GROUP BY` command.
 * The outer query transforms the results of the inner query by bucketing each client by the number of tests it performed, then calculating the number of clients in each bucket.
 
 ~~~sql
