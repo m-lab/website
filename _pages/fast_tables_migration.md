@@ -11,7 +11,7 @@ In March 2016, M-Lab launched new M-Lab BigQuery per-project tables ("fast table
 
 This guide walks users through the process of converting their existing BigQuery SQL queries to take advantage of these new tables.
 
-## 1. Change the `FROM` clause to refer to the per-month tables
+## 1. Change the `FROM` clause to refer to the per-project tables
 
 Users refer to M-Lab's existing tables with a clause similar to the following:
 
