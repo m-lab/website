@@ -40,3 +40,6 @@ exclude_rule 'MD032'
 
 ## MD026 - Emphasis used instead of a header
 exclude_rule 'MD036'
+
+## MD038 Spaces inside code span elements
+exclude_rule 'MD038'
