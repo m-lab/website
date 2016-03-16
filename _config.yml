@@ -22,6 +22,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+# Display blog posts even if they're future-dated.
+future: true
+
 # Gems
 gems: ['jekyll-paginate', 'jekyll-feed']
 paginate: 1
