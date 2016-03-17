@@ -18,7 +18,7 @@
     -o-transition: background-color 300ms ease-in-out;
     transition: background-color 300ms ease-in-out;
 
-    &:hover, >li.is-active {
+    &:hover, &.is-active {
       background: #afdbd2;
     }
   }
