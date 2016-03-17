@@ -19,11 +19,11 @@ deploy:
     branch: master
 before_install:
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-    - openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv
-      -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d
+    openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv \
+      -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d;
   fi
 after_success:
   # Only invalidate CloudFront cache if this on the master branch and is not a PR
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-    cf-s3-inv
+    cf-s3-inv;
   fi
