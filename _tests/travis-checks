@@ -11,11 +11,11 @@ mdl README.md _posts _pages --style _linter/markdown-linter-style.rb
 sed -e '/^baseurl/s/\/m-lab\.github\.io//' _config.yml > _config-deploy.yml
 
 # Skips validation checks that take a long time
-arg=""
+htmlproofer_args_extra=""
 if [ "$1" = "--quick" ]; then
-  arg="--disable-external"
+  htmlproofer_args_extra="--disable-external"
 fi
 
 # Run HTMLProofer
 bundle exec jekyll build --config _config-deploy.yml
-bundle exec htmlproofer ./_site --only-4xx --check-html --file-ignore "/mlab_observatory/","/ndt/" "$arg"
+bundle exec htmlproofer ./_site --only-4xx --check-html --file-ignore "/mlab_observatory/","/ndt/" "$htmlproofer_args_extra"
