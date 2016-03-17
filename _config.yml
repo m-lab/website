@@ -13,6 +13,7 @@ baseurl: "/m-lab.github.io"
 permalink: "/blog/:title/"
 sass:
   sass_dir: _sass
+  style: compressed
 markdown: kramdown
 include: ['_pages']
 exclude:
@@ -20,6 +21,9 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+
+# Display blog posts even if they're future-dated.
+future: true
 
 # Gems
 gems: ['jekyll-paginate', 'jekyll-feed']

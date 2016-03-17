@@ -17,13 +17,12 @@ Today, M-Lab is happy to announce the public beta of new M-Lab BigQuery tables. 
 
 ## **Per-project partitioning**
 
-<div>
-While M-Lab's historical BigQuery tables have been partitioned by month (e.g. <span style="font-family: monospace,monospace;">m\_lab.2016\_01</span>), the new tables are partitioned by M-Lab project:
-</div>
-- plx.google:m\_lab.ndt.all
-- plx.google:m\_lab.npad.all
-- plx.google:m\_lab.sidestream.all
-- plx.google:m\_lab.paris\_traceroute.all
+While M-Lab's historical BigQuery tables have been partitioned by month (e.g. `m_lab.2016_01`), the new tables are partitioned by M-Lab project:
+
+- `plx.google:m_lab.ndt.all`
+- `plx.google:m_lab.npad.all`
+- `plx.google:m_lab.sidestream.all`
+- `plx.google:m_lab.paris_traceroute.all`
 
 Each table contains data for a single M-Lab project (NDT, NPAD, SideStream, or Paris Traceroute) across all time. This makes it much easier to write queries over long time ranges, as changing the time interval no longer requires changing the specified BigQuery table.
 
@@ -41,4 +40,4 @@ cases.
 
 ## **Migration Guide**
 
-We've published a migration guide to help convert your existing M-Lab BigQuery SQL to take advantage of the new, faster tables. Our data schema has not changed, so converting existing queries is easy and straightforward: <https://github.com/m-lab/mlab-wikis/blob/master/MigratingToFastTables.md>
+We've published a migration guide to help convert your existing M-Lab BigQuery SQL to take advantage of the new, faster tables. Our data schema has not changed, so converting existing queries is easy and straightforward. See the [Legacy Migration Guide]({{ site.baseurl }}/data/bq/legacymigration) for details.
