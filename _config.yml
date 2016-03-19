@@ -13,7 +13,6 @@ baseurl: "/m-lab.github.io"
 # or minified.  Travis will change this to app.js after it concats & minifies
 # the js using require optimizer.
 basejs: "src/boot.js"
-#basejs: "app.js"
 
 # Build settings
 permalink: "/blog/:title/"

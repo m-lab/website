@@ -12,8 +12,8 @@ requirejs.config({
     'backbone':             '../libs/backbone.0.9.10.min',
     'require.domready':     '../libs/require.domready',
     'jquery':               '../libs/jquery-1.9.1.min',
-    'jquery.flexslider':     '../libs/jquery.flexslider',
-    'jquery.imagesLoaded':   '../libs/jquery.imagesloaded.min'    
+    'jquery.flexslider':    '../libs/jquery.flexslider',
+    'jquery.imagesLoaded':  '../libs/jquery.imagesloaded.min'    
   },
 
   shim: {

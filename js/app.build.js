@@ -6,20 +6,20 @@
 
 ({
 /**
-*	The baseURL for where js files are located to optimize.  The path is relative
+* The baseURL for where js files are located to optimize.  The path is relative
 * to this file.
 */
   baseUrl: "../js/src/",
 /**
-*	The path/filename for where the single optimized file will be generated.
+* The path/filename for where the single optimized file will be generated.
 */
   out: 'app.js',
 /**
-*	The path/filename for source files to include.
+* The path/filename for source files to include.
 */
   include: ['boot', 'main'],
 /**
-*	The path/filename for where the paths for depedencies are .
+* The path/filename for where the paths for depedencies are .
 */
   mainConfigFile: 'src/boot.js'
 })
