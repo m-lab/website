@@ -1,6 +1,7 @@
 /**
 * @fileoverview - Require Optimizer build script that can be run from the root
-* of the project by running the following command:
+* of the project to concatenate & minify all required javascript & libraries
+* by running the following command: 
 * (@code node js/libs/r.js -o js/app.build.js)
 */
 

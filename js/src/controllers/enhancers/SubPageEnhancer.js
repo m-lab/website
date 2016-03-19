@@ -52,7 +52,6 @@ function(
         }).end().removeClass('is-active');
       }
 
-
       // Read more accordion
       var moreCtn = content.find('.read-more-ctn').hide(),
         accordionReadMore = content.find('.read-more');
