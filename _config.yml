@@ -9,6 +9,11 @@ excerpt_separator: <!--more-->
 # $ jekyll serve --baseurl
 baseurl: "/m-lab.github.io"
 
+# Default base js file used for gh-pages branches, which is not concatenated
+# or minified.  Travis will change this to app.js to be used for production
+# deployments.  The app.js file is the optimized js file.
+basejs: "src/boot.js"
+
 # Build settings
 permalink: "/blog/:title/"
 sass:
