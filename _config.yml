@@ -9,6 +9,12 @@ excerpt_separator: <!--more-->
 # $ jekyll serve --baseurl
 baseurl: "/m-lab.github.io"
 
+# Default base js file used for gh-pages branches, which is not concatenated
+# or minified.  Travis will change this to app.js after it concats & minifies
+# the js using require optimizer.
+basejs: "src/boot.js"
+#basejs: "app.js"
+
 # Build settings
 permalink: "/blog/:title/"
 sass:

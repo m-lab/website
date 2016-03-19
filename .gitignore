@@ -14,3 +14,4 @@ coverage
 .ruby-version
 .sass-cache
 _config-deploy.yml
+js/app.js
