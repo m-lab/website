@@ -10,8 +10,8 @@ excerpt_separator: <!--more-->
 baseurl: "/m-lab.github.io"
 
 # Default base js file used for gh-pages branches, which is not concatenated
-# or minified.  Travis will change this to app.js after it concats & minifies
-# the js using require optimizer.
+# or minified.  Travis will change this to app.js to be used for production
+# deployments.  The app.js file is the optimized js file.
 basejs: "src/boot.js"
 
 # Build settings
