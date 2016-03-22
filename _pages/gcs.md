@@ -6,7 +6,7 @@ breadcrumb: data
 accordion-quick-links: true
 quick-links-section:
   - column:
-    - group-heading: "Overview"
+    - group-heading: "Google Cloud Storage"
     - group-heading: "File Layout"
     - group-heading: "Project Data"
     - group-heading: "Accessing Data Programmatically"

@@ -3,6 +3,16 @@ layout: page
 title: "BigQuery QuickStart"
 permalink: /data/bq/quickstart/
 breadcrumb: data
+accordion-quick-links: true
+quick-links-section:
+  - column:
+    - group-heading: "BigQuery QuickStart"
+    - group-heading: "Configuring Access to M-Lab Data"
+    - group-heading: "BigQuery Web Interface"
+  - column:
+    - group-heading: "BigQuery tools in the Google Cloud SDK"
+    - group-heading: "BigQuery API"
+    - group-heading: "Further Reading"
 ---
 
 # BigQuery QuickStart

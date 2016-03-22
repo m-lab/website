@@ -1,8 +1,15 @@
 // Quick Links Navigational Component
 
 .quick-links {
-    width: 660px;
+  
+  &.l-span2 {
+    width: 100%;
     padding: 38px 0 0px;
+
+    .l-span1 {
+      width: 48%;
+    }
+  }
 
   > ul {
   	@include list_bullets(none, 0px, 10px, 20px);

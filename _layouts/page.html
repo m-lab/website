@@ -12,7 +12,7 @@ layout: default
           	
   	{% for grid in page.grid-section %}
 
-		<li><a href="#{{ grid.group-heading | downcase | replace: " ", "-" }}" data-proofer-ignore><i class="icon icon-triangle icon-right icon-before"></i>{{ grid.group-heading }}</a></li>
+		<li><a href="#{{ grid.group-heading | downcase | replace: " — ", "--" | replace: " ", "-" }}" data-proofer-ignore><i class="icon icon-triangle icon-right icon-before"></i>{{ grid.group-heading }}</a></li> 
 
 		{% endfor %}
 
@@ -25,7 +25,7 @@ layout: default
           	
   	{% for link in col.column %}
 
-		<li><a href="#{{ link.group-heading | downcase | replace: " ", "-" }}" data-proofer-ignore><i class="icon icon-triangle icon-right icon-before"></i>{{ link.group-heading }}</a></li>
+		<li><a href="#{{ link.group-heading | downcase | replace: " — ", "--" | replace: " ", "-" }}" data-proofer-ignore><i class="icon icon-triangle icon-right icon-before"></i>{{ link.group-heading }}</a></li>
 
 		{% endfor %}
 

@@ -3,6 +3,15 @@ layout: page
 title: "BigQuery Schema"
 permalink: /data/bq/schema/
 breadcrumb: data
+accordion-quick-links: true
+quick-links-section:
+  - column:
+    - group-heading: "BigQuery Schema"
+    - group-heading: "Background"
+    - group-heading: "BigQuery Tables"
+  - column:
+    - group-heading: "Schema Fields"
+    - group-heading: "Query Examples"
 ---
 
 # BigQuery Schema
