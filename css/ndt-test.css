@@ -15,6 +15,24 @@ a img {
   border: 0;
 }
 
+.main-logo {
+    display: block;
+    vertical-align: middle;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.main-logo a {
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -7px -7px;
+    width: 100px;
+    height: 31px;
+    display: block;
+    text-indent: -999em;
+    overflow: hidden;
+    text-align: left;
+    direction: ltr;
+}
+
 #widget {
   position: relative;
   width: 720px;
@@ -28,8 +46,22 @@ a img {
   margin-bottom: 15px;
 }
 
-.header {
-  margin: 10px;  
+#widget p.desc {
+  margin-bottom: 0px;
+  font-size: 14px; 
+  font-family: verdana, arial, helvetica, sans-serif;
+  text-align: left;
+  text-transform: none;
+}
+
+#init-error p {
+  text-transform: none;
+  font-size: 24px;
+  margin: 20px 15px;
+}
+
+#init-error #reload {
+  text-align: center;
 }
 
 #warning-environment {
@@ -37,22 +69,63 @@ a img {
   margin: 5px;
 }
 
-#warning-plugin, #warning-websocket {
+#warning-plugin, #warning-websocket, .red {
   color: red;
   margin: 5px;
 }
 
+#copyTarget {
+ width: 40%;
+}
+
 #start-button {
-  padding-top: 180px;
+  padding-top: 40px;
+}
+
+#start-button p.title, #copy-code p.title {
+  margin: 0px 10px 10px;
+}
+
+#copy-code {
+  padding: 20px 0px;
+  background-color: #F2F2F2;
+}
+
+#copy-code label {
+  text-transform: none;
+  display: block;
+  font-size: 14px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  text-align: left;
+  margin: 0px 0px 5px 70px;
+}
+
+#copy-code textarea {
+  width: 65%;
+}
+
+#copy-code .copy.button {
+  vertical-align: top;
+  font-size: 36px;
+  font-family: "League Gothic", Impact, "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+}
+
+#copy-code #copy-msg {
+  font-size: 14px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  text-align: left;
+  text-transform: none;
+  color: #e35343;
+  margin: 0px 0px 0px 70px;
 }
 
 .page {
-  width: 640px;
-  height: 420px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  padding: 40px;
   background-color: #fff;
   color: #000;
 }
@@ -61,7 +134,7 @@ a img {
   text-align: center;
 }
 
-#test, #results {
+#test, #results, #welcome, #init-error {
   display: none;
 }
 
@@ -232,7 +305,7 @@ body.initializing .page .status {
 }
 
 #results {
-  height: 400px;
+  height: 100%;
 }
 
 #result-pages {

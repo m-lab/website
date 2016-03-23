@@ -2,6 +2,7 @@
 title: M-Lab
 email: support@measurementlab.net
 excerpt_separator: <!--more-->
+fqdn: "www.measurementlab.net"
 
 # Default baseurl used for gh-pages branches.
 # Travis will change it to "" before deploying.
