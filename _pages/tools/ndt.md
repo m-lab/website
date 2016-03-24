@@ -21,12 +21,10 @@ There are two supported ways to run an NDT test: via this web page below
 or via a Unix command-line tool.
 
 NOTE: if the test does not run or takes longer than 60 seconds, please
-read the [FAQ entry](http://measurementlab.net/faq) for "troubleshooting
+read the [FAQ entry](http://www.measurementlab.net/faq) for "troubleshooting
 the NDT speed test".
 
 <p><iframe src="{{ site.baseurl }}/p/ndt-ws.html" width="750" height="500" align="middle"></iframe></p>
-
-**[Download command line client](https://code.google.com/p/ndt/source/){:.download-link .is-plain}**
 
 **Data** collected by NDT is available...
 
@@ -38,10 +36,9 @@ the NDT speed test".
 - Please cite this dataset as follows: **The MLab NDT Dataset,
   &lt;date range used&gt;. http://measurementlab.net/tools/ndt**
 
-**Source code** is available at <http://code.google.com/p/ndt/source/>.
+**Source code** is available at <https://github.com/ndt-project/ndt/>.
 
-**More information** at <http://code.google.com/p/ndt/>
-and <http://www.internet2.edu/performance/ndt/>.
+**More information** at <http://software.internet2.edu/ndt/>.
 
 NOTE: if the test does not run or takes longer than 60 seconds,\
 please read the FAQ entry for "troubleshooting the NDT speed test".
