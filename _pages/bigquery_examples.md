@@ -3,6 +3,16 @@ layout: page
 title: "BigQuery Examples"
 permalink: /data/bq/examples/
 breadcrumb: data
+accordion-quick-links: true
+quick-links-section:
+  - column:
+    - group-heading: "BigQuery Examples"
+    - group-heading: "Basic counting — How many users"
+    - group-heading: "Computing statistics over time — How many users per day"
+  - column:
+    - group-heading: "Dealing with IP addresses — How many users from distinct subnets"
+    - group-heading: "Comparing NDT and NPAD tests — How many users have run both NDT and NPAD tests"
+    - group-heading: "Computing distributions of tests across users — How many users have run a certain number of tests"
 ---
 
 # BigQuery Examples
