@@ -29,5 +29,5 @@ before_install:
 after_success:
   # Only invalidate CloudFront cache if this on the master branch and is not a PR
   #if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-  cf-s3-inv || travis_terminate 1;
+  cf-s3-inv --key lol --secret rofl --distribution lolrofl || travis_terminate 1;
   #fi
