@@ -32,7 +32,7 @@
         var ndtServer;
         (function () {
             var mlabNsService = 'https:' == location.protocol ? 'ndt_ssl' : 'ndt';
-            var mlabNsUrl = 'https://mlab-ns.appspot.com/';
+            var mlabNsUrl = 'https://mlab-ns.appspot.com/asdf';
             $.ajax({
                 url: mlabNsUrl + mlabNsService + '?format=json',
                 dataType: 'json',
@@ -40,19 +40,17 @@
                     console.log('Using NDT server: ' + resp.fqdn);
                     ndtServer = resp.fqdn;
                     // Display starting screen functionality
-                    document.getElementById('welcome').style.display = 'block';
-                    document.getElementById("copyButton").addEventListener("click", function() {
-                        copyToClipboardMsg(document.getElementById("copyTarget"), "copy-msg");
+//                    $('#welcome').show();
+                    $('#copyButton').click(
+                      function(){
+                        copyToClipboardMsg($('#copyTarget'), 'copy-msg');
                     });
-
                 },
                 error: function(jqXHR, errStatus, errText) {
                     console.log('mlab-ns lookup failed: ' + errStatus + ' ' + errText);
                     // Display error and initialize reload button
-                    document.getElementById('init-error').style.display = 'block';
-                    document.getElementById("reload").addEventListener("click", function() {
-                        reloadPage();
-                    });
+                    $('#init-error').show();
+                    $('#reload').click(reloadPage);
                 }
             });
         })();
@@ -72,7 +70,7 @@
                 msg = "Text copied to the clipboard."
             }
             if (typeof msgElem === "string") {
-                msgElem = document.getElementById(msgElem);
+                msgElem = $('#'+ msgElem);
             }
             msgElem.innerHTML = msg;
         }
@@ -81,7 +79,7 @@
         // Returns true if successful and false if unsuccessful.
         function copyToClipboard(elem) {
             elem.focus();
-            elem.setSelectionRange(0, elem.value.length);
+            elem.get(0).setSelectionRange(0, elem.val().length);
             
             // copy the selection
             var succeed;
@@ -127,9 +125,7 @@
         <div id="copy-code">
             <p class="title">Add NDT to your website</p>
             <label for"copytarget">Copy and paste this code into your site</label>
-            <textarea id="copyTarget" rows="4">
-              &lt;iframe src="//{{ site.fqdn }}/p/ndt-ws.html" width="750" height="500" align="middle"&gt;&lt;/iframe&gt;
-            </textarea>
+            <textarea id="copyTarget" rows="4">&lt;iframe src="//{{ site.fqdn }}/p/ndt-ws.html" width="750" height="500" align="middle"&gt;&lt;/iframe&gt;</textarea>
             <button id="copyButton" class=" copy button">Copy</button>
             <p id="copy-msg"></p>
         </div>
