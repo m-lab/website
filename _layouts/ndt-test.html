@@ -13,10 +13,9 @@
   </style>
   <![endif]-->
   <script>
-    /** The gauge.min.js in the ndt submodule wants the font digital-7-mono,
-     *  and by default looks for it in the /fonts directory.  Setting this
-     *  variable tells it where to look.
-    */
+    // The gauge.min.js in the ndt submodule wants the font digital-7-mono,
+    //  and by default looks for it in the /fonts directory.  Setting this
+    //  variable tells it where to look.
     var CANV_GAUGE_FONTS_PATH = "../fonts/digital-7-mono";
   </script>
   <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js">
@@ -27,10 +26,9 @@
   </script>
   <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-wrapper.js"></script>
   <script>
-    /** Look up a suitable NDT server using mlab-ns. The global variable
-     *  ndtServer is used by the backend javascript to determine which
-     *  server to test against.
-    */
+    // Look up a suitable NDT server using mlab-ns. The global variable
+    //  ndtServer is used by the backend javascript to determine which
+    //  server to test against.
     var ndtServer;
     (function () {
       var mlabNsService = 'https:' == location.protocol ? 'ndt_ssl' : 'ndt';
@@ -38,9 +36,8 @@
       $.ajax({
         url: mlabNsUrl + mlabNsService + '?format=json',
         dataType: 'json',
-        /* async is intentionally set to false to make sure that the
-         * mlab-ns request completes before the test can be run.
-        */
+        // async is intentionally set to false to make sure that the
+        // mlab-ns request completes before the test can be run.
         async: false,
         success: function(resp) {
             console.log('Using NDT server: ' + resp.fqdn);
