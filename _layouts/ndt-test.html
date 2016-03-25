@@ -19,14 +19,16 @@
     */
     var CANV_GAUGE_FONTS_PATH = "../fonts/digital-7-mono";
   </script>
-  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js"></script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js">
+  </script>
   <script src="{{ site.baseurl }}/ndt/HTML5-frontend/gauge.min.js"></script>
   <script src="{{ site.baseurl }}/ndt/HTML5-frontend/script.js"></script>
-  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-browser-client.js"></script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-browser-client.js">
+  </script>
   <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-wrapper.js"></script>
   <script>
     /** Look up a suitable NDT server using mlab-ns. The global variable
-     *  ndtServer is used by by the backend javascript to determine which
+     *  ndtServer is used by the backend javascript to determine which
      *  server to test against.
     */
     var ndtServer;
@@ -107,8 +109,11 @@
             </p>
           </div>
           <div class="other">
-            <p class="latency"><b>Network latency:</b> <span id="latency">0.0</span> msec round trip time</p>
-            <p class="jitter"><b>Jitter:</b> <span id="jitter">0.0 msec</span></p>
+            <p class="latency"><b>Network latency:</b> 
+              <span id="latency">0.0</span> msec round trip time</p>
+            <p class="jitter">
+              <b>Jitter:</b> <span id="jitter">0.0 msec</span>
+            </p>
           </div>
         </div>
         <div class="result-page details" id="test-details"></div>
