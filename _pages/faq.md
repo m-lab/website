@@ -5,7 +5,6 @@ title: "FAQ"
 sub-nav: true
 breadcrumb: "about"
 accordion-quick-links: true
-quick-links-section:
 gq-accordion:
   - heading: "What is M-Lab?"
 td-accordion:
@@ -43,6 +42,7 @@ Measurement Lab (M-Lab) is the largest open source Internet measurement effort i
 The graphic below illustrates the relationship between tests run by consumers and M-Lab's data collection.
 
 ![Illustration showing the lifecycle of an M-Lab test]({{ site.baseurl }}/images/about/lifecycle-of-mlab-test.png)
+
 {% endcapture %}
 
 {% include accordion.html acc_section = "gq" %}
