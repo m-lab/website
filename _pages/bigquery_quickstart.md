@@ -5,6 +5,9 @@ permalink: /data/bq/quickstart/
 breadcrumb: data
 ---
 
+* Table of Contents
+{:toc}
+
 # BigQuery QuickStart
 
 ## Configuring Access to M-Lab Data
