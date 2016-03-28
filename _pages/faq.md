@@ -25,7 +25,7 @@ sc-accordion:
   - heading: "How can I get involved and support M-Lab?"
   - heading: "How can companies or other organizations get involved and support M-Lab?"
   - heading: "How can researchers get involved?"
-  - heading: "Can I use the M-Lab platform to host my own measurement experiment?"
+  - heading: "Can I use M-Lab to host my own measurement experiment?"
   - heading: "How can I add an M-Lab test to my website, app or other software?"
 ---
 
