@@ -1,0 +1,47 @@
+# Site settings
+title: M-Lab
+email: support@measurementlab.net
+excerpt_separator: <!--more-->
+
+# Default baseurl used for gh-pages branches.
+# Travis will change it to "" before deploying.
+# For local development pass in blank baseurl to simulate prod-like environment: 
+# $ jekyll serve --baseurl
+baseurl: ""
+
+# Default base js file used for gh-pages branches, which is not concatenated
+# or minified.  Travis will change this to app.js to be used for production
+# deployments.  The app.js file is the optimized js file.
+basejs: "src/boot.js"
+
+# Build settings
+permalink: "/blog/:title/"
+sass:
+  sass_dir: _sass
+  style: compressed
+include: ['_pages']
+exclude:
+  - .gitignore
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  auto_ids:       true
+  auto_id_stripping:    true
+
+# Display blog posts even if they're future-dated.
+future: true
+
+# Gems
+gems: ['jekyll-paginate', 'jekyll-feed']
+paginate: 1
+paginate_path: "/blog/page/:num"
+
+# HTML Compression settings
+compress_html:
+  clippings: [ ]
+  blanklines: false
+  profile: false
