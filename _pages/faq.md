@@ -146,7 +146,7 @@ There also was no public resource to provide aggregate performance data to polic
 
 {% capture accordion_entry_4 %}
 The Internet measurement tests running on the M-Lab platform are built and maintained by researchers interested in understanding the Internet and how people experience it. Interested researchers can build their own open source tests and apply to host them with M-Lab. Applications for new tests are reviewed by our operations team and reviewed by our Steering Committee, and if approved they are then deployed on M-Lab's global Internet measurement infrastructure. By making researchers' tests available in this way, and promoting their use by consumer, M-Lab serves both consumers and researchers, as well as regulators and others with longitudinal data that is openly available for analysis. For more information, please see our FAQ entry: [Can I use M-Lab's platform to host my own measurement test?](#can-i-use-m-lab's-platform-to-host-my-own-measurement-test)
-{% endcapture }
+{% endcapture %}
 
 {% capture accordion_entry_5 %}
 You can contact M-Lab by emailing [support@measurementlab.net](mailto:support@measurementlab.net) or by joining our discussion group.
