@@ -1,0 +1,31 @@
+// Accordion Component
+
+.intro-section .accordion {
+  padding-bottom: 0;
+  @include list_bullets();
+
+  .tabbed-heading {
+    margin-bottom: 18px;
+  }
+
+  &.is-collapsed { 
+    p:last-child {
+      padding-bottom: 25px;
+    }
+
+    > li.is-active .tabbed-heading:before {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg)
+    }
+  }
+
+  .accordion-content {
+  	ul {
+      padding-bottom: 25px;
+      @include list_bullets(circle);
+    }
+  }
+}

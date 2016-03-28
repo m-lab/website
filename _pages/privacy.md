@@ -10,7 +10,7 @@ The PlanetLab Consortium (PLC) is responsbile for the day-to-day operations and 
 
 If you are concerned about the performance of a particular M-Lab server and think it may be generating some unusual network activity, please contact PLC's support address. For more information, visit PlanetLab's site.
 
-# Privacy Policy 
+# Privacy Policy
 
 Measurement Lab is a platform for the use of independent tools created by researchers to gather information relevant to broadband services. The goal of the project is to analyze information regarding broadband networks and report this information to the public.
 

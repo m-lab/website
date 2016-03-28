@@ -1,18 +1,8 @@
 language: ruby
 rvm:
   - 2.2.3
-before_script:
-  # Github Pages needs the baseurl field to be "m-lab.github.io" to render properly in forked 
-  # repos, but when we deploy to production, we need the baseurl field to be empty. This 
-  # command replaces "m-lab.github.io" with an empty string.
-  - sed -ie '/^baseurl/s/\/m-lab\.github\.io//' _config.yml 
 script:
-  - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site --only-4xx --check-html --file-ignore "/mlab_observatory/"
-branches:
-  only:
-  - master
-  - gh-pages
+  - ./_tests/travis-checks
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
@@ -27,3 +17,17 @@ deploy:
   on:
     repo: m-lab/m-lab.github.io
     branch: master
+before_install:
+  # The Amazon AWS credentials needed by the cf-s3-inv utility in after_success
+  # are stored in a file encrypted with the Travis keys associated with this
+  # repository. The openssl command descrypts this file, using some secure
+  # environment variables associated with the Travis account/repo.  See
+  # README.md for information on generating this encrypted file.
+  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d;
+  fi
+after_deploy:
+  # Only invalidate CloudFront cache if this on the master branch and is not a PR
+  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    cf-s3-inv || travis_terminate 1;
+  fi

@@ -1,3 +1,6 @@
 [submodule "mlab_observatory"]
 	path = mlab_observatory
 	url = https://github.com/m-lab/mlab-observatory.git
+[submodule "ndt"]
+	path = ndt
+	url = https://github.com/m-lab/ndt

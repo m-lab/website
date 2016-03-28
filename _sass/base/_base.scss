@@ -1,0 +1,36 @@
+// File contains styles for base HTML Elements
+
+//import mixins
+@import 'helpers/_mixins';
+
+ul {
+  @include list_bullets();
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px 0px 30px 0px;
+}
+
+caption,th,td {
+  font-weight: normal;
+  vertical-align: middle;
+  word-wrap: break-word;
+  max-width: 460px;
+}
+
+tr {
+  color: #767676;
+}
+
+th {
+  border: 1px solid black; 
+  padding: 5px; 
+  font-weight: bold; 
+}
+
+td {
+  border: 1px solid black; 
+  padding: 5px; 
+}

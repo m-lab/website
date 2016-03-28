@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: "Publications"
 menu-item: true
-papers-accordion: 
+papers-accordion:
   - heading: "2014"
   - heading: "2013"
   - heading: "2012"

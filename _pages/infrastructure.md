@@ -2,11 +2,9 @@
 layout: page
 permalink: /infrastructure/
 title: "Infrastructure"
-menu-item: true
 ---
 
 # M-Lab Platform
-
 
 ## Server Map
 
@@ -25,9 +23,9 @@ different, client-defined policies. Selecting the proper server for a
 given measurement is critical to ensure that measurement tests collect
 robust and meaningful data.
 
--   Homepage: <http://mlab-ns.appspot.com/>
--   [M-Lab NS Design
-    document](https://docs.google.com/a/google.com/document/d/1eJhS75EZHDLmC6exggStr_b1euiR24_MVBJc1L6eH2c/view)
--   IRC: irc://\#measurementlab@irc.freenode.org
--   Mailing list:
-    [discuss@measurementlab.net](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss)
+- Homepage: <http://mlab-ns.appspot.com/>
+- [M-Lab NS Design
+  document](https://docs.google.com/a/google.com/document/d/1eJhS75EZHDLmC6exggStr_b1euiR24_MVBJc1L6eH2c/view)
+- IRC: irc://\#measurementlab@irc.freenode.org
+- Mailing list:
+  [discuss@measurementlab.net](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss)
