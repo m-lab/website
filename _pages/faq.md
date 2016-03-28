@@ -11,8 +11,6 @@ td-accordion:
   - heading: "What measurement tests can I run?"
   - heading: "Will these tests monitor my private Internet activity, like email messages or, browsing and search history?"
   - heading: "What data will be collected when I run a test?"
-  - heading: "Will these tests monitor my private Internet activity, like email, browsing, search?"
-  - heading: "What data will be collected when I run a test?"
   - heading: "Who is collecting data? Where is it stored?"
   - heading: "Where can I explore M-Lab data?"
   - heading: "Why are my M-Lab results different from other speed tests?"
