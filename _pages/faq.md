@@ -122,6 +122,7 @@ When reporting a bug, please attempt to share specific information such as:
 
 M-Lab support will usually reply within 2 business days. You can also ask other M-Lab users about the issue you are reporting on the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#%21forum/discuss).
 {% endcapture %}
+
 {% include accordion.html acc_section = "td" %}
 
 {:.about-m-lab}
@@ -189,4 +190,5 @@ M-Lab's open source tests can be added to your website, mobile application or ot
 
 The M-Lab team regularly consults with and supports application and web developers interested in integrating our client tests. If you are interested in adding an M-Lab test to your website or application, please [contact us](mailto:support@measurementlab.net).
 {% endcapture %}
+
 {% include accordion.html acc_section = "sc" %}
