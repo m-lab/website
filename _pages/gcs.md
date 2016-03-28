@@ -5,6 +5,9 @@ permalink: /data/gcs/
 breadcrumb: data
 ---
 
+* Table of Contents
+{:toc}
+
 # Google Cloud Storage
 
 M-Lab publishes all data it collected in raw form as archives on Google Cloud Storage (GCS) at the following location:

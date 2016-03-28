@@ -4,15 +4,6 @@ permalink: /faq/
 title: "FAQ"
 sub-nav: true
 breadcrumb: "about"
-accordion-quick-links: true
-quick-links-section:
-  - column:
-    - group-heading: "General Questions"
-    - group-heading: "I am an internet user and I want to test my connection"
-  - column:
-    - group-heading: "I am a researcher"
-    - group-heading: "I am a company or institution"
-    - group-heading: "Contact MLab"
 gq-accordion:
   - heading: "What and who are M-lab's supporting partners?"
   - heading: "What's M-Lab's origin story?"
@@ -33,7 +24,9 @@ contact-accordion:
   - heading: "How can I contact M-Lab?"
 ---
 
-{:.general-questions}
+* Table of Contents
+{:toc}
+
 # General questions
 
 {% capture accordion_entry_1 %}
@@ -54,7 +47,6 @@ Measurement Lab (M-Lab) is an open, distributed server platform for researchers 
 
 {% include accordion.html acc_section = "gq" %}
 
-{:.i-am-an-internet-user-and-i-want-to-test-my-connection}
 # I am an internet user and I want to test my connection
 
 {% capture accordion_entry_1 %}
@@ -91,7 +83,6 @@ Right now, users can access 12 tools to measure their broadband connection speed
 
 {% include accordion.html acc_section = "iu" %}
 
-{:.i-am-a-researcher}
 # I am a researcher
 
 {% capture accordion_entry_1 %}
@@ -102,25 +93,22 @@ You can then prepare an application and [contact]({{ site.baseurl }}/contact/) t
 
 {% include accordion.html acc_section = "researcher" %}
 
-{:.i-am-a-company-or-institution}
 # I am a company or institution
 
 {% capture accordion_entry_1 %}
 Companies and institutions can help in a number of key ways, including:
 
-{:.disc-list}
-- Provide servers for the platform and purchase network connectivity.
-- Provide resources for data hosting, aggregation and publication.
-- Provide data analysis resources.
-- Embed an M-Lab client-side tool in an application or service.
-- Provide funding to support the above.
+* Provide servers for the platform and purchase network connectivity.
+* Provide resources for data hosting, aggregation and publication.
+* Provide data analysis resources.
+* Embed an M-Lab client-side tool in an application or service.
+* Provide funding to support the above.
 
 If you'd like to get involved as an M-Lab supporting partner, [contact]({{ site.baseurl }}/contact/) the M-lab steering committee and join the [public mailing list](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss).
 {% endcapture %}
 
 {% include accordion.html acc_section = "company" %}
 
-{:.contact-mlab}
 # Contact MLab
 
 {% capture accordion_entry_1 %}

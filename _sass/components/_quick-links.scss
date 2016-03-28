@@ -28,3 +28,43 @@
   }
 
 }
+
+ul#markdown-toc {
+  margin: 0px;
+  padding: 0px;
+
+  @include list_bullets(none, 0px, 10px, 20px);
+
+  li:before {
+    background:url("../images/sprites/globalSprite-1x.png") no-repeat -42px -128px;
+    width: 9px;
+    height: 15px;
+    display: block;
+    content: " ";
+    float: left;
+    padding-left: 10px;
+  }
+
+  > ul:last-child {
+    float: left;
+  }
+
+  a {
+    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+    color: #454545;
+/*    background: url("../images/sprites/globalSprite-1x.png") no-repeat;
+    background-position: -42px -128px;
+    padding-left: 20px; */
+
+    &:hover {
+      color: #454545;
+    }
+
+    .icon-triangle {
+      float: left;
+      margin-bottom: 10px;
+      top: 3px;
+    }
+  }
+
+}
