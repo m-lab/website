@@ -8,7 +8,7 @@ accordion-quick-links: true
 quick-links-section:
   - column:
     - group-heading: "General Questions"
-    - group-heading: "M-Lab's Tests and Data"
+    - group-heading: "M-Lab Tests and Data"
   - column:
     - group-heading: "About M-Lab"
     - group-heading: "Supporting or Contributing to M-Lab"
@@ -21,12 +21,12 @@ td-accordion:
   - heading: "Will these tests monitor my private Internet activity, like email, browsing, search?"
   - heading: "What data will be collected when I run a test?"
   - heading: "Who is collecting data? Where is it stored?"
-  - heading: "Where can I explore M-Lab's data?"
+  - heading: "Where can I explore M-Lab data?"
   - heading: "Why are my M-Lab results different from other speed tests?"
   - heading: "How to Report Issues with M-Lab tests"
 ab-accordion:
-  - heading: "What is M-Lab's Mission?"
-  - heading: "Who are M-Lab's supporting partners?"
+  - heading: "What is M-Labs Mission?"
+  - heading: "Who are M-Labs supporting partners?"
   - heading: "What is the history of M-Lab?"
   - heading: "How does M-Lab choose the tests it hosts?"
   - heading: "How can I contact M-Lab?"
@@ -34,7 +34,7 @@ sc-accordion:
   - heading: "How can I get involved and support M-Lab?"
   - heading: "How can companies or other organizations get involved and support M-Lab?"
   - heading: "How can researchers get involved?"
-  - heading: "Can I use M-Lab's platform to host my own measurement experiment?"
+  - heading: "Can I use the M-Lab platform to host my own measurement experiment?"
   - heading: "How can I add an M-Lab test to my website, app or other software?"
 ---
 
