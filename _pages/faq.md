@@ -66,13 +66,13 @@ Specific information on what type of data is collected by each M-Lab test and ho
 {% capture accordion_entry_4 %}
 M-Lab collects raw test data for the following tests and stores it in Google Cloud Storage:
 
-  * NDT - [https://storage.cloud.google.com/m-lab/ndt](https://storage.cloud.google.com/m-lab/ndt)
-  * Neubot - [https://storage.cloud.google.com/m-lab/neubot](https://storage.cloud.google.com/m-lab/neubot)
-  * Glasnost - [https://storage.cloud.google.com/m-lab/glasnost](https://storage.cloud.google.com/m-lab/glasnost)
+ * NDT - [https://storage.cloud.google.com/m-lab/ndt](https://storage.cloud.google.com/m-lab/ndt)
+ * Neubot - [https://storage.cloud.google.com/m-lab/neubot](https://storage.cloud.google.com/m-lab/neubot)
+ * Glasnost - [https://storage.cloud.google.com/m-lab/glasnost](https://storage.cloud.google.com/m-lab/glasnost)
 
 Researchers hosting the following tests on the M-Lab platform collect their tests' raw data and store it elsewhere.
 
-  * BISmark - [http://uploads.projectbismark.net/](http://uploads.projectbismark.net/)
+ * BISmark - [http://uploads.projectbismark.net/](http://uploads.projectbismark.net/)
 {% endcapture %}
 
 {% capture accordion_entry_5 %}
@@ -108,18 +108,18 @@ In short, running one test will give you a sense of network conditions at that m
 {% capture accordion_entry_7 %}
 Most M-Lab tests should take less than 60 seconds to complete, so if it's taking longer there may be something wrong.
 
-  * Try running the test again. Perhaps a sporadic network issue caused the problem.
-  * Try running the test from a different location. For example, if it failed at your home, does the test work at a coffee shop?
-  * If the test doesn't ever start or never completes, is your connection is behind a firewall? This may be the case at some workplaces where the network is actively managed.
+ * Try running the test again. Perhaps a sporadic network issue caused the problem.
+ * Try running the test from a different location. For example, if it failed at your home, does the test work at a coffee shop?
+ * If the test doesn't ever start or never completes, is your connection is behind a firewall? This may be the case at some workplaces where the network is actively managed.
 
 If you find that none of the above solves the issue you are experiencing, you can report a bug by emailing [support@measurementlab.net](mailto:support@measurementlab.net).
 
 When reporting a bug, please attempt to share specific information such as:
 
-  * Operating system
-  * Browser name and version
-  * The name of the test that is not working
-  * Any error messages you have received
+ * Operating system
+ * Browser name and version
+ * The name of the test that is not working
+ * Any error messages you have received
 
 M-Lab support will usually reply within 2 business days. You can also ask other M-Lab users about the issue you are reporting on the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
 {% endcapture %}
@@ -168,10 +168,10 @@ By becoming an M-Lab supporting partner, companies, non-profit organizations, ac
 
 Providing hardware to grow the M-Lab platform and donating the cost of network connectivity and hosting.
 
-  * Providing resources for data hosting, aggregation and publication.
-  * Providing data analysis or visualization.
-  * Embedding an M-Lab client tool in an application or service, allowing M-Lab to reach more people and generate more data.
-  * Provide direct financial support
+ * Providing resources for data hosting, aggregation and publication.
+ * Providing data analysis or visualization.
+ * Embedding an M-Lab client tool in an application or service, allowing M-Lab to reach more people and generate more data.
+ * Provide direct financial support
 
 If you'd like to get involved as an M-Lab supporting partner, [contact](mailto:support@measurementlab.net) the M-Lab team and join the [public mailing list](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
 {% endcapture %}
