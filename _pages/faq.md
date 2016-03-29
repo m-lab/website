@@ -63,11 +63,9 @@ Specific information on what type of data is collected by each M-Lab test and ho
 {% endcapture %}
 
 {% capture accordion_entry_4 %}
-M-Lab collects raw test data for the following tests and stores it in [Google Cloud Storage]({{ site.baseurl }}/data/gcs/).
+For most tests, M-Lab collects the raw test data and makes it publicly availalble on [Google Cloud Storage]({{ site.baseurl }}/data/gcs/).
 
-Researchers hosting the following tests on the M-Lab platform collect their tests' raw data and store it elsewhere.
-
-* BISmark - [http://uploads.projectbismark.net/](http://uploads.projectbismark.net/)
+For some tests, such as [BISmark](http://www.projectbismark.net/), the test maintainers collect their test's data and publish it on their own site.
 
 {% endcapture %}
 
