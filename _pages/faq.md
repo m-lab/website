@@ -47,7 +47,7 @@ The graphic below illustrates the relationship between tests run by consumers an
 # M-Lab's tests and data
 
 {% capture accordion_entry_1 %}
-Right now, people can use tests to measure their broadband speed, analyze application performance, and run diagnostics. The most commonly run test is the Network Diagnostic Test (NDT), which provides metrics such as upload speed, download speed, and round trip time, as well as other data points that help to measure speed and throughput issues on your connection. To read about all of the tests available on the platform, please visit our [tests page]({{ site.baseurl}}/tests/).
+Right now, people can use tests to measure their broadband speed, analyze application performance, and run diagnostics. The most commonly run test is the Network Diagnostic Test (NDT), which provides metrics such as upload speed, download speed, and round trip time, as well as other data points that help to measure speed and throughput issues on your connection. To read about all of the tests available on the platform, please visit our [tests page]({{ site.baseurl}}/tools/ndt/).
 {% endcapture %}
 
 {% capture accordion_entry_2 %}
@@ -63,11 +63,7 @@ Specific information on what type of data is collected by each M-Lab test and ho
 {% endcapture %}
 
 {% capture accordion_entry_4 %}
-M-Lab collects raw test data for the following tests and stores it in Google Cloud Storage:
-
-* NDT - [https://console.developers.google.com/storage/browser/m-lab/ndt/](https://console.developers.google.com/storage/browser/m-lab/ndt/)
-* Neubot - [https://console.cloud.google.com/storage/browser/m-lab/neubot/](https://console.cloud.google.com/storage/browser/m-lab/neubot/)
-* Glasnost - [https://console.cloud.google.com/storage/browser/m-lab/glasnost/](https://console.cloud.google.com/storage/browser/m-lab/glasnost/)
+M-Lab collects raw test data for the following tests and stores it in [Google Cloud Storage]({{ site.baseurl }}/data/gcs/).
 
 Researchers hosting the following tests on the M-Lab platform collect their tests' raw data and store it elsewhere.
 
@@ -84,17 +80,19 @@ Internet performance tests may provide different results for a wide variety of r
 
 **Differences in the placement of testing servers**
 
-Any performance test -- whether M-Lab's or another -- has two parts. The first is -- the _client_ or the test running on your computer. The second is the _server_, or the location on the Internet where your computer is connecting to complete the test. A test generates data between the client and the server, and measures performance between these two points. **The location of these two points is important in terms of understanding the results of a given test**.
+All performance tests have two parts: 
+* **client:** This is the software that runs on the user's machine and shows the user their speed results. 
+* **server:** This is the computer on the Internet that the client connects to complete the test.
 
-If the server is located within your Internet Service Provider's (ISP) own network (also knows as the "last mile"), this is referred to as "on-net" measurement. This approach provides insight into the performance of your Internet connection within your ISP, but does not necessarily reflect the full experience of using the Internet, which almost always involves accessing content and services that are hosted somewhere outside of your ISP. Results achieved from "on-net" testing are often higher than those achieved via other methods, since the distance traveled is generally shorter, and the network is entirely controlled by one entity (your ISP).
+A test generates data between the client and the server, and measures performance between these two points. _The location of these two points is important in terms of understanding the results of a given test_. If the server is located within your Internet Service Provider's (ISP) own network (also knows as the "last mile"), this is referred to as "on-net" measurement. This approach provides insight into the performance of your Internet connection within your ISP, but does not necessarily reflect the full experience of using the Internet, which almost always involves accessing content and services that are hosted somewhere outside of your ISP. Results achieved from "on-net" testing are often higher than those achieved via other methods, since the distance traveled is generally shorter, and the network is entirely controlled by one entity (your ISP).
 
 So-called "off-net" measurements conduct measurements between your computer and a server located outside of your ISP's network. This means that traffic crosses borders between networks, and often travels longer distances. Off-net testing generally produces results that are lower, relative to "on-net" testing.
 
-M-Lab's measurements are always conducted "off-net." This way, M-Lab is able to measure performance to representative locations where popular Internet content is often hosted, and so test users get a real sense of the performance they could expect when using the Internet.
+M-Lab's measurements are always conducted "off-net." This allows M-Lab to measure performance to representative locations where popular Internet content is often hosted, and so test users get a real sense of the performance they can expect when using the Internet.
 
 **Differences in testing methodology**
 
-Different Internet performance tests measure different things in different ways. M-Lab's NDT test attempts to transfer as much data as it can over the course of 10 seconds (both up and down), using a single connection to an M-Lab server. Other popular tests look to transfer as much data as possible across multiple connections to their server at once. Neither are "right" or "wrong," but using a single stream is more likely to help diagnose problems in the network that multiple streams concurrently would likely bypass. [Learn more about M-Lab's NDT methodology]({{ site.baseurl }}/data/bq/schema/).
+Different Internet performance tests measure different things in different ways. M-Lab's NDT test attempts to transfer as much data as it can over the course of 10 seconds (both up and down), using a single connection to an M-Lab server. Other popular tests look to transfer as much data as possible across multiple connections to their server at once. Neither are "right" or "wrong," but using a single stream is more likely to help diagnose problems in the network that multiple streams concurrently would likely bypass. [Learn more about NDT's methodology](https://github.com/ndt-project/ndt/wiki/NDTTestMethodology).
 
 All NDT data collected by M-Lab is publicly available in both [visualized](http://www.google.com/publicdata/explore?ds=e9krd11m38onf_) and [raw](https://console.developers.google.com/storage/browser/m-lab/ndt/) forms.
 
