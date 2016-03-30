@@ -79,10 +79,13 @@ Internet performance tests may provide different results for a wide variety of r
 **Differences in the placement of testing servers**
 
 All performance tests have two parts:
-* **client:** This is the software that runs on the user's machine and shows the user their speed results.
-* **server:** This is the computer on the Internet that the client connects to complete the test.
 
-A test generates data between the client and the server, and measures performance between these two points. _The location of these two points is important in terms of understanding the results of a given test_. If the server is located within your Internet Service Provider's (ISP) own network (also knows as the "last mile"), this is referred to as "on-net" measurement. This approach provides insight into the performance of your Internet connection within your ISP, but does not necessarily reflect the full experience of using the Internet, which almost always involves accessing content and services that are hosted somewhere outside of your ISP. Results achieved from "on-net" testing are often higher than those achieved via other methods, since the distance traveled is generally shorter, and the network is entirely controlled by one entity (your ISP).
+* **client:** This is the software that runs on the user's machine and shows the user their speed results.
+* **server:** This is the computer on the Internet to which the client connects to complete the test.
+
+A test generates data between the client and the server, and measures performance between these two points. _The location of these two points is important in terms of understanding the results of a given test_.
+
+If the server is located within your Internet Service Provider's (ISP) own network (also knows as the "last mile"), this is referred to as "on-net" measurement. This approach provides insight into the performance of your Internet connection within your ISP, but does not necessarily reflect the full experience of using the Internet, which almost always involves accessing content and services that are hosted somewhere outside of your ISP. Results achieved from "on-net" testing are often higher than those achieved via other methods, since the distance traveled is generally shorter, and the network is entirely controlled by one entity (your ISP).
 
 So-called "off-net" measurements conduct measurements between your computer and a server located outside of your ISP's network. This means that traffic crosses borders between networks, and often travels longer distances. Off-net testing generally produces results that are lower, relative to "on-net" testing.
 
