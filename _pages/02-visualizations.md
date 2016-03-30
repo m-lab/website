@@ -5,9 +5,6 @@ title: "Visualizations"
 page-title: "Performance"
 menu-item: true
 breadcrumb: visualizations
-accordion:
-  - heading: "Broadband performance statistics using NDT data"
-  - heading: "Packet loss video using NDT data"
 ---
 
 # Visualizations of network performance
@@ -17,7 +14,7 @@ don't have to ask permission before doing meaningful analysis. Below are
 some ways in which smart people have turned open data into powerful
 visualizations.
 
-{% capture accordion_entry_1 %}
+## Broadband performance statistics using NDT data
 <p><iframe class="customIframe" style="font-size: 11px; line-height: 24px;" src="https://www.google.com/publicdata/embed?ds=e9krd11m38onf_&amp;ctype=m&amp;strail=false&amp;bcs=d&amp;nselm=s&amp;met_s=number_of_tests&amp;scale_s=lin&amp;ind_s=false&amp;met_c=download_throughput&amp;scale_c=lin&amp;ind_c=false&amp;ifdim=country&amp;hl=en_US&amp;dl=en_US&amp;ind=false&amp;xMax=180&amp;xMin=-180&amp;yMax=-79.97571094413946&amp;yMin=84.17339026552769&amp;mapType=t&amp;icfg&amp;iconSize=0.5" name="customIframe_0" width="960" height="500" frameborder="0" marginwidth="960" marginheight="500"></iframe></p>
 
 The charts presented in this section visualize data collected by M-Lab's Network Diagnostic Tool ([NDT]({{ site.baseurl }}/tools/ndt/)).  Of the many metrics collected by NDT, these charts visualize just a small subset (such as **download throughput**, **upload throughput**, **round trip time**, and **packet retransmission**).
@@ -59,16 +56,10 @@ Each bubble corresponds to a country. When you mouse over any bubble, the chart 
 
 <p><iframe class="customIframe" src="https://www.google.com/publicdata/embed?ds=e9krd11m38onf_&amp;ctype=b&amp;strail=false&amp;bcs=d&amp;nselm=s&amp;met_s=number_of_tests&amp;scale_s=lin&amp;ind_s=false&amp;met_c=download_throughput&amp;scale_c=lin&amp;ind_c=false&amp;met_y=network_limited&amp;scale_y=lin&amp;ind_y=false&amp;met_x=receiver_limited&amp;scale_x=lin&amp;ind_x=false&amp;ifdim=country&amp;hl=en_US&amp;dl=en_US&amp;ind=false&amp;icfg&amp;iconSize=0.5" name="customIframe_6" width="960" height="500" frameborder="0" marginwidth="960" marginheight="500"></iframe></p>
 
-{% endcapture %}
-
-{% capture accordion_entry_2 %}
+## Packet loss video using NDT data
 
 View a quick and dreamy video showing packet loss, as measured by M-Lab's NDT.
 
 <p><iframe class="customIframe" src="https://docs.google.com/file/d/0B0dPEIVgbGveU1JjcnU3LXNNYXM/preview" name="customIframe_0" width="800" height="400" frameborder="0" marginwidth="800" marginheight="400"></iframe></p>
 
 If you're inspired to learn more, and maybe want to create your own, go to:  [http://dominichamon.com/blog/2012/12/visualizing-m-lab-data-with-bigquery-part-two/](http://dominichamon.com/blog/2012/12/visualizing-m-lab-data-with-bigquery-part-two/).
-
-{% endcapture %}
-
-{% include accordion.html %}
