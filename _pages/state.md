@@ -3,17 +3,13 @@ layout: page
 permalink: /state/
 title: "State"
 breadcrumb: visualizations
-accordion:
-  - heading: "RIPEstat Widgets to Explore Networks&#39; Activity"
-  - heading: "How many M-Lab tests? How much M-Lab data?"
-  - heading: "Distribution of NDT tests"
 ---
 
 # State
 
 Here we highlight visualizations that illuminate the state of networks and M-Lab measurement. These look at the framework within which network performance and transparency testing happen, and expose this in easy to understand visualizations.
 
-{% capture accordion_entry_1 %}
+## RIPEstat Widgets to Explore Networks' Activity
 
 [RIPEstat](https://stat.ripe.net/){:target="_blank"} is a web-based interface developed by the [RIPE NCC](http://www.ripe.net/){:target="_blank"} featuring visualization widgets and data APIs dedicated to making sense of Internet data. RIPEstat now includes:
 
@@ -39,9 +35,7 @@ ripestat.init("network-activity",{"resource":"193.0.0.0/10"},null,{"show_control
 <div class="statwdgtauto"></div>
 <div class="statwdgtauto"></div>
 
-{% endcapture %}
-
-{% capture accordion_entry_2 %}
+## How many M-Lab tests? How much M-Lab data?
 
 ## Total number of tests and total amount of data
 
@@ -62,16 +56,10 @@ This graph shows the total amount of data collected daily on the M-Lab platform.
 
 <p class="img-ctn img-center"><iframe class="customIframe" src="https://spreadsheets3.google.com/pub?key=0AhePngEzRXqWdGFua1pzS3pmbk1sTXNrMnVZVlZlV3c&amp;output=html&amp;widget=true" name="customIframe_1" width="615" height="440" frameborder="0" marginwidth="615" marginheight="440"></iframe></p>
 
-{% endcapture %}
-
-{% capture accordion_entry_3 %}
+## Distribution of NDT tests
 
 Since the dawn of M-Lab (2009), see every NDT test ever run appear over time as a small dot on a vast map.
 
 ![Every NDT test ever run over time chart]({{ site.baseurl}}/images/visualizations/ndt-test.png)
 
 For more information about how the chart was created, see [http://dominichamon.com/blog/2012/12/visualizing-m-lab-data-with-bigquery-part-two/](http://dominichamon.com/blog/2012/12/visualizing-m-lab-data-with-bigquery-part-two/).
-
-{% endcapture %}
-
-{% include accordion.html %}

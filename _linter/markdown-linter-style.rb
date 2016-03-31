@@ -17,6 +17,9 @@ rule 'MD029', :style => :ordered
 ## MD013 - Line length.  Disabled unless can determine automated way to fix.
 exclude_rule 'MD013'
 
+## MD024 - Multiple headers with the same content
+exclude_rule 'MD024'
+
 ## MD033 - Inline HTML - used for Markdown purists
 exclude_rule 'MD033'
 
