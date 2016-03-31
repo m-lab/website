@@ -1,0 +1,21 @@
+// Anchor Permalinks Component
+
+.anchor-link {
+  font-family: 'anchor-icon';
+  opacity: 0;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: inherit; 
+  position: absolute; 
+  margin-left: -20px;
+  font-size: 20px;
+
+  &:after {
+    content: attr(data-icon);
+  }
+}
+
+*:hover  > .anchor-link {
+  opacity: 1;
+}
