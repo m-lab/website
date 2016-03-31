@@ -15,3 +15,11 @@
     }
   }
 }
+
+#intro-section-observatory {
+	ul {
+		padding-left: 30px;
+
+    @include list_bullets(inherit, 0px, 0px, 24px, outside);
+  }
+}
