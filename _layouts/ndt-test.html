@@ -1,122 +1,126 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf8">
-    <title>{{ page.title }}</title>
-    <link href="{{ site.baseurl }}/css/ndt-test.css" rel="stylesheet">
-    <!--[if IE]>
-    <style>
-    @font-face {
-        font-family: "League Gothic";
-        src: url("../fonts/league-gothic/league_gothic.eot");
-    }
-    </style>
-    <![endif]-->
-    <script>
-        // The gauge.min.js in the ndt submodule wants the font digital-7-mono,
-        // and by default looks for it in the /fonts directory.  Setting this
-        // variable tells it where to look.
-        var CANV_GAUGE_FONTS_PATH = "../fonts/digital-7-mono";
-    </script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js"></script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/gauge.min.js"></script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/script.js"></script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-browser-client.js"></script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-wrapper.js"></script>
-    <script>
-        // Look up a suitable NDT server using mlab-ns. The global variable
-        // ndtServer is used by by the backend javascript to determine which
-        // server to test against.
-        var ndtServer;
-        (function () {
-            var mlabNsService = 'https:' == location.protocol ? 'ndt_ssl' : 'ndt';
-            var mlabNsUrl = 'https://mlab-ns.appspot.com/';
-            $.ajax({
-                url: mlabNsUrl + mlabNsService + '?format=json',
-                dataType: 'json',
-                // async is intentionally set to false to make sure that the
-                // mlab-ns request completes before the test can be run.
-                async: false,
-                success: function(resp) {
-                    console.log('Using NDT server: ' + resp.fqdn);
-                    ndtServer = resp.fqdn;
-                },
-                error: function(jqXHR, errStatus, errText) {
-                    console.log('mlab-ns lookup failed: ' + errStatus + ' ' + errText);
-                }
-            });
-        })();
-    </script>
+  <meta charset="utf8">
+  <title>{{ page.title }}</title>
+  <link href="{{ site.baseurl }}/css/ndt-test.css" rel="stylesheet">
+  <!--[if IE]>
+  <style>
+  @font-face {
+    font-family: "League Gothic";
+    src: url("../fonts/league-gothic/league_gothic.eot");
+  }
+  </style>
+  <![endif]-->
+  <script>
+    // The gauge.min.js in the ndt submodule wants the font digital-7-mono,
+    //  and by default looks for it in the /fonts directory.  Setting this
+    //  variable tells it where to look.
+    var CANV_GAUGE_FONTS_PATH = "../fonts/digital-7-mono";
+  </script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js">
+  </script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/gauge.min.js"></script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/script.js"></script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-browser-client.js">
+  </script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-wrapper.js"></script>
+  <script>
+    // Look up a suitable NDT server using mlab-ns. The global variable
+    //  ndtServer is used by the backend javascript to determine which
+    //  server to test against.
+    var ndtServer;
+    (function () {
+      var mlabNsService = 'https:' == location.protocol ? 'ndt_ssl' : 'ndt';
+      var mlabNsUrl = 'https://mlab-ns.appspot.com/';
+      $.ajax({
+        url: mlabNsUrl + mlabNsService + '?format=json',
+        dataType: 'json',
+        // async is intentionally set to false to make sure that the
+        // mlab-ns request completes before the test can be run.
+        async: false,
+        success: function(resp) {
+            console.log('Using NDT server: ' + resp.fqdn);
+            ndtServer = resp.fqdn;
+        },
+        error: function(jqXHR, errStatus, errText) {
+            console.log('mlab-ns lookup failed: ' + errStatus + ' ' + errText);
+        }
+      });
+    })();
+  </script>
 </head>
 <body class="initializing">
-<div class="header"></div>
-<div id="widget">
+  <div class="header"></div>
+  <div id="widget">
     <div id="welcome" class="page">
-        <div class="status">Initializing...</div>
-        <div id="start-button">
-            <a href="#test" class="start button">Start Test</a>
-        </div>
+      <div class="status">Initializing...</div>
+      <div id="start-button">
+        <a href="#test" class="start button">Start Test</a>
+      </div>
     </div>
     <div id="test" class="page">
-        <div id="loading">
-            <h2 class="centered">Preparing your tests...</h2>
+      <div id="loading">
+        <h2 class="centered">Preparing your tests...</h2>
+      </div>
+      <div id="upload" class="test">
+        <h2 class="centered">Now testing your <em>upload speed</em></h2>
+      </div>
+      <div id="download" class="test">
+        <h2 class="centered">Now testing your <em>download speed</em></h2>
+      </div>
+      <canvas id="uploadGauge"></canvas>
+      <div id="rtt">RTT
+        <div id="rttValue"></div>
+      </div>
+      <canvas id="downloadGauge"></canvas>
+      <div class="locations">
+        <div class="local location"></div>
+        <div class="remote location">
+          <div class="name">Test server</div>
+          <div class="address"></div>
         </div>
-        <div id="upload" class="test">
-            <h2 class="centered">Now testing your <em>upload speed</em></h2>
-        </div>
-        <div id="download" class="test">
-            <h2 class="centered">Now testing your <em>download speed</em></h2>
-        </div>
-        <canvas id="uploadGauge"></canvas>
-        <div id="rtt">RTT
-            <div id="rttValue"></div>
-        </div>
-        <canvas id="downloadGauge"></canvas>
-        <div class="locations">
-            <div class="local location"></div>
-            <div class="remote location">
-                <div class="name">Test server</div>
-                <div class="address"></div>
-            </div>
-        </div>
+      </div>
     </div>
     <div id="results" class="summary page">
-        <h2>Your test results</h2>
-        <div class="view-selector">
-            <span class="summary button">Summary</span>
-            <span class="details button">Details</span>
-            <span class="advanced button">Advanced</span>
+      <h2>Your test results</h2>
+      <div class="view-selector">
+        <span class="summary button">Summary</span>
+        <span class="details button">Details</span>
+        <span class="advanced button">Advanced</span>
+      </div>
+      <div id="result-pages">
+        <div class="result-page summary">
+          <div class="upload result">
+            <h3>Upload speed</h3>
+            <p>
+              <span class="number" id="upload-speed">0.00</span>
+              <span class="units" id="upload-speed-units">Mb/s</span>
+            </p>
+          </div>
+          <div class="download result">
+            <h3>Download speed</h3>
+            <p>
+              <span class="number" id="download-speed">0.00</span>
+              <span class="units" id="download-speed-units">Mb/s</span>
+            </p>
+          </div>
+          <div class="other">
+            <p class="latency"><b>Network latency:</b> 
+              <span id="latency">0.0</span> msec round trip time</p>
+            <p class="jitter">
+              <b>Jitter:</b> <span id="jitter">0.0 msec</span>
+            </p>
+          </div>
         </div>
-        <div id="result-pages">
-            <div class="result-page summary">
-                <div class="upload result">
-                    <h3>Upload speed</h3>
-                    <p>
-                        <span class="number" id="upload-speed">0.00</span>
-                        <span class="units" id="upload-speed-units">Mb/s</span>
-                    </p>
-                </div>
-                <div class="download result">
-                    <h3>Download speed</h3>
-                    <p>
-                        <span class="number" id="download-speed">0.00</span>
-                        <span class="units" id="download-speed-units">Mb/s</span>
-                    </p>
-                </div>
-                <div class="other">
-                    <p class="latency"><b>Network latency:</b> <span id="latency">0.0</span> msec round trip time</p>
-                    <p class="jitter"><b>Jitter:</b> <span id="jitter">0.0 msec</span></p>
-                </div>
-            </div>
-            <div class="result-page details" id="test-details"></div>
-            <div class="result-page advanced" id="test-advanced"></div>
-        </div>
-        <div class="controls">
-            <a href="#test" class="start button">Test again</a>
-        </div>
+        <div class="result-page details" id="test-details"></div>
+        <div class="result-page advanced" id="test-advanced"></div>
+      </div>
+      <div class="controls">
+          <a href="#test" class="start button">Test again</a>
+      </div>
     </div>
-</div>
-<div id="backendContainer"></div>
+  </div>
+  <div id="backendContainer"></div>
 </body>
 </html>
