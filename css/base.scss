@@ -14,11 +14,14 @@
 // Include componets
 @import 'components/accordions';
 @import 'components/anchors';
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/links';
 @import 'components/quick-links';
 @import 'components/grids';
 @import 'components/tables';
 
-html,body,div,span,applet,object,iframe,h1,.carousel-caption p,.error-msg .error-text,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+html,body,div,span,applet,object,iframe,h1,.error-msg .error-text,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -173,7 +176,7 @@ body {
     font-weight: normal
 }
 
-h1,.carousel-caption p,.error-msg .error-text,h2,h3,h4 {
+h1,.error-msg .error-text,h2,h3,h4 {
     color: #454545
 }
 
@@ -181,14 +184,9 @@ h2 {
     font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif
 }
 
-h1,.carousel-caption p,.error-msg .error-text {
+h1,.error-msg .error-text {
     font-size: 28px;
     line-height: 32px
-}
-
-a {
-    text-decoration: none;
-    color: #e35343
 }
 
 p {
@@ -224,7 +222,7 @@ small {
     float: left
 }
 
-.full-width,.header-section,.carousel-ctn,.info-segment-inner,.footer-ctn {
+.full-width,.header-section,.info-segment-inner,.footer-ctn {
     width: 1000px;
     margin: auto;
     position: relative;
@@ -521,41 +519,6 @@ small {
     margin-top: 0
 }
 
-.btn.btn-to-top {
-    font-size: 16px;
-    line-height: 24px;
-    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
-    width: 90px;
-    height: 135px;
-    text-align: center;
-    padding: 0 10px;
-    position: fixed;
-    z-index: 11;
-    right: 15px;
-    bottom: -150px;
-    -webkit-transition: bottom 300ms ease-in-out,background 300ms ease-in-out;
-    -moz-transition: bottom 300ms ease-in-out,background 300ms ease-in-out;
-    -o-transition: bottom 300ms ease-in-out,background 300ms ease-in-out;
-    transition: bottom 300ms ease-in-out,background 300ms ease-in-out
-}
-
-.btn.btn-to-top.is-visible {
-    bottom: 0
-}
-
-.btn.btn-to-top>.icon-top {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    margin: auto
-}
-
-.btn.btn-to-top>span {
-    position: relative;
-    top: 50px
-}
-
 .btn.btn-cta:before {
     content: '';
     background: url('../images/sprites/globalSprite-1x.png') no-repeat -14px -112px;
@@ -605,39 +568,6 @@ small {
 
 .to-top {
     font-size: 13px
-}
-
-.pagination {
-    margin-left: 0;
-    padding: 15px 0 0
-}
-
-.pagination>li {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom:1;*display: inline;
-    list-style: none;
-    text-indent: 0
-}
-
-.pagination>li:nth-child(odd) {
-    float:right;
-}
-
-.pagination>li a {
-    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
-    display: block;
-    padding: 0 5px
-}
-
-.pagination>li a.is-active {
-    color: #454545
-}
-
-.pagination>li a.dir {
-    color: #454545
 }
 
 .download-link {
@@ -827,12 +757,6 @@ ol ol {
     margin-left: 30px;
     padding-bottom: 0
 }
-
-.breadcrumbs .breadcrumb {
-    color: #454545
-}
-
-
 
 .thumb-grid {
     padding-top: 74px
@@ -1101,100 +1025,6 @@ label,.label {
     top: 0;
     left: 0;
     width: 100%
-}
-
-.carousel-section {
-    width: 100%;
-    background: #81addd;
-    height: 400px;
-    overflow: hidden;
-    position: relative
-}
-
-.carousel-preloader {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    background: url('../images/carousel-loader.gif') no-repeat 0 0
-}
-
-.carousel-ctn {
-    position: relative;
-    height: 400px;
-    display: none
-}
-
-.slides>li {
-    position: relative
-}
-
-.carousel-infobox {
-    position: absolute;
-    top: 75px;
-    left: 0;
-    width: 350px
-}
-
-.carousel-infobox .btn {
-    white-space: nowrap
-}
-
-.carousel-heading {
-    font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
-    color: #fff;
-    padding-bottom: 8px
-}
-
-.carousel-caption p {
-    font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
-    color: #fff;
-    margin-bottom: 22px
-}
-
-.flex-control-nav {
-    position: absolute;
-    bottom: 13px;
-    left: 20px;
-    margin-left: 0;
-    padding-bottom: 0
-}
-
-.flex-control-nav>li {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom:1;*display: inline;
-    margin-left: 5px
-}
-
-.flex-control-nav>li:first-child {
-    margin-left: 0
-}
-
-.flex-control-nav>li a {
-    display: block;
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-    border-radius: 100%;
-    cursor: pointer
-}
-
-.flex-control-nav>li a.flex-active {
-    background: none;
-    border: 2px solid #fff
 }
 
 .player-ctn {
@@ -1757,31 +1587,6 @@ label,.label {
 
 .styleguide-page .section-heading {
     padding-bottom: 16px
-}
-
-.sg-section {
-    margin-bottom: 60px
-}
-
-.sg-section .breadcrumbs {
-    padding-top: 0
-}
-
-.sg-section .sg-note {
-    display: block;
-    margin: 30px 0 10px
-}
-
-.sg-section .sg-note:first-child {
-    margin-top: 0
-}
-
-.sg-section .social-ctn li {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom:1;*display: inline
 }
 
 .hidden { display: none; }

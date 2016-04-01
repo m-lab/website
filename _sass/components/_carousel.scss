@@ -1,0 +1,114 @@
+// Carousel Component
+
+.carousel-section {
+  width: 100%;
+  background: #81addd;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+
+  .carousel-ctn {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    padding: 0 20px;
+    height: 400px;
+    display: none;
+
+    .slides>li {
+      position: relative;
+    }
+  }
+
+  .carousel-caption {
+    padding: 0px;
+    position: initial;
+
+    p {
+      text-align: left;
+      color: #454545;
+      font-size: 28px;
+      line-height: 32px;
+      font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
+      color: #fff;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+      font-size: 28px;
+      line-height: 32px;
+      margin: 0px 0px 22px 0px;
+      text-shadow: none;
+    }
+  }
+
+  .carousel-preloader {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: url('../images/carousel-loader.gif') no-repeat 0 0;
+  }
+
+  .carousel-infobox {
+      position: absolute;
+      top: 75px;
+      left: 0;
+      width: 350px;
+  
+    .btn {
+      white-space: nowrap;
+    }
+  }
+
+  .carousel-heading {
+      font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
+      color: #fff;
+      padding-bottom: 8px;
+  }
+
+  .flex-control-nav {
+      position: absolute;
+      bottom: 13px;
+      left: 20px;
+      margin-left: 0;
+      padding-bottom: 0;
+
+    &>li {
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom:1;*display: inline;
+        margin-left: 5px;
+    
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        border-radius: 100%;
+        cursor: pointer;
+
+        &.flex-active {
+          background: none;
+          border: 2px solid #fff;
+        }
+      }
+    }
+  }
+
+}
