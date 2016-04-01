@@ -1,0 +1,49 @@
+// Different Link Styles
+
+.breadcrumbs .breadcrumb {
+    color: #454545;
+    background-color: #fff;
+    padding: 0px;
+}
+
+.pagination {
+    margin-left: 0;
+    padding: 15px 0 0;
+    display: block;
+
+  >li {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom:1;*display: inline;
+    list-style: none;
+    text-indent: 0;
+
+    &:nth-child(odd) {
+      float:right;
+    }
+
+    a {
+      font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+      display: block;
+      padding: 0 5px;
+      border: 0;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &.is-active {
+        color: #454545;
+      }
+
+      &.dir {
+        color: #454545;
+      }
+
+    }
+  
+  }
+
+}

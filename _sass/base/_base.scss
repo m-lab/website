@@ -34,3 +34,18 @@ td {
   border: 1px solid black; 
   padding: 5px; 
 }
+
+a {
+  text-decoration: none;
+  color: #e35343;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}
+
+hr {
+  margin: 10px 0px;
+  border: 1px solid #b7b7b7;
+}

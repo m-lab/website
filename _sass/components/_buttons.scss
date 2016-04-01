@@ -1,0 +1,44 @@
+// Buttons Component
+
+// Back to Top Button
+.btn.btn-to-top {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+  width: 90px;
+  height: 135px;
+  text-align: center;
+  padding: 0 10px;
+  position: fixed;
+  z-index: 11;
+  right: 15px;
+  bottom: -150px;
+  border-radius: 4px 4px 0px 0px;
+  -webkit-transition: bottom 300ms ease-in-out,background 300ms ease-in-out;
+  -moz-transition: bottom 300ms ease-in-out,background 300ms ease-in-out;
+  -o-transition: bottom 300ms ease-in-out,background 300ms ease-in-out;
+  transition: bottom 300ms ease-in-out,background 300ms ease-in-out;
+  white-space: normal;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &.is-visible {
+    bottom: 0;
+  }
+
+  >.icon-top {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  >span {
+    position: relative;
+    top: 50px;
+  }
+
+}

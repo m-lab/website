@@ -20,6 +20,20 @@
 	ul {
 		padding-left: 30px;
 
-    @include list_bullets(inherit, 0px, 0px, 24px, outside);
+    @include list_bullets(inherit, initial, initial, 24px, outside);
   }
+
+  .helpContent ul.buttons {
+    padding: 0px;
+
+    li {
+      padding: 10px 0;
+
+      &:first-child {
+        margin-left: 110px;
+        margin-right: 40px;
+      }
+    }
+  }
+
 }

@@ -50,6 +50,7 @@ ul#markdown-toc {
     content: " ";
     float: left;
     padding-left: 10px;
+    box-sizing: initial;
   }
 
   a {
