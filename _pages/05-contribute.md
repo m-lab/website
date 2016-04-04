@@ -41,7 +41,7 @@ As an M-Lab partner, many facets of the M-Lab platform can be supported based on
 
 ### Analyze and visualize the M-Lab data
 
-If you have experience in web or application development, data analysis, or visualization, you may be interested in working with M-Lab's tests, data, and analysis tools, all of which are open source and openly licensed.
+If you have experience in web or application development, data analysis, or visualization expertise may be interested in working with M-Lab's tests, data, and analysis tools, all of which are open source and openly licensed. For example, many third party developers have added M-Lab's tests in their websites, apps or other software. Review our [data documentation]({{ site.baseurl }}/data), our FAQ entry on [adding an M-Lab test to your project]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software), or [contact us](mailto:support@measurementlab.net) to learn more.
 
 All the measurement data collected by M-Lab are available to the public without restriction under a [No Rights Reserved Creative Commons Zero Waiver.](http://creativecommons.org/about/cc0)
 
