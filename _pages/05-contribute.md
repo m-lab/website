@@ -15,12 +15,14 @@ For individuals, the best way to support M-Lab is to [regularly use our tests]({
 
 ## Researchers
 
-M-Lab welcomes researchers who want to dig into the M-Lab data. Our team provides documentation and support for those interested. If you are interested in working with M-Lab data in your research, check out our [data documentation]({{ site.baseurl }}/data) to help get you started and [contact us](mailto:support@measurementlab.net) with any questions. We also suggest you join our [public mailing list](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss) for news and announcements.
+M-Lab welcomes researchers who want to dig into the M-Lab data, and provides documentation and best-effort support for those interested. If you are interested in working with M-Lab data in your research, please review our [data documentation]({{ site.baseurl }}/data) to help get you started and [contact us](mailto:support@measurementlab.net) with any questions. We also suggest you join our [public mailing list](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss) for news and announcements.
 
-Researchers developing and maintaining Open Source network measurement tests may apply to host a new test on M-Lab. If your project fits within M-Lab's guidelines and principles, we invite you to [apply for M-Lab hosting](https://docs.google.com/a/opentechinstitute.org/forms/d/1Dz-d8bs92ltlKKxWDCoi2nFC6wmBrBq6vrLIwhYyiDM/viewform). Please review the documents below **before** applying:
+Researchers developing and maintaining Open Source network measurement tests may apply to host a new test on M-Lab. If your project fits within M-Lab's guidelines and principles, we invite you to [apply for M-Lab hosting](https://docs.google.com/a/opentechinstitute.org/forms/d/1Dz-d8bs92ltlKKxWDCoi2nFC6wmBrBq6vrLIwhYyiDM/viewform).
+
+**Please review the documents below before applying:**
 
 * [M-Lab's conceptual and technical scope and policies]({{ site.baseurl }}/publications/mlab-founding-vision.pdf)
-* [M-Lab's Roles & Responsibilities]({{ site.baseurl }}/publications/mlab-roles-responsibilities.pdf) for new researchers.
+* [M-Lab's Roles &amp; Responsibilities for new researchers]({{ site.baseurl }}/publications/mlab-roles-responsibilities.pdf)
 * [M-Lab's requirements and procedures for accepting new tools]({{ site.baseurl }}/publications/mlab-procedures-new-tools.pdf)
 
 ## Companies, Organizations or Other Institutions
@@ -31,7 +33,7 @@ If you'd like to get involved as an M-Lab supporting partner, [contact](mailto:s
 
 ### Providing Hardware, Hosting or Connectivity Resources for New M-Lab Measurement Points
 
-M-Lab supporting partners may contribute or donate resources to provide new Measurement Points around the world. If you are interested in helping M-Lab expand our coverage to new areas, please [submit this application](https://docs.google.com/a/measurementlab.net/spreadsheet/viewform?formkey=dHNMZ2p0OU5TckxIUFg0RVNhSk5teEE6MQ#gid=0). The document [how to deploy a new M-Lab site]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf) is helpful in understanding the resources we need for each M-Lab Measurement Point.
+M-Lab supporting partners may contribute or donate resources to provide new Measurement Points around the world. If you are interested in helping M-Lab expand our coverage to new areas, please [submit this application](https://docs.google.com/a/measurementlab.net/spreadsheet/viewform?formkey=dHNMZ2p0OU5TckxIUFg0RVNhSk5teEE6MQ#gid=0). The document [how to deploy a new M-Lab site]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf) outlines the resources needed for each M-Lab Measurement Point.
 
 ### Providing Resources for Data Hosting, Aggregation and Publication
 
