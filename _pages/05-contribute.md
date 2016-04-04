@@ -5,7 +5,7 @@ title: "Contribute"
 menu-item: true
 ---
 
-# Suppoting or Contributing to M-Lab
+# Supporting or Contributing to M-Lab
 
 M-Lab welcomes the participation of individual consumers and researchers, as well as companies, organizations or other institutions, who would like to help expand the platform and ensure its growth and success.
 
@@ -15,7 +15,7 @@ For individuals, the best way to support M-Lab is to [regularly use our tests]({
 
 ## Researchers
 
-M-Lab welcomes researchers who want to dig into the M-Lab data, and provides documentation and best-effort support for those interested. If you are interested in working with M-Lab data in your research, please review our [data documentation]({{ site.baseurl }}/data) to help get you started and [contact us](mailto:support@measurementlab.net) with any questions. We also suggest you join our [public mailing list](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss) for news and announcements.
+M-Lab welcomes researchers who want to dig into the M-Lab data, providing documentation and best-effort email support. If you are interested in working with M-Lab data in your research, please review our [data documentation]({{ site.baseurl }}/data) to help get you started and [contact us](mailto:support@measurementlab.net) with any questions. We also suggest you join our [public mailing list](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss) for news and announcements.
 
 Researchers developing and maintaining Open Source network measurement tests may apply to host a new test on M-Lab. If your project fits within M-Lab's guidelines and principles, we invite you to [apply for M-Lab hosting](https://docs.google.com/a/opentechinstitute.org/forms/d/1Dz-d8bs92ltlKKxWDCoi2nFC6wmBrBq6vrLIwhYyiDM/viewform).
 
