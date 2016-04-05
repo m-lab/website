@@ -13,7 +13,8 @@ requirejs.config({
     'require.domready':     '../libs/require.domready',
     'jquery':               '../libs/jquery-1.9.1.min',
     'jquery.flexslider':    '../libs/jquery.flexslider',
-    'jquery.imagesLoaded':  '../libs/jquery.imagesloaded.min'    
+    'jquery.imagesLoaded':  '../libs/jquery.imagesloaded.min',    
+    'bootstrap':            '../libs/bootstrap.min'    
   },
 
   shim: {
@@ -29,8 +30,10 @@ requirejs.config({
     },
     'jquery.imagesLoaded': {
       deps: ['jquery']
-    }
-  }
+    },
+    'bootstrap': {
+      deps: ['jquery']
+    }  }
 
 });
 
@@ -46,7 +49,8 @@ require([
   'jquery.flexslider',
   'jquery.imagesLoaded',
   'config',
-  'controllers/Enhancer'
+  'controllers/Enhancer',
+  'bootstrap'
 ], function(
   _,
   Backbone,
