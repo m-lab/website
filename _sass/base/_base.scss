@@ -3,6 +3,18 @@
 //import mixins
 @import 'helpers/_mixins';
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+    height: 100%;
+    background: #fff;
+    color: #000
+}
+
 ul {
   @include list_bullets();
 }
