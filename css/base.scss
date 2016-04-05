@@ -3,6 +3,10 @@
 # Only Main files contain this front matter, not partials.
 ---
 
+// Including bootstrap styles
+@import 'helpers/custom-bootstrap-variables';
+@import 'bootstrap';
+
 // Including base scss eleemnts
 @import 'base/typography';
 @import 'base/base';
@@ -76,19 +80,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,su
 
 em, .italicised {
     font-style: italic;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box
-}
-
-html {
-    height: 100%;
-    -webkit-text-size-adjust: none;
-    overflow-y: scroll;
-    min-width: 1000px
 }
 
 body {
