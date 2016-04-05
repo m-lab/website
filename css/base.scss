@@ -25,17 +25,13 @@
 @import 'components/grids';
 @import 'components/tables';
 
-html,body,div,span,applet,object,iframe,h1,.error-msg .error-text,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+div,span,applet,object,iframe,h1,.error-msg .error-text,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
     padding: 0;
     border: 0;
     font: inherit;
     font-size: 100%;
     vertical-align: baseline
-}
-
-html {
-    line-height: 1
 }
 
 q,blockquote {
@@ -51,21 +47,21 @@ a img {
     border: none
 }
 
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,section,summary {
     display: block
 }
 
-.clearfix,.l-grid,.quick-links,.grid-section .grid-link,.header-section,.info-segment,.info-segment-inner,.footer-ctn,.subpage-content {
+.clearfix,.l-grid,.quick-links,.grid-section .grid-link,.info-segment,.info-segment-inner,.footer-ctn,.subpage-content {
     zoom:1}
 
-.clearfix:before,.l-grid:before,.quick-links:before,.grid-section .grid-link:before,.header-section:before,.info-segment:before,.info-segment-inner:before,.footer-ctn:before,.subpage-content:before,.clearfix:after,.l-grid:after,.quick-links:after,.grid-section .grid-link:after,.header-section:after,.info-segment:after,.info-segment-inner:after,.footer-ctn:after,.subpage-content:after {
+.clearfix:before,.l-grid:before,.quick-links:before,.grid-section .grid-link:before,.info-segment:before,.info-segment-inner:before,.footer-ctn:before,.subpage-content:before,.clearfix:after,.l-grid:after,.quick-links:after,.grid-section .grid-link:after,.info-segment:after,.info-segment-inner:after,.footer-ctn:after,.subpage-content:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden
 }
 
-.clearfix:after,.l-grid:after,.quick-links:after,.grid-section .grid-link:after,.header-section:after,.info-segment:after,.info-segment-inner:after,.footer-ctn:after,.subpage-content:after {
+.clearfix:after,.l-grid:after,.quick-links:after,.grid-section .grid-link:after,.info-segment:after,.info-segment-inner:after,.footer-ctn:after,.subpage-content:after {
     clear: both
 }
 
@@ -80,12 +76,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,su
 
 em, .italicised {
     font-style: italic;
-}
-
-body {
-    height: 100%;
-    background: #fff;
-    color: #000
 }
 
 .fluid-img {
@@ -129,7 +119,7 @@ body {
 }
 
 .no-iframe {
-    display: none !important
+  display: none !important
 }
 
 @font-face {
@@ -213,7 +203,7 @@ small {
     float: left
 }
 
-.full-width,.header-section,.info-segment-inner,.footer-ctn {
+.full-width,.info-segment-inner,.footer-ctn {
     width: 1000px;
     margin: auto;
     position: relative;
@@ -883,16 +873,6 @@ label,.label {
     display: none
 }
 
-.header-section {
-    height: 100px;
-    z-index: 10
-}
-
-.header-section>div {
-    height: 100%;
-    display: table
-}
-
 .main-logo {
     display: table-cell;
     vertical-align: middle
@@ -902,120 +882,6 @@ label,.label {
     background: url('../images/sprites/globalSprite-1x.png') no-repeat -7px -7px;
     width: 100px;
     height: 31px
-}
-
-.header-cta {
-    display: table-cell;
-    vertical-align: middle
-}
-
-.header-cta h2,.header-cta h3 {
-    font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
-    line-height: 18px
-}
-
-.header-cta h2 {
-    color: #767676;
-    margin-top: 1px
-}
-
-.header-cta h3 {
-    color: #454545;
-    line-height: 17px
-}
-
-.header-cta:before {
-    content: '';
-    background: url('../images/sprites/globalSprite-1x.png') no-repeat;
-    float: left;
-    margin-right: 15px;
-    position: relative;
-    top: 5px
-}
-
-.header-cta.assist-cta::before {
-    background-position: -11px -62px;
-    width: 23px;
-    height: 25px
-}
-
-.header-cta.assist-cta.is-active::before,.header-cta.assist-cta:hover::before {
-    background-position: -54px -62px
-}
-
-.header-cta.learn-cta::before {
-    background-position: -102px -62px;
-    width: 27px;
-    height: 25px
-}
-
-.header-cta.learn-cta.is-active::before,.header-cta.learn-cta:hover::before {
-    background-position: -145px -62px
-}
-
-.no-touch .header-cta.assist-cta:hover::before {
-    background-position: -11px -62px
-}
-
-.no-touch .header-cta.learn-cta:hover::before {
-    background-position: -102px -62px
-}
-
-.main-nav-section {
-    background: #9bd2c7;
-    width: 100%;
-    border-top: 5px solid #eee;
-    position: relative;
-    z-index: 10
-}
-
-.nav-ctn {
-    position: relative;
-    background: #9bd2c7;
-    z-index: 10
-}
-
-
-
-.sub-nav-ctn {
-    position: relative;
-    z-index: 10;
-    height: 50px;
-    background: #454545;
-    overflow: hidden
-}
-
-.sub-nav>li {
-    background: #454545;
-    border-right: 1px solid #353535;
-    -webkit-box-shadow: 1px 0 0 #505050;
-    -moz-box-shadow: 1px 0 0 #505050;
-    box-shadow: 1px 0 0 #505050
-}
-
-.sub-nav>li:hover, .sub-nav>li.is-active {
-    background: #585858
-}
-
-.sub-nav>li:first-child {
-    border-left: 1px solid #353535
-}
-
-.touch-device .main-nav li:hover {
-    background: #9bd2c7
-}
-
-.touch-device .sub-nav>li:hover {
-    background: #454545
-}
-
-.sub-nav-panel {
-    height: 50px;
-    background: #454545;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%
 }
 
 .player-ctn {
@@ -1211,7 +1077,6 @@ label,.label {
     position: relative;
     z-index: 10;
     height: 290px;
-    margin-top: -290px
 }
 
 .footer-shadow {

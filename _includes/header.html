@@ -14,39 +14,95 @@
 
 <header class="header-section">
 
-  <div class="l-span1">
-    <h1 class="main-logo"><a href="{{ site.baseurl }}/">{{ header.logo-title }}</a></h1>
-  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2 col-sm-2 col-md-4">
+        <h1 class="main-logo"><a href="{{ site.baseurl }}/">{{ header.logo-title }}</a></h1>
+      </div>
 
-  {% for item in header.ctas %}
-    <div class="l-span1">
-      <a href="{% if item.link | slice: 0 = "/" %}{{ item.link | prepend: site.baseurl }}{% else %}{{ item.link }}{% endif %}" class="header-cta {{ item.class }}">
-        <h2>{{ item.h2 }}</h2>
-        <h3>{{ item.h3 }}</h3>
-      </a>
-    </div>
-  {% endfor %}
+      <!-- Mobile Hamburger Menu -->
+      <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" id="mobile-main-nav">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+
+    {% for item in header.ctas %}
+      <div class="col-xs-5 col-sm-5 col-md-4" id="{{ item.class }}">
+        <a href="{% if item.link | slice: 0 = "/" %}{{ item.link | prepend: site.baseurl }}{% else %}{{ item.link }}{% endif %}" class="header-cta {{ item.class }}">
+          <span class="pull-right">
+            <h2>{{ item.h2 }}</h2>
+            <h3>{{ item.h3 }}</h3>
+          </span>
+          <div class="{{ item.class }}"></div>
+        </a>
+      </div>
+    {% endfor %}
+
+    </div><!-- row -->
+  </div><!-- container -->
 
 </header>
 
-<!-- Top Navigation -->
+<!-- Main Navigation -->
 <nav class="main-nav-section">
-  <div class="nav-ctn">
-    <ul class="main-nav">
+  <div class="container">
+    <div class="nav-ctn collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="main-nav" id="menu-acc">
 
-      {% for page in site.pages %}
-        {% if page.menu-item %}
-          <li{% if page.url == current_page or page.url == active_link %} class="is-active"{% endif %}><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
+        {% for page in site.pages %}
+          {% if page.menu-item %}
 
-    </ul>
+            {% assign has_submenu = false %}
+            {% for cat in header.category %}
+              {% if cat.title == page.breadcrumb %}
+                {% assign has_submenu = true %}
+                {% assign submenu_title = {{forloop.index0 %}
+                {% capture submenu_id %}mobile-submenu-{{submenu_title }}{% endcapture %}
+              {% endif %}
+            {% endfor %}
+
+
+            <li class="{% if has_submenu %}panel{% endif %}{% if page.url == current_page or page.url == active_link %} is-active{% endif %}">
+              <a href="{{ page.url | prepend: site.baseurl }}" {% if has_submenu %} data-target="{{ submenu_id }}" data-parent="#menu-acc" data-toggle="collapse" aria-expanded="false" class="mobile-sub-nav-trigger" data-link="{{ page.url | prepend: site.baseurl }}"{% endif %}>
+                {{ page.title }}
+                {% if has_submenu %}
+                <span class="glyphicon glyphicon-triangle-{% if page.url == active_link %}top{% else %}bottom{% endif %}"></span>
+                {% endif %}
+              </a>
+
+            {% if has_submenu %}
+              <!-- Sub Navigation for Mobile -->
+                <ul class="mobile-sub-nav collapse{% if page.url == active_link %} is-active in{% endif %}" id="{{ submenu_id }}">
+
+                {% for link in header.category[submenu_title].sub-nav %}
+                  <li{% if link.url == current_page %} class="is-active"{% endif %}><a href="{{ link.url | prepend: site.baseurl }}">{{link.text}}</a></li>
+                {% endfor %}
+
+                </ul>
+
+            {% endif %}
+
+            </li>
+
+          {% endif %}
+        {% endfor %}
+
+      </ul>
+    </div>
   </div>
+</nav>
 
+
+<!-- Submenu Navigation -->
+<nav class="main-nav-section no-border">
+  <div class="container">
   {% for cat in header.category %}
     {% if cat.title == page.breadcrumb %}
-    <!-- Sub Navigation -->
+
     <div class="sub-nav-ctn">
       <ul class="sub-nav">
 
@@ -59,7 +115,7 @@
 
     {% endif %}
   {% endfor %}
-
+  </div>
 </nav>
 
 <div class="preloader"></div>
