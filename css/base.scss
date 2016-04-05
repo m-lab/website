@@ -103,10 +103,6 @@ em, .italicised {
     min-height: 100%
 }
 
-#main {
-    padding-bottom: 290px
-}
-
 .img-ctn.img-left {
     text-align: left
 }
@@ -202,13 +198,6 @@ small {
     margin-right: 30px;
     display: inline;
     float: left
-}
-
-.full-width,.info-segment-inner {
-    width: 1000px;
-    margin: auto;
-    position: relative;
-    padding: 0 20px
 }
 
 .l-span1 {
@@ -1069,55 +1058,6 @@ label,.label {
     zoom:1;*display: inline;
     float: left;
     padding-right: 90px
-}
-
-.subpage-content {
-    padding: 25px 20px 70px
-}
-
-.subpage-content>section {
-    clear: both
-}
-
-.subpage-content h2 {
-    font-size: 16px;
-    line-height: 16px;
-    border-bottom: 1px solid #b7b7b7;
-    padding-bottom: 17px;
-    margin-bottom: 13px
-}
-
-.subpage-content h2 .sub-text {
-    color: #767676;
-    font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif
-}
-
-.subpage-content .definition-heading a {
-    color: #454545
-}
-
-.subpage-content .tabbed-heading {
-    cursor: pointer
-}
-
-.touch-device .subpage-content a:hover {
-    color: #e35343
-}
-
-.intro-section {
-    padding: 17px 0 0
-}
-
-.subpage-content h1 {
-    padding: 16px 0px;
-}
-
-.intro-section p {
-    padding-bottom: 25px
-}
-
-.intro-section p:last-child {
-    padding-bottom: 0
 }
 
 .info-section {
