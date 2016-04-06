@@ -276,54 +276,6 @@ small {
     color: #454545
 }
 
-.btn-social {
-    background: #b0b0b0;
-    width: 37px;
-    height: 37px;
-    position: relative;
-    -webkit-transition: background 300ms ease-in-out;
-    -moz-transition: background 300ms ease-in-out;
-    -o-transition: background 300ms ease-in-out;
-    transition: background 300ms ease-in-out
-}
-
-.btn-social.is-active,.btn-social:hover {
-    background: #ff9c91
-}
-
-.btn-social::after {
-    content: '';
-    position: absolute;
-    background: url('../images/sprites/globalSprite-1x.png') no-repeat;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto
-}
-
-.btn-social.google-share::after {
-    background-position: -136px -15px;
-    width: 14px;
-    height: 14px
-}
-
-.btn-social.email-share::after {
-    background-position: -174px -16px;
-    width: 20px;
-    height: 13px
-}
-
-.btn-social.rss-share::after {
-    background-position: -217px -14px;
-    width: 15px;
-    height: 16px
-}
-
-.touch-device .btn-social:hover {
-    background: #b0b0b0
-}
-
 .btn-play {
     background: #e35343;
     width: 50px;
