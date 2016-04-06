@@ -11,6 +11,11 @@
   margin-left: -20px;
   font-size: 20px;
 
+  @media screen and (max-width: $screen-sm-min) {
+    margin-left: -13px;
+    font-size: 18px;
+  }    
+
   &:after {
     content: attr(data-icon);
   }
