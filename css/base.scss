@@ -79,13 +79,6 @@ em, .italicised {
     font-style: italic;
 }
 
-.fluid-img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-    min-width: 100%
-}
-
 .preloader {
     background: #fff url('../images/preloader.gif') no-repeat center center;
     width: 100%;
@@ -283,54 +276,6 @@ small {
     color: #454545
 }
 
-.btn-social {
-    background: #b0b0b0;
-    width: 37px;
-    height: 37px;
-    position: relative;
-    -webkit-transition: background 300ms ease-in-out;
-    -moz-transition: background 300ms ease-in-out;
-    -o-transition: background 300ms ease-in-out;
-    transition: background 300ms ease-in-out
-}
-
-.btn-social.is-active,.btn-social:hover {
-    background: #ff9c91
-}
-
-.btn-social::after {
-    content: '';
-    position: absolute;
-    background: url('../images/sprites/globalSprite-1x.png') no-repeat;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto
-}
-
-.btn-social.google-share::after {
-    background-position: -136px -15px;
-    width: 14px;
-    height: 14px
-}
-
-.btn-social.email-share::after {
-    background-position: -174px -16px;
-    width: 20px;
-    height: 13px
-}
-
-.btn-social.rss-share::after {
-    background-position: -217px -14px;
-    width: 15px;
-    height: 16px
-}
-
-.touch-device .btn-social:hover {
-    background: #b0b0b0
-}
-
 .btn-play {
     background: #e35343;
     width: 50px;
@@ -445,68 +390,6 @@ small {
 
 .info-link:hover:before {
     background-position: -14px -150px
-}
-
-.btn {
-    color: #fff;
-    background: #e35343;
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom:1;*display: inline;
-    width: auto;
-    height: 50px;
-    font-size: 16px;
-    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
-    line-height: 50px;
-    position: relative;
-    padding: 0 30px;
-    -webkit-transition: background 300ms ease-in-out;
-    -moz-transition: background 300ms ease-in-out;
-    -o-transition: background 300ms ease-in-out;
-    transition: background 300ms ease-in-out;
-    cursor: pointer;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased
-}
-
-.btn .icon-before {
-    margin-right: 8px !important
-}
-
-.btn .icon-after {
-    margin-left: 8px
-}
-
-.btn.is-active,.btn:hover {
-    background: #ff9c91
-}
-
-.btn.btn-submit {
-    outline: none;
-    border: 0;
-    -webkit-appearance: none;
-    margin-top: 0
-}
-
-.btn.btn-cta:before {
-    content: '';
-    background: url('../images/sprites/globalSprite-1x.png') no-repeat -14px -112px;
-    width: 6px;
-    height: 8px;
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom:1;*display: inline;
-    margin-right: 10px;
-    position: relative;
-    top: -1px
-}
-
-.touch-device .btn:hover {
-    background: #e35343
 }
 
 .tabbed-heading:before {
