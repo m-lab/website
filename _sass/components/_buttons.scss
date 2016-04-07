@@ -2,28 +2,28 @@
 
 // Sitewide Button Styles
 .btn {
-    color: #fff;
-    background: #e35343;
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom:1;*display: inline;
-    font-size: 16px;
-    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
-    position: relative;
-    padding: 15px 30px;
-    -webkit-transition: background 300ms ease-in-out;
-    -moz-transition: background 300ms ease-in-out;
-    -o-transition: background 300ms ease-in-out;
-    transition: background 300ms ease-in-out;
-    cursor: pointer;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
+  color: #fff;
+  background: #e35343;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom:1;*display: inline;
+  font-size: 16px;
+  font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+  position: relative;
+  padding: 15px 30px;
+  -webkit-transition: background 300ms ease-in-out;
+  -moz-transition: background 300ms ease-in-out;
+  -o-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
 
-    @media screen and (max-width: $screen-lg-min) {
-      padding: 10px 20px;
-    }
+  @media screen and (max-width: $screen-lg-min) {
+    padding: 10px 20px;
+  }
 
   .icon-before {
     margin-right: 8px !important;
