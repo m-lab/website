@@ -7,7 +7,7 @@ menu-item: true
 
 # Supporting or Contributing to M-Lab
 
-M-Lab welcomes the participation of individuals and researchers, as well as companies, organizations, and other institutions, that would like to help expand the platform and ensure its growth and success.
+M-Lab welcomes the participation of individuals and researchers, as well as companies, organizations or other institutions, who would like to help expand the platform and ensure its growth and success.
 
 ## Individuals
 
@@ -47,8 +47,8 @@ All the measurement data collected by M-Lab are available to the public without 
 
 ### Embedding an M-Lab client test in an application or service
 
-M-Lab's open source tests can be added to your website, mobile application, or other software, providing a service to your users and allowing M-Lab to reach more people and generate more data. Find out more information in our FAQ article: [How can I add an M-Lab test to my website, mobile app, or other software?]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software). You can also review our [data documentation]({{ site.baseurl }}/data/) or [contact us](mailto:support@measurementlab.net) to learn more.
+M-Lab's open source tests can be added to your website, mobile application, or other software, providing a service to your users and allowing M-Lab to reach more people and generate more data. Find out more information in our FAQ article: [How can I add an M-Lab test to my website, app or other software?]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software).
 
-### Provide direct financial support
+### Provide Direct Financial Support
 
-M-Lab welcomes the direct financial contributions of organizations that find our work beneficial. If your organization is interested in supporting the M-Lab platform, please [contact us](mailto:support@measurementlab.net), and a member of the M-Lab team will get back to you.
+M-Lab welcomes the direct financial contributions of companies or organizations that find our work beneficial. If your organization is interested in supporting the M-Lab platform, please [contact us](mailto:support@measurementlab.net) and a member of the M-Lab team will get back to you.
