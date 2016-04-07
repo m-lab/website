@@ -18,6 +18,7 @@
 
 // Page specific layouts
 @import 'layouts/homepage';
+@import 'layouts/blog';
 
 // Include componets
 @import 'components/accordions';
@@ -838,87 +839,6 @@ label,.label {
     border-bottom: 0;
     padding: 0;
     margin: 0
-}
-
-.blog-page {
-    padding-bottom: 93px
-}
-
-
-
-.blog-entry {
-    border-bottom: 1px solid #b7b7b7;
-    padding-bottom: 17px;
-    margin-bottom: 28px
-}
-
-.blog-entry .section-heading {
-    padding: 17px 0
-}
-
-.blog-entry p {
-    padding-bottom: 26px
-}
-
-.blog-entry p.center {
-    text-align: center;
-}
-
-.blog-entry .meta {
-    padding-top: 14px
-}
-
-.blog-entry .author {
-    font-family: "Proxima Nova Bold",Arial,Helvetica,sans-serif
-}
-
-.blog-entry img {
-    max-width: 100%;
-    width: auto;
-}
-
-.blog-entry img.inherit-width {
-    max-width: inherit;
-}
-
-.blog-entry img.pull-right {
-    float: right;
-}
-
-.blog-entry .visualisation-error {
-    padding: 0 10px;
-    position: relative
-}
-
-.blog-entry .visualisation-error .error-text {
-    padding-left: 200px
-}
-
-.blog-entry .visualisation-error .error-text::before {
-    float: none;
-    position: absolute;
-    left: 60px;
-    top: 45px
-}
-
-.blog-img {
-    display: block
-}
-
-.blogroll-navigation {
-    margin-top: 20px
-}
-
-.blogroll-navigation h2 {
-    font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif
-}
-
-.blogroll-navigation .filter-col-ctn {
-    margin-bottom: 35px
-}
-
-.blogroll-navigation .filter-col a {
-    text-transform: capitalize;
 }
 
 .filter-col {
