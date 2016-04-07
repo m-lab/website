@@ -11,8 +11,12 @@
     padding-top: 40px;
   }
 
-  > .grid-header {
-    margin-bottom: 30px;
+  .grid-header {
+    padding-left: 0px;
+  }
+
+  .grid-group {
+    padding-top: 20px;
   }
 
   .grid-link {
@@ -45,6 +49,9 @@
     overflow: hidden;
     line-height: 104px;
     text-align: center;
+    float: left;
+    display: block;
+    margin-right: 10px;
 
     &.framed {
       width: 102px;
@@ -69,7 +76,6 @@
   }
 
   .grid-info {
-    width: 190px;
 
     .grid-heading {
       font-size: 16px;
