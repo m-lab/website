@@ -16,6 +16,9 @@
 @import 'layouts/body';
 @import 'layouts/footer';
 
+// Page specific layouts
+@import 'layouts/homepage';
+
 // Include componets
 @import 'components/accordions';
 @import 'components/anchors';
@@ -25,6 +28,7 @@
 @import 'components/quick-links';
 @import 'components/grids';
 @import 'components/tables';
+@import 'components/video';
 
 div,span,applet,object,iframe,h1,.error-msg .error-text,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,hgroup,menu,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
@@ -52,17 +56,17 @@ article,aside,details,figcaption,figure,hgroup,menu,section,summary {
     display: block
 }
 
-.clearfix,.l-grid,.quick-links,.grid-section .grid-link,.info-segment,.info-segment-inner,.subpage-content {
+.clearfix,.l-grid,.quick-links,.grid-section .grid-link,.subpage-content {
     zoom:1}
 
-.clearfix:before,.l-grid:before,.quick-links:before,.grid-section .grid-link:before,.info-segment:before,.info-segment-inner:before,.subpage-content:before,.clearfix:after,.l-grid:after,.quick-links:after,.grid-section .grid-link:after,.info-segment:after,.info-segment-inner:after,.subpage-content:after {
+.clearfix:before,.l-grid:before,.quick-links:before,.grid-section .grid-link:before,.subpage-content:before,.clearfix:after,.l-grid:after,.quick-links:after,.grid-section .grid-link:after,.subpage-content:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden
 }
 
-.clearfix:after,.l-grid:after,.quick-links:after,.grid-section .grid-link:after,.info-segment:after,.info-segment-inner:after,.subpage-content:after {
+.clearfix:after,.l-grid:after,.quick-links:after,.grid-section .grid-link:after,.subpage-content:after {
     clear: both
 }
 
@@ -187,7 +191,7 @@ small {
     background: rgba(175,219,210,0.7)
 }
 
-.l-span1,.l-span2,.l-grid.l-2col>li,.l-grid.l-3col>li,.l-grid.l-multi-col>li,.blog-post {
+.l-span1,.l-span2,.l-grid.l-2col>li,.l-grid.l-3col>li,.l-grid.l-multi-col>li {
     margin-right: 30px;
     display: inline;
     float: left
@@ -757,147 +761,6 @@ label,.label {
     height: 31px
 }
 
-.player-ctn {
-    width: 630px;
-    height: 354px;
-    position: relative
-}
-
-.player-overlay {
-    background: url('../images/youtube-placeholder.jpg') no-repeat 0 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background-size: cover
-}
-
-.player-overlay .player-control {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto
-}
-
-.player-overlay:hover .player-control {
-    background: #ff9c91
-}
-
-.touch-device .player-overlay:hover .player-control {
-    background: #e35343
-}
-
-.info-heading {
-    line-height: 50px;
-    color: #4e4e4e;
-    height: 50px;
-    overflow: hidden
-}
-
-.initial-heading {
-    border-right: 1px solid #ededed;
-    -webkit-box-shadow: 1px 0 0 0 #dcdcdc;
-    -moz-box-shadow: 1px 0 0 0 #dcdcdc;
-    box-shadow: 1px 0 0 0 #dcdcdc
-}
-
-.info-subheading {
-    padding-top: 25px;
-    padding-bottom: 12px
-}
-
-.info-segment {
-    position: relative;
-    background: url(../images/textured-bg.jpg) repeat
-}
-
-.info-segment:before {
-    content: '';
-    width: 100%;
-    height: 50px;
-    background: url('../images/ie/info-segment.jpg') repeat-x 0 0;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5f5f5), color-stop(75%, #e6e6e6));
-    background-image: -webkit-linear-gradient(#f5f5f5,#e6e6e6 75%);
-    background-image: -moz-linear-gradient(#f5f5f5,#e6e6e6 75%);
-    background-image: -o-linear-gradient(#f5f5f5,#e6e6e6 75%);
-    background-image: linear-gradient(#f5f5f5,#e6e6e6 75%)
-}
-
-.info-segment p {
-    font-size: 13px;
-    line-height: 24px
-}
-
-.info-segment .info-link {
-    font-size: 13px;
-    line-height: 24px;
-    color: #454545;
-    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif
-}
-
-.is-inverse {
-    background: #4e4e4e;
-    padding-bottom: 29px
-}
-
-.is-inverse.info-segment {
-    color: #b0b0b0
-}
-
-.is-inverse.info-segment:before {
-    background: url('../images/ie/info-segment-inverse.jpg') repeat-x 0 0;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4e4e4e), color-stop(75%, #3a3a3a));
-    background-image: -webkit-linear-gradient(#4e4e4e,#3a3a3a 75%);
-    background-image: -moz-linear-gradient(#4e4e4e,#3a3a3a 75%);
-    background-image: -o-linear-gradient(#4e4e4e,#3a3a3a 75%);
-    background-image: linear-gradient(#4e4e4e,#3a3a3a 75%);
-    -webkit-box-shadow: inset 0px 0px 2px rgba(78,78,78,0.76),0 1px 0 #4e4e4e;
-    -moz-box-shadow: inset 0px 0px 2px rgba(78,78,78,0.76),0 1px 0 #4e4e4e;
-    box-shadow: inset 0px 0px 2px rgba(78,78,78,0.76),0 1px 0 #4e4e4e
-}
-
-.is-inverse.info-segment .info-segment-inner {
-    padding-bottom: 42px
-}
-
-.is-inverse.info-segment .info-heading,.is-inverse.info-segment .info-subheading,.is-inverse.info-segment .info-link {
-    color: #fff
-}
-
-.is-inverse.info-segment .info-link {
-    position: absolute;
-    bottom: 13px
-}
-
-.is-inverse.info-segment .initial-heading {
-    border-right: 1px solid #393939;
-    -webkit-box-shadow: 1px 0 0 0 #585858;
-    -moz-box-shadow: 1px 0 0 0 #585858;
-    box-shadow: 1px 0 0 0 #585858
-}
-
-.info-segment-inner {
-    margin-top: -50px;
-    padding-bottom: 50px
-}
-
-.segment-description {
-    margin-top: -6px
-}
-
-.segment-description img {
-    max-width: 300px;
-    height: auto
-}
-
-.data-entry .info-subheading img {
-    display: block;
-    margin-bottom: 16px
-}
-
 .error-msg {
     background: #bfbfbf;
     width: 100%;
@@ -981,14 +844,7 @@ label,.label {
     padding-bottom: 93px
 }
 
-.blog-post {
-    width: 300px
-}
 
-.blog-post:last-child {
-    float: right;
-    margin-right: 0
-}
 
 .blog-entry {
     border-bottom: 1px solid #b7b7b7;
