@@ -62,7 +62,7 @@ Every performance test has two parts:
 
 * *client:* This is the software that runs on the user’s machine and shows the user their speed results.
 
-* *server**:** *This is the computer on the Internet to which the client connects to complete the test.
+* *server*: This is the computer on the Internet to which the client connects to complete the test.
 
 A test generates data between the client and the server, and measures performance between these two points. *The location of these two points is important in terms of understanding the results of a given test.*
 
@@ -72,7 +72,7 @@ If the server is located within your Internet Service Provider’s (ISP’s) own
 
 M-Lab's measurements are always conducted off-net. This way, M-Lab is able to measure performance to locations where popular Internet content is often hosted, and so test users get a real sense of the performance they could expect when using the Internet.
 
-**2. Differences in testing methods **
+**2. Differences in testing methods**
 
 Different Internet performance tests measure different things in different ways. M-Lab's NDT test tries to transfer as much data as it can in ten seconds (both up and down), using a single connection to an M-Lab server. Other popular tests try to transfer as much data as possible at once across multiple connections to their server. Neither method is "right" or "wrong," but using a single stream is more likely to help diagnose problems in the network than multiple streams would. [Learn more about M-Lab's NDT methodology](https://github.com/ndt-project/ndt/wiki/NDTTestMethodology).
 
@@ -130,7 +130,7 @@ There also was no public resource that could provide combined performance data t
 ## How does M-Lab choose the tests it hosts?
 {:.no_toc}
 
-The Internet measurement tests running on the M-Lab platform are built and maintained by researchers interested in understanding the Internet and how people experience it. Interested researchers can build their own open source tests and apply to host them with M-Lab. Applications for new tests are reviewed by our operations team and our Steering Committee, and if approved, they are then installed on M-Lab’s global Internet measurement infrastructure. By making researchers’ tests available in this way and promoting their use by consumers, M-Lab serves both consumers and researchers, as well as regulators and others, by providing data collected over a period of time that is openly available for analysis. For more information, please see our FAQ: _Can I use M-Lab’s platform to host my own measurement experiment?_
+The Internet measurement tests running on the M-Lab platform are built and maintained by researchers interested in understanding the Internet and how people experience it. Interested researchers can build their own open source tests and apply to host them with M-Lab. Applications for new tests are reviewed by our operations team and our Steering Committee, and if approved, they are then installed on M-Lab’s global Internet measurement infrastructure. By making researchers’ tests available in this way and promoting their use by consumers, M-Lab serves both consumers and researchers, as well as regulators and others, by providing data collected over a period of time that is openly available for analysis. For more information, please see our FAQ: [Can I use M-Lab’s platform to host my own measurement experiment?]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software)
 
 ## How can I contact M-Lab?
 {:.no_toc}
