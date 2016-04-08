@@ -17,10 +17,10 @@ Please [submit this application](https://docs.google.com/a/opentechinstitute.org
 
 ## Hosting a Site
 
-Please [submit this application](https://docs.google.com/a/measurementlab.net/spreadsheet/viewform?formkey=dHNMZ2p0OU5TckxIUFg0RVNhSk5teEE6MQ#gid=0) if you are interested in hosting servers for an M-Lab site. Groups hosting an M-Lab site will also find the document [how to deploy a new M-Lab site]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf) useful.
+Please [submit this application](https://docs.google.com/a/measurementlab.net/spreadsheet/viewform?formkey=dHNMZ2p0OU5TckxIUFg0RVNhSk5teEE6MQ#gid=0) if you are interested in hosting servers for an M-Lab site. Groups hosting an M-Lab site will also find the document [how to deploy a new M-Lab site]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf) useful.
 
 ## Analyze and visualize the M-Lab data
 
-All the measurement data collected by M-Lab are available to the public without restriction under a [No Rights Reserved Creative Commons Zero Waiver.](http://creativecommons.org/about/cc0)
+All the measurement data collected by M-Lab are available to the public without restriction under a [No Rights Reserved Creative Commons Zero Waiver.](http://creativecommons.org/about/cc0)
 
 You can find all the information about [how to access the M-Lab data](https://github.com/m-lab/mlab-wikis/blob/master/HowToAccessMLabData.md) on the M-Lab wiki.
