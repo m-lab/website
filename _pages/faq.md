@@ -44,12 +44,12 @@ Specific information on what type of data is collected by each M-Lab test and ho
 
 For most tests, M-Lab collects raw test data and stores them in [Google Cloud Storage](http://www.measurementlab.net/data/gcs/).
 
-For some tests, such as the [Broadband Internet Service Benchmark (BISmark)](https://measurement.lab.net/tools/bismark/), the test maintainers collect their test’s data and publish it on their own site.
+For some tests, such as the [Broadband Internet Service Benchmark (BISmark)]({{ site.baseurl }}/tools/bismark/), the test maintainers collect their test’s data and publish it on their own site.
 
 ## Where can I explore M-Lab data?
 {:.no_toc}
 
-You can explore M-Lab’s NDT speed test data in Google’s [Public Data Explorer](http://www.google.com/publicdata/explore?ds=e9krd11m38onf_). All M-Lab data  are searchable [using BigQuery](http://www.measurementlab.net/data/bq/quickstart/) or can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
+You can explore M-Lab’s NDT speed test data in Google’s [Public Data Explorer](http://www.google.com/publicdata/explore?ds=e9krd11m38onf_). All M-Lab data  are searchable [using BigQuery]({{ site.baseurl }}/data/bq/quickstart/) or can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
 
 ## Why are my M-Lab results different from other speed tests?
 {:.no_toc}
@@ -102,7 +102,7 @@ When reporting a bug, please provide (if at all possible) the following specific
 * The name of the test that is not working
 * Any error messages you have received
 
-M-Lab support will usually reply within two business days. You can also ask other M-Lab users about the issue you are reporting in the [M-Lab-Discuss group](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#/h).
+M-Lab support will usually reply within two business days. You can also ask other M-Lab users about the issue you are reporting in the [M-Lab-Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
 
 # About M-Lab
 
@@ -114,11 +114,11 @@ M-Lab aims to advance Internet research by empowering consumers with useful info
 ## Who are M-Lab's supporting partners?
 {:.no_toc}
 
-M-Lab is supported by academic institutions, private foundations, private companies, and public interest organizations. M-Lab’s partners have committed resources to M-Lab in the form of infrastructure, funding, data storage/analysis, staffing, and other assistance dedicated to furthering M-Lab's mission. For a list of M-Lab’s partners, please see our [list of supporters](http://www.measurementlab.net/who).
+M-Lab is supported by academic institutions, private foundations, private companies, and public interest organizations. M-Lab’s partners have committed resources to M-Lab in the form of infrastructure, funding, data storage/analysis, staffing, and other assistance dedicated to furthering M-Lab's mission. For a list of M-Lab’s partners, please see our [list of supporters]({{ site.baseurl }}/who).
 
-M-Lab was [founded](http://www.measurementlab.net/who) by New America’s Open Technology Institute (OTI), the PlanetLab Consortium, Google Open Source Research, and a large body of academic researchers. The founding researchers collectively make up the steering committee that leads development of M-Lab's organizational policies and provides oversight of the platform. M-Lab is a community-based effort. We currently receive resources and financial assistance from our partners and welcome others who would like to support the platform's growth.
+M-Lab was [founded]({{ site.baseurl }}/who) by New America’s Open Technology Institute (OTI), the PlanetLab Consortium, Google Open Source Research, and a large body of academic researchers. The founding researchers collectively make up the steering committee that leads development of M-Lab's organizational policies and provides oversight of the platform. M-Lab is a community-based effort. We currently receive resources and financial assistance from our partners and welcome others who would like to support the platform's growth.
 
-Interested in supporting M-Lab? Please see the FAQ section, Supporting or Contributing to M-Lab, and [contact us](http://measurementlab.net/contact) at [support@measurementlab.net](mailto:support@measurementlab.net) for more information.
+Interested in supporting M-Lab? Please see the FAQ section, Supporting or Contributing to M-Lab, and [contact us]({{ site.baseurl }}/contact) at [support@measurementlab.net](mailto:support@measurementlab.net) for more information.
 
 ## What is the history of M-Lab?
 {:.no_toc}
