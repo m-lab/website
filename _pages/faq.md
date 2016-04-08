@@ -42,7 +42,7 @@ Specific information on what type of data is collected by each M-Lab test and ho
 ## Who is collecting data? Where is it stored?
 {:.no_toc}
 
-For most tests, M-Lab collects raw test data and stores them in [Google Cloud Storage](http://www.measurementlab.net/data/gcs/).
+For most tests, M-Lab collects raw test data and stores them in [Google Cloud Storage]({{ site.baseurl }}/data/gcs/).
 
 For some tests, such as the [Broadband Internet Service Benchmark (BISmark)]({{ site.baseurl }}/tools/bismark/), the test maintainers collect their test’s data and publish it on their own site.
 
