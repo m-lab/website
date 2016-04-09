@@ -1,0 +1,55 @@
+
+.error-msg {
+    background: #bfbfbf;
+    width: 100%;
+    display: table;
+    margin: 15px 0
+}
+
+.error-msg .error-text {
+    color: #454545
+}
+
+.error-msg .error-text {
+    font-size: 28px;
+    line-height: 32px
+}
+
+.error-msg .icon {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom:1;*display: inline
+}
+
+.error-msg .error-text {
+    border-bottom: none;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom:1;*display: inline;
+    color: #fff;
+    display: table-cell
+}
+
+.visualisation-error {
+    height: 165px;
+    padding: 0 120px 0 70px
+}
+
+.visualisation-error .error-text::before {
+    content: '';
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -273px -8px;
+    width: 100px;
+    height: 58px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom:1;*display: inline;
+    float: left;
+    padding-right: 90px
+}
+
