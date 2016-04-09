@@ -1,9 +1,3 @@
 // Table component
 
 
-// Customized bigquery table
-.bigquery.schema-page table {
-  @media screen and (max-width: $screen-md-min){
-    word-break: break-all;
-  }
-}
