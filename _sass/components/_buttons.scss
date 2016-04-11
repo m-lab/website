@@ -63,6 +63,7 @@
 
 // Social Media Buttons
 .btn-social {
+    @include link_accessibility();
     background: #b0b0b0;
     width: 37px;
     height: 37px;

@@ -15,3 +15,34 @@
     min-width: $min-width;
   }
 }
+
+@mixin arrow_link() {
+  content: '';
+  background: url('../images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
+  width: 9px;
+  height: 12px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  margin-left: 10px;
+  position: relative;
+  top: -1px;
+}
+
+@mixin transforms($degree: 0deg) {
+  -webkit-transform: rotate($degree);
+  -moz-transform: rotate($degree);
+  -ms-transform: rotate($degree);
+  -o-transform: rotate($degree);
+  transform: rotate($degree);
+}
+
+@mixin link_accessibility() {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}

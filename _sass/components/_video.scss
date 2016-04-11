@@ -39,4 +39,22 @@
       background: #ff9c91;
     }
   }
+
+  .btn-play {
+    background: #e35343;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: background 300ms ease-in-out;
+    -moz-transition: background 300ms ease-in-out;
+    -o-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      background: #ff9c91;
+    }
+  }
+
 }

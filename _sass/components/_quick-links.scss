@@ -2,6 +2,17 @@
 
 .quick-links {
 
+  &:before,&:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden
+  }
+
+  &:after {
+    clear: both
+  }
+
   &.l-span2 {
     width: 100%;
     padding: 38px 0 0px;
