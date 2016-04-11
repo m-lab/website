@@ -81,6 +81,8 @@ td {
 a {
   text-decoration: none;
   color: #e35343;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 
   &:hover {
     text-decoration: none;
