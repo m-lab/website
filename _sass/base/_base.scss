@@ -110,6 +110,11 @@ small {
     display: block
 }
 
+img {
+  max-width: 100%; 
+  display:block; 
+}
+
 ::selection {
     background: rgba(175,219,210,0.7)
 }
