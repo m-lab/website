@@ -1,0 +1,45 @@
+// Specialized publications layout elements
+
+.publications-page {
+
+  p {
+    padding-bottom: 38px;
+
+    &.intro-blurb {
+      padding-bottom: 25px;
+    }
+  }
+
+  .paper-author {
+    font-family: "Proxima Nova Bold",Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    color: #767676;
+    margin: 15px 0 10px;
+    padding: 0;
+  }
+
+  .paper-download {
+    display: block;
+    margin-top: 16px;
+  }
+
+  .paper-description {
+    padding-bottom: 0;
+  }
+
+  #presentations {
+    padding-top: 38px;
+  }
+}    
+
+.paper {
+  margin-bottom: 13px
+}
+
+.paper .paper-title {
+  font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+  color: #767676
+}
+
+
+

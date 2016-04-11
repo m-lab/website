@@ -3,16 +3,18 @@
 .carousel-section {
   width: 100%;
   background: #81addd;
-  height: 400px;
+  min-height: 400px;
   overflow: hidden;
   position: relative;
 
+  @media screen and (max-width: $screen-lg-min) {
+    min-height: 200px;
+  }
+
   .carousel-ctn {
-    width: 1000px;
     margin: auto;
     position: relative;
     padding: 0 20px;
-    height: 400px;
     display: none;
 
     .slides>li {
@@ -23,6 +25,14 @@
   .carousel-caption {
     padding: 0px;
     position: initial;
+
+    @media screen and (max-width: $screen-md-min) {
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      display: block;
+    }
 
     p {
       text-align: left;
@@ -36,8 +46,21 @@
       vertical-align: baseline;
       font-size: 28px;
       line-height: 32px;
-      margin: 0px 0px 22px 0px;
+      margin: 0px 0px 20px 0px;
       text-shadow: none;
+
+      @media screen and (max-width: $screen-lg-min) {
+        font-size: 24px;
+        margin: 0px 0px 10px 0px;
+      }
+      @media screen and (max-width: $screen-md-min) {
+        font-size: 20px;
+        margin: 0px 0px 10px 0px;
+      }
+      @media screen and (max-width: $screen-sm-min) {
+        font-size: 24px;
+        margin: 0px 0px 10px 0px;
+      }
     }
   }
 
@@ -59,8 +82,20 @@
       position: absolute;
       top: 75px;
       left: 0;
-      width: 350px;
+      width: 40%;
+
+      @media screen and (max-width: $screen-md-min) {
+        top: 30px;
+      }
   
+      @media screen and (max-width: $screen-sm-min) {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        padding: 20px 0px;
+      }
+
     .btn {
       white-space: nowrap;
     }
@@ -69,7 +104,11 @@
   .carousel-heading {
       font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
       color: #fff;
-      padding-bottom: 8px;
+      padding-bottom: 10px;
+
+      @media screen and (max-width: $screen-md-min) {
+        font-size: 14px;
+      }
   }
 
   .flex-control-nav {
@@ -78,6 +117,13 @@
       left: 20px;
       margin-left: 0;
       padding-bottom: 0;
+
+      @media screen and (max-width: $screen-sm-min) {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        padding-bottom: 20px;
+      }
 
     &>li {
         display: -moz-inline-stack;
@@ -92,7 +138,7 @@
       }
 
       a {
-        display: block;
+        @include link_accessibility();
         width: 10px;
         height: 10px;
         background: #fff;
@@ -111,4 +157,14 @@
     }
   }
 
+}
+
+.fluid-img {
+  display: block;
+  height: auto;
+  width: 100%;
+
+  @media screen and (max-width: $screen-sm-min) {
+    display: none;
+  }
 }

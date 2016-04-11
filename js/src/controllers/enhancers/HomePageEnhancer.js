@@ -72,8 +72,8 @@ function(
 
       function createVideo() {
         player = new YT.Player(video, {
-          width: '630px',
-          height: '354px',
+          width: '100%',
+          height: '100%',
           videoId: YTID,
           title: '',
           playerVars: {

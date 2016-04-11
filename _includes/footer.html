@@ -13,46 +13,52 @@
 <footer class="footer-section">
   <span class="footer-shadow"></span>
 
-  <!-- Footer - Social Media -->
-  <div class="footer-ctn">
-    <div class="callout-col l-span1">
-      <h2>{{ footer.subscribe.title }}</h2>
-      <nav>
-        <ul class="callout-ctn social-ctn">
+  <div class="container">
+    <div class="row">
 
-			  {% for item in footer.subscribe.items %}
-          <li><a href="{% if item.link | slice: 0 = "/" %}{{ item.link | prepend: site.baseurl }}{% else %}{{ item.link }}{% endif %}" class="btn-social {{ item.link-class }}" target="_blank">{{ item.link-title }}</a>
-          </li>
-			  {% endfor %}
+        <!-- Footer - Social Media -->
+        <div class="col-xs-7 col-sm-5 col-md-4">
+          <h2>{{ footer.subscribe.title }}</h2>
+          <nav>
+            <ul class="callout-ctn social-ctn">
 
-        </ul>
-      </nav>
+    			  {% for item in footer.subscribe.items %}
+              <li><a href="{% if item.link | slice: 0 = "/" %}{{ item.link | prepend: site.baseurl }}{% else %}{{ item.link }}{% endif %}" class="btn-social {{ item.link-class }}" target="_blank">{{ item.link-title }}</a>
+              </li>
+    			  {% endfor %}
+
+            </ul>
+          </nav>
+        </div>
+      <!-- Footer - Navigational Links -->
+        <div class="col-sm-6 col-md-6 pull-left">
+          <ul class="footer-links">
+    			  
+    			  {% for item in footer.other-links.column-one.items %}
+              <li><a href="{{ item.link | prepend: site.baseurl }}">{{ item.link-title }}</a>
+              </li>
+    			  {% endfor %}
+
+          </ul>
+          <ul class="footer-links">
+            
+    			  {% for item in footer.other-links.column-two.items %}
+              <li><a href="{{ item.link | prepend: site.baseurl }}">{{ item.link-title }}</a>
+              </li>
+    			  {% endfor %}
+          
+          </ul>
+        </div>
+
     </div>
+    <div class="row">
 
-  <!-- Footer - Navigational Links -->
-    <div class="footer-nav-col l-span1">
-      <ul class="footer-links">
-			  
-			  {% for item in footer.other-links.column-one.items %}
-          <li><a href="{{ item.link | prepend: site.baseurl }}">{{ item.link-title }}</a>
-          </li>
-			  {% endfor %}
+      <!-- Footer - Privacy Policy -->
+        <div class="privacy-policy col-xs-9 col-sm-11">
+          <a href="{{ footer.privacy.link | prepend: site.baseurl }}" class="policy-heading" target="_blank">{{ footer.privacy.title }}</a>
+          {{ footer.privacy.blurb }}
+        </div>
 
-      </ul>
-      <ul class="footer-links">
-        
-			  {% for item in footer.other-links.column-two.items %}
-          <li><a href="{{ item.link | prepend: site.baseurl }}">{{ item.link-title }}</a>
-          </li>
-			  {% endfor %}
-      
-      </ul>
-    </div>
-
-  <!-- Footer - Privacy Policy -->
-    <div class="privacy-policy">
-      <small><a href="{{ footer.privacy.link | prepend: site.baseurl }}" class="policy-heading" target="_blank">{{ footer.privacy.title }}</a></small>
-      <small>{{ footer.privacy.blurb }}</small>
     </div>
   </div>
 </footer>

@@ -25,36 +25,41 @@
 
 {% if page.grid-section %}
   {% for grid in page.grid-section %}
+  <div class="container">
+    <section class="info-section grid-section first-child {{ grid.group-heading | downcase | replace: " ", "-" }}">
+    <div class="row">
+      <h2 class="grid-header col-xs-12" id="{{ grid.group-heading | downcase | replace: " ", "-" }}">{{ grid.group-heading }}</h2>
+    </div>
+    <div class="row">
+      <ul class="{{ grid.group-list-class }}">
 
-  <section class="info-section grid-section first-child {{ grid.group-heading | downcase | replace: " ", "-" }}">
-    <h2 class="grid-header" id="{{ grid.group-heading | downcase | replace: " ", "-" }}">{{ grid.group-heading }}</h2>
-    <ul class="{{ grid.group-list-class }}">
+        {% for item in grid.grid-items %}
+        <li{% if grid.group-list-class == "l-grid l-3col" %} class="grid-group col-xs-12 col-sm-6 col-md-4 col-lg-3"{% endif %}>
 
-      {% for item in grid.grid-items %}
-      <li{% if grid.group-list-class == "l-grid l-3col" %} class="grid-group"{% endif %}>
-
-        {% if item.link %}
-        <a href="{% if item.link | slice: 0 = "/" %}{{ item.link | prepend: site.baseurl }}{% else %}{{ item.link }}{% endif %}" class="grid-link is-plain">
-        {% endif %}
-
-          {% if grid.group-list-class == "l-grid l-3col" %}
-          <div class="grid-img{{ grid.grid-img-class }}"><img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.heading }}" class=""></div>
-          <div class="grid-info">
-            <h3 class="grid-heading">{{ item.heading }}</h3>
-            <div class="grid-description"><p>{{ item.desc }}</p></div>
-          </div>
-          {% else %}
-          <img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.alt }}" class="grid-link is-plain">
+          {% if item.link %}
+          <a href="{% if item.link | slice: 0 = "/" %}{{ item.link | prepend: site.baseurl }}{% else %}{{ item.link }}{% endif %}" class="grid-link is-plain">
           {% endif %}
-        
-        {% if item.link %}
-        </a>
-        {% endif %}
-      </li>
-      {% endfor %}
 
-    </ul>
-  </section>
+            {% if grid.group-list-class == "l-grid l-3col" %}
+            <div class="grid-img{{ grid.grid-img-class }}"><img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.heading }}" class=""></div>
+            <div class="grid-info">
+              <h3 class="grid-heading">{{ item.heading }}</h3>
+              <div class="grid-description"><p>{{ item.desc }}</p></div>
+            </div>
+            {% else %}
+            <img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.alt }}" class="grid-link is-plain">
+            {% endif %}
+          
+          {% if item.link %}
+          </a>
+          {% endif %}
+        </li>
+        {% endfor %}
 
+      </ul>
+    </div>
+    </section>
+  </div>
   {% endfor %}
+
 {% endif %}

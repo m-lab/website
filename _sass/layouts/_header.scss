@@ -1,56 +1,250 @@
 // Contains header layout styles
 
-.main-nav, .sub-nav {
-  width: 1000px;
-  margin: auto;
-  padding: 0 20px;
-  height: 50px;
-  overflow: hidden;
+header.header-section {
+  zoom: 1;
+  margin: 30px 0px;
+    
+  @media screen and (max-width: $screen-sm-min) {
+    margin: 30px 0px 0px;
+  }    
 
-  >li {
+  .navbar-header .navbar-toggle {
+    background-color: #9bd2c7;
+    margin: 0px 15px 10px;
+    
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+
+  #assist-cta, #learn-cta {
+    @media screen and (max-width: $screen-sm-min) {
+      display:none;
+    }    
+  }
+
+  .header-cta {
+
+    span {
+      padding-left: 15px;
+    }
+
+    div.assist-cta, div.learn-cta {
+      background: url('../images/sprites/globalSprite-1x.png') no-repeat;
+      float: right;
+      position: relative;
+      top: 5px;
+    }
+
+    div.assist-cta {
+        background-position: -11px -62px;
+        width: 23px;
+        height: 25px
+    }
+
+    div.learn-cta {
+        background-position: -102px -62px;
+        width: 27px;
+        height: 25px
+    }
+
+    h2, h3 {
+      font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
+      line-height: 18px;    
+    }
+
+    h2 {
+      color: #767676;
+      margin-top: 1px;    
+    }
+
+    h3 {
+      color: #454545;
+      line-height: 17px;
+    }
+  }
+}
+
+.main-nav-section {
     background: #9bd2c7;
-    border-right: 1px solid #79a199;
-    -webkit-box-shadow: 1px 0 0 #a1d5ca;
-    -moz-box-shadow: 1px 0 0 #a1d5ca;
-    box-shadow: 1px 0 0 #a1d5ca;
-    -webkit-transition: background-color 300ms ease-in-out;
-    -moz-transition: background-color 300ms ease-in-out;
-    -o-transition: background-color 300ms ease-in-out;
-    transition: background-color 300ms ease-in-out;
+    border-top: 5px solid #eee;
+    z-index: 10;
 
-    &:hover, &.is-active {
-      background: #afdbd2;
-    }
-  }
+  &.no-border {
+    border: 0px;
+    background: #454545;
+    overflow: hidden;
+    z-index: 10;
 
-  li {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom:1;*display: inline;
-    margin-right: -4px;
-    -webkit-transition: background-color 300ms ease-in-out;
-    -moz-transition: background-color 300ms ease-in-out;
-    -o-transition: background-color 300ms ease-in-out;
-    transition: background-color 300ms ease-in-out;
-
-    a {
-      line-height: 52px;
-      color: #fff;
-      padding: 0 20px;
-      display: block;
-      white-space: nowrap;
-      overflow-x: visible;
+    .sub-nav>li {
+      background: #454545;
+      border-right: 1px solid #353535;
+      -webkit-box-shadow: 1px 0 0 #505050;
+      -moz-box-shadow: 1px 0 0 #505050;
+      box-shadow: 1px 0 0 #505050;
     }
 
-    ul {
-      width: 960px;
-      margin: auto   	
+    .sub-nav>li:hover, .sub-nav>li.is-active {
+      background: #585858;
     }
+
+    .sub-nav>li:first-child {
+      border-left: 1px solid #353535;
+    }
+
   }
 
-  li:first-child {
-    border-left: 1px solid #79a199
+  .nav-ctn {
+    background: #9bd2c7;
+    z-index: 10;
+    padding: 0px;
   }
+
+  .sub-nav-ctn {
+    @media screen and (max-width: $screen-sm-min) {
+      display: none;
+    }    
+  }
+
+  .main-nav, .sub-nav {
+    margin: auto;
+    height: 50px;
+    overflow: hidden;
+
+    @media screen and (max-width: $screen-sm-min) {
+      height: auto;
+      overflow: visible;
+      padding-bottom: 0px;
+    } 
+
+    >li {
+      background: #9bd2c7;
+      border-right: 1px solid #79a199;
+      -webkit-box-shadow: 1px 0 0 #a1d5ca;
+      -moz-box-shadow: 1px 0 0 #a1d5ca;
+      box-shadow: 1px 0 0 #a1d5ca;
+      -webkit-transition: background-color 300ms ease-in-out;
+      -moz-transition: background-color 300ms ease-in-out;
+      -o-transition: background-color 300ms ease-in-out;
+      transition: background-color 300ms ease-in-out;
+
+      &:hover, &.is-active {
+        background: #afdbd2;
+      }
+
+      @media screen and (max-width: $screen-sm-min) {
+        border-right: 0px;
+      } 
+    }
+
+    li {
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom:1;*display: inline;
+      margin: 0px -4px 0px 0px;
+      -webkit-transition: background-color 300ms ease-in-out;
+      -moz-transition: background-color 300ms ease-in-out;
+      -o-transition: background-color 300ms ease-in-out;
+      transition: background-color 300ms ease-in-out;
+
+      @media screen and (max-width: $screen-sm-min) {
+        display: block;
+        margin: 0px;
+      }   
+
+      a {
+        line-height: 52px;
+        color: #fff;
+        padding: 0 15px;
+        display: block;
+        white-space: nowrap;
+        overflow-x: visible;
+
+        @media screen and (max-width: $screen-md-min) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: $screen-sm-min) {
+          font-size: 18px;
+          padding: 0px;
+          margin: 0 15px;
+          line-height: 40px;
+          border-bottom: 1px solid #79a199;
+        } 
+      }
+
+      @media screen and (max-width: $screen-sm-min) {
+        &:last-child a {
+          border: 0px;
+        }
+      }
+
+      .glyphicon.glyphicon-triangle-bottom, .glyphicon.glyphicon-triangle-top {
+        display: none;
+
+        @media screen and (max-width: $screen-sm-min) {
+          border-left: 0px;
+          font-size: 14px;
+          top: 2px;
+          color: #79a199;
+          display: inline-block;
+        } 
+      }
+
+      ul {
+        margin: 0px;
+        padding: 0px;
+        background-color: #454545;
+      }
+    }
+
+    li:first-child {
+      border-left: 1px solid #79a199;
+
+      @media screen and (max-width: $screen-sm-min) {
+        border-left: 0px;
+      } 
+    }
+
+    .mobile-sub-nav{
+
+      @media screen and (min-width: $screen-sm-min) {
+          display: none;
+
+        &.is-active {
+          position: relative;
+        }
+      }
+
+      >li {
+
+        &:hover, &.is-active {
+          background: #585858;
+        }
+      }
+
+      li {
+
+        a {
+          padding: 0 15px;
+          border-bottom: 1px solid #353535;
+        }
+      }
+    }
+  }
+}
+
+.preloader {
+  background: #fff url('../images/preloader.gif') no-repeat center center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  display: none;
 }

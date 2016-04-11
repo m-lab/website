@@ -3,6 +3,44 @@
 //import mixins
 @import 'helpers/_mixins';
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+  height: 100%;
+  background: #fff;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #767676;
+  font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+h1,h2,h3,h4 {
+    color: #454545
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 32px
+}
+
+h2 {
+    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px
+}
+
 ul {
   @include list_bullets();
 }
@@ -11,6 +49,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   margin: 0px 0px 30px 0px;
+
+  @media screen and (max-width: $screen-sm-min){
+    margin: 0px;
+  }
 }
 
 caption,th,td {
@@ -18,6 +60,7 @@ caption,th,td {
   vertical-align: middle;
   word-wrap: break-word;
   max-width: 460px;
+  min-width: 75px;
 }
 
 tr {
@@ -38,6 +81,8 @@ td {
 a {
   text-decoration: none;
   color: #e35343;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 
   &:hover {
     text-decoration: none;
@@ -48,4 +93,36 @@ a {
 hr {
   margin: 10px 0px;
   border: 1px solid #b7b7b7;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+b,strong {
+    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif
+}
+
+small {
+    font-size: 13px;
+    line-height: 13px;
+    display: block
+}
+
+::selection {
+    background: rgba(175,219,210,0.7)
+}
+
+::-moz-selection {
+    background: rgba(175,219,210,0.7)
+}
+
+div,span,applet,object,iframe,h1,.error-msg .error-text,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,hgroup,menu,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline
 }

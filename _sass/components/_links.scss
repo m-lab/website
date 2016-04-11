@@ -1,5 +1,19 @@
 // Different Link Styles
 
+// Main Header Logo
+.main-logo {
+    display: table-cell;
+    vertical-align: middle;
+
+  a {
+    @include link_accessibility();
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -7px -7px;
+    width: 100px;
+    height: 31px;
+  }
+}
+
+
 .breadcrumbs .breadcrumb {
     color: #454545;
     background-color: #fff;
@@ -46,4 +60,82 @@
   
   }
 
+}
+
+//Read More links
+.info-link {
+    color: #454545;
+    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+    display: block;
+
+  &:before {
+    content: '';
+    background: url('../images/sprites/globalSprite-1x.png') no-repeat -14px -131px;
+    width: 6px;
+    height: 8px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom:1;*display: inline;
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+  }
+
+  &:hover:before {
+    background-position: -14px -150px;
+  }
+}
+
+//Download links
+.download-link {
+  color: #454545;
+  font-size: 16px;
+  font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+
+  &:after {
+    @include arrow_link();
+  }
+
+  &:hover:after {
+    background-position: -42px -149px;
+  }
+}
+
+.runlink:after {
+  @include arrow_link();
+}
+
+//Siderail links
+.filter-col a.is-active {
+  color: #454545;
+  cursor: default;
+}
+
+.filter-col .count {
+  color: #454545;
+}
+
+.subpage-content a:not(.btn):not(.is-plain),.filter-col a {
+    -webkit-transition: color 300ms ease-in;
+    -moz-transition: color 300ms ease-in;
+    -o-transition: color 300ms ease-in;
+    transition: color 300ms ease-in
+}
+
+.subpage-content a:not(.is-active):hover:not(.btn):not(.is-plain),.filter-col a:not(.is-active):hover {
+    color: #ff9c91
+}
+
+.sub-heading-link:hover .icon-triangle,
+.pagination>li a.dir:hover .icon-triangle,
+.quick-links a:hover .icon-triangle {
+    background-position: -42px -149px
+}
+
+.sub-heading-link:hover .icon-triangle.icon-smaller,
+.pagination>li a.dir:hover .icon-triangle.icon-smaller,
+.quick-links a:hover .icon-triangle.icon-smaller {
+    background-position: -14px -150px
 }
