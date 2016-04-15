@@ -24,7 +24,7 @@ NOTE: if the test does not run or takes longer than 60 seconds, please
 read the [FAQ entry](http://www.measurementlab.net/faq) for "troubleshooting
 the NDT speed test".
 
-<p><iframe src="{{ site.baseurl }}/p/ndt-ws.html" width="750" height="500" align="middle"></iframe></p>
+<div class="embed-responsive embed-responsive-4by3 ndt-iframe"><iframe src="{{ site.baseurl }}/p/ndt-ws.html" align="middle" class="embed-responsive-item"></iframe></div>
 
 **Data** collected by NDT is available...
 
@@ -42,3 +42,5 @@ the NDT speed test".
 
 NOTE: if the test does not run or takes longer than 60 seconds,\
 please read the FAQ entry for "troubleshooting the NDT speed test".
+
+
