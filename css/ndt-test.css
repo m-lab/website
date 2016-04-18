@@ -7,25 +7,28 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  overflow: hidden;
-  height: 2000px;
 }
 
 a img {
   border: 0;
 }
 
+.clearfix {
+  clear:both;
+}
+
 #widget {
   position: relative;
-  width: 720px;
-  height: 480px;
+  width: 100%;
   overflow: hidden;
-  background-color: black;
   color: white;
   text-transform: uppercase;
   font-size: 36px;
   font-family: "League Gothic", Impact, "Arial Narrow", sans-serif;
   margin-bottom: 15px;
+  text-align: center;
+  margin: 0px auto;
+  max-width: 750px;
 }
 
 .header {
@@ -43,18 +46,14 @@ a img {
 }
 
 #start-button {
-  padding-top: 180px;
+  padding-top: 180px; 
 }
 
 .page {
-  width: 640px;
-  height: 420px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 40px;
+  position: relative;
   background-color: #fff;
   color: #000;
+  margin: 20px;
 }
 
 #welcome {
@@ -135,10 +134,7 @@ h3 {
 
 .page .status,
 .page .controls {
-  width: 640px;
-  position: absolute;
-  left: 40px;
-  bottom: 40px;
+  position: relative;
   text-align: center;
 }
 
@@ -172,27 +168,20 @@ body.initializing .page .status {
 }
 
 #test .locations {
-  width: 640px;
-  position: absolute;
-  left: 40px;
-  top: 400px;
   font-size: 32px;
   line-height: 32px;
 }
 
 #test .location {
-  position: absolute;
   top: 0;
 }
 
 #test .location.local {
-  right: 0;
   text-align: right;
 }
 
 #test .location.remote {
-  left: 0;
-  text-align: left;
+  text-align: center;
 }
 
 #test .location .address {
@@ -201,26 +190,13 @@ body.initializing .page .status {
   font: bold 13px/13px verdana, helvetica, arial, sans-serif;
 }
 
-#uploadGauge {
-  position: absolute;
-  left: 40px;
-  top: 120px;
-  overflow: hidden;
+.gauge-container {
+  width:100%;
+  text-align:center;
+  margin-top:20px;
 }
-
-#downloadGauge {
-  position: absolute;
-  left: 380px;
-  top: 120px;
-  overflow: hidden;
-}
-
-#rtt {
-  position: absolute;
-  left: 320px;
-  top: 320px;
-  color: white;
-  font: bold 20px/20px verdana, helvetica, arial, sans-serif;
+#uploadGauge, #downloadGauge {
+  width: 45%;
 }
 
 #rttValue {
@@ -231,31 +207,31 @@ body.initializing .page .status {
   color: black;
 }
 
-#results {
-  height: 400px;
-}
-
 #result-pages {
-  width: 640px;
-  height: 280px;
-  position: absolute;
-  left: 40px;
-  top: 100px;
+  text-align: center;
+  width: 100%;
 }
 
 #result-pages .result-page {
-  width: 640px;
-  height: 280px;
-  position: absolute;
-  left: 0;
-  top: 0;
   display: none;
 }
 
-#results.summary #result-pages .result-page.summary,
+#results.summary #result-pages .result-page.summary {
+  display: table;
+  border-spacing: 10px 0px;
+  border-collapse: collapse;
+  position: relative;
+  margin: 20px 0px;
+  width: 100%;
+}
+
 #results.details #result-pages .result-page.details,
 #results.advanced #result-pages .result-page.advanced {
   display: block;
+  text-align: left;
+  position: relative;
+  margin: 20px 0px;
+  width: 100%;
 }
 
 #result-pages .details, #result-pages .advanced {
@@ -269,12 +245,19 @@ body.initializing .page .status {
 }
 
 #results .result {
-  width: 268px;
-  height: 180px;
-  position: absolute;
-  top: 0px;
-  padding: 20px;
   border: 1px solid #ccc;
+  width: 50%;
+  padding: 10px;
+  display: table-cell;
+}
+
+#results .title-container {
+  float:left;
+  text-align:left;
+}
+
+#results .result p {
+  margin: 0px;
 }
 
 #results .result .number {
@@ -287,32 +270,23 @@ body.initializing .page .status {
   text-transform: none;
 }
 
-#results .upload {
-  left: 0;
-}
-
-#results .download {
-  right: 0;
+#results .result h3 {
+  padding-top: 15px;
 }
 
 #results .other {
-  position: absolute;
-  top: 240px;
   text-transform: none;
   font: 13px/18px verdana, arial, helvetica, sans-serif;
+  text-align: left;
+  display: table-caption;
+  caption-side: bottom;
 }
 
 #results .controls {
-  width: 320px;
-  left: 360px;
   text-align: right;
 }
 
 #results .branding {
-  position: absolute;
-  width: 320px;
-  left: 40px;
-  bottom: 24px;
   text-transform: none;
   font: 11px/16px verdana, arial, helvetica, sans-serif;
 }
@@ -321,12 +295,14 @@ body.initializing .page .status {
   color: black;
 }
 
+#results .view-selector-container {
+  float:right;
+  text-align:right;
+}
+
 #results .view-selector {
-  position: absolute;
-  right: 40px;
-  top: 60px;
   font-size: 18px;
-  line-height: 18px;
+  padding-top: 15px;
 }
 
 #results .view-selector .summary {
@@ -358,4 +334,60 @@ body.initializing .page .status {
 #results.details .view-selector .details,
 #results.advanced .view-selector .advanced {
   background-color: #000;
+}
+
+@media screen and (max-width: 625px) {
+  #results .upload, #results .download {
+    float: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #results .view-selector-container, #results .title-container {
+    float: none;
+    text-align: left;
+  }
+
+  .upload .result h3 {
+    font-size: 28px;
+  }
+
+  #results .result .number {
+    font-size: 52px;
+    line-height: 85px;
+  }
+
+  #results .result .units {
+    font-size: 36px;
+  }
+
+  #results .controls {
+    text-align: left;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #upload h2, #download h2, #results .title-container h2 {
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #results .upload.result h3 {
+    margin: 0px 18px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .page {
+    margin: 10px;
+  }
+  #results .result .number {
+    font-size: 44px;
+    line-height: 75px;
+  }
+  #results .result .units {
+    font-size: 26px;
+  }
 }
