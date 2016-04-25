@@ -62,7 +62,7 @@ a img {
   text-transform: none;
   font-size: 24px;
   margin: 20px 0px;
-  text-align: justify;
+  text-align: center;
 }
 
 #init-error #reload {
