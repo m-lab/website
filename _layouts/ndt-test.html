@@ -1,3 +1,5 @@
+{% assign header = site.data.header-footer-content.header %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,12 +20,10 @@
     //  variable tells it where to look.
     var CANV_GAUGE_FONTS_PATH = "../fonts/digital-7-mono";
   </script>
-  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js">
-  </script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js"></script>
   <script src="{{ site.baseurl }}/ndt/HTML5-frontend/gauge.min.js"></script>
   <script src="{{ site.baseurl }}/ndt/HTML5-frontend/script.js"></script>
-  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-browser-client.js">
-  </script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-browser-client.js"></script>
   <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-wrapper.js"></script>
   <script>
     // Look up a suitable NDT server using mlab-ns. The global variable
@@ -36,29 +36,133 @@
       $.ajax({
         url: mlabNsUrl + mlabNsService + '?format=json',
         dataType: 'json',
-        // async is intentionally set to false to make sure that the
-        // mlab-ns request completes before the test can be run.
-        async: false,
         success: function(resp) {
-            console.log('Using NDT server: ' + resp.fqdn);
-            ndtServer = resp.fqdn;
+          console.log('Using NDT server: ' + resp.fqdn);
+          ndtServer = resp.fqdn;
+          // Display starting screen functionality
+          $('#welcome').show();
+          $('#copyButton').click(
+            function(){
+              copyToClipboardMsg($('#copyTarget'), 'copy-msg');
+            });
+          $('.embed').click(
+            function(){
+              $('#copy-code').slideToggle('slow');
+            });
         },
         error: function(jqXHR, errStatus, errText) {
-            console.log('mlab-ns lookup failed: ' + errStatus + ' ' + errText);
+          console.log('mlab-ns lookup failed: ' + errStatus + ' ' + errText);
+          // Display error and initialize reload button
+          $('#init-error').show();
+          $('#reload').click(reloadPage);
         }
       });
     })();
+
+    function reloadPage(evt) {
+      window.location.reload();
+    }
+
+    /**
+     * Fires the copyToClipboard function and based on result sets up
+     *  subsequent messaging to an end user.
+     * @param {string} elem Represents the "target" DOM element that is to be
+     *     copied
+     * @param {string} msgElem Represets the id of the DOM element where the 
+     *     success/failure messaging is to be inserted.
+     */
+    function copyToClipboardMsg(elem, msgElem) {
+        var succeed = copyToClipboard(elem);
+        var msg;
+        if (!succeed) {
+          msg = "Copy is not supported or blocked by your browser. Select the \
+                 code and press Ctrl+c to copy."
+        } else {
+          msg = "Text copied to the clipboard."
+        }
+        if (typeof msgElem === "string") {
+          msgElem = $('#'+ msgElem);
+        }
+        msgElem.text(msg);
+    }
+
+    /**
+     * Attempts to copy content in a specific a DOM element passed in.
+     * Returns true if successful and false if unsuccessful.
+     * @param {string} elem Represents the "target" DOM element that is to be
+     *     copied
+     * @return {boolean} Whether the element is copied into a user's 
+     *     clipboard or not.  Some browsers allow it, others don't.
+     */
+    function copyToClipboard(elem) {
+      elem.focus();
+      elem.get(0).setSelectionRange(0, elem.val().length);
+
+      // copy the selection
+      var succeed;
+      try {
+        succeed = document.execCommand("copy");
+      } catch(e) {
+        succeed = false;
+      }
+
+      return succeed;
+    }
+
   </script>
 </head>
 <body class="initializing">
+  <header class="header-section">
+      <h1 class="main-logo">
+        <a href="https://{{ site.fqdn }}" target="_blank">
+          {{ header.logo-title }}
+        </a>
+      </h1>
+  </header>
   <div class="header"></div>
   <div id="widget">
+    <div id="init-error" class="page">
+      <p class="red">
+        Oops! Something went wrong and the NDT test didn't load!
+      </p> 
+      <div id="reload">
+          Please <a href="" class="reload button">Try Again</a>
+      </div>
+      <p>
+        If this continues to happen, please contact 
+        <a href="mailto:support@measurementlab.net">
+          support@measurementlab.net
+        </a>
+      </p>
+    </div>
+
     <div id="welcome" class="page">
       <div class="status">Initializing...</div>
+      <p class="desc">The NDT (Network Diagnostic Tool) is a bandwidth test
+        that will test your upload and download connection speeds as well as
+        provide additional diagnostics about your network.
+      </p>
+
       <div id="start-button">
-        <a href="#test" class="start button">Start Test</a>
+        <p><a href="#test" class="start button">Start Test</a></p>
+      </div>
+
+
+      <div id="embed-button">
+        <p><a href="#embed" class="embed button">Embed</a></p>
+      </div>
+
+      <div id="copy-code">
+        <p class="title">Add NDT to your website</p>
+        <label for"copytarget">
+          Copy this code to your clipboard and paste it into your web site.
+        </label>
+        <textarea id="copyTarget" rows="4">&lt;iframe src="//{{ site.fqdn }}/p/ndt-ws.html" align="middle"&gt;&lt;/iframe&gt;</textarea>
+        <button id="copyButton" class=" copy button">Copy</button>
+        <p id="copy-msg"></p>
       </div>
     </div>
+
     <div id="test" class="page">
       <div id="loading">
         <h2 class="centered">Preparing your tests...</h2>

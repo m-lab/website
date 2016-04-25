@@ -5,12 +5,31 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   border: 0;
 }
 
 a img {
   border: 0;
+}
+
+.main-logo {
+  display: block;
+  vertical-align: middle;
+  font-size: 28px;
+  line-height: 32px;
+  padding-bottom: 10px;
+}
+
+.main-logo a {
+  background: url('../images/sprites/globalSprite-1x.png') no-repeat -7px -7px;
+  width: 100px;
+  height: 31px;
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  text-align: left;
+  direction: ltr;
 }
 
 .clearfix {
@@ -31,8 +50,23 @@ a img {
   max-width: 750px;
 }
 
-.header {
-  margin: 10px;  
+#widget p.desc {
+  margin-bottom: 0px;
+  font-size: 14px; 
+  font-family: verdana, arial, helvetica, sans-serif;
+  text-align: left;
+  text-transform: none;
+}
+
+#init-error p {
+  text-transform: none;
+  font-size: 24px;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+#init-error #reload {
+  text-align: center;
 }
 
 #warning-environment {
@@ -40,28 +74,78 @@ a img {
   margin: 5px;
 }
 
-#warning-plugin, #warning-websocket {
+#warning-plugin, #warning-websocket, .red {
   color: red;
   margin: 5px;
 }
 
+#copyTarget {
+ width: 40%;
+}
+
 #start-button {
-  padding-top: 180px; 
+  padding-top: 0px; 
+}
+
+#start-button p.title, #copy-code p.title {
+  margin: 0px 10px 10px;
+  text-transform: capitalize;
+}
+
+#embed-button {
+  padding-top: 30px;
+  font-size: 18px;
+}
+
+#copy-code {
+  display: none;
+  padding: 20px 0px;
+  background-color: #F2F2F2;
+}
+
+#copy-code label {
+  text-transform: none;
+  display: block;
+  font-size: 14px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  text-align: center;
+  margin: 0px auto;
+  padding-bottom: 5px;
+}
+
+#copy-code textarea {
+  width: 65%;
+}
+
+#copy-code .copy.button {
+  vertical-align: top;
+  font-size: 36px;
+  font-family: "League Gothic", Impact, "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+}
+
+#copy-code #copy-msg {
+  font-size: 14px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  text-align: center;
+  text-transform: none;
+  color: #e35343;
+  margin: 0px 10px;
 }
 
 .page {
   position: relative;
   background-color: #fff;
   color: #000;
-  margin: 20px;
 }
 
 #welcome {
   text-align: center;
 }
 
-#test, #results {
+#test, #results, #welcome, #init-error {
   display: none;
+  padding: 0px 0px 10px 0px;
 }
 
 #test {
@@ -222,7 +306,7 @@ body.initializing .page .status {
   border-collapse: collapse;
   position: relative;
   margin: 20px 0px;
-  width: 100%;
+  width: 99%;
 }
 
 #results.details #result-pages .result-page.details,
@@ -370,6 +454,14 @@ body.initializing .page .status {
 @media screen and (max-width: 500px) {
   #upload h2, #download h2, #results .title-container h2 {
     font-size: 44px;
+  }
+
+  #embed-button {
+    padding-top: 0px;
+  }
+
+  #copy-code p.title {
+    font-size: 30px;
   }
 }
 
