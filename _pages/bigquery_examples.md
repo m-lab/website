@@ -5,6 +5,9 @@ permalink: /data/bq/examples/
 breadcrumb: data
 ---
 
+* Table of Contents
+{:toc}
+
 # BigQuery Examples
 
 The examples below query the M-Lab data in various ways to demonstrate effective use of the M-Lab BigQuery dataset.

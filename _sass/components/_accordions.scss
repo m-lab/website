@@ -1,11 +1,47 @@
 // Accordion Component
 
+.accordion-section {
+    padding: 30px 0 0
+}
+
+.accordion-section .section-heading {
+    padding-bottom: 40px
+}
+
 .intro-section .accordion {
   padding-bottom: 0;
   @include list_bullets();
 
   .tabbed-heading {
     margin-bottom: 18px;
+
+    &:before {
+      content: '';
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      background: url('../images/sprites/globalSprite-1x.png') no-repeat -42px -130px;
+      width: 9px;
+      height: 12px;
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom:1;*display: inline;
+      margin-right: 8px;
+      -webkit-transition: -webkit-transform 200ms ease-in-out;
+      -moz-transition: -moz-transform 200ms ease-in-out;
+      -o-transition: -o-transform 200ms ease-in-out;
+      transition: transform 200ms ease-in-out;
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+      top: -1px;
+    }
   }
 
   &.is-collapsed { 

@@ -5,6 +5,9 @@ permalink: /data/bq/schema/
 breadcrumb: data
 ---
 
+* Table of Contents
+{:toc}
+
 # BigQuery Schema
 
 ## Background
@@ -38,6 +41,8 @@ M-Lab continues to support these tables, but urges clients to move to the new pe
 ## Schema Fields
 
 All M-Lab data shares the same data schema in BigQuery. The fields are described in the table below:
+
+<div class="table-responsive" markdown="1">
 
 | Field name                                           |     Type     |  Description                              |
 | :----------------------------------------------------|:------------:|:------------------------------------------|
@@ -95,6 +100,8 @@ All M-Lab data shares the same data schema in BigQuery. The fields are described
 | `paris_traceroute_hop.dest_af`                      |  `integer`   |  The address family used to connect to `dest_ip`.<br>AF_INET = `2`<br>AF_INET6 = `10`. |
 | `paris_traceroute_hop.dest_hostname`                |  `string`    |  The hostname of the end of the hop. This may be the same as `dest_ip` if the hostname could not be resolved. |
 | `paris_traceroute_hop.rtt`                          |  `float`     |  The RTT measured from `connection_spec.server_ip` to `paris_traceroute_hop.dest_ip`. |
+
+</div>
 
 ### Deprecated Fields
 

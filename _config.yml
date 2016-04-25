@@ -20,13 +20,18 @@ permalink: "/blog/:title/"
 sass:
   sass_dir: _sass
   style: compressed
-markdown: kramdown
 include: ['_pages']
 exclude:
   - .gitignore
   - README.md
   - Gemfile
   - Gemfile.lock
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  auto_ids:       true
+  auto_id_stripping:    true
 
 # Display blog posts even if they're future-dated.
 future: true

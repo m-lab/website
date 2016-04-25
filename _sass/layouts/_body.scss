@@ -1,17 +1,73 @@
 // main body layout elements
 
-.intro-section, .blog-entry {
-  ul {
-  	margin: 0px 0px 25px 15px;
-  	padding: 0px 0px 0px 15px;
+.subpage-content {
+  padding-top: 25px;
+  padding-bottom: 70px;
 
-    @include list_bullets(disc, 0px, 0px, 24px, outside);
+  h1 {
+    padding: 16px 0px;
+  }
 
+  p {
+    padding-bottom: 25px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+    line-height: 16px;
+    border-bottom: 1px solid #b7b7b7;
+    padding-bottom: 17px;
+    margin-bottom: 13px;
+
+    .tabbed-heading {
+      cursor: pointer;
+    }
+
+  }
+
+  .intro-section {
+    padding: 17px 0 0;
+  }
+
+  .intro-section, .blog-entry {
+    ul {
+    	margin: 0px 0px 25px 15px;
+    	padding: 0px 0px 0px 15px;
+
+      @include list_bullets(disc, 0px, 0px, 24px, outside);
+
+    	ul {
+   	    margin: 0px;
+   	    padding: 0px 0px 0px 15px;
+
+   	    @include list_bullets(circle, 0px, 0px 0px 0px 15px, 24px, outside);
+      }
+    }
+  }
+
+  #intro-section-observatory {
   	ul {
- 	    margin: 0px;
- 	    padding: 0px 0px 0px 15px;
+  		padding-left: 30px;
 
- 	    @include list_bullets(circle, 0px, 0px 0px 0px 15px, 24px, outside);
+      @include list_bullets(inherit, initial, initial, 24px, outside);
+    }
+
+    .helpContent ul.buttons {
+      padding: 0px;
+
+      li {
+        padding: 10px 0;
+
+        &:first-child {
+          margin-left: 110px;
+          margin-right: 40px;
+        }
+      }
     }
   }
 }
+

@@ -1,0 +1,170 @@
+// Carousel Component
+
+.carousel-section {
+  width: 100%;
+  background: #81addd;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: $screen-lg-min) {
+    min-height: 200px;
+  }
+
+  .carousel-ctn {
+    margin: auto;
+    position: relative;
+    padding: 0 20px;
+    display: none;
+
+    .slides>li {
+      position: relative;
+    }
+  }
+
+  .carousel-caption {
+    padding: 0px;
+    position: initial;
+
+    @media screen and (max-width: $screen-md-min) {
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      display: block;
+    }
+
+    p {
+      text-align: left;
+      color: #454545;
+      font-size: 28px;
+      line-height: 32px;
+      font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
+      color: #fff;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+      font-size: 28px;
+      line-height: 32px;
+      margin: 0px 0px 20px 0px;
+      text-shadow: none;
+
+      @media screen and (max-width: $screen-lg-min) {
+        font-size: 24px;
+        margin: 0px 0px 10px 0px;
+      }
+      @media screen and (max-width: $screen-md-min) {
+        font-size: 20px;
+        margin: 0px 0px 10px 0px;
+      }
+      @media screen and (max-width: $screen-sm-min) {
+        font-size: 24px;
+        margin: 0px 0px 10px 0px;
+      }
+    }
+  }
+
+  .carousel-preloader {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: url('../images/carousel-loader.gif') no-repeat 0 0;
+  }
+
+  .carousel-infobox {
+      position: absolute;
+      top: 75px;
+      left: 0;
+      width: 40%;
+
+      @media screen and (max-width: $screen-md-min) {
+        top: 30px;
+      }
+  
+      @media screen and (max-width: $screen-sm-min) {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        padding: 20px 0px;
+      }
+
+    .btn {
+      white-space: nowrap;
+    }
+  }
+
+  .carousel-heading {
+      font-family: "Proxima Nova Regular",Arial,Helvetica,sans-serif;
+      color: #fff;
+      padding-bottom: 10px;
+
+      @media screen and (max-width: $screen-md-min) {
+        font-size: 14px;
+      }
+  }
+
+  .flex-control-nav {
+      position: absolute;
+      bottom: 13px;
+      left: 20px;
+      margin-left: 0;
+      padding-bottom: 0;
+
+      @media screen and (max-width: $screen-sm-min) {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        padding-bottom: 20px;
+      }
+
+    &>li {
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom:1;*display: inline;
+        margin-left: 5px;
+    
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        @include link_accessibility();
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        border-radius: 100%;
+        cursor: pointer;
+
+        &.flex-active {
+          background: none;
+          border: 2px solid #fff;
+        }
+      }
+    }
+  }
+
+}
+
+.fluid-img {
+  display: block;
+  height: auto;
+  width: 100%;
+
+  @media screen and (max-width: $screen-sm-min) {
+    display: none;
+  }
+}

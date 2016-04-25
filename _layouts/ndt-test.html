@@ -3,193 +3,239 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf8">
-    <title>{{ page.title }}</title>
-    <link href="{{ site.baseurl }}/css/ndt-test.css" rel="stylesheet">
-    <!--[if IE]>
-    <style>
-    @font-face {
-        font-family: "League Gothic";
-        src: url("../fonts/league-gothic/league_gothic.eot");
-    }
-    </style>
-    <![endif]-->
-    <script>
-        // The gauge.min.js in the ndt submodule wants the font digital-7-mono,
-        // and by default looks for it in the /fonts directory.  Setting this
-        // variable tells it where to look.
-        var CANV_GAUGE_FONTS_PATH = "../fonts/digital-7-mono";
-    </script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js"></script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/gauge.min.js"></script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/script.js"></script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-browser-client.js"></script>
-    <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-wrapper.js"></script>
-    <script>
-        // Look up a suitable NDT server using mlab-ns. The global variable
-        // ndtServer is used by by the backend javascript to determine which
-        // server to test against.
-        var ndtServer;
-        (function () {
-            var mlabNsService = 'https:' == location.protocol ? 'ndt_ssl' : 'ndt';
-            var mlabNsUrl = 'https://mlab-ns.appspot.com/asdf';
-            $.ajax({
-                url: mlabNsUrl + mlabNsService + '?format=json',
-                dataType: 'json',
-                success: function(resp) {
-                    console.log('Using NDT server: ' + resp.fqdn);
-                    ndtServer = resp.fqdn;
-                    // Display starting screen functionality
-//                    $('#welcome').show();
-                    $('#copyButton').click(
-                      function(){
-                        copyToClipboardMsg($('#copyTarget'), 'copy-msg');
-                    });
-                },
-                error: function(jqXHR, errStatus, errText) {
-                    console.log('mlab-ns lookup failed: ' + errStatus + ' ' + errText);
-                    // Display error and initialize reload button
-                    $('#init-error').show();
-                    $('#reload').click(reloadPage);
-                }
+  <meta charset="utf8">
+  <title>{{ page.title }}</title>
+  <link href="{{ site.baseurl }}/css/ndt-test.css" rel="stylesheet">
+  <!--[if IE]>
+  <style>
+  @font-face {
+    font-family: "League Gothic";
+    src: url("../fonts/league-gothic/league_gothic.eot");
+  }
+  </style>
+  <![endif]-->
+  <script>
+    // The gauge.min.js in the ndt submodule wants the font digital-7-mono,
+    //  and by default looks for it in the /fonts directory.  Setting this
+    //  variable tells it where to look.
+    var CANV_GAUGE_FONTS_PATH = "../fonts/digital-7-mono";
+  </script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/jquery-1.12.1.min.js"></script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/gauge.min.js"></script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/script.js"></script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-browser-client.js"></script>
+  <script src="{{ site.baseurl }}/ndt/HTML5-frontend/ndt-wrapper.js"></script>
+  <script>
+    // Look up a suitable NDT server using mlab-ns. The global variable
+    //  ndtServer is used by the backend javascript to determine which
+    //  server to test against.
+    var ndtServer;
+    (function () {
+      var mlabNsService = 'https:' == location.protocol ? 'ndt_ssl' : 'ndt';
+      var mlabNsUrl = 'https://mlab-ns.appspot.com/';
+      $.ajax({
+        url: mlabNsUrl + mlabNsService + '?format=json',
+        dataType: 'json',
+        success: function(resp) {
+          console.log('Using NDT server: ' + resp.fqdn);
+          ndtServer = resp.fqdn;
+          // Display starting screen functionality
+          $('#welcome').show();
+          $('#copyButton').click(
+            function(){
+              copyToClipboardMsg($('#copyTarget'), 'copy-msg');
             });
-        })();
-
-        function reloadPage(evt) {
-            window.location.reload();
+          $('.embed').click(
+            function(){
+              $('#copy-code').slideToggle('slow');
+            });
+        },
+        error: function(jqXHR, errStatus, errText) {
+          console.log('mlab-ns lookup failed: ' + errStatus + ' ' + errText);
+          // Display error and initialize reload button
+          $('#init-error').show();
+          $('#reload').click(reloadPage);
         }
+      });
+    })();
 
-        // Sets up copy to clipboard messaging if copy functionality works in end 
-        // user's brwoser.
-        function copyToClipboardMsg(elem, msgElem) {
-            var succeed = copyToClipboard(elem);
-            var msg;
-            if (!succeed) {
-                msg = "Copy is not supported or blocked by your browser. Select the code and press Ctrl+c to copy."
-            } else {
-                msg = "Text copied to the clipboard."
-            }
-            if (typeof msgElem === "string") {
-                msgElem = $('#'+ msgElem);
-            }
-            msgElem.innerHTML = msg;
+    function reloadPage(evt) {
+      window.location.reload();
+    }
+
+    /**
+     * Fires the copyToClipboard function and based on result sets up
+     *  subsequent messaging to an end user.
+     * @param {string} elem Represents the "target" DOM element that is to be
+     *     copied
+     * @param {string} msgElem Represets the id of the DOM element where the 
+     *     success/failure messaging is to be inserted.
+     */
+    function copyToClipboardMsg(elem, msgElem) {
+        var succeed = copyToClipboard(elem);
+        var msg;
+        if (!succeed) {
+          msg = "Copy is not supported or blocked by your browser. Select the \
+                 code and press Ctrl+c to copy."
+        } else {
+          msg = "Text copied to the clipboard."
         }
-
-        // Attempts to copy content in a specific a DOM element passed in.
-        // Returns true if successful and false if unsuccessful.
-        function copyToClipboard(elem) {
-            elem.focus();
-            elem.get(0).setSelectionRange(0, elem.val().length);
-            
-            // copy the selection
-            var succeed;
-            try {
-                  succeed = document.execCommand("copy");
-            } catch(e) {
-                succeed = false;
-            }
-
-            return succeed;
+        if (typeof msgElem === "string") {
+          msgElem = $('#'+ msgElem);
         }
+        msgElem.text(msg);
+    }
 
-    </script>
+    /**
+     * Attempts to copy content in a specific a DOM element passed in.
+     * Returns true if successful and false if unsuccessful.
+     * @param {string} elem Represents the "target" DOM element that is to be
+     *     copied
+     * @return {boolean} Whether the element is copied into a user's 
+     *     clipboard or not.  Some browsers allow it, others don't.
+     */
+    function copyToClipboard(elem) {
+      elem.focus();
+      elem.get(0).setSelectionRange(0, elem.val().length);
+
+      // copy the selection
+      var succeed;
+      try {
+        succeed = document.execCommand("copy");
+      } catch(e) {
+        succeed = false;
+      }
+
+      return succeed;
+    }
+
+  </script>
 </head>
 <body class="initializing">
-<header class="header-section">
-    <h1 class="main-logo"><a href="https://{{ site.fqdn }}" target="_blank">{{ header.logo-title }}</a></h1>
-</header>
-<div class="header"></div>
-<div id="widget">
+  <header class="header-section">
+      <h1 class="main-logo">
+        <a href="https://{{ site.fqdn }}" target="_blank">
+          {{ header.logo-title }}
+        </a>
+      </h1>
+  </header>
+  <div class="header"></div>
+  <div id="widget">
     <div id="init-error" class="page">
-        <p class="red">We apologize, either our NDT servers are down for maintenance at the
-          moment or there is a network connectivity issue preventing the NDT
-          tool from loading in the browser.</p> 
-        <p>Please try to reload the test by clicking the <span class="red">"Try Again"</span> button.</p>
-        <div id="reload">
-            <a href="" class="reload button">Try Again</a>
-        </div>
+      <p class="red">
+        Oops! Something went wrong and the NDT test didn't load!
+      </p> 
+      <p>
+        Please try to reload the test by clicking the <span class="red">"Try
+        Again"</span> button.
+      </p>
+      <div id="reload">
+          Please <a href="" class="reload button">Try Again</a>
+      </div>
+      <p>
+        If this continues to happen, please contact 
+        <a href="mailto:support@measurementlab.net">
+          support@measurementlab.net
+        </a>
+      </p>
     </div>
 
     <div id="welcome" class="page">
-        <div class="status">Initializing...</div>
-        <p class="desc">The NDT (Network Diagnostic Tool) is a bandwidth test
-          that will test your upload and download connection speeds as well as
-          provide additional diagnostics about your network.
-        </p>
+      <div class="status">Initializing...</div>
+      <p class="desc">The NDT (Network Diagnostic Tool) is a bandwidth test
+        that will test your upload and download connection speeds as well as
+        provide additional diagnostics about your network.
+      </p>
 
-        <div id="start-button">
-            <p class="title">Begin Network Diagnostics</p>
-            <p><a href="#test" class="start button">Start Test</a></p>
-        </div>
+      <div id="start-button">
+<!--        <p class="title">Begin Network Diagnostics</p> -->
+        <p><a href="#test" class="start button">Start Test</a></p>
+      </div>
 
-        <div id="copy-code">
-            <p class="title">Add NDT to your website</p>
-            <label for"copytarget">Copy and paste this code into your site</label>
-            <textarea id="copyTarget" rows="4">&lt;iframe src="//{{ site.fqdn }}/p/ndt-ws.html" width="750" height="500" align="middle"&gt;&lt;/iframe&gt;</textarea>
-            <button id="copyButton" class=" copy button">Copy</button>
-            <p id="copy-msg"></p>
-        </div>
+
+      <div id="embed-button">
+        <p><a href="#embed" class="embed button">Embed</a></p>
+      </div>
+
+      <div id="copy-code">
+        <p class="title">Add NDT to your website</p>
+        <label for"copytarget">
+          Copy this code to your clipboard and paste it into your web site.
+        </label>
+        <textarea id="copyTarget" rows="4">&lt;iframe src="//{{ site.fqdn }}/p/ndt-ws.html" align="middle"&gt;&lt;/iframe&gt;</textarea>
+        <button id="copyButton" class=" copy button">Copy</button>
+        <p id="copy-msg"></p>
+      </div>
     </div>
 
     <div id="test" class="page">
-        <div id="loading">
-            <h2 class="centered">Preparing your tests...</h2>
+      <div id="loading">
+        <h2 class="centered">Preparing your tests...</h2>
+      </div>
+      <div id="upload" class="test">
+        <h2 class="centered">Now testing your <em>upload speed</em></h2>
+      </div>
+      <div id="download" class="test">
+        <h2 class="centered">Now testing your <em>download speed</em></h2>
+      </div>
+      <div class="guage-container">
+          <canvas id="uploadGauge"></canvas>
+          <canvas id="downloadGauge"></canvas>
+      </div>
+      <div class="locations">
+        <div class="local location"></div>
+        <div class="remote location">
+          <div class="name">Test server</div>
+          <div class="address"></div>
         </div>
-        <div id="upload" class="test">
-            <h2 class="centered">Now testing your <em>upload speed</em></h2>
-        </div>
-        <div id="download" class="test">
-            <h2 class="centered">Now testing your <em>download speed</em></h2>
-        </div>
-        <canvas id="uploadGauge"></canvas>
-        <div id="rtt">RTT
-            <div id="rttValue"></div>
-        </div>
-        <canvas id="downloadGauge"></canvas>
-        <div class="locations">
-            <div class="local location"></div>
-            <div class="remote location">
-                <div class="name">Test server</div>
-                <div class="address"></div>
-            </div>
-        </div>
+      </div>
     </div>
     <div id="results" class="summary page">
-        <h2>Your test results</h2>
-        <div class="view-selector">
+      <div>
+        <div class="title-container">
+          <h2>Your test results</h2>
+        </div>
+        <div class="view-selector-container">
+          <div class="view-selector">
             <span class="summary button">Summary</span>
             <span class="details button">Details</span>
             <span class="advanced button">Advanced</span>
+          </div>
         </div>
-        <div id="result-pages">
-            <div class="result-page summary">
-                <div class="upload result">
-                    <h3>Upload speed</h3>
-                    <p>
-                        <span class="number" id="upload-speed">0.00</span>
-                        <span class="units" id="upload-speed-units">Mb/s</span>
-                    </p>
-                </div>
-                <div class="download result">
-                    <h3>Download speed</h3>
-                    <p>
-                        <span class="number" id="download-speed">0.00</span>
-                        <span class="units" id="download-speed-units">Mb/s</span>
-                    </p>
-                </div>
-                <div class="other">
-                    <p class="latency"><b>Network latency:</b> <span id="latency">0.0</span> msec round trip time</p>
-                    <p class="jitter"><b>Jitter:</b> <span id="jitter">0.0 msec</span></p>
-                </div>
-            </div>
-            <div class="result-page details" id="test-details"></div>
-            <div class="result-page advanced" id="test-advanced"></div>
+      </div>
+      <div class="clearfix"></div>
+      <div id="result-pages">
+        <div class="result-page summary">
+          <div class="upload result">
+            <h3>Upload speed</h3>
+            <p>
+              <span class="number" id="upload-speed">0.00</span>
+              <span class="units" id="upload-speed-units">Mb/s</span>
+            </p>
+          </div>
+          <div class="download result">
+            <h3>Download speed</h3>
+            <p>
+              <span class="number" id="download-speed">0.00</span>
+              <span class="units" id="download-speed-units">Mb/s</span>
+            </p>
+          </div>
+          <div class="other">
+            <p class="latency"><b>Network latency:</b> 
+              <span id="latency">0.0</span> msec round trip time</p>
+            <p class="jitter">
+              <b>Jitter:</b> <span id="jitter">0.0 msec</span>
+            </p>
+          </div>
         </div>
-        <div class="controls">
-            <a href="#test" class="start button">Test again</a>
-        </div>
+        <div class="result-page details" id="test-details"></div>
+        <div class="result-page advanced" id="test-advanced"></div>
+      </div>
+      <div class="controls">
+          <a href="#test" class="start button">Test again</a>
+      </div>
     </div>
-</div>
-<div id="backendContainer"></div>
+  </div>
+  <div id="backendContainer"></div>
 </body>
 </html>

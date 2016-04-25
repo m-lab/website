@@ -1,7 +1,9 @@
 // Table component
 
 
-// Customized bigquery table
-table#bigquery-schema-fields {
-  @include tables(200px);
+// To allow for bootstrap scroll bars on large tables, set table margin to 0
+.table-responsive table {
+  @media screen and (max-width: $screen-sm-min){
+    margin: 0px;
+  }
 }

@@ -5,10 +5,8 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   border: 0;
-  overflow: hidden;
-  height: 2000px;
 }
 
 a img {
@@ -16,34 +14,40 @@ a img {
 }
 
 .main-logo {
-    display: block;
-    vertical-align: middle;
-    font-size: 28px;
-    line-height: 32px;
+  display: block;
+  vertical-align: middle;
+  font-size: 28px;
+  line-height: 32px;
+  padding-bottom: 10px;
 }
 
 .main-logo a {
-    background: url('../images/sprites/globalSprite-1x.png') no-repeat -7px -7px;
-    width: 100px;
-    height: 31px;
-    display: block;
-    text-indent: -999em;
-    overflow: hidden;
-    text-align: left;
-    direction: ltr;
+  background: url('../images/sprites/globalSprite-1x.png') no-repeat -7px -7px;
+  width: 100px;
+  height: 31px;
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  text-align: left;
+  direction: ltr;
+}
+
+.clearfix {
+  clear:both;
 }
 
 #widget {
   position: relative;
-  width: 720px;
-  height: 480px;
+  width: 100%;
   overflow: hidden;
-  background-color: black;
   color: white;
   text-transform: uppercase;
   font-size: 36px;
   font-family: "League Gothic", Impact, "Arial Narrow", sans-serif;
   margin-bottom: 15px;
+  text-align: center;
+  margin: 0px auto;
+  max-width: 750px;
 }
 
 #widget p.desc {
@@ -57,7 +61,8 @@ a img {
 #init-error p {
   text-transform: none;
   font-size: 24px;
-  margin: 20px 15px;
+  margin: 20px 0px;
+  text-align: justify;
 }
 
 #init-error #reload {
@@ -79,14 +84,21 @@ a img {
 }
 
 #start-button {
-  padding-top: 40px;
+  padding-top: 0px; 
 }
 
 #start-button p.title, #copy-code p.title {
   margin: 0px 10px 10px;
+  text-transform: capitalize;
+}
+
+#embed-button {
+  padding-top: 30px;
+  font-size: 18px;
 }
 
 #copy-code {
+  display: none;
   padding: 20px 0px;
   background-color: #F2F2F2;
 }
@@ -96,8 +108,9 @@ a img {
   display: block;
   font-size: 14px;
   font-family: verdana, arial, helvetica, sans-serif;
-  text-align: left;
-  margin: 0px 0px 5px 70px;
+  text-align: center;
+  margin: 0px auto;
+  padding-bottom: 5px;
 }
 
 #copy-code textarea {
@@ -114,18 +127,14 @@ a img {
 #copy-code #copy-msg {
   font-size: 14px;
   font-family: verdana, arial, helvetica, sans-serif;
-  text-align: left;
+  text-align: center;
   text-transform: none;
   color: #e35343;
-  margin: 0px 0px 0px 70px;
+  margin: 0px 10px;
 }
 
 .page {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative;
   background-color: #fff;
   color: #000;
 }
@@ -136,6 +145,7 @@ a img {
 
 #test, #results, #welcome, #init-error {
   display: none;
+  padding: 0px 0px 10px 0px;
 }
 
 #test {
@@ -208,10 +218,7 @@ h3 {
 
 .page .status,
 .page .controls {
-  width: 640px;
-  position: absolute;
-  left: 40px;
-  bottom: 40px;
+  position: relative;
   text-align: center;
 }
 
@@ -245,27 +252,20 @@ body.initializing .page .status {
 }
 
 #test .locations {
-  width: 640px;
-  position: absolute;
-  left: 40px;
-  top: 400px;
   font-size: 32px;
   line-height: 32px;
 }
 
 #test .location {
-  position: absolute;
   top: 0;
 }
 
 #test .location.local {
-  right: 0;
   text-align: right;
 }
 
 #test .location.remote {
-  left: 0;
-  text-align: left;
+  text-align: center;
 }
 
 #test .location .address {
@@ -274,26 +274,13 @@ body.initializing .page .status {
   font: bold 13px/13px verdana, helvetica, arial, sans-serif;
 }
 
-#uploadGauge {
-  position: absolute;
-  left: 40px;
-  top: 120px;
-  overflow: hidden;
+.gauge-container {
+  width:100%;
+  text-align:center;
+  margin-top:20px;
 }
-
-#downloadGauge {
-  position: absolute;
-  left: 380px;
-  top: 120px;
-  overflow: hidden;
-}
-
-#rtt {
-  position: absolute;
-  left: 320px;
-  top: 320px;
-  color: white;
-  font: bold 20px/20px verdana, helvetica, arial, sans-serif;
+#uploadGauge, #downloadGauge {
+  width: 45%;
 }
 
 #rttValue {
@@ -304,31 +291,31 @@ body.initializing .page .status {
   color: black;
 }
 
-#results {
-  height: 100%;
-}
-
 #result-pages {
-  width: 640px;
-  height: 280px;
-  position: absolute;
-  left: 40px;
-  top: 100px;
+  text-align: center;
+  width: 100%;
 }
 
 #result-pages .result-page {
-  width: 640px;
-  height: 280px;
-  position: absolute;
-  left: 0;
-  top: 0;
   display: none;
 }
 
-#results.summary #result-pages .result-page.summary,
+#results.summary #result-pages .result-page.summary {
+  display: table;
+  border-spacing: 10px 0px;
+  border-collapse: collapse;
+  position: relative;
+  margin: 20px 0px;
+  width: 99%;
+}
+
 #results.details #result-pages .result-page.details,
 #results.advanced #result-pages .result-page.advanced {
   display: block;
+  text-align: left;
+  position: relative;
+  margin: 20px 0px;
+  width: 100%;
 }
 
 #result-pages .details, #result-pages .advanced {
@@ -342,12 +329,19 @@ body.initializing .page .status {
 }
 
 #results .result {
-  width: 268px;
-  height: 180px;
-  position: absolute;
-  top: 0px;
-  padding: 20px;
   border: 1px solid #ccc;
+  width: 50%;
+  padding: 10px;
+  display: table-cell;
+}
+
+#results .title-container {
+  float:left;
+  text-align:left;
+}
+
+#results .result p {
+  margin: 0px;
 }
 
 #results .result .number {
@@ -360,32 +354,23 @@ body.initializing .page .status {
   text-transform: none;
 }
 
-#results .upload {
-  left: 0;
-}
-
-#results .download {
-  right: 0;
+#results .result h3 {
+  padding-top: 15px;
 }
 
 #results .other {
-  position: absolute;
-  top: 240px;
   text-transform: none;
   font: 13px/18px verdana, arial, helvetica, sans-serif;
+  text-align: left;
+  display: table-caption;
+  caption-side: bottom;
 }
 
 #results .controls {
-  width: 320px;
-  left: 360px;
   text-align: right;
 }
 
 #results .branding {
-  position: absolute;
-  width: 320px;
-  left: 40px;
-  bottom: 24px;
   text-transform: none;
   font: 11px/16px verdana, arial, helvetica, sans-serif;
 }
@@ -394,12 +379,14 @@ body.initializing .page .status {
   color: black;
 }
 
+#results .view-selector-container {
+  float:right;
+  text-align:right;
+}
+
 #results .view-selector {
-  position: absolute;
-  right: 40px;
-  top: 60px;
   font-size: 18px;
-  line-height: 18px;
+  padding-top: 15px;
 }
 
 #results .view-selector .summary {
@@ -431,4 +418,68 @@ body.initializing .page .status {
 #results.details .view-selector .details,
 #results.advanced .view-selector .advanced {
   background-color: #000;
+}
+
+@media screen and (max-width: 625px) {
+  #results .upload, #results .download {
+    float: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #results .view-selector-container, #results .title-container {
+    float: none;
+    text-align: left;
+  }
+
+  .upload .result h3 {
+    font-size: 28px;
+  }
+
+  #results .result .number {
+    font-size: 52px;
+    line-height: 85px;
+  }
+
+  #results .result .units {
+    font-size: 36px;
+  }
+
+  #results .controls {
+    text-align: left;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #upload h2, #download h2, #results .title-container h2 {
+    font-size: 44px;
+  }
+
+  #embed-button {
+    padding-top: 0px;
+  }
+
+  #copy-code p.title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #results .upload.result h3 {
+    margin: 0px 18px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .page {
+    margin: 10px;
+  }
+  #results .result .number {
+    font-size: 44px;
+    line-height: 75px;
+  }
+  #results .result .units {
+    font-size: 26px;
+  }
 }

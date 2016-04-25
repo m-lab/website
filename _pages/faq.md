@@ -4,127 +4,180 @@ permalink: /faq/
 title: "FAQ"
 sub-nav: true
 breadcrumb: "about"
-accordion-quick-links: true
-quick-links-section:
-  - column:
-    - group-heading: "General Questions"
-    - group-heading: "I am an internet user and I want to test my connection"
-  - column:
-    - group-heading: "I am a researcher"
-    - group-heading: "I am a company or institution"
-    - group-heading: "Contact MLab"
-gq-accordion:
-  - heading: "What and who are M-lab's supporting partners?"
-  - heading: "What's M-Lab's origin story?"
-  - heading: "Who's behind M-Lab? Can I get involved?"
-  - heading: "What is M-Lab, and why?"
-iu-accordion:
-  - heading: "How can I troubleshoot the NDT speed test?"
-  - heading: "A test isn't working. Whom do I contact?"
-  - heading: "What data will be collected when I run a test?"
-  - heading: "Will these tests monitor my private Internet activity, like email, browsing, search?"
-  - heading: "Are the measurement results always right?"
-  - heading: "What measurement tests can I run?"
-researcher-accordion:
-  - heading: "Can I deploy a new tool on the M-Lab platform?"
-company-accordion:
-  - heading: "How can I get involved?"
-contact-accordion:
-  - heading: "How can I contact M-Lab?"
 ---
 
-{:.general-questions}
+* Table of Contents
+{:toc}
+
 # General questions
 
-{% capture accordion_entry_1 %}
-Supporting partners are companies and institutions that have committed resources to M-Lab, either in the form of server infrastructure, funding, data storage/analysis, staffing, or other services dedicated to furthering M-Lab's goals. Check out our [list of supporting partners]({{ site.baseurl }}/who/).
-{% endcapture %}
+## What is M-Lab?
+{:.no_toc}
 
-{% capture accordion_entry_2 %}
-In 2008, [Vint Cerf](http://www.google.com/corporate/execs.html#vint) initiated conversations with network researchers to learn more about challenges to the effective study of broadband networks. Researchers identified several problems, including a lack of widely-deployed servers and ample connectivity to support active network measurement tools, and an inability to easily share large data sets with one another. M-Lab was founded by these researchers to help address these problems.
-{% endcapture %}
+Measurement Lab (M-Lab) is the largest open source Internet measurement effort in the world. (*Open source* refers to source code that is made available for free so that anyone can use or modify it to fit his or her own purposes.) M-Lab provides performance [tests]({{ site.baseurl }}/tests) that help consumers develop an accurate picture of their Internet service by offering a state-of-the-art server platform that supports many measurement needs. The data are collected and then released to the public for use by policymakers, researchers, and others who are interested in Internet issues.
 
-{% capture accordion_entry_3 %}
-M-Lab was [founded](http://measurementlab.net/who) by the New America Foundation's Open Technology Institute (OTI), the PlanetLab Consortium, Google Inc. and a large body of academic researchers. The founding researchers collectively make up the steering committee that leads development of M-Lab's organizational policies. M-Lab is a community-based effort. We currently receive assistance from M-Lab [supporting partners]({{ site.baseurl }}/who/), and we welcome others who would like to contribute to the platform's growth and success. In order for M-Lab to achieve its objectives, it relies on the participation of additional companies, institutions and researchers. Learn how to [get involved]({{ site.baseurl }}/contribute/).
-{% endcapture %}
+The graphic below illustrates the relationship between tests run by consumers and M-Lab’s data collection.
 
-{% capture accordion_entry_4 %}
-Measurement Lab (M-Lab) is an open, distributed server platform for researchers to deploy Internet measurement tools. If you're an Internet user, [the tools]({{ site.baseurl }}/tests/) running on M-Lab servers can help you test your broadband connection, including measuring its speed and evaluating the performance of certain applications. When you run a test, you will also provide valuable data back to researchers. The goal of M-Lab is to advance research and empower the public with useful information about their broadband connections. By enhancing Internet transparency, we aim to help sustain a healthy, innovative Internet.
-{% endcapture %}
+![Illustration showing the lifecycle of an M-Lab test]({{ site.baseurl }}/images/about/lifecycle-of-mlab-test.png)
 
-{% include accordion.html acc_section = "gq" %}
+# M-Lab's Tests and Data
 
-{:.i-am-an-internet-user-and-i-want-to-test-my-connection}
-# I am an internet user and I want to test my connection
+## What measurement tests can I run?
+{:.no_toc}
 
-{% capture accordion_entry_1 %}
-Troubleshoot NDT
+Right now, people can use M-Lab tests to measure their broadband speed, analyze application performance, and run diagnostics. The most commonly run test is the Network Diagnostic Test (NDT), which provides measurements like upload speed, download speed, and other data points that help to measure speed and quality issues on your connection. To read about all of the tests available on the platform, please visit our [tests page]({{ site.baseurl}}/tools/ndt/).
 
-We're sorry to hear that our test is not working for you.  The NDT test should take less than 60 seconds, so if it's taking longer than that there is something wrong.  These are a few steps you can take to troubleshoot the situation
+## Will these tests monitor my private Internet activity, like email messages or, browsing and search history?
+{:.no_toc}
 
-Our current NDT client test allows you to run NDT using Java or Websockets.  M-Lab recommends the Websockets version of NDT. If you experience issues running NDT, please contact us at <support@measurementlab.net>
-{% endcapture %}
+**Absolutely not.** M-Lab tests are designed to protect your privacy by measuring only synthetic traffic ("fake" traffic generated by a test) between your device and an M-Lab server. M-Lab’s [privacy and data collection policies]({{ site.baseurl }}/privacy) prohibit the collection of personally identifiable information and private user traffic.
 
-{% capture accordion_entry_2 %}
-You can find how to contact each researcher through the links on the [Tools page]({{ site.baseurl }}/tests/), or you can can contact the M-Lab operations team on our [contacts page]({{ site.baseurl }}/contact/).
-{% endcapture %}
+M-Lab collects and publishes all test data, which include the IP address assigned to your device by your Internet service provider (ISP). However, *this does not include any information about you as an Internet user, where you browse, or any other personal details.*
 
-{% capture accordion_entry_3 %}
-It depends on the tool you run; you can see our summaries [here]({{ site.baseurl }}/tests/).
+## What data will be collected when I run a test?
+{:.no_toc}
 
-Note that all tools currently running on M-Lab collect a user's IP address.
-{% endcapture %}
+Specific information on what type of data is collected by each M-Lab test and how it can be accessed is available on our [tests page]({{ site.baseurl }}/tests).
 
-{% capture accordion_entry_4 %}
-Absolutely not.
+## Who is collecting data? Where is it stored?
+{:.no_toc}
 
-Each tool generates and sends synthetic data back and forth between your computer and an M-Lab server. The tools collect data related to the particular communication "flows" generated by the client-server test. **The tools do not collect information about your other Internet traffic such as your emails and Web searche**s, unless you provide it in response to a specific request (such as a form that asks you to provide your email address as well). This could happen if a researcher offers a client-server tests that uses M-Lab, combined with separate components that measure other Internet traffic and do not rely on M-Lab. These tools will only report the client-server test data back to M-lab and will not report any data about your other Internet traffic back to the M-Lab servers. That data will go directly to the researcher responsible for the tool.
-{% endcapture %}
+For most tests, M-Lab collects raw test data and stores them in [Google Cloud Storage]({{ site.baseurl }}/data/gcs/).
 
-{% capture accordion_entry_5 %}
-The tools aim to be as accurate as possible, but because they measure complex issues using very specific methodologies and assumptions, there may also be other limitations to what can be interpreted based on the results; for instance, a slower than expected speed might be the result of the testing server being far from your computer, or a number of processes running in the background on your machine, rather than a problem with your ISP. The tests can help you get a sense of performance across specific parameters, and work with an expert, network administrator, or technical support to mitigate or clarify any apparent problems. If you have questions about the tools themselves, you should direct them to the researcher responsible for the tool.
-{% endcapture %}
+For some tests, such as the [Broadband Internet Service Benchmark (BISmark)]({{ site.baseurl }}/tools/bismark/), the test maintainers collect their test’s data and publish it on their own site.
 
-{% capture accordion_entry_6 %}
-Right now, users can access 12 tools to measure their broadband connection speed, analyze application performance, and run diagnostics. They range in complexity from Novice (suitable for anyone) to Expert (suitable for professional network administrators and those with considerable networking experience). Check out [the current tools.]({{ site.baseurl }}/tests/)
-{% endcapture %}
+## Where can I explore M-Lab data?
+{:.no_toc}
 
-{% include accordion.html acc_section = "iu" %}
+You can explore M-Lab’s NDT speed test data in Google’s [Public Data Explorer](http://www.google.com/publicdata/explore?ds=e9krd11m38onf_). All M-Lab data  are searchable [using BigQuery]({{ site.baseurl }}/data/bq/quickstart/) or can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
 
-{:.i-am-a-researcher}
-# I am a researcher
+## Why are my M-Lab results different from other speed tests?
+{:.no_toc}
 
-{% capture accordion_entry_1 %}
-If you're interested in deploying a tool, please first read [our document]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf) outlining M-Lab's requiremetns and procedures for accepting new tools on the platform.
+Internet performance tests may provide different results for a lot of reasons. Three of the main reasons for different results among tests are listed below:
 
-You can then prepare an application and [contact]({{ site.baseurl }}/contact/) the M-Lab Operations Committee, who will review the application and help guide you through the process.
-{% endcapture %}
+**1. Differences in the location of testing servers**
 
-{% include accordion.html acc_section = "researcher" %}
+Every performance test has two parts:
 
-{:.i-am-a-company-or-institution}
-# I am a company or institution
+* *client:* This is the software that runs on the user’s machine and shows the user their speed results.
 
-{% capture accordion_entry_1 %}
-Companies and institutions can help in a number of key ways, including:
+* *server:* This is the computer on the Internet to which the client connects to complete the test.
 
-{:.disc-list}
-- Provide servers for the platform and purchase network connectivity.
-- Provide resources for data hosting, aggregation and publication.
-- Provide data analysis resources.
-- Embed an M-Lab client-side tool in an application or service.
-- Provide funding to support the above.
+A test generates data between the client and the server, and measures performance between these two points. *The location of these two points is important in terms of understanding the results of a given test.*
 
-If you'd like to get involved as an M-Lab supporting partner, [contact]({{ site.baseurl }}/contact/) the M-lab steering committee and join the [public mailing list](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss).
-{% endcapture %}
+If the server is located within your Internet Service Provider’s (ISP’s) own network (also known as the "last mile"), this is referred to as an "on-net" measurement. This approach lets you know about how your Internet connection is performing within your ISP, but it does not necessarily reflect the full experience of using the Internet, which almost always involves accessing content and services that are hosted somewhere outside of your ISP. Results from on-net testing are often higher than those achieved by using other methods, since the "distance" traveled is generally shorter, and the network is entirely controlled by one provider (your ISP).
 
-{% include accordion.html acc_section = "company" %}
+"Off-net" measurements occur between your computer and a server located outside of your ISP's network. This means that traffic crosses borders between networks and often travels longer distances. Off-net testing generally produces results that are lower, relative to on-net testing.
 
-{:.contact-mlab}
-# Contact MLab
+M-Lab's measurements are always conducted off-net. This way, M-Lab is able to measure performance to locations where popular Internet content is often hosted, and so test users get a real sense of the performance they could expect when using the Internet.
 
-{% capture accordion_entry_1 %}
-You can [contact us here.]({{ site.baseurl }}/contact/)
-{% endcapture %}
+**2. Differences in testing methods**
 
-{% include accordion.html acc_section = "contact" %}
+Different Internet performance tests measure different things in different ways. M-Lab's NDT test tries to transfer as much data as it can in ten seconds (both up and down), using a single connection to an M-Lab server. Other popular tests try to transfer as much data as possible at once across multiple connections to their server. Neither method is "right" or "wrong," but using a single stream is more likely to help diagnose problems in the network than multiple streams would. [Learn more about M-Lab's NDT methodology](https://github.com/ndt-project/ndt/wiki/NDTTestMethodology).
+
+All NDT data collected by M-Lab are publicly available in both [visualized](http://www.google.com/publicdata/explore?ds=e9krd11m38onf_) (graphic) and [raw (unanalyzed) forms](https://console.developers.google.com/storage/browser/m-lab/ndt/).
+
+**3. Changing network conditions and distinct test paths**
+
+The Internet is always changing, and test results reflect that. A test conducted five minutes ago may show very different results from a test conducted twenty minutes ago. This can be caused by the test traffic being routed differently. For example, one test might travel over a path with broken router, while another may not. A test run today may be directed to a test server located farther away than a test run yesterday.
+
+In short, running one test will give you a sense of network conditions at that moment, across the best network path available at that time, to the specific server coordinating the test. But because Internet routing and infrastructure change dynamically, testing regularly and looking at the data over time are much more reliable ways to gauge representative performance.
+
+## How do I report issues with M-Lab tests?
+{:.no_toc}
+
+Most M-Lab tests should take less than sixty seconds to complete, so if your particular test is taking longer, there may be something wrong. First, do the following:
+
+* Try running the test again. Perhaps an unusual network issue caused the problem.
+* Try running the test from a different location. For example, if it failed at your home, does the test work at a coffee shop?
+* If the test doesn’t start or never completes, is your connection behind a firewall? This may be the case at some workplaces where the network is actively managed.
+
+If none of the above solves the issue you are experiencing, you can report a bug by emailing [support@measurementlab.net](mailto:support@measurementlab.net).
+
+When reporting a bug, please provide (if at all possible) the following specific information:
+
+* Your operating system
+* Your browser name and version
+* The name of the test that is not working
+* Any error messages you have received
+
+M-Lab support will usually reply within two business days. You can also ask other M-Lab users about the issue you are reporting in the [M-Lab-Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
+
+# About M-Lab
+
+## What is M-Lab's Mission?
+{:.no_toc}
+
+M-Lab aims to advance Internet research by empowering consumers with useful information about their Internet performance. By providing free, open Internet measurement data, researchers, regulators, advocacy groups, and the general public can get a better sense of how the Internet is working for them, and how to maintain and improve it for the future.
+
+## Who are M-Lab's supporting partners?
+{:.no_toc}
+
+M-Lab is supported by academic institutions, private foundations, private companies, and public interest organizations. M-Lab’s partners have committed resources to M-Lab in the form of infrastructure, funding, data storage/analysis, staffing, and other assistance dedicated to furthering M-Lab's mission. For a list of M-Lab’s partners, please see our [list of supporters]({{ site.baseurl }}/who).
+
+M-Lab was [founded]({{ site.baseurl }}/who) by New America’s Open Technology Institute (OTI), the PlanetLab Consortium, Google Open Source Research, and a large body of academic researchers. The founding researchers collectively make up the steering committee that leads development of M-Lab's organizational policies and provides oversight of the platform. M-Lab is a community-based effort. We currently receive resources and financial assistance from our partners and welcome others who would like to support the platform's growth.
+
+Interested in supporting M-Lab? Please see the FAQ section, Supporting or Contributing to M-Lab, and [contact us]({{ site.baseurl }}/contact) at [support@measurementlab.net](mailto:support@measurementlab.net) for more information.
+
+## What is the history of M-Lab?
+{:.no_toc}
+
+In 2008, [Vint Cerf](http://www.google.com/corporate/execs.html#vint), one of the "fathers of the Internet," began a series of conversations with Internet researchers to learn more about challenges they faced while trying to study Internet performance. Researchers identified several problems, including a lack of widely deployed servers with ample connectivity to support Internet measurement experiments. They also reported an inability to share large data sets with one another easily.
+
+There also was no public resource that could provide combined performance data to policymakers or to consumers interested in understanding their Internet performance over time. As a result of these conversations, M-Lab was founded to help address the core problems experienced by researchers and to promote large-scale open source measurement of the Internet.
+
+## How does M-Lab choose the tests it hosts?
+{:.no_toc}
+
+The Internet measurement tests running on the M-Lab platform are built and maintained by researchers interested in understanding the Internet and how people experience it. Interested researchers can build their own open source tests and apply to host them with M-Lab. Applications for new tests are reviewed by our operations team and our Steering Committee, and if approved, they are then installed on M-Lab’s global Internet measurement infrastructure. By making researchers’ tests available in this way and promoting their use by consumers, M-Lab serves both consumers and researchers, as well as regulators and others, by providing data collected over a period of time that is openly available for analysis. For more information, please see our FAQ: [Can I use M-Lab’s platform to host my own measurement experiment?]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software)
+
+## How can I contact M-Lab?
+{:.no_toc}
+
+You can contact M-Lab by emailing [support@measurementlab.net](mailto:support@measurementlab.net) or by joining our [M-Lab-Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
+
+# Supporting or contributing to M-Lab
+
+## How can I get involved and support M-Lab?
+{:.no_toc}
+
+For individuals, the best way to support M-Lab is to regularly use our tests. You gain the benefit of understanding more about your connection to the Internet, and the research community and the public benefits from the resulting public data.
+
+People who have expert knowledge in web or application development, data analysis, or data presentation in a graphic format  may also be interested in working with M-Lab’s tests, data, and analysis tools, all of which are open source and openly licensed. Contact us at [support@measurementlab.net](mailto:support@measurementlab.net) to learn more.
+
+## How can companies or other organizations get involved and support M-Lab?
+{:.no_toc}
+
+By becoming an M-Lab supporting partner, companies, nonprofit organizations, academic institutions, and other organizations can help M-Lab in a number of key ways, including the following:
+
+* By providing hardware to grow the M-Lab platform, and donating the cost of network connectivity and hosting.
+* By contributing resources for data storage, aggregation, and publication.
+* By providing data analysis or by presenting data in graphic form.
+* By embedding an M-Lab client tool in an application or service, allowing M-Lab to reach more people and generate more data.
+* By providing direct financial support.
+
+If you'd like to get involved as an M-Lab supporting partner, [contact](http://www.measurementlab.net/contact) the M-Lab team and join the [M-Lab Discuss Group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
+
+## How can researchers get involved?
+{:.no_toc}
+
+M-Lab welcomes researchers who want to dig into the M-Lab data. Our team provides documentation and support for those interested. If you are interested in working with M-Lab data in your research, check out our [data documentation]({{ site.baseurl }}/data) to help get you started and [contact us](mailto:support@measurementlab.net) with any questions. We also suggest you join our [M-Lab Discuss Group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss) for news and announcements.
+
+## Can I use M-Lab to host my own measurement experiment?
+{:.no_toc}
+
+M-Lab is open to applications from researchers who develop and maintain open source network measurement tests that conform to our [goals and support our mission]({{ site.baseurl }}/contribute). However, the vast majority of proposed M-Lab tests are not accepted because of the high standard that M-Lab sets for the tests that we host. We require all tests to be actually initiated by an end-user; that is, we don’t allow automatic tests to be run between measurement points on the platform. And the test must be remotely managed from a systems perspective; a test installed on our servers must start up and begin waiting for people to start connecting to it to run their test. These active, client-initiated, off-net network measurement tests must examine the full network path between the consumer and the Internet.
+
+The researchers who are managing the current tests on the M-Lab platform have secured sufficient funding to support the test’s continued development, deployment, and maintenance throughout its entire life cycle. Your decision to host a particular test on the M-Lab platform is a commitment to provide substantial resources over a period of years and to an ongoing relationship with the M-Lab operations team.
+
+Applications for new tests are reviewed by M-Lab’s operations team and Steering Committee twice a year. The number of slots available is finite, so M-Lab will consider only serious inquiries from researchers who are working on mature tests that both align with the M-Lab mission and do not significantly overlap with the functionality of existing tests.
+
+If you are interested in deploying a new tool or test on the M-Lab platform, please first read [our document]({{ site.baseurl }}/publications/mlab-procedures-new-tools.pdf) outlining M-Lab's requirements and procedures for accepting new tools on the platform, and then [contact](mailto:support@measurementlab.net) the M-Lab Operations team for more information.
+
+## How can I add an M-Lab test to my website, app or other software?
+{:.no_toc}
+
+M-Lab's open source tests can be added to your website, mobile application, or other software. The Network Diagnostic Tool (NDT) from [Internet 2](http://www.internet2.edu/performance/ndt/), has been used by a number of third party websites and application developers, including [internethealthtest.org](http://internethealthtest.org/), [the city of Seattle's broadband map](http://www.seattle.gov/broadband-speed-test), Bittorrent's [uTorrent client](http://www.utorrent.com/intl/en/), and several others.
+
+The M-Lab team regularly consults with and supports application and web developers interested in integrating our client tests. If you are interested in adding an M-Lab test to your website or application, please [contact us](mailto:support@measurementlab.net).

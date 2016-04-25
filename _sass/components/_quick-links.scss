@@ -1,8 +1,26 @@
 // Quick Links Navigational Component
 
 .quick-links {
-    width: 660px;
+
+  &:before,&:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden
+  }
+
+  &:after {
+    clear: both
+  }
+
+  &.l-span2 {
+    width: 100%;
     padding: 38px 0 0px;
+
+    .l-span1 {
+      width: 48%;
+    }
+  }
 
   > ul {
   	@include list_bullets(none, 0px, 10px, 20px);
@@ -24,6 +42,34 @@
       float: left;
       margin-bottom: 10px;
       top: 3px;
+    }
+  }
+
+}
+
+ul#markdown-toc {
+  margin: 0px;
+  padding: 0px;
+
+  @include list_bullets(none, 0px, 10px, 20px);
+
+  li:before {
+    background:url("../images/sprites/globalSprite-1x.png") no-repeat -42px -128px;
+    width: 9px;
+    height: 15px;
+    display: block;
+    content: " ";
+    float: left;
+    padding-left: 10px;
+    box-sizing: initial;
+  }
+
+  a {
+    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+    color: #454545;
+
+    &:hover {
+      color: #454545;
     }
   }
 

@@ -14,4 +14,6 @@ coverage
 .ruby-version
 .sass-cache
 _config-deploy.yml
+_config-deploy.ymle
 js/app.js
+_cf_s3_invalidator.yml
