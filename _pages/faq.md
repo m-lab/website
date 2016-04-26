@@ -49,7 +49,7 @@ For some tests, such as the [Broadband Internet Service Benchmark (BISmark)]({{ 
 ## Where can I explore M-Lab data?
 {:.no_toc}
 
-You can explore M-Lab’s NDT speed test data in Google’s [Public Data Explorer](http://www.google.com/publicdata/explore?ds=e9krd11m38onf_). All M-Lab data  are searchable [using BigQuery]({{ site.baseurl }}/data/bq/quickstart/) or can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
+You can explore M-Lab’s NDT speed test data in Google’s [Public Data Explorer](http://www.google.com/publicdata/explore?ds=e9krd11m38onf_). All M-Lab data  are searchable [using BigQuery](http://www.measurementlab.net/data/bq/quickstart/) or can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
 
 ## Why are my M-Lab results different from other speed tests?
 {:.no_toc}
@@ -61,7 +61,6 @@ Internet performance tests may provide different results for a lot of reasons. T
 Every performance test has two parts:
 
 * *client:* This is the software that runs on the user’s machine and shows the user their speed results.
-
 * *server:* This is the computer on the Internet to which the client connects to complete the test.
 
 A test generates data between the client and the server, and measures performance between these two points. *The location of these two points is important in terms of understanding the results of a given test.*
