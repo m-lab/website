@@ -7,14 +7,14 @@ menu-item: true
 breadcrumb: about
 ---
 
-# M-Lab - Open Internet Measurement
+# Open Internet Measurement
 
 When your Internet connection doesn't work as expected, how can you tell whether the problem is caused by your connection, the application or something else? Answering this question and others like it is surprisingly difficult. That is where Measurement Lab comes in.
 
 M-Lab is a consortium of research, industry and public-interest partners dedicated to:
 
 * Providing an open, verifiable measurement platform for global network performance
-* Hosting the largest open Internet performance dataset on the planet.
+* Hosting the largest open Internet performance dataset on the planet
 * Creating visualizations and tools to help people make sense of Internet performance
 
 {:.about-h2}

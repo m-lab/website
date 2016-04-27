@@ -61,7 +61,7 @@ Internet performance tests may provide different results for a lot of reasons. T
 Every performance test has two parts:
 
 * *client:* This is the software that runs on the user’s machine and shows the user their speed results.
-* *server*: This is the computer on the Internet to which the client connects to complete the test.
+* *server:* This is the computer on the Internet to which the client connects to complete the test.
 
 A test generates data between the client and the server, and measures performance between these two points. *The location of these two points is important in terms of understanding the results of a given test.*
 

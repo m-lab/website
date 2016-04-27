@@ -35,7 +35,7 @@ WHERE
 
 By slightly modifying the previous query, it is possible to compute how the number of users changed over time.
 
-The multiplication by POW(10, 6) is due to the fact that STRFTIME_UTC_USEC expects a timestamp in microseconds, while web100_log_entry.log_time is in seconds. The [BigQuery Query Reference](https://cloud.google.com/bigquery/query-reference#datetimefunctions){:target="_blank"} describes the STRFTIME_UTC_USEC function.
+The multiplication by `POW(10, 6)` is due to the fact that `STRFTIME_UTC_USEC` expects a timestamp in microseconds, while `web100_log_entry.log_time` is in seconds. The [BigQuery Query Reference](https://cloud.google.com/bigquery/query-reference#datetimefunctions){:target="_blank"} describes the `STRFTIME_UTC_USEC` function.
 
 ~~~sql
 SELECT
@@ -123,7 +123,7 @@ FROM
 Some IP addresses may have many initiated tests, while others may have only a few tests. To assess the representation of each IP address, we can classify the IP address based on the number of tests it has initiated.
 
 * The query that follows computes the number of NDT tests initiated by each client IP address, groups the IP addresses by the number of tests run, and returns the number of IP addresses in each group.
-* The inner query (in parentheses beginning with the second SELECT statement) calculates the number of NDT tests that each client performed. The query uses the GROUP BY clause to collapse all the rows with the same remote IP address. The [BigQuery Query Reference](https://cloud.google.com/bigquery/docs/query-reference#groupby){:target="_blank"} describes the `GROUP BY` command.
+* The inner query (in parentheses beginning with the second SELECT statement) calculates the number of NDT tests that each client performed. The query uses the `GROUP BY` clause to collapse all the rows with the same `remote_ip` address. The [BigQuery Query Reference](https://cloud.google.com/bigquery/docs/query-reference#groupby){:target="_blank"} describes the `GROUP BY` command.
 * The outer query transforms the results of the inner query by grouping each client according to the number of tests it performed, and then calculating the number of clients in each bucket.
 
 ~~~sql

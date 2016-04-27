@@ -88,7 +88,7 @@ The URLs shown in [M-Lab's GCS web interface](https://console.developers.google.
 
 You can access M-Lab files programmatically by replacing:
 
-`storage.cloud.google.com/m/cloudstorage/`
+`storage.cloud.google.com/m/cloudstorage/b`
 
 with
 
@@ -108,7 +108,7 @@ You can access it without authentication via this URL:
 
 A list of all M-Lab files in GCS is available at:
 
-[https://storage.googleapis.com/m-lab/list/all_mlab_tarfiles.txt.gz](http:///h)
+[https://storage.googleapis.com/m-lab/list/all_mlab_tarfiles.txt.gz](https://storage.googleapis.com/m-lab/list/all_mlab_tarfiles.txt.gz)
 
 This file provides gs:// URLs to M-Lab data.
 
