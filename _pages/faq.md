@@ -9,7 +9,7 @@ breadcrumb: "about"
 * Table of Contents
 {:toc}
 
-# General questions
+# General Questions
 
 ## What is M-Lab?
 {:.no_toc}
@@ -61,7 +61,6 @@ Internet performance tests may provide different results for a lot of reasons. T
 Every performance test has two parts:
 
 * *client:* This is the software that runs on the user’s machine and shows the user their speed results.
-
 * *server:* This is the computer on the Internet to which the client connects to complete the test.
 
 A test generates data between the client and the server, and measures performance between these two points. *The location of these two points is important in terms of understanding the results of a given test.*
@@ -106,7 +105,7 @@ M-Lab support will usually reply within two business days. You can also ask othe
 
 # About M-Lab
 
-## What is M-Lab's Mission?
+## What is M-Lab's mission?
 {:.no_toc}
 
 M-Lab aims to advance Internet research by empowering consumers with useful information about their Internet performance. By providing free, open Internet measurement data, researchers, regulators, advocacy groups, and the general public can get a better sense of how the Internet is working for them, and how to maintain and improve it for the future.
@@ -137,7 +136,7 @@ The Internet measurement tests running on the M-Lab platform are built and maint
 
 You can contact M-Lab by emailing [support@measurementlab.net](mailto:support@measurementlab.net) or by joining our [M-Lab-Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
 
-# Supporting or contributing to M-Lab
+# Supporting or Contributing to M-Lab
 
 ## How can I get involved and support M-Lab?
 {:.no_toc}
