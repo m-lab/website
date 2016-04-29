@@ -31,15 +31,15 @@ By becoming M-Lab supporting partners, companies, nonprofit organizations, and a
 
 If you'd like to get involved as an M-Lab supporting partner, [contact](mailto:support@measurementlab.net) the M-Lab team and join the [public mailing list](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss){:target="_blank"}.
 
-### Providing resources for new M-Lab Measurement Points
+### Providing Resources for New M-Lab Measurement Points
 
 M-Lab supporting partners may contribute or donate resources to provide new measurement points around the world. If you are interested in helping M-Lab expand our coverage to new areas, please submit [this application](https://docs.google.com/a/measurementlab.net/spreadsheet/viewform?formkey=dHNMZ2p0OU5TckxIUFg0RVNhSk5teEE6MQ#gid=0). The document [How to Deploy a New M-Lab Site]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf) outlines the resources needed for each M-Lab Measurement Point.
 
-### Providing resources for data hosting, aggregation, and publication
+### Providing Resources for Data Hosting, Aggregation, and Publication
 
 As an M-Lab partner, many facets of the M-Lab platform can be supported based on your organization's interests, capacities, or resources. If your organization is interested in supporting the M-Lab platform, please [contact](mailto:support@measurementlab.net) the M-Lab team to get started.
 
-### Analyze and visualize the M-Lab data
+### Analyze and Visualize the M-Lab Data
 
 If you have experience in web or application development, data analysis, or visualization, you may be interested in working with M-Lab's tests, data, and analysis tools, all of which are open source and openly licensed.
 
@@ -47,10 +47,10 @@ If you have experience in web or application development, data analysis, or visu
 * [M-Lab's Roles &amp; Responsibilities for new researchers]({{ site.baseurl }}/publications/mlab-roles-responsibilities.pdf)
 * [M-Lab's requirements and procedures for accepting new tools]({{ site.baseurl }}/publications/mlab-procedures-new-tools.pdf)
 
-### Embedding an M-Lab client test in an application or service
+### Embedding an M-Lab Client Test in an Application or Service
 
 M-Lab's open source tests can be added to your website, mobile application, or other software, providing a service to your users and allowing M-Lab to reach more people and generate more data. Find out more information in our FAQ article: [How can I add an M-Lab test to my website, mobile app, or other software?]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software). You can also review our [data documentation]({{ site.baseurl }}/data/) or [contact us](mailto:support@measurementlab.net) to learn more.
 
-### Provide direct financial support
+### Provide Direct Financial Support
 
 M-Lab welcomes the direct financial contributions of organizations that find our work beneficial. If your organization is interested in supporting the M-Lab platform, please [contact us](mailto:support@measurementlab.net), and a member of the M-Lab team will get back to you.

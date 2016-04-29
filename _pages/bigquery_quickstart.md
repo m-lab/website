@@ -14,13 +14,13 @@ breadcrumb: data
 
 To search M-Lab's data using BigQuery, follow these quick steps to get started:
 
-### Step 1. Configure Google Cloud Platform Console project
+### Step 1. Configure Google Cloud Platform Console Project
 
 Create a project, and enable billing in [Google Cloud Platform Console](https://console.developers.google.com/){:target="_blank"} (or use an existing project with billing enabled).
 
 You will **not** be charged for queries against tables in the M-Lab data set. M-Lab is committed to open data, and offering our data free of charge is part of that commitment.
 
-### Step 2. Configure M-Lab table access
+### Step 2. Configure M-Lab Table Access
 
 Join the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"} with the same account you used to create your Google Cloud Platform Console project. Joining this group enables your account so that you can make queries against M-Lab's BigQuery tables.
 

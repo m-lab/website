@@ -161,7 +161,7 @@ grid-section:
         alt: "SolDelvelo Logo"
 ---
 
-# Who we are
+# Who We Are
 
 M-Lab was founded by [New America's Open Technology Institute (OTI)](https://www.newamerica.org/oti/), the [PlanetLab Consortium](http://planet-lab.org/), Google Inc., and academic researchers. The founding members collectively make up the steering committee that will lead the development of M-Lab’s organizational policies and structure going forward.
 

@@ -70,7 +70,7 @@ Direct links to each M-Lab project's raw data are available below:
 
 ## Accessing Data Programmatically
 
-### Accessing data with `gsutil`
+### Accessing Data with `gsutil`
 
 The easiest way to access M-Lab data on GCS programmatically is by using the [`gsutil`](https://cloud.google.com/storage/docs/gsutil) command-line utility.
 
@@ -82,7 +82,7 @@ $ gsutil ls -l gsutil ls -l gs://m-lab/
 $ gsutil cp gs://m-lab/ndt/2009/02/18/20090218T000000Z-mlab1-lga01-ndt-0000.tgz .
 ~~~
 
-### Accessing data with common HTTP tools
+### Accessing Data With Common HTTP Tools
 
 The URLs shown in [M-Lab's GCS web interface](https://console.developers.google.com/storage/browser/m-lab/){:target="_blank"} require the user to be logged in, which can present challenges when attempting to access the data with common HTTP utilities like `curl` or `wget`.
 

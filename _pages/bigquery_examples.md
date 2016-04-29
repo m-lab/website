@@ -12,7 +12,7 @@ breadcrumb: data
 
 The examples below query the M-Lab data in various ways to demonstrate effective use of the M-Lab BigQuery data set. Please note that the examples presented here assume prior knowledge of database query languages such as [SQL](https://en.wikipedia.org/wiki/SQL){:target="_blank"} and some knowledge of computer networking terms and concepts such as [subnets](https://en.wikipedia.org/wiki/Subnetwork){:target="_blank"} and [IP addresses](https://en.wikipedia.org/wiki/IP_address){:target="_blank"}.
 
-## Basic counting: How many users?
+## Basic Counting: How Many Users?
 
 Let's start with something simple. How many distinct users (distinct IPs, for simplicity) have ever run an **NDT** test?
 
@@ -31,7 +31,7 @@ WHERE
 |-------------|
 | 110814220   |
 
-## Computing statistics over time: How many users per day?
+## Computing Statistics Over Time: How Many Users Per Day?
 
 By slightly modifying the previous query, it is possible to compute how the number of users changed over time.
 
@@ -65,7 +65,7 @@ ORDER BY
 | 2015-12-27  |       52995 |
 | 2015-12-28  |       50751 |
 
-## Dealing with IP addresses: How many users from distinct subnets?
+## Dealing with IP Addresses: How Many Users from Distinct Subnets?
 
 BigQuery supports various functions to parse IP addresses in different formats. You can use such functions to aggregate the number of users per subnet and to compute how many subnets have ever initiated a test.
 
@@ -87,7 +87,7 @@ FROM
 |-------------|
 | 4548859     |
 
-## Comparing NDT and NPAD tests: How many users have run both NDT and NPAD tests?
+## Comparing NDT and NPAD Tests: How Many Users Have Run Both NDT and NPAD tests?
 
 This query computes the number of distinct IP addresses that have run tests using both NDT and NPAD. The inner query (in parentheses beginning with the second SELECT statement) is an inner join between the NDT and NPAD tables containing the rows where the remote IP field in both tables match.
 
@@ -118,7 +118,7 @@ FROM
 |----------------|
 |           74535|
 
-## Computing distributions of tests across users: How many users have run a certain number of tests?
+## Computing Distributions of Tests Across Users: How Many Users Have Run a Certain Number of Tests?
 
 Some IP addresses may have many initiated tests, while others may have only a few tests. To assess the representation of each IP address, we can classify the IP address based on the number of tests it has initiated.
 
