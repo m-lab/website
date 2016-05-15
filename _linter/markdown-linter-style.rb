@@ -3,7 +3,7 @@ all
 
 #  Rule Modifications
 #  ----------------------------------------------------------------------------
-## MD029 - tells linter to allow ordered lists that will increment by 1.  By 
+## MD029 - tells linter to allow ordered lists that will increment by 1.  By
 ## default (w/o modification) the linter doesn't accept lists structured like:
 ## 1. List item #1
 ## 2. List item #2
@@ -11,7 +11,7 @@ all
 rule 'MD029', :style => :ordered
 
 
-#  Exclude the following linter rules that conflict with the team's Markdown 
+#  Exclude the following linter rules that conflict with the team's Markdown
 #  writing preferences.
 #  ----------------------------------------------------------------------------
 ## MD013 - Line length.  Disabled unless can determine automated way to fix.
@@ -29,9 +29,6 @@ exclude_rule 'MD034'
 
 #  Excluding these rules until content can be re-worked to adhere to the rules
 #  ----------------------------------------------------------------------------
-## MD001 - Check that Header levels increment by one level at a time.
-exclude_rule 'MD001'
-
 ## MD022 - Headers should be surrounded by blank lines
 exclude_rule 'MD022'
 
@@ -46,3 +43,6 @@ exclude_rule 'MD036'
 
 ## MD038 Spaces inside code span elements
 exclude_rule 'MD038'
+
+## MD041 First line in file should be a top level header
+exclude_rule 'MD041'
