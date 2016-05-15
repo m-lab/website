@@ -17,12 +17,17 @@ function(
 
       //adds anchor permalinks to any Header tag that has an id
       $(anchorElements).each(function (i, el) {
-        var $el, id;
+        var $el, id, permalink;
         $el = $(el);
         id = $el.attr('id');
         if (id) {
+          if ( $('#blog-nav-page').length ) {
+            permalink = $('.blog-entry').attr('id') + "#" + id;
+          } else {
+            permalink = "#" + id
+          }
           return $el.prepend($("<a />").addClass("anchor-link")
-            .attr("href", "#" + id).attr("data-icon", ""));
+            .attr("href", permalink).attr("data-icon", ""));
         }
       });
 
@@ -45,12 +50,12 @@ function(
       //minor event listener on mobile menu accordions to flip the arrow
       // glyphicon depending if the particular accordion is open or closed.
       $('.mobile-sub-nav').on('show.bs.collapse', function(){
-        $(this).parent().find(".glyphicon-triangle-bottom") 
-          .removeClass("glyphicon-triangle-bottom") 
+        $(this).parent().find(".glyphicon-triangle-bottom")
+          .removeClass("glyphicon-triangle-bottom")
           .addClass("glyphicon-triangle-top");
       }).on('hide.bs.collapse', function(){
         $(this).parent().find(".glyphicon-triangle-top")
-          .removeClass("glyphicon-triangle-top") 
+          .removeClass("glyphicon-triangle-top")
           .addClass("glyphicon-triangle-bottom");
       });
 

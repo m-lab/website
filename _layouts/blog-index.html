@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="container">
+<div class="container" id="blog-nav-page">
   <div class="row">
 
     {% include breadcrumbs.html %}
@@ -13,15 +13,15 @@ layout: default
 
           {% for post in paginator.posts %}
 
-          <article class="blog-entry">
+          <article class="blog-entry" id="{{ post.url | prepend: site.baseurl }}">
 
             {{ post.content }}
 
             <footer class="meta">
-              <small>Posted by <b class="author">{{ post.author }}</b> on <span class="published">{{ post.date | date: "%Y-%m-%d" }}</span> 
+              <small>Posted by <b class="author">{{ post.author }}</b> on <span class="published">{{ post.date | date: "%Y-%m-%d" }}</span>
 
-              {% if post.categories.size > 0 %}             
-                filed under 
+              {% if post.categories.size > 0 %}
+                filed under
                 <span class="categories">
 
                 {% for cat in post.categories %}
@@ -35,7 +35,7 @@ layout: default
             </footer>
 
           </article> <!-- .blog-entry -->
-          
+
           {% endfor %}
 
           {% if paginator.total_pages > 1 %}
