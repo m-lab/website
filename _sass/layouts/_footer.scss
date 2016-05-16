@@ -25,13 +25,17 @@
     color: #767676;
   }
 
-  .callout-ctn>li {
-      display: -moz-inline-stack;
-      display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto;
-      zoom:1;*display: inline;
-      margin-right: -1px;
+  ul.callout-ctn {
+    padding-bottom: 12px;
+
+    &>li {
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom:1;*display: inline;
+        margin-right: -1px;
+    }
   }
 
   .footer-links {
@@ -53,7 +57,7 @@
       padding-top: 10px;
       font-size: 14px;
       line-height: 20px;
-    }   
+    }
 
     a {
       color: #d94f40;
