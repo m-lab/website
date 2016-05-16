@@ -28,11 +28,9 @@
     background-size: cover;
 
     .player-control {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      margin: auto;
+      position: relative;
+      top: 50%;
+      margin: -25px auto 0px;
     }
 
     &:hover .player-control {
