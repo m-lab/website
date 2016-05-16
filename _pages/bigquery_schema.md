@@ -53,7 +53,7 @@ All M-Lab data share the same data schema in BigQuery. The fields are described 
 | `connection_spec.server_af`                         |  `integer`   |  Address family of the server's IP address. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.local_af`.) |
 | `connection_spec.server_hostname`                   |  `string`    |  Server's hostname. (This field is **optional**.) |
 | `connection_spec.server_kernel_version`             |  `string`    |  Server's kernel version. (This field is **optional**.) |
-| `connection_spec.client_ip `                        |  `string`    |  IP address of the user's client. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.remote_ip`.) |
+| `connection_spec.client_ip`                         |  `string`    |  IP address of the user's client. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.remote_ip`.) |
 | `connection_spec.client_af`                         |  `integer`   |  Address family of the client's IP address. (This field is **optional**.) |
 | `connection_spec.client_hostname`                   |  `string`    |  Client's hostname. (This field is **optional**.) |
 | `connection_spec.client_application`                |  `string`    |  Client application that ran the test. (This field is **optional**.) |
