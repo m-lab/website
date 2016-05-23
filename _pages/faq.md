@@ -67,7 +67,7 @@ A test generates data between the client and the server, and measures performanc
 
 If the server is located within your Internet Service Provider’s (ISP’s) own network (also known as the "last mile"), this is referred to as an "on-net" measurement. This approach lets you know about how your Internet connection is performing intra-network within your ISP, but it does not necessarily reflect the full experience of using the Internet, which almost always involves using inter-network connections to access content and services that are hosted somewhere outside of your ISP. Results from on-net testing are often higher than those achieved by using other methods, since the "distance" traveled is generally shorter, and the network is entirely controlled by one provider (your ISP).
 
-"Off-net" measurements occur between your computer and a server located outside of your ISP's network. This means that traffic crosses inter-networ borders and often travels longer distances. Off-net testing frequently produces results that are lower, relative to on-net testing.
+"Off-net" measurements occur between your computer and a server located outside of your ISP's network. This means that traffic crosses inter-network borders and often travels longer distances. Off-net testing frequently produces results that are lower than those produced from on-net testing.
 
 M-Lab's measurements are always conducted off-net. This way, M-Lab is able to measure performance from testers' computers to locations where popular Internet content is often hosted. By having inter-network connections included in the test, test users get a real sense of the performance they could expect when using the Internet.
 
