@@ -4,8 +4,8 @@ title: "Traffic Microbursts and their Effect on Internet Measurement"
 author: "Collin Anderson"
 breadcrumb: blog
 categories:
-  - bigquery
-  - gcs
+  - microbursts
+  - switch discard
   - performance
   - data
 ---
@@ -26,4 +26,5 @@ This document does the following:
 
 
 A full accounting can be found in our incident report available here:
+
 [Traffic Microbursts and their Effect on Internet Measurement (PDF)]({{ site.baseurl }}/publications/SwitchDiscardNotice-Final-20160525.pdf){:.download-link .paper-download target="_blank"}

@@ -17,7 +17,7 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ### Traffic Microbursts and their Effect on Internet Measurement
 
 {:.paper-description}
-Report on M-Lab's evaluation of potential site performance degradation in late 2015 due to switch discards caused by microburst traffic.
+Report on M-Lab's evaluation of reported site performance degradation in late 2015 due to switch discards caused by microburst traffic.
 
 {:.paper-author}
 M-Lab Research Team
