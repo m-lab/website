@@ -12,6 +12,18 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 # Papers
 
+## 2016
+
+### Traffic Microbursts and their Effect on Internet Measurement
+
+{:.paper-description}
+Report on M-Lab's evaluation of reported site performance degradation in late 2015 due to switch discards caused by microburst traffic.
+
+{:.paper-author}
+M-Lab Research Team
+
+[Download PDF]({{ site.baseurl }}/publications/SwitchDiscardNotice-Final-20160525.pdf){:.download-link .paper-download target="_blank"}
+
 ## 2014
 
 ### ISP Interconnection and Its Impact on Consumer Internet Performance—A Measurement Lab Consortium Technical Report
