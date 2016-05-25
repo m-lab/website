@@ -24,7 +24,6 @@ This document does the following:
 * describes measures taken to prepare M-Lab infrastructure for the next generation of consumer networks; and,
 * reproduces past research conducted by M-Lab, using unaffected data, in order to provide updated analysis and confirm the continued validity of our previous findings
 
-
 A full accounting can be found in our incident report available here:
 
 [Traffic Microbursts and their Effect on Internet Measurement (PDF)]({{ site.baseurl }}/publications/SwitchDiscardNotice-Final-20160525.pdf){:.download-link .paper-download target="_blank"}
