@@ -20,11 +20,7 @@ M-Lab is a consortium of research, industry and public-interest partners dedicat
 {:.about-h2}
 ## Why Measurement Lab?
 
-Real science requires verifiable processes, and M-Lab welcomes scientific collaboration and scrutiny. This is why all of the data collected by M-Lab's global measurement platform is openly
-
-available, and all of the measurement tools hosted by M-Lab are open source. Anyone with the time and skill can review and improve the underlying methodologies and assumptions on which M-Lab's
-
-platform, tools, and data rely. Transparency and review are key to good science, and good science is key to good measurement.
+Real science requires verifiable processes, and M-Lab welcomes scientific collaboration and scrutiny. This is why all of the data collected by M-Lab's global measurement platform is openly available, and all of the measurement tools hosted by M-Lab are open source. Anyone with the time and skill can review and improve the underlying methodologies and assumptions on which M-Lab's platform, tools, and data rely. Transparency and review are key to good science, and good science is key to good measurement.
 
 {:.about-h2}
 ## An Open Platform for Researchers
