@@ -14,6 +14,16 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 ## 2016
 
+### CUSUM Anomaly Detection
+
+{:.paper-description}
+The CUSUM anomaly detection (CAD) method is based on CUSUM statistical process control charts. CAD is used to detect anomalous subsequences of a time series that show a subtle shift in the mean relative to the context of the sequence itself. CAD was applied in order to look for anomalies in M­Lab’s database of Network Diagnostic Test (NDT) results.
+
+{:.paper-author}
+Kinga Farkas
+
+[Download PDF]({{ site.baseurl }}/publications/CUSUMAnomalyDetection.pdf){:.download-link .paper-download target="_blank"}
+
 ### Traffic Microbursts and their Effect on Internet Measurement
 
 {:.paper-description}
