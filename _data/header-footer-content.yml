@@ -3,15 +3,10 @@ header:
   logo-title: "M-Lab"
   ctas:
   -
-    link: "/contribute/"
-    h2: "Help us grow and improve"
-    h3: "Contribute to M-Lab"
+    link: "/who/"
+    h2: "A partnership between New America's Open Technology Institute, Google Open Source Research, Princeton University's PlanetLab, and other supporting partners. "
+    h3: "Learn more about M-Lab"
     class: "assist-cta"
-  -
-    link: "https://github.com/m-lab/mlab-wikis"
-    h2: "Read about our projects"
-    h3: "Research Wiki"
-    class: "learn-cta"
   category:
     -
       title: "about"
