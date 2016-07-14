@@ -31,7 +31,7 @@
       </div>
 
     {% for item in header.ctas %}
-      <div class="col-xs-5 col-sm-5 col-md-4" id="{{ item.class }}">
+      <div class="col-xs-5 col-sm-5" id="{{ item.class }}">
         <a href="{% if item.link | slice: 0 = "/" %}{{ item.link | prepend: site.baseurl }}{% else %}{{ item.link }}{% endif %}" class="header-cta {{ item.class }}">
           <span class="pull-right">
             <h2>{{ item.h2 }}</h2>
