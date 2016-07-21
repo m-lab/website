@@ -3,7 +3,7 @@ header:
   logo-title: "M-Lab"
   ctas:
   -
-    h2: "A partnership between New America\'s <a href='https://newamerica.org/oti'>Open Technology Institute</a>, Google Open Source Research, <a href='https://planet-lab.org'>Princeton University\'s PlanetLab</a>, and other supporting partners. <a href='/about'>Learn more.</a>"
+    h2: "A partnership between New America's <a href='https://newamerica.org/oti'>Open Technology Institute</a>, Google Open Source Research, <a href='https://planet-lab.org'>Princeton University\'s PlanetLab</a>, and other supporting partners. <a href='/about'>Learn more.</a>"
     class: "assist-cta"
   category:
     -
