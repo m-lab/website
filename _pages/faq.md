@@ -83,6 +83,9 @@ The Internet is always changing, and test results reflect that. A test conducted
 
 In short, running one test will give you a sense of network conditions at that moment, across the best network path available at that time, to the specific server coordinating the test. But because Internet routing and infrastructure change dynamically, testing regularly and looking at the data over time are much more reliable ways to gauge representative performance.
 
+## My NDT test failed, can you help?
+{:.no_toc}
+
 ## How do I report issues with M-Lab tests?
 {:.no_toc}
 
