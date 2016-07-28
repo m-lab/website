@@ -12,9 +12,9 @@ Do you have a question or comment about M-Lab? Do you need to report an issue or
 The M-Lab team monitors [support@measurementlab.net](mailto:support@measurementlab.net) and [contact@measurementlab.net](mailto:contact@measurementlab.net), but most likely the answers to your question(s) can be found in the FAQ on our website. Please check these commonly asked questions:
 
 * [How do I access M-Lab Data?]({{ site.baseurl }}/data/bq/quickstart/)
-* [My NDT test failed, can you help?]({{ site.baseurl }}/faq/#how-do-i-report-issues-with-m-lab-tests)
+* [My NDT test failed, can you help?]({{ site.baseurl }}/faq/#my-ndt-test-failed-can-you-help)
 * [What do the fields in the NDT data mean?]({{ site.baseurl }}/data/bq/schema/)
-* [Why are my results from M-Lab different from other speed tests?]({{ site.baseurl }}/faq/#why-are-my-m-lab-results-different-from-other-speed-tests)
+* [Why are my results from M-Lab different from other speed tests?]({{ site.baseurl }}faq/#why-are-my-m-lab-results-different-from-other-speed-tests)
 * [What is M-Lab?]({{ site.baseurl }}/faq/#what-is-m-lab)
 * [Who runs M-Lab?]({{ site.baseurl }}/faq/#who-are-m-labs-supporting-partners)
 
