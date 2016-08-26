@@ -17,7 +17,6 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ### Analysis of Impartial Quality Measurements on Indian Broadband Connections
 {:.paper-description}
 Broadband Internet user base is growing at an exponential pace in India. The market pressures are forcing the Internet service providers (ISPs) to sell their service offerings aggressively, resulting in a growing discrepancy between consumer expectations and service offerings from the ISPs. This discrepancy is often evident in experienced vs offered Internet connection service.
-
 We study the Quality of Service (QoS) variations for Internet connections of the Indian broadband users. We use the Network Diagnostic Test (NDT) data set provided by the Measurement Lab (M-Lab) for the study. Our study shows a significant increase in the maximum and the average Internet connection throughput values. We present a statistical summary of the four QoS parameters (throughput, jitter, latency and packet loss) for the Indian broadband connections. Our study shows a lack of diversity in the QoS characteristics of the Indian broadband connections.
 
 {:.paper-author}
