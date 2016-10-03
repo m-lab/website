@@ -7,10 +7,8 @@ categories:
   - dataviz
   - visualization
   - observatory
-  - pde
   - data
   - open source
-  - d3
 ---
 
 # Showing Missing Data in Line Charts
