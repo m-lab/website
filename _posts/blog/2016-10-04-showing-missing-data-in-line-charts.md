@@ -21,4 +21,4 @@ The M-Lab team has been working with [Bocoup’s Data Visualization](https://boc
 
 M-Lab has lots of data, but depending on how you slice the data, you might end up with too small of a sample size on a given day in a given location. As part of designing the [Observatory]({{ site.baseurl }}/observatory/) visualization, we came up with the idea of using dotted lines to show that we didn’t have a large enough sample size to assert the data value, but that leaving out the data would be incorrect as well. The Bocoup Team took that further and developed a new d3 plugin, [d3-line-chunked](https://github.com/pbeshai/d3-line-chunked), which allows you to easily visualize gaps in your data and has good animation support.
 
-[Read More over on the Bocoup blog.](https://bocoup.com/weblog/showing-missing-data-in-line-charts)
+[Read More over on the Bocoup blog.](https://bocoup.com/weblog/showing-missing-data-in-line-charts) <!--more-->
