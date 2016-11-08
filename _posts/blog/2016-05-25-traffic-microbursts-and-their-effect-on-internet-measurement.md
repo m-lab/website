@@ -30,4 +30,4 @@ A full accounting can be found in our incident report available here:
 
 ## Update, November 2016
 
-Following the remediation methods described above, M-Lab NDT and Sidestream data are now marked in BigQuery. Our [data documentation]({{ site.baseurl }}/data) will be updated shortly, but in summary, a new field was added to our schema called "blacklist_flags", and provides a means of easily querying for affected or unaffected tests mentioned in the above incident. No future problems are anticipated, but the new field has been designed to signal any possible future events worth considering in our data. 
+Following the remediation methods described above, M-Lab NDT and Sidestream data are now marked in BigQuery. Our [data documentation]({{ site.baseurl }}/data) will be updated shortly, but in summary, a new field was added to our schema called "blacklist_flags", and provides a means of easily querying for affected or unaffected tests mentioned in the above incident. No future problems are anticipated, but the new field has been designed to signal any possible future events worth considering in our data.

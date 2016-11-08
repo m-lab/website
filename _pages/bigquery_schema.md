@@ -122,11 +122,11 @@ The following fields are deprecated and no longer have meaning in the data set.
 | `string`      |  `Ip_Address`            |
 | `bool`        |  `TruthValue`            |
 
-### Blacklist Flags Field 
+### Blacklist Flags Field
 
-An additional field called ```blacklist_flags``` was added to all tables in response to a "switch discard issue", which identified that some historical tests were affected by traffic microbursts. See our [blog post]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement) for complete details. 
+An additional field called ```blacklist_flags``` was added to all tables in response to a "switch discard issue", which identified that some historical tests were affected by traffic microbursts. See our [blog post]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement) for complete details.
 
-The ```blacklist_flags``` field is used to mark test results if they meet specific parameters that qualify them for inclusion or exclusion in queries or research analyses. This field was created to mark tests affected by the "switch discard issue" identified in 2015-2016, but M-Lab may use the field for other use cases in the future. 
+The ```blacklist_flags``` field is used to mark test results if they meet specific parameters that qualify them for inclusion or exclusion in queries or research analyses. This field was created to mark tests affected by the "switch discard issue" identified in 2015-2016, but M-Lab may use the field for other use cases in the future.
 
 Currently, the following values are present in our data in this field:
 
@@ -138,7 +138,7 @@ Currently, the following values are present in our data in this field:
 
 M-Lab recommends that you update your queries to include ```AND blacklist_flags == 0``` to limit results to unaffected test results. Sample queries for reference are listed below.
 
-``` 
+~~~sql
 # Sample Fast Table query limiting to unaffected tests
 
 SELECT
@@ -156,9 +156,9 @@ FROM
   )
 GROUP BY
   num_tests
-```
+~~~
 
-``` 
+~~~sql
 # Sample Legacy Monthly Table query limiting to unaffected tests
 
 SELECT
@@ -177,7 +177,7 @@ FROM
   )
 GROUP BY
   num_tests
-```
+~~~
 
 ## BigQuery Examples
 
