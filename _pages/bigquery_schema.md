@@ -179,6 +179,6 @@ GROUP BY
   num_tests
 ```
 
-## Query Examples
+## BigQuery Examples
 
 See [BigQuery Examples]({{ site.baseurl }}/data/bq/examples) for examples of queries against this schema.
