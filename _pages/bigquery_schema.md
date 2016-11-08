@@ -122,6 +122,63 @@ The following fields are deprecated and no longer have meaning in the data set.
 | `string`      |  `Ip_Address`            |
 | `bool`        |  `TruthValue`            |
 
-## Query Examples
+### Blacklist Flags Field
+
+An additional field called ```blacklist_flags``` was added to all tables in response to a switch discard issue, an episode of degraded performance. See our [blog post]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement) for complete details.
+
+The ```blacklist_flags``` field is used to mark test results that could be impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test. This field was created to mark tests affected by the "switch discard issue" identified in 2015-2016, but M-Lab may use the field for other use cases in the future.
+
+Currently, the following values are present in our data in this field:
+
+| Field Name | Value | Description |
+| ---------- | ----- | ----------- |
+| `blacklist_flags` | `0` | unaffected tests |
+| | `1` | tests affected by switch discards |
+| | `2` | tests not shown to be unaffected by switch discards |
+
+M-Lab recommends that you update your queries to include ```AND blacklist_flags == 0``` to limit results to unaffected test results. Sample queries for reference are listed below.
+
+~~~sql
+# Sample Fast Table query limiting to unaffected tests
+
+SELECT
+  num_tests,
+FROM
+  (
+    SELECT
+      COUNT(*) num_tests,
+    FROM
+      plx.google:m_lab.ndt.all
+    WHERE
+      web100_log_entry.log_time >= PARSE_UTC_USEC('2009-08-01 00:00:00') / POW(10, 6)
+      AND web100_log_entry.log_time < PARSE_UTC_USEC('2009-09-01 00:00:00') / POW(10, 6)
+      AND blacklist_flags == 0
+  )
+GROUP BY
+  num_tests
+~~~
+
+~~~sql
+# Sample Legacy Monthly Table query limiting to unaffected tests
+
+SELECT
+  num_tests,
+FROM
+  (
+    SELECT
+      COUNT(*) num_tests,
+    FROM
+      plx.google:m_lab.2009_08.all
+    WHERE
+      web100_log_entry.log_time >= PARSE_UTC_USEC('2009-08-01 00:00:00') / POW(10, 6)
+      AND web100_log_entry.log_time < PARSE_UTC_USEC('2009-09-01 00:00:00') / POW(10, 6)
+      AND blacklist_flags == 0
+      AND web100_log_entry.is_last_entry == 1
+  )
+GROUP BY
+  num_tests
+~~~
+
+## BigQuery Examples
 
 See [BigQuery Examples]({{ site.baseurl }}/data/bq/examples) for examples of queries against this schema.
