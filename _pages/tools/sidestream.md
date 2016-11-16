@@ -13,7 +13,7 @@ Please cite this data set as follows: **The M-Lab SideStream Data Set, &lt;date 
 
 **Data** collected by SideStream is available:
 
-* in raw format at [https://storage.cloud.google.com/m-lab/sidestream](https://storage.cloud.google.com/m-lab/sidestream).
+* in raw format at [https://console.developers.google.com/storage/browser/m-lab/sidestream/](https://console.developers.google.com/storage/browser/m-lab/sidestream/).
 
 * in BigQuery at [http://www.measurementlab.net/data/bq/quickstart/]({{ site.baseurl }}/data/bq/quickstart/).
 

@@ -13,7 +13,7 @@ Please cite this data set as follows: **The M-Lab Paris Traceroute Data Set, &lt
 
 **Data** collected by Paris Traceroute is available:
 
-* in raw format at [https://storage.cloud.google.com/m-lab/paris-traceroute](https://storage.cloud.google.com/m-lab/paris-traceroute){:target="_blank"}.
+* in raw format at [https://console.cloud.google.com/storage/browser/m-lab/paris-traceroute/](https://console.cloud.google.com/storage/browser/m-lab/paris-traceroute/){:target="_blank"}.
 
 * in BigQuery at [{{ site.baseurl }}/data/bq/quickstart/](http://www.measurementlab.net/data/bq/quickstart/).
 
