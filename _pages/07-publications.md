@@ -14,6 +14,16 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 ## 2016
 
+### Analysis of Impartial Quality Measurements on Indian Broadband Connections
+
+{:.paper-description}
+Broadband Internet user base is growing at an exponential pace in India. The market pressures are forcing the Internet service providers (ISPs) to sell their service offerings aggressively, resulting in a growing discrepancy between consumer expectations and service offerings from the ISPs. This discrepancy is often evident in experienced vs offered Internet connection service. This study examines the Quality of Service (QoS) variations for Internet connections of the Indian broadband users.
+
+{:.paper-author}
+TSRK Prasad, Dhruv Shekhawat, Sukanto Guha, Neena Goveas and Bharat Deshpande
+
+[Download PDF]({{ site.baseurl }}/publications/2016-Prasad-et-al.pdf){:.download-link .paper-download target="_blank"}
+
 ### CUSUM Anomaly Detection
 
 {:.paper-description}
@@ -33,6 +43,18 @@ Report on M-Lab's evaluation of reported site performance degradation in late 20
 M-Lab Research Team
 
 [Download PDF]({{ site.baseurl }}/publications/SwitchDiscardNotice-Final-20160525.pdf){:.download-link .paper-download target="_blank"}
+
+## 2015
+
+### Analysis of End-User QoE in Community Networks
+
+{:.paper-description}
+Community networks are a potential model for the Future Internet, where the users form and operate the network instead of a central, commercial entity. Socio-economic studies show that community networks are an excellent model to develop networking infrastructure commons (as common-pool resources or public goods) that promote sustainable development, with greater effects in less developed areas. The performance of parts of community networks has been studied extensively, often focusing on routing protocols or applications on top of community networks. This work focuses on the end-to-end quality of Internet access in community networks, as a validation of the technical applicability of this concept in under-served regions.
+
+{:.paper-author}
+Bart Braem, Johan Bergs, Chris Blondia, Leandro Navarro, Sabine Wittevrongel
+
+[Download PDF]({{ site.baseurl }}/publications/2015-Braem-et-al.pdf){:.download-link .paper-download target="_blank"}
 
 ## 2014
 
