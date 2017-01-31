@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: redirect
 permalink: /state/
 title: "State"
-redirect_from: "viz.measurementlab.net"
+redirect_to: "http://viz.measurementlab.net"
 breadcrumb: visualizations
 ---
 

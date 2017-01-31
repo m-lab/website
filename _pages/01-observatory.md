@@ -1,6 +1,5 @@
 ---
-layout: observatory
-audience: observatory
+layout: redirect
 permalink: /observatory/
 title: "Observatory"
 heading: "Internet Observatory - US"
