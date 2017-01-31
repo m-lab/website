@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: redirect
 permalink: /transparency/
 title: "Transparency"
-redirect_from: "viz.measurementlab.net"
+redirect_to: "http://viz.measurementlab.net"
 breadcrumb: visualizations
 ---
 
