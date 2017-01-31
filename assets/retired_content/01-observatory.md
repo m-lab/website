@@ -3,6 +3,6 @@ layout: observatory
 audience: observatory
 permalink: /observatory/
 title: "Observatory"
-redirect_from: "viz.measurementlab.net"
+menu-item: true
 heading: "Internet Observatory - US"
 ---

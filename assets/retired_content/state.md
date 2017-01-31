@@ -2,7 +2,6 @@
 layout: page
 permalink: /state/
 title: "State"
-redirect_from: "viz.measurementlab.net"
 breadcrumb: visualizations
 ---
 

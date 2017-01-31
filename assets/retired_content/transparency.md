@@ -2,7 +2,6 @@
 layout: page
 permalink: /transparency/
 title: "Transparency"
-redirect_from: "viz.measurementlab.net"
 breadcrumb: visualizations
 ---
 
