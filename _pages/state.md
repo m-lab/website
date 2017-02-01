@@ -1,10 +1,13 @@
 ---
-layout: redirect
+layout: page
 permalink: /state/
 title: "State"
-redirect_to: "http://viz.measurementlab.net"
 breadcrumb: visualizations
 ---
+
+These example visualizations illustrate how others have explored the state of networks using M-Lab data.
+
+For the most current data visualizations produced by M-Lab, please visit our [Visualizations pages]({{ site.baseurl }}/visualizations).
 
 # Network State
 
