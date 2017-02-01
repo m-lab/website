@@ -1,7 +1,7 @@
 ---
-layout: redirect
+layout: observatory
+audience: observatory
 permalink: /observatory/
 title: "Observatory"
-redirect_to: "http://viz.measurementlab.net"
 heading: "Internet Observatory - US"
 ---
