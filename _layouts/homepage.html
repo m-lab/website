@@ -42,10 +42,10 @@ layout: default
 <div class="communication-section info-segment is-inverse">
   <div class="info-segment-inner container">
     <div class="row">
-      <section class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-        <h2 class="info-heading initial-heading">Latest Blog Posts</h2>
+      <section class="col-xs-12 col-sm-12">
+        <h2 class="info-heading initial-heading">Latest Blog Post</h2>
 
-      {% for post in site.posts limit:2 %}
+      {% for post in site.posts limit:1 %}
 
         <article class="blog-post">
           <h3 class="info-subheading">{{ post.title }}</h3>
