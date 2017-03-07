@@ -42,10 +42,10 @@ layout: default
 <div class="communication-section info-segment is-inverse">
   <div class="info-segment-inner container">
     <div class="row">
-      <section class="col-xs-12 col-sm-12">
-        <h2 class="info-heading initial-heading">Latest Blog Post</h2>
+      <section class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+        <h2 class="info-heading initial-heading">Latest Blog Posts</h2>
 
-      {% for post in site.posts limit:1 %}
+      {% for post in site.posts limit:2 %}
 
         <article class="blog-post">
           <h3 class="info-subheading">{{ post.title }}</h3>
@@ -72,6 +72,16 @@ layout: default
 
       </section>
 
+      <aside class="data-col col-xs-12 col-sm-12 col-md-5 col-lg-5">
+        <h2 class="info-heading">{{ page.blog-aside-heading }}</h2>
+        <article class="data-entry">
+          <h3 class="info-subheading">{{ page.blog-aside-subheading }}</h3>
+          <div class="segment-description">
+              <p><img src="{{ site.baseurl }}/{{ page.blog-aside-img }}" alt="{{ page.blog-aside-img-alt }}"></p>
+              <p>{{ page.blog-aside-description }}<br><a class="info-link" href="{{ page.blog-aside-link }}">Read more</a></p>
+          </div>
+        </article>
+      </aside>
     </div>
   </div>
 </div>

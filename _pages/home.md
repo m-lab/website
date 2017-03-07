@@ -17,12 +17,12 @@ blog-aside-description : "Visualize M-Lab data and aggregate statistics from cit
 blog-aside-link: "https://viz.measurementlab.net/"
 carousel: true
 carousel-items:
-  - image: "isp.jpg"
+  - image: "mlab-viz.jpg"
     alt: "This research reveals that consumer access and performance are directly affected by the business relationships between interconnecting Internet Service Providers (ISPs)."
-    heading: "ISP Interconnection and its Impact on Consumer Internet Performance"
-    caption: "Read the M-Lab research team's report on ISP Interconnection pointing to consumer harm."
-    link: "/publications/isp-interconnection-impact.pdf"
-    link-text: "Read the report!"
+    heading: "M-Lab launches global data visualization"
+    caption: "See M-Lab data for where you live, compare ISPs in your area, or compare ISPs across locations in M-Lab's new global data visualization."
+    link: "/blog/new-dataviz-site/"
+    link-text: "Read the blog post!"
   - image: "ndt.jpg"
     heading: "NDT (Network Diagnostic Test)"
     caption: "Test your connection speed and receive a sophisticated diagnosis of problems limiting performance."
