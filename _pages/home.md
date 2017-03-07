@@ -14,7 +14,7 @@ blog-aside-subheading: "Internet Observatory"
 blog-aside-img: "mlab_observatory/static/observatory/images/graphExample.png"
 blog-aside-img-alt: "M-LabInternetObservatory"
 blog-aside-description : "Compare how different ISPs performed across varying locations in the US."
-blog-aside-link: "/observatory/"
+blog-aside-link: "https://www.measurementlab.net/observatory/"
 carousel: true
 carousel-items:
   - image: "isp.jpg"
