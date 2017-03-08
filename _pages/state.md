@@ -5,6 +5,10 @@ title: "State"
 breadcrumb: visualizations
 ---
 
+These example visualizations illustrate how others have explored the state of networks using M-Lab data.
+
+For the most current data visualizations produced by M-Lab, please visit our [Visualizations pages]({{ site.baseurl }}/visualizations).
+
 # Network State
 
 These visualizations illuminate the state of networks using M-Lab measurements.
