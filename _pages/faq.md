@@ -49,7 +49,7 @@ For some tests, such as the [Broadband Internet Service Benchmark (BISmark)]({{ 
 ## Where can I explore M-Lab data?
 {:.no_toc}
 
-You can explore M-Lab’s NDT speed test data in Google’s [Public Data Explorer](http://www.google.com/publicdata/explore?ds=e9krd11m38onf_). All M-Lab data  are searchable [using BigQuery]({{ site.baseurl }}/data/bq/quickstart/) or can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
+You can explore [visualizations]({{ site.baseurl }}/visualizations/) of M-Lab’s NDT speed test data. All M-Lab data are searchable [using BigQuery]({{ site.baseurl }}/data/bq/quickstart/) or can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
 
 ## Why are my M-Lab results different from other speed tests?
 {:.no_toc}
@@ -75,7 +75,7 @@ M-Lab's measurements are always conducted off-net. This way, M-Lab is able to me
 
 Different Internet performance tests measure different things in different ways. M-Lab's NDT test tries to transfer as much data as it can in ten seconds (both up and down), using a single connection to an M-Lab server. Other popular tests try to transfer as much data as possible at once across multiple connections to their server. Neither method is "right" or "wrong," but using a single stream is more likely to help diagnose problems in the network than multiple streams would. [Learn more about M-Lab's NDT methodology](https://github.com/ndt-project/ndt/wiki/NDTTestMethodology).
 
-All NDT data collected by M-Lab are publicly available in both [visualized](http://www.google.com/publicdata/explore?ds=e9krd11m38onf_) (graphic) and [raw (unanalyzed) forms](https://console.developers.google.com/storage/browser/m-lab/ndt/).
+All NDT data collected by M-Lab are publicly available in both [visualized]({{ site.baseurl }}/visualizations/) (graphic) and [raw (unanalyzed) forms](https://console.developers.google.com/storage/browser/m-lab/ndt/).
 
 **3. Changing network conditions and distinct test paths**
 
@@ -104,6 +104,7 @@ When reporting a bug, please provide (if at all possible) the following specific
 M-Lab support will usually reply within two business days. You can also ask other M-Lab users about the issue you are reporting in the [M-Lab-Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
 
 ## What firewall ports does NDT require to be open?
+{:.no_toc}
 
 If you are unable to run NDT at all, you may be using a computer that is firewalled, for example at your workplace. You or your network administrator will need to open ports 3001-3010 and 49152-65535 in the firewall for this test to function properly.
 
