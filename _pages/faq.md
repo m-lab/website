@@ -103,6 +103,10 @@ When reporting a bug, please provide (if at all possible) the following specific
 
 M-Lab support will usually reply within two business days. You can also ask other M-Lab users about the issue you are reporting in the [M-Lab-Discuss group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
 
+## What firewall ports does NDT require to be open?
+
+If you are unable to run NDT at all, you may be using a computer that is firewalled, for example at your workplace. You or your network administrator will need to open ports 3001-3010 and 49152-65535 in the firewall for this test to function properly.
+
 # About M-Lab
 
 ## What is M-Lab's mission?
