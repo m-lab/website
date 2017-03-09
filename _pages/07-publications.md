@@ -320,13 +320,13 @@ M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 
 ## 2017
 
-### M-Lab - What is it and why you should use it, and what's up with it?
+### M-Lab: What it is, why you should use it, and what's happening in 2017
 
 {:.paper-description}
-Presented at ???, February, 2017
+Presented at the Google Networking Research Summit, February 2017
 
 {:.paper-author}
-P. Boothe, M. Mathis, S. Stuart
+P. Boothe
 
 [Download PDF]({{ site.baseurl }}/publications/2017-MLab-Google-Research-Summit.pdf){:.download-link .paper-download target="_blank"}
 
