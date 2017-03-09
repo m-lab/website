@@ -35,8 +35,11 @@ header:
 
 footer:
   subscribe:
-    title: "Subscribe for M-Lab updates"
     items:
+    - 
+      link: "https://twitter.com/measurementlab"
+      link-title: "Twitter"
+      link-class: "twitter-share"
     -
       link: "https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss"
       link-title: "Google"
