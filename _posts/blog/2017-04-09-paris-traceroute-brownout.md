@@ -30,6 +30,8 @@ The collection problem has been rectified ([github](https://github.com/npad/side
 
 The bad news is that Paris Traceroute data for the M-Lab platform is very sparse for the latter half of 2016 and early 2017. An accounting of daily NDT tests to unique client addresses, and daily Paris Traceroute tests to corresponding addresses shows the following weekly coverage. You can see the uptick in coverage in week 24 and 25, the gradual decrease in coverage in ensuing weeks, and the surge in NDT test counts starting around week 29. The issue was resolved in 2017 week 6 and 7, and you can see the corresponding restoration of test coverage.
 
+![NDT tests and Paris Traceroute tests per week, June 2016 - March 2016]({{ site.baseurl }}/images/blog/pt-brownout-graph.png)
+
 <div class="table-responsive" markdown="1">
 
 |  year  |  week  |  ndt_tests  |  pt_tests  |   %   |
@@ -81,8 +83,6 @@ The bad news is that Paris Traceroute data for the M-Lab platform is very sparse
 | 2017   | 12     | 1898877     | 1754154    | 92.38 |
 
 </div>
-
-![NDT tests and Paris Traceroute tests per week, June 2016 - March 2016]({{ site.baseurl }}/images/blog/pt-brownout-graph.png)
 
 All Paris Traceroute data in BigStore and BigQuery is correct, but the bug did cause considerable data loss relative to what might have been measured and collected. From a statistical analysis point of view, it is further unfortunate that the data gaps are systematic rather than random. When a machine failed to start the daemon properly, the region of the Internet served by that site would become systematically less likely to be traced. The problem has been fixed, job count alerting has been added, and activity based alerting will soon be added to prevent problems like this in the future.
 
