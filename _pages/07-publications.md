@@ -14,6 +14,16 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 ## 2016
 
+### Analysis of Impartial Quality Measurements on Indian Broadband Connections
+
+{:.paper-description}
+Broadband Internet user base is growing at an exponential pace in India. The market pressures are forcing the Internet service providers (ISPs) to sell their service offerings aggressively, resulting in a growing discrepancy between consumer expectations and service offerings from the ISPs. This discrepancy is often evident in experienced vs offered Internet connection service. This study examines the Quality of Service (QoS) variations for Internet connections of the Indian broadband users.
+
+{:.paper-author}
+TSRK Prasad, Dhruv Shekhawat, Sukanto Guha, Neena Goveas and Bharat Deshpande
+
+[Download PDF]({{ site.baseurl }}/publications/2016-Prasad-et-al.pdf){:.download-link .paper-download target="_blank"}
+
 ### CUSUM Anomaly Detection
 
 {:.paper-description}
@@ -33,6 +43,28 @@ Report on M-Lab's evaluation of reported site performance degradation in late 20
 M-Lab Research Team
 
 [Download PDF]({{ site.baseurl }}/publications/SwitchDiscardNotice-Final-20160525.pdf){:.download-link .paper-download target="_blank"}
+
+## 2015
+
+### Analysis of End-User QoE in Community Networks
+
+{:.paper-description}
+Community networks are a potential model for the Future Internet, where the users form and operate the network instead of a central, commercial entity. Socio-economic studies show that community networks are an excellent model to develop networking infrastructure commons (as common-pool resources or public goods) that promote sustainable development, with greater effects in less developed areas. The performance of parts of community networks has been studied extensively, often focusing on routing protocols or applications on top of community networks. This work focuses on the end-to-end quality of Internet access in community networks, as a validation of the technical applicability of this concept in under-served regions.
+
+{:.paper-author}
+Bart Braem, Johan Bergs, Chris Blondia, Leandro Navarro, Sabine Wittevrongel
+
+[Download PDF]({{ site.baseurl }}/publications/2015-Braem-et-al.pdf){:.download-link .paper-download target="_blank"}
+
+### Measuring Broadband America Report - 2015
+
+{:.paper-description}
+The FCC's 2015 survey of Internet performance in the United States, with measurement performed against the M-Lab infrastructure
+
+{:.paper-author}
+Office of Engineering and Technology and Consumer and Governmental Affairs Bureau
+
+[Download PDF]({{ site.baseurl }}/publications/FCC_MBA_2015.pdf){:.download-link .paper-download target="_blank"}
 
 ## 2014
 
@@ -55,6 +87,16 @@ New Trends in Databases and Information Systems 2014
 E. Masala, A. Servetti, S. Basso, J. C. De Martin
 
 [Download PDF]({{ site.baseurl}}/publications/analyzing-network-data-measurements.pdf){:.download-link .paper-download target="_blank"}
+
+### Measuring Broadband America Report - 2014
+
+{:.paper-description}
+The FCC's 2014 survey of Internet performance in the United States, with measurement performed against the M-Lab infrastructure
+
+{:.paper-author}
+Office of Engineering and Technology and Consumer and Governmental Affairs Bureau
+
+[Download PDF]({{ site.baseurl }}/publications/FCC_MBA_2014.pdf){:.download-link .paper-download target="_blank"}
 
 ## 2013
 
@@ -160,6 +202,16 @@ H. Asghari, M. van Eeten, M. Mueller
 
 [Download PDF]({{ site.baseurl }}/publications/economic-drivers-deep-packet-inspection.pdf){:.download-link .paper-download target="_blank"}
 
+### Measuring Broadband America Report - 2012
+
+{:.paper-description}
+The FCC's 2012 survey of Internet performance in the United States, with measurement performed against the M-Lab infrastructure
+
+{:.paper-author}
+Office of Engineering and Technology and Consumer and Governmental Affairs Bureau
+
+[Download PDF]({{ site.baseurl }}/publications/FCC_MBA_2012.pdf){:.download-link .paper-download target="_blank"}
+
 ## 2011
 
 ### Broadband Internet Performance: A View from the Gateway
@@ -180,7 +232,15 @@ Examination of DPI use by Internet service providers to enable throttling or blo
 {:.paper-author}
 M. L. Mueller, H. Asghari
 
-[Download PDF]({{ site.baseurl }}/publications/deep-packet-inspection-bandwidth-management.pdf){:.download-link .paper-download target="_blank"}
+### Measuring Broadband America Report - 2011
+
+{:.paper-description}
+The FCC's 2011 survey of Internet performance in the United States, with measurement performed against the M-Lab infrastructure
+
+{:.paper-author}
+Office of Engineering and Technology and Consumer and Governmental Affairs Bureau
+
+[Download PDF]({{ site.baseurl }}/publications/FCC_MBA_2011.pdf){:.download-link .paper-download target="_blank"}
 
 ### ShaperProbe: End-to-end Detection of ISP Traffic Shaping Using Active Methods
 
@@ -257,6 +317,18 @@ M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 [Download PDF]({{ site.baseurl }}/publications/detecting-bittorrent-blocking.pdf){:.download-link .paper-download target="_blank"}
 
 # Presentations
+
+## 2017
+
+### M-Lab: What it is, why you should use it, and what's happening in 2017
+
+{:.paper-description}
+Presented at the Google Networking Research Summit, February 2017
+
+{:.paper-author}
+P. Boothe
+
+[Download PDF]({{ site.baseurl }}/publications/2017-MLab-Google-Research-Summit.pdf){:.download-link .paper-download target="_blank"}
 
 ## 2012
 

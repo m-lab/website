@@ -32,19 +32,14 @@ header:
           url:  "/data/bq/examples/"
         - text: "BigQuery Schema"
           url:  "/data/bq/schema/"
-    -
-      title: "visualizations"
-      sub-nav:
-        - text: "Performance"
-          url:  "/visualizations/"
-        - text: "Transparency"
-          url:  "/transparency/"
-        - text: "State"
-          url:  "/state/"
+
 footer:
   subscribe:
-    title: "Subscribe for M-Lab updates"
     items:
+    - 
+      link: "https://twitter.com/measurementlab"
+      link-title: "Twitter"
+      link-class: "twitter-share"
     -
       link: "https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss"
       link-title: "Google"

@@ -91,7 +91,7 @@ All M-Lab data share the same data schema in BigQuery. The fields are described 
 | `web100_log_entry.connection_spec.remote_ip`        |  `string`    |  IP address of the user's client, as logged in the Web100 log. |
 | `web100_log_entry.connection_spec.remote_port`      |  `integer`   |  Port of the user's client (in host-byte-order), as logged in the Web100 log. |
 | `web100_log_entry.snap.[web100_var_name]`, where `web100_var_name` is the name of a Web100 variable, as defined in [tcp-kis.txt][1] (field `VariableName`). |  See Web100 types |  [tcp-kis.txt][1] defines 150 Web100 variables. For example, `web100_log_entry.snap.MinRTT` represents the minimum sampled Round Trip Time. |
-| `web100_log_entry.snap.StartTimeStamp`              |  `integer`   |  Time at which the test's TCP connection was established, in microseconds since UNIX epoch. This variable is a special case, as it contradicts [tcp-kis.txt][1]. tcp-kis.txt defines the field as a 32-bit integer, but remaps two distinct 32-bit integers into this single name, which is not possible for a 32-bit value. To work around this bug in tcp-kis and provide microsecond precision, this field is a 64-bit integer in the BigQuery dataset. |
+| `web100_log_entry.snap.StartTimeStamp`              |  `integer`   |  Time at which the test's TCP connection was established, in microseconds since UNIX epoch. This variable is a special case, as it contradicts [tcp-kis.txt](https://cloud.google.com/bigquery/docs/tcp-kis.txt){:target="_blank"}. tcp-kis.txt defines the field as a 32-bit integer, but remaps two distinct 32-bit integers into this single name, which is not possible for a 32-bit value. To work around this bug in tcp-kis and provide microsecond precision, this field is a 64-bit integer in the BigQuery dataset. |
 | `paris_traceroute_hop.protocol`                     |  `integer`   |  Protocol used to generate the paris-traceroute trace.<br>UDP = `0`<br>TCP = `1`<br>ICMP = `2` |
 | `paris_traceroute_hop.src_ip`                       |  `string`    |  The IP address of the start of the hop. |
 | `paris_traceroute_hop.src_af`                       |  `integer`   |  The address family used to connect to `src_ip`.<br>AF_INET = `2`<br>AF_INET6 = `10` |
@@ -122,6 +122,63 @@ The following fields are deprecated and no longer have meaning in the data set.
 | `string`      |  `Ip_Address`            |
 | `bool`        |  `TruthValue`            |
 
-## Query Examples
+### Blacklist Flags Field
+
+An additional field called ```blacklist_flags``` was added to all tables in response to a switch discard issue, an episode of degraded performance. See our [blog post]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement) for complete details.
+
+The ```blacklist_flags``` field is used to mark test results that could be impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test. This field was created to mark tests affected by the "switch discard issue" identified in 2015-2016, but M-Lab may use the field for other use cases in the future.
+
+Currently, the following values are present in our data in this field:
+
+| Field Name | Value | Description |
+| ---------- | ----- | ----------- |
+| `blacklist_flags` | `0` | unaffected tests |
+| | `1` | tests affected by switch discards |
+| | `2` | tests not shown to be unaffected by switch discards |
+
+M-Lab recommends that you update your queries to include ```AND blacklist_flags == 0``` to limit results to unaffected test results. Sample queries for reference are listed below.
+
+~~~sql
+# Sample Fast Table query limiting to unaffected tests
+
+SELECT
+  num_tests,
+FROM
+  (
+    SELECT
+      COUNT(*) num_tests,
+    FROM
+      plx.google:m_lab.ndt.all
+    WHERE
+      web100_log_entry.log_time >= PARSE_UTC_USEC('2009-08-01 00:00:00') / POW(10, 6)
+      AND web100_log_entry.log_time < PARSE_UTC_USEC('2009-09-01 00:00:00') / POW(10, 6)
+      AND blacklist_flags == 0
+  )
+GROUP BY
+  num_tests
+~~~
+
+~~~sql
+# Sample Legacy Monthly Table query limiting to unaffected tests
+
+SELECT
+  num_tests,
+FROM
+  (
+    SELECT
+      COUNT(*) num_tests,
+    FROM
+      plx.google:m_lab.2009_08.all
+    WHERE
+      web100_log_entry.log_time >= PARSE_UTC_USEC('2009-08-01 00:00:00') / POW(10, 6)
+      AND web100_log_entry.log_time < PARSE_UTC_USEC('2009-09-01 00:00:00') / POW(10, 6)
+      AND blacklist_flags == 0
+      AND web100_log_entry.is_last_entry == 1
+  )
+GROUP BY
+  num_tests
+~~~
+
+## BigQuery Examples
 
 See [BigQuery Examples]({{ site.baseurl }}/data/bq/examples) for examples of queries against this schema.

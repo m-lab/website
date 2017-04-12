@@ -106,6 +106,12 @@
     height: 16px;
   }
 
+  &.twitter-share::after {
+    background-position: -240px -11px;
+    width: 20px;
+    height: 20px;
+  }
+
 }
 
 // Back to Top Button
