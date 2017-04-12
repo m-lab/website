@@ -5,7 +5,7 @@ title: "Publications"
 menu-item: true
 ---
 
-# Papers, Presentations and Other Documents
+# Papers, Presentations, Regulator Filings and Other Documents
 
 {:.intro-blurb}
 Papers, presentations, and other documents that describe the M-Lab platform, tests, and data, as well as research results obtained from the analysis of M-Lab data, are shown below.
@@ -315,6 +315,73 @@ Review of the model used by architects of the Glasnost test to design a test to 
 M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 
 [Download PDF]({{ site.baseurl }}/publications/detecting-bittorrent-blocking.pdf){:.download-link .paper-download target="_blank"}
+
+# Regulator Filings
+
+## 2015
+
+### [2/19/2015 - FCC Filing](https://www.fcc.gov/ecfs/filing/60001018548){:target="_blank"}: Protecting and Promoting the Open Internet, GN Docket No. 14-28; Framework for Broadband Internet Services, GN Docket No. 10-127;
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/60001031564_02-19-2015.pdf){:.download-link .paper-download target="_blank"}
+
+https://ecfsapi.fcc.gov/file/60001031564.pdf
+
+https://www.fcc.gov/ecfs/filing/60001018549
+https://ecfsapi.fcc.gov/file/60001031566.pdf
+
+https://www.fcc.gov/ecfs/filing/6017157466
+https://ecfsapi.fcc.gov/file/7022102027.pdf
+
+https://www.fcc.gov/ecfs/filing/6017114912
+https://ecfsapi.fcc.gov/file/7022037110.pdf
+
+https://www.fcc.gov/ecfs/filing/6017111463
+https://ecfsapi.fcc.gov/file/7022018845.pdf
+https://ecfsapi.fcc.gov/file/7022018844.pdf
+
+https://www.fcc.gov/ecfs/filing/6017111464
+https://ecfsapi.fcc.gov/file/7022018847.pdf
+https://ecfsapi.fcc.gov/file/7022018846.pdf
+
+https://www.fcc.gov/ecfs/filing/6017111465
+https://ecfsapi.fcc.gov/file/7022018849.pdf
+https://ecfsapi.fcc.gov/file/7022018848.pdf
+
+https://www.fcc.gov/ecfs/filing/6017098294
+https://ecfsapi.fcc.gov/file/7021995334.pdf
+
+https://www.fcc.gov/ecfs/filing/6017098295
+https://ecfsapi.fcc.gov/file/7021995335.pdf
+
+https://www.fcc.gov/ecfs/filing/6017098296
+https://ecfsapi.fcc.gov/file/7021995336.pdf
+
+https://www.fcc.gov/ecfs/filing/6017096720
+https://ecfsapi.fcc.gov/file/7021990267.pdf
+
+https://www.fcc.gov/ecfs/filing/6017096719
+https://ecfsapi.fcc.gov/file/7021990266.pdf
+
+https://www.fcc.gov/ecfs/filing/6017096721
+https://ecfsapi.fcc.gov/file/7021990268.pdf
+
+https://www.fcc.gov/ecfs/filing/6017093921
+https://ecfsapi.fcc.gov/file/7021981372.pdf
+
+https://www.fcc.gov/ecfs/filing/6017093952
+https://ecfsapi.fcc.gov/file/7021981429.pdf
+
+https://www.fcc.gov/ecfs/filing/6017093922
+https://ecfsapi.fcc.gov/file/7021981374.pdf
+
+https://www.fcc.gov/ecfs/filing/6017093923
+https://ecfsapi.fcc.gov/file/7021981375.pdf
+
+https://www.fcc.gov/ecfs/filing/6017093950
+https://ecfsapi.fcc.gov/file/7021981425.pdf
+
+https://www.fcc.gov/ecfs/filing/6017093951
+https://ecfsapi.fcc.gov/file/7021981428.pdf
 
 # Presentations
 
