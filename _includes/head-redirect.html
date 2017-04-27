@@ -1,0 +1,42 @@
+{% comment %} 
+<!--
+  HEAD
+
+  This partial is included on every page to consistently display the same HEAD tag 
+  information on each page.  
+  
+--> 
+{% endcomment %}
+
+<head>
+
+  <!-- General metadata -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="canonical" href="{{ page.redirect_to }}"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="refresh" content="0;url={{ page.redirect_to }}" />
+
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}" >
+  {% endif %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.page-title %}{{ page.page-title }} - {{ site.title }}{% elsif page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <!-- Google Verification -->
+	<meta name="google-site-verification" content="hKaMGhdpCIKi0NNdYKMU_bA4VnssEVHNJouZSr2-DeM" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" />
+
+  <!-- Atom RSS Feed -->
+  {% feed_meta %}
+
+  <!-- Styles -->
+  <link href="{{ site.baseurl }}/css/base.css" rel="stylesheet" />
+
+  <!-- JS Libs -->
+  <script src="{{ site.baseurl }}/js/libs/modernizr-2.6.2.min.js"></script>
+
+</head>
