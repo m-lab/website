@@ -5,12 +5,24 @@ title: "Publications"
 menu-item: true
 ---
 
-# Papers, Presentations and Other Documents
+# Papers, Presentations, Regulator Filings and Other Documents
 
 {:.intro-blurb}
 Papers, presentations, and other documents that describe the M-Lab platform, tests, and data, as well as research results obtained from the analysis of M-Lab data, are shown below.
 
 # Papers
+
+## 2017
+
+### Public QoS and Net Neutrality Measurements: Current Status and Challenges Toward Exploitable Results
+
+{:.paper-description}
+The interest for Quality of Service (QoS) measurements in the Internet has exceeded the boundaries of research laboratories and passed into the public domain. The Internet is treated as a public utility, and users are given the right to access Internet content of their choice at an adequate quality. This coincides with the sustained interest for net neutrality (NN), basic safeguards for which are being taken in countries all over the world. Today, several tools have become available that empower end-users to measure the performance of their Internet connection and detect NN violations. However, the value that end-users obtain with these measurements is still small and the results are not being exploited satisfactorily by regulatory authorities, policy makers, and consumers. In this article, we perform a detailed review of the tools that are currently available for public QoS and NN measurements and explore three challenges that must be met in order to extract more value from the results: (a) Harmonization of measurement methodologies of basic performance parameters (throughput, delay, jitter, and packet loss); (b) the creation of a toolbox for detecting and monitoring NN violations; and (c) the use of a proper sampling plan for producing estimates over population groups.
+
+{:.paper-author}
+Ioannis Koukoutsidis
+
+[Download PDF](http://www.jstor.org/stable/pdf/10.5325/jinfopoli.5.2015.0245.pdf){:.download-link .paper-download target="_blank"}
 
 ## 2016
 
@@ -45,6 +57,16 @@ M-Lab Research Team
 [Download PDF]({{ site.baseurl }}/publications/SwitchDiscardNotice-Final-20160525.pdf){:.download-link .paper-download target="_blank"}
 
 ## 2015
+
+### European capability for situational awareness
+
+{:.paper-description}
+This study examines the field of Internet and Human Rights and more specifically, Internet Censorship measurement. The European Commission DG-Connect commissioned this study to assess the potential for a European Capability for Situational Awareness that continuously monitors and analyses the existence of Internet interference in combination with Human Rights Violations and recommend on potential implementation of such an ECSA. A [proof-of-concept website](https://ecsa.chokepointproject.net){:target="_blank"} was produced along with this report.
+
+{:.paper-author}
+European Commission, Directorate-General for Communications Networks, Content and Technology
+
+[Download PDF](https://bookshop.europa.eu/en/european-capability-for-situational-awareness-pbKK0215595/downloads/KK-02-15-595-EN-N/KK0215595ENN_002.pdf;pgid=GSPefJMEtXBSR0dT6jbGakZD0000Gfj5M3SP;sid=zuBNVZks4YlNVsAuzinT8vsJbCMxBTvvsrA=?FileName=KK0215595ENN_002.pdf&SKU=KK0215595ENN_PDF&CatalogueNumber=KK-02-15-595-EN-N){:.download-link .paper-download target="_blank"}
 
 ### Analysis of End-User QoE in Community Networks
 
@@ -315,6 +337,55 @@ Review of the model used by architects of the Glasnost test to design a test to 
 M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 
 [Download PDF]({{ site.baseurl }}/publications/detecting-bittorrent-blocking.pdf){:.download-link .paper-download target="_blank"}
+
+# Government / Regulatory Filings
+
+## 2016
+
+### [10/11/2016 - NTIA](https://www.ntia.doc.gov/files/ntia/publications/m-lab.pdf){:target="+blank"}: Comments on the National Broadband Research Agenda, Docket Number: 160831803-6803-01
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/ntia/m-lab_ntia_10-11-2016.pdf){:.download-link .paper-download target="_blank"}
+
+## 2015
+
+### [2/19/2015 - FCC](https://www.fcc.gov/ecfs/filing/60001018548){:target="_blank"}: Protecting and Promoting the Open Internet, GN Docket No. 14-28; Framework for Broadband Internet Services, GN Docket No. 10-127
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/60001031564_02-19-2015.pdf){:.download-link .paper-download target="_blank"}
+
+## 2013
+
+### [1/10/2013 - FCC](https://www.fcc.gov/ecfs/filing/6017157466){:target="_blank"}: Notice of Oral Ex Parte Communications, GN Docket No. 12-264
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7022102027_01-10-2013.pdf){:.download-link .paper-download target="_blank"}
+
+## 2012
+
+### [10/22/2012 - FCC](https://www.fcc.gov/ecfs/filing/6017114912){:target="_blank"}: Inquiry Concerning the Deployment of Advanced Telecommunications Capability to All Americans in a Reasonable and Timely Fashion, and Possible Steps To Accelerate Such Deployment Pursuant to Section 706 of the Telecommunications Act of 1996, as Amended by the Broadband Data Improvement Act
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7022037110_10-22-2012.pdf){:.download-link .paper-download target="_blank"}
+
+### [9/21/2012 - FCC](https://www.fcc.gov/ecfs/filing/6017111463){:target="_blank"}: Notice of Oral Ex Parte Communications, CG Docket No. 09-158, CC Docket No. 98-170, WC Docket No. 04-36
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7022018844_09-21-2012.pdf){:.download-link .paper-download target="_blank"}
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7022018845_09-21-2012.pdf){:.download-link .paper-download target="_blank"}
+
+### [7/30/2012](https://www.fcc.gov/ecfs/filing/6017098294){:target="_blank"}: Notice of Oral Ex Parte Communications, CG Docket No. 09-158, CC Docket No. 98-
+170, WC Docket No. 04-36
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7021995334_07-30-2012.pdf){:.download-link .paper-download target="_blank"}
+
+### [7/18/2012](https://www.fcc.gov/ecfs/filing/6017096720){:target="_blank"}: Letter, CG Docket No. 09-158, CC Docket No. 98-170, WC Docket No. 04-36
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7021990267_07-18-2012.pdf){:.download-link .paper-download target="_blank"}
+
+### [6/29/2012](https://www.fcc.gov/ecfs/filing/6017093921){:target="_blank"}: Notice of Ex Parte, CG Docket No. 09-158, CC Docket No. 98-170, WC Docket No. 04-36
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7021981372_06-29-2012.pdf){:.download-link .paper-download target="_blank"}
+
+### [6/29/2012](https://www.fcc.gov/ecfs/filing/6017093952){:target="_blank"}: Amendment to Notice of Ex Parte, CG Docket No. 09-158, CC Docket No. 98-170, WC Docket No. 04-36
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7021981429_06-29-2012.pdf){:.download-link .paper-download target="_blank"}
 
 # Presentations
 
