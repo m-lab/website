@@ -58,6 +58,16 @@ M-Lab Research Team
 
 ## 2015
 
+### European capability for situational awareness
+
+{:.paper-description}
+This study examines the field of Internet and Human Rights and more specifically, Internet Censorship measurement. The European Commission DG-Connect commissioned this study to assess the potential for a European Capability for Situational Awareness that continuously monitors and analyses the existence of Internet interference in combination with Human Rights Violations and recommend on potential implementation of such an ECSA. A [proof-of-concept website](https://ecsa.chokepointproject.net){:target="_blank"} was produced along with this report.
+
+{:.paper-author}
+European Commission, Directorate-General for Communications Networks, Content and Technology
+
+[Download PDF](https://bookshop.europa.eu/en/european-capability-for-situational-awareness-pbKK0215595/downloads/KK-02-15-595-EN-N/KK0215595ENN_002.pdf;pgid=GSPefJMEtXBSR0dT6jbGakZD0000Gfj5M3SP;sid=zuBNVZks4YlNVsAuzinT8vsJbCMxBTvvsrA=?FileName=KK0215595ENN_002.pdf&SKU=KK0215595ENN_PDF&CatalogueNumber=KK-02-15-595-EN-N){:.download-link .paper-download target="_blank"}
+
 ### Analysis of End-User QoE in Community Networks
 
 {:.paper-description}
