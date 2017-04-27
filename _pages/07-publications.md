@@ -316,72 +316,54 @@ M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 
 [Download PDF]({{ site.baseurl }}/publications/detecting-bittorrent-blocking.pdf){:.download-link .paper-download target="_blank"}
 
-# Regulator Filings
+# Government / Regulatory Filings
+
+## 2016
+
+### [10/11/2016 - NTIA](https://www.ntia.doc.gov/files/ntia/publications/m-lab.pdf){:target="+blank"}: Comments on the National Broadband Research Agenda, Docket Number: 160831803-6803-01
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/ntia/m-lab_ntia_10-11-2016.pdf){:.download-link .paper-download target="_blank"}
 
 ## 2015
 
-### [2/19/2015 - FCC Filing](https://www.fcc.gov/ecfs/filing/60001018548){:target="_blank"}: Protecting and Promoting the Open Internet, GN Docket No. 14-28; Framework for Broadband Internet Services, GN Docket No. 10-127;
+### [2/19/2015 - FCC](https://www.fcc.gov/ecfs/filing/60001018548){:target="_blank"}: Protecting and Promoting the Open Internet, GN Docket No. 14-28; Framework for Broadband Internet Services, GN Docket No. 10-127
 
 [Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/60001031564_02-19-2015.pdf){:.download-link .paper-download target="_blank"}
 
-https://ecfsapi.fcc.gov/file/60001031564.pdf
+## 2013
 
-https://www.fcc.gov/ecfs/filing/60001018549
-https://ecfsapi.fcc.gov/file/60001031566.pdf
+### [1/10/2013 - FCC](https://www.fcc.gov/ecfs/filing/6017157466){:target="_blank"}: Notice of Oral Ex Parte Communications, GN Docket No. 12-264
 
-https://www.fcc.gov/ecfs/filing/6017157466
-https://ecfsapi.fcc.gov/file/7022102027.pdf
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7022102027_01-10-2013.pdf){:.download-link .paper-download target="_blank"}
 
-https://www.fcc.gov/ecfs/filing/6017114912
-https://ecfsapi.fcc.gov/file/7022037110.pdf
+## 2012
 
-https://www.fcc.gov/ecfs/filing/6017111463
-https://ecfsapi.fcc.gov/file/7022018845.pdf
-https://ecfsapi.fcc.gov/file/7022018844.pdf
+### [10/22/2012 - FCC](https://www.fcc.gov/ecfs/filing/6017114912){:target="_blank"}: Inquiry Concerning the Deployment of Advanced Telecommunications Capability to All Americans in a Reasonable and Timely Fashion, and Possible Steps To Accelerate Such Deployment Pursuant to Section 706 of the Telecommunications Act of 1996, as Amended by the Broadband Data Improvement Act
 
-https://www.fcc.gov/ecfs/filing/6017111464
-https://ecfsapi.fcc.gov/file/7022018847.pdf
-https://ecfsapi.fcc.gov/file/7022018846.pdf
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7022037110_10-22-2012.pdf){:.download-link .paper-download target="_blank"}
 
-https://www.fcc.gov/ecfs/filing/6017111465
-https://ecfsapi.fcc.gov/file/7022018849.pdf
-https://ecfsapi.fcc.gov/file/7022018848.pdf
+### [9/21/2012 - FCC](https://www.fcc.gov/ecfs/filing/6017111463){:target="_blank"}: Notice of Oral Ex Parte Communications, CG Docket No. 09-158, CC Docket No. 98-170, WC Docket No. 04-36
 
-https://www.fcc.gov/ecfs/filing/6017098294
-https://ecfsapi.fcc.gov/file/7021995334.pdf
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7022018844_09-21-2012.pdf){:.download-link .paper-download target="_blank"}
 
-https://www.fcc.gov/ecfs/filing/6017098295
-https://ecfsapi.fcc.gov/file/7021995335.pdf
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7022018845_09-21-2012.pdf){:.download-link .paper-download target="_blank"}
 
-https://www.fcc.gov/ecfs/filing/6017098296
-https://ecfsapi.fcc.gov/file/7021995336.pdf
+### [7/30/2012](https://www.fcc.gov/ecfs/filing/6017098294){:target="_blank"}: Notice of Oral Ex Parte Communications, CG Docket No. 09-158, CC Docket No. 98-
+170, WC Docket No. 04-36
 
-https://www.fcc.gov/ecfs/filing/6017096720
-https://ecfsapi.fcc.gov/file/7021990267.pdf
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7021995334_07-30-2012.pdf){:.download-link .paper-download target="_blank"}
 
-https://www.fcc.gov/ecfs/filing/6017096719
-https://ecfsapi.fcc.gov/file/7021990266.pdf
+### [7/18/2012](https://www.fcc.gov/ecfs/filing/6017096720){:target="_blank"}: Letter, CG Docket No. 09-158, CC Docket No. 98-170, WC Docket No. 04-36
 
-https://www.fcc.gov/ecfs/filing/6017096721
-https://ecfsapi.fcc.gov/file/7021990268.pdf
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7021990267_07-18-2012.pdf){:.download-link .paper-download target="_blank"}
 
-https://www.fcc.gov/ecfs/filing/6017093921
-https://ecfsapi.fcc.gov/file/7021981372.pdf
+### [6/29/2012](https://www.fcc.gov/ecfs/filing/6017093921){:target="_blank"}: Notice of Ex Parte, CG Docket No. 09-158, CC Docket No. 98-170, WC Docket No. 04-36
 
-https://www.fcc.gov/ecfs/filing/6017093952
-https://ecfsapi.fcc.gov/file/7021981429.pdf
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7021981372_06-29-2012.pdf){:.download-link .paper-download target="_blank"}
 
-https://www.fcc.gov/ecfs/filing/6017093922
-https://ecfsapi.fcc.gov/file/7021981374.pdf
+### [6/29/2012](https://www.fcc.gov/ecfs/filing/6017093952){:target="_blank"}: Amendment to Notice of Ex Parte, CG Docket No. 09-158, CC Docket No. 98-170, WC Docket No. 04-36
 
-https://www.fcc.gov/ecfs/filing/6017093923
-https://ecfsapi.fcc.gov/file/7021981375.pdf
-
-https://www.fcc.gov/ecfs/filing/6017093950
-https://ecfsapi.fcc.gov/file/7021981425.pdf
-
-https://www.fcc.gov/ecfs/filing/6017093951
-https://ecfsapi.fcc.gov/file/7021981428.pdf
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7021981429_06-29-2012.pdf){:.download-link .paper-download target="_blank"}
 
 # Presentations
 
