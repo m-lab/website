@@ -12,6 +12,18 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 # Papers
 
+## 2017
+
+### Public QoS and Net Neutrality Measurements: Current Status and Challenges Toward Exploitable Results
+
+{:.paper-description}
+The interest for Quality of Service (QoS) measurements in the Internet has exceeded the boundaries of research laboratories and passed into the public domain. The Internet is treated as a public utility, and users are given the right to access Internet content of their choice at an adequate quality. This coincides with the sustained interest for net neutrality (NN), basic safeguards for which are being taken in countries all over the world. Today, several tools have become available that empower end-users to measure the performance of their Internet connection and detect NN violations. However, the value that end-users obtain with these measurements is still small and the results are not being exploited satisfactorily by regulatory authorities, policy makers, and consumers. In this article, we perform a detailed review of the tools that are currently available for public QoS and NN measurements and explore three challenges that must be met in order to extract more value from the results: (a) Harmonization of measurement methodologies of basic performance parameters (throughput, delay, jitter, and packet loss); (b) the creation of a toolbox for detecting and monitoring NN violations; and (c) the use of a proper sampling plan for producing estimates over population groups.
+
+{:.paper-author}
+Ioannis Koukoutsidis
+
+[Download PDF](http://www.jstor.org/stable/pdf/10.5325/jinfopoli.5.2015.0245.pdf){:.download-link .paper-download target="_blank"}
+
 ## 2016
 
 ### Analysis of Impartial Quality Measurements on Indian Broadband Connections
