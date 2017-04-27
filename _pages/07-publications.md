@@ -31,16 +31,6 @@ TSRK Prasad, Dhruv Shekhawat, Sukanto Guha, Neena Goveas and Bharat Deshpande
 
 [Download PDF]({{ site.baseurl }}/publications/2016-Prasad-et-al.pdf){:.download-link .paper-download target="_blank"}
 
-### Analysis of Impartial Quality Measurements on Indian Broadband Connections
-
-{:.paper-description}
-Broadband Internet user base is growing at an exponential pace in India. The market pressures are forcing the Internet service providers (ISPs) to sell their service offerings aggressively, resulting in a growing discrepancy between consumer expectations and service offerings from the ISPs. This discrepancy is often evident in experienced vs offered Internet connection service. This study examines the Quality of Service (QoS) variations for Internet connections of the Indian broadband users.
-
-{:.paper-author}
-TSRK Prasad, Dhruv Shekhawat, Sukanto Guha, Neena Goveas and Bharat Deshpande
-
-[Download PDF]({{ site.baseurl }}/publications/2016-Prasad-et-al.pdf){:.download-link .paper-download target="_blank"}
-
 ### CUSUM Anomaly Detection
 {:.no_toc}
 
