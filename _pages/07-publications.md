@@ -7,6 +7,7 @@ menu-item: true
 ---
 
 # Papers, Presentations, Regulator Filings and Other Documents
+{:.no_toc}
 
 {:.intro-blurb}
 Papers, presentations, and other documents that describe the M-Lab platform, tests, and data, as well as research results obtained from the analysis of M-Lab data, are shown below.
