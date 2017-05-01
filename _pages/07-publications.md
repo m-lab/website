@@ -385,6 +385,11 @@ M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 ## 2017
 {:.no_toc}
 
+### [4/25/2017 - TRAI (India)](http://trai.gov.in/sites/default/files/Measurement_Lab_27_04_2017.pdf){:target="_blank"}: Counter Comments on TRAI Consultation Paper on Net Neutrality
+{:.no_toc}
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/trai/Measurement_Lab_27_04_2017.pdf){:.download-link .paper-download target="_blank"}
+
 ### [4/12/2017 - TRAI (India)]({{ site.baseurl }}/publications/regulator-filings/ntia/m-lab_ntia_10-11-2016.pdf){:target="_blank"}: TRAI Consultation Paper on Net Neutrality
 {:.no_toc}
 
