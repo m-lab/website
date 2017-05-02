@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "Transitioning to a New Backend Pipeline and Data Availability"
-author: "Richard Roberto"
+author: "Chris Ritzo"
 breadcrumb: blog
 categories:
   - bigquery
