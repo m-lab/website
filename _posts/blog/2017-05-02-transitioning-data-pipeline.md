@@ -4,8 +4,13 @@ title: "Transitioning to a New Backend Pipeline and Data Availability"
 author: "Richard Roberto"
 breadcrumb: blog
 categories:
+  - bigquery
   - data
+  - data-analysis
+  - gcs
+  - performance
   - pipeline
+  - research
 ---
 
 # Transitioning to a New Backend Pipeline and Data Availability
