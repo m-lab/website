@@ -33,6 +33,14 @@ header:
         - text: "BigQuery Schema"
           url:  "/data/bq/schema/"
 
+    - 
+      title: "learn"
+      sub-nav:
+        - text: "About the Internet"
+          url: "/learn/internet/"
+        - text: "Glossary"
+          url: "/learn/glossary/"
+
 footer:
   subscribe:
     items:
