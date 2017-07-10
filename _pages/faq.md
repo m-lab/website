@@ -20,6 +20,13 @@ The graphic below illustrates the relationship between tests run by consumers an
 
 ![Illustration showing the lifecycle of an M-Lab test]({{ site.baseurl }}/images/about/lifecycle-of-mlab-test.png)
 
+## Where are M-Lab Servers hosted?
+{:.no_toc}
+
+M-Lab hosts our servers, which we call "pods", in Tier 1 data-centers, connected to the internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible.
+
+Once an M-Lab pod is online we make no changes in our systems for the life of each pod, but we don't control the routes and connectivity of the providers who connect our pods to the internet. That connectivity will change over time as one might expect, as upstream providers peer, upgrade capacity etc. Whenever there is a substantial change to our sites, such as renumbering of IP addresses, we retire the pod, retain its naming and metadata in our systems, and treat the pod as brand new.
+
 # M-Lab's Tests and Data
 
 ## What measurement tests can I run?
@@ -106,7 +113,7 @@ M-Lab support will usually reply within two business days. You can also ask othe
 ## What firewall ports does NDT require to be open?
 {:.no_toc}
 
-If you are unable to run NDT at all, you may be using a computer that is firewalled, for example at your workplace. You or your network administrator will need to open ports 3001-3010 and 49152-65535 in the firewall for this test to function properly.
+If you are unable to run NDT at all, you may be using a computer that is firewalled, for example at your workplace. You or your network administrator will need to open ports 3001-3010 and 32768-65535 in the firewall for this test to function properly.
 
 # About M-Lab
 
