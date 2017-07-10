@@ -488,7 +488,8 @@ M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 {:.no_toc}
 
 {:.paper-description}
-Presented at the OpenVis Conf, April 2017
+Presented at the Open Data Science Conference in Boston, May 2017
+Also presented at the Strata Data Conference in London, May 2017
 
 {:.paper-author}
 Irene Ros
