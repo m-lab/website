@@ -17,8 +17,33 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 # Papers
 
+## 2017
+{:.no_toc}
+
+### Measuring Broadband in Schools
+{:.no_toc}
+
+{:.paper-description}
+ The challenges that school administrators face when budgeting for and deploying technology vary widely, as do their approaches to supporting its use within their schools. Measuring and assessing network health is a critical challenge facing public schools as they plan for both today’s and tomorrow’s broadband needs. New America’s Open Technology Institute (OTI) and Education Policy program partnered with the IT staff at Alexandria City Public Schools (ACPS) in Virginia to conduct a pilot study as a first step toward addressing this challenge. The study, Measuring Broadband in Schools, looked at the complexities of understanding network capacity in education institutions, and sought to better understand the challenges of measuring network capacity at the point of use in schools.
+
+{:.paper-author}
+Chris Ritzo
+
+[Download PDF](https://www.newamerica.org/oti/policy-papers/measuring-broadband-in-schools/){:.download-link .paper-download target="_blank"}
+
 ## 2016
 {:.no_toc}
+
+### Measuring Latency Variation in the Internet
+{:.no_toc}
+
+{:.paper-description}
+The authors analyse two complementary datasets to quantify the latency variation experienced by internet end-users: (i) a large-scale active measurement dataset (from the Measurement Lab Network Diagnostic Tool) which shed light on long-term trends and regional differences; and (ii) passive measurement data from an access aggregation link which is used to analyse the edge links closest to the user. The analysis shows that variation in latency is both common and of significant magnitude, with two thirds of samples exceeding 100 ms of variation. The variation is seen within single connections as well as between connections to the same client. The distribution of experienced latency variation is heavy-tailed, with the most affected clients seeing an order of magnitude larger variation than the least affected. In addition, there are large differences between regions, both within and between continents. Despite consistent improvements in throughput, most regions show no reduction in latency variation over time, and in one region it even increases.
+
+{:.paper-author}
+Toke Hoiland-Jorgensen et al., CoNEXT '16
+
+[Download PDF]({{ site.baseurl }}/publications/2016-hoiland-jorgensen.pdf){:.download-link .paper-download target="_blank"}
 
 ### Analysis of Impartial Quality Measurements on Indian Broadband Connections
 {:.no_toc}
@@ -459,6 +484,17 @@ M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 ## 2017
 {:.no_toc}
 
+### Visualizing the Health of the internet - Measurement Lab + Bocoup
+{:.no_toc}
+
+{:.paper-description}
+Presented at the OpenVis Conf, April 2017
+
+{:.paper-author}
+Irene Ros
+
+[View Presentation](https://docs.google.com/presentation/d/1RBMzIIvfyE1NDRPJZHvFBpJ5BEg2cE21L3pUtz29qfI/pub?start=false&loop=false&delayms=60000&slide=id.p){:.download-link .paper-download target="_blank"}
+
 ### M-Lab: What it is, why you should use it, and what's happening in 2017
 {:.no_toc}
 
@@ -469,7 +505,7 @@ Presented at the Google Networking Research Summit, February 2017
 P. Boothe
 
 [Download PDF]({{ site.baseurl }}/publications/2017-MLab-Google-Research-Summit.pdf){:.download-link .paper-download target="_blank"}
-
+https://docs.google.com/presentation/d/1RBMzIIvfyE1NDRPJZHvFBpJ5BEg2cE21L3pUtz29qfI/pub?start=false&loop=false&delayms=60000&slide=id.p
 ## 2012
 {:.no_toc}
 
