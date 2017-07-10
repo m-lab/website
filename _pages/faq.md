@@ -25,7 +25,7 @@ The graphic below illustrates the relationship between tests run by consumers an
 
 M-Lab hosts our servers, which we call "pods", in Tier 1 data-centers, connected to the internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible.
 
-Once an M-Lab pod is online we make no changes in our systems for the life of each pod, but we don't control the routes and connectivity of the providers who connect our pods to the internet. That connectivity will change over time as one might expect, as upstream providers peer, upgrade capacity etc. Whenever there is a substantial change to our sites, such as renumbering of IP addresses, we retire the pod, retain its naming and metadata in our systems, and treat the pod as brand new.
+Once an M-Lab pod is online we make no changes in our systems for the life of each pod. Whenever there is a substantial change to our sites, such as renumbering of IP addresses, we retire the pod, retain its naming and metadata in our systems, and treat the pod as brand new. You can view where M-Lab servers are hosted on our [infrastructure page]({{ site.baseurl }}/infrastructure).
 
 # M-Lab's Tests and Data
 
