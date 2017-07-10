@@ -506,7 +506,7 @@ Presented at the Google Networking Research Summit, February 2017
 P. Boothe
 
 [Download PDF]({{ site.baseurl }}/publications/2017-MLab-Google-Research-Summit.pdf){:.download-link .paper-download target="_blank"}
-https://docs.google.com/presentation/d/1RBMzIIvfyE1NDRPJZHvFBpJ5BEg2cE21L3pUtz29qfI/pub?start=false&loop=false&delayms=60000&slide=id.p
+
 ## 2012
 {:.no_toc}
 
