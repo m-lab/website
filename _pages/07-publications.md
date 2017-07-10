@@ -24,7 +24,7 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 {:.no_toc}
 
 {:.paper-description}
- The challenges that school administrators face when budgeting for and deploying technology vary widely, as do their approaches to supporting its use within their schools. Measuring and assessing network health is a critical challenge facing public schools as they plan for both today’s and tomorrow’s broadband needs. New America’s Open Technology Institute (OTI) and Education Policy program partnered with the IT staff at Alexandria City Public Schools (ACPS) in Virginia to conduct a pilot study as a first step toward addressing this challenge. The study, Measuring Broadband in Schools, looked at the complexities of understanding network capacity in education institutions, and sought to better understand the challenges of measuring network capacity at the point of use in schools.
+The challenges that school administrators face when budgeting for and deploying technology vary widely, as do their approaches to supporting its use within their schools. Measuring and assessing network health is a critical challenge facing public schools as they plan for both today’s and tomorrow’s broadband needs. New America’s Open Technology Institute (OTI) and Education Policy program partnered with the IT staff at Alexandria City Public Schools (ACPS) in Virginia to conduct a pilot study as a first step toward addressing this challenge. The study, Measuring Broadband in Schools, looked at the complexities of understanding network capacity in education institutions, and sought to better understand the challenges of measuring network capacity at the point of use in schools.
 
 {:.paper-author}
 Chris Ritzo
