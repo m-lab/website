@@ -60,7 +60,7 @@ TSRK Prasad, Dhruv Shekhawat, Sukanto Guha, Neena Goveas and Bharat Deshpande
 {:.no_toc}
 
 {:.paper-description}
-The CUSUM anomaly detection (CAD) method is based on CUSUM statistical process control charts. CAD is used to detect anomalous subsequences of a time series that show a subtle shift in the mean relative to the context of the sequence itself. CAD was applied in order to look for anomalies in M­Lab’s database of Network Diagnostic Test (NDT) results.
+The CUSUM anomaly detection (CAD) method is based on CUSUM statistical process control charts. CAD is used to detect anomalous subsequences of a time series that show a subtle shift in the mean relative to the context of the sequence itself. CAD was applied in order to look for anomalies in M­Lab’s database of Network Diagnostic Tool (NDT) results.
 
 {:.paper-author}
 Kinga Farkas

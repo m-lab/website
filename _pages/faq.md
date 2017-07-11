@@ -32,7 +32,7 @@ Once an M-Lab pod is online we make no changes in our systems for the life of ea
 ## What measurement tests can I run?
 {:.no_toc}
 
-Right now, people can use M-Lab tests to measure their broadband speed, analyze application performance, and run diagnostics. The most commonly run test is the Network Diagnostic Test (NDT), which provides measurements like upload speed, download speed, and other data points that help to measure speed and quality issues on your connection. To read about all of the tests available on the platform, please visit our [tests page]({{ site.baseurl}}/tools/ndt/).
+Right now, people can use M-Lab tests to measure their broadband speed, analyze application performance, and run diagnostics. The most commonly run test is the Network Diagnostic Tool (NDT), which provides measurements like upload speed, download speed, and other data points that help to measure speed and quality issues on your connection. To read about all of the tests available on the platform, please visit our [tests page]({{ site.baseurl}}/tools/ndt/).
 
 ## Will these tests monitor my private Internet activity, like email messages or, browsing and search history?
 {:.no_toc}
