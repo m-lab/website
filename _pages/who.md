@@ -73,7 +73,7 @@ grid-section:
         desc: "Nexa Center for Internet and Society, Politecnico di Torino "
       - link: "http://www.internet2.edu/"
         image: "network-diagnostic-test.jpg"
-        heading: "Network Diagnostic Test"
+        heading: "Network Diagnostic Tool"
         desc: "Internet2"
       - link: "http://www.umich.edu/"
         image: "mobiperf.png"

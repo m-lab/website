@@ -11,7 +11,7 @@ grid-section:
     grid-items:
       - link: "/tools/ndt/"
         image: "ndt.png"
-        heading: "NDT (Network Diagnostic Test)"
+        heading: "NDT (Network Diagnostic Tool)"
         desc: "Tests your connection speed, and provides a sophisticated diagnosis of problems limiting speed."
       - link: "/tools/npad/"
         image: "npad.png"
