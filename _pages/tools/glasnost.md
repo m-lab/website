@@ -7,9 +7,9 @@ breadcrumb: tests
 
 # Glasnost
 
-Glasnost attempts to detect whether your Internet service provider (ISP) is performing application-specific traffic shaping. You can test whether your ISP is throttling or blocking email, HTTP, SSH, Flash Video, and P2P applications such as BitTorrent.
+**Glasnost was decommissioned on 07/7/2017. However, the source code, data and data analysis code is still available at the link provided below.**
 
-[Run Glasnost](http://broadband.mpi-sws.org/transparency/bttest-mlab.php){:target="_blank"}
+Glasnost attempted to detect whether your Internet service provider (ISP) was performing application-specific traffic shaping. Glasnost allowed a user to test whether an ISP was throttling or blocking email, HTTP, SSH, Flash Video, and P2P applications such as BitTorrent.
 
 Please cite this data set as follows: **The M-Lab Glasnost Data Set, &lt;date range used&gt;. http://measurementlab.net/tools/glasnost**
 
