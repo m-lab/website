@@ -67,22 +67,19 @@ footer:
         link: "/about/"
         link-title: "About Us"
       -
-        link: "/contact/"
-        link-title: "Contact"
-      -
         link: "/faq/"
         link-title: "FAQ"
       -
-        link: "/blog/"
-        link-title: "Blog"
+        link: "/contact/"
+        link-title: "Contact"
     column-two:
       items:
       -
         link: "/privacy"
         link-title: "Privacy Policy"
       -
-        link: "/terms/"
-        link-title: "Terms"
+        link: "/blog/"
+        link-title: "Blog"
       -
         link: "/feed.xml"
         link-title: "RSS Feed"
