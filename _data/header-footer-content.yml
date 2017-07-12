@@ -65,24 +65,32 @@ footer:
       items:
       -
         link: "/about/"
-        link-title: "About Us"
-      -
-        link: "/faq/"
-        link-title: "FAQ"
+        link-title: "About"
       -
         link: "/contact/"
         link-title: "Contact"
+      -
+        link: "https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss"
+        link-title: "Discuss List"
     column-two:
       items:
       -
-        link: "/privacy"
-        link-title: "Privacy Policy"
+        link: "/faq/"
+        link-title: "FAQ"
       -
         link: "/blog/"
         link-title: "Blog"
       -
         link: "/feed.xml"
-        link-title: "RSS Feed"
+        link-title: "RSS"
+    column-three:
+      items:
+      -
+        link: "/privacy/#privacy-policy"
+        link-title: "Privacy Policy"
+      -
+        link: "/privacy/#acceptable-use-policy"
+        link-title: "Acceptable Use Policy"
   privacy:
     title: "Privacy Policy &amp; Acceptable Use Policy."
     link: "/privacy/"
