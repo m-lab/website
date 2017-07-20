@@ -48,6 +48,14 @@
     			  {% endfor %}
           
           </ul>
+          <ul class="footer-links">
+            
+            {% for item in footer.other-links.column-three.items %}
+              <li><a href="{{ item.link | prepend: site.baseurl }}">{{ item.link-title }}</a>
+              </li>
+            {% endfor %}
+          
+          </ul>
         </div>
 
     </div>
@@ -55,7 +63,6 @@
 
       <!-- Footer - Privacy Policy -->
         <div class="privacy-policy col-xs-9 col-sm-11">
-          <a href="{{ footer.privacy.link | prepend: site.baseurl }}" class="policy-heading" target="_blank">{{ footer.privacy.title }}</a>
           {{ footer.privacy.blurb }}
         </div>
 
