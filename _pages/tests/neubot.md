@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /tools/neubot/
+permalink: /tests/neubot/
 title: "Neubot"
 breadcrumb: tests
 ---
@@ -11,7 +11,7 @@ Neubot (the network neutrality bot) is a free software Internet bot, developed a
 
 **[Download and run Neubot (Linux, MacOSX, and Windows**)](http://www.neubot.org/neubot-install-guide){:target="_blank"}
 
-Please cite this data set as follows: **The M-Lab Neubot Data Set, &lt;date range used&gt;. http://measurementlab.net/tools/neubot**
+Please cite this data set as follows: **The M-Lab Neubot Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/neubot**
 
 **Data** collected by Neubot is available in raw format at [https://console.cloud.google.com/storage/browser/m-lab/neubot](https://console.cloud.google.com/storage/browser/m-lab/neubot){:target="_blank"} and at [http://www.neubot.org/data](http://www.neubot.org/data){:target="_blank"}.
 

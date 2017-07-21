@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /tools/npad/
+permalink: /tests/npad/
 title: "NPAD (Network Path &amp; Application Diagnostics)"
 breadcrumb: tests
 ---
@@ -13,7 +13,7 @@ NPAD diagnoses a range of common performance issues affecting the [last network 
 
 [Download command-line client](http://www.psc.edu/index.php/npad/finish/112-npad/450-npad-1-5-6){:target="_blank"}
 
-Please cite this data set as follows: **The M-Lab NPAD Data Set, &lt;date range used&gt;. http://measurementlab.net/tools/npad
+Please cite this data set as follows: **The M-Lab NPAD Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/npad
 
 **Data** collected by NPAD is available:
 

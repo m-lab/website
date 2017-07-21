@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /tools/mobiperf/
+permalink: /tests/mobiperf/
 title: "MobiPerf"
 breadcrumb: tests
 ---
@@ -9,7 +9,7 @@ breadcrumb: tests
 
 MobiPerf is an open source application for measuring network performance on mobile platforms. You can measure your network's throughput and latency, as well as other useful network measurements. MobiPerf also performs measurements at regular intervals in the background.
 
-Please cite this data set as follows: **The M-Lab MobiPerf Data Set, &lt;date range used&gt;. http://measurementlab.net/tools/mobiperf
+Please cite this data set as follows: **The M-Lab MobiPerf Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/mobiperf
 
 **Data** collected by MobiPerf is available in raw format at [https://console.cloud.google.com/storage/browser/openmobiledata_public](https://console.cloud.google.com/storage/browser/openmobiledata_public){:target="_blank"}.
 
