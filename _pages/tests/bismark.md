@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /tools/bismark/
+permalink: /tests/bismark/
 title: "BISmark"
 breadcrumb: tests
 ---
@@ -11,7 +11,7 @@ BISmark is an [OpenWRT](http://openwrt.org){:target="_blank"}-based platform tha
 
 [Apply to host a BISmark gateway](http://projectbismark.net/){:target="_blank"}
 
-Please cite this data set as follows: **The M-Lab BISmark Data Set, &lt;date range used&gt;. http://measurementlab.net/tools/bismark
+Please cite this data set as follows: **The M-Lab BISmark Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/bismark
 
 **Data** collected by BISmark is available in raw format at [http://uploads.projectbismark.net/](http://uploads.projectbismark.net/){:target="_blank"}.
 

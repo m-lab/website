@@ -51,7 +51,7 @@ M-Lab’s New York sites received the highest number of tests and experienced mo
 **Verizon over GTT in Washington D.C.**
 In Washington D.C., customers of Verizon experienced severely degraded performance when connecting across GTT. Comcast and Time Warner Cable customers also experienced degradation across GTT, but to a lesser extent.
 
-These episodes and much more data are visualized and publicly available in the [Internet Observatory]({{ site.baseurl }}/observatory/), a dynamic data-visualization tool that allows consumers, policymakers, and researchers to better understand the impact of ISP relationships on their own Internet access and performance. As with all of our research, we invite anyone interested to access the original data and draw their own conclusions. It’s [all published in its complete and raw form, in the public domain.]({{ site.baseurl }}/tools/ndt/)
+These episodes and much more data are visualized and publicly available in the [Internet Observatory]({{ site.baseurl }}/observatory/), a dynamic data-visualization tool that allows consumers, policymakers, and researchers to better understand the impact of ISP relationships on their own Internet access and performance. As with all of our research, we invite anyone interested to access the original data and draw their own conclusions. It’s [all published in its complete and raw form, in the public domain.]({{ site.baseurl }}/tests/ndt/)
 
 Collin Anderson, on behalf of M-Lab researchers
 

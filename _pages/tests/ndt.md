@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /tools/ndt/
+permalink: /tests/ndt/
 title: "NDT (Network Diagnostic Tool)"
 breadcrumb: tests
 ---
@@ -15,7 +15,7 @@ NOTE: If the test does not run or takes longer than 60 seconds, please read the 
 
 <div class="embed-responsive embed-responsive-4by3 ndt-iframe"><iframe src="{{ site.baseurl }}/p/ndt-ws.html" align="middle" class="embed-responsive-item"></iframe></div>
 
-Please cite this data set as follows: **The M-Lab NDT Data Set, &lt;date range used&gt; https://measurementlab.net/tools/ndt**
+Please cite this data set as follows: **The M-Lab NDT Data Set, &lt;date range used&gt; https://measurementlab.net/tests/ndt**
 
 **Data** collected by NDT is available:
 

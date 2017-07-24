@@ -26,7 +26,7 @@ carousel-items:
   - image: "ndt.jpg"
     heading: "NDT (Network Diagnostic Tool)"
     caption: "Test your connection speed and receive a sophisticated diagnosis of problems limiting performance."
-    link: "/tools/ndt/"
+    link: "/tests/ndt/"
     link-text: "Go to NDT (Network Diagnostic Tool)"
   - image: "isp.jpg"
     alt: "This research reveals that consumer access and performance are directly affected by the business relationships between interconnecting Internet Service Providers (ISPs)."

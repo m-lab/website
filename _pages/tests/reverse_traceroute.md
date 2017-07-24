@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /tools/reverse_traceroute/
+permalink: /tests/reverse_traceroute/
 title: "Reverse Traceroute"
 breadcrumb: tests
 ---
@@ -11,7 +11,7 @@ Reverse traceroute measures the network path back to a user from selected networ
 
 [Run Reverse Traceroute](http://revtr.cs.washington.edu/)
 
-Please cite this data set as follows: **The M-Lab Reverse Traceroute Data Set, &lt;date range used&gt;. http://measurementlab.net/tools/reverse_traceroute**
+Please cite this data set as follows: **The M-Lab Reverse Traceroute Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/reverse_traceroute**
 
 **Data** collected by Reverse Traceroute is available in raw format at[https://console.cloud.google.com/storage/browser/m-lab_revtr/](https://console.cloud.google.com/storage/browser/m-lab_revtr/).
 

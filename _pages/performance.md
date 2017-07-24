@@ -12,7 +12,7 @@ M-Lab's **open measurement data** means that developers and researchers don’t 
 
 ## Broadband Performance Statistics Using NDT Data
 
-The charts graphics presented in this section visualize data collected by the Network Diagnostic Tool ([NDT]({{ site.baseurl }}/tools/ndt)). Of the many measurements collected by NDT, these particular visualizations show  **download throughput**, **upload throughput**, **round- trip time**, and **packet retransmission**.
+The charts graphics presented in this section visualize data collected by the Network Diagnostic Tool ([NDT]({{ site.baseurl }}/tests/ndt)). Of the many measurements collected by NDT, these particular visualizations show  **download throughput**, **upload throughput**, **round- trip time**, and **packet retransmission**.
 
 The measurements are aggregated by:
 
