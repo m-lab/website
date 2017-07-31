@@ -13,10 +13,10 @@ header:
       sub-nav:
         - text: "What is Measurement Lab?"
           url:  "/about/"
-        - text: "FAQ"
-          url:  "/faq/"
         - text: "Who we are"
           url:  "/who/"
+        - text: "Privacy"
+          url:  "/privacy/#privacy-policy"
         - text: "Contact"
           url:  "/contact/"
     -
@@ -24,22 +24,23 @@ header:
       sub-nav:
         - text: "Overview"
           url:  "/data/"
-        - text: "Google Cloud Storage"
-          url:  "/data/gcs/"
-        - text: "BigQuery QuickStart"
-          url:  "/data/bq/quickstart/"
-        - text: "BigQuery Examples"
-          url:  "/data/bq/examples/"
-        - text: "BigQuery Schema"
-          url:  "/data/bq/schema/"
-
-    - 
-      title: "learn"
+        - text: "Docs"
+          url:  "/data/docs"
+        - text: "Platform Status"
+          url:  "/infrastructure/"
+        - text: "Tools"
+          url:  "/data/tools/"
+    -
+      title: "publications"
       sub-nav:
-        - text: "About the Internet"
-          url: "/learn/internet/"
-        - text: "Glossary"
-          url: "/learn/glossary/"
+        - text: "Blog"
+        - url:  "/blog/"
+        - text: "Papers"
+        - url:  "/publications/#papers"
+        - text: "Government/Regulatory Filings"
+        - url:  "/publications/#government--regulatory-filings"
+        - text: "Presentations"
+        - url:  "/publications/#presentations"
 
 footer:
   subscribe:

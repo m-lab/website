@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: "Publications"
-sub-nav: true
+page-title: "Publications"
 menu-item: true
 ---
 

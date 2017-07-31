@@ -15,7 +15,7 @@ Please cite this data set as follows: **The M-Lab SideStream Data Set, &lt;date 
 
 * in raw format at [https://console.developers.google.com/storage/browser/m-lab/sidestream/](https://console.developers.google.com/storage/browser/m-lab/sidestream/).
 
-* in BigQuery at [https://www.measurementlab.net/data/bq/quickstart/]({{ site.baseurl }}/data/bq/quickstart/).
+* in BigQuery at [https://www.measurementlab.net/data/docs/bq/quickstart/]({{ site.baseurl }}/data/docs/bq/quickstart/).
 
 **Source code** is available at[https://github.com/npad/sidestream](https://github.com/npad/sidestream).
 
