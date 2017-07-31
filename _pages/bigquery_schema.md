@@ -5,9 +5,6 @@ permalink: /data/docs/bq/schema/
 breadcrumb: data
 ---
 
-* Table of Contents
-{:toc}
-
 # BigQuery Schema
 
 ## Background

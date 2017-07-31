@@ -27,7 +27,7 @@ header:
         - text: "Docs"
           url:  "/data/docs"
         - text: "Platform Status"
-          url:  "/infrastructure/"
+          url:  "/status/"
         - text: "Tools"
           url:  "/data/tools/"
     -

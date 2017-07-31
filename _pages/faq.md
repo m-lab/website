@@ -23,7 +23,7 @@ The graphic below illustrates the relationship between tests run by consumers an
 ## Where are M-Lab Servers hosted?
 {:.no_toc}
 
-M-Lab hosts our servers, which we call "pods", in Tier 1 data-centers, connected to the internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible. You can view where M-Lab servers are hosted on our [infrastructure page]({{ site.baseurl }}/infrastructure).
+M-Lab hosts our servers, which we call "pods", in Tier 1 data-centers, connected to the internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible. You can view where M-Lab servers are hosted on our [platform status page]({{ site.baseurl }}/status).
 
 Once an M-Lab pod is online we make no changes in our systems for the life of each pod. Whenever there is a substantial change to our sites, such as renumbering of IP addresses, we retire the pod, retain its naming and metadata in our systems, and treat the pod as brand new.
 

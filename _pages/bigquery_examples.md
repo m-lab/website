@@ -5,9 +5,6 @@ permalink: /data/docs/bq/examples/
 breadcrumb: data
 ---
 
-* Table of Contents
-{:toc}
-
 # BigQuery Examples
 
 The examples below query the M-Lab data in various ways to demonstrate effective use of the M-Lab BigQuery data set. Please note that the examples presented here assume prior knowledge of database query languages such as [SQL](https://en.wikipedia.org/wiki/SQL){:target="_blank"} and some knowledge of computer networking terms and concepts such as [subnets](https://en.wikipedia.org/wiki/Subnetwork){:target="_blank"} and [IP addresses](https://en.wikipedia.org/wiki/IP_address){:target="_blank"}.
