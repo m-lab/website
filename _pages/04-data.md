@@ -65,4 +65,4 @@ The M-Lab *test name* Data Set, *date range used*. *M-Lab test URL*
 
 For example:
 
-The M-Lab NDT Data Set 2009-02-11–2015-12-21. [https://measurementlab.net/tools/ndt]({{ site.baseurl }}/tests/ndt)
+The M-Lab NDT Data Set 2009-02-11–2015-12-21. [https://measurementlab.net/tests/ndt]({{ site.baseurl }}/tests/ndt)

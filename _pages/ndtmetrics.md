@@ -9,7 +9,7 @@ breadcrumb: data
 
 Commonly reported metrics such as upload or download speed, are calculated from data fields saved by the Network Diagnostic Tool. This document explains how those calculations are made in more detail.
 
-Below is a list of the most common metrics reported, and recommended queries to limit results to only valid tests. For the purposes of research, we consider valid NDT tests to be those that:
+The most commonly reported metrics are: _Download Throughput (Mbps)_, _Upload Throughput (Mbps)_, _Round Trip Time (ms)_. This page provides recommended queries for these metrics, limiting results to only valid tests. For the purposes of research, we consider valid NDT tests to be those that:
 
 * Have exchanged more than 8 KB of data
 * Have a test duration greater than 9 seconds and less than 15 seconds
@@ -22,22 +22,16 @@ For each metric, this section includes the BigQuery queries used to compute the 
 
 ## NDT BigQuery Fields, Units, Formulas and Queries
 
-Internet 2's NDT protocol specifies how to calculate these metrics using the data collected by the NDT test.
+Internet 2's NDT protocol specifies how to calculate these metrics using the data collected by the NDT test. NDT saves each of the variables that go into these metrics separately, and the values for each are important to know when calculating things like download and upload throughput, and displaying them in the desired format.
 
-*Upload throughput* is calculated using this formula:
+### Units of Measure, Converting to megabits per second (Mbps)
 
-`HCThruOctetsReceived / Duration`
+In the formulas and examples below, it is important to note the units of measure that NDT uses for fields that represent data sent and received, as well as for fields representing durations.
 
-and *Download throughput* is calculated using this formula:
+* **Data sent/recevied** fields are a count of **bytes**
+* **Duration** fields are saved in **microseconds**
 
-`HCThruOctetsAcked / SndLimTimeRwin + SndLimTimeCwnd + SndLimTimeSnd`
-
-NDT saves each of the variables that go into these metrics separately, and the values for each are important to know when calculating things like download and upload throughput, and displaying them in the desired format.
-
-* HCThruOctetsReceived and HCThruOctetsAcked are a count of bytes
-* Duration is saved in microseconds
-
-When calculating Download or Upload throughput then, we convert the final value to Mbps:
+The formula below shows how we convert our final values to Mbps when calculating Download or Upload throughput, using **8** as a multiplier in our BigQuery clauses:
 
 ```bash
 1 byte/microsecond * 8 bits/byte =
@@ -46,24 +40,11 @@ When calculating Download or Upload throughput then, we convert the final value 
 8 megabits/second => 8 Mbps
 ```
 
-So we use 8 as a multiplier when forming our BigQuery SQL clauses:
-
-**UPLOAD THROUGHPUT:**
-
-`8 * (web100_log_entry.snap.HCThruOctetsReceived/web100_log_entry.snap.Duration) AS upload_Mbps`
-
-**DOWNLOAD THROUGHPUT:**
-
-```sql
-8 * (web100_log_entry.snap.HCThruOctetsAcked/
-    (web100_log_entry.snap.SndLimTimeRwin +
-    web100_log_entry.snap.SndLimTimeCwnd +
-    web100_log_entry.snap.SndLimTimeSnd)) AS download_Mbps
-```
-
 ## Download throughput
 
 Download throughput is computed for every server-to-client test as the ratio of the data transmitted during the test and the duration of the test. Results of tests that ended during **slow start** are excluded.
+
+Download throughput is calculated using this formula within the query:
 
 ```sql
 8 *
@@ -119,6 +100,12 @@ WHERE
 Upload throughput is computed for every client-to-server test as the ratio of the data transmitted during the test and the duration of the test.
 
 It is not possible to exclude results of tests that ended during slow start, because the web100 variable `web100_log_entry.snap.CongSignals` is not updated during client-to-server tests.
+
+Upload throughput is calculated using this formula within the query:
+
+```sql
+8 * (web100_log_entry.snap.HCThruOctetsReceived/web100_log_entry.snap.Duration) AS upload_Mbps
+```
 
 The complete BigQuery example is:
 
