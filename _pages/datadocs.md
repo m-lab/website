@@ -22,10 +22,7 @@ The links below provide the basics of querying M-Lab data.
 
 For researchers and others interested in advanced querying techniques, we provide some guidance on some common use cases in the advanced BigQuery topics below.
 
-* [Using R Studio to Query M-Lab Data]()
-* [Querying for Paris Traceroute Data]()
-
-## Accessing Raw Data via GCS
+### Accessing Raw Data via GCS
 
 Advanced users may also be interested in obtaining raw M-Lab test data for detailed analyses. For example, TCP packet captures are conducted for each NDT test, and are only available in M-Lab's raw data archives.
 

@@ -1,19 +1,16 @@
 ---
 layout: page
 permalink: /publications/
-title: "Publications"
-page-title: "Publications"
+title: "M-Lab Papers, Presentations, and Regulator Filings"
+page-title: "M-Lab Papers, Presentations, and Regulator Filings"
 menu-item: true
+breadcrumb: publications
 ---
 
-# Papers, Presentations, Regulator Filings and Other Documents
+# Papers, Presentations, and Regulator Filings
 {:.no_toc}
 
-{:.intro-blurb}
 Papers, presentations, and other documents that describe the M-Lab platform, tests, and data, as well as research results obtained from the analysis of M-Lab data, are shown below.
-
-* Table of Contents
-{:toc}
 
 # Papers
 
@@ -534,7 +531,8 @@ Presented at the OECD—WPIIS, December 14, 2012
 
 [Download PDF]({{ site.baseurl }}/publications/mlab-internet-performance-data.pdf){:.download-link .paper-download target="_blank"}
 
-# Other documents
+# Other M-Lab Documentation
+{:.no_toc}
 
 ## M-Lab Two-Pager
 {:.no_toc}

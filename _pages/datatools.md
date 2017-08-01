@@ -11,10 +11,10 @@ This page describes software tools that can be used to run M-Lab tests and acces
 
 ## Supported
 
-Supported tools are those which have been developed and are maintained by the core M-Lab staff. 
+Supported tools are those which have been developed and are maintained by the core M-Lab staff.
 
 * [Telescope](https://github.com/m-lab/telescope){:target="_blank"} - _Telescope_ is a Python framework designed to extract raw measurements from M-Lab to allow the easy production of research.
-* [M-Lab Measure Chrome App](https://chrome.google.com/webstore/detail/m-lab-measure/leijmacehibmiomcnpaolboihcdepokh?utm_source=chrome-app-launcher-info-dialog){:target="_blank"} - _M-Lab Measure_ is an extension for the Google Chrome browser that lets users schedule NDT to run at regular intervals to track the performance of and Internet connection over time. 
+* [M-Lab Measure Chrome App](https://chrome.google.com/webstore/detail/m-lab-measure/leijmacehibmiomcnpaolboihcdepokh?utm_source=chrome-app-launcher-info-dialog){:target="_blank"} - _M-Lab Measure_ is an extension for the Google Chrome browser that lets users schedule NDT to run at regular intervals to track the performance of and Internet connection over time.
 
 ## Community
 

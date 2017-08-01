@@ -34,13 +34,13 @@ header:
       title: "publications"
       sub-nav:
         - text: "Blog"
-        - url:  "/blog/"
+          url:  "/blog/"
         - text: "Papers"
-        - url:  "/publications/#papers"
+          url:  "/publications/#papers"
         - text: "Government/Regulatory Filings"
-        - url:  "/publications/#government--regulatory-filings"
+          url:  "/publications/#government--regulatory-filings"
         - text: "Presentations"
-        - url:  "/publications/#presentations"
+          url:  "/publications/#presentations"
 
 footer:
   subscribe:
