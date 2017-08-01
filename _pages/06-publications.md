@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: "M-Lab Papers, Presentations, and Regulator Filings"
+title: "Publications"
 page-title: "M-Lab Papers, Presentations, and Regulator Filings"
 menu-item: true
 breadcrumb: publications

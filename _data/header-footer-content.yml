@@ -33,6 +33,8 @@ header:
     -
       title: "publications"
       sub-nav:
+        - text: "M-Lab Publications"
+          url:  "/publications/"
         - text: "Blog"
           url:  "/blog/"
         - text: "Papers"
