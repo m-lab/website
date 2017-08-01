@@ -33,7 +33,7 @@ These tables are:
 
 These tables offer a tremendous amount of improvements over our legacy per-month tables, including performance improvements by orders of magnitude. These benefits are detailed in M-Lab's [previous blog post]({{ site.baseurl }}/blog/bigquery-performance-improvements/).
 
-M-Lab will continue to support and update the legacy tables, but these tables are deprecated and will not see future development. To migrate your legacy queries to take advantage of M-Lab's new, faster tables, please refer to the [Legacy Migration Guide]({{ site.baseurl }}/data/bq/legacymigration) for details.
+M-Lab will continue to support and update the legacy tables, but these tables are deprecated and will not see future development. To migrate your legacy queries to take advantage of M-Lab's new, faster tables, please refer to the [Legacy Migration Guide]({{ site.baseurl }}/data/docs/bq/legacymigration) for details.
 
 ## Overhauled Data Documentation
 

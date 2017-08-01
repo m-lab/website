@@ -40,4 +40,4 @@ cases.
 
 ## **Migration Guide**
 
-We've published a migration guide to help convert your existing M-Lab BigQuery SQL to take advantage of the new, faster tables. Our data schema has not changed, so converting existing queries is easy and straightforward. See the [Legacy Migration Guide]({{ site.baseurl }}/data/bq/legacymigration) for details.
+We've published a migration guide to help convert your existing M-Lab BigQuery SQL to take advantage of the new, faster tables. Our data schema has not changed, so converting existing queries is easy and straightforward. See the [Legacy Migration Guide]({{ site.baseurl }}/data/docs/bq/legacymigration) for details.

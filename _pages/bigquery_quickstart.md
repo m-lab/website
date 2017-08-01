@@ -1,12 +1,9 @@
 ---
 layout: page
 title: "BigQuery QuickStart"
-permalink: /data/bq/quickstart/
+permalink: /data/docs/bq/quickstart/
 breadcrumb: data
 ---
-
-* Table of Contents
-{:toc}
 
 # BigQuery QuickStart
 
@@ -86,5 +83,5 @@ Given the resources and expertise, you can develop your own application that use
 
 ## Further Reading
 
-* [BigQuery Examples]({{ site.baseurl }}/data/bq/examples)
-* [BigQuery Schema]({{ site.baseurl }}/data/bq/schema)
+* [BigQuery Examples]({{ site.baseurl }}/data/docs/bq/examples)
+* [BigQuery Schema]({{ site.baseurl }}/data/docs/bq/schema)
