@@ -43,6 +43,21 @@ header:
           url:  "/publications/#government--regulatory-filings"
         - text: "Presentations"
           url:  "/publications/#presentations"
+    -
+      title: "contribute"
+      sub-nav:
+        - text: "Supporting M-Lab"
+          url:  "/contribute/"
+        - text: "Develop a Test"
+          url:  ""
+        - text: "Integrate a Test"
+          url:  ""
+        - text: "Host an M-Lab Site"
+          url:  ""
+        - text: "Analyze M-Lab Data"
+          url:  ""
+        - text: "Donate"
+          url:  ""
 
 footer:
   subscribe:
