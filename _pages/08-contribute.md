@@ -23,8 +23,6 @@ M-Lab welcomes the participation of individuals and researchers, as well as comp
 
 ## Donate to M-Lab
 
-
-
 ## Individuals
 
 For individuals, the best way to support M-Lab is to regularly use [our tests]({{ site.baseurl }}/tests). You gain the benefit of understanding more about your connection to the Internet, and the research community and the public benefits from the resulting public data.
