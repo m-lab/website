@@ -86,10 +86,10 @@ footer:
     column-three:
       items:
       -
-        link: "/privacy/#privacy-policy"
+        link: "/privacy/"
         link-title: "Privacy Policy"
       -
-        link: "/privacy/#acceptable-use-policy"
+        link: "/aup/"
         link-title: "Acceptable Use Policy"
   privacy:
     title: "Privacy Policy &amp; Acceptable Use Policy."
