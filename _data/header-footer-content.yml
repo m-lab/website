@@ -16,7 +16,7 @@ header:
         - text: "Who we are"
           url:  "/who/"
         - text: "Privacy"
-          url:  "/privacy/#privacy-policy"
+          url:  "/privacy/"
         - text: "Contact"
           url:  "/contact/"
     -
@@ -30,6 +30,17 @@ header:
           url:  "/status/"
         - text: "Tools"
           url:  "/data/tools/"
+    -
+      title: "tests"
+      sub-nav:
+        - text: "Internet Measurement Tests"
+          url:  "/tests/"
+        - text: "Using and Troubleshooting M-Lab Tests"
+          url:  "/tests/#using-and-troubleshooting-m-lab-tests"
+        - text: "Current Tests"
+          url:  "/tests/#current-tests"
+        - text: "Retired Tests"
+          url:  "/tests/#retired-tests"
     -
       title: "publications"
       sub-nav:
@@ -49,15 +60,15 @@ header:
         - text: "Supporting M-Lab"
           url:  "/contribute/"
         - text: "Develop a Test"
-          url:  ""
+          url:  "/contribute/#develop-a-test"
         - text: "Integrate a Test"
-          url:  ""
+          url:  "/contribute/#use-an-m-lab-test-in-your-website-or-application"
         - text: "Host an M-Lab Site"
-          url:  ""
+          url:  "/contribute/#host-or-sponsor-an-m-lab-measurement-site"
         - text: "Analyze M-Lab Data"
-          url:  ""
+          url:  "/contribute/#analyze-and-visualize-m-lab-data"
         - text: "Donate"
-          url:  ""
+          url:  "/contribute/#donate-to-m-lab"
 
 footer:
   subscribe:
@@ -104,10 +115,10 @@ footer:
     column-three:
       items:
       -
-        link: "/privacy/#privacy-policy"
+        link: "/privacy/"
         link-title: "Privacy Policy"
       -
-        link: "/privacy/#acceptable-use-policy"
+        link: "/aup/"
         link-title: "Acceptable Use Policy"
   privacy:
     title: "Privacy Policy &amp; Acceptable Use Policy."

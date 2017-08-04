@@ -2,9 +2,9 @@
 layout: page
 permalink: /tests/
 title: "Tests"
-page-title: "M-Lab Data"
+page-title: "M-Lab Tests"
 menu-item: true
-grid-quick-links: true
+breadcrumb: tests
 grid-section:
   - group-heading: "Current Tests"
     group-description: "Performance tests measure basic and advanced performance characteristics of your network, such as speed, latency, jitter, and much more."
@@ -91,7 +91,7 @@ All tests hosted on M-Lab only perform active measurements. This means that test
 * All data collected will be made publicly available, including IP addresses.
 * All tests are open source and created by researchers.
 
-## Using M-Lab Tests and Troubleshooting
+## Using and Troubleshooting M-Lab Tests
 
 Below are a few of our most [Frequently Asked Questions]({{ site.baseurl }}/faq/) about M-Lab tests.
 
