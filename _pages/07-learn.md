@@ -2,12 +2,10 @@
 layout: page
 permalink: /learn/
 title: "Learn"
-page-title: "Learn"
+page-title: "Learning Resources"
 menu-item: true
+breadcrumb: learn
 ---
-
-* Table of Contents
-{:toc}
 
 # Learning Resources
 

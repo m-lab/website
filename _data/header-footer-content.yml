@@ -55,6 +55,15 @@ header:
         - text: "Presentations"
           url:  "/publications/#presentations"
     -
+      title: "learn"
+      sub-nav:
+        - text: "Learning Resources"
+          url:  "/learn/"
+        - text: "How the Internet Works"
+          url:  "/learn/#how-the-internet-works"
+        - text: "Definitions of Terms"
+          url:  "/learn/#definitions-of-terms"
+    -
       title: "contribute"
       sub-nav:
         - text: "Supporting M-Lab"
