@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Migrating to M-Lab Fast Tables"
-permalink: /data/bq/legacymigration/
+permalink: /data/docs/bq/legacymigration/
 breadcrumb: data
 ---
 

@@ -1,12 +1,9 @@
 ---
 layout: page
 title: "BigQuery Schema"
-permalink: /data/bq/schema/
+permalink: /data/docs/bq/schema/
 breadcrumb: data
 ---
-
-* Table of Contents
-{:toc}
 
 # BigQuery Schema
 
@@ -36,7 +33,7 @@ For example, data for March 2016 is published at:
 
 `plx.google:m_lab.2016_03.all` (*deprecated*)
 
-M-Lab continues to support legacy tables but urges clients to move to the new per-project tables, which yield substantially improved performance. See the [Legacy Migration Guide]({{ site.baseurl }}/data/bq/legacymigration) for details.
+M-Lab continues to support legacy tables but urges clients to move to the new per-project tables, which yield substantially improved performance. See the [Legacy Migration Guide]({{ site.baseurl }}/data/docs/bq/legacymigration) for details.
 
 ## Schema Fields
 
@@ -181,4 +178,4 @@ GROUP BY
 
 ## BigQuery Examples
 
-See [BigQuery Examples]({{ site.baseurl }}/data/bq/examples) for examples of queries against this schema.
+See [BigQuery Examples]({{ site.baseurl }}/data/docs/bq/examples) for examples of queries against this schema.

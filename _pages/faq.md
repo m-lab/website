@@ -23,7 +23,7 @@ The graphic below illustrates the relationship between tests run by consumers an
 ## Where are M-Lab Servers hosted?
 {:.no_toc}
 
-M-Lab hosts our servers, which we call "pods", in Tier 1 data-centers, connected to the internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible. You can view where M-Lab servers are hosted on our [infrastructure page]({{ site.baseurl }}/infrastructure).
+M-Lab hosts our servers, which we call "pods", in Tier 1 data-centers, connected to the internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible. You can view where M-Lab servers are hosted on our [platform status page]({{ site.baseurl }}/status).
 
 Once an M-Lab pod is online we make no changes in our systems for the life of each pod. Whenever there is a substantial change to our sites, such as renumbering of IP addresses, we retire the pod, retain its naming and metadata in our systems, and treat the pod as brand new.
 
@@ -49,14 +49,14 @@ Specific information on what type of data is collected by each M-Lab test and ho
 ## Who is collecting data? Where is it stored?
 {:.no_toc}
 
-For most tests, M-Lab collects raw test data and stores them in [Google Cloud Storage]({{ site.baseurl }}/data/gcs/).
+For most tests, M-Lab collects raw test data and stores them in [Google Cloud Storage]({{ site.baseurl }}/data/docs/gcs/).
 
 For some tests, such as the [Broadband Internet Service Benchmark (BISmark)]({{ site.baseurl }}/tests/bismark/), the test maintainers collect their test’s data and publish it on their own site.
 
 ## Where can I explore M-Lab data?
 {:.no_toc}
 
-You can explore [visualizations]({{ site.baseurl }}/visualizations/) of M-Lab’s NDT speed test data. All M-Lab data are searchable [using BigQuery]({{ site.baseurl }}/data/bq/quickstart/) or can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
+You can explore [visualizations]({{ site.baseurl }}/visualizations/) of M-Lab’s NDT speed test data. All M-Lab data are searchable [using BigQuery]({{ site.baseurl }}/data/docs/bq/quickstart/) or can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
 
 ## Why are my M-Lab results different from other speed tests?
 {:.no_toc}

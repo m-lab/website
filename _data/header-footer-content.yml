@@ -13,10 +13,10 @@ header:
       sub-nav:
         - text: "What is Measurement Lab?"
           url:  "/about/"
-        - text: "FAQ"
-          url:  "/faq/"
         - text: "Who we are"
           url:  "/who/"
+        - text: "Privacy"
+          url:  "/privacy/"
         - text: "Contact"
           url:  "/contact/"
     -
@@ -24,22 +24,60 @@ header:
       sub-nav:
         - text: "Overview"
           url:  "/data/"
-        - text: "Google Cloud Storage"
-          url:  "/data/gcs/"
-        - text: "BigQuery QuickStart"
-          url:  "/data/bq/quickstart/"
-        - text: "BigQuery Examples"
-          url:  "/data/bq/examples/"
-        - text: "BigQuery Schema"
-          url:  "/data/bq/schema/"
-
-    - 
+        - text: "Docs"
+          url:  "/data/docs"
+        - text: "Platform Status"
+          url:  "/status/"
+        - text: "Tools"
+          url:  "/data/tools/"
+    -
+      title: "tests"
+      sub-nav:
+        - text: "Internet Measurement Tests"
+          url:  "/tests/"
+        - text: "Using and Troubleshooting M-Lab Tests"
+          url:  "/tests/#using-and-troubleshooting-m-lab-tests"
+        - text: "Current Tests"
+          url:  "/tests/#current-tests"
+        - text: "Retired Tests"
+          url:  "/tests/#retired-tests"
+    -
+      title: "publications"
+      sub-nav:
+        - text: "M-Lab Publications"
+          url:  "/publications/"
+        - text: "Blog"
+          url:  "/blog/"
+        - text: "Papers"
+          url:  "/publications/#papers"
+        - text: "Government/Regulatory Filings"
+          url:  "/publications/#government--regulatory-filings"
+        - text: "Presentations"
+          url:  "/publications/#presentations"
+    -
       title: "learn"
       sub-nav:
-        - text: "About the Internet"
-          url: "/learn/internet/"
-        - text: "Glossary"
-          url: "/learn/glossary/"
+        - text: "Learning Resources"
+          url:  "/learn/"
+        - text: "How the Internet Works"
+          url:  "/learn/#how-the-internet-works"
+        - text: "Definitions of Terms"
+          url:  "/learn/#definitions-of-terms"
+    -
+      title: "contribute"
+      sub-nav:
+        - text: "Supporting M-Lab"
+          url:  "/contribute/"
+        - text: "Develop a Test"
+          url:  "/contribute/#develop-a-test"
+        - text: "Integrate a Test"
+          url:  "/contribute/#use-an-m-lab-test-in-your-website-or-application"
+        - text: "Host an M-Lab Site"
+          url:  "/contribute/#host-or-sponsor-an-m-lab-measurement-site"
+        - text: "Analyze M-Lab Data"
+          url:  "/contribute/#analyze-and-visualize-m-lab-data"
+        - text: "Donate"
+          url:  "/contribute/#donate-to-m-lab"
 
 footer:
   subscribe:
