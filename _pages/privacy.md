@@ -7,7 +7,7 @@ title: "M-Lab Privacy Policy"
 # M-Lab Privacy Policy
 {:.no_toc}
 
-This Policy was last modified on `August 4, 2017`
+This Policy was last modified on _August 4, 2017_
 
 * Table of Contents
 {:toc}
@@ -49,7 +49,7 @@ Partners who develop experiments and clients that use M-Lab's platform are all b
 
 M-Lab's AUP does not permit collection of information about content of communications, such as emails or Internet searches. The experiments hosted on the M-Lab platform generate artificial traffic rather than use real user traffic based on AUP requirements, in order to avoid collection of sensitive information. To ensure the integrity of the platform for scientific research, M-Lab does not take additional measures to sanitize or alter the raw data.
 
-`a. Measurement Data`
+_a. Measurement Data_
 
 The technical metrics and measurements collected for each experiment differ. Most experiments measure performance variables describing the state of connection during the test, commonly known as 'key performance indicators' or 'quality of service indicators.'
 
@@ -59,7 +59,7 @@ These indicators include, for example:
 * Latency and topology of the path between the client and server; and,
 * Whether the application or protocol is manipulated or discriminated against while in transit.
 
-`b. Connection Data`
+_b. Connection Data_
 
 M-Lab collects and publishes the:
 
@@ -68,7 +68,7 @@ M-Lab collects and publishes the:
 
 The user's IP address and time of the test are necessary to understand and describe experiment results.
 
-`c. Metadata`
+_c. Metadata_
 
 Subject to the AUP, clients or experiments may collect additional descriptive information about the user's environment in order to support analysis of measurement data. The decision whether to provide this data within test results is left to the discretion of the partners. M-Lab's AUP does not allow the storage of information on the platform that would associate individuals or clients to their history of tests or devices, such as the hardware identifier, service plan, or network signal metrics.
 
@@ -106,11 +106,11 @@ If you have any questions, comments, or requests regarding M-Lab's Privacy Polic
 
 ## Definitions
 
-| `Platform` | M-Lab operates a large fleet of servers based on open source software that are distributed around the world in order to support research on the Internet.|
-| `Experiments` | M-Lab's platform hosts measurement projects, generally developed by third parties, such as academic institutions. These experiments are designed to utilize technical methods to collect data on specific aspects of Internet performance. While M-Lab imposes strict policies on what the experiments can or cannot do with the platform, the experiments are maintained by their creators, who are responsible for Policy compliance. Information about the experiments can be found in detail on the [page for each Experiment]({{ site.baseurl }}/tests).|
-| `Clients` | The software application or hardware equipment that tests the connection between the user and an M-Lab server. The actual form of the client can differ, such as being a mobile application or a network probe that conducts experiments. Since M-Lab is an open platform, the maintainer of the experiment is not necessarily the same entity as the developer of the client, and a number of experiments have third-party clients.|
-| `Services` | For the purpose of simplicity in this Privacy Policy we refer to the platform, clients, and experiments, as those terms are defined in this section, collectively as  "services."|
-| `Collection` | The process wherein a client conducts an experiment on the platform, and the resulting data is retained on a M-Lab server.|
-| `Storage` | The process of aggregating the results of collected data for experiments on all servers within the M-Lab platform, and retaining those results for indefinite long-term archival and data processing purposes.|
-| `Publication` | The release of measurement results within the public dataset that is made available by M-Lab.|
-| `Partners` | Individuals or entities that develop or maintain experiments or clients that use the M-Lab platform. M-Lab does not necessary maintain a legal or operational relationship with such entities outside of the provision of platform resources under the AUP.|
+| _Platform_ | M-Lab operates a large fleet of servers based on open source software that are distributed around the world in order to support research on the Internet.|
+| _Experiments_ | M-Lab's platform hosts measurement projects, generally developed by third parties, such as academic institutions. These experiments are designed to utilize technical methods to collect data on specific aspects of Internet performance. While M-Lab imposes strict policies on what the experiments can or cannot do with the platform, the experiments are maintained by their creators, who are responsible for Policy compliance. Information about the experiments can be found in detail on the [page for each Experiment]({{ site.baseurl }}/tests).|
+| _Clients_ | The software application or hardware equipment that tests the connection between the user and an M-Lab server. The actual form of the client can differ, such as being a mobile application or a network probe that conducts experiments. Since M-Lab is an open platform, the maintainer of the experiment is not necessarily the same entity as the developer of the client, and a number of experiments have third-party clients.|
+| _Services_ | For the purpose of simplicity in this Privacy Policy we refer to the platform, clients, and experiments, as those terms are defined in this section, collectively as  "services."|
+| _Collection_ | The process wherein a client conducts an experiment on the platform, and the resulting data is retained on a M-Lab server.|
+| _Storage_ | The process of aggregating the results of collected data for experiments on all servers within the M-Lab platform, and retaining those results for indefinite long-term archival and data processing purposes.|
+| _Publication_ | The release of measurement results within the public dataset that is made available by M-Lab.|
+| _Partners_ | Individuals or entities that develop or maintain experiments or clients that use the M-Lab platform. M-Lab does not necessary maintain a legal or operational relationship with such entities outside of the provision of platform resources under the AUP.|
