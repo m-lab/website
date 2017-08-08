@@ -1,12 +1,9 @@
 ---
 layout: page
 title: "BigQuery Examples"
-permalink: /data/bq/examples/
+permalink: /data/docs/bq/examples/
 breadcrumb: data
 ---
-
-* Table of Contents
-{:toc}
 
 # BigQuery Examples
 

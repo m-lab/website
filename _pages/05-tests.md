@@ -2,10 +2,11 @@
 layout: page
 permalink: /tests/
 title: "Tests"
+page-title: "M-Lab Tests"
 menu-item: true
-grid-quick-links: true
+breadcrumb: tests
 grid-section:
-  - group-heading: "Performance"
+  - group-heading: "Current Tests"
     group-description: "Performance tests measure basic and advanced performance characteristics of your network, such as speed, latency, jitter, and much more."
     group-list-class: "l-grid l-3col"
     grid-items:
@@ -13,53 +14,47 @@ grid-section:
         image: "ndt.png"
         heading: "NDT (Network Diagnostic Tool)"
         desc: "Tests your connection speed, and provides a sophisticated diagnosis of problems limiting speed."
+        categories: "performance"
       - link: "/tests/npad/"
         image: "npad.png"
         heading: "NPAD (Network Path &amp; Application Diagnostics)"
         desc: "Diagnoses common problems that impact last-mile broadband networks."
+        categories: "performance"
       - link: "/tests/neubot/"
         image: "neubot.png"
         heading: "Neubot"
         desc: "Performs periodic tests to measure network performance and traffic throttling."
+        categories: "performance, transparency"
       - link: "/tests/bismark/"
         image: "neubot.png"
         heading: "BISmark"
         desc: "Allows you to apply to host a home router that also tests network performance over time."
+        categories: "performance"
       - link: "/tests/sidestream/"
         image: "sidestream.png"
         heading: "SideStream"
         desc: "Collects statistics about the TCP connections running on the M-Lab platform."
-  - group-heading: "Performance Mobile"
-    group-list-class: "l-grid l-3col"
-    grid-items:
+        categories: "performance"
       - link: "/tests/mobiperf/"
         image: "mobile.png"
         heading: "MobiPerf"
         desc: "Measures network performance on mobile platforms."
-  - group-heading: "Transparency"
-    group-description: "Transparency tests provide insight into network management practices, such as application-specific blocking, throttling, traffic shaping, and other practices that determine your ability to use some applications or to access some content on the Internet."
-    group-list-class: "l-grid l-3col"
-    grid-items:
+        categories: "performance"
       - link: "/tests/ooni/"
         image: "ooni.png"
         heading: "OONI Probe"
         desc: "Measures specific use cases of network interference."
-      - link: "/tests/neubot/"
-        image: "neubot.png"
-        heading: "Neubot"
-        desc: "Performs periodic tests to measure network performance and traffic throttling."
-  - group-heading: "Network State"
-    group-description: "Tests in this section provide information on the state of the network you are connected to and the details of the network environment. For example, tests could check to see if IPv6 is enabled, or collect traceroute data or other information about the network that can provide context for other measurements, such as upload or download speed."
-    group-list-class: "l-grid l-3col"
-    grid-items:
+        categories: "transparency"
       - link: "/tests/paris_traceroute/"
         image: "arrow-swoop.png"
         heading: "Paris Traceroute"
         desc: "Collects network path information for every connection to the M-Lab platform."
+        categories: "network state"
       - link: "/tests/reverse_traceroute/"
         image: "arrow-swoop.png"
         heading: "Reverse Traceroute"
         desc: "Measures the network path back to a user from selected network endpoints."
+        categories: "network state"
   - group-heading: "Retired Tests"
     group-description: "Tests in this section were once hosted with M-Lab but have since been retired. Data collected by these tests while hosted on with M-Lab remains available. Please see each individual test's page for more information."
     group-list-class: "l-grid l-3col"
@@ -68,14 +63,17 @@ grid-section:
         image: "glasnost.png"
         heading: "Glasnost"
         desc: "Glasnost tested for application-specific blocking or throttling, and was decommissioned on 07/07/2017. The source code is still available."
+        categories: "performance, transparency"
       - link: "/tests/windrider/"
         image: "mobile.png"
         heading: "Windrider"
         desc: "Attempted to detect whether a mobile provider was performing application or service specific differentiation until it was decommissioned on 01/17/2013. The source code is still available."
+        categories: "transparency"
       - link: "/tests/pathload2/"
         image: "pathload2.png"
         heading: "Pathload2"
         desc: "Tested the available bandwidth of an Internet connection until it was decommissioned from the M-Lab platform on 12/21/2012. However, the data and source code are still available."
+        categories: "performance"
 
 ---
 
@@ -88,3 +86,12 @@ All tests hosted on M-Lab only perform active measurements. This means that test
 * All data collected will be made publicly available, including IP addresses.
 * All tests are open source and created by researchers.
 
+## Using and Troubleshooting M-Lab Tests
+
+Below are a few of our most [Frequently Asked Questions]({{ site.baseurl }}/faq/) about M-Lab tests.
+
+* [What measurement tests can I run?]({{ site.baseurl }}/faq/#what-measurement-tests-can-i-run)
+* [How are the results I get from NDT different from other speed tests?]({{ site.baseurl }}/faq/#why-are-my-m-lab-results-different-from-other-speed-tests)
+* [An M-Lab test is not working, what should I do?]({{ site.baseurl }}/faq/#how-do-i-report-issues-with-m-lab-tests)
+* [What data will be collected when I run a test?]({{ site.baseurl }}/faq/#what-data-will-be-collected-when-i-run-a-test)
+* [Will these tests monitor my private Internet activity, like email messages or, browsing and search history?]({{ site.baseurl }}/faq/#will-these-tests-monitor-my-private-internet-activity-like-email-messages-or-browsing-and-search-history)

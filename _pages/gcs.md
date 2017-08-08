@@ -1,12 +1,9 @@
 ---
 layout: page
 title: Google Cloud Storage
-permalink: /data/gcs/
+permalink: /data/docs/gcs/
 breadcrumb: data
 ---
-
-* Table of Contents
-{:toc}
 
 # Google Cloud Storage
 
@@ -30,43 +27,6 @@ This means that each compressed .tgz file contains all the data collected during
 If the data collected during one day by one tool on one server are more than 1 GB (uncompressed), the files are split into multiple compressed .tgz files of up to 1 GB in size.
 
 For example, the compressed .tgz file `20090218T000000Z-mlab1-lga01-ndt-0000.tgz` contains the first 1 GB of data collected by all the NDT tests that were served by the M-Lab server mlab1-lga01 on Feb 18, 2009.
-
-## Project Data
-
-Direct links to each M-Lab project's raw data are available below:
-
-* [Glasnost](https://console.developers.google.com/storage/browser/m-lab/glasnost/){:target="_blank"}
-  * Glasnost detects prioritization or censorship of network traffic.
-  * More information is available at [MPI SWS](http://broadband.mpi-sws.org/transparency/bttest-mlab.php){:target="_blank"} and [Github](https://github.com/marcelscode/glasnost){:target="_blank"}.
-* [NDT](https://console.developers.google.com/storage/browser/m-lab/ndt/){:target="_blank"}
-  * Network Diagnostic Tool (NDT) measures characteristics of a TCP connection under heavy load.
-  * More information is available at [Internet2](http://software.internet2.edu/ndt/){:target="_blank"} and [Github](https://github.com/ndt-project/ndt){:target="_blank"}.
-* [Neubot](https://console.developers.google.com/storage/browser/m-lab/neubot/){:target="_blank"}
-  * Neubot measures the Internet in order to gather data useful to study broadband performance, network neutrality, and Internet censorship.
-  * More information is available at [Nexa Center](https://neubot.nexacenter.org/){:target="_blank"} and [Github](https://github.com/neubot){:target="_blank"}.
-* [NPAD](https://console.developers.google.com/storage/browser/m-lab/npad/){:target="_blank"}
-  * Network Path and Application Diagnosis (NPAD) diagnoses issues in a network path that can degrade network performance.
-  * More information is available at [UCAR](http://www.ucar.edu/npad/){:target="_blank"} and [Github](https://github.com/npad/npad){:target="_blank"}.
-* [OONI](https://console.developers.google.com/storage/browser/m-lab/ooni/){:target="_blank"}
-  * OONI measures censorship, surveillance, and traffic manipulation on the Internet.
-  * More information is available at [OONI](https://ooni.torproject.org/){:target="_blank"}
-* [Paris Traceroute](https://console.developers.google.com/storage/browser/m-lab/paris-traceroute/){:target="_blank"}
-  * Paris Traceroute maps network topology between two points on the Internet.
-  * More information is available at [Paris Traceroute](http://www.paris-traceroute.net/){:target="_blank"}
-* [pathload2](https://console.developers.google.com/storage/browser/m-lab/pathload2/){:target="_blank"} (**deprecated**)
-  * **M-Lab no longer supports this tool, but its archived data are available on GCS. For similar measurements with a current and supported tool, see NDT.**
-  * Pathload2 measures the available bandwidth of an Internet connection.
-  * More information is available at [https://code.google.com/p/pathload2-gatech/](https://code.google.com/p/pathload2-gatech/){:target="_blank"}.
-* [ShaperProbe](https://console.developers.google.com/storage/browser/m-lab/shaperprobe/){:target="_blank"} (**deprecated**)
-  * **M-Lab no longer supports this tool, but its archived data are available on GCS.**
-  * ShaperProbe detects prioritization of network traffic.
-  * More information is available at [ShaperProbe](http://netinfer.net/diffprobe/shaperprobe.html){:target="_blank"}.
-* [SideStream](https://console.developers.google.com/storage/browser/m-lab/sidestream/){:target="_blank"}
-  * SideStream collects TCP state information about completed TCP connections on a system.
-  * More information is available on [Github](https://github.com/npad/sidestream){:target="_blank"}.
-* [mlab-collectd](https://console.developers.google.com/storage/browser/m-lab/utilization/){:target="_blank"}
-  * mlab-collectd is a monitoring tool for M-Lab slices, which collects resource utilization information about all M-Lab servers.
-  * More information is available on [Github](https://github.com/m-lab/collectd-mlab){:target="_blank"}.
 
 ## Accessing Data Programmatically
 
