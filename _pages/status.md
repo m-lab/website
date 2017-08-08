@@ -2,6 +2,7 @@
 layout: page
 permalink: /status/
 title: "M-Lab Platform Status"
+breadcrumb: data
 ---
 
 # M-Lab Platform Status
