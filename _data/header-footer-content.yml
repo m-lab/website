@@ -13,6 +13,8 @@ header:
       sub-nav:
         - text: "What is Measurement Lab?"
           url:  "/about/"
+        - text: "FAQ"
+          url:  "/faq/"
         - text: "Who we are"
           url:  "/who/"
         - text: "Privacy"
