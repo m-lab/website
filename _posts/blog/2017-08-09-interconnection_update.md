@@ -14,7 +14,8 @@ categories:
 
 # Monitoring Interconnection Performance Since the Open Internet Order
 
-Introduction
+## Introduction
+
 As a platform committed to producing empirical data for the public, Measurement Lab (M-Lab) has [historically supplied regulators and other governmental entities](https://www.measurementlab.net/publications/#government--regulatory-filings) with technical facts pertinent rule-making processes. In our [February 2015 submission to the FCC’s Open Internet docket](https://www.measurementlab.net/publications/M-Lab_Interconnection_Study_US.pdf), we committed to research on the state of broadband and performance impact of interconnection in the United States. Earlier this year, the FCC began the process of re-evaluating its authority over broadband Internet services, and [opened a Notice of Proposed Rulemaking](https://apps.fcc.gov/edocs_public/attachmatch/DOC-344614A1.pdf). This blogpost is a shortened version [comments that M-Lab filed in the docket](https://www.fcc.gov/ecfs/filing/10715748225796) regarding its continued research on the impact of interconnection on consumer broadband. The full filing in the FCC docket includes an elaboration of our research with additional supporting evidence and charts.
 
 <!--more-->
