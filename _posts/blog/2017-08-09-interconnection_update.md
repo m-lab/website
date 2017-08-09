@@ -45,7 +45,6 @@ M-Lab has since invested resources to build up its presence in the United States
     <tr><td colspan="3">Verizon, AT&T, and Cox across GTT, January 2014 - June 2015, Download Throughput ([Source](http://viz.measurementlab.net/compare/location?breakdownBy=filter2&end=2015-06-01&filter1=AS11486x_AS10796x_AS13367x_AS11398x_AS10774x&filter2=AS3257&selected=naus&start=2014-01-01))</td></tr>
 </table>
 
-
 Our updated findings showed persistent degradation experienced by customers of a number of major access ISPs across the United States during the first half of 2015. While the ISPs involved in each case differ, the symptoms and patterns of degradation are similar to those detailed in Interconnection Study: decreased download throughput, increased latency, and increased packet loss (compared to the performance through different access ISPs in the same region). In nearly all cases degradation was worse during peak use hours. The congestion events included:
 
 * AT&T, Comcast, Time Warner Cable, and Verizon with GTT Communications (GTT)
@@ -59,7 +58,6 @@ Since the issuance of the Open Internet Order in February 2015, Measurement Lab 
 
 The most significant degradation identified in our search was for Comcast users to M-Lab sites located in the transit ISPs Tata and GTT. Underperformance appears from the outset of M-Lab hosting sites in GTT, therefore predating September 2014. The degradation for Comcast customers across Tata appears later, beginning around September 2015. While M-Lab had identified underperformance with Tata for multiple access ISPs in our June 2015 blogpost describing additional cases of congestion, those patterns were alleviated shortly after our research on the episode (notably with CenturyLink). Comcast is an exception: underperformance appears in the M-Lab data as a decrease of download throughput during peak hours that aligns with an increased packet loss at that time. The degradation represents a substantial overall change in performance from Comcast to both transit ISPs, well beyond half of the performance compared to earlier in the day. During the same period, other access ISPs, such as AT&T or Verizon, no longer exhibit patterns of degradation to Tata and GTT. Likewise, Comcast users [do not show the same underperformance](http://viz.measurementlab.net/compare/location?aggr=month&end=2017-06-01&filter1=AS10774x_AS11486x_AS13367x&filter2=AS6453_AS3257_AS174_AS6461_AS6939&metric=download&selected=naus&start=2016-01-01) to other sites, such as those on Cogent, Zayo, or Hurricane Electric. A review of collected data related to Comcast and Tata from May and June 2017 shows less degradation, which tentatively suggests that remediative measures may have been taken recently to improve performance.
 
-
 <table>
     <tr>
       <td>![TATA]({{ site.baseurl }}/images/blog/interconnection_update-Comcast-TATA.png)</td>
@@ -67,7 +65,6 @@ The most significant degradation identified in our search was for Comcast users 
     </tr>
     <tr><td colspan="2">Comcast across Tata and GTT (respectively), January 2016 - April 2017, Diurnal Pattern, Download Throughput ([Source](http://viz.measurementlab.net/compare/location?aggr=month&end=2017-06-01&filter1=AS13367x&filter2=AS6453_AS3257_AS174&metric=download&selected=naus&start=2016-01-01))</td></tr>
 </table>
-
 
 <table>
   <tr>
@@ -80,15 +77,9 @@ The most significant degradation identified in our search was for Comcast users 
     </tr>
 </table>
 
-
-
-
-
 Overall, the M-Lab data shows a decline in the instances of interconnection-related underperformance and evidence of the remediation of previous congestion episodes. The improvement contrasts substantially with the situation described in previous interconnection research, where multiple access ISPs and transit ISPs showed sustained underperformance between each others’ networks.
 
 In several of the episodes covered by M-Lab’s research, the parties involved later published press releases announcing upgrades to interconnection capacity, which would have potentially addressed congestion due to under-provisioned capacity. The disclosures provide a point of comparison that was not previously available. In all cases, these announced upgrades result in demonstrable change in performance, alleviating previous issues. For example, in April 2015, Verizon and Level 3 [announced](http://www.verizon.com/about/news/level-3-and-verizon-enter-interconnection-agreement) a “long-term, bilateral interconnection agreement related to their public IP networks.” Verizon and Level 3 were identified in the original Interconnection Study as having a diurnal performance variation during 2014 that resulted in a more than 50% decrease in median download throughput during peak hours. This underperformance changed within months of the announcement of the agreement, and performance between Verizon and Level 3 continues to improve since.
-
-
 
 <table>
     <tr><td>[![AT&T across GTT, January 2015 - January 2016, Download Throughput]({{ site.baseurl }}/images/blog/interconnection_update-ATT_GTT.png)](http://viz.measurementlab.net/compare/location?aggr=month&breakdownBy=filter1&end=2016-01-01&filter1=AS10774x&filter2=AS3257&metric=download&selected=naus&start=2015-01-01)</td></td></tr>
