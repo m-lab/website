@@ -14,9 +14,7 @@ layout: default
           {% for post in paginator.posts %}
 
           <article class="blog-entry" id="{{ post.url | prepend: site.baseurl }}">
-
-            {{ post.content }}
-
+            <h1>{{ post.title }}</h1>
             <footer class="meta">
               <small>Posted by <b class="author">{{ post.author }}</b> on <span class="published">{{ post.date | date: "%Y-%m-%d" }}</span>
 
@@ -33,6 +31,8 @@ layout: default
 
               </small>
             </footer>
+
+            {{ post.content }}
 
           </article> <!-- .blog-entry -->
 

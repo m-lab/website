@@ -12,11 +12,9 @@ layout: default
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 blogroll">
 
           <article class="blog-entry">
-
-            {{ content }}
-
-            <footer class="meta">
-              <small>Posted by <b class="author">{{ page.author }}</b> on <span class="published">{{ page.date | date: "%Y-%m-%d" }}</span>
+          <h1>{{ page.title }}</h1>
+          <footer class="meta">
+            <small>Posted by <b class="author">{{ page.author }}</b> on <span class="published">{{ page.date | date: "%Y-%m-%d" }}</span>
 
               {% if page.categories.size > 0 %}
                 <span class="categories">
@@ -32,9 +30,11 @@ layout: default
               </small>
             </footer>
 
+
+            {{ content }}
+
           </article>
-
-
+          
           <ol class="pagination">
           
             <li>{% if page.next.url %}<a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="next dir is-plain">Next<i class="icon icon-triangle icon-right icon-after"></i></a>{% endif %}</li>
