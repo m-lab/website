@@ -31,9 +31,19 @@ layout: default
 
               </small>
             </footer>
+            {% if post.content contains '<!--more-->' %}
+              {% assign blog_content = post.content | split:'<!--more-->' | first | split:'</h1>' | last | strip_html %}
+            {% else %}
+              {% assign blog_content = post.excerpt %}
+            {% endif %}
+            {% assign word_count = blog_content | number_of_words %}
 
-            {{ post.content }}
-
+            {% if word_count > 40 %}
+              <p>{{ blog_content }}</p>
+            {% else %}
+              <div>{{ blog_content }}</div>
+            {% endif %}
+            <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link info-link">Read More</a></p>
           </article> <!-- .blog-entry -->
 
           {% endfor %}
