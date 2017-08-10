@@ -14,35 +14,24 @@ layout: default
           {% for post in paginator.posts %}
 
           <article class="blog-entry" id="{{ post.url | prepend: site.baseurl }}">
-            <h1>{{ post.title }}</h1>
-            <footer class="meta">
-              <small>Posted by <b class="author">{{ post.author }}</b> on <span class="published">{{ post.date | date: "%Y-%m-%d" }}</span>
 
-              {% if post.categories.size > 0 %}
-                filed under
-                <span class="categories">
-
-                {% for cat in post.categories %}
-                  <a href="{{ site.baseurl }}/blog/category/{{ cat | replace: ' ', '-' }}/">{{ cat }}</a>{% unless forloop.last %},{% endunless %}
-                {% endfor %}
-
-                </span>
-              {% endif %}
-
-              </small>
-            </footer>
             {% if post.content contains '<!--more-->' %}
-              {% assign blog_content = post.content | split:'<!--more-->' | first | split:'</h1>' | last | strip_html %}
+              {% assign blog_content = post.content | split:'<!--more-->' | first | split:'</h1>' | last %}
             {% else %}
               {% assign blog_content = post.excerpt %}
             {% endif %}
-            {% assign word_count = blog_content | number_of_words %}
+              {% assign word_count = blog_content | number_of_words %}
 
             {% if word_count > 40 %}
-              <p>{{ blog_content }}</p>
+              <h1>{{ post.title }}</h1>
+              {{ blog_content }}
             {% else %}
-              <div>{{ blog_content }}</div>
+              <div>
+              <h1>{{ post.title }}</h1>
+              {{ blog_content }}
+              </div>
             {% endif %}
+
             <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link info-link">Read More</a></p>
           </article> <!-- .blog-entry -->
 
