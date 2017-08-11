@@ -2,6 +2,7 @@
 layout: blog
 title: "Monitoring Interconnection Performance Since the Open Internet Order"
 author: "Collin Anderson"
+date: 2017-08-09
 breadcrumb: blog
 categories:
   - interconnection
@@ -13,6 +14,7 @@ categories:
 ---
 
 # Monitoring Interconnection Performance Since the Open Internet Order
+{% include post-meta.html %}
 
 ## Introduction
 

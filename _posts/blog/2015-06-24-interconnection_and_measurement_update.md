@@ -2,6 +2,7 @@
 layout: blog
 title: "New Opportunities for Test Deployment and Continued Analysis of Interconnection Performance"
 author: "Collin Anderson"
+date: 2015-06-24
 breadcrumb: blog
 categories:
   - consumer internet
@@ -15,6 +16,7 @@ categories:
 ---
 
 # New Opportunities for Test Deployment and Continued Analysis of Interconnection Performance
+{% include post-meta.html %}
 
 In late April, Internet2, with contributions from M-Lab developers, released an updated version of the Network Diagnostic Tool (NDT), M-Lab’s most widely deployed performance measurement test. In addition to improved stability, the updated version of NDT makes it possible to [measure network performance from a web browser](http://ndt.iupui.mlab1.iad01.measurement-lab.org:7123) without the need for browser plugins. This change removes a layer of complexity and hassle for developers and users. Anyone interested in Internet measurement can now [create their own NDT client](https://github.com/ndt-project/ndt/tree/master/HTML5-frontend) targeted for specific user populations, regions, and research objectives, using only HTML and Javascript.
 

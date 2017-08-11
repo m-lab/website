@@ -2,6 +2,7 @@
 layout: blog
 title: "ISP Interconnection and its Impact on Consumer Internet Performance: Introducing A New M-Lab Consortium Technical Report"
 author: "Chris Ritzo"
+date: 2014-10-28
 breadcrumb: blog
 categories:
   - research
@@ -11,6 +12,7 @@ categories:
 ---
 
 # ISP Interconnection and its Impact on Consumer Internet Performance: Introducing A New M-Lab Consortium Technical Report
+{% include post-meta.html %}
 
 ![Sample graph from this report.]({{ site.baseurl }}/images/blog/cogent-from-lax-diurnal.png){:.pull-right}
 We are happy to announce the release of a long-term collaborative research effort using M-Lab’s data to understand how interconnection impacts end-user performance. The report, [ISP Interconnection and its Impact on Consumer Internet Performance]({{ site.baseurl }}/publications/M-Lab_Interconnection_Study_US.pdf) examines years of network measurement data from across the United States to determine the effects of network interconnection on the Internet performance of customers subscribing to specific access ISPs. Alongside this report, we are also pleased to release the [Internet Observatory]({{ site.baseurl }}//observatory) – a dynamic data visualization tool that will allow consumers, policymakers, and researchers to better understand the impact of ISP relationships on their own Internet access and performance. The Internet Observatory will be updated regularly, allowing future monitoring and comparison against past performance.
