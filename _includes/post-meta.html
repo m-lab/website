@@ -1,0 +1,12 @@
+<footer class="meta">
+  <small>Posted by <b class="author">{{ page.author }}</b> on <span class="published">{{ page.date | date: "%Y-%m-%d" }}</span>
+  {% if page.categories.size > 0 %}
+    filed under
+    <span class="categories">
+    {% for cat in page.categories %}
+      <a href="{{ site.baseurl }}/blog/category/{{ cat | replace: ' ', '-' }}/">{{ cat }}</a>{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    </span>
+  {% endif %}
+  </small>
+</footer>

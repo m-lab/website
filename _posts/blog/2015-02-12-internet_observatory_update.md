@@ -2,6 +2,7 @@
 layout: blog
 title: "Internet Observatory Updates and Improvements"
 author: "Collin Anderson"
+date: 2015-02-12
 breadcrumb: blog
 categories:
   - interconnection
@@ -10,6 +11,7 @@ categories:
 ---
 
 # Internet Observatory Updates and Improvements
+{% include post-meta.html %}
 
 Last October, Measurement Lab [released the Internet Observatory]({{ site.baseurl }}/blog/2014_interconnection_report/), a data-visualization tool that enables consumers, policymakers, and researchers to better understand the impact of ISP relationships on Internet access and performance. The Observatory provides easier access to M-Lab’s rich dataset on network performance to reproduce the analysis in our report on “ISP Interconnection and its Impact on Consumer Internet Performance.”
 

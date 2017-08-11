@@ -2,6 +2,7 @@
 layout: blog
 title: "Paris Traceroute Brownout"
 author: "Chris Ritzo"
+date: 2017-04-09
 breadcrumb: blog
 categories:
   - data
@@ -9,6 +10,7 @@ categories:
 ---
 
 # Paris Traceroute Brownout
+{% include post-meta.html %}
 
 ## Summary:
 

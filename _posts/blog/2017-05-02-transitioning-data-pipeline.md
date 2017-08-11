@@ -2,6 +2,7 @@
 layout: blog
 title: "Transitioning to a New Backend Pipeline and Data Availability"
 author: "Chris Ritzo"
+date: 2017-05-02
 breadcrumb: blog
 categories:
   - bigquery
@@ -14,6 +15,7 @@ categories:
 ---
 
 # Transitioning to a New Backend Pipeline and Data Availability
+{% include post-meta.html %}
 
 M-Lab data is collected from distributed experiments hosted on servers all over the world, processed in a pipeline, and published for free in both raw and parsed (structured) formats. The back end processing component for this has served us well for many years, but it's been showing its age recently. As M-Lab collects an increasing amount of data thanks to new partnerships, we have been concerned that it will not be as reliable.<!--more-->
 

@@ -15,25 +15,24 @@ layout: default
 
           <article class="blog-entry" id="{{ post.url | prepend: site.baseurl }}">
 
-            {{ post.content }}
+            {% if post.content contains '<!--more-->' %}
+              {% assign blog_content = post.content | split:'<!--more-->' | first | split:'</h1>' | last %}
+            {% else %}
+              {% assign blog_content = post.excerpt %}
+            {% endif %}
+              {% assign word_count = blog_content | number_of_words %}
 
-            <footer class="meta">
-              <small>Posted by <b class="author">{{ post.author }}</b> on <span class="published">{{ post.date | date: "%Y-%m-%d" }}</span>
+            {% if word_count > 40 %}
+              <h1>{{ post.title }}</h1>
+              {{ blog_content }}
+            {% else %}
+              <div>
+              <h1>{{ post.title }}</h1>
+              {{ blog_content }}
+              </div>
+            {% endif %}
 
-              {% if post.categories.size > 0 %}
-                filed under
-                <span class="categories">
-
-                {% for cat in post.categories %}
-                  <a href="{{ site.baseurl }}/blog/category/{{ cat | replace: ' ', '-' }}/">{{ cat }}</a>{% unless forloop.last %},{% endunless %}
-                {% endfor %}
-
-                </span>
-              {% endif %}
-
-              </small>
-            </footer>
-
+            <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link info-link">Read More</a></p>
           </article> <!-- .blog-entry -->
 
           {% endfor %}

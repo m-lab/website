@@ -2,6 +2,7 @@
 layout: blog
 title: "Announcing improved performance for M-Lab BigQuery data"
 author: "Chris Ritzo"
+date: 2016-01-19
 breadcrumb: blog
 categories:
   - bigquery
@@ -10,6 +11,7 @@ categories:
 ---
 
 # Announcing improved performance for M-Lab BigQuery data
+{% include post-meta.html %}
 
 Today, M-Lab is happy to announce the public beta of new M-Lab BigQuery tables. These tables provide substantially improved performance and reduce the difficulty of writing BigQuery SQL.
 

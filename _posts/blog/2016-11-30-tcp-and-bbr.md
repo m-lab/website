@@ -2,6 +2,7 @@
 layout: blog
 title: "BBR TCP and Measurement Lab"
 author: "Georgia Bullen"
+date: 2016-11-30
 breadcrumb: blog
 categories:
   - tcp
@@ -10,6 +11,7 @@ categories:
 ---
 
 # BBR TCP and Measurement Lab
+{% include post-meta.html %}
 
 ## What is TCP?
 

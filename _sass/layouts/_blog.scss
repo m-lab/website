@@ -7,7 +7,6 @@
 .blog-entry {
     border-bottom: 1px solid #b7b7b7;
     padding-bottom: 17px;
-    margin-bottom: 28px;
 
   p {
     padding-bottom: 26px;
@@ -45,7 +44,8 @@
   }
 
   .meta {
-    padding-top: 14px;
+    margin-top: -1.25em;
+    margin-bottom: 1em;
   }
 
   .author {

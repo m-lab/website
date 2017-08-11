@@ -2,10 +2,12 @@
 layout: blog
 title: "Welcome to The Same Old M-Lab"
 author: "Measurement Lab"
+date: 2013-08-05
 breadcrumb: blog
 ---
 
 # Welcome to The Same Old M-Lab
+{% include post-meta.html %}
 
 If it looks like you knocked on the wrong door, that's us, not you.
 

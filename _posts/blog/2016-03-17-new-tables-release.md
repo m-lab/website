@@ -2,6 +2,7 @@
 layout: blog
 title: "Making it Easier to Use M-Lab Data"
 author: "Michael Lynch"
+date: 2016-03-17
 breadcrumb: blog
 categories:
   - bigquery
@@ -11,6 +12,7 @@ categories:
 ---
 
 # Making it Easier to Use M-Lab Data
+{% include post-meta.html %}
 
 In January, M-Lab launched a beta test of new BigQuery tables for M-Lab data. Today, M-Lab is pleased to announce that the beta test was successful. The new, faster-performing tables will be M-Lab's new standard BigQuery tables.
 
