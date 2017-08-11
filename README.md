@@ -1,6 +1,6 @@
 # [Measurement Lab](http://www.measurementlab.net/) Source Code
 
-This is the source code of the Measurement Lab website built using [Jekyll](http://jekyllrb.com) and utilizing [Amazon S3](https://docs.travis-ci.com/user/deployment/s3/) to publish and host the site.
+This is the source code of the Measurement Lab website built using [Jekyll](http://jekyllrb.com) using [GitHub Pages](https://pages.github.com/). The static site files are then pushed to [Amazon S3](https://docs.travis-ci.com/user/deployment/s3/) to publish and host the site.
 
 Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-lab.github.io.png?branch=master)](http://travis-ci.org/m-lab/m-lab.github.io)
 
