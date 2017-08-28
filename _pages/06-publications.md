@@ -17,6 +17,17 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2017
 {:.no_toc}
 
+### Towards estimating the untapped potential: a global malicious DDoS mean capacity estimate
+{:.no_toc}
+
+{:.paper-description}
+What is the malicious reflected distributed denial of service (rDDoS) mean potential of the internet? The authors have been using data from the openNTP project which measures the number of reflectors on the internet since 2014 until now, and completed a graph that roughly estimates a lower boundary for global rDDoS mean potential across four internet protocols (IPs); SSDP, NTP, SNMP and open recursive DNS.
+
+{:.paper-author}
+Leverett, Eireann; Kaplan, Aaron
+
+[Download PDF]({{ site.baseurl }}/publications/Leverett-Kaplan-2017.pdf){:.download-link .paper-download target="_blank"}
+
 ### Measuring Broadband in Schools
 {:.no_toc}
 
