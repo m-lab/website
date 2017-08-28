@@ -66,7 +66,7 @@ M-Lab collects and publishes the:
 * public-facing Internet Protocol (IP) address of the client that conducted the measurement; and
 * the date and time of the test.
 
-The user's IP address and time of the test are necessary to understand and describe experiment results.
+The IP address and time of the test are necessary to understand and describe experiment results.
 
 _c. Metadata_
 
