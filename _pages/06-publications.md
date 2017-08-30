@@ -17,6 +17,28 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2017
 {:.no_toc}
 
+### Strategic choice and broadband divergence in the transition to next generation networks: Evidence from Canada and the U.S.
+{:.no_toc}
+
+{:.paper-description}
+This article investigates how infrastructure competition among broadband network infrastructure operators in Canada and the U.S. has influenced their incentives to increase fixed broadband connection speeds and invest in next generation fiber-to-the-premises (FTTP) technologies. The evolution of measured broadband speeds since the late 2000s documents growing differences in the incentives of dominant broadband operators to respond to demand for higher speed connectivity by increasing connectivity speeds they deliver to their customers. Dominant network operators in Canada have shown relatively stronger incentives than their counterparts in the U.S. to invest in and increase the capacity of legacy platforms. In the U.S. FTTP deployment incentives have been somewhat stronger, but network operators have been more reluctant to upgrade legacy technologies to deliver higher speeds. Diversity of strategic choices by large operators helps explain increasing regional and local broadband infrastructure gaps within the two countries. A high dividend payout financial strategy and increasing vertical integration appear to enhance the potential for overinvestment and inefficient duplication in legacy platforms by competing infrastructure providers.
+
+{:.paper-author}
+Reza Rajabiun, Catherine Middleton
+
+[Download](http://www.sciencedirect.com/science/article/pii/S0308596117301143){:.download-link .paper-download target="_blank"}
+
+### Regulatory Federalism and Broadband Divergence: Implications of Invoking Europe in the Making of Canadian Telecom Policy
+{:.no_toc}
+
+{:.paper-description}
+Invocations of Europe are increasingly evident in Canadian debates about wholesale broadband access, consumer protection, network neutrality and basic service policies. While some stakeholders in Canadian debates point to national and local approaches in Europe that appear to have been relatively successful in fostering broadband infrastructure development, others suggest that Europe is lagging behind and Canada should avoid Europe’s purported policy errors.
+
+{:.paper-author}
+Reza Rajabiun, Catherine Middleton
+
+[Download PDF](https://www.ceps.eu/system/files/IEForum42017_5.pdf){:.download-link .paper-download target="_blank"}
+
 ### Towards estimating the untapped potential: a global malicious DDoS mean capacity estimate
 {:.no_toc}
 
@@ -24,7 +46,7 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 What is the malicious reflected distributed denial of service (rDDoS) mean potential of the internet? The authors have been using data from the openNTP project which measures the number of reflectors on the internet since 2014 until now, and completed a graph that roughly estimates a lower boundary for global rDDoS mean potential across four internet protocols (IPs); SSDP, NTP, SNMP and open recursive DNS.
 
 {:.paper-author}
-Leverett, Eireann; Kaplan, Aaron
+Eireann Leverett, Aaron Kaplan
 
 [Download PDF]({{ site.baseurl }}/publications/Leverett-Kaplan-2017.pdf){:.download-link .paper-download target="_blank"}
 
