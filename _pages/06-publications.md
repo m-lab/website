@@ -17,6 +17,18 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2017
 {:.no_toc}
 
+### The Record Route Option is an Option!
+{:.no_toc}
+
+{:.paper-description}
+Forthcoming publication.
+
+{:.paper-author}
+B. Goodchild, Y. Chiu, H. Lu, R. Hansen, M. Calder, D. Choffnes, W. Lloyd, M. Luckie, E. Katz-Bassett.
+ACM Internet Measurement Conference (IMC), 2017.
+
+[Conferece Program](http://conferences.sigcomm.org/imc/2017/program/){:.download-link .paper-download target="_blank"}
+
 ### Strategic choice and broadband divergence in the transition to next generation networks: Evidence from Canada and the U.S.
 {:.no_toc}
 
@@ -513,6 +525,18 @@ M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 
 ## 2017
 {:.no_toc}
+
+### Experiences Monitoring Measurement Lab
+{:.no_toc}
+
+{:.paper-description}
+PromCon 2017 Lightning Talk outlining M-lab's transition to Prometheus monitoring.
+
+{:.paper-author}
+Stephen Soltesz
+
+[View Video](https://www.youtube.com/watch?v=ZJCrn5FV-TA){:.download-link .paper-download target="_blank"}
+[View Slides](https://goo.gl/UY7uXT){:.download-link .paper-download target="_blank"}
 
 ### Visualizing the Health of the internet - Measurement Lab + Bocoup
 {:.no_toc}
