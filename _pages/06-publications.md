@@ -27,6 +27,8 @@ Forthcoming publication.
 B. Goodchild, Y. Chiu, H. Lu, R. Hansen, M. Calder, D. Choffnes, W. Lloyd, M. Luckie, E. Katz-Bassett.
 ACM Internet Measurement Conference (IMC), 2017.
 
+[Conferece Program](http://conferences.sigcomm.org/imc/2017/program/){:.download-link .paper-download target="_blank"}
+
 ### Strategic choice and broadband divergence in the transition to next generation networks: Evidence from Canada and the U.S.
 {:.no_toc}
 
