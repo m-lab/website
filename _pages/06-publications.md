@@ -123,6 +123,17 @@ M-Lab Research Team
 ## 2015
 {:.no_toc}
 
+### OECD Digital Economy Outlook 2015
+{:.no_toc}
+
+{:.paper-description}
+This report assesses how countries can maximise the potential of the digital economy as a driver for innovation and inclusive growth, and discusses the evolutions in the digital economy that policy makers need to consider as well as the emerging challenges they need to address as a part of national digital strategies. Chapters include an overview of the current status and outlook of the digital economy; the main trends in the ICT sector, and developments in communication and regulation policy; and overviews of ICT demand and adoption, plus the effects of the digital economy on growth and development. This volume also includes a chapter on developments related to trust in the digital economy and on the emerging Internet of things.
+
+{:.paper-author}
+OECD
+
+[Download](http://dx.doi.org/10.1787/9789264232440-en){:.download-link .paper-download target="_blank"}
+
 ### Public QoS and Net Neutrality Measurements: Current Status and Challenges Toward Exploitable Results
 {:.no_toc}
 
