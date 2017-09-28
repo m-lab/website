@@ -57,7 +57,7 @@ grid-section:
         desc: "Northwestern University"
       - link: "http://www.cs.washington.edu/research/networking/astronomy/reverse-traceroute.html"
         image: "sharperprobe.png"
-        heading: "Sharperprobe"
+        heading: "Shaperprobe"
         desc: "Georgia Tech College of Computing"
       - link: "http://www.cs.washington.edu/research/networking/astronomy/reverse-traceroute.html"
         image: "reverse-traceroute.jpg"
@@ -86,7 +86,7 @@ grid-section:
       - link: "http://projectbismark.net/"
         image: "project-bismark.png"
         heading: "Project Bismark"
-        desc: "Georgia Tech"
+        desc: "Princeton University"
   - group-heading: "Supporting Partners"
     group-list-class: "partner-logos"
     grid-items:
@@ -159,6 +159,25 @@ grid-section:
       - link: "http://www.soldevelo.com/"
         image: "soldelvo.png"
         alt: "SolDelvelo Logo"
+      - link: "https://www.projectconnect.world/"
+        image: "ProjectConnect_Logo.png"
+        alt: "ProjectConnect Logo"
+      - link: "http://www.gixa.org.gh/"
+        image: "gix_logo.png"
+        alt: "Ghana Internet Exchange Association Logo"
+      - link: "http://pregi.net/"
+        image: "preginet_logo.png"
+        alt: "PREGINET Logo"
+      - link: "http://www.catnix.net/en/"
+        image: "catnix_logo.png"
+        alt: "CATNIX Logo"
+      - link: "http://www.csuc.cat/en"
+        image: "csuc_logo.png"
+        alt: "CSUC Logo"
+      - link: "http://www.clearwatercounty.org/"
+        image: "clearwatercounty_logo.png"
+        alt: "Clearwater County Logo"
+
 ---
 
 # Who We Are
