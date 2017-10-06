@@ -85,6 +85,10 @@ footer:
   subscribe:
     items:
     - 
+      link: "https://github.com/m-lab"
+      link-title: "GitHub"
+      link-class: "github-share"
+    - 
       link: "https://twitter.com/measurementlab"
       link-title: "Twitter"
       link-class: "twitter-share"
@@ -125,6 +129,9 @@ footer:
         link-title: "RSS"
     column-three:
       items:
+      -
+        link: "https://github.com/m-lab"
+        link-title: "Code"
       -
         link: "/privacy/"
         link-title: "Privacy Policy"
