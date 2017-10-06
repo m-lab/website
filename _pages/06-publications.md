@@ -17,6 +17,17 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2017
 {:.no_toc}
 
+### OECD Digital Economy Outlook 2017
+{:.no_toc}
+
+{:.paper-description}
+The biennial OECD Digital Economy Outlook examines and documents evolutions and emerging opportunities and challenges in the digital economy. It highlights how OECD countries and partner economies are taking advantage of information and communication technologies (ICTs) and the Internet to meet their public policy objectives. Through comparative evidence, it informs policy makers of regulatory practices and policy options to help maximise the potential of the digital economy as a driver for innovation and inclusive growth.
+
+{:.paper-author}
+OECD
+
+[Download](http://dx.doi.org/10.1787/9789264276284-en){:.download-link .paper-download target="_blank"}
+
 ### The Record Route Option is an Option!
 {:.no_toc}
 
