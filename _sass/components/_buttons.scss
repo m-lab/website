@@ -112,6 +112,12 @@
     height: 20px;
   }
 
+  &.github-share::after {
+    background-position: -240px -38px;
+    width: 25px;
+    height: 25px;
+  }
+
 }
 
 // Back to Top Button
