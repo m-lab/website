@@ -24,7 +24,7 @@ There is typically at least a 24-hour delay between data collection and data pub
 
 ### Active Tests
 
-* [mlab-collectd](https://console.developers.google.com/storage/browser/m-lab/utilization/){:target="_blank"}
+* [M-Lab Collectd](https://console.developers.google.com/storage/browser/m-lab/utilization/){:target="_blank"}
   * mlab-collectd is a monitoring tool for M-Lab slices, which collects resource utilization information about all M-Lab servers.
   * More information is available on [Github](https://github.com/m-lab/collectd-mlab){:target="_blank"}.
 * [Neubot](https://console.developers.google.com/storage/browser/m-lab/neubot/){:target="_blank"}
