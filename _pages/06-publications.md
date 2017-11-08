@@ -474,6 +474,11 @@ M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 ## 2017
 {:.no_toc}
 
+### [7/14/2017 - FCC](https://www.fcc.gov/ecfs/filing/10715748225796){:target="_blank"}:  Restoring Internet Freedom, GN Docket No. 17-108
+{:.no_toc}
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/Interconnection Update2017.pdf){:.download-link .paper-download target="_blank"}
+
 ### [4/25/2017 - TRAI (India)](http://trai.gov.in/sites/default/files/Measurement_Lab_27_04_2017.pdf){:target="_blank"}: Counter Comments on TRAI Consultation Paper on Net Neutrality
 {:.no_toc}
 
