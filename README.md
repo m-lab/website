@@ -51,7 +51,7 @@ For page redirects, M-Lab contributors should:
 * Create the new page in it's new location, using the _permalink_ part of the page's YAML front matter.
   * For example the page `_pages/gsc.md` used to be served at the URL: `https://www.measurementlab.net/data/gcs/`
   * It was "moved" to a new URL by changing the _permalink_ front matter from `permalink: /data/gcs/` to `permalink: /data/docs/gcs/`.
-* Create a page for the redirect using the `redirect` template, and save in the `_pages/` folder. 
+* Create a page for the redirect using the `redirect` template, and save in the `_pages/` folder.
   * Use the file naming convention `301-original-page-path.md`
   * Numerous examples exist in the `_pages` folder
 
