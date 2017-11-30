@@ -44,17 +44,16 @@ This site enables HTML Compression for optimizing performance.  If it is desired
 | images | Contains all the image files for the site. |
 | publications | Contains all the pdfs and docs that the site links to. |
 
-## 301 Redirects
+## Page Redirects
 
 For page redirects, M-Lab contributors should:
 
-* create the new page in it's new location, using the _permalink_ part of the page's YAML front matter.
+* Create the new page in it's new location, using the _permalink_ part of the page's YAML front matter.
   * For example the page `_pages/gsc.md` used to be served at the URL: `https://www.measurementlab.net/data/gcs/`
   * It was "moved" to a new URL by changing the _permalink_ front matter from `permalink: /data/gcs/` to `permalink: /data/docs/gcs/`.
-* prepare empty "stub" folder(s) and file(s) to use for the redirect.
-  * In the example above, these folders were created: `/data/gcs/`; and two files were created: `/data/gcs/index.html` and `/data/.301`.
-  * The file `/data/.301` is added as a developer reference that the content of this folder is present only to use for a 301 redirect.
-  * Once the new content has gone through code review and merged, a [301 redirect is added to the file's meta-data in Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html) .
+* Create a page for the redirect using the `redirect` template, and save in the `_pages/` folder. 
+  * Use the file naming convention `301-original-page-path.md`
+  * Numerous examples exist in the `_pages` folder
 
 ## Code Standards
 
