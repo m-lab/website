@@ -25,8 +25,8 @@ The table `plx.google:m_lab.ndt.all` contains data up to May 10, 2017, and we ha
 
 The old “fast table” data has also been copied to a pair of cloud BigQuery tables:
 
-* [measurement-lab:legacy.ndt](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt) and
-* [measurement-lab:legacy.ndt_pre2015](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt_pre2015).
+* [measurement-lab:legacy.ndt](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt){:target="_blank"}
+* [measurement-lab:legacy.ndt_pre2015](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt_pre2015){:target="_blank"}
 
 These tables contain the identical data to the `plx.google:m_lab.ndt.all` table, but with a schema that includes the new fields in the new `measurement-lab:public.ndt` table. The table had to be split in two because we are using "date partitioned tables" to improve query efficiency and ease of updates.  The table `measurement-lab:legacy.ndt` contains all data from January 1, 2015 to May 10, 2017, and the table `measurement-lab:legacy.ndt_pre2015` contains all data prior to 2015.
 
@@ -38,23 +38,23 @@ A complete version history and changelog for our NDT, NPAD, Paris Traceroute, an
 
 For our upcoming v3.1 table/schema release, the following tables and views will be published in the `measurement-lab:public` project:
 
-* **measurement-lab.legacy.ndt** (data ~ 2015-01-01 - 2017-05-10)
-* **measurement-lab.legacy.ndt_pre2015** (data ~ 2009-02-18 - 2014-12-31)
-* **measurement-lab.public.ndt_v3.1** (data ~ 2017-05-01 - present)
+* **[measurement-lab.legacy.ndt](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt){:target="_blank"}** (data ~ 2015-01-01 - 2017-05-10)
+* **[measurement-lab.legacy.ndt_pre2015](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt_pre2015){:target="_blank"}** (data ~ 2009-02-18 - 2014-12-31)
+* **[measurement-lab.public.ndt_v3.1](https://bigquery.cloud.google.com/table/measurement-lab:public.ndt_v3.1){:target="_blank"}** (data ~ 2017-05-01 - present)
 * All NDT data views:
-  * ndt_all_v3.1​ (data ~ 2009-02-18 - present)
-  * ndt_all_current​ (data ~ 2009-02-18 - present)
-  * ndt_all_legacysql_v3.1​ (data ~ 2009-02-18 - present)
+  * [ndt_all_v3.1](https://bigquery.cloud.google.com/table/measurement-lab:public.ndt_all_v3.1){:target="_blank"}​ (data ~ 2009-02-18 - present)
+  * [ndt_all_current​](https://bigquery.cloud.google.com/table/measurement-lab:public.ndt_all_current){:target="_blank"}​ (data ~ 2009-02-18 - present)
+  * [ndt_all_legacysql_v3.1](https://bigquery.cloud.google.com/table/measurement-lab:public.ndt_legacysql_v3.1){:target="_blank"}​​ (data ~ 2009-02-18 - present)
 * Separate views for NDT download and upload tests:
-  * ndt_downloads_v3.1 (data ~ 2009-02-18 - present)
-  * ndt_uploads_v3.1 (data ~ 2009-02-18 - present)
-* **measurement-lab.public.traceroute_v3.1** (data ~ 2017-09-08 - present)
-* **measurement-lab.public.sidestream_v3.1** (data ~ 2017-09-08 - present)
-* **measurement-lab.public.npad_v3.1** (data ~ 2009-02-18 - present)
+  * [ndt_downloads_v3.1](https://bigquery.cloud.google.com/table/measurement-lab:public.ndt_downloads_v3.1){:target="_blank"}​ (data ~ 2009-02-18 - present)
+  * [ndt_uploads_v3.1](https://bigquery.cloud.google.com/table/measurement-lab:public.ndt_uploads_v3.1){:target="_blank"}​ (data ~ 2009-02-18 - present)
+* **[measurement-lab.public.traceroute_v3.1](https://bigquery.cloud.google.com/table/measurement-lab:public.traceroute_v3.1){:target="_blank"}​** (data ~ 2017-09-08 - present)
+* **[measurement-lab.public.sidestream_v3.1](https://bigquery.cloud.google.com/table/measurement-lab:public.sidestream_v3.1){:target="_blank"}​** (data ~ 2017-09-08 - present)
+* **[measurement-lab.public.npad_v3.1](https://bigquery.cloud.google.com/table/measurement-lab:public.npd_v3.1){:target="_blank"}​** (data ~ 2009-02-18 - present)
 
-The NDT table views provide a superset schema of the old and new tables, and queries that worked on the old table should generally work without change on the new views. The views above ending in `_legacy` require you to use [legacySQL](https://cloud.google.com/bigquery/query-reference){:target="_blank"} queries, and those labeled with `(standardSQL)` require you to use [standardSQL](https://cloud.google.com/bigquery/sql-reference/index){:target="_blank"} queries. Additionally, the views which include '_uploads_' or '_downloads_' provide a subset of NDT data that are valid, completed tests which meet the critera described on our page, [Calculating Common Metrics]({{ site.baseurl }}/data/docs/bq/ndtmetrics/). We highly recommend using standardSQL as this will be required to query all M-Lab tables in the future.
+The NDT table views provide a superset schema of the old and new tables, and queries that worked on the old table should generally work without change on the new views. The views above ending in `_legacy` require you to use [legacySQL](https://cloud.google.com/bigquery/query-reference){:target="_blank"} queries. All other views require you to use [standardSQL](https://cloud.google.com/bigquery/sql-reference/index){:target="_blank"} queries. Additionally, the views which include '_uploads_' or '_downloads_' provide a subset of NDT data that are valid, completed tests which meet the critera described on our page, [Calculating Common Metrics]({{ site.baseurl }}/data/docs/bq/ndtmetrics/). We highly recommend using standardSQL as this will be required to query all M-Lab tables in the future.
 
-Our v3.1 tables will go into production for NDT, Paris Traceroute, Sidestream and NPAD in January 2018. Additionally, we will complete work on our [annotation service](https://github.com/m-lab/annotation-service){:target="_blank"}, which will provide the blacklist_flags field, which tags test rows where infrastructure or other issues may have occurred. The annotation service provides geolocation information for all tests and has been developed as a separate service to be extensible for adding different types of metadata in the future.
+Our v3.1 tables will go into production for NDT, Paris Traceroute, Sidestream and NPAD in January 2018. Additionally, we will complete work on our [annotation service](https://github.com/m-lab/annotation-service){:target="_blank"}, which will provide the `blacklist_flags` field, which tags test rows where infrastructure or other issues may have occurred. The annotation service provides geolocation information for all tests and has been developed as a separate service to be extensible for adding different types of metadata in the future.
 
 ## Summary of v3.1 Table/Schema and Feature Changes
 
