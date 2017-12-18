@@ -25,14 +25,14 @@ The table `plx.google:m_lab.ndt.all` contains data up to May 10, 2017, and we ha
 
 The old “fast table” data has also been copied to a pair of cloud BigQuery tables:
 
-* [measurement-lab:legacy.ndt](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt) and 
-* [measurement-lab:legacy.ndt_pre2015](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt_pre2015). 
+* [measurement-lab:legacy.ndt](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt) and
+* [measurement-lab:legacy.ndt_pre2015](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt_pre2015).
 
 These tables contain the identical data to the `plx.google:m_lab.ndt.all` table, but with a schema that includes the new fields in the new `measurement-lab:public.ndt` table. The table had to be split in two because we are using "date partitioned tables" to improve query efficiency and ease of updates.  The table `measurement-lab:legacy.ndt` contains all data from January 1, 2015 to May 10, 2017, and the table `measurement-lab:legacy.ndt_pre2015` contains all data prior to 2015.
 
 ## Implementing Table Versioning and Corresponding BigQuery Views
 
-While working on completing the transition to new tables, we've standardized on version numbers for our past and current table schemas. This versioning will also apply to BigQuery Views, to ensure data users will have clarity on what version of our tables is being queried over time as schemas are updated. 
+While working on completing the transition to new tables, we've standardized on version numbers for our past and current table schemas. This versioning will also apply to BigQuery Views, to ensure data users will have clarity on what version of our tables is being queried over time as schemas are updated.
 
 A complete version history and changelog for our NDT, NPAD, Paris Traceroute, and Sidestream tables is published under [Data > Docs > BigQuery Schema]({{ site.baseurl }}/data/docs/bq/schema/).
 
