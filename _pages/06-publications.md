@@ -32,13 +32,15 @@ OECD
 {:.no_toc}
 
 {:.paper-description}
-Forthcoming publication.
+The IPv4 Record Route (RR) Option instructs routers to record their IP addresses in a packet. RR is subject to a nine hop limit and, traditionally, inconsistent support from routers. Recent changes in interdomain connectivity—the so-called "flattening Internet"—and new best practices for how routers should handle RR packets suggest that now is a good time to reassess the potential of the RR Option.
 
 {:.paper-author}
 B. Goodchild, Y. Chiu, H. Lu, R. Hansen, M. Calder, D. Choffnes, W. Lloyd, M. Luckie, E. Katz-Bassett.
 ACM Internet Measurement Conference (IMC), 2017.
 
-[Conferece Program](http://conferences.sigcomm.org/imc/2017/program/){:.download-link .paper-download target="_blank"}
+[Download Paper](http://www.columbia.edu/~ebk2141/papers/record_route-imc17.pdf){:.download-link .paper-download target="_blank"}
+
+[Download Data](https://storage.cloud.google.com/archive-mlab-oti/misc/rr_data.tar.gz){:.download-link .paper-download target="_blank"}
 
 ### Strategic choice and broadband divergence in the transition to next generation networks: Evidence from Canada and the U.S.
 {:.no_toc}
