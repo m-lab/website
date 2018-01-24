@@ -9,6 +9,7 @@ categories:
   - virtualization
   - kernel
   - tcp-info
+  - bbr
   - web100
 ---
 
@@ -22,7 +23,7 @@ When the M-Lab platform was initially launched in 2009, the software and operati
 
 All M-Lab servers today are hosted either in well-connected data centers or within the research and education networks of contributing partner institutions. Each location has at least one "pod" which consists of 3-4 servers and one switch, connected directly to an upstream transit provider. Each M-Lab pod has between 1-10 Gbps upstream connectivity.
 
-M-Lab has historically used a version of [PlanetLab](https://www.planet-lab.org/){:target="_blank"} to provide kernel builds and to generate installation images for our servers. Since 2003, the PlanetLab Consortium has provided a research platform for researchers to prototype and develop, "new technologies for distributed storage, network mapping, peer-to-peer systems, distributed hash tables, and query processing."
+The kernel, virtualization, and operating system running on M-Lab servers has historically been based on [PlanetLab](https://www.planet-lab.org/){:target="_blank"}. Since 2003, the PlanetLab Consortium has provided a research platform for researchers to prototype and develop, "new technologies for distributed storage, network mapping, peer-to-peer systems, distributed hash tables, and query processing." During this modernization project, M-Lab will remove most of our technical dependencies on PlanetLab. However, PlanetLab will continue to play an important role in the M-Lab Consortium.
 
 Today, each M-Lab server boots up into a custom-compiled version of Linux 2.6.32. This customized kernel from the 2.6 LTS branch of the Linux kernel has two main patches that are required for our systems: vserver (for containerization) and Web100 (for several of our experiments).
 
@@ -60,7 +61,7 @@ The design process and initial development of [ePoxy](https://github.com/m-lab/e
 
 ### Move to a Modern Kernel and TCP_INFO
 
-To remove M-Lab’s reliance on Web100, M-Lab plans to transition to the TCP_INFO kernel instrumentation. M-Lab has confirmed that the current TCP_INFO implementation in modern kernels provides equivalent measurements of the TCP stack. Work is beginning now to refactor or turn down all M-Lab tools that use web100 to use TCP_INFO, including: NDT, Sidestream, NPAD, and the Paris-Traceroute wrapper. Once this work is completed, we’ll test these new tools on our platform’s testing infrastructure while keeping web100 on all production servers.
+To remove M-Lab’s reliance on Web100, M-Lab plans to transition to the TCP_INFO kernel instrumentation. Basing our measurements on TCP_INFO kernel instrumentation will allow M-Lab to support the latest version of TCP (called [BBR TCP](https://queue.acm.org/detail.cfm?id=3022184)){:target="_blank"} that will allow download tests to converge much more quickly at high speeds. M-Lab has confirmed that the current TCP_INFO implementation in modern kernels provides equivalent measurements of the TCP stack. Work is beginning now to refactor or turn down all M-Lab tools that use web100 to use TCP_INFO, including: NDT, Sidestream, NPAD, and the Paris-Traceroute wrapper. Once this work is completed, we’ll test these new tools on our platform’s testing infrastructure while keeping web100 on all production servers.
 
 The requirement to migrate to TCP_INFO is currently blocking the move to new kernels, so that must be done before we start trying to deploy new kernels. New virtualization techniques depend on new kernels, and so we can't usefully start setting up new virtualization techniques until we have new kernels and have moved to TCP_INFO.
 
