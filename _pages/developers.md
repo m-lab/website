@@ -1,10 +1,9 @@
 ---
 layout: page
 permalink: /develop/
-title: "Develop"
+title: "Developer"
 page-title: "Developer Resources"
 menu-item: true
-breadcrumb: develop
 ---
 
 # Developing with the M-Lab Platform
