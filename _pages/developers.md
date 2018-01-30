@@ -24,9 +24,9 @@ For more on M-Lab’s privacy requirements, please see our [AUP]({{ site.baseurl
 
 ### How to select an M-Lab server for testing
 
-Client developers are welcome to use any production M-Lab site according to their preference and testing plans. However, developers should keep in mind that certain servers can encounter disruption or administrative maintenance with short to no notice. Planning should allow for changes in availability for servers.
+Client developers are welcome to use any production M-Lab site according to their preference and testing plans. However, developers should keep in mind that certain servers can encounter disruption or administrative maintenance with short to no notice. Planning should allow for changes in availability for servers. The easiest and recommended way to deal with changing server availability is to use our directory service.
 
-We provide a directory service named [mlab-ns](http://mlab-ns.appspot.com/admin/map/ipv4/all) that provides structured data on the availability of servers on the platform. By default, the mlab-ns service provides the client with the address of one of the servers geographically closest to the user. However, other information is available within mlab-ns based on the parameters provided to the API, including a list of all available servers. Applications should not cache values returned by mlab-ns for a long time; we recommended that maintainers’ applications query the service in real time to ensure the availability of any server and to monitor for new servers on the platform. This is important whether or not a client bases its selection of geographic closeness. Applications may want to invalidate the cache and query mlab-ns again when a previously cached mlab-ns server fails to connect.
+We provide a directory service named [mlab-ns](http://mlab-ns.appspot.com/admin/map/ipv4/all) that provides structured data on the availability of servers on the platform. By default, the mlab-ns service provides the client with the address of one of the servers geographically closest to the user. However, other information is available within mlab-ns based on the parameters provided to the API, including a list of all available servers. Applications should not cache values returned by mlab-ns for a long time; we recommended that maintainers’ applications query the service in real time to ensure the availability of any server and to monitor for new servers on the platform. This is important whether or not a client bases its selection of geographic closeness. At a minimum, we recommend applications invalidate their cache and query mlab-ns again when the connection fails to a server name cached from an old mlab-ns response.
 
 For more information on the mlab-ns directory service, please refer to the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md).
 
@@ -36,9 +36,8 @@ M-Lab encourages developers to use the M-Lab Naming Service (mlab-ns) to route a
 
 mlab-ns provides this service for the following M-Lab tests:
 
-* NDT
+* NDT, NDT SSL
 * Neubot
-* NPAD
 * Mobiperf
 
 In a typical scenario, an app or web-based NDT implementation will make a call to mlab-ns to determine which M-Lab server is closest and available to the user to conduct the test. Calls to the mlab-ns server hosted on Google AppEngine should at a minimum include the tool name within the path, for example: https://mlab-ns.appspot.com/ndt
@@ -49,11 +48,11 @@ A response in JSON format is returned which the application then uses to provide
 {"city": "Washington_DC", "url": "http://ndt.iupui.mlab1.iad05.measurement-lab.org:7123", "ip": ["4.35.238.203"], "fqdn": "ndt.iupui.mlab1.iad05.measurement-lab.org", "site": "iad05", "country": "US"}
 ```
 
-When the request arrives to mlab-ns, the geolocation of the user is automatically included in the HTTP headers by the Google AppEngine infrastructure. Note that the user is not required to consent to this information being sent. Finally, using this information, mlab-ns selects the best M-Lab server (according to various metrics) and redirects the user to the corresponding URL. Additional query parameters are available, which are detailed in the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md).
+When the request arrives to mlab-ns, the geolocation of the user is automatically included in the HTTP headers by the Google AppEngine infrastructure. Note that the user is not required to consent to this information being sent. Using the location from AppEngine, mlab-ns selects the best M-Lab server (according to various metrics) and redirects the user to the corresponding URL. Additional query parameters are available, which are detailed in the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md).
 
 ### Where does M-Lab place servers?
 
-The M-Lab platform is designed to provide broadband users with measurements that reflect their actual Internet experience. To align with this mission, the M-Lab sites that users conduct tests against are typically located in networks that host Internet content or key infrastructure locations. These providers tend to be Internet exchanges, transit networks, or prominent hosting companies. The M-­Lab sites are typically physically collocated in the same building as major network providers’ routers.
+The M-Lab platform is designed to provide broadband users with measurements that reflect their Internet experience. To align with this mission, the M-Lab sites that users conduct tests against are typically located in networks that host Internet content or key infrastructure locations. These providers tend to be Internet exchanges, transit networks, or prominent hosting companies. The M-­Lab sites are typically physically collocated in the same building as major network providers’ routers.
 
 Measurement Lab is an international platform that currently consists of over 125 sites around the world, a number that is always increasing. The majority of sites are located in North America and Europe. However, M-Lab seeks to build out a presence everywhere. As a result, M-Lab has server coverage in many key locations, including in prominent developing markets. For up to date information on the geographic reach, please see our [Server Map]({{ site.baseurl }}/status).
 
@@ -63,7 +62,7 @@ Building out an international presence that covers all users is a process that r
 
 M-Lab welcomes automated and repeated testing. However, doing so requires user consent and care in implementation so that clients do not unintentionally overload the platform.
 
-The M-Lab platform is well provisioned to handle a large amount of concurrent tests. In order to avoid potential site-reliability issues, we recommend that clients that perform automated testing take steps to spread the distribution of their clients’ tests evenly. It is often sufficient to randomize the times that tests are initiated. We also recommend that automatic and/or bandwidth intensive tests should not initiate more than two tests per hour to a server. The ideal approach would be to use an exponential randomization distribution (Poisson Process) to ensure clients adequately spread out the intervals that tests start.
+The M-Lab platform is well provisioned to handle a large amount of concurrent tests. In order to avoid potential site-reliability issues, we recommend that clients that perform automated testing take steps to spread the distribution of their clients’ tests evenly. It is often sufficient to randomize the times that tests are initiated. We also recommend that automatic and/or bandwidth intensive tests should not initiate more than two tests per hour to a server. The ideal approach would be to ensure that the test start times constitute a Poisson process (and are therefore memoryless); this can be done by choosing each inter-test wait time from an exponential distribution. In python, the appropriate function for this is random.expovariate, but similar functions are available in all major programming languages.
 
 ## NDT
 
@@ -82,7 +81,7 @@ For deployments of NDT outside of the browser, we also support [MeasurementKit](
 
 ### Can I use M-Lab’s services without measurements being added to the public dataset?
 
-No.
+No. Using M-Lab's test infrastructure and services requires the sharing of the resulting data.
 
 Experiments typically record their measurement results based on the server’s observation of the test. These results are stored on the server until they are aggregated into the central dataset, and there is no mechanism to exempt certain tests from this collection. Please note that this is the extent of the data that is required to be published. If a client collects its own complementary information or performs additional testing, we do not require the disclosure of this information.
 
@@ -96,7 +95,7 @@ While experiments provide the option to include metadata about the system or cli
 
 ### Can commercial or closed source services use M-Lab?
 
-Yes.
+Yes. Anyone may use M-Lab's services as long as they follow the AUP and obtain user consent.
 
 M-Lab’s policies require that experiment maintainers provide an example open source client that is compatible with the services hosted on the platform. However, the clients that use these server resources – whether developed by the original maintainer or independent third parties – are not required to be open source. These requirements were imposed in order to facilitate wide adoption of measurements and the platform’s public resources, beyond solely one researcher or client. For example, with the [Network Diagnostic Tool]({{ site.baseurl }}/tests/ndt), the majority of measurements come from independently-developed clients and integrations into closed source products.
 
