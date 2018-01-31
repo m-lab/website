@@ -48,7 +48,7 @@ A response in JSON format is returned which the application then uses to provide
 {"city": "Washington_DC", "url": "http://ndt.iupui.mlab1.iad05.measurement-lab.org:7123", "ip": ["4.35.238.203"], "fqdn": "ndt.iupui.mlab1.iad05.measurement-lab.org", "site": "iad05", "country": "US"}
 ```
 
-When the request arrives to mlab-ns, the geolocation of the user is automatically included in the HTTP headers by the Google AppEngine infrastructure. Note that the user is not required to consent to this information being sent. Using the location from AppEngine, mlab-ns selects the best M-Lab server (according to various metrics) and redirects the user to the corresponding URL. Additional query parameters are available, which are detailed in the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md).
+When the request arrives to mlab-ns, the geolocation of the user is automatically included in the HTTP headers by the Google AppEngine infrastructure. The mlab-ns logs are not governed by M-Lab's open-data policy. Queries to mlab-ns may be sent prior to acquiring user consent to run the actual test. Using the location from AppEngine, mlab-ns selects the best M-Lab server (according to various metrics) and redirects the user to the corresponding URL. Additional query parameters are available, which are detailed in the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md).
 
 ### Where does M-Lab place servers?
 
@@ -62,7 +62,7 @@ Building out an international presence that covers all users is a process that r
 
 M-Lab welcomes automated and repeated testing. However, doing so requires user consent and care in implementation so that clients do not unintentionally overload the platform.
 
-The M-Lab platform is well provisioned to handle a large amount of concurrent tests. In order to avoid potential site-reliability issues, we recommend that clients that perform automated testing take steps to spread the distribution of their clients’ tests evenly. It is often sufficient to randomize the times that tests are initiated. We also recommend that automatic and/or bandwidth intensive tests should not initiate more than two tests per hour to a server. The ideal approach would be to ensure that the test start times constitute a Poisson process (and are therefore memoryless); this can be done by choosing each inter-test wait time from an exponential distribution. In python, the appropriate function for this is random.expovariate, but similar functions are available in all major programming languages.
+The M-Lab platform is well provisioned to handle a large amount of concurrent tests. In order to avoid potential site-reliability issues, we recommend that clients that perform automated testing take steps to spread the distribution of their clients’ tests evenly. It is often sufficient to randomize the times that tests are initiated. We also recommend that automatic and/or bandwidth intensive tests should not initiate more than two tests per hour to a server. The ideal approach would be to ensure that the test start times constitute a Poisson process (and are therefore memoryless); this can be done by choosing each inter-test wait time from an exponential distribution. In python, the appropriate function for this is `random.expovariate`, but similar functions are available in all major programming languages.
 
 ## NDT
 
@@ -81,7 +81,7 @@ For deployments of NDT outside of the browser, we also support [MeasurementKit](
 
 ### Can I use M-Lab’s services without measurements being added to the public dataset?
 
-No. Using M-Lab's test infrastructure and services requires the sharing of the resulting data.
+No. Using M-Lab's test infrastructure and services requires the the resulting data to be shared. All data collected by M-Lab tests are available to the public without restriction under a [No Rights Reserved Creative Commons Zero Waiver](http://creativecommons.org/about/cc0).
 
 Experiments typically record their measurement results based on the server’s observation of the test. These results are stored on the server until they are aggregated into the central dataset, and there is no mechanism to exempt certain tests from this collection. Please note that this is the extent of the data that is required to be published. If a client collects its own complementary information or performs additional testing, we do not require the disclosure of this information.
 
@@ -95,7 +95,7 @@ While experiments provide the option to include metadata about the system or cli
 
 ### Can commercial or closed source services use M-Lab?
 
-Yes. Anyone may use M-Lab's services as long as they follow the AUP and obtain user consent.
+Yes. Anyone may use M-Lab's services as long as they follow the [AUP]({{ site.baseurl }}/aup) and obtain user consent.
 
 M-Lab’s policies require that experiment maintainers provide an example open source client that is compatible with the services hosted on the platform. However, the clients that use these server resources – whether developed by the original maintainer or independent third parties – are not required to be open source. These requirements were imposed in order to facilitate wide adoption of measurements and the platform’s public resources, beyond solely one researcher or client. For example, with the [Network Diagnostic Tool]({{ site.baseurl }}/tests/ndt), the majority of measurements come from independently-developed clients and integrations into closed source products.
 
