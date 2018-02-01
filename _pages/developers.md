@@ -3,7 +3,7 @@ layout: page
 permalink: /develop/
 title: "Developer"
 page-title: "Developer Resources"
-menu-item: true
+breadcrumb: contribute
 ---
 
 # Developing with the M-Lab Platform
