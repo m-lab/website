@@ -9,7 +9,7 @@ Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-l
 **Please Note** This repository contains a submodule, so after cloning this repo, you will also need to run `git submodule init` and `git submodule update` to pull down the submodule files as well.
 
 1. Install dependencies `bundle install`
-2. Run Jekyll server and pass in a blank baseurl to preview in development mode `jekyll serve --baseurl`.
+2. Run Jekyll server to preview in development mode `bundle exec jekyll serve`.
 3. View the generated site by going to [http://localhost:4000/](http://localhost:4000/)
 
 ### Pre-commit Hook

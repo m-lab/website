@@ -6,7 +6,11 @@ menu-item: true
 breadcrumb: contribute
 ---
 
+* Table of Contents
+{:toc}
+
 # Supporting or Contributing to M-Lab
+{:.no_toc}
 
 M-Lab welcomes the participation of individuals and researchers, as well as companies, organizations, and other institutions, that would like to help expand the platform and ensure its growth and success.
 
@@ -24,7 +28,10 @@ Please review the documents below before applying:
 
 M-Lab's open source tests can be added to your website, mobile application, or other software, providing a service to your users and allowing M-Lab to reach more people and generate more data. If you are considering building an M-Lab test into your website or application, you should be familiar with M-Lab's [Privacy]({{ site.basurl }}/privacy) and [Acceptable Use]({{ site.baseurl }}/aup) policies.
 
-You can find out more information in our FAQ article: [How can I add an M-Lab test to my website, mobile app, or other software?]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software), in our [data documentation]({{ site.baseurl }}/data/docs), or [contact us](mailto:support@measurementlab.net) to learn more.
+You can find out more information:
+
+* In our [Developers Guide]({{ site.baseurl }}/develop).
+* In our FAQ article: [How can I add an M-Lab test to my website, mobile app, or other software?]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software), in our [data documentation]({{ site.baseurl }}/data/docs)
 
 ## Host or Sponsor an M-Lab Measurement Site
 

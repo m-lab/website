@@ -68,18 +68,10 @@ header:
     -
       title: "contribute"
       sub-nav:
-        - text: "Supporting M-Lab"
-          url:  "/contribute/"
-        - text: "Develop a Test"
-          url:  "/contribute/#develop-a-test"
-        - text: "Integrate a Test"
-          url:  "/contribute/#use-an-m-lab-test-in-your-website-or-application"
-        - text: "Host an M-Lab Site"
-          url:  "/contribute/#host-or-sponsor-an-m-lab-measurement-site"
-        - text: "Analyze M-Lab Data"
-          url:  "/contribute/#analyze-and-visualize-m-lab-data"
-        - text: "Donate"
-          url:  "/contribute/#donate-to-m-lab"
+        - text: "Ways to Contribute"
+          url: "/contribute/"
+        - text: "Developer"
+          url:  "/develop/"
 
 footer:
   subscribe:

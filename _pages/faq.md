@@ -155,7 +155,10 @@ You can contact M-Lab by emailing [support@measurementlab.net](mailto:support@me
 
 For individuals, the best way to support M-Lab is to regularly use our tests. You gain the benefit of understanding more about your connection to the Internet, and the research community and the public benefits from the resulting public data.
 
-People who have expert knowledge in web or application development, data analysis, or data presentation in a graphic format  may also be interested in working with M-Lab’s tests, data, and analysis tools, all of which are open source and openly licensed. Contact us at [support@measurementlab.net](mailto:support@measurementlab.net) to learn more.
+People who have expert knowledge in web or application development, data analysis, or data presentation in a graphic format  may also be interested in working with M-Lab’s tests, data, and analysis tools, all of which are open source and openly licensed. More information can be found in the links below, or you can contact us at [support@measurementlab.net](mailto:support@measurementlab.net) to learn more.
+
+* [Data Documentation]({{ site.baseurl }}/data/docs)
+* [Developer Guide]({{ site.baseurl }}/develop)
 
 ## How can companies or other organizations get involved and support M-Lab?
 {:.no_toc}
@@ -191,4 +194,4 @@ If you are interested in deploying a new tool or test on the M-Lab platform, ple
 
 M-Lab's open source tests can be added to your website, mobile application, or other software. The Network Diagnostic Tool (NDT) from [Internet 2](http://www.internet2.edu/performance/ndt/), has been used by a number of third party websites and application developers, including [internethealthtest.org](http://internethealthtest.org/), [the city of Seattle's broadband map](http://www.seattle.gov/broadband-speed-test), Bittorrent's [uTorrent client](http://www.utorrent.com/intl/en/), and several others.
 
-The M-Lab team regularly consults with and supports application and web developers interested in integrating our client tests. If you are interested in adding an M-Lab test to your website or application, please [contact us](mailto:support@measurementlab.net).
+The M-Lab team regularly consults with and supports application and web developers interested in integrating our client tests. If you are interested in adding an M-Lab test to your website or application, please review our [developer guide]({{ site.baseurl }}/develop) or [contact us](mailto:support@measurementlab.net).
