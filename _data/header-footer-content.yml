@@ -68,6 +68,8 @@ header:
     -
       title: "contribute"
       sub-nav:
+        - text: "Ways to Contribute"
+          url: "/contribute/"
         - text: "Developer"
           url:  "/develop/"
 
