@@ -45,7 +45,12 @@ The views above ending in `_legacysql` require you to use [legacySQL](https://cl
 ## Sidestream and Paris Traceroute
  
 If your queries are for Sidestream and Paris Traceroute data, please use the following tables:
- 
+
+* `plx.google.m_lab.sidestream.all`
+* `plx.google.m_lab.traceroute.all`
+
+Please note that Sidestream and Paris Traceroute data will eventually be published in the **base_tables** dataset:
+
 * `measurement-lab:base_tables.sidestream`
 * `measurement-lab:base_tables.traceroute`
  

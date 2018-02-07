@@ -84,7 +84,7 @@ The current version of M-Lab BigQuery tables is v3.1, and are listed below. Tabl
 * **[measurement-lab.base_tables.sidestream](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.sidestream)**
 * **[measurement-lab.base_tables.traceroute](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.traceroute)**
  
-### Recommended Views for Research Queries
+### Recommended Datasets Views for Research Queries
  
 * **[measurement-lab.rc](https://bigquery.cloud.google.com/dataset/measurement-lab:rc)**
 * **[measurement-lab.rc_v3_1](https://bigquery.cloud.google.com/dataset/measurement-lab:rc_v3_1)**

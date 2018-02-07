@@ -68,18 +68,18 @@ Researchers interested in querying unfiltered NDT data should use the **base_tab
   * _sidestream - `measurement-lab.base_tables.sidestream`_
   * _traceroute - `measurement-lab.base_tables.traceroute`_
 
-### Recommended Datasets for Most Researcher Queries
+### Recommended Datasets and Views for Most Researcher Queries
 
 The datasets in the previous section outline where raw M-Lab test data will be parsed and stored. While they are also queryable in the above locations, M-Lab will recommend that most researchers instead begin querying views in our **release** dataset.
 
 To help researchers during this transition, and for future schema/table changes, we will also begin publishing the following datasets for each new release:
 
 * **rc**
-  * Beta test version of the next release of views.
-  * These views represent the most recent _release-candidate_.
+  * Beta testing version of the next release of views
+  * These views represent the most recent _release-candidate_
 
 * **release_vX_Y_Z**
-  * Recent stable releases.
+  * Contains views of recent stable releases, pinned to those specific releases
 
 * **release**
   * An alias to current supported release containing the set of views that most people should use
