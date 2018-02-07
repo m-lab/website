@@ -7,7 +7,7 @@ breadcrumb: blog
 categories:
   - bigquery
   - data
-  - data-analysis
+  - data analysis
   - gcs
   - performance
   - pipeline

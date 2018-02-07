@@ -57,41 +57,28 @@ Download throughput is calculated using this formula within the query:
 The complete BigQuery example is:
 
 ```sql
+#standardSQL
 SELECT
   8 * (web100_log_entry.snap.HCThruOctetsAcked /
     (web100_log_entry.snap.SndLimTimeRwin +
     web100_log_entry.snap.SndLimTimeCwnd +
     web100_log_entry.snap.SndLimTimeSnd)) AS download_Mbps
 FROM
-  [plx.google:m_lab.ndt.all]
+  `measurement-lab.release.ndt_all`
 WHERE
-  connection_spec.client_geolocation.country_code = 'US'
-  AND web100_log_entry.log_time >= PARSE_UTC_USEC('2017-01-01 00:00:00') / POW(10, 6)
-  AND web100_log_entry.log_time < PARSE_UTC_USEC('2017-01-02 00:00:00') / POW(10, 6)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.connection_spec.remote_ip)
-  AND IS_EXPLICITLY_DEFINED (web100_log_entry.connection_spec.local_ip)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.HCThruOctetsAcked)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.SndLimTimeRwin)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.SndLimTimeCwnd)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.SndLimTimeSnd)
-  AND project = 0
-  AND IS_EXPLICITLY_DEFINED(connection_spec.data_direction)
+  partition_date BETWEEN '2017-01-01' AND '2017-08-28'
   AND connection_spec.data_direction = 1
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.is_last_entry)
-  AND web100_log_entry.is_last_entry = True
   AND web100_log_entry.snap.HCThruOctetsAcked >= 8192
   AND (web100_log_entry.snap.SndLimTimeRwin +
     web100_log_entry.snap.SndLimTimeCwnd +
     web100_log_entry.snap.SndLimTimeSnd) >= 9000000
   AND (web100_log_entry.snap.SndLimTimeRwin +
     web100_log_entry.snap.SndLimTimeCwnd +
-    web100_log_entry.snap.SndLimTimeSnd) < 3600000000
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.CongSignals)
+    web100_log_entry.snap.SndLimTimeSnd) < 600000000
   AND web100_log_entry.snap.CongSignals > 0
-  AND (web100_log_entry.snap.State == 1 OR
+  AND (web100_log_entry.snap.State = 1 OR
     (web100_log_entry.snap.State >= 5 AND
     web100_log_entry.snap.State <= 11))
-  AND blacklist_flags == 0
   LIMIT 100
 ```
 
@@ -110,29 +97,21 @@ Upload throughput is calculated using this formula within the query:
 The complete BigQuery example is:
 
 ```sql
+#standardSQL
 SELECT
  8 * (web100_log_entry.snap.HCThruOctetsReceived/web100_log_entry.snap.Duration) AS upload_Mbps
 FROM
-  [plx.google:m_lab.ndt.all]
+  `measurement-lab.release.ndt_all`
 WHERE
   connection_spec.client_geolocation.country_code = 'US'
-  AND web100_log_entry.log_time >= PARSE_UTC_USEC('2017-01-01 00:00:00') / POW(10, 6)
-  AND web100_log_entry.log_time < PARSE_UTC_USEC('2017-01-02 00:00:00') / POW(10, 6)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.connection_spec.remote_ip)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.connection_spec.local_ip)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.HCThruOctetsReceived)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.Duration)
-  AND IS_EXPLICITLY_DEFINED(connection_spec.data_direction)
+  AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
   AND connection_spec.data_direction = 0
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.is_last_entry)
-  AND web100_log_entry.is_last_entry = True
   AND web100_log_entry.snap.HCThruOctetsReceived >= 8192
   AND web100_log_entry.snap.Duration >= 9000000
-  AND web100_log_entry.snap.Duration < 3600000000
-  AND (web100_log_entry.snap.State == 1
+  AND web100_log_entry.snap.Duration < 600000000
+  AND (web100_log_entry.snap.State = 1
       OR (web100_log_entry.snap.State >= 5
       AND web100_log_entry.snap.State <= 11))
-  AND blacklist_flags == 0
   LIMIT 100
 ```
 
@@ -158,37 +137,25 @@ Given that the NDT server updates the web100 variables `web100_log_entry.snap.Mi
 The complete BigQuery example is:
 
 ```sql
+#standardSQL
 SELECT
   web100_log_entry.snap.MinRTT AS min_rtt
 FROM
-  [plx.google:m_lab.ndt.all]
+  `measurement-lab.release.ndt_all`
 WHERE
   connection_spec.client_geolocation.country_code = 'US'
-  AND web100_log_entry.log_time >= PARSE_UTC_USEC('2017-01-01 00:00:00') / POW(10, 6)
-  AND web100_log_entry.log_time < PARSE_UTC_USEC('2017-01-02 00:00:00') / POW(10, 6)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.connection_spec.remote_ip)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.connection_spec.local_ip)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.HCThruOctetsAcked)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.SndLimTimeRwin)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.SndLimTimeCwnd)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.SndLimTimeSnd)
-  AND IS_EXPLICITLY_DEFINED(connection_spec.data_direction)
+  AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
   AND connection_spec.data_direction = 1
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.is_last_entry)
-  AND web100_log_entry.is_last_entry = True
   AND web100_log_entry.snap.HCThruOctetsAcked >= 8192
   AND (web100_log_entry.snap.SndLimTimeRwin +
        web100_log_entry.snap.SndLimTimeCwnd +
        web100_log_entry.snap.SndLimTimeSnd) >= 9000000
   AND (web100_log_entry.snap.SndLimTimeRwin +
        web100_log_entry.snap.SndLimTimeCwnd +
-       web100_log_entry.snap.SndLimTimeSnd) < 3600000000
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.MinRTT)
-  AND IS_EXPLICITLY_DEFINED(web100_log_entry.snap.CountRTT)
+       web100_log_entry.snap.SndLimTimeSnd) < 600000000
   AND web100_log_entry.snap.CountRTT > 10
-  AND (web100_log_entry.snap.State == 1
+  AND (web100_log_entry.snap.State = 1
        OR (web100_log_entry.snap.State >= 5
        AND web100_log_entry.snap.State <= 11))
-  AND blacklist_flags == 0
   LIMIT 100
 ```
