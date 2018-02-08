@@ -36,7 +36,7 @@ Four _storage and processing datasets_ are published for each release, beginning
   * Contains exact copies of the data stored in our previous NDT fast tables, for use in the intermediate and release views.
   * Also includes legacy Sidestream and Paris Traceroute tables.
 
-## Recommended Datasets for Most Researcher Queries
+## Recommended Datasets and Views for Most Researcher Queries
 
 The datasets in the previous section outline where raw M-Lab test data is parsed and stored. While they are also queryable in the above locations, M-Lab recommends that most researchers instead begin querying the views published in our **release** dataset. This will make future table schema transitions less impactful since queries can be pinned to the release views instead of to a specific table name.
  
@@ -46,15 +46,15 @@ Three _researcher query datasets_ are published for each new release:
   * Beta test version of the next release of views.
   * These views represent the most recent _release-candidate_.
  
-* **rc_vX_X**
+* **rc_vX_Y_Z**
   * Recent stable releases.
  
 * **release**
   * An alias to current supported release.
   * This is the set of views that most people should use.
   * These views are updated to include any refinements to the recommended filtering, and may include changes to the schema over time.
- 
-Beginning with the upcoming v3.1 release, in the **rc**, **rc_vX_X**, and **release** datasets we will publish the following views:
+
+Beginning with the upcoming v3.1 release, in the **rc**, **rc_vX_Y_Z**, and **release** datasets we will publish the following views:
  
 * _ndt_all_
 * _ndt_all_legacysql_
@@ -62,7 +62,7 @@ Beginning with the upcoming v3.1 release, in the **rc**, **rc_vX_X**, and **rele
 * _ndt_downloads_legacysql_
 * _ndt_uploads_
 * _ndt_uploads_legacysql_
- 
+
 The views above ending in `_legacysql` require you to use [legacySQL](https://cloud.google.com/bigquery/docs/reference/legacy-sql) queries, and those labeled without it `(standardSQL)` require you the use of [standardSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/) queries. Additionally, the views which include '_uploads_' or '_downloads_' provide a subset of NDT data that are valid, completed tests which meet the criteria described on our page, [Calculating Common Metrics](https://www.measurementlab.net/data/docs/bq/ndtmetrics/). We highly recommend using standardSQL as this will be required to query all M-Lab tables in the future.
  
 Researchers interested in querying unfiltered NDT data should use the table in the **base_tables** dataset. Sidestream and Paris Traceroute tables will also be added to the **base_tables** dataset in the coming weeks:
@@ -71,21 +71,21 @@ Researchers interested in querying unfiltered NDT data should use the table in t
   * ndt - `measurement-lab.base_tables.ndt`
   * _sidestream - `measurement-lab.base_tables.sidestream`_
   * _traceroute - `measurement-lab.base_tables.traceroute`_
- 
+
 ## Summary of BigQuery Tables (v3.1)
- 
+
 The current version of M-Lab BigQuery tables is v3.1, and are listed below. Tables are **bolded** and table views are listed underneath where applicable.
- 
+
 ### Base Tables for Historical and Current Data
- 
+
 * **[measurement-lab.legacy.ndt](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt)** (data ~ 2015-01-01 - 2017-05-10)
 * **[measurement-lab.legacy.ndt_pre2015](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt_pre2015)** (data ~ 2009-02-18 - 2014-12-31)
 * **[measurement-lab.base_tables.ndt](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.ndt)**
 * **[measurement-lab.base_tables.sidestream](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.sidestream)**
 * **[measurement-lab.base_tables.traceroute](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.traceroute)**
- 
-### Recommended Datasets Views for Research Queries
- 
+
+### Recommended Datasets and Views for Research Queries
+
 * **[measurement-lab.rc](https://bigquery.cloud.google.com/dataset/measurement-lab:rc)**
 * **[measurement-lab.rc_v3_1](https://bigquery.cloud.google.com/dataset/measurement-lab:rc_v3_1)**
 * **[measurement-lab.release](https://bigquery.cloud.google.com/dataset/measurement-lab:release)**
@@ -95,13 +95,13 @@ The current version of M-Lab BigQuery tables is v3.1, and are listed below. Tabl
   * [_measurement-lab.release.ndt_downloads_legacysql_](https://bigquery.cloud.google.com/table/measurement-lab:release.ndt_downloads_legacysql)
   * [_measurement-lab.release.ndt_uploads_](https://bigquery.cloud.google.com/table/measurement-lab:release.ndt_uploads)
   * [_measurement-lab.release.ndt_uploads_legacysql_](https://bigquery.cloud.google.com/table/measurement-lab:release.ndt_uploads_legacysql)
- 
+
 If you have queries that reference historical M-Lab tables, please review [Migrating Queries]({{ site.baseurl }}/data/docs/bq/legacymigration/) to learn how to convert them to use M-Lab's **release** views.
- 
+
 Please also review the table/view schema version history and changelog at the end of this page for more information.
- 
+
 ## Equivalent BigQuery and Web100 Field Types
- 
+
 [tcp-kis.txt](https://cloud.google.com/bigquery/docs/tcp-kis.txt){:target="_blank"} defines each Web100 variable with a specific [SNMP type](http://tools.ietf.org/html/rfc4898){:target="_blank"}. This table shows how to map each SNMP type to a BigQuery type.
 
 <div class="table-responsive" markdown="1">
@@ -114,13 +114,17 @@ Please also review the table/view schema version history and changelog at the en
 
 </div>
 
-The ```anomalies.blacklist_flags``` field was used to mark test affected by the "switch discard issue" identified in 2015-2016. M-Lab may use the field for other use cases in the future for tests potentially impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test.
+## Blacklist Flags Field
+
+The field `blacklist_flags` was used to mark test affected by the "switch discard issue" [identified in 2015-2016]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement). M-Lab NDT data from 2010-01-01 to 2015-10-02 was marked using this field. M-Lab may use the field for other use cases in the future for tests potentially impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test.
+
+In the NDT v3.1 schema, we have added a sub-record, `anomalies`, which contains an equivalent field, `anomalies.blacklist_flags`.
  
-Currently, the following values are present in our data in this field:
+Currently, the following values are present in NDT data from 2010-01-01 to 2015-10-02 in these fields:
  
 | Field Name | Value | Description |
 | ---------- | ----- | ----------- |
-| `blacklist_flags` | `0` or `NULL` | unaffected tests |
+| `blacklist_flags` or `anomalies.blacklist_flags` | `0` or `NULL` | unaffected tests |
 | | `1` | tests affected by switch discards |
 | | `2` | tests not shown to be unaffected by switch discards |
 
@@ -129,13 +133,13 @@ All views in the `release` dataset limit to tests where `blacklist_flags` is `0`
 ## Table Schemas (v3.1)
 
 The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note that the schemas for **release** views of NDT are largely the same as listed below with the exception of the date partition field.
- 
-### NDT `measurement-lab.base_tables.ndt`
- 
+
+### NDT - measurement-lab.base_tables.ndt
+
 <div class="table-responsive" markdown="1">
- 
+
 | Field name                                           |     Type     |  Description                              |
-| :----------------------------------------------------|:------------:|:------------------------------------------|
+|:----------------------------------------------------|:------------:|:------------------------------------------:|
 | `_PARTITIONTIME`                                    | `timestamp`  |  This pseudo column contains a timestamp for the start of the day (in UTC) in which the data was loaded. For the YYYYMMDD partition, this pseudo column will contain the value TIMESTAMP('YYYY-MM-DD'). |
 | `test_id`                                           |  `string`    |  ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20090819T02:01:04.507508000Z_189.6.232.77:3859.c2s_snaplog.gz`). |
 | `task_filename`                                      | `string`     |  The raw data file in Google Cloud Storage from which the test row was parsed. |
@@ -149,14 +153,12 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `anomalies.blacklist_flags`                          | `integer` | Used to mark test results that could be impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test. |
 | `connection_spec`                                   | `record`    | Sub-record section containing fields describing the client which initiated a test and the M-Lab server through which the test was conducted. |
 | `connection_spec.client_af`                          | `integer`   |  Address family of the client's IP address. (This field is **optional**.) |
- 
 | `connection_spec.client_application`                 | `string`    |  Client application that ran the test. (This field is **optional**.) |
 | `connection_spec.client_browser`                     | `string`    |  Client's browser. (This field is **optional**.) |
 | `connection_spec.client_hostname`                    | `string`    |  Client's hostname. (This field is **optional**.) |
 | `connection_spec.client_ip`                          | `string`    |  IP address of the user's client. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.remote_ip`.) |
 | `connection_spec.client_kernel_version`              | `string`    |  Client's kernel version. (This field is **optional**.) |
 | `connection_spec.client_os`                          | `string`    |  Client's operating system. (This field is **optional**.) |
- 
 | `connection_spec.client_version`                     | `string`    |  Client's version. (This field is **optional**.) |
 | `connection_spec.data_direction`                     | `integer` |  Direction of the data sent during the test:<br>CLIENT_TO_SERVER = `0`<br>SERVER_TO_CLIENT = `1` |
 | `connection_spec.server_af`                          | `integer` |  Address family of the server's IP address. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.local_af`.) |
@@ -311,13 +313,13 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `web100_log_entry.snap.X_dbg4`                       | `integer` |                                        |
 | `web100_log_entry.snap.X_rcv_ssthresh`               | `integer` |                                        |
 | `web100_log_entry.snap.X_wnd_clamp`                  | `integer` |                                        |
- 
+
 </div>
- 
-### Sidestream `measurement-lab.base_tables.sidestream`
- 
+
+### Sidestream - measurement-lab.base_tables.sidestream
+
 <div class="table-responsive" markdown="1">
- 
+
 | Field name                                           |     Type     |  Description                              |
 | :----------------------------------------------------|:------------:|:------------------------------------------|
 | `_PARTITIONTIME`                                    | `timestamp`  |  This pseudo column contains a timestamp for the start of the day (in UTC) in which the data was loaded. For the YYYYMMDD partition, this pseudo column will contain the value TIMESTAMP('YYYY-MM-DD'). |
@@ -505,13 +507,13 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `web100_log_entry.snap.X_wnd_clamp` | `integer` |                                        |
 | `web100_log_entry.snap.ZeroRwinRcvd` | `integer` |                                        |
 | `web100_log_entry.snap.ZeroRwinSent` | `integer` |                                        |
- 
+
 </div>
- 
-### Paris Traceroute `measurement-lab.base_tables.traceroute`
- 
+
+### Paris Traceroute measurement-lab.base_tables.traceroute
+
 <div class="table-responsive" markdown="1">
- 
+
 | Field name                                           |     Type     |  Description                              |
 | :----------------------------------------------------|:------------:|:------------------------------------------|
 | `_PARTITIONTIME`                                    | `timestamp`  |  This pseudo column contains a timestamp for the start of the day (in UTC) in which the data was loaded. For the YYYYMMDD partition, this pseudo column will contain the value TIMESTAMP('YYYY-MM-DD'). |
@@ -540,8 +542,6 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `connection_spec.client_geolocation.latitude` | `float` |                                        |
 | `connection_spec.client_geolocation.longitude` | `float` |                                        |
 | `connection_spec.client_geolocation.metro_code` | `integer` |                                        |
- 
- 
 | `connection_spec.client_geolocation.postal_code` | `string` |                                        |
 | `connection_spec.client_geolocation.region` | `string` |                                        |
 | `connection_spec.server_geolocation.area_code` | `integer` |                                        |
@@ -553,8 +553,6 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `connection_spec.server_geolocation.latitude` | `float` |                                        |
 | `connection_spec.server_geolocation.longitude` | `float` |                                        |
 | `connection_spec.server_geolocation.metro_code` | `integer` |                                        |
- 
- 
 | `connection_spec.server_geolocation.postal_code` | `string` |                                        |
 | `connection_spec.server_geolocation.region` | `string` |                                        |
 | `paris_traceroute_hop.protocol` | `string` |                                        |
@@ -586,18 +584,18 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `paris_traceroute_hop.dest_geolocation.postal_code` | `string` |                                        |
 | `paris_traceroute_hop.dest_geolocation.region` | `string` |                                        |
 | `paris_traceroute_hop.dest_geolocation.rtt` | `float (repeated)` |                                        |
- 
+
 </div>
- 
+
 ## M-Lab BigQuery Schema/Table Version History and Changelog
- 
+
 **v1 - January 2009**
- 
+
 * Initial publication of m_lab monthly tables containing data for NDT, NPAD, Paris Traceroute, and Sidestream
   * `plx.google:m_lab.YYYY_MM.all`
- 
+
 **v2 - March 2016**
- 
+
 * Began the publication of per project "fast tables" for NDT, NPAD, Paris Traceroute, and Sidestream.
   * `plx.google:m_lab.ndt.all`
   * `plx.google:m_lab.npad.all`
@@ -608,25 +606,25 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
   * `project`
   * `web100_log_entry.is_last_entry`
   * `web100_log_entry.group_name`
- 
+
 **v2.1 - November 2016**
- 
-* The field `blacklist_flags` was added to v2 per project "fast tables", and all historical data was re-parsed to add this annotation, due to a [switch discard issue related to traffic microbursts]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement/).
- 
+
+* The field `blacklist_flags` was added to v2 per project "fast tables", and  historical data from 201001-01 to 2015-10-02 was re-parsed to add this annotation, due to a [switch discard issue related to traffic microbursts]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement/).
+
 **v3 - May 2017**
- 
+
 * Began publication to new date partitioned table and updated schema to support the new, open source, ETL pipeline.
 * Data publication to v2 tables stopped at this time.
- 
+
 **v3.0.1 - October / November 2017**
- 
+
 * The schema for v3.0.1 tables was updated, removing an alpha feature called deltas, which attempted to log the differences between test snaplogs instead of the final test values. This feature will be revisited in future schema updates.
 * Newly released data annotation engine added geolocation and some metadata to tests from 2016 to present.
 * Published a series of beta BigQuery views for NDT data,  to allow data queries across both v2 and v3.0.x tables.
 * Published traceroute and sidestream table to replace v2 versions, migrated data, re-annotated data.
- 
+
 **v3.0.2 - December 2017**
- 
+
 * Standardized the naming scheme for BigQuery table and view names to be consistent with new semantic versioning.
 * All tables and views must be queried using StandardSQL, except for views with “legacysql” in the name.
 * Views for tests other than NDT may be published in the future using the same format:
@@ -636,19 +634,17 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 * Views will be published concurrently with new table schemas, such that all table versions will have corresponding views.
 * Previous versions of our tables will be referenced by versions 1.0, 2.0, etc. in our documentation but actual table names will not be changed.
 * Re-ran historical annotations for traceroute, npad, and sidestream data due to a bug where some geolocation annotations was not present in all past test data.
- 
-**v3.1 - January 2018**
+
+**v3.1 - February 2018**
 
 * First official release of v3 tables, with all historical data re-parsed, and annotated with geolocation metadata.
- 
+
 Published **tables** and views are:
- 
+
 * **measurement-lab.legacy.ndt** (data ~ 2015-01-01 - 2017-05-10)
 * **measurement-lab.legacy.ndt_pre2015** (data ~ 2009-02-18 - 2014-12-31)
 * **measurement-lab.base_tables.ndt**
-* **measurement-lab.base_tables.sidestream**
-* **measurement-lab.base_tables.traceroute**
- 
+
 * **measurement-lab.rc**
 * **measurement-lab.release_v3_1**
 * **measurement-lab.release**
@@ -658,3 +654,15 @@ Published **tables** and views are:
   * _measurement-lab.release.ndt_downloads_legacysql_
   * _measurement-lab.release.ndt_uploads_
   * _measurement-lab.release.ndt_uploads_legacysql_
+
+## Planned Additions/Enhancements for Future Releases
+
+* Begin publishing new Sidestream and Paris Traceroute data to tables in the `base_tables` dataset:
+  * **measurement-lab.base_tables.sidestream**
+  * **measurement-lab.base_tables.traceroute**
+* Publish `release` BigQuery Views for Sidestream and Paris Traceroute
+* Publish Sidestream and Paris Traceroute collected prior to the switch to `base_tables` in the `legacy` dataset
+  * **measurement-lab.legacy.sidestream**
+  * **measurement-lab.legacy.traceroute**
+* Move historical NPAD data into the `legacy` dataset
+  * **measurement-lab.legacy.npad**

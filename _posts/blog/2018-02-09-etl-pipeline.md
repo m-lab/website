@@ -42,7 +42,7 @@ With this upcoming release, M-Lab will publish more datasets, tables, and views.
 
 Four _storage and processing datasets_ will be published beginning with the v3.1 release:
 
-* ** base_tables**
+* **base_tables**
   * Contains the new raw NDT table
   * Sidestream and Paris Traceroute tables will be added soon
   * This dataset will eventually hold all M-Lab data, from 2009 to present
@@ -63,7 +63,7 @@ Four _storage and processing datasets_ will be published beginning with the v3.1
 
 Researchers interested in querying unfiltered NDT data should use the **base_tables**. Sidestream and Paris Traceroute tables will also be added to the **base_tables** dataset in the coming weeks:
 
-* ** base_tables**
+* **base_tables**
   * ndt - `measurement-lab.base_tables.ndt`
   * _sidestream - `measurement-lab.base_tables.sidestream`_
   * _traceroute - `measurement-lab.base_tables.traceroute`_
@@ -89,7 +89,7 @@ To help researchers during this transition, and for future schema/table changes,
 
 M-Lab recommends using the **release** dataset for most people. This will make future table schema transitions less impactful since queries can be pinned to the release views instead of to a specific table name
 
-Beginning with the upcoming v3.1 release, in the **rc**, **release_vX_X**, and **release** datasets we will publish the following views:
+Beginning with the upcoming v3.1 release, in the **rc**, **release_vX_Y_Z**, and **release** datasets we will publish the following views:
 
 * _ndt_all_
 * _ndt_all_legacysql_

@@ -36,7 +36,7 @@ Try the following query as an example:
 ~~~sql
 #standardSQL
 -- Calculate how many NDT tests were performed per day since M-Lab began.
- 
+
 SELECT
   partition_date AS day,
   COUNT(test_id) AS num_tests
@@ -85,8 +85,3 @@ If you are new to BigQuery, we suggest that you next consult the following resou
 Given the resources and expertise, you can develop your own application that uses M-Lab data. To learn more about building a custom application, refer to the [Google Cloud Platform Console documentation](https://cloud.google.com/docs/){:target="_blank"}
 
 **Telescope** is an example of an application that M-Lab developed that uses the BigQuery Python API to download M-Lab data. Telescope is available from M-Lab on [Github](https://github.com/m-lab/telescope){:target="_blank"}.
-
-## Further Reading
-
-* [BigQuery Examples]({{ site.baseurl }}/data/docs/bq/examples)
-* [BigQuery Schema]({{ site.baseurl }}/data/docs/bq/schema)

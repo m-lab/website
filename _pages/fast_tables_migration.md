@@ -8,42 +8,42 @@ breadcrumb: data
 # Migrating to Current M-Lab Tables and Views
 
 In March 2016, M-Lab launched new M-Lab BigQuery Fast tables which offered faster performance and a simpler data schema than the previous per-month legacy tables. In late 2017 to early 2018, M-Lab transitioned to new BigQuery tables as a part of updating to an open-source pipeline.
- 
+
 This guide walks users through the process of converting BigQuery SQL queries from **Legacy Monthly** or **Fast Tables** to take advantage of the new features of our most current tables and views. For reference, our past tables were stored in a special project `plx.google` and had the structure below:
- 
-* Fast Tables - Example: plx.google:m_lab.<TEST NAME>.all
-* Legacy Monthly Tables - Example: plx.google:m_lab.2016_01.all
- 
+
+* Fast Tables - Example: `plx.google:m_lab.<TEST NAME>.all`
+* Legacy Monthly Tables - `Example: plx.google:m_lab.2016_01.all`
+
 ## Release Datasets and Views
- 
+
 M-Lab now publishes a series of three datasets for each version release:
- 
+
 * **rc**
   * Beta test version of the next release of views.
   * These views represent the most recent _release-candidate_.
- 
-* **release_vX_X**
+
+* **release_vX_Y_Z**
   * Recent stable releases.
- 
+
 * **release**
   * An alias to current supported release.
   * This is the set of views that most people should use.
- 
+
 M-Lab recommends using the **release** dataset for querying NDT data. This will make future table schema transitions less impactful since queries can be pinned to the release views instead of to a specific table name.
- 
-Beginning with the upcoming v3.1 release, in the **rc**, **release_vX_X**, and **release** datasets we will publish the following views:
- 
+
+Beginning with the upcoming v3.1 release, in the **rc**, **release_vX_Y_Z**, and **release** datasets we will publish the following views:
+
 * _ndt_all_
 * _ndt_all_legacysql_
 * _ndt_downloads_
 * _ndt_downloads_legacysql_
 * _ndt_uploads_
 * _ndt_uploads_legacysql_
- 
+
 The views above ending in `_legacysql` require you to use [legacySQL](https://cloud.google.com/bigquery/docs/reference/legacy-sql) queries, and those labeled without it `(standardSQL)` require you the use of [standardSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/) queries. Additionally, the views which include '_uploads_' or '_downloads_' provide a subset of NDT data that are valid, completed tests which meet the criteria described on our page, [Calculating Common Metrics](https://www.measurementlab.net/data/docs/bq/ndtmetrics/). M-Lab highly recommends using standardSQL as this will be required to query all M-Lab tables in the future.
- 
+
 ## Sidestream and Paris Traceroute
- 
+
 If your queries are for Sidestream and Paris Traceroute data, please use the following tables:
 
 * `plx.google.m_lab.sidestream.all`
@@ -53,11 +53,11 @@ Please note that Sidestream and Paris Traceroute data will eventually be publish
 
 * `measurement-lab:base_tables.sidestream`
 * `measurement-lab:base_tables.traceroute`
- 
+
 ## Converting Queries from Legacy Montly or Fast Tables to M-Lab's **release** Views
- 
+
 The converted examples below are written in standardSQL, indicated by `#standardSQL` at the top of the code block for full example queries. If you are querying using the [BigQuery website](https://bigquery.cloud.google.com/dataset/measurement-lab:release) M-Lab recommends adding `#standardSQL` at the top of your queries to set SQL Dialect option.
- 
+
 If your query uses the Legacy Monthly tables, the **FROM** portion of the query will look something like this:
 
 ~~~sql
@@ -82,7 +82,7 @@ FROM
 ~~~
 
 Note that there are multiple **release** views for your use, and provide the filtered results as described below:
- 
+
 * `measurement-lab.release.ndt_all`
   * all NDT data where `blacklist_flags` = 0 or NULL
   * StandardSQL syntax required.

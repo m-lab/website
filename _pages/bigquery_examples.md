@@ -60,15 +60,12 @@ ORDER BY
 | ...         |         ... |
 | 2018-01-24  |      379663 |
 | 2018-01-25  |      189486 |
-+-------------+-------------+
 
 ## Dealing with IP Addresses: How Many Users from Distinct Subnets?
 
 BigQuery supports various functions to parse IP addresses in different formats. You can use such functions to aggregate the number of users per subnet and to compute how many subnets have ever initiated a test.
 
-The query that follows aggregates the client IP addresses into /24s and counts the number of unique /24s that have ever initiated at least one NDT test.
-
-`PARSE_IP(remote_ip) & INTEGER(POW(2, 32) - POW(2, 32 - 24))` computes a [bit-wise](https://en.wikipedia.org/wiki/Bitwise_operation){:target="_blank"} AND between web100_log_entry.connection_spec.remote_ip and 255.255.255.0. The [BigQuery Query Reference](https://cloud.google.com/bigquery/query-reference#ipfunctions){:target="_blank"} describes the `PARSE_IP` and `FORMAT_IP` functions.
+The query that follows aggregates the client IP addresses into /24s and counts the number of unique /24s that have ever initiated at least one NDT test. Please refer to [BigQuery Query Reference](https://cloud.google.com/bigquery/query-reference){:target="_blank"} for more detail on the functions used in the query below.
 
 We have to distinguish between IPv4 addresses and IPv6 addresses. We do this using the connection_spec.client_af which will be equal to 10 for IPv6 addresses, and 0 or 2 for IPv4 ones.
 
@@ -90,52 +87,19 @@ AS (
     END,
   NULL)
 );
- 
+
 SELECT
   COUNT(DISTINCT computeSubnet(web100_log_entry.connection_spec.remote_ip, connection_spec.client_af)) AS num_subnets
- 
+
 FROM
   `measurement-lab.release.ndt_all`;
 ~~~
 
 **Result**
- 
+
 | num_subnets |
 |-------------|
 | 5234754     |
-+-------------+
-
-## Comparing NDT and NPAD Tests: How Many Users Have Run Both NDT and NPAD tests?
-
-This query computes the number of distinct IP addresses that have run tests using both NDT and NPAD. The inner query (in parentheses beginning with the second SELECT statement) is an inner join between the NDT and NPAD tables containing the rows where the remote IP field in both tables match.
-
-The outer query simply counts the number of results from the inner query (i.e., the number of rows with matching remote IP addresses).
-
-~~~sql
-SELECT
-  COUNT(*) AS num_ip_addresses
-FROM
-  (
-  SELECT
-    npad.web100_log_entry.connection_spec.remote_ip,
-  FROM
-    plx.google:m_lab.npad.all AS npad
-  JOIN
-    plx.google:m_lab.npad.all AS ndt
-  ON
-    (npad.web100_log_entry.connection_spec.remote_ip =
-     ndt.web100_log_entry.connection_spec.remote_ip)
-  GROUP BY
-    npad.web100_log_entry.connection_spec.remote_ip
-  )
-~~~
-
-**Result**
-
-|num_ip_addresses|
-|----------------|
-|           74535|
-+----------------+
 
 ## Computing Distributions of Tests Across Users: How Many Users Have Run a Certain Number of Tests?
 
@@ -153,7 +117,6 @@ SELECT
 FROM
   (
   SELECT COUNT(*) AS num_tests,
- 
     web100_log_entry.connection_spec.remote_ip AS remote_ip
   FROM
     `measurement-lab.release.ndt_all`
@@ -161,7 +124,6 @@ FROM
     partition_date >= '2017-01-01'
     AND partition_date <= '2017-12-31'
   GROUP BY remote_ip
- 
   )
 GROUP BY
   num_tests
@@ -170,7 +132,7 @@ ORDER BY
 ~~~
 
 **Result**
- 
+
 |num_tests|num_clients|
 |---------|-----------|
 | 1       | 2475002   |
@@ -180,4 +142,3 @@ ORDER BY
 | 30941   | 1         |
 | 109399  | 1         |
 | 339105  | 1         |
-+---------+-----------+
