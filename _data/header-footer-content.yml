@@ -62,9 +62,9 @@ header:
         - text: "Learning Resources"
           url:  "/learn/"
         - text: "How the Internet Works"
-          url:  "/learn/#how-the-internet-works"
+          url:  "/learn/m-lab-internet-topology"
         - text: "Definitions of Terms"
-          url:  "/learn/#definitions-of-terms"
+          url:  "/learn/definitions"
     -
       title: "contribute"
       sub-nav:
