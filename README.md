@@ -14,7 +14,8 @@ Whether you're using the Vagrant VM or your local machines, there are a number o
 
 * [Install and configure Git for your operating system](https://git-scm.com/downloads)
 * [Create a fork of m-lab.github.io on your Github account](https://github.com/m-lab/m-lab.github.io#fork-destination-box)
-* Clone your fork to your local machine: `git clone --recursive git@github.com:<your Github username>/m-lab.github.io.git`
+* Clone your fork to your local machine:
+`git clone --recursive git@github.com:<your Github username>/m-lab.github.io.git`
 * Enter the cloned fork directory, add the upstream remote, and setup the M-Lab pre-commit hooks:
 
 ```shell
@@ -38,7 +39,7 @@ To use the Vagrant VM, continue reading the next section.
 
 When using the Vagrant VM to build, preview, and test changes to the site, a developer will have at least two terminal windows open in addition to a text editor such as Sublime, Atom, etc.:
 
-* _Text editor, to make edits to files
+* _Text editor_, to make edits to files
 * _Terminal #1_, open at the root of the website files on the **host** - used to issue `git` commands, and to push files to the **guest**
 * _Terminal #2_, logged into the **guest** - used to build/rebuild the site, and to serve it for local preview
 
