@@ -6,25 +6,71 @@ Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-l
 
 ## Local Development
 
-**Please Note** This repository contains a submodule, so after cloning this repo, you will also need to run `git submodule init` and `git submodule update` to pull down the submodule files as well.
+Developing new content or features for this site with the ability to build, run, and preview changes locally requires [Jekyll](https://jekyllrb.com/) and associated dependencies. We provide a virtual machine definition using [Vagrant](https://www.vagrantup.com/) for local development, which standardizes a development environment. From this point forward, when discussing use of the Vagrant VM we will refer to the **host** as your development computer and to the **guest** as the Vagrant VM.
 
-1. Install dependencies `bundle install`
-2. Run Jekyll server to preview in development mode `bundle exec jekyll serve`.
-3. View the generated site by going to [http://localhost:4000/](http://localhost:4000/)
+Using the Vagrant VM is useful for development to provide a means of building the site and serving it locally for preview, all within a standardized and portable environment. You can also install Jekyll, etc. directly on your machine if preferred.
 
-### Pre-commit Hook
+Whether you're using the Vagrant VM or your local machines, there are a number of steps that are similar: you will need to fork the M-Lab website code, clone it to your computer, and configure pre-commit hooks:
 
-Developers should also install the pre-commit hook that comes packaged with this repository that will alert about any trailing whitespaces to minimize git diff noise.  In order to install the pre-commit hook, run the following commands to create a symbolic link:
+* [Install and configure Git for your operating system](https://git-scm.com/downloads)
+* [Create a fork of m-lab.github.io on your Github account](https://github.com/m-lab/m-lab.github.io#fork-destination-box)
+* Clone your fork to your local machine: `git clone --recursive git@github.com:<your Github username>/m-lab.github.io.git`
+* Enter the cloned fork directory, add the upstream remote, and setup the M-Lab pre-commit hooks:
 
 ```shell
+cd m-lab.github.io
+git remote add upstream git@github.com:m-lab/m-lab.github.io.git
 rm -rf .git/hooks/
 cd .git/
 ln -s -f ../_hooks hooks
+cd ../
 ```
 
-### HTML Compression
+If you're not using the Vagrant VM, you can proceed with development locally. To build the site and preview locally:
 
-This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the `layout: compress` from the default template in the _layouts folder.
+1. Install dependencies `bundle install`
+2. Run Jekyll server to preview in development mode `bundle exec jekyll serve --baseurl=`.
+3. View the generated site by going to [http://localhost:4000/](http://localhost:4000/)
+
+To use the Vagrant VM, continue reading the next section.
+
+### VM Configuration Notes and Development Practice
+
+When using the Vagrant VM to build, preview, and test changes to the site, a developer will have at least two terminal windows open in addition to a text editor such as Sublime, Atom, etc.:
+
+* _Text editor, to make edits to files
+* _Terminal #1_, open at the root of the website files on the **host** - used to issue `git` commands, and to push files to the **guest**
+* _Terminal #2_, logged into the **guest** - used to build/rebuild the site, and to serve it for local preview
+
+The **guest** is configured with a private static IP address, `192.168.99.2`. This is the address we'll use to preview the website once Jekyll is serving it. If your network uses this address range, it would be advisable to change this IP in `Vagrantfile`.
+
+#### Setup the Vagrant-based VM:
+
+* [Install Vagrant for your operating system](https://www.vagrantup.com/downloads.html)
+* [Install Virtualbox for your operating system](https://www.virtualbox.org/wiki/Downloads)
+* Open _Terminal #1_ and install the Vagrant SCP plugin: `vagrant plugin install vagrant-scp`
+* Change into the cloned fork, and create the VM: `vagrant up`
+
+#### Build, serve, and watch the website from the **guest**:
+
+* Open _Terminal #2_ and log into the VM using the command `vagrant ssh` and change into the `mlab-website` folder: `cd mlab-website`.
+* Build and serve the website: `bundle exec jekyll serve --incremental --host 0.0.0.0 --baseurl=`
+* The site will now be accessible from your **host machine** at: [http://192.168.99.2:4000](http://192.168.99.2:4000). Press Ctrl-C within the **guest** to stop Jekyll from serving.
+
+#### Making and Previewing Changes
+
+You can make updates to the site code in your favorite _text editor_ on your **host machine**. Normally, saving a file within the website directory will trigger Jekyll to rebuild pages affected by that edit. However, due to a [bug with Vagrant's "synced folders" in virtualbox](https://www.vagrantup.com/docs/synced-folders/virtualbox.html) the Jekyll server in the **guest** does not automatically rebuild files that have been modified in the **host**.
+
+To update the site being served in your **guest** with the changes you made on the **host**, use `vagrant scp` from the root of your website folder to push changes to the appropriate location.
+
+For example, if a change was made to `_pages/contact.md`, us this command to push the file to the **guest** filesystem: `vagrant scp _pages/contact.md :mlab-website/_pages/`
+
+The above assumes one Vagrant VM installed on your system. If you have more than one VM installed, use this format:
+`vagrant scp abc.txt [vm name]:destFile.txt`.
+
+#### All things git
+
+Perform all `git` commands such as committing changes, changing branches, etc. in _Terminal #1_ on your **host**
 
 ## Site Structure
 
@@ -43,6 +89,10 @@ This site enables HTML Compression for optimizing performance.  If it is desired
 | js | Contains the js libraries for the project. |
 | images | Contains all the image files for the site. |
 | publications | Contains all the pdfs and docs that the site links to. |
+
+## HTML Compression
+
+This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the `layout: compress` from the default template in the _layouts folder.
 
 ## Page Redirects
 

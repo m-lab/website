@@ -39,13 +39,14 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "./mlab-website", "/home/vagrant/mlab-website"
+  config.vm.synced_folder "./", "/home/vagrant/mlab-website", type: "virtualbox"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
+     vb.name = "mlab-website"
   #   # Display the VirtualBox GUI when booting the machine
   #   vb.gui = true
   #
@@ -62,7 +63,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
      apt update
      apt install -y git jekyll ruby-dev gcc g++ make libgmp-dev build-essential patch ruby-dev zlib1g-dev liblzma-dev
-     cd /home/vagrant/mlab-website/m-lab.github.io
+     cd /home/vagrant/mlab-website
      gem install bundler
      bundle update
      bundle install
