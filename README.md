@@ -6,13 +6,13 @@ Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-l
 
 ## Local Development
 
-Developing new content or features for this site with the ability to build, run, and preview changes locally requires [Jekyll](https://jekyllrb.com/) and associated dependencies. We provide a virtual machine definition using [Vagrant](https://www.vagrantup.com/) for local development, which standardizes a development environment. From this point forward, when discussing use of the Vagrant VM we will refer to the **host** as your development computer and to the **guest** as the Vagrant VM.
+Building, running, and previewing changes to this website locally requires [Jekyll](https://jekyllrb.com/) and associated dependencies. We provide a virtual machine definition using [Vagrant](https://www.vagrantup.com/) to standardize the development environment across platforms. From this point forward, when discussing use of the Vagrant VM we will refer to the **host** as your development computer and to the **guest** as the Vagrant VM. You can also install Jekyll, etc. directly on your machine if preferred.
 
-Using the Vagrant VM is useful for development to provide a means of building the site and serving it locally for preview, all within a standardized and portable environment. You can also install Jekyll, etc. directly on your machine if preferred.
+### Common Setup Steps
 
-Whether you're using the Vagrant VM or your local machines, there are a number of steps that are similar: you will need to fork the M-Lab website code, clone it to your computer, and configure pre-commit hooks:
+Whether you're using the Vagrant VM or your local machines, there are a number of steps that are similar:
 
-* [Install and configure Git for your operating system](https://git-scm.com/downloads)
+* [Install and configure Git for your operating system](https://git-scm.com/downloads) and create an account on [Github](https://github.com/). Your account must also be authorized to push code to M-Lab repositories.
 * [Create a fork of m-lab.github.io on your Github account](https://github.com/m-lab/m-lab.github.io#fork-destination-box)
 * Clone your fork to your local machine:
 `git clone --recursive git@github.com:<your Github username>/m-lab.github.io.git`
@@ -37,11 +37,12 @@ To use the Vagrant VM, continue reading the next section.
 
 ### VM Configuration Notes and Development Practice
 
-When using the Vagrant VM to build, preview, and test changes to the site, a developer will have at least two terminal windows open in addition to a text editor such as Sublime, Atom, etc.:
+When using the Vagrant VM to build, preview, and test changes to the site, a developer will have a few windows open:
 
 * _Text editor_, to make edits to files
-* _Terminal #1_, open at the root of the website files on the **host** - used to issue `git` commands, and to push files to the **guest**
-* _Terminal #2_, logged into the **guest** - used to build/rebuild the site, and to serve it for local preview
+* _Terminal #1_, open at the root of the website files on the **host**; used to issue `git` commands, and to push files to the **guest**
+* _Terminal #2_, logged into the **guest**; used to build/rebuild the site, and to serve it for local preview
+* _Web browser_, to preview the site locally, being served by Jekyll
 
 The **guest** is configured with a private static IP address, `192.168.99.2`. This is the address we'll use to preview the website once Jekyll is serving it. If your network uses this address range, it would be advisable to change this IP in `Vagrantfile`.
 
@@ -67,11 +68,11 @@ To update the site being served in your **guest** with the changes you made on t
 For example, if a change was made to `_pages/contact.md`, us this command to push the file to the **guest** filesystem: `vagrant scp _pages/contact.md :mlab-website/_pages/`
 
 The above assumes one Vagrant VM installed on your system. If you have more than one VM installed, use this format:
-`vagrant scp abc.txt [vm name]:destFile.txt`.
+`vagrant scp _pages/contact.md [vm name]:mlab-website/_pages/`.
 
 #### All things git
 
-Perform all `git` commands such as committing changes, changing branches, etc. in _Terminal #1_ on your **host**
+Perform all `git` commands such as committing changes, changing branches, etc. in _Terminal #1_ on your **host**.
 
 ## Site Structure
 
