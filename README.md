@@ -56,11 +56,11 @@ The **guest** is configured with a private static IP address, `192.168.99.2`. Th
 
 * Open _Terminal #2_ and log into the VM using the command `vagrant ssh` and change into the `mlab-website` folder: `cd mlab-website`.
 * Build and serve the website: `bundle exec jekyll serve --incremental --host 0.0.0.0 --baseurl=`
-* The site will now be accessible from your **host machine** at: [http://192.168.99.2:4000](http://192.168.99.2:4000). Press Ctrl-C within the **guest** to stop Jekyll from serving.
+* The site will now be accessible from your **host** at: [http://192.168.99.2:4000](http://192.168.99.2:4000). Press Ctrl-C within the **guest** to stop Jekyll from serving.
 
 #### Making and Previewing Changes
 
-You can make updates to the site code in your favorite _text editor_ on your **host machine**. Normally, saving a file within the website directory will trigger Jekyll to rebuild pages affected by that edit. However, due to a [bug with Vagrant's "synced folders" in virtualbox](https://www.vagrantup.com/docs/synced-folders/virtualbox.html) the Jekyll server in the **guest** does not automatically rebuild files that have been modified in the **host**.
+You can make updates to the site code in your favorite _text editor_ on the **host**. Normally, saving a file within the website directory will trigger Jekyll to rebuild pages affected by that edit. However, due to a [bug with Vagrant's "synced folders" in virtualbox](https://www.vagrantup.com/docs/synced-folders/virtualbox.html) the Jekyll server in the **guest** does not automatically rebuild files that have been modified in the **host**.
 
 To update the site being served in your **guest** with the changes you made on the **host**, use `vagrant scp` from the root of your website folder to push changes to the appropriate location.
 
