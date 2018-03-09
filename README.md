@@ -55,7 +55,7 @@ The **guest** is configured with a private static IP address, `192.168.99.2`. Th
 
 #### Build, serve, and watch the website from the **guest**:
 
-* Open _Terminal #2_ and log into the VM using the command `vagrant ssh` and change into the `mlab-website` folder: `cd mlab-website`.
+* Open _Terminal #2_ and navigate to the website directory. Then log into the VM using the command `vagrant ssh` and change into the `mlab-website` folder: `cd mlab-website`.
 * Build and serve the website: `bundle exec jekyll serve --incremental --host 0.0.0.0 --baseurl=`
 * The site will now be accessible from your **host** at: [http://192.168.99.2:4000](http://192.168.99.2:4000). Press Ctrl-C within the **guest** to stop Jekyll from serving.
 
