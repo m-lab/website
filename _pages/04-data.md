@@ -42,6 +42,9 @@ There is typically at least a 24-hour delay between data collection and data pub
 * [Paris Traceroute](https://console.developers.google.com/storage/browser/m-lab/paris-traceroute/){:target="_blank"}
   * Paris Traceroute maps network topology between two points on the Internet.
   * More information is available at [Paris Traceroute](http://www.paris-traceroute.net/){:target="_blank"}
+* [SamKnows](https://www.samknows.com/){:target="_blank"}
+  * The SamKnows performance testing platform is used by the USA's Federal Communications Commission (FCC), European Commission, UK government (Ofcom), Brazilian government (Anatel), Singapore's IDA and other government-backed studies worldwide.
+  * SamKnows infrastructure includes off-net test servers hosted by M-Lab, and the M-Lab and SamKnows teams coordinate regularly to support the various regulatory reporting periods of data collection conducted by SamKnows.
 * [SideStream](https://console.developers.google.com/storage/browser/m-lab/sidestream/){:target="_blank"}
   * SideStream collects TCP state information about completed TCP connections on a system.
   * More information is available on [Github](https://github.com/npad/sidestream){:target="_blank"}.
@@ -57,8 +60,7 @@ There is typically at least a 24-hour delay between data collection and data pub
   * More information is available at [https://code.google.com/p/pathload2-gatech/](https://code.google.com/p/pathload2-gatech/){:target="_blank"}.
 * [ShaperProbe](https://console.developers.google.com/storage/browser/m-lab/shaperprobe/){:target="_blank"} (**deprecated**)
   * **M-Lab no longer supports this tool, but its archived data are available on GCS.**
-  * ShaperProbe detects prioritization of network traffic.
-  * More information is available at [ShaperProbe](http://netinfer.net/diffprobe/shaperprobe.html){:target="_blank"}.
+  * ShaperProbe detected prioritization of network traffic.
 
 ## Data License and Citing M-Lab Data
 
