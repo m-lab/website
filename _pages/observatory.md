@@ -1,6 +1,5 @@
 ---
-layout: observatory
-audience: observatory
+layout: page
 permalink: /observatory/
 title: "Observatory"
 heading: "The M-Lab Observatory has been retired"

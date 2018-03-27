@@ -154,9 +154,6 @@ grid-section:
       - link: "http://pregi.net/"
         image: "preginet_logo.png"
         alt: "PREGINET Logo"
-      - link: "https://www.projectconnect.world/"
-        image: "ProjectConnect_Logo.png"
-        alt: "ProjectConnect Logo"
       - link: "https://reannz.co.nz/"
         image: "reannz.png"
         alt: "REANNZ Logo"
@@ -184,6 +181,9 @@ grid-section:
       - link: "http://www.wide.ad.jp/"
         image: "wide.png"
         alt: "WIDE project Logo"
+      - link: "http://wixi.ai/"
+        image: "wixi_color_mlab_2x.png"
+        alt: "Catalina Labs Logo"
 
 ---
 
