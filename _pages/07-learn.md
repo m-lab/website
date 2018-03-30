@@ -11,7 +11,13 @@ breadcrumb: learn
 
 This section of our site provides educational information about the Internet, M-Lab, and related services, terms and technologies. We also plan to publish tutorials in this section soon.
 
-Listed below are some publicly available resources for learning abou the internet, measurement of the internet, networking, and related topics. If you have a resource that should be in this list, please [contact us](mailto:support@measurementlab.net).
+Listed below are some publicly available resources for learning about the internet, measurement of the internet, networking, and related topics. If you have a resource that should be in this list, please [contact us](mailto:support@measurementlab.net).
+
+## Guides
+{:no-toc}
+
+* [Using Tableau with M-Lab BigQuery Tables]({{ site.baseurl }}/learn/tableau-intro/)
+  * This guide explains how to use the M-Lab BigQuery tables as a data source in your Tableau projects without incurring billing for BigQuery.
 
 ## Public Learning Resources
 {:.no_toc}
