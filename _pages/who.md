@@ -51,7 +51,7 @@ grid-section:
     group-list-class: "l-grid l-3col"
     grid-img-class: " framed is-logo"
     grid-items:
-      - link: "http://www.mpi-sws.org/index.php"
+      - link: "http://www.mpi-sws.org/"
         image: "glasnost.png"
         heading: "Glasnost"
         desc: "Max Planck Institute for Software Systems"

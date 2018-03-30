@@ -11,7 +11,7 @@ NPAD diagnoses a range of common performance issues affecting the [last network 
 
 [Run NPAD](http://mlab-ns.appspot.com/npad?format=redirect)
 
-[Download command-line client](http://www.psc.edu/index.php/npad/finish/112-npad/450-npad-1-5-6){:target="_blank"}
+[Download and compile command-line client](http://mlab-ns.appspot.com/npad?format=redirect){:target="_blank"}
 
 Please cite this data set as follows: **The M-Lab NPAD Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/npad
 
