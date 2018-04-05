@@ -11,9 +11,6 @@ categories:
   - data
 ---
 
-# Making it Easier to Use M-Lab Data
-{% include post-meta.html %}
-
 In January, M-Lab launched a beta test of new BigQuery tables for M-Lab data. Today, M-Lab is pleased to announce that the beta test was successful. The new, faster-performing tables will be M-Lab's new standard BigQuery tables.
 
 Before we move on to specifics, when we say faster performing, we mean a *lot* faster. As in, **certain queries that used to take over 2 hours now complete in 8 seconds**. That means that playing with the data just became a lot more fun.

@@ -9,9 +9,6 @@ categories:
   - paris traceroute
 ---
 
-# Paris Traceroute Brownout
-{% include post-meta.html %}
-
 ## Summary:
 
 In February 2017, M-Lab was notified of issues with the M-Lab data available in BigQuery. Upon investigation, a problem was identified with the Paris Traceroute collection daemon which resulted in a reduction in Paris Traceroute measurements beginning in June 2016. At the peak of the outage, fourth quarter 2016 - January 2017, approximately 5% of NDT tests had an associated Paris Traceroute test. Additionally, an issue within the data processing pipeline resulted in Paris Traceroute data that was measured and collected, not being inserted into the BigQuery tables and therefore available for use.<!--more-->

@@ -9,9 +9,6 @@ categories:
   - visualization
 ---
 
-# Measurement Lab Launches New Global Data Visualization Tools
-{% include post-meta.html %}
-
 The Measurement Lab (M-Lab) global measurement platform contains the largest collection of open internet performance [data]({{ site.baseurl }}/data/) on the planet. [Hundreds of thousands of people (and rising everyday!) test their internet connections](https://viz.measurementlab.net/) on M-Lab and provide that data to the [public domain]({{ site.baseurl }}/data/#data-license-and-citing-m-lab-data) for research, analysis and advocacy. As a consortium of research, industry, and public-interest partners,  M-Lab is dedicated to providing an ecosystem for the open, verifiable measurement of global network performance. With an extensive library of data dating back to 2009, M-Lab has over 5 petabytes of information about quality of experience on the internet contributed by people like you.<!--more-->
 
 ![M-Lab Visualization - Compare Download Speeds in Philippines and Thailand]({{ site.baseurl }}/images/blog/viz-SEasia-compare1.png)

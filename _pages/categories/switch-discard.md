@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: Switch Discard
 permalink: /blog/category/switch-discard/
 archive-name: switch discard

@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: Pipeline
 permalink: /blog/category/pipeline/
 archive-name: pipeline

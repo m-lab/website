@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: DataViz
 permalink: /blog/category/dataviz/
 archive-name: dataviz

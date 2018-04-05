@@ -12,9 +12,6 @@ categories:
   - open source
 ---
 
-# Showing Missing Data in Line Charts
-{% include post-meta.html %}
-
 The M-Lab team has been working with [Bocoup’s Data Visualization](https://bocoup.com/services/datavis) team to overhaul our visualizations and give all of you better support in exploring all of the Measurement Lab data. Look for more about that soon -- and reach out via support@measurementlab.net if you are interested in helping with testing and user feedback!
 
 ![Line Animation GIF](https://static.bocoup.com/blog/showing-missing-data-in-line-charts/feature_image.gif)
