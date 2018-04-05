@@ -22,12 +22,14 @@ function(
         id = $el.attr('id');
         if (id) {
           if ( $('#blog-nav-page').length ) {
-            permalink = $('.blog-entry').attr('id') + "#" + id;
+            permalink = null;
+            return null;
           } else {
-            permalink = "#" + id
-          }
-          return $el.prepend($("<a />").addClass("anchor-link")
+            permalink = "#" + id;
+            return $el.prepend($("<a />").addClass("anchor-link")
             .attr("href", permalink).attr("data-icon", ""));
+          }
+          
         }
       });
 

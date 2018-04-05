@@ -10,9 +10,6 @@ categories:
   - ripe
 ---
 
-# Explore M-Lab's data using the new RIPEstat widgets
-{% include post-meta.html %}
-
 Are you the kind of person who wonders…
 
 {:.circle-list}

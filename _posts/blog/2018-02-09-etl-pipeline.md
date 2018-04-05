@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "New ETL Pipeline, Transition to New BigQuery Tables"
+title: "New ETL Pipeline and Transition to New BigQuery Tables"
 author: "Chris Ritzo"
 date: 2018-02-09
 breadcrumb: blog
@@ -9,9 +9,6 @@ categories:
   - bigquery
   - versioning
 ---
-
-# New ETL Pipeline, Transition to New BigQuery Tables
-{% include post-meta.html %}
 
 Since May 2017, the M-Lab team has been working on an updated, open source pipeline, which pulls raw data from our servers, saves it to Google Cloud Storage, and then parses it into our BigQuery tables. The team is particularly excited about this update because it means that the pipeline no longer relies on closed source libraries.
 <!--more-->

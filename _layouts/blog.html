@@ -12,6 +12,11 @@ layout: default
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 blogroll">
 
           <article class="blog-entry">
+            <h1 id="{{ page.title | downcase | replace: ' ', '-' }}">
+            <a class="anchor-link" href="{{ site.baseurl }}{{ page.url }}#{{ page.title | downcase | replace: ' ', '-' }}" data-icon=""></a>
+              {{ page.title }}
+            </h1>
+            {% include post-meta.html %}
 
             {{ content }}
 

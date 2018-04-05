@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: Data
 permalink: /blog/category/data/
 archive-name: data

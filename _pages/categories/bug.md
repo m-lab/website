@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: bug
 permalink: /blog/category/bug/
 archive-name: bug

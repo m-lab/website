@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: Consumer Internet
 permalink: /blog/category/consumer-internet/
 archive-name: consumer internet

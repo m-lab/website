@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: TCP
 permalink: /blog/category/tcp/
 archive-name: tcp

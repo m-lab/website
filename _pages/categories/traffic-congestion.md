@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: Traffic Congestion
 permalink: /blog/category/traffic-congestion/
 archive-name: traffic-congestion

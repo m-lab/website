@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: GSOC
 permalink: /blog/category/gsoc/
 archive-name: gsoc
