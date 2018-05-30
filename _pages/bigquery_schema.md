@@ -122,11 +122,15 @@ In the NDT v3.1 schema, we have added a sub-record, `anomalies`, which contains 
  
 Currently, the following values are present in NDT data from 2010-01-01 to 2015-10-02 in these fields:
  
+<div class="table-responsive" markdown="1">
+
 | Field Name | Value | Description |
 | ---------- | ----- | ----------- |
 | `blacklist_flags` or `anomalies.blacklist_flags` | `0` or `NULL` | unaffected tests |
 | | `1` | tests affected by switch discards |
 | | `2` | tests not shown to be unaffected by switch discards |
+
+</div>
 
 All views in the `release` dataset limit to tests where `blacklist_flags` is `0` or `NULL`.
  
