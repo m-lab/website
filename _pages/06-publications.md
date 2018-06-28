@@ -14,8 +14,44 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 # Papers
 
+## 2018
+{:.no_toc}
+
+### Reelección presidencial con los medios en crisis | Balance especial Elecciones 2018
+{:.no_toc}
+
+{:.paper-description}
+An overview of the internet conditions during the 2018 elections in Venezuela.
+
+{:.paper-author}
+IPYS Venezuela
+
+[Download](https://ipysvenezuela.org/2018/05/26/balance-especial-elecciones-2018-reeleccion-presidencial-con-los-medios-en-crisis/){:.download-link .paper-download target="_blank"}
+
 ## 2017
 {:.no_toc}
+
+### New Worldwide Broadband Speed League Unveiled
+{:.no_toc}
+
+{:.paper-description}
+New data, extracted by Cable.co.uk from over 63m broadband speed tests worldwide reveals UK speeds are behind 30 other countries. At 16.51Mbps, the UK lags behind 19 European countries, 17 of them in the EU, but comes ahead of 158 other countries including Italy, France, Ireland and Monaco. Singapore ranks as the world’s fastest country with speeds of 55.13Mbps, with war-torn Yemen coming in last at an average speed of just 0.34Mbps
+
+{:.paper-author}
+Cable.co.uk
+
+[Download](https://www.cable.co.uk/about/media-centre/releases/new-worldwide-broadband-speed-league-unveiled-uk-ranks-31/){:.download-link .paper-download target="_blank"}
+
+### 1,5 MB de lentitud y opacidad | Bitácora de las elecciones municipales del #10Dic
+{:.no_toc}
+
+{:.paper-description}
+An overview of internet speeds and access to information in Venezuela.
+
+{:.paper-author}
+IPYS Venezuela
+
+[Download](https://ipysvenezuela.org/2017/12/14/15-megabit-lentitud-opacidad-bitacora-las-elecciones-municipales-del-10dic/){:.download-link .paper-download target="_blank"}
 
 ### OECD Digital Economy Outlook 2017
 {:.no_toc}
@@ -135,6 +171,17 @@ M-Lab Research Team
 
 ## 2015
 {:.no_toc}
+
+### Measuring broadband performance using M-Lab: Why averages tell a poor tale
+{:.no_toc}
+
+{:.paper-description}
+Broadband network performance is multi-faceted: it varies by ISP, by content source, by household connection, and by time-of-day. Daily or monthly averages, as published by content providers such as Netflix and Google, do not convey the full picture. In this paper we leverage M-Lab, the world's largest open measurement platform, to characterize broadband performance across Australian households. Our study delves into millions of data samples collected from 96,882 households over four months, and looks beyond averages to make several interesting observations: 1) There is considerable variation amongst households, in terms of their broadband speeds and variability of network performance within a day and across days, and this information is lost when data is averaged across houses; 2) The fluctuations (even for a specific house) are significant, and can exhibit unexpected patterns, such as wide variations from one day to the next, and some clusters of outliers at certain times of the day. 3) By our experimental results, we conclude that neither aggregating by household nor aggregating by day or by hour is a sound measurement strategy. Moreover, our study sheds new perspectives on broadband evaluation by using M-Lab data, and can inspire future study into the underlying reasons of performance variation.
+
+{:.paper-author}
+Xiaohong Deng, Jordan G Hamilton, Jason Thorne, Vijay Sivaraman
+
+[Download](http://doi.org/10.1109/ATNAC.2015.7366784){:.download-link .paper-download target="_blank"}
 
 ### OECD Digital Economy Outlook 2015
 {:.no_toc}
