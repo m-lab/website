@@ -138,7 +138,7 @@ grid-section:
       - link: "http://www.internap.com/"
         image: "internap.png"
         alt: "Internap Logo"
-      - link: "http://www.mozilla.org/"
+      - link: "https://www.mozilla.org/"
         image: "moz-logo-bw-rgb.jpg"
         alt: "Mozilla Foundation"
       - link: "https://www.csie.ncnu.edu.tw/Default.aspx?CID=2"
