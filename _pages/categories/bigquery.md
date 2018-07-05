@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: Bigquery
 permalink: /blog/category/bigquery/
 archive-name: bigquery

@@ -4,12 +4,6 @@ layout: default
 
 {% assign archive = page.archive-name | downcase %}
 
-{% if page.archive-type == 'Category' %}
-  {% assign posts = site.categories.[archive] %}
-{% elsif page.archive-type == 'Monthly' %}
-  {% assign posts = site.posts %}
-{% endif %}
-
 <div class="container" id="blog-nav-page">
   <div class="row">
 
@@ -19,20 +13,21 @@ layout: default
       <div class="row">
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 blogroll">
 
-        {% for post in posts %}
+        {% for post in site.posts %}
 
           {% assign show-post = true %}
-
-          {% if page.archive-type == 'Monthly' %}
-            {% assign thisyear = post.date | date: "%B %Y" %}
-            {% if thisyear != page.archive-name %}
-              {% assign show-post = false %}
-            {% endif %}
+          {% assign thisyear = post.date | date: "%B %Y" %}
+          {% if thisyear != page.archive-name %}
+            {% assign show-post = false %}
           {% endif %}
-
+          
           {% if show-post %}
-
             <article class="blog-entry" id="{{ post.url | prepend: site.baseurl }}">
+              <h1 id="{{ post.title | downcase }}">
+              <a class="anchor-link" href="{{ site.baseurl }}{{ post.url }}#{{ post.title | downcase | replace: ' ', '-' }}" data-icon=""></a>
+              {{ post.title }}
+              </h1>
+              {% include post-meta-index-pages.html %}
               {% if post.content contains '<!--more-->' %}
                   {{ post.content | split:'<!--more-->' | first }}
               {% else %}

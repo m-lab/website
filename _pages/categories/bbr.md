@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: BBR
 permalink: /blog/category/bbr/
 archive-name: bbr

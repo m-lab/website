@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Assessing Typhoon Haiyan's impact on core Internet infrastructure: measurement tells a story"
+title: "Assessing Typhoon Haiyans impact on core Internet infrastructure measurement tells a story"
 author: "Meredith Whittaker"
 date: 2013-11-27
 breadcrumb: blog
@@ -8,9 +8,6 @@ categories:
   - data analysis
   - ripe
 ---
-
-# Assessing Typhoon Haiyan's impact on core Internet infrastructure: measurement tells a story
-{% include post-meta.html %}
 
 Typhoon Haiyan was a tragedy, and its human and ecological impact rightly deserve the bulk of our attention and concern.
 

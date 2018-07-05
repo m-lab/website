@@ -9,9 +9,6 @@ categories:
   - transparency
 ---
 
-# Data Duplication Bug in M-Lab BigQuery Data
-{% include post-meta.html %}
-
 The team working on archiving M-Lab data recently discovered that the M-Lab data hosted in BigQuery was affected by a bug that caused duplicates to appear in our dataset. Queries against M-Lab’s BigQuery dataset performed between May 2014 and April 2015 were impacted. The raw files in our [Google Cloud Storage bucket](https://console.developers.google.com/storage/m-lab/) were not.
 
 <!--more-->

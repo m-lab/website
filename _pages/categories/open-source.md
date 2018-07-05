@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: Open Source
 permalink: /blog/category/open-source/
 archive-name: open source

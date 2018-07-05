@@ -10,9 +10,6 @@ categories:
   - interconnection
 ---
 
-# Research Updates: Beginning to Observe Network Management Practices as a Third Party
-{% include post-meta.html %}
-
 Prior to the publication of our recent report, [ISP Interconnection and its Impact on Consumer Internet Performance]({{ site.baseurl }}/publications/isp-interconnection-impact.pdf), we shared review copies with members of the research community, broadening the set of eyes on our methods and challenging our assertions. We received valuable feedback that allowed us to improve what we published, along with a list of research questions that we will be exploring and documenting over the coming months in our Research Updates series of blog posts adding insights to Research Reports.
 
 <!--more-->

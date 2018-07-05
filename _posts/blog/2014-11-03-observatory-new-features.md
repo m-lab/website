@@ -10,9 +10,6 @@ categories:
   - visualization
 ---
 
-# New Features for M-Lab Internet Observatory
-{% include post-meta.html %}
-
 We launched the [M-Lab Internet Observatory]({{ site.baseurl }}/observatory/) last week to provide a window into ISP performance, letting people see how ISPs in the US are doing compared to each other, and to view the way in which the connections between ISPs impact performance. We will be releasing additional features and views as we go, so keep an eye on the Observatory and the blog for updates about the features as we roll them out. This week, by popular demand, we’ve added some features that enable better interaction with and sharing of interesting views of M-Lab data:
 
 <!--more-->

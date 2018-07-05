@@ -23,11 +23,19 @@ layout: default
               {% assign word_count = blog_content | number_of_words %}
 
             {% if word_count > 40 %}
-              <h1>{{ post.title }}</h1>
+              <h1 id="{{ post.title | downcase }}">
+              <a class="anchor-link" href="{{ site.baseurl }}{{ post.url }}#{{ post.title | downcase | replace: ' ', '-' }}" data-icon=""></a>
+              {{ post.title }}
+              </h1>
+              {% include post-meta-index-pages.html %}
               {{ blog_content }}
             {% else %}
               <div>
-              <h1>{{ post.title }}</h1>
+              <h1 id="{{ post.title | downcase }}">
+              <a class="anchor-link" href="{{ site.baseurl }}{{ post.url }}#{{ post.title | downcase | replace: ' ', '-' }}" data-icon=""></a>
+              {{ post.title }}
+              </h1>
+              {% include post-meta-index-pages.html %}
               {{ blog_content }}
               </div>
             {% endif %}

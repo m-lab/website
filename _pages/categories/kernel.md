@@ -1,5 +1,5 @@
 ---
-layout: blog-archive
+layout: blog-category-archive
 title: kernel
 permalink: /blog/category/kernel/
 archive-name: kernel
