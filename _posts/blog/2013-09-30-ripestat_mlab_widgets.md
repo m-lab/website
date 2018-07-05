@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Explore M-Lab's data using the new RIPEstat widgets"
+title: "Explore M-Lab data using the new RIPEstat widgets"
 author: "Tiziana Refice, Vasco Asturiano, Robert Kisteleki"
 date: 2013-09-30
 breadcrumb: blog

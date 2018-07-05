@@ -14,6 +14,10 @@ rule 'MD029', :style => :ordered
 #  Exclude the following linter rules that conflict with the team's Markdown
 #  writing preferences.
 #  ----------------------------------------------------------------------------
+# MD002 - First header should be an h1 header. This conflicts with the way we 
+# 		  parse blog post h1 tags into the posts via templates
+exclude_rule 'MD002'
+
 ## MD013 - Line length.  Disabled unless can determine automated way to fix.
 exclude_rule 'MD013'
 
