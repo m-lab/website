@@ -9,10 +9,6 @@ breadcrumb: tests
 
 NPAD diagnoses a range of common performance issues affecting the [last network mile](https://en.wikipedia.org/wiki/Last_mile){:target="_blank"} and end-users' systems.
 
-[Run NPAD](http://mlab-ns.appspot.com/npad?format=redirect)
-
-[Download and compile command-line client](http://mlab-ns.appspot.com/npad?format=redirect){:target="_blank"}
-
 Please cite this data set as follows: **The M-Lab NPAD Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/npad
 
 **Data** collected by NPAD is available:

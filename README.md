@@ -94,7 +94,7 @@ Perform all `git` commands such as committing changes, changing branches, etc. i
 
 ## HTML Compression
 
-This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the `layout: compress` from the default template in the _layouts folder.
+This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the `layout: compress` from the default template in the _layouts_ folder.
 
 ## Page Redirects
 
