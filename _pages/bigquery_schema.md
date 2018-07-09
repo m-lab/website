@@ -21,7 +21,7 @@ For each release, M-Lab publishes tables and views in two groups of datasets. On
 Four _storage and processing datasets_ are published for each release, beginning with v3.1:
  
 * **base_tables**
-  * Contains the raw NDT, Sidestream, and Paris Traceroute tables.
+  * Contains the raw NDT, Sidestream, Switch, and Paris Traceroute tables.
   * This dataset will eventually hold all M-Lab data, from 2009 to present.
  
 * **batch**
@@ -70,6 +70,7 @@ Researchers interested in querying unfiltered NDT data should use the table in t
 * **base_tables**
   * ndt - `measurement-lab.base_tables.ndt`
   * _sidestream - `measurement-lab.base_tables.sidestream`_
+  * switch - `measurement-lab.base_tables.switch`
   * _traceroute - `measurement-lab.base_tables.traceroute`_
 
 ## Summary of BigQuery Tables (v3.1)
@@ -82,6 +83,7 @@ The current version of M-Lab BigQuery tables is v3.1, and are listed below. Tabl
 * **[measurement-lab.legacy.ndt_pre2015](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt_pre2015)** (data ~ 2009-02-18 - 2014-12-31)
 * **[measurement-lab.base_tables.ndt](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.ndt)**
 * **[measurement-lab.base_tables.sidestream](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.sidestream)**
+* **[measurement-lab.base_tables.switch](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.switch)**
 * **[measurement-lab.base_tables.traceroute](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.traceroute)**
 
 ### Recommended Datasets and Views for Research Queries
@@ -659,7 +661,7 @@ The switch table schema (also known as "DISCO", named after the "DIScard COllect
 
 * First official release of v3 tables, with all historical data re-parsed, and annotated with geolocation metadata.
 
-**v4.0 - July 2018**
+**v3.1.1 - July 2018**
 
 * Publish official Switch tables from the DISCO dataset.
 
@@ -668,6 +670,7 @@ Published **tables** and views are:
 * **measurement-lab.legacy.ndt** (data ~ 2015-01-01 - 2017-05-10)
 * **measurement-lab.legacy.ndt_pre2015** (data ~ 2009-02-18 - 2014-12-31)
 * **measurement-lab.base_tables.ndt**
+* **measurement-lab.base_tables.switch**
 
 * **measurement-lab.rc**
 * **measurement-lab.release_v3_1**
