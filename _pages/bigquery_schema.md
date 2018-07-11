@@ -21,7 +21,7 @@ For each release, M-Lab publishes tables and views in two groups of datasets. On
 Four _storage and processing datasets_ are published for each release, beginning with v3.1:
  
 * **base_tables**
-  * Contains the raw NDT, Sidestream, and Paris Traceroute tables.
+  * Contains the raw NDT, Sidestream, Switch, and Paris Traceroute tables.
   * This dataset will eventually hold all M-Lab data, from 2009 to present.
  
 * **batch**
@@ -70,6 +70,7 @@ Researchers interested in querying unfiltered NDT data should use the table in t
 * **base_tables**
   * ndt - `measurement-lab.base_tables.ndt`
   * _sidestream - `measurement-lab.base_tables.sidestream`_
+  * switch - `measurement-lab.base_tables.switch`
   * _traceroute - `measurement-lab.base_tables.traceroute`_
 
 ## Summary of BigQuery Tables (v3.1)
@@ -82,6 +83,7 @@ The current version of M-Lab BigQuery tables is v3.1, and are listed below. Tabl
 * **[measurement-lab.legacy.ndt_pre2015](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt_pre2015)** (data ~ 2009-02-18 - 2014-12-31)
 * **[measurement-lab.base_tables.ndt](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.ndt)**
 * **[measurement-lab.base_tables.sidestream](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.sidestream)**
+* **[measurement-lab.base_tables.switch](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.switch)**
 * **[measurement-lab.base_tables.traceroute](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.traceroute)**
 
 ### Recommended Datasets and Views for Research Queries
@@ -143,7 +145,7 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 <div class="table-responsive" markdown="1">
 
 | Field name                                           |     Type     |  Description                              |
-|:----------------------------------------------------|:------------:|:------------------------------------------:|
+|:----------------------------------------------------|:------------:|:------------------------------------------|
 | `_PARTITIONTIME`                                    | `timestamp`  |  This pseudo column contains a timestamp for the start of the day (in UTC) in which the data was loaded. For the YYYYMMDD partition, this pseudo column will contain the value TIMESTAMP('YYYY-MM-DD'). |
 | `test_id`                                           |  `string`    |  ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20090819T02:01:04.507508000Z_189.6.232.77:3859.c2s_snaplog.gz`). |
 | `task_filename`                                      | `string`     |  The raw data file in Google Cloud Storage from which the test row was parsed. |
@@ -514,7 +516,7 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 
 </div>
 
-### Paris Traceroute measurement-lab.base_tables.traceroute
+### Paris Traceroute - measurement-lab.base_tables.traceroute
 
 <div class="table-responsive" markdown="1">
 
@@ -591,12 +593,28 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 
 </div>
 
-## M-Lab BigQuery Schema/Table Version History and Changelog
+### Switch - measurement-lab.base_tables.switch
 
-**v1 - January 2009**
+The switch table schema (also known as "DISCO", named after the "DIScard COllection" service that records the switch data).
 
-* Initial publication of m_lab monthly tables containing data for NDT, NPAD, Paris Traceroute, and Sidestream
-  * `plx.google:m_lab.YYYY_MM.all`
+<div class="table-responsive" markdown="1">
+
+| Field name                                          |     Type     |  Description                                                                                                      |
+|:----------------------------------------------------|:------------:|:----------------------------------------------|
+| `_PARTITIONTIME`                                    | `timestamp`  |  This pseudo column contains a timestamp for the start of the day (in UTC) in which the data was loaded. For the YYYYMMDD partition, this pseudo column will contain the value TIMESTAMP('YYYY-MM-DD'). |
+| `test_id`                                           |  `string`    |  ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20180608T05:00:00-to-20180608T06:00:00-switch.json.gz`). |
+| `task_filename`                                     | `string`     |  The raw data file in Google Cloud Storage from which the test row was parsed. |
+| `parse_time`                                        | `timestamp`  |  Timestamp of when test data was parsed into BigQuery from Google Cloud Storage. |
+| `parser_version`                                    | `string`     |  The version of the parser that created this row. |
+| `log_time`                                          | `timestamp`  |  Never set for the switch data. The sample.timestamp should be used instead for the sample collection time. |
+| `sample`                                            | `record`     |  A repeated record with the value and timestamp of each 10 second observation. Typically, there will be 360 samples per hour. Due to system maintenance, or machine restarts, some intervals may contain more or less samples. |
+| `sample.timestamp`                                  | `timestamp`  |  Timestamp of the beginning of the 10 second time bin. |
+| `sample.value`                                      | `float`      |  Delta value of the `metric` during this 10 second time bin. |
+| `metric`                                            | `string`     |  The canonical metric name for samples, e.g. `switch.discards.uplink.tx` |
+| `hostname`                                          | `string`     |  The fully qualified domain name of the machine that collected the data, e.g. `mlab2.abc01.measurement-lab.org`. |
+| `experiment`                                        | `string`     |  The fully qualified domain name of the switch that produced the data, e.g. `s1.abc01.measurement-lab.org`. |
+
+</div>
 
 **v2 - March 2016**
 
@@ -643,11 +661,16 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 
 * First official release of v3 tables, with all historical data re-parsed, and annotated with geolocation metadata.
 
+**v3.1.1 - July 2018**
+
+* Publish official Switch tables from the DISCO dataset.
+
 Published **tables** and views are:
 
 * **measurement-lab.legacy.ndt** (data ~ 2015-01-01 - 2017-05-10)
 * **measurement-lab.legacy.ndt_pre2015** (data ~ 2009-02-18 - 2014-12-31)
 * **measurement-lab.base_tables.ndt**
+* **measurement-lab.base_tables.switch**
 
 * **measurement-lab.rc**
 * **measurement-lab.release_v3_1**
