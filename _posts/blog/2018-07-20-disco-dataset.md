@@ -25,6 +25,7 @@ Originally designed to detect switch discards from
 [microbursts]: {{site.baseurl}}/blog/traffic-microbursts-and-their-effect-on-internet-measurement
 [switch-schema]: {{site.baseurl}}/data/docs/bq/schema/#switch---measurement-labbase_tablesswitch
 
+<!--more-->
 ## DISCO Metrics
 
 To see the complete list of DISCO metrics, run the following
@@ -98,7 +99,7 @@ All `sample.value`s are counts over the 10 second window starting at the given `
 ## Example Queries
 
 The switch [schema][switch-schema] takes advantage of [record arrays][bigquery-arrays].
-So, queries that uses the `sample.value` or `sample.timestamp` columns must handle
+So, queries that use the `sample.value` or `sample.timestamp` columns must handle
 the array records appropriately.
 
 [bigquery-arrays]: https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays#flattening-arrays
