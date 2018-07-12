@@ -28,3 +28,7 @@ For researchers and others interested in advanced querying techniques, we provid
 Advanced users may also be interested in obtaining raw M-Lab test data for detailed analyses. For example, TCP packet captures are conducted for each NDT test, and are only available in M-Lab's raw data archives.
 
 * [M-Lab Data in Google Cloud Storage]({{ site.baseurl }}/data/docs/gcs/)
+
+### Querying the DISCO Switch Dataset
+
+* [DISCO dataset]({{ site.baseurl }}/blog/disco-dataset/)
