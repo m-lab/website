@@ -188,7 +188,7 @@ SELECT
   SUM(IF(metric = "switch.octets.local.rx" AND hostname like "%mlab3%", sample.value, 0)) as mlab3_total,
   SUM(IF(metric = "switch.octets.uplink.tx" AND hostname like "%mlab1%", sample.value, 0)) as uplink_total
 FROM
-  `mlab-sandbox.base_tables.switch*`,
+  `measurement-lab.base_tables.switch*`,
   UNNEST(sample) AS sample
 WHERE
   (metric = "switch.octets.uplink.tx" OR metric = "switch.octets.local.rx")
