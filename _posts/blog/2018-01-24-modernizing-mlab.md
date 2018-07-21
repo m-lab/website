@@ -11,6 +11,7 @@ categories:
   - tcp-info
   - bbr
   - web100
+  - platform
 ---
 
 When the M-Lab platform was initially launched in 2009, the software and operating system running on our servers used the best available boot management, virtualization, and kernel-level measurement instrumentation available. In the years since M-Lab’s initial launch, the state of system administration has improved dramatically. In 2017, the M-Lab team began work to upgrade the platform to adopt modern and flexible system administration components. This post provides a roadmap of that work.

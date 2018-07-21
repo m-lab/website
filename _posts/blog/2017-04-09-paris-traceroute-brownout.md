@@ -7,6 +7,7 @@ breadcrumb: blog
 categories:
   - data
   - paris traceroute
+  - platform
 ---
 
 ## Summary:

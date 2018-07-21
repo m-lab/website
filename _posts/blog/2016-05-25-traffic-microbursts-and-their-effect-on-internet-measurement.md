@@ -9,6 +9,7 @@ categories:
   - switch discard
   - performance
   - data
+  - platform
 ---
 
 In August 2015, M-Lab was notified of potential degradation of site performance by a measurement partner based on discrepancies compared to results for their own servers. After a full investigation these patterns were found to have been caused by the unique confluence of several specific conditions. Interim remediation measures were taken in early October 2015, and the resolution of the degradation was confirmed by the partner and others. Due to these administrative actions, the episode, which we are calling the “switch discard issue,” has not affected testing conducted in the United States (the region impacted by this problem) since October 11, 2015, and thus measurements after this period are not affected by the incident. M-Lab has also conducted an evaluation of data collected during the time period in which the issue occurred, and has taken steps to remove affected measurements from its dataset. This incident will not affect use of its dataset, past or present, as a result. <!--more-->
