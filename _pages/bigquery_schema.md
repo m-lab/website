@@ -13,6 +13,8 @@ breadcrumb: data
 * Whenever an M-Lab user starts a test, the client and server interact to measure different aspects of that user's connection.
 * A single user request triggers one or more **tests** (e.g., client-to-server test, server-to-client test).
 * For each test, a server collects a **log**, and the test can be uniquely identified by its log filename.
+* Timestamp fields are stored in our schema in UTC
+* Time only fields are stored in milliseconds (ms)
 
 ## BigQuery Storage and Processing Datasets
 
