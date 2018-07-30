@@ -158,7 +158,7 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `anomalies.num_snaps`                                | `integer` | A count of the number of snaplogs captured during a given test. |
 | `anomalies.blacklist_flags`                          | `integer` | Used to mark test results that could be impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test. |
 | `connection_spec`                                   | `record`    | Sub-record section containing fields describing the client which initiated a test and the M-Lab server through which the test was conducted. |
-| `connection_spec.client_af`                          | `integer`   |  Address family of the client's IP address. (This field is **optional**.) `AF_UNSPEC = 0 AF_INET (IPv4) = 2 AF_INET6 (IPv6) = 10` |
+| `connection_spec.client_af`                          | `integer`   |  Address family of the client's IP address. (This field is **optional**.)<br>AF_UNSPEC = `0`<br>AF_INET (IPv4) = `2`<br>AF_INET6 (IPv6) = `10` |
 | `connection_spec.client_application`                 | `string`    |  Client application that ran the test. (This field is **optional**.) |
 | `connection_spec.client_browser`                     | `string`    |  Client's browser. (This field is **optional**.) |
 | `connection_spec.client_hostname`                    | `string`    |  Client's hostname. (This field is **optional**.) |
@@ -167,7 +167,7 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `connection_spec.client_os`                          | `string`    |  Client's operating system. (This field is **optional**.) |
 | `connection_spec.client_version`                     | `string`    |  Client's version. (This field is **optional**.) |
 | `connection_spec.data_direction`                     | `integer` |  Direction of the data sent during the test:<br>CLIENT_TO_SERVER = `0`<br>SERVER_TO_CLIENT = `1` |
-| `connection_spec.server_af`                          | `integer` |  Address family of the server's IP address. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.local_af`.) `AF_UNSPEC = 0 AF_INET (IPv4) = 2 AF_INET6 (IPv6) = 10` |
+| `connection_spec.server_af`                          | `integer` |  Address family of the server's IP address. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.local_af`.)<br>AF_UNSPEC = `0`<br>AF_INET (IPv4) = `2`<br>AF_INET6 (IPv6) = `10` |
 | `connection_spec.server_hostname`                    | `string`    |  Server's hostname. (This field is **optional**.) |
 | `connection_spec.server_ip`                          | `string`    |  Server's IP address. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.local_ip`.) |
 | `connection_spec.server_kernel_version`              | `string`    |  Server's kernel version. (This field is **optional**.) |
@@ -200,7 +200,7 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `web100_log_entry`                                   | `record`  | Sub-record section containing the web100 variables collected during the test. See [tcp-kis.txt](https://cloud.google.com/bigquery/docs/tcp-kis.txt){:target="_blank"} for more information about these fields. |
 | `web100_log_entry.log_time`                          | `integer` |                                        |
 | `web100_log_entry.version`                           | `string`    |                                        |
-| `web100_log_entry.connection_spec.local_af`          | `integer` | `IPv4 = 0 IPv6 = 1` |
+| `web100_log_entry.connection_spec.local_af`          | `integer` | IPv4 = `0`<br>IPv6 = `1` |
 | `web100_log_entry.connection_spec.local_ip`          | `string`    |                                        |
 | `web100_log_entry.connection_spec.local_port`        | `integer` |                                        |
 | `web100_log_entry.connection_spec.remote_ip`         | `string`    |                                        |
@@ -336,7 +336,7 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `web100_log_entry.log_time`           | `integer` |                                        |
 | `web100_log_entry.version`            | `string` |                                        |
 | `web100_log_entry.group_name`         | `string` |                                        |
-| `web100_log_entry.connection_spec.local_af` | `integer` | `IPv4 = 0 IPv6 = 1`                                        |
+| `web100_log_entry.connection_spec.local_af` | `integer` | IPv4 = `0`<br>IPv6 = `1`                                        |
 | `web100_log_entry.connection_spec.local_ip` | `string` |                                        |
 | `web100_log_entry.connection_spec.local_port` | `integer` |                                        |
 | `web100_log_entry.connection_spec.remote_ip`  | `string` |                                        |
@@ -563,7 +563,7 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `connection_spec.server_geolocation.region` | `string` |                                        |
 | `paris_traceroute_hop.protocol` | `string` |                                        |
 | `paris_traceroute_hop.src_ip` | `string` |                                        |
-| `paris_traceroute_hop.src_af` | `integer` | `AF_UNSPEC = 0 AF_INET (IPv4) = 2 AF_INET6 (IPv6) = 10`                                       |
+| `paris_traceroute_hop.src_af` | `integer` |<br>AF_UNSPEC = `0`<br>AF_INET (IPv4) = `2`<br>AF_INET6 (IPv6) = `10`             |
 | `paris_traceroute_hop.src_hostname` | `string` |                                        |
 | `paris_traceroute_hop.src_geolocation.area_code` | `integer` |                                        |
 | `paris_traceroute_hop.src_geolocation.city` | `string` |                                        |
@@ -577,7 +577,7 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `paris_traceroute_hop.src_geolocation.postal_code` | `string` |                                        |
 | `paris_traceroute_hop.src_geolocation.region` | `string` |                                        |
 | `paris_traceroute_hop.dest_ip` | `string` |                                        |
-| `paris_traceroute_hop.dest_af` | `integer` | `AF_UNSPEC = 0 AF_INET (IPv4) = 2 AF_INET6 (IPv6) = 10`                           |
+| `paris_traceroute_hop.dest_af` | `integer` | <br>AF_UNSPEC = `0`<br>AF_INET (IPv4) = `2`<br>AF_INET6 (IPv6) = `10`         |
 | `paris_traceroute_hop.dest_hostname` | `string` |                                        |
 | `paris_traceroute_hop.dest_geolocation.area_code` | `integer` |                                        |
 | `paris_traceroute_hop.dest_geolocation.continent_code` | `string` |                                        |
