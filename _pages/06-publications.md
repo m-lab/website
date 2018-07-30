@@ -518,6 +518,20 @@ M. Dischinger, A. Mislove, A. Haeberlen, K. P. Gummadi
 
 [Download PDF]({{ site.baseurl }}/publications/detecting-bittorrent-blocking.pdf){:.download-link .paper-download target="_blank"}
 
+## Additional Relevant Bibliographic References
+
+### The macroscopic behavior of the TCP congestion avoidance algorithm
+
+ACM SIGCOMM Computer Communication Review; Volume 27 Issue 3, July 1997; Pages 67-82
+
+{:.paper-description}
+The authors analyze a performance model for the TCP Congestion Avoidance algorithm. The model predicts the bandwidth of a sustained TCP connection subjected to light to moderate packet losses, such as loss caused by network congestion. It assumes that TCP avoids retransmission timeouts and always has sufficient receiver window and sender data. The model predicts the Congestion Avoidance performance of nearly all TCP implementations under restricted conditions and of TCP with Selective Acknowledgements over a much wider range of Internet conditions.We verify the model through both simulation and live Internet measurements. The simulations test several TCP implementations under a range of loss conditions and in environments with both drop-tail and RED queuing. The model is also compared to live Internet measurements using the TReno diagnostic and real TCP implementations. The authors also present several applications of the model to problems of bandwidth allocation in the Internet. They use the model to analyze networks with multiple congested gateways; this analysis shows strong agreement with prior work in this area. Finally, the authors present several important implications about the behavior of the Internet in the presence of high load from diverse user communities.
+
+{:.paper-author}
+Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center), Teunis Ott (Bellcore)
+
+[Available Online](https://dl.acm.org/citation.cfm?id=264023){:.download-link .paper-download target="_blank"}
+
 # Government / Regulatory Filings
 
 ## 2017
