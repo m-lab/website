@@ -48,8 +48,6 @@ header:
       sub-nav:
         - text: "M-Lab Publications"
           url:  "/publications/"
-        - text: "Blog"
-          url:  "/blog/"
         - text: "Papers"
           url:  "/publications/#papers"
         - text: "Government/Regulatory Filings"
