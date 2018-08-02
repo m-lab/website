@@ -1,9 +1,12 @@
 ---
-layout: page
+layout: aboutpage
 permalink: /about/
 title: About
 page-title: "What is Measurement Lab?"
 menu-item: true
+videoid: "RnIVMfBP4So"
+video-heading: "Video Overview of M-Lab"
+video-subheading: ""
 breadcrumb: about
 ---
 

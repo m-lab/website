@@ -4,51 +4,17 @@ layout: default
 
 
 <meta data-id="enhancer" data-classname="HomePageEnhancer">
-<meta data-video-id="{{ page.videoid }}">
 
-<div class="about-section info-segment">
+<div class="about-section"><!--info-segment-->
   <div class="info-segment-inner container">
     <div class="row">
-      <section class="what-is-col col-sm-11 col-md-7 col-lg-7">
-          <h2 class="info-heading initial-heading">{{ page.info-heading }}</h2>
-          <article class="video-entry">
-              <h3 class="info-subheading">{{ page.info-subheading }}</h3>
-              <div class="video-placeholder">
-                <div class="player-ctn">
-                  <div id="video"></div>
-                  <a href="http://youtu.be/{{ page.videoid }}" class="player-overlay" target="_blank">
-                    <span class="btn-play player-control"><i class="icon icon-play icon-middle"></i></span>
-                  </a>
-                </div>
-              </div>
-          </article>
-      </section>
 
-      <aside class="mission-col col-sm-12 col-md-5 col-lg-5">
-        <div>
-          <h2 class="info-heading">{{ page.mission-heading }}</h2>
-          <article class="mission-entry">
-            <h3 class="info-subheading">{{ page.mission-subheading }}</h3>
-            <div class="segment-description">
-              {{ content }}
-            </div>
-          </article>
-        </div>
-      </aside>
-    </div>
-  </div>
-</div>
-
-<div class="communication-section info-segment is-inverse">
-  <div class="info-segment-inner container">
-    <div class="row">
-      <section class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-        <h2 class="info-heading initial-heading">Latest Blog Posts</h2>
+      <aside class="blog-col col-xs-12 col-sm-12 col-md-7 col-lg-7">
 
       {% for post in site.posts limit:2 %}
 
         <article class="blog-post">
-          <h3 class="info-subheading">{{ post.title }}</h3>
+          <h2 class="info-heading">{{ post.title }}</h2>
           <div class="segment-description">
 
           {% if post.content contains '<!--more-->' %}
@@ -70,18 +36,25 @@ layout: default
 
       {% endfor %}
 
-      </section>
+      </aside>
 
-      <aside class="data-col col-xs-12 col-sm-12 col-md-5 col-lg-5">
-        <h2 class="info-heading">{{ page.blog-aside-heading }}</h2>
-        <article class="data-entry">
-          <h3 class="info-subheading">{{ page.blog-aside-subheading }}</h3>
-          <div class="segment-description">
-              <p><img src="{{ site.baseurl }}/{{ page.blog-aside-img }}" alt="{{ page.blog-aside-img-alt }}"></p>
-              <p>{{ page.blog-aside-description }}<br><a class="info-link" href="{{ page.blog-aside-link }}">Read more</a></p>
-          </div>
-        </article>
+      <aside class="mission-col col-sm-12 col-md-5 col-lg-5">
+<!--
+        <div>
+          <h2 class="info-heading">{{ page.mission-heading }}</h2>
+          <article class="mission-entry">
+            <h3 class="info-subheading">{{ page.mission-subheading }}</h3>
+-->
+            <div class="mission-description">
+              <h1>{{ page.mission-heading }}</h1>
+              <h2>{{ page.mission-tagline }}</h2>
+            </div>
+<!--
+          </article>
+        </div>
+-->
       </aside>
     </div>
   </div>
 </div>
+

@@ -132,11 +132,36 @@
   }
 }
 
+// Mission & Tag Line
+.mission-col {
+  .mission-description {
+    margin-top: 6em;
+  }
+  h1 { 
+    font-size: 3em;
+    margin-bottom: .5em;
+    text-align: center;
+  }
+  h2 { 
+    font-size: 2em;
+    line-height: 1em;
+    text-align: center;
+  }
+}
+
 // Latest Blogs
+.blog-col {
+  margin-top: 1.5em;
+
+  h2 { font-size: 1.5em; margin-bottom: .3em; }
+
+}
+
 .blog-post {
-  width: 45%;
+  width: 90%;
   text-align: justify;
   margin-right: 30px;
+  margin-bottom: 1.5em;
   display: inline;
   float: left;
 
