@@ -136,8 +136,8 @@
 .tagline-section {
   width: 100%;
   background: #81addd;
-  padding-bottom: .5em;
-  padding-top: .5em;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
 .tagline-description {
   background: #81addd;
@@ -149,11 +149,20 @@
     margin-top: .5em;
     margin-bottom: .5em;
     color: white;
+
+    @media screen and (max-width: $screen-md-min) {
+      font-size: 2em;
+    }
   }
   h2 { 
     font-size: 2em;
     line-height: 1em;
     color: white;
+
+    @media screen and (max-width: $screen-md-min) {
+      font-size: 1em;
+    }
+
   }
 }
 .mission-col {
@@ -190,6 +199,10 @@
     text-align: left;
     margin-right: 0px;
     width: 100%;
+
+    a.read-more-link {
+      margin-bottom: 1.5em;
+    }
   }   
 
   &:last-child {
