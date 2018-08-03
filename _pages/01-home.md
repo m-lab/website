@@ -7,7 +7,6 @@ menu-item: true
 keywords: "measurement, broadband measurement, internet measurement, open data, open science, performance test, speed test, throughput measurement"
 tagline-heading: "Measurement Lab"
 tagline: "Measure the Internet, save the data, and make it universally accessible and useful."
-mission-heading: "Mission Statement"
 mission-subheading: "Open Internet Measurement"
 mission-image: "mission-graph.jpg"
 mission-image-alt: "Graph showing M-Lab data"
