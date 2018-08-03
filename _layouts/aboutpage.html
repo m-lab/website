@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<meta data-id="enhancer" data-classname="SubPageEnhancer">
+<meta data-video-id="{{ page.videoid }}">
+
+<div class="container">
+	<div class="row">
+
+	{% include breadcrumbs.html %}
+
+	{% if page.grid-section and page.grid-quick-links %}
+	<nav class="quick-links l-span2">
+		<ul class="l-span1">
+	          	
+	  	{% for grid in page.grid-section %}
+
+			<li><a href="#{{ grid.group-heading | downcase | replace: " ", "-" }}" data-proofer-ignore><i class="icon icon-triangle icon-right icon-before"></i>{{ grid.group-heading }}</a></li>
+
+			{% endfor %}
+
+		</ul>
+	</nav>
+	{% elsif page.accordion-quick-links %}
+	<nav class="quick-links l-span2">
+		{% for col in page.quick-links-section %}	
+		<ul class="l-span1">
+	          	
+	  	{% for link in col.column %}
+
+			<li><a href="#{{ link.group-heading | downcase | replace: " ", "-" }}" data-proofer-ignore><i class="icon icon-triangle icon-right icon-before"></i>{{ link.group-heading }}</a></li>
+
+			{% endfor %}
+
+		</ul>
+		{% endfor %}
+	</nav>
+	{% endif %}
+
+	<section class="intro-section">
+
+	  {{ content }}
+
+	<h2 class="info-heading initial-heading">{{ page.video-heading }}</h2>
+	  <article class="video-entry">
+	      <h3 class="info-subheading">{{ page.video-subheading }}</h3>
+	      <div class="video-placeholder">
+	        <div class="player-ctn">
+	          <div id="video"></div>
+	          <a href="http://youtu.be/{{ page.videoid }}" class="player-overlay" target="_blank">
+	            <span class="btn-play player-control"><i class="icon icon-play icon-middle"></i></span>
+	          </a>
+	        </div>
+	      </div>
+	  </article>
+	</section>
+	
+	{% if page.grid-section %}
+		{% include grid.html %}
+	{% endif %}
+
+	</div><!--row-->
+</div><!--container-->
+
+</div><!--subpage-content-->

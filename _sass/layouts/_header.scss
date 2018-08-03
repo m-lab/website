@@ -9,7 +9,7 @@ header.header-section {
   }    
 
   .navbar-header .navbar-toggle {
-    background-color: #9bd2c7;
+    background-color: #aaa;
     margin: 0px 15px 10px;
     
     .icon-bar {
@@ -62,7 +62,7 @@ header.header-section {
 }
 
 .main-nav-section {
-    background: #9bd2c7;
+    background: #aaa;
     border-top: 5px solid #eee;
     z-index: 10;
 
@@ -91,7 +91,6 @@ header.header-section {
   }
 
   .nav-ctn {
-    background: #9bd2c7;
     z-index: 10;
     padding: 0px;
   }
@@ -114,18 +113,14 @@ header.header-section {
     } 
 
     >li {
-      background: #9bd2c7;
-      border-right: 1px solid #79a199;
-      -webkit-box-shadow: 1px 0 0 #a1d5ca;
-      -moz-box-shadow: 1px 0 0 #a1d5ca;
-      box-shadow: 1px 0 0 #a1d5ca;
+      background: #aaa;
       -webkit-transition: background-color 300ms ease-in-out;
       -moz-transition: background-color 300ms ease-in-out;
       -o-transition: background-color 300ms ease-in-out;
       transition: background-color 300ms ease-in-out;
 
       &:hover, &.is-active {
-        background: #afdbd2;
+        background: #666;
       }
 
       @media screen and (max-width: $screen-sm-min) {
@@ -167,7 +162,7 @@ header.header-section {
           padding: 0px;
           margin: 0 15px;
           line-height: 40px;
-          border-bottom: 1px solid #79a199;
+          border-bottom: 1px solid #ccc;
         } 
       }
 
@@ -184,7 +179,7 @@ header.header-section {
           border-left: 0px;
           font-size: 14px;
           top: 2px;
-          color: #79a199;
+          color: #ccc;
           display: inline-block;
         } 
       }
@@ -192,12 +187,11 @@ header.header-section {
       ul {
         margin: 0px;
         padding: 0px;
-        background-color: #454545;
+        background-color: #666;
       }
     }
 
     li:first-child {
-      border-left: 1px solid #79a199;
 
       @media screen and (max-width: $screen-sm-min) {
         border-left: 0px;

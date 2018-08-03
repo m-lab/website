@@ -132,11 +132,68 @@
   }
 }
 
+// Mission & Tag Line
+.tagline-section {
+  width: 100%;
+  background: #81addd;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.tagline-description {
+  background: #81addd;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  h1 { 
+    font-size: 3em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color: white;
+
+    @media screen and (max-width: $screen-md-min) {
+      font-size: 2em;
+    }
+  }
+  h2 { 
+    font-size: 2em;
+    line-height: 1em;
+    color: white;
+
+    @media screen and (max-width: $screen-md-min) {
+      font-size: 1em;
+    }
+
+  }
+}
+.mission-col {
+  padding-top: 1.5em;
+
+  h2 {
+    font-size: 2em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  img {
+    padding-top: .5em;
+  }
+}
+
 // Latest Blogs
+.blog-col {
+  margin-top: 1.5em;
+
+  h2 { font-size: 1.5em; margin-bottom: .3em; }
+
+}
+
 .blog-post {
-  width: 45%;
+  width: 90%;
   text-align: justify;
   margin-right: 30px;
+  margin-bottom: 1.5em;
   display: inline;
   float: left;
 
@@ -145,9 +202,17 @@
     text-align: left;
     margin-right: 0px;
     width: 100%;
+
+    a.read-more-link {
+      margin-bottom: 1.5em;
+    }
   }   
 
   &:last-child {
     margin-right: 0;
+  }
+
+  footer {
+    padding-bottom: .5em;
   }
 }

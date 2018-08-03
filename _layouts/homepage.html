@@ -4,51 +4,26 @@ layout: default
 
 
 <meta data-id="enhancer" data-classname="HomePageEnhancer">
-<meta data-video-id="{{ page.videoid }}">
-
-<div class="about-section info-segment">
+<div class="tagline-section">
   <div class="info-segment-inner container">
     <div class="row">
-      <section class="what-is-col col-sm-11 col-md-7 col-lg-7">
-          <h2 class="info-heading initial-heading">{{ page.info-heading }}</h2>
-          <article class="video-entry">
-              <h3 class="info-subheading">{{ page.info-subheading }}</h3>
-              <div class="video-placeholder">
-                <div class="player-ctn">
-                  <div id="video"></div>
-                  <a href="http://youtu.be/{{ page.videoid }}" class="player-overlay" target="_blank">
-                    <span class="btn-play player-control"><i class="icon icon-play icon-middle"></i></span>
-                  </a>
-                </div>
-              </div>
-          </article>
-      </section>
-
-      <aside class="mission-col col-sm-12 col-md-5 col-lg-5">
-        <div>
-          <h2 class="info-heading">{{ page.mission-heading }}</h2>
-          <article class="mission-entry">
-            <h3 class="info-subheading">{{ page.mission-subheading }}</h3>
-            <div class="segment-description">
-              {{ content }}
-            </div>
-          </article>
-        </div>
-      </aside>
+      <div class="tagline-description">
+        <h1>{{ page.tagline-heading }}</h1>
+        <h2>{{ page.tagline }}</h2>
+      </div>
     </div>
   </div>
 </div>
-
-<div class="communication-section info-segment is-inverse">
+<div class="about-section"><!--info-segment-->
   <div class="info-segment-inner container">
     <div class="row">
-      <section class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-        <h2 class="info-heading initial-heading">Latest Blog Posts</h2>
+      <section class="what-is-col col-sm-11 col-md-7 col-lg-7">
+      </section>
+      <aside class="blog-col col-xs-12 col-sm-12 col-md-7 col-lg-7">
 
-      {% for post in site.posts limit:2 %}
+      {% for post in site.posts limit:3 %}
 
         <article class="blog-post">
-          <h3 class="info-subheading">{{ post.title }}</h3>
           <div class="segment-description">
 
           {% if post.content contains '<!--more-->' %}
@@ -59,9 +34,21 @@ layout: default
           {% assign word_count = blog_content | number_of_words %}
 
           {% if word_count > 40 %}
-            <p>{{ blog_content }}</p>
+            <h2 id="{{ post.title | downcase }}">
+            <a class="anchor-link" href="{{ site.baseurl }}{{ post.url }}#{{ post.title | downcase | replace: ' ', '-' }}" data-icon=""></a>
+            {{ post.title }}
+            </h2>
+            {% include post-meta-index-pages.html %}
+            {{ blog_content }}
           {% else %}
-            <div>{{ blog_content }}</div>
+            <div>
+            <h2 id="{{ post.title | downcase }}">
+            <a class="anchor-link" href="{{ site.baseurl }}{{ post.url }}#{{ post.title | downcase | replace: ' ', '-' }}" data-icon=""></a>
+            {{ post.title }}
+            </h2>
+            {% include post-meta-index-pages.html %}
+            {{ blog_content }}
+            </div>
           {% endif %}
 
           </div>
@@ -70,18 +57,17 @@ layout: default
 
       {% endfor %}
 
-      </section>
+      </aside>
 
-      <aside class="data-col col-xs-12 col-sm-12 col-md-5 col-lg-5">
-        <h2 class="info-heading">{{ page.blog-aside-heading }}</h2>
-        <article class="data-entry">
-          <h3 class="info-subheading">{{ page.blog-aside-subheading }}</h3>
-          <div class="segment-description">
-              <p><img src="{{ site.baseurl }}/{{ page.blog-aside-img }}" alt="{{ page.blog-aside-img-alt }}"></p>
-              <p>{{ page.blog-aside-description }}<br><a class="info-link" href="{{ page.blog-aside-link }}">Read more</a></p>
-          </div>
-        </article>
+      <aside class="mission-col col-sm-12 col-md-5 col-lg-5">
+
+        <div>
+          <img src="images/{{ page.mission-image }}" alt="{{ page.mission-image-alt }}" />
+          {{ content }}
+        </div>
+
       </aside>
     </div>
   </div>
 </div>
+
