@@ -113,6 +113,10 @@ The Internet is always changing, and test results reflect that. A test conducted
 
 In short, running one test will give you a sense of network conditions at that moment, across the best network path available at that time, to the specific server coordinating the test. But because Internet routing and infrastructure change dynamically, testing regularly and looking at the data over time are much more reliable ways to gauge representative performance.
 
+## NDT measurements satellite Internet connections
+
+The NDT test sometimes presents unexpected results when measuring a satellite internet connection. ISPs that use a proxy prior to the satellite uplink terminate the TCP flow at the proxy. As a result, NDT is measuring the speed and latency to the proxy rather than all the way through the proxy. M-Lab is working on updates to NDT which we hope will resolve this issue for satellite customers in the future.
+
 ## How do I report issues with M-Lab tests?
 {:.no_toc}
 
