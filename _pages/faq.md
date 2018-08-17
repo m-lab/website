@@ -69,10 +69,12 @@ Since all data collected through M-Lab tests is released into the public under a
 We encourage the use of M-Lab data for research and other projects, illustrative examples of which are detailed on our [publications page]({{ site.baseurl }}/publications) or the [community tools page]({{ site.baseurl }}/data/tools/#community).
 
 ## How long is data stored?
+{:.no_toc}
 
 To allow research and transparency into long-term trends in Internet performance, all data is stored and published indefinitely.
 
 ## Can I delete my test data?
+{:.no_toc}
 
 M-Lab does not authenticate users or allow storage of information on the platform that would associate individuals or clients with their history of tests, and IP addresses may be dynamic and vary across tests.  Accordingly, M-Lab is generally unable to identify any specific test data as relating to any specific individual. Users may initiate new tests, which will be included in the public dataset in addition to prior results.
 
@@ -114,6 +116,7 @@ The Internet is always changing, and test results reflect that. A test conducted
 In short, running one test will give you a sense of network conditions at that moment, across the best network path available at that time, to the specific server coordinating the test. But because Internet routing and infrastructure change dynamically, testing regularly and looking at the data over time are much more reliable ways to gauge representative performance.
 
 ## NDT measurements satellite Internet connections
+{:.no_toc}
 
 The NDT test sometimes presents unexpected results when measuring a satellite internet connection. ISPs that use a proxy prior to the satellite uplink terminate the TCP flow at the proxy. As a result, NDT is measuring the speed and latency to the proxy rather than all the way through the proxy. M-Lab is working on updates to NDT which we hope will resolve this issue for satellite customers in the future.
 
