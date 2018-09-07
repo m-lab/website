@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.4.1
 install:
- - apt-get install -y jupyter-nbconvert jupyter-core jupyter-notebook
+ - sudo apt-get install -y jupyter-nbconvert jupyter-core jupyter-notebook
         #- # pip install requests - pip install jupyter nbconvert
 script:
   - ./_tests/travis-checks --quick
