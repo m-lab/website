@@ -4,6 +4,7 @@ rvm:
 script:
   - ./_tests/travis-checks --quick
 install:
+  - pip install --upgrade pip
   - pip install jupyter nbconvert
 env:
   global:
@@ -28,10 +29,6 @@ before_install:
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
     openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d;
   fi
-
-addons:
-  apt:
-    update: true
 
 after_deploy:
   # Only invalidate CloudFront cache if this on the master branch and is not a PR
