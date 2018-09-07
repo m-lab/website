@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.4.1
+install:
+ - pip install jupyter nbconvert
 script:
   - ./_tests/travis-checks --quick
 env:
