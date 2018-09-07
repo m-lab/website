@@ -23,10 +23,7 @@ before_install:
   # repository. The openssl command descrypts this file, using some secure
   # environment variables associated with the Travis account/repo.  See
   # README.md for information on generating this encrypted file.
-  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
-    openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d;
-  fi
-
+  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d; fi
   - sudp apt-cache search jupyter
   - sudo apt-get install -y jupyter-nbconvert jupyter-core jupyter-notebook
 
