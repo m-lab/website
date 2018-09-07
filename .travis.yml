@@ -1,12 +1,16 @@
 language: ruby
+
 rvm:
   - 2.4.1
 script:
   - ./_tests/travis-checks --quick
 install:
   - sudo pip install --upgrade pip
-  - sudo pip install pyOpenSSL ndg-httpsclient pyasn1
-  - sudo pip install jupyter nbconvert
+  - sudo pip install python3-pip
+    #- sudo add-apt-repository ppa:deadsnakes/ppa
+    #- sudo apt-get update
+    #- sudo apt-get upgrade python2.7
+  - sudo python3 -m pip install jupyter nbconvert
 
 env:
   global:
