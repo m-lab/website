@@ -5,7 +5,7 @@ rvm:
 script:
   - ./_tests/travis-checks --quick
 install:
-  - sudo pip install --upgrade pip
+  - sudo pip install --upgrade setuptools pip
   - sudo apt-get install -y python3-pip
     #- sudo add-apt-repository ppa:deadsnakes/ppa
     #- sudo apt-get update
