@@ -23,9 +23,10 @@ before_install:
   # repository. The openssl command descrypts this file, using some secure
   # environment variables associated with the Travis account/repo.  See
   # README.md for information on generating this encrypted file.
-  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
-    openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d;
-  fi
+  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d; fi
+  - sudo apt-get install -y python3-pip
+  - sudo python3 -m pip install --upgrade setuptools pip
+  - sudo python3 -m pip install jupyter nbconvert
 after_deploy:
   # Only invalidate CloudFront cache if this on the master branch and is not a PR
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
