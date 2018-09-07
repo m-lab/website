@@ -32,3 +32,7 @@ Advanced users may also be interested in obtaining raw M-Lab test data for detai
 ### Querying the DISCO Switch Dataset
 
 * [DISCO dataset]({{ site.baseurl }}/blog/disco-dataset/)
+
+### Switch Discard Analysis 2018
+
+* [Discard Analysis 2018]({{ site.baseurl }}/data/docs/analysis/discard-analysis-2018/)
