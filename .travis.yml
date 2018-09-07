@@ -4,11 +4,6 @@ rvm:
   - 2.4.1
 script:
   - ./_tests/travis-checks --quick
-    # install:
-  #- sudo pip install --upgrade setuptools pip
-    #- sudo add-apt-repository ppa:deadsnakes/ppa
-    #- sudo apt-get update
-    #- sudo apt-get upgrade python2.7
 
 env:
   global:
