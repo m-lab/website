@@ -35,7 +35,7 @@ There is typically at least a 24-hour delay between data collection and data pub
   * More information is available at [Internet2](http://software.internet2.edu/ndt/){:target="_blank"} and [Github](https://github.com/ndt-project/ndt){:target="_blank"}.
 * [NPAD](https://console.developers.google.com/storage/browser/m-lab/npad/){:target="_blank"}
   * Network Path and Application Diagnosis (NPAD) diagnoses issues in a network path that can degrade network performance.
-  * More information is available at [UCAR](http://www.ucar.edu/npad/){:target="_blank"} and [Github](https://github.com/npad/npad){:target="_blank"}.
+  * More information is available at [UCAR](https://web.archive.org/web/20180714140225/https://www.ucar.edu/npad/){:target="_blank"} and [Github](https://github.com/npad/npad){:target="_blank"}.
 * [OONI](https://console.developers.google.com/storage/browser/m-lab/ooni/){:target="_blank"}
   * OONI measures censorship, surveillance, and traffic manipulation on the Internet.
   * More information is available at [OONI](https://ooni.torproject.org/){:target="_blank"}

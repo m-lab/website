@@ -19,4 +19,4 @@ Please cite this data set as follows: **The M-Lab NPAD Data Set, &lt;date range 
 
 **Source code** is available at [https://github.com/npad/npad](https://github.com/npad/npad){:target="_blank"}.
 
-**Get more information** at [http://www.ucar.edu/npad/](http://www.ucar.edu/npad/){:target="_blank"}
+**Get more information** at [http://www.ucar.edu/npad/](https://web.archive.org/web/20180714140225/https://www.ucar.edu/npad/){:target="_blank"}
