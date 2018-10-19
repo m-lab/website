@@ -2,7 +2,7 @@
 layout: blog
 title: "M-Lab 10 Year Anniversary Event"
 author: "Georgia Bullen"
-date: 2018-10-18
+date: 2018-10-19
 breadcrumb: blog
 categories:
   - event
