@@ -58,7 +58,7 @@ ICYMI, all of the talks from the mainstage are available [on YouTube](https://ww
   * Research from Canada:  Reza Rajabiun (Ryerson University) ([Slides(1)]({{ site.baseurl }}/static/mlab10year/Rajabiun-RRCMIntereconFigTableRevised.pdf),([Slides(2)]({{ site.baseurl }}/static/mlab10year/Rajabiun-DurhamBroadbandBenchRajabiunMarch2018.pdf))
   * California Public Utility Commission: Ken Biba (CPUC) ([Slides]({{ site.baseurl }}/static/mlab10year/Biba-MeasuringInternetinCalifornia.pdf))
 
-**Wednesday, August 8**
+**Wednesday, August 8th, 2018**
 
 * [Lightning Talk Breakout Sessions](https://www.youtube.com/watch?v=oc20zZt2pb4&list=PLNoVefpaPtVPjkE1g_QGvHdxEz5TOXE0i&index=8)
   * Paris Traceroute Data: Ya Chang (M-Lab/Google) ([Slides]({{ site.baseurl }}/static/mlab10year/Chang-Paris Traceroute-M-Lab 10 year anniversary_ PT.pdf))
