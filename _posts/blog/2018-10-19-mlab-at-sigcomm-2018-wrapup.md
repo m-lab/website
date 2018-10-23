@@ -13,7 +13,7 @@ categories:
   - performance
 ---
 
-M-Lab had the pleasure of attending the first ever [SIGCOMM hackathon](http://conferences.sigcomm.org/sigcomm/2018/hackathon.html) on August 25, 2018, at the Nokia Skypark headquarters in Budapest, Hungary. The hackathon, sponsored by Nokia, DECIX, and Netflix, invited network research faculty, students, and industry professionals from around the world to form teams and develop tools, new features or analyses during the Saturday following the SIGCOMM conference. We proposed the projects below, and team members Georgia Bullen and I attended and supported hackathon attendees who chose to work on them.
+M-Lab had the pleasure of attending the first ever [SIGCOMM hackathon](http://conferences.sigcomm.org/sigcomm/2018/hackathon.html) on August 25, 2018, at the Nokia Skypark headquarters in Budapest, Hungary. The hackathon, sponsored by Nokia, DECIX, and Netflix, invited network research faculty, students, and industry professionals from around the world to form teams and develop tools, new features or analyses during the Saturday following the SIGCOMM conference. <!--more-->We proposed the projects below, and team members Georgia Bullen and I attended and supported hackathon attendees who chose to work on them.
 
 ## M-Lab Project ideas
 
