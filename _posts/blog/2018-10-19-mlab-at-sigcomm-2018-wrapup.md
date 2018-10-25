@@ -2,7 +2,7 @@
 layout: blog
 title: "SIGCOMM 2018 Hackathon Outcomes"
 author: "Chris Ritzo"
-date: 2018-10-19
+date: 2018-10-25
 breadcrumb: blog
 categories:
   - event
@@ -12,6 +12,8 @@ categories:
   - data
   - performance
 ---
+
+![SIGCOMM Hackathon - M-Lab Participants Working]({{ site.baseurl }}/images/blog/sigcomm2018-2ndplacewinners.png)
 
 M-Lab had the pleasure of attending the first ever [SIGCOMM hackathon](http://conferences.sigcomm.org/sigcomm/2018/hackathon.html) on August 25, 2018, at the Nokia Skypark headquarters in Budapest, Hungary. The hackathon, sponsored by Nokia, DECIX, and Netflix, invited network research faculty, students, and industry professionals from around the world to form teams and develop tools, new features or analyses during the Saturday following the SIGCOMM conference. <!--more-->We proposed the projects below, and team members Georgia Bullen and I attended and supported hackathon attendees who chose to work on them.
 
@@ -33,8 +35,6 @@ At the end of the day, all of the teams presented their projects to other hackat
 ![SIGCOMM Hackathon - M-Lab Participants Working]({{ site.baseurl }}/images/blog/sigcomm2018-presenting.png)
 
 Our groups were awesome to work with, and the collaboration they exhibited exemplified the values of the open-source community. Coming from all over the world, and having mostly never worked together before, it was exciting to see the diversity of thought and expertise in our participants. The ideas and code they produced during the hackathon were very useful to the M-Lab team. The insights gained through this experience will result in substantive improvements to our documentation and processes around cultivating open source contributions. M-Lab was honored to be a part of the first ever SIGCOMM hackathon, and we thank the organizers for inviting us to participate. We also wish to offer the participants who worked with us our gratitude and thanks, and wish each of them well.
-
-![SIGCOMM Hackathon - M-Lab Participants Working]({{ site.baseurl }}/images/blog/sigcomm2018-2ndplacewinners.png)
 
 Check out the participants’ work:
 
