@@ -17,4 +17,4 @@ For any questions regarding the code/tool, please contact Partha Kanuparthy (kvb
 
 Please cite this data set as follows: **The M-Lab ShaperProbe Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/shaperprobe**
 
-**Data** collected by ShaperProbe is available in raw format at [https://console.developers.google.com/storage/browser/m-lab/shaperprobe/](https://console.developers.google.com/storage/browser/m-lab/shaperprobe/){:target="_blank"}.
+**Data** collected by ShaperProbe is available in raw format at [https://console.developers.google.com/storage/browser/archive-measurement-lab/shaperprobe/](https://console.developers.google.com/storage/browser/archive-measurement-lab/shaperprobe/){:target="_blank"}.
