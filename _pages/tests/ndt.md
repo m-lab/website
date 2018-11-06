@@ -21,7 +21,7 @@ Please cite this data set as follows: **The M-Lab NDT Data Set, &lt;date range u
 
 **Data** collected by NDT is available:
 
-* in raw format at [https://console.cloud.google.com/storage/browser/m-lab/ndt](https://console.cloud.google.com/storage/browser/m-lab/ndt){:target="_blank"}.
+* in raw format at [https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.
 
 * in BigQuery at [https://www.measurementlab.net/data/bq/quickstart/]({{ site.baseurl }}/data/bq/quickstart/).
 

@@ -13,7 +13,7 @@ Please cite this data set as follows: **The M-Lab NPAD Data Set, &lt;date range 
 
 **Data** collected by NPAD is available:
 
-* in raw format at [https://console.cloud.google.com/storage/browser/m-lab/npad](https://console.cloud.google.com/storage/browser/m-lab/npad){:target="_blank"}.
+* in raw format at [https://console.cloud.google.com/storage/browser/archive-measurement-lab/npad](https://console.cloud.google.com/storage/browser/archive-measurement-lab/npad){:target="_blank"}.
 
 * in BigQuery at [https://www.measurementlab.net/data/docs/bq/quickstart/]({{ site.baseurl }}/data/docs/bq/quickstart/).
 

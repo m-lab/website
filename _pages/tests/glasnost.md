@@ -13,7 +13,7 @@ Glasnost attempted to detect whether your Internet service provider (ISP) was pe
 
 Please cite this data set as follows: **The M-Lab Glasnost Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/glasnost**
 
-**Data** collected by Glasnost is available in raw format at [https://console.cloud.google.com/storage/browser/m-lab/glasnost](https://console.cloud.google.com/storage/browser/m-lab/glasnost){:target="_blank"}.
+**Data** collected by Glasnost is available in raw format at [https://console.cloud.google.com/storage/browser/archive-measurement-lab/glasnost](https://console.cloud.google.com/storage/browser/archive-measurement-lab/glasnost){:target="_blank"}.
 
 **Data analysis code** is available at [http://code.google.com/p/glasnost/](http://code.google.com/p/glasnost/){:target="_blank"}.
 

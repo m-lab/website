@@ -11,7 +11,7 @@ The Open Observatory of Network Interference (OONI) Probe is a groundbreaking an
 
 Please cite this data set as follows: **The M-Lab OONI Probe Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/ooni
 
-**Data** collected by OONI Probe is available in raw format at [https://console.developers.google.com/storage/browser/m-lab/ooni/](https://console.developers.google.com/storage/browser/m-lab/ooni/){:target="_blank"}.
+**Data** collected by OONI Probe is available in raw format at [https://console.developers.google.com/storage/browser/archive-measurement-lab/ooni/](https://console.developers.google.com/storage/browser/archive-measurement-lab/ooni/){:target="_blank"}.
 
 **Source code** is available at [https://github.com/TheTorProject/ooni-probe](https://github.com/TheTorProject/ooni-probe){:target="_blank"}.
 

@@ -203,7 +203,7 @@ The interest for Quality of Service (QoS) measurements in the Internet has excee
 {:.paper-author}
 Ioannis Koukoutsidis
 
-[Download PDF](http://www.jstor.org/stable/pdf/10.5325/jinfopoli.5.2015.0245.pdf){:.download-link .paper-download target="_blank"}
+Download link: http://www.jstor.org/stable/pdf/10.5325/jinfopoli.5.2015.0245.pdf
 
 ### European capability for situational awareness
 {:.no_toc}
