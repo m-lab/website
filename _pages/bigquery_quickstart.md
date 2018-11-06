@@ -9,27 +9,55 @@ breadcrumb: data
 
 ## Configuring Access to M-Lab Data
 
-To search M-Lab's data using BigQuery, follow these quick steps to get started:
+To search M-Lab's data using BigQuery, follow these quick steps to get started. First, visit the [BigQuery Web UI](https://bigquery.cloud.google.com/queries/measurement-lab){:target="_blank"}. You'll likely see something like this:
 
-### Step 1. Configure Google Cloud Platform Console Project
+![Welcome to BigQuery - Create a Project image]({{ site.baseurl }}/images/bqquickstart/1-welcome-setup-project.png)
 
-Create a project, and enable billing in [Google Cloud Platform Console](https://console.developers.google.com/){:target="_blank"} (or use an existing project with billing enabled).
+Follow the next step to create a project. You may see prompts to try BigQuery for free using Google's free credit program. **You do not need to enable billing or to sign up for free credit to query M-Lab data in BigQuery.**
 
-You will **not** be charged for queries against tables in the M-Lab data set. M-Lab is committed to open data, and offering our data free of charge is part of that commitment.
-
-### Step 2. Configure M-Lab Table Access
+### Step 1. Join the M-Lab Discuss Google Group
 
 Join the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"} with the same account you used to create your Google Cloud Platform Console project. Joining this group enables your account so that you can make queries against M-Lab's BigQuery tables.
 
-### Using a Service Account
+### Step 2. Configure Google Cloud Platform Console Project
 
-If you are querying BigQuery via a service account (e.g., @developer.gserviceaccount.com) that cannot join the M-Lab Discuss group, please email [support@measurementlab.net](mailto:support@measurementlab.net) so that we can enable your account manually.
+Create a project in [Google Cloud Platform Console](https://console.developers.google.com/cloud-resource-manager){:target="_blank"}. Depending on the type of Google account you're using (Gmail, GSuite, etc.) the screen may look slightly different.
+
+![Cloud Resource Manager - Create a Project]({{ site.baseurl }}/images/bqquickstart/2-cloudresourcemanager.png)
+
+![New Project - Gmail account]({{ site.baseurl }}/images/bqquickstart/2.1-cloudresourcemanager.png)
+
+![New Project - GSuite account]({{ site.baseurl }}/images/bqquickstart/3-new-project.png)
+
+Once the project is created, you should see a screen like the one below:
+
+![Project Created- GSuite account]({{ site.baseurl }}/images/bqquickstart/5-project-created.png)
+
+Next, enable the BigQuery API for your project.
+
+![Enable BigQuery APIs]({{ site.baseurl }}/images/bqquickstart/6-enable-apis.png)
+
+![View All APIs]({{ site.baseurl }}/images/bqquickstart/7-view-all-apis.png)
+
+![BigQuery API]({{ site.baseurl }}/images/bqquickstart/8-bq-api.png)
+
+![Enable BigQuery API]({{ site.baseurl }}/images/bqquickstart/9-enable-bq-api.png)
+
+Once the BigQuery API is enabled, you should see something like this:
+
+![BigQuery API Enabled]({{ site.baseurl }}/images/bqquickstart/10-api-enabled.png)
+
+Finally, in the BigQuery UI, you can now display the `measurement-lab` project datasets:
+
+![Display M-Lab project datasets]({{ site.baseurl }}/images/bqquickstart/11-display-project-mlab.png)
+
+![Display M-Lab project datasets]({{ site.baseurl }}/images/bqquickstart/12-display-mlab-project.png)
 
 ## BigQuery Web Interface
 
 BigQuery offers a web interface so that you can query M-Lab BigQuery data from your browser. To query from the web interface, go to:
 
-[https://bigquery.cloud.google.com](https://bigquery.cloud.google.com){:target="_blank"}
+[https://bigquery.cloud.google.com](https://bigquery.cloud.google.com/queries/measurement-lab){:target="_blank"}
 
 Try the following query as an example:
 
@@ -53,7 +81,25 @@ You may also run queries at the command line using BigQuery tools in the Google 
 
 Download and install the [Google Cloud SDK](https://cloud.google.com/sdk/){:target="_blank"} using the installation and Quick Start instructions for your operating system.
 
-After installation, authentication, and restarting your terminal, BigQuery's command-line tools are available in your shell. Note additional options such as specifying output format are available in the BigQuery command-line tools.
+Once you install the SDK, use the command `$ gcloud auth login` and follow the instructions to authenticate:
+
+![Google Cloud SDK - command line login]({{ site.baseurl }}/images/bqquickstart/cli-sdk/1-cli-sdk.png)
+
+![Google Cloud SDK - browser authentication]({{ site.baseurl }}/images/bqquickstart/cli-sdk/2-cli-sdk.png)
+
+![Google Cloud SDK - allow SDK]({{ site.baseurl }}/images/bqquickstart/cli-sdk/3-cli-sdk.png)
+
+![Google Cloud SDK - successfully authenticated]({{ site.baseurl }}/images/bqquickstart/cli-sdk/3-cli-sdk-authd.png)
+
+After installation and authentication, your terminal should show something like:
+
+![Google Cloud SDK - terminal success message]({{ site.baseurl }}/images/bqquickstart/cli-sdk/4-cli-sdk-authd-terminal.png)
+
+Next, set your default project to `measurement-lab`:
+
+![Google Cloud SDK - set project]({{ site.baseurl }}/images/bqquickstart/cli-sdk/5-cli-sdk-set-proj.png)
+
+BigQuery's command-line tools should now be available in your terminal. Note additional options such as specifying output format are available in the BigQuery command-line tools.
 
 Try the following query as an example:
 
@@ -84,4 +130,6 @@ If you are new to BigQuery, we suggest that you next consult the following resou
 
 Given the resources and expertise, you can develop your own application that uses M-Lab data. To learn more about building a custom application, refer to the [Google Cloud Platform Console documentation](https://cloud.google.com/docs/){:target="_blank"}
 
-**Telescope** is an example of an application that M-Lab developed that uses the BigQuery Python API to download M-Lab data. Telescope is available from M-Lab on [Github](https://github.com/m-lab/telescope){:target="_blank"}.
+### Using a Service Account
+
+If you want to querying BigQuery via a service account (e.g., @developer.gserviceaccount.com) that cannot join the M-Lab Discuss group, please email [support@measurementlab.net](mailto:support@measurementlab.net) so that we can enable your account manually.
