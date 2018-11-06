@@ -55,7 +55,7 @@ ICYMI, all of the talks from the mainstage are available [on YouTube](https://ww
 * [Keynote, Public Interest Technology: Larry Peterson (Princeton/Open Networking Foundation), Sascha Meinrath (X-Lab/Penn State University) & Afua Bruce (PIT @ NA)](https://www.youtube.com/watch?v=2QvvTHvC6lI&index=6&list=PLNoVefpaPtVPjkE1g_QGvHdxEz5TOXE0i)
 * [Lightning Talks into Breakout Sessions](https://www.youtube.com/watch?v=llKblOmVQjs&index=7&list=PLNoVefpaPtVPjkE1g_QGvHdxEz5TOXE0i)
   * Research with M-Lab Data: Matt Mathis, (M-Lab/Google) ([Slides]({{ site.baseurl }}/static/mlab10year/Mathis-Research with M-Lab Data Breakout Talk.pdf))
-  * Research from Canada:  Reza Rajabiun (Ryerson University) ([Slides(1)]({{ site.baseurl }}/static/mlab10year/Rajabiun-RRCMIntereconFigTableRevised.pdf),([Slides(2)]({{ site.baseurl }}/static/mlab10year/Rajabiun-DurhamBroadbandBenchRajabiunMarch2018.pdf))
+  * Research from Canada:  Reza Rajabiun (Ryerson University) ([Slides]({{ site.baseurl }}/static/mlab10year/RajabiunMLab10thSlides.pptx))
   * California Public Utility Commission: Ken Biba (CPUC) ([Slides]({{ site.baseurl }}/static/mlab10year/Biba-MeasuringInternetinCalifornia.pdf))
 
 **Wednesday, August 8th, 2018**
