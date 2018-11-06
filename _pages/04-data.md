@@ -9,7 +9,7 @@ breadcrumb: data
 
 # Overview
 
-Data collected by M-Lab hosted tests that use our ETL pipeline are published in two forms:
+Measurement data from experiments hosted on M-Lab, and processed via the ETL pipeline, are published in two forms:
 
 * Google Cloud Storage
   * M-Lab publishes raw output from its measurement tools on Google Cloud Storage as file archives.
@@ -20,13 +20,15 @@ Data collected by M-Lab hosted tests that use our ETL pipeline are published in 
 
 There is typically at least a 24-hour delay between data collection and data publication. Below we provide links to data for our **Active tests** and archival data from **Inactive tests**.
 
-M-Lab also publishes public datasets about the M-Lab Platform, listed below.
+M-Lab also publishes public data sets about the M-Lab Platform, listed below.
 
 Lastly, some M-Lab hosted tests do not use our ETL pipeline. Data for these tests are published independently by the test developers.
 
-## Data for M-Lab Tests Using the ETL pipeline
+## Current Active Data Sets
 
-### Active Tests
+### Measurement Data (Active Tests)
+
+#### ETL Processed
 
 * [Neubot](https://console.developers.google.com/storage/browser/archive-measurement-lab/neubot/){:target="_blank"}
   * Neubot measures the Internet in order to gather data useful to study broadband performance, network neutrality, and Internet censorship.
@@ -43,14 +45,29 @@ Lastly, some M-Lab hosted tests do not use our ETL pipeline. Data for these test
 * [Paris Traceroute](https://console.developers.google.com/storage/browser/archive-measurement-lab/paris-traceroute/){:target="_blank"}
   * Paris Traceroute maps network topology between two points on the Internet.
   * More information is available at [Paris Traceroute](http://www.paris-traceroute.net/){:target="_blank"}
-* [SamKnows](https://www.samknows.com/){:target="_blank"}
-  * The SamKnows performance testing platform is used by the USA's Federal Communications Commission (FCC), European Commission, UK government (Ofcom), Brazilian government (Anatel), Singapore's IDA and other government-backed studies worldwide.
-  * SamKnows infrastructure includes off-net test servers hosted by M-Lab, and the M-Lab and SamKnows teams coordinate regularly to support the various regulatory reporting periods of data collection conducted by SamKnows.
 * [SideStream](https://console.developers.google.com/storage/browser/archive-measurement-lab/sidestream/){:target="_blank"}
   * SideStream collects TCP state information about completed TCP connections on a system.
   * More information is available on [Github](https://github.com/npad/sidestream){:target="_blank"}.
 
-### Inactive Tests
+#### non-ETL Processed
+
+* [BISmark](http://uploads.projectbismark.net/){:target="_blank"}
+* [MobiPerf](https://console.cloud.google.com/storage/browser/openmobiledata_public){:target="_blank"}
+* [Reverse Traceroute](https://console.cloud.google.com/storage/browser/m-lab_revtr){:target="_blank"}
+* [SamKnows](https://www.samknows.com/){:target="_blank"}
+  * The SamKnows performance testing platform is used by the USA's Federal Communications Commission (FCC), European Commission, UK government (Ofcom), Brazilian government (Anatel), Singapore's IDA and other government-backed studies worldwide.
+  * SamKnows infrastructure includes off-net test servers hosted by M-Lab, and the M-Lab and SamKnows teams coordinate regularly to support the various regulatory reporting periods of data collection conducted by SamKnows.
+
+### Measurement Data (Platform Data)
+
+* [M-Lab Collectd](https://console.developers.google.com/storage/browser/archive-measurement-lab/utilization/){:target="_blank"}
+  * mlab-collectd is a monitoring tool for M-Lab slices, which collects resource utilization information about all M-Lab servers.
+  * More information is available on [Github](https://github.com/m-lab/collectd-mlab){:target="_blank"}.
+* [M-Lab DISCO Switch Telemetry Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/switch/){:target="_blank"}
+  * Since June 2016, M-Lab has collected high resolution switch telemetry for each M-Lab server and site uplink. The **DIS**card **CO**llection (a.k.a. DISCO) dataset is also published as a standard M-Lab BigQuery table: `measurement-lab.base_tables.switch`
+  * Our [blog post announcing this dataset]({{site.baseurl}}/blog/disco-dataset/#new-disco-switch-telemetry-dataset) provides more information about the DISCO dataset.
+
+### Historical Data Sets (e.g. Retired Tests)
 
 * [Glasnost](https://console.developers.google.com/storage/browser/archive-measurement-lab/glasnost/){:target="_blank"} (**deprecated**)
   * Glasnost detects prioritization or censorship of network traffic.
@@ -62,22 +79,6 @@ Lastly, some M-Lab hosted tests do not use our ETL pipeline. Data for these test
 * [ShaperProbe](https://console.developers.google.com/storage/browser/archive-measurement-lab/shaperprobe/){:target="_blank"} (**deprecated**)
   * **M-Lab no longer supports this tool, but its archived data are available on GCS.**
   * ShaperProbe detected prioritization of network traffic.
-
-## Links to Public M-Lab Platform Data
-
-* [M-Lab Collectd](https://console.developers.google.com/storage/browser/archive-measurement-lab/utilization/){:target="_blank"}
-  * mlab-collectd is a monitoring tool for M-Lab slices, which collects resource utilization information about all M-Lab servers.
-  * More information is available on [Github](https://github.com/m-lab/collectd-mlab){:target="_blank"}.
-* [M-Lab DISCO Switch Telemetry Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/switch/){:target="_blank"}
-  * Since June 2016, M-Lab has collected high resolution switch telemetry for each M-Lab server and site uplink. The **DIS**card **CO**llection (a.k.a. DISCO) dataset is also published as a standard M-Lab BigQuery table: `measurement-lab.base_tables.switch`
-  * Our [blog post announcing this dataset]({{site.baseurl}}/blog/disco-dataset/#new-disco-switch-telemetry-dataset) provides more information about the DISCO dataset.
-
-## Data for M-Lab Tests Published Elsewhere by Test Developers
-
-* [BISmark](http://uploads.projectbismark.net/){:target="_blank"}
-* [MobiPerf](https://console.cloud.google.com/storage/browser/openmobiledata_public){:target="_blank"}
-* [Reverse Traceroute](https://console.cloud.google.com/storage/browser/m-lab_revtr){:target="_blank"}
-* [SamKnows](https://www.samknows.com/){:target="_blank"}
 
 ## Data License and Citing M-Lab Data
 
