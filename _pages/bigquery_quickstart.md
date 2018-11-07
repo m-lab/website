@@ -17,7 +17,7 @@ Follow the next step to create a project. You may see prompts to try BigQuery fo
 
 ### Step 1. Join the M-Lab Discuss Google Group
 
-Join the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"} with the same account you used to create your Google Cloud Platform Console project. Joining this group enables your account so that you can make queries against M-Lab's BigQuery tables.
+Join the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"} with the Gmail or GSuite account you wish to use to query M-Lab data. Joining this group enables your account so that you can make queries against M-Lab's BigQuery tables without charge.
 
 ### Step 2. Configure Google Cloud Platform Console Project
 
@@ -25,7 +25,12 @@ Create a project in [Google Cloud Platform Console](https://console.developers.g
 
 ![Cloud Resource Manager - Create a Project]({{ site.baseurl }}/images/bqquickstart/2-cloudresourcemanager.png)
 
+Click on "Create Project":
+
 ![New Project - Gmail account]({{ site.baseurl }}/images/bqquickstart/2.1-cloudresourcemanager.png)
+
+The image above shows the "New Project" screen for a Gmail account.
+Below is the "New Project" screen for a GSuite account.
 
 ![New Project - GSuite account]({{ site.baseurl }}/images/bqquickstart/3-new-project.png)
 
@@ -37,9 +42,13 @@ Next, enable the BigQuery API for your project.
 
 ![Enable BigQuery APIs]({{ site.baseurl }}/images/bqquickstart/6-enable-apis.png)
 
+Click on "View All", then search for BigQuery:
+
 ![View All APIs]({{ site.baseurl }}/images/bqquickstart/7-view-all-apis.png)
 
 ![BigQuery API]({{ site.baseurl }}/images/bqquickstart/8-bq-api.png)
+
+Enable the BigQuery API for your project:
 
 ![Enable BigQuery API]({{ site.baseurl }}/images/bqquickstart/9-enable-bq-api.png)
 
