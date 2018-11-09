@@ -35,11 +35,17 @@ You may now query M-Lab datasets from this project at no charge. Note also that 
 
 You may prefer to use the Google Cloud SDK to query M-Lab data. The SDK provides a convenient command line interface for interacting with Google Cloud products.
 
-### First, subscribe the Google account you wish to use to the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"}. Members of this group are whitelisted to use the `measurement-lab` project in the Google Cloud Platform console or Google Cloud SDK so that queries charges are paid for by M-Lab.
+### First, subscribe the Google account you wish to use to the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"}.
 
-### Next, download and install the [Google Cloud SDK](https://cloud.google.com/sdk/){:target="_blank"} using the installation and Quick Start instructions for your operating system.
+Members of this group are whitelisted to use the `measurement-lab` project in the Google Cloud Platform console or Google Cloud SDK so that queries charges are paid for by M-Lab.
 
-### Authenticate the SDK installation using the Gmail account you subscribed to M-Lab Discuss. Use the command `$ gcloud auth login` and follow the instructions to authenticate:
+### Next, download and install the [Google Cloud SDK](https://cloud.google.com/sdk/){:target="_blank"}
+
+Use the installation and Quick Start instructions for your operating system.
+
+### Authenticate the SDK installation using the Gmail account you subscribed to M-Lab Discuss.
+
+Use the command `$ gcloud auth login` and follow the instructions to authenticate:
 
 ![Google Cloud SDK - command line login]({{ site.baseurl }}/images/bqquickstart/cli-sdk/1-cli-sdk.png)
 
@@ -53,7 +59,7 @@ After installation and authentication, your terminal should show something like:
 
 ![Google Cloud SDK - terminal success message]({{ site.baseurl }}/images/bqquickstart/cli-sdk/4-cli-sdk-authd-terminal.png)
 
-### Next, set your default project to `measurement-lab`:
+### Finally, set your default project to `measurement-lab`:
 
 ![Google Cloud SDK - set project]({{ site.baseurl }}/images/bqquickstart/cli-sdk/5-cli-sdk-set-proj.png)
 
