@@ -27,4 +27,8 @@ Please cite this data set as follows: **The M-Lab NDT Data Set, &lt;date range u
 
 **Source code** is available at [https://github.com/ndt-project/ndt/](https://github.com/ndt-project/ndt/){:target="_blank"}.
 
-**Get more information** at [http://software.internet2.edu/ndt/](http://software.internet2.edu/ndt/){:target="_blank"}.
+## Illustration of how NDT works
+
+The illustration below provides an overview of how NDT works. To learn more about NDT, **Get more information** at [http://software.internet2.edu/ndt/](http://software.internet2.edu/ndt/){:target="_blank"}.
+
+![Illustration of the NDT test protocol]({{ site.baseurl }}/images/tests/ndt_explanation.png)

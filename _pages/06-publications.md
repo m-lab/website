@@ -252,6 +252,9 @@ M-Lab Research Team
 
 [Download PDF]({{ site.baseurl }}/publications/isp-interconnection-impact.pdf){:.download-link .paper-download target="_blank"}
 
+* Study methodology referenced on page 35, formerly on code.google.com, may now be found on this website as a [PDF]({{site.baseurl}}/publications/2014_mlab_interconnection_methodological_overview.pdf).
+* NDT source code and NDT Test methodology documents referenced on page 36, formerly on code.google.com, may now be found on GitHub: [NDT Source Code](https://github.com/ndt-project/ndt){:target="_blank"} - [NDT Test Methodology](https://github.com/ndt-project/ndt/wiki/NDTTestMethodology){:target="_blank"}
+
 ### Challenges and Issues on Collecting and Analyzing Large Volumes of Network Data Measurements
 {:.no_toc}
 
