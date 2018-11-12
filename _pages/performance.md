@@ -20,7 +20,7 @@ The measurements are aggregated by:
 * **Internet Service Provider** (ISP)
 * **Vantage point** (i.e., M-Lab site)
 
-These visualizations can show one or more metrics at different levels of aggregation at the same time. A few examples of how metrics and aggregation criteria can be combined to provide interesting visualizations are provided in the following pages. If you're interested, you can find a detailed description of how the aggregated statistics are computed at [https://github.com/m-lab/mlab-wikis/blob/master/PDEChartsNDT.md](https://github.com/m-lab/mlab-wikis/blob/master/PDEChartsNDT.md).
+These visualizations can show one or more metrics at different levels of aggregation at the same time. A few examples of how metrics and aggregation criteria can be combined to provide interesting visualizations are provided in the following pages. If you're interested, you can find a detailed description of how to compute common metrics from NDT data, please review: [Calculating Common Metrics]({{ site.baseurl }}/data/docs/bq/ndtmetrics/).
 
 ## Global Map of Median Download Throughput
 
