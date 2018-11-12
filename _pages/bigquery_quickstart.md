@@ -81,4 +81,15 @@ Given the resources and expertise, you can develop your own application that use
 
 ### Using a Service Account
 
-If you want to query M-Lab data using a service account (e.g., @developer.gserviceaccount.com) associated with your GCP application, please email [support@measurementlab.net](mailto:support@measurementlab.net) so that we can add your account to M-Lab Discuss manually. **Please note that as of this writing, M-Lab has not confirmed whether service accounts associated with external GCP projects will incur billing costs for querying M-Lab datasets, tables, and views.** We hope to test this and update this document accordingly in the near future.
+If you want to query M-Lab data using a service account (e.g., @developer.gserviceaccount.com) associated with your GCP application, please email [support@measurementlab.net](mailto:support@measurementlab.net) so that we can add your account to M-Lab Discuss manually.
+
+Please note that M-Lab does not extensively test applications that use service accounts to query our data to check which operations may or may not incur billing. Because of the means by which M-Lab must whitelist query users, we cannot guarantee that no charges will be incurred by applications using service accounts which query M-Lab datasets, tables, and views.
+
+M-Lab has confirmed that the following test did not incur billing:
+
+* A GCP project was created using a test Gmail account
+* A service account was created with the IAM roles in the test GCP project: _BigQuery User, BigQuery Job User, BigQuery Data Viewer_
+* The service account was added to the M-Lab Discuss Google Group
+* The Google Cloud SDK was installed on a Linux computer and configured to use the test GCP project, and its service account
+* Several queries were made to datasets within the `measurement-lab` project
+* Though these queries appeared in the GCP BigQuery query hostory for the test project, no billing transactions were present for the queries
