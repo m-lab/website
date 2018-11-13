@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Paris Traceroute bug + M-Lab"
+title: "Update: Paris Traceroute bug from Early 2018"
 author: "Chris Ritzo"
 date: 2018-11-12
 breadcrumb: blog
@@ -10,7 +10,7 @@ categories:
   - platform
 ---
 
-In December 2017, M-Lab was notified of oddities in the Paris Traceroute data. Upon investigation, a bug in the Paris Traceroute code was identified. The bug caused bad measurement data in 2.7% of the traceroutes since July 2016.
+In December 2017, M-Lab was notified of oddities in the Paris Traceroute data, which we then [wrote about in January 2018]({{site.baseurl}}/blog/pt-bug/). Upon investigation, a bug in the Paris Traceroute code was identified. The bug caused bad measurement data in 2.7% of the traceroutes since July 2016.
 <!--more-->
 
 The M-Lab team is doing development to work around the bug in several ways:
@@ -22,7 +22,7 @@ The M-Lab team is doing development to work around the bug in several ways:
 
 The developers of Paris Traceroute reached out to us after our initial disclosure and created a version with that one bug fixed which can be found in the [master 2 branch in the official repository](https://github.com/libparistraceroute/libparistraceroute/tree/master2){:target="_blank"}. We are in the process of upgrading all our systems to this new version of Paris Traceroute.
 
-Through disclosures and analyses like these, M-Lab re-confirms its commitment to open data and open science. Our raw data, warts, bugs, and all, is and will be always [available](https://console.google.com/storage/browser/archive-measurement-lab/){:target="_blank"}, while our processed data (https://bigquery.cloud.google.com/dataset/measurement-lab:release) continues to reflect our best understanding of the state of the Internet represented by that raw data.
+Through disclosures and analyses like these, M-Lab re-confirms its commitment to open data and open science. Our raw data, warts, bugs, and all, is and will be always [available](https://console.google.com/storage/browser/archive-measurement-lab/){:target="_blank"}, while our [processed data](https://bigquery.cloud.google.com/dataset/measurement-lab:release){:target="_blank"} continues to reflect our best understanding of the state of the Internet represented by that raw data.
 
 ## Read More: The bug and its fixes
 
