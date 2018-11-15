@@ -26,7 +26,8 @@ deploy:
     local_dir: _site
     on:
       repo: m-lab/m-lab.github.io
-      branch: master
+      all_branches: true
+      condition: $TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push
   - provider: gcs
     access_key_id: GOOGWS5RSVP6RJ3HGCQWGFZG
     secret_access_key: 
@@ -36,7 +37,8 @@ deploy:
     local_dir: _site
     on:
       repo: m-lab/m-lab.github.io
-      branch: sandbox-*
+      all_branches: true
+      condition: $TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push
 before_install:
   # The Amazon AWS credentials needed by the cf-s3-inv utility in after_success
   # are stored in a file encrypted with the Travis keys associated with this
