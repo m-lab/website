@@ -4,10 +4,6 @@ This is the source code of the Measurement Lab website built using [Jekyll](http
 
 Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-lab.github.io.png?branch=master)](http://travis-ci.org/m-lab/m-lab.github.io)
 
-### HTML Compression
-
-This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the `layout: compress` from the default template in the _layouts folder.
-
 ## Site Structure
 
 | Directory | Description |
@@ -22,3 +18,11 @@ This site enables HTML Compression for optimizing performance.  If it is desired
 | js | Contains the js libraries for the project. |
 | images | Contains all the image files for the site |
 | publications | Contains all the pdfs and docs that the site links too |
+
+## HTML Compression
+
+This site enables HTML Compression for optimizing performance.  If it is desired to not compress pages while doing development, developers can simply remove the `layout: compress` from the default template in the _layouts folder.
+
+## Contributing
+
+To learn about how to setup your environment, and our standards and practices for contributing code, please see [CONTRIBUTING.md](CONTRIBUTING.md).
