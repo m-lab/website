@@ -33,6 +33,8 @@ Advanced users may also be interested in obtaining raw M-Lab test data for detai
 
 * [DISCO dataset]({{ site.baseurl }}/blog/disco-dataset/)
 
-### Switch Discard Analysis 2018
+### Analysis
 
 * [Discard Analysis 2018]({{ site.baseurl }}/data/docs/analysis/discard-analysis-2018/)
+
+* [Exploring the African Internet]({{ site.baseurl }}/data/docs/analysis/exploring-african-internet/)
