@@ -17,6 +17,17 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2018
 {:.no_toc}
 
+### Can Competition-Enhancing Regulation Bridge the Quality Divide in Internet Provision?
+{:.no_toc}
+
+{:.paper-description}
+An analysis focusing on explaining differences in average connection speed per country per year using a pro-competition regulatory score constructed from country responses to an annual survey of national ICT regulators conducted by the International Telecommunication Union (ITU).
+
+{:.paper-author}
+Montenegro, Lourdes National University of Singapore (NUS)
+
+[Download PDF](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3141814){:.download-link .paper-download target="_blank"}
+
 ### Reelección presidencial con los medios en crisis | Balance especial Elecciones 2018
 {:.no_toc}
 
@@ -31,7 +42,18 @@ IPYS Venezuela
 ## 2017
 {:.no_toc}
 
-### New Worldwide Broadband Speed League Unveiled
+### NETPerfTrace – Predicting Internet Path Dynamics and Performance with Machine Learning
+{:.no_toc}
+
+{:.paper-description}
+We study the problem of predicting Internet path changes and path performance using traceroute measurements and machine learning models. Path changes are frequently linked to path inflation and performance degradation, therefore the relevance of the problem. We introduce NETPerfTrace, an Internet Path Tracking system to forecast path changes and path latency variations.
+
+{:.paper-author}
+Wasserman, Sarah; Casas, Pedro; Cuvelier, Thibaut; Donnet, Benoit
+
+[Download PDF](https://orbi.uliege.be/handle/2268/211667){:.download-link .paper-download target="_blank"}
+
+New Worldwide Broadband Speed League Unveiled
 {:.no_toc}
 
 {:.paper-description}
