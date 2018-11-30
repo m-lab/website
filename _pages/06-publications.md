@@ -53,8 +53,7 @@ Wasserman, Sarah; Casas, Pedro; Cuvelier, Thibaut; Donnet, Benoit
 
 [Download PDF](https://orbi.uliege.be/handle/2268/211667){:.download-link .paper-download target="_blank"}
 
-
-### New Worldwide Broadband Speed League Unveiled
+New Worldwide Broadband Speed League Unveiled
 {:.no_toc}
 
 {:.paper-description}
