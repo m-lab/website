@@ -164,7 +164,7 @@ WHERE
 
 NDT keeps track of the number of packets retransmitted during a test, in the web100 variable `web100_log_entry.snap.SegsRetrans`.
 
-Packet retransmission is computed as the ratio between the re-transmitted packets and all the transmitted packets.
+Packet retransmission is computed as the ratio between the re-transmitted data packets and all the transmitted data packets. Packets with zero length payload (e.g. pure ACKs) are not part of the retransmission calculation.
 `web100_log_entry.snap.SegsRetrans/web100_log_entry.snap.DataSegsOut`
 
 Given that the NDT server updates the web100 variables `web100_log_entry.snap.SegsRetrans` and `web100_log_entry.snap.DataSegsOut` only when sending data, **packet retransmission is only estimated for server-to-client or download tests**.
@@ -208,7 +208,7 @@ An NDT test can be in 3 different states. Each state represents different condit
 * **server-limited**, when the server limits the data that can be sent.
   * The web100 variable `web100_log_entry.snap.SndLimTimeSnd` reports the time spent in this state.
   * This state can happen because
-    * The uplink is congested. Note however that M-Lab servers are intentionally over provisioned to avoid this case.
+    * The uplink is congested. Note however that M-Lab servers are intentionally over provisioned to minimize this case.
     * The server cannot send as much data as the network and the receiver would allow, in specific phases of the tests. This usually happens during [TCP slow start](https://en.wikipedia.org/wiki/TCP_congestion_control#Slow_start){:target="_blank"}, especially with fast networks and high values of initial window.
     * The server cannot send as much data as the network and the receiver would allow, during the whole test. This can happen for specific TCP configurations. However, this kind of configuration is disabled by default on M-Lab servers.
 
