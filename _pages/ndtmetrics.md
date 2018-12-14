@@ -115,6 +115,42 @@ WHERE
   LIMIT 100
 ```
 
+### Alternate BigQuery Views for Only Valid Download & Upload Tests
+
+Note that in the queries above for Upload and Download throughput, the example uses the BigQuery View, `measurement-lab.release.ndt_all`, and filters for valid **download** tests using `WHERE ...` statements used to filter for acceptable TCP parameters indicating such. This method would provide researchers with the ability to tune their queries to investigate tests with specific values.
+
+Alternately, M-Lab provides BigQuery views that apply the parameters for valid upload and download tests. For researchers interested in using what M-Lab considers valid tests for research, the examples above can be simplified by querying the appropriate view:
+
+**Download Throughput:**
+
+```sql
+#standardSQL
+SELECT
+  8 * (web100_log_entry.snap.HCThruOctetsAcked /
+    (web100_log_entry.snap.SndLimTimeRwin +
+    web100_log_entry.snap.SndLimTimeCwnd +
+    web100_log_entry.snap.SndLimTimeSnd)) AS download_Mbps
+FROM
+  `measurement-lab.release.ndt_downloads`
+WHERE
+  partition_date BETWEEN '2017-01-01' AND '2017-08-28'
+  LIMIT 100
+```
+
+**Upload Throughput:**
+
+```sql
+#standardSQL
+SELECT
+ 8 * (web100_log_entry.snap.HCThruOctetsReceived/web100_log_entry.snap.Duration) AS upload_Mbps
+FROM
+  `measurement-lab.release.ndt_uploads`
+WHERE
+  connection_spec.client_geolocation.country_code = 'US'
+  AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
+  LIMIT 100
+```
+
 ## Round Trip Time (RTT)
 
 Server-to-client RTT is affected by TCP congestion. As a consequence, there are (at least) 2 ways to estimate the RTT using web100 data. These 2 ways provide different, non-equivalent information about the user connection.
@@ -160,6 +196,20 @@ WHERE
   LIMIT 100
 ```
 
+The above example using the `ndt_downloads` BigQuery view:
+
+```sql
+#standardSQL
+SELECT
+  web100_log_entry.snap.MinRTT AS min_rtt
+FROM
+  `measurement-lab.release.ndt_downloads`
+WHERE
+  connection_spec.client_geolocation.country_code = 'US'
+  AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
+  LIMIT 100
+```
+
 ## Packet Retransmission Rate
 
 NDT keeps track of the number of packets retransmitted during a test, in the web100 variable `web100_log_entry.snap.SegsRetrans`.
@@ -180,20 +230,7 @@ SELECT
  web100_log_entry.connection_spec.local_ip AS local_ip,
  (web100_log_entry.snap.SegsRetrans / web100_log_entry.snap.DataSegsOut) AS packet_retransmission_rate
 FROM
-  `measurement-lab.release.ndt_all`
-WHERE
- connection_spec.data_direction = 1
- AND web100_log_entry.snap.HCThruOctetsAcked >= 8192
- AND (web100_log_entry.snap.SndLimTimeRwin +
-      web100_log_entry.snap.SndLimTimeCwnd +
-      web100_log_entry.snap.SndLimTimeSnd) >= 9000000
- AND (web100_log_entry.snap.SndLimTimeRwin +
-      web100_log_entry.snap.SndLimTimeCwnd +
-      web100_log_entry.snap.SndLimTimeSnd) < 600000000
- AND web100_log_entry.snap.DataSegsOut > 0
- AND (web100_log_entry.snap.State = 1
-      OR (web100_log_entry.snap.State >= 5
-          AND web100_log_entry.snap.State <= 11))
+  `measurement-lab.release.ndt_downloads`
 LIMIT 100
 ```
 
