@@ -115,6 +115,42 @@ WHERE
   LIMIT 100
 ```
 
+### Alternate BigQuery Views for Only Valid Download & Upload Tests
+
+Note that in the queries above for Upload and Download throughput, the example uses the BigQuery View, `measurement-lab.release.ndt_all`, and filters for valid **download** tests using `WHERE ...` statements used to filter for acceptable TCP parameters indicating such. This method would provide researchers with the ability to tune their queries to investigate tests with specific values.
+
+Alternately, M-Lab provides BigQuery views that apply the parameters for valid upload and download tests. For researchers interested in using what M-Lab considers valid tests for research, the examples above can be simplified by querying the appropriate view:
+
+**Download Throughput:**
+
+```sql
+#standardSQL
+SELECT
+  8 * (web100_log_entry.snap.HCThruOctetsAcked /
+    (web100_log_entry.snap.SndLimTimeRwin +
+    web100_log_entry.snap.SndLimTimeCwnd +
+    web100_log_entry.snap.SndLimTimeSnd)) AS download_Mbps
+FROM
+  `measurement-lab.release.ndt_downloads`
+WHERE
+  partition_date BETWEEN '2017-01-01' AND '2017-08-28'
+  LIMIT 100
+```
+
+**Upload Throughput:**
+
+```sql
+#standardSQL
+SELECT
+ 8 * (web100_log_entry.snap.HCThruOctetsReceived/web100_log_entry.snap.Duration) AS upload_Mbps
+FROM
+  `measurement-lab.release.ndt_uploads`
+WHERE
+  connection_spec.client_geolocation.country_code = 'US'
+  AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
+  LIMIT 100
+```
+
 ## Round Trip Time (RTT)
 
 Server-to-client RTT is affected by TCP congestion. As a consequence, there are (at least) 2 ways to estimate the RTT using web100 data. These 2 ways provide different, non-equivalent information about the user connection.
@@ -158,4 +194,148 @@ WHERE
        OR (web100_log_entry.snap.State >= 5
        AND web100_log_entry.snap.State <= 11))
   LIMIT 100
+```
+
+The above example using the `ndt_downloads` BigQuery view:
+
+```sql
+#standardSQL
+SELECT
+  web100_log_entry.snap.MinRTT AS min_rtt
+FROM
+  `measurement-lab.release.ndt_downloads`
+WHERE
+  connection_spec.client_geolocation.country_code = 'US'
+  AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
+  LIMIT 100
+```
+
+## Packet Retransmission Rate
+
+NDT keeps track of the number of packets retransmitted during a test, in the web100 variable `web100_log_entry.snap.SegsRetrans`.
+
+Packet retransmission is computed as the ratio between the re-transmitted data packets and all the transmitted data packets. Packets with zero length payload (e.g. pure ACKs) are not part of the retransmission calculation.
+`web100_log_entry.snap.SegsRetrans/web100_log_entry.snap.DataSegsOut`
+
+Given that the NDT server updates the web100 variables `web100_log_entry.snap.SegsRetrans` and `web100_log_entry.snap.DataSegsOut` only when sending data, **packet retransmission is only estimated for server-to-client or download tests**.
+
+It is also possible to also measure the byte retransmission, as `web100_log_entry.snap.OctetsRetrans/web100_log_entry.snap.DataOctetsOut`
+
+The complete BigQuery query is:
+
+```sql
+#standardSQL
+SELECT
+ web100_log_entry.connection_spec.remote_ip AS remote_ip,
+ web100_log_entry.connection_spec.local_ip AS local_ip,
+ (web100_log_entry.snap.SegsRetrans / web100_log_entry.snap.DataSegsOut) AS packet_retransmission_rate
+FROM
+  `measurement-lab.release.ndt_downloads`
+LIMIT 100
+```
+
+## Network-limited Time Ratio and Client-limited Time Ratio
+
+An NDT test can be in 3 different states. Each state represents different conditions that limit the data sent by the server to the client.
+
+* **network-limited**, when the network is congested.
+  * The web100 variable `web100_log_entry.snap.SndLimTimeCwnd` reports the time spent in this state.
+* **receiver-limited**, when the receiver (client) limits the data that can be received.
+  * The web100 variable `web100_log_entry.snap.SndLimTimeRwin` reports the time spent in this state.
+* **server-limited**, when the server limits the data that can be sent.
+  * The web100 variable `web100_log_entry.snap.SndLimTimeSnd` reports the time spent in this state.
+  * This state can happen because
+    * The uplink is congested. Note however that M-Lab servers are intentionally over provisioned to minimize this case.
+    * The server cannot send as much data as the network and the receiver would allow, in specific phases of the tests. This usually happens during [TCP slow start](https://en.wikipedia.org/wiki/TCP_congestion_control#Slow_start){:target="_blank"}, especially with fast networks and high values of initial window.
+    * The server cannot send as much data as the network and the receiver would allow, during the whole test. This can happen for specific TCP configurations. However, this kind of configuration is disabled by default on M-Lab servers.
+
+The complete BigQuery query to compute network-limited time is:
+
+```sql
+#standardSQL
+SELECT
+ web100_log_entry.connection_spec.remote_ip,
+ web100_log_entry.connection_spec.local_ip,
+ web100_log_entry.snap.SndLimTimeCwnd /
+   (web100_log_entry.snap.SndLimTimeRwin +
+    web100_log_entry.snap.SndLimTimeCwnd +
+    web100_log_entry.snap.SndLimTimeSnd) AS network_limited_time
+FROM
+  `measurement-lab.release.ndt_all`
+WHERE
+ connection_spec.data_direction = 1
+ AND web100_log_entry.snap.HCThruOctetsAcked >= 8192
+ AND (web100_log_entry.snap.SndLimTimeRwin +
+      web100_log_entry.snap.SndLimTimeCwnd +
+      web100_log_entry.snap.SndLimTimeSnd) >= 9000000
+ AND (web100_log_entry.snap.SndLimTimeRwin +
+      web100_log_entry.snap.SndLimTimeCwnd +
+      web100_log_entry.snap.SndLimTimeSnd) < 600000000
+ AND (web100_log_entry.snap.State = 1
+     OR (web100_log_entry.snap.State >= 5
+         AND web100_log_entry.snap.State <= 11))
+LIMIT 100
+```
+
+The complete BigQuery query to compute receiver-limited time is:
+
+```sql
+#standardSQL
+SELECT
+ web100_log_entry.connection_spec.remote_ip AS remote_ip,
+ web100_log_entry.connection_spec.local_ip AS local_ip,
+ web100_log_entry.snap.SndLimTimeRwin /
+   (web100_log_entry.snap.SndLimTimeRwin +
+    web100_log_entry.snap.SndLimTimeCwnd +
+    web100_log_entry.snap.SndLimTimeSnd) AS receiver_limited_time
+FROM
+  `measurement-lab.release.ndt_all`
+WHERE
+ connection_spec.data_direction = 1
+ AND web100_log_entry.snap.HCThruOctetsAcked >= 8192
+ AND (web100_log_entry.snap.SndLimTimeRwin +
+      web100_log_entry.snap.SndLimTimeCwnd +
+      web100_log_entry.snap.SndLimTimeSnd) >= 9000000
+ AND (web100_log_entry.snap.SndLimTimeRwin +
+      web100_log_entry.snap.SndLimTimeCwnd +
+      web100_log_entry.snap.SndLimTimeSnd) < 600000000
+ AND (web100_log_entry.snap.State = 1
+      OR (web100_log_entry.snap.State >= 5
+          AND web100_log_entry.snap.State <= 11))
+LIMIT 100
+```
+
+## Receiver Window Scale
+
+The [receiver window scale](https://en.wikipedia.org/wiki/TCP_window_scale_option){:target="_blank"} is the value negotiated at the beginning of a TCP connection to scale the receiver window size. The receive window size is the maximum amount of received data that can be buffered at one time on the receiving side of a TCP connection.
+
+The value of receiver window scale depends on the type and the version of the client's operating system. As a consequence, the distribution of receiver window scale values shows the distribution of operating systems among NDT users.
+
+The receiver window scale of a test is the value of the web100 variable `web100_log_entry.snap.WinScaleRcvd`. As described in the [web100 variable definition](https://cloud.google.com/bigquery/docs/tcp-kis.txt){:target="_blank"}, the valid values of `web100_log_entry.snap.WinScaleRcvd` are (-1 .. 14), where -1 means that the receiver did not request any value.
+
+The complete BigQuery query is:
+
+```sql
+#standardSQL
+SELECT
+ web100_log_entry.connection_spec.remote_ip AS remote_ip,
+ web100_log_entry.connection_spec.local_ip AS local_ip,
+ web100_log_entry.snap.WinScaleRcvd
+FROM
+ `measurement-lab.release.ndt_all`
+WHERE
+ connection_spec.data_direction = 1
+ AND web100_log_entry.snap.HCThruOctetsAcked >= 8192
+ AND (web100_log_entry.snap.SndLimTimeRwin +
+      web100_log_entry.snap.SndLimTimeCwnd +
+      web100_log_entry.snap.SndLimTimeSnd) >= 9000000
+ AND (web100_log_entry.snap.SndLimTimeRwin +
+      web100_log_entry.snap.SndLimTimeCwnd +
+      web100_log_entry.snap.SndLimTimeSnd) < 600000000
+ AND web100_log_entry.snap.WinScaleRcvd >= -1
+ AND web100_log_entry.snap.WinScaleRcvd <= 14
+ AND (web100_log_entry.snap.State = 1
+      OR (web100_log_entry.snap.State >= 5
+          AND web100_log_entry.snap.State <= 11))
+LIMIT 100
 ```
