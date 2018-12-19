@@ -20,7 +20,7 @@ ln -s -f ../_hooks hooks
 * From within the cloned website repository, install required dependencies:
   * `bundle install`
 * Test a working installation by running the Jekyll server, passing in a blank `--baseurl` parameter:
-  * `jekyll serve --baseurl`
+  * `jekyll serve --baseurl ""`
   * View the generated site by going to [http://localhost:4000/](http://localhost:4000/)
 
 ## Code Standards and Practice
