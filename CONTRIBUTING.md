@@ -117,3 +117,25 @@ When your new content changes or new site features are ready for publication, su
 ### Publishing Reviewed Pull Requests to Production
 
 Content that has been approved via code review in a pull request is periodically tagged in Github, which triggers Travis CI to build and push the release update to our production website location.
+
+## Prose Style Guide
+
+This section describes the "house style" for prose on the m-lab.github.io web site.
+
+* American English, not British English
+* Use Oxford commas
+* Specific styling choices
+  * Capitalize "Internet"
+  * "data" is a mass noun; say "data are", not "data is"
+  * "open source", not "open-source"
+  * "website", not "web site" or "web-site"
+  * "setup", not "set up" or "set-up", as both noun and verb
+* List formatting
+  * Full stops at the end of list items which are complete sentences
+  * No full stops at the end of list items which are sentence fragments
+  * Nice-looking parallelism takes precedence over these rules
+* TO DECIDE
+  * "command line" or "command-line", especially when used as an adjective?
+  * Commas inside or outside quotes. That is, which way of the following?
+    * '...a kind of "meta-ISP", which provides...'
+    * '...a kind of "meta-ISP," which provides...'
