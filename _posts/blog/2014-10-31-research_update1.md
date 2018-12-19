@@ -28,12 +28,13 @@ Using the New York Cogent site as an indicator, at the beginning of February 201
 
 Below we show an example of the ToS field in the IP header of packets received from a Verizon FIOS customers on February 28, 2014 from the data we extracted. Those wishing to explore this more fully are welcome to access the NDT data archives from [BigStore](https://console.developers.google.com/storage/m-lab/ndt/). Each M-Lab site should have an extensive sample of ndttrace files.
 
-{:.no-highlight}
+```text
     16:21:09.973746 IP (tos 0x48, ttl 55, id 23787, offset 0, flags [DF], proto TCP (6), length 1500)
         pool-108-41-239-212.nycmny.fios.verizon.net.57090 > 38.106.70.160.40047: Flags [P.], seq 3337041:3338489, ack 0, win 8235, options [nop, nop,TS[|tcp]>
              0x0000:  4548 05dc 5ceb 4000 3706 17e1 6c29 efd4  EH..\.@.7...l)..
              0x0010:  266a 46a0 df02 9c6f 241b 4941 fb8f 03bf  &jF....o$.IA....
              0x0020:  8018 202b f194 0000 0101 080a            ...+........
+```
 
 ![Example of ToS field in the IP header of packets received from a Verizon FIOS customers on February 28, 2014 from the data we extracted]({{ site.baseurl }}/images/blog/blog1-image2.png){:.inherit-width width="100%"}<br />
 What does this indicate? It indicates that the recovery from the degradation in performance observed prior to February 2014 may not have been experienced by all consumers.
