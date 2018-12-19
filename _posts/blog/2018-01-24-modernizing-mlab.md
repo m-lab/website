@@ -45,7 +45,7 @@ Upgrades to nearly all locations in the United States were completed by mid-2017
 
 ### Open Source ETL Pipeline
 
-In late summer 2017, we moved to a new open source data acquisition and ETL pipeline for ingesting data into Google Cloud Storage and BigQuery. The pipeline code for [acquisition](https://github.com/m-lab/scraper) and [ETL](https://github.com/m-lab/etl) is available in Github and is now in production for NDT. It currently supports geographic annotations and will support ASN annotation this year. Our development team is currently experimenting with new efficient schemas for NDT and Paris Traceroute. Look for more on the open source ETL pipeline transition in an upcoming blog post.
+In late summer 2017, we moved to a new open source data acquisition and ETL pipeline for ingesting data into Google Cloud Storage and BigQuery. The pipeline code for [acquisition](https://github.com/m-lab/scraper) and [ETL](https://github.com/m-lab/etl) is available in GitHub and is now in production for NDT. It currently supports geographic annotations and will support ASN annotation this year. Our development team is currently experimenting with new efficient schemas for NDT and Paris Traceroute. Look for more on the open source ETL pipeline transition in an upcoming blog post.
 
 ### Monitoring and Alerting
 

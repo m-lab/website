@@ -25,7 +25,7 @@ Next, you may need to read and agree to the Terms of Service Updates and click "
 
 ![Updates to Terms of Service]({{ site.baseurl }}/images/bqquickstart/2_accept_bq_terms.png)
 
-After you agree to the terms of service, your Google Cloud Platform should look like the image below. M-Lab datasets, tables, and views can be displayed by clicking the project text, `measurement-lab` in the left column under **Resources**.
+After you agree to the terms of service, your Google Cloud Platform should look like the image below. M-Lab datasets, tables, and views can be displayed by clicking the project text `measurement-lab` in the left column under **Resources**.
 
 ![measurement-lab Project in Google Cloud Platform console]({{ site.baseurl }}/images/bqquickstart/3_measurement_lab_proj.png)
 
@@ -37,9 +37,9 @@ You may prefer to use the Google Cloud SDK to query M-Lab data. The SDK provides
 
 ### First, subscribe the Google account you wish to use to the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"}.
 
-Members of this group are whitelisted to use the `measurement-lab` project in the Google Cloud Platform console or Google Cloud SDK so that queries charges are paid for by M-Lab.
+Members of this group are whitelisted to use the `measurement-lab` project in the Google Cloud Platform console or Google Cloud SDK so that query charges are paid for by M-Lab.
 
-### Next, download and install the [Google Cloud SDK](https://cloud.google.com/sdk/){:target="_blank"}
+### Next, download and install the [Google Cloud SDK](https://cloud.google.com/sdk/){:target="_blank"}.
 
 Use the installation and Quick Start instructions for your operating system.
 
@@ -77,7 +77,7 @@ If you are new to BigQuery, we suggest that you next consult the following resou
 
 ## BigQuery API
 
-Given the resources and expertise, you can develop your own application that uses M-Lab data using your own Google Cloud Platform Project. To learn more about building a custom application, refer to the [Google Cloud Platform Console documentation](https://cloud.google.com/docs/){:target="_blank"}
+Given the resources and expertise, you can develop your own application that uses M-Lab data using your own Google Cloud Platform Project. To learn more about building a custom application, refer to the [Google Cloud Platform Console documentation](https://cloud.google.com/docs/){:target="_blank"}.
 
 ### Using a Service Account
 
@@ -87,9 +87,9 @@ Please note that M-Lab does not extensively test applications that use service a
 
 M-Lab has confirmed that the following test did not incur billing:
 
-* A GCP project was created using a test Gmail account
-* A service account was created with the IAM roles in the test GCP project: _BigQuery User, BigQuery Job User, BigQuery Data Viewer_
-* The service account was added to the M-Lab Discuss Google Group
-* The Google Cloud SDK was installed on a Linux computer and configured to use the test GCP project, and its service account
-* Several queries were made to datasets within the `measurement-lab` project
-* Though these queries appeared in the GCP BigQuery query hostory for the test project, no billing transactions were present for the queries
+* A GCP project was created using a test Gmail account.
+* A service account was created with the IAM roles in the test GCP project: _BigQuery User, BigQuery Job User, BigQuery Data Viewer_.
+* The service account was added to the M-Lab Discuss Google Group.
+* The Google Cloud SDK was installed on a Linux computer and configured to use the test GCP project and its service account.
+* Several queries were made to datasets within the `measurement-lab` project.
+* Though these queries appeared in the GCP BigQuery query history for the test project, no billing transactions were present for the queries.

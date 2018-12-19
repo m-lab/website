@@ -7,7 +7,7 @@ breadcrumb: tests
 
 # Glasnost
 
-**Glasnost was decommissioned on 07/7/2017. However, the source code, data and data analysis code is still available at the link provided below.**
+**Glasnost was decommissioned on 07/7/2017. However, the source code, data, and data analysis code is still available at the link provided below.**
 
 Glasnost attempted to detect whether your Internet service provider (ISP) was performing application-specific traffic shaping. Glasnost allowed a user to test whether an ISP was throttling or blocking email, HTTP, SSH, Flash Video, and P2P applications such as BitTorrent.
 

@@ -19,7 +19,7 @@ These visualizations illuminate the state of networks using M-Lab measurements.
 
 The [Observed Network Activity widget](https://stat.ripe.net/widget/network-activity), which shows the distribution of actively used IP addresses within a specific country or network during a user-defined time period. An IP address is considered "active" if it originated an [NDT]({{ site.basurl }}/tests/ndt/) test.
 
-The [Observed Bandwidth Capacity widget](https://stat.ripe.net/widget/bandwidth, which shows the bandwidth distribution within a specific country or network during a user-defined time period, as measured by NDT.
+The [Observed Bandwidth Capacity widget](https://stat.ripe.net/widget/bandwidth), which shows the bandwidth distribution within a specific country or network during a user-defined time period, as measured by NDT.
 
 ## Distribution of NDT tests
 

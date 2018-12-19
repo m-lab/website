@@ -7,7 +7,7 @@ breadcrumb: data
 
 # Calculating Common Metrics for NDT Data
 
-Commonly reported metrics such as upload or download speed, are calculated from data fields saved by the Network Diagnostic Tool. This document explains how those calculations are made in more detail.
+Commonly reported metrics such as upload or download speed are calculated from data fields saved by the Network Diagnostic Tool. This document explains how those calculations are made in more detail.
 
 The most commonly reported metrics are: _Download Throughput (Mbps)_, _Upload Throughput (Mbps)_, _Round Trip Time (ms)_. This page provides recommended queries for these metrics, limiting results to only valid tests. For the purposes of research, we consider valid NDT tests to be those that:
 
@@ -28,7 +28,7 @@ Internet 2's NDT protocol specifies how to calculate these metrics using the dat
 
 In the formulas and examples below, it is important to note the units of measure that NDT uses for fields that represent data sent and received, as well as for fields representing durations.
 
-* **Data sent/recevied** fields are a count of **bytes**
+* **Data sent/recieved** fields are a count of **bytes**
 * **Duration** fields are saved in **microseconds**
 
 The formula below shows how we convert our final values to Mbps when calculating Download or Upload throughput, using **8** as a multiplier in our BigQuery clauses:
@@ -168,7 +168,7 @@ Server-to-client RTT is affected by TCP congestion. As a consequence, there are 
 * This value can be computed as `web100_log_entry.snap.SumRTT/web100_log_entry.snap.CountRTT`
 * In this case, it makes sense to exclude results of tests with **10 or fewer round trip time samples**, because there are not enough samples to accurately estimate the RTT. This condition is expressed in BigQuery with:`web100_log_entry.snap.CountRTT > 10`
 
-Given that the NDT server updates the web100 variables `web100_log_entry.snap.MinRTT` and `web100_log_entry.snap.CountRTT` only when it receives an acknowledgement and given that, during client-to-server tests the NDT server receives an ack only during the 3-way-handshake, RTT values are computed only for server-to-client tests.
+Given that the NDT server updates the web100 variables `web100_log_entry.snap.MinRTT` and `web100_log_entry.snap.CountRTT` only when it receives an acknowledgement, and given that during client-to-server tests the NDT server receives an ack only during the 3-way-handshake, RTT values are computed only for server-to-client tests.
 
 The complete BigQuery example is:
 
@@ -307,7 +307,7 @@ LIMIT 100
 
 ## Receiver Window Scale
 
-The [receiver window scale](https://en.wikipedia.org/wiki/TCP_window_scale_option){:target="_blank"} is the value negotiated at the beginning of a TCP connection to scale the receiver window size. The receive window size is the maximum amount of received data that can be buffered at one time on the receiving side of a TCP connection.
+The [receiver window scale](https://en.wikipedia.org/wiki/TCP_window_scale_option){:target="_blank"} is the value negotiated at the beginning of a TCP connection to scale the receiver window size. The receiver window size is the maximum amount of received data that can be buffered at one time on the receiving side of a TCP connection.
 
 The value of receiver window scale depends on the type and the version of the client's operating system. As a consequence, the distribution of receiver window scale values shows the distribution of operating systems among NDT users.
 

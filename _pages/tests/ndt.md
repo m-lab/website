@@ -9,7 +9,7 @@ breadcrumb: tests
 
 NDT (Network Diagnostic Tool) provides a sophisticated speed and diagnostic test suitable for both the novice and the network researcher. NDT reports upload and download speeds and attempts to determine what problems limit speeds. It also provides detailed diagnostic reporting on what it finds. While the diagnostic messages are most useful for expert users, they can also help novice users by allowing them to provide detailed trouble reports to their network administrator.
 
-When you run the test, you'll be connected to a Measurement Lab (M-Lab) server and your IP address will be shared collected along with your measurement results. M-Lab conducts the test and publishes all test results to promote internet research. Published information includes each device’s IP address, but doesn’t include information about you as an internet user.
+When you run the test, you'll be connected to a Measurement Lab (M-Lab) server and your IP address will be collected along with your measurement results. M-Lab conducts the test and publishes all test results to promote internet research. Published information includes each device’s IP address, but doesn’t include information about you as an Internet user.
 
 Please review M-Lab’s [Privacy Policy]({{ site.baseurl }}/privacy) to understand how data is used before initiating a test.
 
@@ -29,6 +29,6 @@ Please cite this data set as follows: **The M-Lab NDT Data Set, &lt;date range u
 
 ## Illustration of how NDT works
 
-The illustration below provides an overview of how NDT works. To learn more about NDT, **Get more information** at [http://software.internet2.edu/ndt/](http://software.internet2.edu/ndt/){:target="_blank"}.
+The illustration below provides an overview of how NDT works. To learn more about NDT, **get more information** at [http://software.internet2.edu/ndt/](http://software.internet2.edu/ndt/){:target="_blank"}.
 
 ![Illustration of the NDT test protocol]({{ site.baseurl }}/images/tests/ndt_explanation.png)

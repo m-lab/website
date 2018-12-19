@@ -34,11 +34,10 @@ At the end of the day, all of the teams presented their projects to other hackat
 
 ![SIGCOMM Hackathon - M-Lab Participants Working]({{ site.baseurl }}/images/blog/sigcomm2018-presenting.png)
 
-Our groups were awesome to work with, and the collaboration they exhibited exemplified the values of the open-source community. Coming from all over the world, and having mostly never worked together before, it was exciting to see the diversity of thought and expertise in our participants. The ideas and code they produced during the hackathon were very useful to the M-Lab team. The insights gained through this experience will result in substantive improvements to our documentation and processes around cultivating open source contributions. M-Lab was honored to be a part of the first ever SIGCOMM hackathon, and we thank the organizers for inviting us to participate. We also wish to offer the participants who worked with us our gratitude and thanks, and wish each of them well.
+Our groups were awesome to work with, and the collaboration they exhibited exemplified the values of the open source community. Coming from all over the world, and having mostly never worked together before, it was exciting to see the diversity of thought and expertise in our participants. The ideas and code they produced during the hackathon were very useful to the M-Lab team. The insights gained through this experience will result in substantive improvements to our documentation and processes around cultivating open source contributions. M-Lab was honored to be a part of the first ever SIGCOMM hackathon, and we thank the organizers for inviting us to participate. We also wish to offer the participants who worked with us our gratitude and thanks, and wish each of them well.
 
 Check out the participants’ work:
 
 * [Paris Traceroute/RIPE Atlas Vantage Point Similarity](https://github.com/pgigis/vantage-point-similarity)
 * [Associating Paris Traceroute and NDT Test Data](https://nemelor.wordpress.com/2018/08/28/access-to-mlab-traceroute-data-from-google-bigquery/)
 * [Annotating ASN and Annotation Optimization Methods](https://github.com/twabulldogg/annotation-service)
-

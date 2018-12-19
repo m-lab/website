@@ -12,9 +12,9 @@ breadcrumb: about
 
 # Open Internet Measurement
 
-When your Internet connection doesn't work as expected, how can you tell whether the problem is caused by your connection, the application or something else? Answering this question and others like it is surprisingly difficult. That is where Measurement Lab comes in.
+When your Internet connection doesn't work as expected, how can you tell whether the problem is caused by your connection, the application, or something else? Answering this question and others like it is surprisingly difficult. That is where Measurement Lab comes in.
 
-M-Lab is a consortium of research, industry and public-interest partners dedicated to:
+M-Lab is a consortium of research, industry, and public-interest partners dedicated to:
 
 * Providing an open, verifiable measurement platform for global network performance
 * Hosting the largest open Internet performance dataset on the planet
@@ -38,11 +38,11 @@ M-Lab assists scientific research by providing widely distributed servers and am
 {:.about-h2}
 ## Better Open Data for Everyone
 
-All data collected via M-Lab are made available to the public M-Lab’s historical data archive providers  a common pool of historical network measurement information that anyone may use, and is a data source enabling consumers, operators, regulators, researchers, and civil society to understand the state and quality of the internet.
+All data collected via M-Lab are made available to the public. M-Lab’s historical data archive provides a common pool of historical network measurement information that anyone may use, and is a data source enabling consumers, operators, regulators, researchers, and civil society to understand the state and quality of the Internet.
 
 {:.about-h2}
 ## What is the history of M-Lab?
 
-In 2008, [Vint Cerf](http://www.google.com/corporate/execs.html#vint), one of the "fathers of the Internet," began a series of conversations with Internet researchers to learn more about challenges they faced while trying to study Internet performance. Researchers identified several problems, including a lack of widely deployed servers with ample connectivity to support Internet measurement experiments. They also reported an inability to share large data sets with one another easily.
+In 2008, [Vint Cerf](http://www.google.com/corporate/execs.html#vint), one of the "fathers of the Internet", began a series of conversations with Internet researchers to learn more about challenges they faced while trying to study Internet performance. Researchers identified several problems, including a lack of widely deployed servers with ample connectivity to support Internet measurement experiments. They also reported an inability to share large data sets with one another easily.
 
 There also was no public resource that could provide combined performance data to policymakers or to consumers interested in understanding their Internet performance over time. As a result of these conversations, M-Lab was founded to help address the core problems experienced by researchers and to promote large-scale open source measurement of the Internet.

@@ -13,13 +13,13 @@ breadcrumb: data
 * Whenever an M-Lab user starts a test, the client and server interact to measure different aspects of that user's connection.
 * A single user request triggers one or more **tests** (e.g., client-to-server test, server-to-client test).
 * For each test, a server collects a **log**, and the test can be uniquely identified by its log filename.
-* Timestamp fields are stored in our schema in UTC
-* Time only fields are stored in milliseconds (ms)
+* Timestamp fields are stored in our schema in UTC.
+* Time only fields are stored in milliseconds (ms).
 
 ## BigQuery Storage and Processing Datasets
 
 For each release, M-Lab publishes tables and views in two groups of datasets. One group of datasets is used primarily for storage and processing, and another group which we recommended that most researchers use to query for M-Lab data.
- 
+
 Four _storage and processing datasets_ are published for each release, beginning with v3.1:
  
 * **base_tables**
@@ -27,10 +27,10 @@ Four _storage and processing datasets_ are published for each release, beginning
   * This dataset will eventually hold all M-Lab data, from 2009 to present, for NDT, Sidestream, Switch, and Paris Traceroute.
  
 * **batch**
-  * Destination for batch processed data prior to dedupping.
+  * Destination for batch processed data prior to deduping.
  
 * **intermediate_vX_Y_Z**
-  * Provides working, intermediate BigQuery Views for each release version
+  * Provides working, intermediate BigQuery Views for each release version.
   * These views adapt data from tables in the **base_tables** dataset to make **release** views available.
   * Intermediate dataset views are publicly visible for transparency, but we discourage most people from using them directly.
  
@@ -41,7 +41,7 @@ Four _storage and processing datasets_ are published for each release, beginning
 ## Recommended Datasets and Views for Most Researcher Queries
 
 The datasets in the previous section outline where raw M-Lab test data is parsed and stored. While they are also queryable in the above locations, M-Lab recommends that most researchers instead begin querying the views published in our **release** dataset. This will make future table schema transitions less impactful since queries can be pinned to the release views instead of to a specific table name.
- 
+
 Three _researcher query datasets_ are published for each new release:
 
 * **rc**
@@ -65,7 +65,7 @@ Beginning with the upcoming v3.1 release, in the **rc**, **rc_vX_Y_Z**, and **re
 * _ndt_uploads_
 * _ndt_uploads_legacysql_
 
-The views above ending in `_legacysql` require you to use [legacySQL](https://cloud.google.com/bigquery/docs/reference/legacy-sql) queries, and those labeled without it `(standardSQL)` require you the use of [standardSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/) queries. Additionally, the views which include '_uploads_' or '_downloads_' provide a subset of NDT data that are valid, completed tests which meet the criteria described on our page, [Calculating Common Metrics](https://www.measurementlab.net/data/docs/bq/ndtmetrics/). We highly recommend using standardSQL as this will be required to query all M-Lab tables in the future.
+The views above ending in `_legacysql` require you to use [legacySQL](https://cloud.google.com/bigquery/docs/reference/legacy-sql) queries, and those labeled without it (`standardSQL`) require the use of [standardSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/) queries. Additionally, the views which include '_uploads_' or '_downloads_' provide a subset of NDT data that are valid, completed tests which meet the criteria described on our page, [Calculating Common Metrics](https://www.measurementlab.net/data/docs/bq/ndtmetrics/). We highly recommend using standardSQL as this will be required to query all M-Lab tables in the future.
  
 Researchers interested in querying unfiltered NDT data should use the table in the **base_tables** dataset. Sidestream and Paris Traceroute tables will also be added to the **base_tables** dataset in the coming weeks:
  
@@ -120,10 +120,10 @@ Please also review the table/view schema version history and changelog at the en
 
 ## Blacklist Flags Field
 
-The field `blacklist_flags` was used to mark test affected by the "switch discard issue" [identified in 2015-2016]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement). M-Lab NDT data from 2010-01-01 to 2015-10-02 was marked using this field. M-Lab may use the field for other use cases in the future for tests potentially impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test.
+The field `blacklist_flags` was used to mark tests affected by the "switch discard issue" [identified in 2015-2016]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement). M-Lab NDT data from 2010-01-01 to 2015-10-02 were marked using this field. M-Lab may use the field for other use cases in the future for tests potentially impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test.
 
 In the NDT v3.1 schema, we have added a sub-record, `anomalies`, which contains an equivalent field, `anomalies.blacklist_flags`.
- 
+
 Currently, the following values are present in NDT data from 2010-01-01 to 2015-10-02 in these fields:
  
 <div class="table-responsive" markdown="1">
@@ -156,7 +156,7 @@ The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note t
 | `blacklist_flags`                                    |  `integer` |  Deprecated field formerly used to store blacklist flags. Superceded by `anomalies.blacklist_flags`. |
 | `anomalies`                                          | `record`  | A sub-record section containing anomalies fields. |
 | `anomalies.no_meta`                                  | `boolean` | If a test record did not contain a metadata file, this field is set to 1. |
-| `anomalies.snaplog_error`                            | `boolean` | If there are erros in the snaplogs for a test, this field is set to 1. |
+| `anomalies.snaplog_error`                            | `boolean` | If there are errors in the snaplogs for a test, this field is set to 1. |
 | `anomalies.num_snaps`                                | `integer` | A count of the number of snaplogs captured during a given test. |
 | `anomalies.blacklist_flags`                          | `integer` | Used to mark test results that could be impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test. |
 | `connection_spec`                                   | `record`    | Sub-record section containing fields describing the client which initiated a test and the M-Lab server through which the test was conducted. |
@@ -657,7 +657,7 @@ The switch table schema (also known as "DISCO", named after the "DIScard COllect
 * Complete documentation for tables, views, the contents of views, and what data they limit (where applicable) will be published on this page.
 * Views will be published concurrently with new table schemas, such that all table versions will have corresponding views.
 * Previous versions of our tables will be referenced by versions 1.0, 2.0, etc. in our documentation but actual table names will not be changed.
-* Re-ran historical annotations for traceroute, npad, and sidestream data due to a bug where some geolocation annotations was not present in all past test data.
+* Re-ran historical annotations for traceroute, npad, and sidestream data due to a bug where some geolocation annotations were not present in all past test data.
 
 **v3.1 - February 2018**
 

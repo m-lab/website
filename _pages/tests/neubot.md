@@ -9,7 +9,7 @@ breadcrumb: tests
 
 Neubot (the network neutrality bot) is a free software Internet bot, developed and maintained by the Nexa Center for Internet & Society, that gathers network performance data useful to investigate network neutrality. Once installed, it runs in the background and periodically performs active transmission tests with M-Lab servers. Three tests are currently implemented: "speedtest," which emulates HTTP; "bittorrent", which emulates BitTorrent; and "raw," which performs a raw TCP test.
 
-**[Download and run Neubot (Linux, MacOSX, and Windows)](http://www.neubot.org/neubot-install-guide){:target="_blank"}
+**[Download and run Neubot (Linux, MacOSX, and Windows)](http://www.neubot.org/neubot-install-guide){:target="_blank"}**
 
 Please cite this data set as follows: **The M-Lab Neubot Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/neubot**
 

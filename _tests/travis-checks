@@ -5,19 +5,19 @@ set -e
 # Execute Markdown Linter
 mdl README.md _posts _pages --style _linter/markdown-linter-style.rb
 
-# Github Pages needs the baseurl field to be "m-lab.github.io" to render properly in forked 
-# repos, but when we deploy to production, we need the baseurl field to be empty. This 
+# GitHub Pages needs the baseurl field to be "m-lab.github.io" to render properly in forked
+# repos, but when we deploy to production, we need the baseurl field to be empty. This
 # command replaces "m-lab.github.io" with an empty string.
 sed -e '/^baseurl/s/\/m-lab\.github\.io//' _config.yml > _config-deploy.yml
 
-# Github Pages needs the basejs field to be "src/boot.js" in order for the site
+# GitHub Pages needs the basejs field to be "src/boot.js" in order for the site
 # to use the source js, but when we deploy to production, we should set this
-# field to one concatenated & minified js file to use on the site.  This 
+# field to one concatenated & minified js file to use on the site.  This
 # command replaces "src/boot.js" with "app.js".
 sed -ie '/^basejs/s/\src\/boot\.js/app\.js/' _config-deploy.yml
 
-# Commnand to concatenate & minify all source javascript into one concatenated
-# and minified file optmized for production use.
+# Command to concatenate & minify all source javascript into one concatenated
+# and minified file optimized for production use.
 node js/libs/r.js -o js/app.build.js
 
 # Skips validation checks that take a long time

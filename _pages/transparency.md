@@ -5,7 +5,7 @@ title: "Transparency"
 breadcrumb: visualizations
 ---
 
-These example visualizations illustrate how others have attempted to use M-Lab data to make transparent networking practices such as blocking, throttling and deep packet inspection.
+These example visualizations illustrate how others have attempted to use M-Lab data to make transparent networking practices such as blocking, throttling, and deep packet inspection.
 
 For the most current data visualizations produced by M-Lab, please visit our [Visualizations pages]({{ site.baseurl }}/visualizations).
 
