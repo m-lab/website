@@ -17,6 +17,13 @@ ln -s -f ../_hooks hooks
 ```
 
 * [Install Jekyll](https://jekyllrb.com/docs/installation/) using the instruc tions appropriate for your operating system
+* [Install Jupyter](https://jupyter.org/install)
+  * `pip install jupyter` might well work
+* [Install Bundler](https://bundler.io/)
+  * `gem install bundler` might well work
+* [Install markdownlint](https://github.com/markdownlint/markdownlint)
+  * `gem install mdl` might well work
+* [Install Node.js](https://nodejs.org/en/download/)
 * From within the cloned website repository, install required dependencies:
   * `bundle install`
 * Test a working installation by running the Jekyll server, passing in a blank `--baseurl` parameter:
