@@ -195,7 +195,7 @@ By becoming an M-Lab supporting partner, companies, nonprofit organizations, aca
 * By embedding an M-Lab client tool in an application or service, allowing M-Lab to reach more people and generate more data.
 * By providing direct financial support.
 
-If you'd like to get involved as an M-Lab supporting partner, [contact](http://www.measurementlab.net/contact) the M-Lab team and join the [M-Lab Discuss Group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
+If you'd like to get involved as an M-Lab supporting partner, [contact](https://www.measurementlab.net/contact) the M-Lab team and join the [M-Lab Discuss Group](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss).
 
 ## How can researchers get involved?
 {:.no_toc}
