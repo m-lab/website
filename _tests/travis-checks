@@ -3,7 +3,7 @@
 set -e
 
 # Execute Markdown Linter
-mdl README.md _posts _pages --style _linter/markdown-linter-style.rb
+mdl README.md _posts _pages --style _linter/markdown-linter-style.rb --rules _linter/markdown-linter-rules.rb
 
 # Github Pages needs the baseurl field to be "m-lab.github.io" to render properly in forked 
 # repos, but when we deploy to production, we need the baseurl field to be empty. This 
