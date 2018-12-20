@@ -72,7 +72,7 @@ FROM
   plx.google:m_lab.ndt.all
 ~~~
 
-**Update the table name**
+### Update the table name
 
 Replace the table name with the M-Lab **release** of interest. For a query over NDT data, this becomes:
 
@@ -106,7 +106,7 @@ Note that there are multiple **release** views for your use, and provide the fil
   * limited to tests [matching optimal measurement conditions]({{ site.baseurl }}/data/docs/bq/ndtmetrics/#upload-throughput)
   * LegacySQL syntax required.
 
-**Update `WHERE` statements to select data by date/time ranges**
+### Update `WHERE` statements to select data by date/time ranges
 
 Legacy Monthly tables were published monthly, and making time series selection was done by querying multiple tables. Since v3.1, M-Lab's BigQuery tables are [date-partitioned](https://cloud.google.com/bigquery/docs/querying-partitioned-tables) making time series selection much easier.
 
@@ -117,7 +117,7 @@ WHERE
   partition_date > '2018-01-01' AND partition_date < '2018-01-24'
 ~~~
 
-**Limiting results to final test values**
+### Limiting results to final test values
 
 Many M-Lab tests gather TCP snapshots incrementally while running. While all interim snapshot values are available in our [raw data](https://console.cloud.google.com/storage/browser/m-lab?pli=1), we currently only parse the final test values into our BigQuery tables. This meets the needs of most researchers. In future releases, we are exploring how to best add a repeating record to provide interim snapshot values.
 
@@ -128,13 +128,13 @@ WHERE
   web100_log_entry.is_last_entry = TRUE
 ~~~
 
-**Limit results using the blacklist_flags field**
+### Limit results using the blacklist_flags field
 
 The `blacklist_flags` field was introduced to mark test results that could be impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test. This field was created to mark tests affected by the "switch discard issue" identified in 2015-2016, but M-Lab may use the field for other use cases in the future.
 
 By default, M-Lab's **release** views limit results to tests where `blacklist_flags` is set to `0` or `NULL`. If you wish to query data where the blacklist_flag is another value, you will need to query the NDT base table directly, `measurement-lab:base_tables.ndt` and limit your results according to your needs.
 
-**Remove deprecated fields from `WHERE` statements**
+### Remove deprecated fields from `WHERE` statements
 
 M-Lab's legacy monthly tables combined data for several different M-Lab projects (NDT, NPAD, SideStream, and Paris Traceroute) into the same table. As such, queries for a particular project's data required the query author to add a `WHERE project=XX` clause to restrict the query to a particular project. The field `project` was deprecated in the transition to Fast tables in 2016, and our current tables deprecate additional fields as well.
 
@@ -145,7 +145,7 @@ Remove any reference to these deprecated fields in your queries:
 * `type`
 * `web100_log_entry.group_name`
 
-**Remove limits for optimal download/upload test conditions in `WHERE` statements**
+### Remove limits for optimal download/upload test conditions in `WHERE` statements
 
 As mentioned above, you no longer need to check for optimal values for upload and download tests, as we describe on our page [Calculating Common Metrics]({{ site.baseurl }}/data/docs/bq/ndtmetrics/), if you are querying any of the following views:
 

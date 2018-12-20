@@ -38,7 +38,7 @@ In addition to sharing work from the community in breakout sessions, we were hon
 
 ICYMI, all of the talks from the mainstage are available [on YouTube](https://www.youtube.com/watch?v=xrf0rU8o4e8&list=PLNoVefpaPtVPjkE1g_QGvHdxEz5TOXE0i) and we’ve also asked for the speakers to share slides from their sessions:
 
-**Tuesday, August 7th, 2018**
+#### Tuesday, August 7th, 2018
 
 * [Welcome & Agenda Setting](https://www.youtube.com/watch?v=xrf0rU8o4e8&list=PLNoVefpaPtVPjkE1g_QGvHdxEz5TOXE0i&index=1)
 * [Keynote: Vint Cerf](https://www.youtube.com/watch?v=54sDgVl0nOU&list=PLNoVefpaPtVPjkE1g_QGvHdxEz5TOXE0i&index=2) ([Slides]({{ site.baseurl }}/static/mlab10year/Cerf-Keynote.pdf))
@@ -58,7 +58,7 @@ ICYMI, all of the talks from the mainstage are available [on YouTube](https://ww
   * Research from Canada:  Reza Rajabiun (Ryerson University) ([Slides]({{ site.baseurl }}/static/mlab10year/RajabiunMLab10thSlides.pptx))
   * California Public Utility Commission: Ken Biba (CPUC) ([Slides]({{ site.baseurl }}/static/mlab10year/Biba-MeasuringInternetinCalifornia.pdf))
 
-**Wednesday, August 8th, 2018**
+#### Wednesday, August 8th, 2018
 
 * [Lightning Talk Breakout Sessions](https://www.youtube.com/watch?v=oc20zZt2pb4&list=PLNoVefpaPtVPjkE1g_QGvHdxEz5TOXE0i&index=8)
   * Paris Traceroute Data: Ya Chang (M-Lab/Google) ([Slides]({{ site.baseurl }}/static/mlab10year/Chang-Paris Traceroute-M-Lab 10 year anniversary_ PT.pdf))

@@ -121,7 +121,7 @@ Note that in the queries above for Upload and Download throughput, the example u
 
 Alternately, M-Lab provides BigQuery views that apply the parameters for valid upload and download tests. For researchers interested in using what M-Lab considers valid tests for research, the examples above can be simplified by querying the appropriate view:
 
-**Download Throughput:**
+#### Download Throughput:
 
 ```sql
 #standardSQL
@@ -137,7 +137,7 @@ WHERE
   LIMIT 100
 ```
 
-**Upload Throughput:**
+#### Upload Throughput:
 
 ```sql
 #standardSQL

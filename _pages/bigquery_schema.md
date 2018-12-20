@@ -618,7 +618,7 @@ The switch table schema (also known as "DISCO", named after the "DIScard COllect
 
 </div>
 
-**v2 - March 2016**
+#### v2 - March 2016
 
 * Began the publication of per project "fast tables" for NDT, NPAD, Paris Traceroute, and Sidestream.
   * `plx.google:m_lab.ndt.all`
@@ -631,23 +631,23 @@ The switch table schema (also known as "DISCO", named after the "DIScard COllect
   * `web100_log_entry.is_last_entry`
   * `web100_log_entry.group_name`
 
-**v2.1 - November 2016**
+#### v2.1 - November 2016
 
 * The field `blacklist_flags` was added to v2 per project "fast tables", and  historical data from 201001-01 to 2015-10-02 was re-parsed to add this annotation, due to a [switch discard issue related to traffic microbursts]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement/).
 
-**v3 - May 2017**
+#### v3 - May 2017
 
 * Began publication to new date partitioned table and updated schema to support the new, open source, ETL pipeline.
 * Data publication to v2 tables stopped at this time.
 
-**v3.0.1 - October / November 2017**
+#### v3.0.1 - October / November 2017
 
 * The schema for v3.0.1 tables was updated, removing an alpha feature called deltas, which attempted to log the differences between test snaplogs instead of the final test values. This feature will be revisited in future schema updates.
 * Newly released data annotation engine added geolocation and some metadata to tests from 2016 to present.
 * Published a series of beta BigQuery views for NDT data,  to allow data queries across both v2 and v3.0.x tables.
 * Published traceroute and sidestream table to replace v2 versions, migrated data, re-annotated data.
 
-**v3.0.2 - December 2017**
+#### v3.0.2 - December 2017
 
 * Standardized the naming scheme for BigQuery table and view names to be consistent with new semantic versioning.
 * All tables and views must be queried using StandardSQL, except for views with “legacysql” in the name.
@@ -659,11 +659,11 @@ The switch table schema (also known as "DISCO", named after the "DIScard COllect
 * Previous versions of our tables will be referenced by versions 1.0, 2.0, etc. in our documentation but actual table names will not be changed.
 * Re-ran historical annotations for traceroute, npad, and sidestream data due to a bug where some geolocation annotations was not present in all past test data.
 
-**v3.1 - February 2018**
+#### v3.1 - February 2018
 
 * First official release of v3 tables, with all historical data re-parsed, and annotated with geolocation metadata.
 
-**v3.1.1 - July 2018**
+#### v3.1.1 - July 2018
 
 * Publish official Switch tables from the DISCO dataset.
 

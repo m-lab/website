@@ -23,7 +23,7 @@ WHERE
   web100_log_entry.connection_spec.remote_ip IS NOT NULL;
 ~~~
 
-**Result (_last updated 1/25/2018_):**
+### Result (_last updated 1/25/2018_):
 
 | num_clients |
 |-------------|
@@ -48,7 +48,7 @@ ORDER BY
   day ASC;
 ~~~
 
-**Result**
+### Result
 
 |    day      | num_clients |
 |-------------|-------------|
@@ -95,7 +95,7 @@ FROM
   `measurement-lab.release.ndt_all`;
 ~~~
 
-**Result**
+### Result
 
 | num_subnets |
 |-------------|
@@ -131,7 +131,7 @@ ORDER BY
   num_tests ASC;
 ~~~
 
-**Result**
+### Result
 
 |num_tests|num_clients|
 |---------|-----------|

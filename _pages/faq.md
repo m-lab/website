@@ -88,7 +88,7 @@ You can explore [visualizations]({{ site.baseurl }}/visualizations/) of M-Lab’
 
 Internet performance tests may provide different results for a lot of reasons. Three of the main reasons for different results among tests are listed below:
 
-**1. Differences in the location of testing servers**
+### 1. Differences in the location of testing servers
 
 Every performance test has two parts:
 
@@ -103,13 +103,13 @@ If the server is located within your Internet Service Provider’s (ISP’s) own
 
 M-Lab's measurements are always conducted off-net. This way, M-Lab is able to measure performance from testers' computers to locations where popular Internet content is often hosted. By having inter-network connections included in the test, test users get a real sense of the performance they could expect when using the Internet.
 
-**2. Differences in testing methods**
+### 2. Differences in testing methods
 
 Different Internet performance tests measure different things in different ways. M-Lab's NDT test tries to transfer as much data as it can in ten seconds (both up and down), using a single connection to an M-Lab server. Other popular tests try to transfer as much data as possible at once across multiple connections to their server. Neither method is "right" or "wrong," but using a single stream is more likely to help diagnose problems in the network than multiple streams would. [Learn more about M-Lab's NDT methodology](https://github.com/ndt-project/ndt/wiki/NDTTestMethodology).
 
 All NDT data collected by M-Lab are publicly available in both [visualized]({{ site.baseurl }}/visualizations/) (graphic), [queryable](https://console.cloud.google.com/bigquery?project=measurement-lab), and [raw (unanalyzed) forms](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/).
 
-**3. Changing network conditions and distinct test paths**
+### 3. Changing network conditions and distinct test paths
 
 The Internet is always changing, and test results reflect that. A test conducted five minutes ago may show very different results from a test conducted twenty minutes ago. This can be caused by the test traffic being routed differently. For example, one test might travel over a path with broken router, while another may not. A test run today may be directed to a test server located farther away than a test run yesterday.
 
