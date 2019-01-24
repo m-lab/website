@@ -29,7 +29,7 @@ deploy:
     all_branches: true
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 - provider: script
-  script: _scripts/deploy_sandbox.sh
+  script: scp -i _deploy_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -rp _site/* root@35.208.229.232:/var/www/html/
   on:
     repo: m-lab/m-lab.github.io
     all_branches: true
