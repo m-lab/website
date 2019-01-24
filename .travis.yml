@@ -1,57 +1,58 @@
-dist: xenial
-- language: python
-  python: 3.6.5
-  before_install:
-  # The Amazon AWS credentials needed by the cf-s3-inv utility in after_success
-  # are stored in a file encrypted with the Travis keys associated with this
-  # repository. The openssl command descrypts this file, using some secure
-  # environment variables associated with the Travis account/repo.  See
-  # README.md for information on generating this encrypted file.
-  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d; fi
-  #- sudo apt-get install -y python3-pip
-  - sudo -H python -m pip install --upgrade setuptools pip
-  - sudo -H python -m pip install jupyter nbconvert
-- language: ruby
-  rvm:
-    - 2.4.5
-  script:
-    - ./_tests/travis-checks --quick
-  env:
-    global:
-      - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-  deploy:
-    - provider: s3
-      access_key_id: AKIAIRWAFHZDDWJ37X5A
-      secret_access_key:
-        secure: BlXQIyq/lHCHPGX5YUasTGWHkoL32lZHYG/n1yLBjniht2AKPWBnbQ+oWLJt2d28xZksXaDYQ02rh8lWted0SKhqYUN6dcmrXu8rVwcqpqgihUZsC1yqO4qGZ2qGkeQ2X0+HSKIBJ5VUKrMJiS3YK+N/W00/f9FatrSGvr8HBKSWpKpDiHq7z5kx/ab5Aae0hGyN1Ux6I7jTkYDI6oi9gQFJgv4oMKUt11SVMqnBNXoeOvDnIIkJqSf0hKuSZpeEDoX1FDlEaC/NR11ASlPj1ev+mxuNi1S1WTYFka7tB7piD9TQTv0PxjU+t4+TaH9jkd35eGUW1VeKPrdBtsK2TnCM6zYuM7/4U2i/7ZHf4bRVG8UkL+h32K25b24SQIyJddAzvrz8cM2/TLpqid+xdvay2Ax5T3acsxQhBq+vXVwohhl2q3fu9o6o6Bh8SGnn7XSK3JxE9Z3e8Uqg9JV3Pmgz8VyeYCwjuaV5lyabujQAn6sX8rw0RQ2A35bvQjAkNDiLUsmmOQBuRnnmS6fxeYDWf1D/h+6V0TWqPFQLTNBCjYt7WBDyTAU6i71c8ZDSay2CqVca0djxzXJHuqys5q4gRqXpLkuOiJUJMR8s5NhgQAI6bSCkgsJ/EcJqpSIwI72W+NgBb0I31KeREJXO5UlNmTa7RBFSX02KE23ut/E=
-      bucket: www-measurementlab-net
-      skip_cleanup: true
-      local_dir: _site
-      on:
-        repo: m-lab/m-lab.github.io
-        tags: true
-    - provider: gcs
-      access_key_id: GOOGWS5RSVP6RJ3HGCQWGFZG
-      secret_access_key:
-        secure: pdKctNlM2bfEzyFBi9Rr6BYua8hWXsyzUDm5WI4Alr06qLmp1zFNcPymKcihgoE8k2vr85B4BN8HYpUPvPPpzb/KlAZAuUjbKGH0hIklBN4+G+ldt2IBN+2YxYYKYu3bXjKJ5yQOHKCBVU/CR3O6UB+Llp3Ty42OCa71WDfsG2aW6EHGkWV1TljXl3fGVerPfcNeyigIFZ6Qz2Vy0Ay+hzXEZBxjLjUsrWbK5aM6PX7OuErBzKk/kFTlQNkuRQdJs7nS4Y+Pxjyjr6NVd0wjFGqtP+sLjC9hvNaaCHdQ46kA24BqNWwNq1c3++9/0NrEj2MbRrAWNrEcSDskX+XJdV+wantzJ0xQAdqgYUugLj+TSYTKTxrPnwy9WGcWxsfdlrrlnysWVDc1OpQgtXNtU66qwgsjflsOijNeV/XBhR4bOifhRJ80VcQ6KyDWwIAKcJbU8prkMAqr1SqyVbw35gH6ZfHxBcf1CYCEoCGlVn00QPyEQDBkSCFzQC8coSZStGGnxGaebHomxMiOsowM4JIZqjB3RWg+Gf5S6dAZZUQTHoYHAU02Kil+wHmYWEcJ+3eb/FWtNokeZRX3zNCKncBAaZWef+JzMuEtcq67cio/io3z9yglVcWpZz/xGSMOTOVIbHwFIjyzO8cSvp6IWLrlq8MJOge5u0ADgi0rMAE=
-      bucket: website.mlab-staging.measurementlab.net
-      skip_cleanup: true
-      local_dir: _site
-      on:
-        repo: m-lab/m-lab.github.io
-        all_branches: true
-        condition: $TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push
-    - provider: gcs
-      access_key_id: GOOGTVZEKZMTGZSV27YKVWP3
-      secret_access_key: 
-        secure: "YjvtwOWEVSJ1qC7gx9ABM0z0BcHf2IVpeSTzLzykZ5y6s2nTXBNOccC2b2dri7zRqen5sLxsB6cXqC5+X764NE1H/pG37EyU27AS3sRzJzdl+NAYfXujd77bByhS+PY2Rk2IndhGNv2b6xFGwqYUprqhEEit+mBLuHWDRkK3eVVDkNd8r0AsML/imT3UNYwXXThgKr9jAGDPrxUX39KNWWtFn0goU96qfEh7jncChu9/JteDxcBn18AFJE/4pRSPibBFNZoels5TKG5ISyyff6N0s+zVtbqXcDnCY2yMl4LL66z8L9x7c7loXz1txoz38jvxW3bvQM/asrWPwMpXYfw/MJ1F1pNP0aqKcaLDlZ5Ow88wJpGxY6C3laBWUBKXp6u+sew1uLtybfClgGc/Ma3s3LjwzdfJjvmzWPbQT9tTKiVtJ+17VSmxMRMWpksYWEuCy+iySLLmwMaK7A9gfVYP6yqIm5Z0S6oBQqCk0y20TGkY9IRJ/HvXt4JbZi+rgLAWP8lKFt7V2ATrbCzjcllp9VzgsYNqxeqsuGFLYv5CChUMcC+lZe8O6YTzKi272DAGb8DItJDXcHu1pGHMx1nI8ihECWXMnEri0EpsKGvi4kT9BM++23j0ZlZ+F6Mr7vdmXKUL5YrxNIWmvXc+Xu7pVF1+31pkteyORVKKBKI="
-      bucket: website.mlab-sandbox.measurementlab.net
-      skip_cleanup: true
-      local_dir: _site
-      on:
-        repo: m-lab/m-lab.github.io
-        all_branches: true
-        condition: $TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push
+matrix:
+  include:
+    - language: python
+      python: 3.5
+      before_install:
+      # The Amazon AWS credentials needed by the cf-s3-inv utility in after_success
+      # are stored in a file encrypted with the Travis keys associated with this
+      # repository. The openssl command descrypts this file, using some secure
+      # environment variables associated with the Travis account/repo.  See
+      # README.md for information on generating this encrypted file.
+      - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then openssl aes-256-cbc -K $encrypted_69b240b11ca3_key -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml -d; fi
+      - sudo apt-get install -y python3-pip
+      - sudo -H python -m pip install --upgrade setuptools pip
+      - sudo -H python -m pip install jupyter nbconvert
+    - language: ruby
+      rvm:
+        - 2.4.1
+      script:
+        - ./_tests/travis-checks --quick
+      env:
+        global:
+          - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+      deploy:
+        - provider: s3
+          access_key_id: AKIAIRWAFHZDDWJ37X5A
+          secret_access_key:
+            secure: BlXQIyq/lHCHPGX5YUasTGWHkoL32lZHYG/n1yLBjniht2AKPWBnbQ+oWLJt2d28xZksXaDYQ02rh8lWted0SKhqYUN6dcmrXu8rVwcqpqgihUZsC1yqO4qGZ2qGkeQ2X0+HSKIBJ5VUKrMJiS3YK+N/W00/f9FatrSGvr8HBKSWpKpDiHq7z5kx/ab5Aae0hGyN1Ux6I7jTkYDI6oi9gQFJgv4oMKUt11SVMqnBNXoeOvDnIIkJqSf0hKuSZpeEDoX1FDlEaC/NR11ASlPj1ev+mxuNi1S1WTYFka7tB7piD9TQTv0PxjU+t4+TaH9jkd35eGUW1VeKPrdBtsK2TnCM6zYuM7/4U2i/7ZHf4bRVG8UkL+h32K25b24SQIyJddAzvrz8cM2/TLpqid+xdvay2Ax5T3acsxQhBq+vXVwohhl2q3fu9o6o6Bh8SGnn7XSK3JxE9Z3e8Uqg9JV3Pmgz8VyeYCwjuaV5lyabujQAn6sX8rw0RQ2A35bvQjAkNDiLUsmmOQBuRnnmS6fxeYDWf1D/h+6V0TWqPFQLTNBCjYt7WBDyTAU6i71c8ZDSay2CqVca0djxzXJHuqys5q4gRqXpLkuOiJUJMR8s5NhgQAI6bSCkgsJ/EcJqpSIwI72W+NgBb0I31KeREJXO5UlNmTa7RBFSX02KE23ut/E=
+          bucket: www-measurementlab-net
+          skip_cleanup: true
+          local_dir: _site
+          on:
+            repo: m-lab/m-lab.github.io
+            tags: true
+        - provider: gcs
+          access_key_id: GOOGWS5RSVP6RJ3HGCQWGFZG
+          secret_access_key:
+            secure: pdKctNlM2bfEzyFBi9Rr6BYua8hWXsyzUDm5WI4Alr06qLmp1zFNcPymKcihgoE8k2vr85B4BN8HYpUPvPPpzb/KlAZAuUjbKGH0hIklBN4+G+ldt2IBN+2YxYYKYu3bXjKJ5yQOHKCBVU/CR3O6UB+Llp3Ty42OCa71WDfsG2aW6EHGkWV1TljXl3fGVerPfcNeyigIFZ6Qz2Vy0Ay+hzXEZBxjLjUsrWbK5aM6PX7OuErBzKk/kFTlQNkuRQdJs7nS4Y+Pxjyjr6NVd0wjFGqtP+sLjC9hvNaaCHdQ46kA24BqNWwNq1c3++9/0NrEj2MbRrAWNrEcSDskX+XJdV+wantzJ0xQAdqgYUugLj+TSYTKTxrPnwy9WGcWxsfdlrrlnysWVDc1OpQgtXNtU66qwgsjflsOijNeV/XBhR4bOifhRJ80VcQ6KyDWwIAKcJbU8prkMAqr1SqyVbw35gH6ZfHxBcf1CYCEoCGlVn00QPyEQDBkSCFzQC8coSZStGGnxGaebHomxMiOsowM4JIZqjB3RWg+Gf5S6dAZZUQTHoYHAU02Kil+wHmYWEcJ+3eb/FWtNokeZRX3zNCKncBAaZWef+JzMuEtcq67cio/io3z9yglVcWpZz/xGSMOTOVIbHwFIjyzO8cSvp6IWLrlq8MJOge5u0ADgi0rMAE=
+          bucket: website.mlab-staging.measurementlab.net
+          skip_cleanup: true
+          local_dir: _site
+          on:
+            repo: m-lab/m-lab.github.io
+            all_branches: true
+            condition: $TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push
+        - provider: gcs
+          access_key_id: GOOGTVZEKZMTGZSV27YKVWP3
+          secret_access_key: 
+            secure: "YjvtwOWEVSJ1qC7gx9ABM0z0BcHf2IVpeSTzLzykZ5y6s2nTXBNOccC2b2dri7zRqen5sLxsB6cXqC5+X764NE1H/pG37EyU27AS3sRzJzdl+NAYfXujd77bByhS+PY2Rk2IndhGNv2b6xFGwqYUprqhEEit+mBLuHWDRkK3eVVDkNd8r0AsML/imT3UNYwXXThgKr9jAGDPrxUX39KNWWtFn0goU96qfEh7jncChu9/JteDxcBn18AFJE/4pRSPibBFNZoels5TKG5ISyyff6N0s+zVtbqXcDnCY2yMl4LL66z8L9x7c7loXz1txoz38jvxW3bvQM/asrWPwMpXYfw/MJ1F1pNP0aqKcaLDlZ5Ow88wJpGxY6C3laBWUBKXp6u+sew1uLtybfClgGc/Ma3s3LjwzdfJjvmzWPbQT9tTKiVtJ+17VSmxMRMWpksYWEuCy+iySLLmwMaK7A9gfVYP6yqIm5Z0S6oBQqCk0y20TGkY9IRJ/HvXt4JbZi+rgLAWP8lKFt7V2ATrbCzjcllp9VzgsYNqxeqsuGFLYv5CChUMcC+lZe8O6YTzKi272DAGb8DItJDXcHu1pGHMx1nI8ihECWXMnEri0EpsKGvi4kT9BM++23j0ZlZ+F6Mr7vdmXKUL5YrxNIWmvXc+Xu7pVF1+31pkteyORVKKBKI="
+          bucket: website.mlab-sandbox.measurementlab.net
+          skip_cleanup: true
+          local_dir: _site
+          on:
+            repo: m-lab/m-lab.github.io
+            all_branches: true
+            condition: $TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push
 
 after_deploy:
   # Only invalidate CloudFront cache if this on the master branch and is not a PR
