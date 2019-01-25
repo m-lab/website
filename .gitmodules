@@ -6,4 +6,4 @@
 	url = https://github.com/m-lab/ndt
 [submodule "travis"]
 	path = travis
-	url = git@github.com:m-lab/travis.git
+	url = https://github.com/m-lab/travis.git
