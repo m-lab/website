@@ -26,7 +26,6 @@ deploy:
   on:
     repo: m-lab/m-lab.github.io
     tags: true
-
 ## - staging
 - provider: script
   skip_cleanup: true
@@ -37,7 +36,6 @@ deploy:
     repo: m-lab/m-lab.github.io
     all_branches: true
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
-
 ## - sandbox
 - provider: script
   skip_cleanup: true
@@ -49,9 +47,6 @@ deploy:
     all_branches: true
     condition: "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push"
 before_install:
-
-# unencrypt the appropriate deploy key
-## - production
 - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
   [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then openssl aes-256-cbc -K $encrypted_69b240b11ca3_key
   -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml
