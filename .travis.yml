@@ -30,17 +30,17 @@ deploy:
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 - provider: script
   skip_cleanup: true
-  script: scp -i /tmp/_deploy_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -rp _site/* critzo@35.208.229.232:website-sandbox/ && ssh -i /tmp/_deploy_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no critzo@35.208.229.232 'sudo mv website-sandbox/* /var/www/html/'
+  script: scp -i _deploy_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -rp _site/* critzo@35.208.229.232:website-sandbox/ && ssh -i _deploy_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no critzo@35.208.229.232 'sudo mv website-sandbox/* /var/www/html/'
   on:
     repo: m-lab/m-lab.github.io
     all_branches: true
     condition: "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push"
 before_install:
 - openssl aes-256-cbc -K $encrypted_24201bc0bc50_key -iv $encrypted_24201bc0bc50_iv
-  -in _deploy_key.enc -out /tmp/_deploy_key -d
+  -in _deploy_key.enc -out _deploy_key -d
 - eval "$(ssh-agent -s)"
-- chmod 600 /tmp/_deploy_key
-- ssh-add /tmp/_deploy_key
+- chmod 600 _deploy_key
+- ssh-add _deploy_key
 - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
   [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then openssl aes-256-cbc -K $encrypted_69b240b11ca3_key
   -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml
