@@ -30,7 +30,7 @@ deploy:
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 - provider: script
   skip_cleanup: true
-  script: scp -i _deploy_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -rp _site/* critzo@35.208.229.232:website-sandbox/ && ssh -i _deploy_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no critzo@35.208.229.232 'sudo mv website-sandbox/* /var/www/html/'
+  script: scp -i _deploy_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -rp _site/* travis@35.208.229.232:website-sandbox/ && ssh -i _deploy_key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@35.208.229.232 'sudo mv website-sandbox/* /var/www/html/'
   on:
     repo: m-lab/m-lab.github.io
     all_branches: true
