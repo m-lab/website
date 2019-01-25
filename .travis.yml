@@ -24,7 +24,7 @@ deploy:
   skip_cleanup: true
   local_dir: _site
   on:
-    repo: m-lab/m-lab.github.io
+    repo: m-lab/website
     tags: true
 ## - staging
 - provider: script
@@ -33,7 +33,7 @@ deploy:
     - $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
     - gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
   on:
-    repo: m-lab/m-lab.github.io
+    repo: m-lab/website
     all_branches: true
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 ## - sandbox
@@ -43,7 +43,7 @@ deploy:
     - $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
     - gsutil cp $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
   on:
-    repo: m-lab/m-lab.github.io
+    repo: m-lab/website
     all_branches: true
     condition: "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push"
 before_install:
