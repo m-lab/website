@@ -16,9 +16,9 @@ coverage
 _config-deploy.yml
 _config-deploy.ymle
 js/app.js
-_cf_s3_invalidator.yml
 .vagrant
 ubuntu-xenial-16.04-cloudimg-console.log
 .jekyll-metadata
-
-_deploy_key
+_cf_s3_invalidator.yml
+_staging_deploy_key
+_sandbox_deploy_key
