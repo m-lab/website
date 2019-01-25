@@ -32,7 +32,7 @@ deploy:
   skip_cleanup: true
   script: 
     - $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
-    - gsutil cp $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
+    - gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
   on:
     repo: m-lab/m-lab.github.io
     all_branches: true
