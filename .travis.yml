@@ -30,8 +30,7 @@ deploy:
 - provider: script
   skip_cleanup: true
   script: 
-    - $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
-    - gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
+    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
   on:
     repo: m-lab/website
     all_branches: true
@@ -39,13 +38,13 @@ deploy:
 ## - sandbox
 - provider: script
   skip_cleanup: true
-  script: /home/travis/build/m-lab/website/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox && gsutil cp /home/travis/build/m-lab/website/_site/* gs://website.mlab-sandbox.measurementlab.net/
+  script: 
+    $TRAVIS_BUILD_DIR/website/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox && gsutil cp -r /home/travis/build/m-lab/website/_site/* gs://website.mlab-sandbox.measurementlab.net/
   on:
     repo: m-lab/website
     all_branches: true
     condition: "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push"
 before_install:
-- set -e
 - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
   [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then openssl aes-256-cbc -K $encrypted_69b240b11ca3_key
   -iv $encrypted_69b240b11ca3_iv -in _cf_s3_invalidator.yml.enc -out _cf_s3_invalidator.yml
