@@ -11,6 +11,9 @@ cache:
 script:
 - set -e
 - $TRAVIS_BUILD_DIR/travis/install_gcloud.sh
+- if [ "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push" ];
+then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox; fi
+
 - "./_tests/travis-checks --quick"
 
 deploy:
@@ -39,7 +42,7 @@ deploy:
 - provider: script
   skip_cleanup: true
   script: 
-    sh $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
+  gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
   on:
     repo: m-lab/website
     all_branches: true
