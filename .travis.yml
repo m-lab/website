@@ -1,4 +1,5 @@
 dist: xenial
+language: ruby
 
 env:
   global:
@@ -11,9 +12,7 @@ cache:
 script:
 - set -e
 - $TRAVIS_BUILD_DIR/travis/install_gcloud.sh
-- if [ "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push" ];
-then sh $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox; fi
-
+- if [ "$TRAVIS_BRANCH" == "sandbox-*" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox; fi
 - "./_tests/travis-checks --quick"
 
 deploy:
@@ -41,8 +40,7 @@ deploy:
 ## - sandbox
 - provider: script
   skip_cleanup: true
-  script: 
-  gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
+  script: gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
   on:
     repo: m-lab/website
     all_branches: true
