@@ -30,7 +30,7 @@ deploy:
 - provider: script
   skip_cleanup: true
   script: 
-    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
+    sh $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
   on:
     repo: m-lab/website
     all_branches: true
@@ -39,7 +39,7 @@ deploy:
 - provider: script
   skip_cleanup: true
   script: 
-    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox && gsutil cp -r /home/travis/build/m-lab/website/_site/* gs://website.mlab-sandbox.measurementlab.net/
+    sh $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
   on:
     repo: m-lab/website
     all_branches: true
