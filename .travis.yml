@@ -13,7 +13,7 @@ script:
 - set -e
 - $TRAVIS_BUILD_DIR/travis/install_gcloud.sh
 - if [ "$TRAVIS_BRANCH" == "sandbox-*" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox; fi
-- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging; fi
+#- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging; fi
 - "./_tests/travis-checks --quick"
 
 deploy:
