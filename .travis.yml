@@ -12,7 +12,6 @@ cache:
 script:
 - set -e
 - $TRAVIS_BUILD_DIR/travis/install_gcloud.sh
-#- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging; fi
 - "./_tests/travis-checks --quick"
 
 deploy:
@@ -32,7 +31,8 @@ deploy:
 - provider: script
   skip_cleanup: true
   script: 
-    gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
+    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
+    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
   on:
     repo: m-lab/website
     all_branches: true
