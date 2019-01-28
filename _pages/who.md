@@ -12,7 +12,7 @@ grid-section:
         image: "jeff-w-boote.png"
         heading: "Jeff W. Boote"
         desc: "Netflix"
-      - link: "https://www.newamerica.org/our-people/georgia-bullen/"
+      - link: "https://simplysecure.org/who-we-are/georgia.html"
         image: "georgia-bullen.png"
         heading: "Georgia Bullen"
         desc: "Simply Secure"
