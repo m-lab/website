@@ -12,12 +12,9 @@ cache:
 script:
 - set -e
 - $TRAVIS_BUILD_DIR/travis/install_gcloud.sh
-- $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
-#- if [ "$TRAVIS_BRANCH" == "sandbox-*" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox; fi
-#- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging; fi
-- gcloud config list
+- if [ "$TRAVIS_BRANCH" == "sandbox-*" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh website-travis-deploy@mlab-sandbox.iam.gserviceaccount.com; fi
+- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh website-travis-deploy@mlab-staging.iam.gserviceaccount.com; fi
 - "./_tests/travis-checks --quick"
-- gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
 
 deploy:
 # Separate deployments to various places based on branch and push type
