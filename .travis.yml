@@ -12,7 +12,7 @@ cache:
 script:
 - set -e
 - $TRAVIS_BUILD_DIR/travis/install_gcloud.sh
-- if [ "$TRAVIS_BRANCH" == "sandbox-*" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox; fi
+- if [ "$TRAVIS_BRANCH" == "sandbox-*" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/; fi
 - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging; fi
 - "./_tests/travis-checks --quick"
 
@@ -39,14 +39,14 @@ deploy:
     all_branches: true
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 ## - sandbox
-- provider: script
-  skip_cleanup: true
-  script: 
-    gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
-  on:
-    repo: m-lab/website
-    all_branches: true
-    condition: "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push"
+#- provider: script
+#  skip_cleanup: true
+#  script: 
+#    gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
+#  on:
+#    repo: m-lab/website
+#    all_branches: true
+#    condition: "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push"
 before_install:
 - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
   [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then openssl aes-256-cbc -K $encrypted_69b240b11ca3_key
