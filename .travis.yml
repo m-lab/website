@@ -15,6 +15,7 @@ script:
 - if [ "$TRAVIS_BRANCH" == "sandbox-*" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox; fi
 #- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_EVENT_TYPE" == "push" ]; then $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging; fi
 - "./_tests/travis-checks --quick"
+- gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
 
 deploy:
 # Separate deployments to various places based on branch and push type
