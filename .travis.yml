@@ -5,10 +5,6 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
-cache:
-  directories:
-    - "$HOME/google-cloud-sdk/"
-
 script:
 - set -e
 - $TRAVIS_BUILD_DIR/travis/install_gcloud.sh
@@ -19,25 +15,6 @@ script:
 
 deploy:
 # Separate deployments to various places based on branch and push type
-## - production
-#- provider: script
-#  script:
-#    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_oti
-#    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-oit.measurementlab.net/
-#  skip_cleanup: true
-#  on:
-#    repo: m-lab/website
-#    tags: true
-## - staging
-- provider: script
-  skip_cleanup: true
-  script: 
-    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
-  on:
-    repo: m-lab/website
-    all_branches: true
-    condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 ## - sandbox
 - provider: script
   skip_cleanup: true
@@ -49,5 +26,23 @@ deploy:
     all_branches: true
     condition: "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push"
 
-after_deploy: if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false"
-  ] && [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then cf-s3-inv || travis_terminate 1; fi
+## - staging
+- provider: script
+  skip_cleanup: true
+  script: 
+    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
+    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
+  on:
+    repo: m-lab/website
+    all_branches: true
+    condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
+
+## - production
+#- provider: script
+#  script:
+#    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_oti
+#    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-oit.measurementlab.net/
+#  skip_cleanup: true
+#  on:
+#    repo: m-lab/website
+#    tags: true
