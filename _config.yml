@@ -28,6 +28,8 @@ exclude:
   - Gemfile.lock
   - _scripts
   - vendor
+  - travis
+  - ndt
 
 # Markdown settings
 markdown: kramdown
