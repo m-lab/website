@@ -7,7 +7,7 @@ breadcrumb: tests
 
 # BISmark
 
-BISmark is an [OpenWRT](http://openwrt.org){:target="_blank"}-based platform that measures Internet service provider (ISP) performance and traffic inside home networks. BISmark takes the place of your home router, performing all of your router's normal functions in addition to periodic network performance measurements. BISmark users gain access to a personalized dashboard showing performance over time and comparing performance across ISPs and regions.
+BISmark is an OpenWRT-based (http://openwrt.org) platform that measures Internet service provider (ISP) performance and traffic inside home networks. BISmark takes the place of your home router, performing all of your router's normal functions in addition to periodic network performance measurements. BISmark users gain access to a personalized dashboard showing performance over time and comparing performance across ISPs and regions.
 
 [Apply to host a BISmark gateway](http://projectbismark.net/){:target="_blank"}
 
