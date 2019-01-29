@@ -38,11 +38,11 @@ deploy:
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 
 ## - production
-#- provider: script
-#  script:
-#    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_oti
-#    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-oit.measurementlab.net/
-#  skip_cleanup: true
-#  on:
-#    repo: m-lab/website
-#    tags: true
+- provider: script
+  script:
+    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_oti
+    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-oti.measurementlab.net/
+  skip_cleanup: true
+  on:
+    repo: m-lab/website
+    tags: true
