@@ -1,47 +1,46 @@
 dist: xenial
 language: ruby
-
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 script:
 - set -e
-- $TRAVIS_BUILD_DIR/travis/install_gcloud.sh
+- "$TRAVIS_BUILD_DIR/travis/install_gcloud.sh"
 - sudo apt-get install -y python3-pip
 - sudo python3 -m pip install --upgrade setuptools pip
 - sudo python3 -m pip install jupyter nbconvert
 - "./_tests/travis-checks --quick"
-
 deploy:
-# Separate deployments to various places based on branch and push type
-## - sandbox
+- provider: firebase
+  token:
+    secure: TrpNlvGvMwlL68oJFvtb6/xh06nGvH9o1E/5cp133WytZu7RSuztSyaJKPTJoo9kRmRbqQWVNU2ahZJbWatpIf8tPTyt8JdFS6YzYWR6kT9hI5iqpLczxLhrmPgZmzfPlTBMACxgbvOWnQIpMajh5Nyu6Q2955bohj7oQhyV7llQMn9JW+rUXnIT36MOQdHzyNQvFHJ+GaABV6/vzo2ickKytHyLMLZ6o8CsNg2/ODR786puMTvrxZMciy6F9PhXYqadBAJhs+8SIZPK3h+jQVfhuNpJ1yc3BIF6M5fzV/gGdVvi9ZwUJ+iPYx0cr17+rGP7+RRhuoPRKtS/baxrfbW8n963LrMrjHQr0yIYtcIP0OPKKcSMMHfDwZudmuT8C9MM19a/LkxxYhjR6SxmgeMzelR/PoKjSMU5ioIRCm1ZGPe7QK+TuqcpRg/ODbOKFrPcDshiMGy743ar1MPQAXVWZ9rvJNXU3k2VfPopRzqo5R5obOgmlrvWOCEQn7Uaihv1nMiq7ugTBqLVjJ1CVGqWuDa8WJyoWWrNxpiaDINlW4bWCQG/iFMo6fS9G+TsZlCQLVjjYo9+E1q/Qhzfg7HgEz+nFLWGxdauj1n4ElvITwqS0PFrFjQvtE/C/YE4MAsyz8wK5AsGCwBKpJ0XtyPIPZMrB4H6rCzBZAaDhdg=
+  message: "firebase test deploy"
+  project: "mlab-oti"
+  on:
+    repo: m-lab/website
+    all_branches: true
+    condition: "$TRAVIS_BRANCH == deploy-firebase && $TRAVIS_EVENT_TYPE == push"
+
 - provider: script
   skip_cleanup: true
-  script: 
-    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
+  script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
+    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/"
   on:
     repo: m-lab/website
     all_branches: true
     condition: "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push"
-
-## - staging
 - provider: script
   skip_cleanup: true
-  script: 
-    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
+  script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
+    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/"
   on:
     repo: m-lab/website
     all_branches: true
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
-
-## - production
 - provider: script
-  script:
-    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_oti
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-oti.measurementlab.net/
+  script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_oti
+    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-oti.measurementlab.net/"
   skip_cleanup: true
   on:
     repo: m-lab/website

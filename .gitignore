@@ -19,6 +19,7 @@ js/app.js
 .vagrant
 ubuntu-xenial-16.04-cloudimg-console.log
 .jekyll-metadata
-_cf_s3_invalidator.yml
-_staging_deploy_key
-_sandbox_deploy_key
+.firebase/
+.firebaserc
+firebase.json
+
