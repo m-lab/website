@@ -3,7 +3,6 @@ language: ruby
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-
 script:
 - set -e
 - "$TRAVIS_BUILD_DIR/travis/install_gcloud.sh"
@@ -13,15 +12,13 @@ script:
 - "./_tests/travis-checks --quick"
 deploy:
 - provider: firebase
-  token:
-    secure: TrpNlvGvMwlL68oJFvtb6/xh06nGvH9o1E/5cp133WytZu7RSuztSyaJKPTJoo9kRmRbqQWVNU2ahZJbWatpIf8tPTyt8JdFS6YzYWR6kT9hI5iqpLczxLhrmPgZmzfPlTBMACxgbvOWnQIpMajh5Nyu6Q2955bohj7oQhyV7llQMn9JW+rUXnIT36MOQdHzyNQvFHJ+GaABV6/vzo2ickKytHyLMLZ6o8CsNg2/ODR786puMTvrxZMciy6F9PhXYqadBAJhs+8SIZPK3h+jQVfhuNpJ1yc3BIF6M5fzV/gGdVvi9ZwUJ+iPYx0cr17+rGP7+RRhuoPRKtS/baxrfbW8n963LrMrjHQr0yIYtcIP0OPKKcSMMHfDwZudmuT8C9MM19a/LkxxYhjR6SxmgeMzelR/PoKjSMU5ioIRCm1ZGPe7QK+TuqcpRg/ODbOKFrPcDshiMGy743ar1MPQAXVWZ9rvJNXU3k2VfPopRzqo5R5obOgmlrvWOCEQn7Uaihv1nMiq7ugTBqLVjJ1CVGqWuDa8WJyoWWrNxpiaDINlW4bWCQG/iFMo6fS9G+TsZlCQLVjjYo9+E1q/Qhzfg7HgEz+nFLWGxdauj1n4ElvITwqS0PFrFjQvtE/C/YE4MAsyz8wK5AsGCwBKpJ0XtyPIPZMrB4H6rCzBZAaDhdg=
-  message: "firebase test deploy"
-  project: "mlab-oti"
+  token: 
+    secure: Z3Gksu2LnrpVbk+/ZwHY4vgfjsKy36HB1hRllOBmNJTxf4KBT52mDLWrHfxGTyDbi/7kxL83bIcfyJl0VhdT3iUAzGBnIGYEN7MobbCaXEDqpSgYHn7qIPfilYHeb9ddTHuDNNVIqSYVvTcKBQbY1OqAiyF9vQOsKdRoNYJ8eiKJWirlm8w/AFwDSiuLQc+C7kirJM90eAh+23ojuC/jejXqpBfE7Kc0v1ejIjg7eM5F4GuJeH+2Sujy8rym0nWhd7MUGGdDiSuVsHTOQLjeuW4hk5MBcp1p1o4L9AWJuAKLIgJ/VIixcx0+Ol7wG+wzQ22rk3LI82q51DW7xPmA0AxQcR1CHlVi8JF5EM149Cbclmg0MJkBgZireN2ydv5zW91/YfK6jvrlULSqDG0dubnfX3RKRjFtjB1bkjrmb1E5Uujhvg9bSn8lHhh6ODdZvyKr4+R3IztkTd0ppJIKLmv3i4X5fw4PV3IKLxylp5XvVijfaenRIVZv3GJ6o0Xkx6z8u8EtJwYBbc//Q5qVN061ShRPMEpynXzENa0IuZL0DDQa6A2jXKd4cS9IcktaxRXsgTuyvls8KvoJOCrbw4pAdTFfKGnFZT83y7IJT+8EVXtBO2j9wHMSv76otU0goAk2vquYjPczBdorRc8sMfargI3vQxD+bTjqMi75pFk=
+  message: firebase test deploy
   on:
     repo: m-lab/website
     all_branches: true
     condition: "$TRAVIS_BRANCH == deploy-firebase && $TRAVIS_EVENT_TYPE == push"
-
 - provider: script
   skip_cleanup: true
   script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
