@@ -48,5 +48,5 @@ deploy:
 
 after_success:
   if [ "$TRAVIS_BRANCH" == "deploy-firebase" ]; then 
-    firebase deploy --token $FIREBASE_TOKEN --non-interactive;
+    firebase deploy --token $FIREBASE_TOKEN --project mlab-oti --non-interactive;
   fi
