@@ -30,7 +30,7 @@ deploy:
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 - provider: script
   skip_cleanup: true
-  script: firebase use mlab-oti && firebase deploy --only hosting --token $FIREBASE_TOKEN
+  script: "firebase use mlab-oti && firebase deploy --only hosting --token $FIREBASE_TOKEN"
   on:
     repo: m-lab/website
     condition: "$TRAVIS_BRANCH == deploy-firebase"
