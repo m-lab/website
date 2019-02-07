@@ -12,16 +12,6 @@ script:
 - npm install -g firebase-tools
 - "./_tests/travis-checks --quick"
 deploy:
-#- provider: firebase
-#  skip_cleanup: true
-#  token: 
-#    secure: "rTbj2rLR7lUdOjgPyTriHqQPzJ0qKZmWnb1+FHXXtOMxAyOntZsngDg56riNV9ME8SAtGc9diiB3pMoCwxoulSde8I9cFojeDuebTZuOWVfGBER+e7vG2V+egAET0JoE4GGqPNifV0lVzNpAPpJovrXPBDcc2HEWdYQ+IghfSFLPRaBnTf9uYDA9uYT5Gyo5QCyRvV4MqtyLeuqi9a0e+T803fsUVlPieGJs4WuRRZDwEql13yOtP2OxBbAg12o9r3avwW671+tCWDJel9+4Nt7dOvIt8/S2ewXaISeyiXRwNOBhV0cz7E97EahmE+IyI4QO1yrwaa4uKIynKDXBu2sYwoTOe1Hv1JZzJYG6ozEuJHmnQAVTA+MZn9BxxyaW4uL7pZd2gmxyfEuv7bpz8tLL3mR7NLa5eAaOIHFBFbYVMNTVkWvf+/H7xayYT+AJDXBepWxYC5FqbcSA82WKny4r2XMV7CbPe6hoeWQhRrQBmjw2YZGE7eRcvPDGd6vDTw6EYrkFG8joMVJoHOB7Pv7pAiRoFSSvN6Yu1Jwb/mdo7hKLBPDSe6qYRu0GkrxC5r7w/5SZGhfhdTskmMHEPADLtlgc35bip0dzrQZbHlG0sJxxE+EDgwQeFleFypTnyd1FCHCX14rtRaqlqvhog0uX4uWcGFtx/KURyqXmrkE="
-#  message: firebase test deploy
-#  project: mlab-oti
-#  on:
-#    repo: m-lab/website
-#    all_branches: true
-#    condition: "$TRAVIS_BRANCH == deploy-firebase && $TRAVIS_EVENT_TYPE == push"
 - provider: script
   skip_cleanup: true
   script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
@@ -39,14 +29,10 @@ deploy:
     all_branches: true
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 - provider: script
-  script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_oti
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-oti.measurementlab.net/"
   skip_cleanup: true
+  script: firebase use mlab-oti && firebase deploy --only hosting --token $FIREBASE_TOKEN
   on:
     repo: m-lab/website
-    tags: true
-
-after_success:
-  if [ "$TRAVIS_BRANCH" == "deploy-firebase" ]; then 
-    firebase use mlab-oti && firebase deploy --only hosting --token $FIREBASE_TOKEN;
-  fi
+    condition: "$TRAVIS_BRANCH == deploy-firebase"
+#    condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
+#    tags: true
