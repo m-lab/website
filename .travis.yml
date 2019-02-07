@@ -3,9 +3,6 @@ language: ruby
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-branches:
-  only:
-  - /.*/
 
 script:
 - set -e
@@ -37,6 +34,7 @@ deploy:
   script: "firebase use mlab-oti && firebase deploy --only hosting --token $FIREBASE_TOKEN"
   on:
     repo: m-lab/website
+    all_branches: true
     condition: "$TRAVIS_BRANCH == deploy-firebase"
 #    condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
 #    tags: true
