@@ -3,6 +3,10 @@ language: ruby
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+branches:
+  only:
+  - /.*/
+
 script:
 - set -e
 - "$TRAVIS_BUILD_DIR/travis/install_gcloud.sh"
