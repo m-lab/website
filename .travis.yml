@@ -12,6 +12,7 @@ script:
 - sudo python3 -m pip install jupyter nbconvert
 - npm install -g firebase-tools
 - "./_tests/travis-checks --quick"
+
 deploy:
 - provider: script
   skip_cleanup: true
@@ -35,6 +36,5 @@ deploy:
   on:
     repo: m-lab/website
     all_branches: true
-    condition: "$TRAVIS_BRANCH == deploy-firebase"
-#    condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
-#    tags: true
+    condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
+    tags: true
