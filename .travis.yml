@@ -14,6 +14,8 @@ script:
 - "./_tests/travis-checks --quick"
 
 deploy:
+# Separate deployments to various places based on branch and push type
+## - sandbox
 - provider: script
   skip_cleanup: true
   script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
@@ -22,6 +24,8 @@ deploy:
     repo: m-lab/website
     all_branches: true
     condition: "$TRAVIS_BRANCH == sandbox-* && $TRAVIS_EVENT_TYPE == push"
+
+## - staging
 - provider: script
   skip_cleanup: true
   script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
@@ -30,6 +34,8 @@ deploy:
     repo: m-lab/website
     all_branches: true
     condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
+
+## - production
 - provider: script
   skip_cleanup: true
   script: "firebase use mlab-oti && firebase deploy --only hosting --token $FIREBASE_TOKEN"
