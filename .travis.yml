@@ -1,16 +1,16 @@
 dist: xenial
 language: ruby
-
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 script:
 - set -e
-- $TRAVIS_BUILD_DIR/travis/install_gcloud.sh
+- "$TRAVIS_BUILD_DIR/travis/install_gcloud.sh"
 - sudo apt-get install -y python3-pip
 - sudo python3 -m pip install --upgrade setuptools pip
 - sudo python3 -m pip install jupyter nbconvert
+- npm install -g firebase-tools
 - "./_tests/travis-checks --quick"
 
 deploy:
@@ -18,9 +18,8 @@ deploy:
 ## - sandbox
 - provider: script
   skip_cleanup: true
-  script: 
-    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/
+  script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
+    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/"
   on:
     repo: m-lab/website
     all_branches: true
@@ -29,9 +28,8 @@ deploy:
 ## - staging
 - provider: script
   skip_cleanup: true
-  script: 
-    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/
+  script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
+    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/"
   on:
     repo: m-lab/website
     all_branches: true
@@ -39,10 +37,10 @@ deploy:
 
 ## - production
 - provider: script
-  script:
-    $TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_oti
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-oti.measurementlab.net/
   skip_cleanup: true
+  script: "firebase use mlab-oti && firebase deploy --only hosting --token $FIREBASE_TOKEN"
   on:
     repo: m-lab/website
+    all_branches: true
+    condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
     tags: true

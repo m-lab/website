@@ -40,8 +40,8 @@ kramdown:
 # Display blog posts even if they're future-dated.
 future: true
 
-# Gems
-gems: ['jekyll-paginate', 'jekyll-feed', 'jekyll-jupyter-notebook']
+# Plugins
+plugins: ['jekyll-paginate', 'jekyll-feed', 'jekyll-jupyter-notebook']
 paginate: 5
 paginate_path: "/blog/page/:num"
 
