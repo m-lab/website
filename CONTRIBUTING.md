@@ -16,11 +16,20 @@ cd .git/
 ln -s -f ../_hooks hooks
 ```
 
-* [Install Jekyll](https://jekyllrb.com/docs/installation/) using the instruc tions appropriate for your operating system
-* From within the cloned website repository, install required dependencies:
+### Install Build Dependencies
+
+To build and preview the website locally, install the following for your system and operating environment. Note that we do not specify how you must install dependencies, since you may choose to use virtual environments, install a package using `pip` with your system's package manager, etc. We leave this to developer preference, but if you would like to submit an install guide specific to your OS and environment, please send us a pull request.
+
+* Install website build dependencies for your operating system and environment
+  * [Jekyll](https://jekyllrb.com/docs/installation/)
+  * [Jupyter](https://jupyter.org/install)
+  * [Bundler](https://bundler.io/)
+  * [markdownlint](https://github.com/markdownlint/markdownlint)
+  * [Node.js](https://nodejs.org/en/download/)
+* From within the cloned website repository, install additional dependencies using `bundler`:
   * `bundle install`
 * Test a working installation by running the Jekyll server, passing in a blank `--baseurl` parameter:
-  * `bundle exec jekyll serve --baseurl`
+  * `bundle exec jekyll serve --baseurl ""`
   * View the generated site by going to [http://localhost:4000/](http://localhost:4000/)
 
 ## Code Standards and Practice
