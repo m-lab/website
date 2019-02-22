@@ -4,7 +4,7 @@ header:
   ctas:
   -
     link: "/about/"
-    h2: "Measurement Lab is a partnership between New America's Open Technology Institute, Google Inc., Princeton University's PlanetLab, and other supporting partners."
+    h2: "M-Lab is an open source project with contributors from civil society organizations, educational institutions, and private sector companies, and is a fiscally sponsored project of Code for Science & Society."
     h3: "Learn more about M-Lab"
     class: "assist-cta"
   category:
