@@ -35,9 +35,15 @@ You can find out more information:
 
 ## Host or Sponsor an M-Lab Measurement Site
 
-M-Lab supporting partners may contribute or donate resources to provide new measurement points around the world. If you are interested in helping M-Lab expand our coverage to new areas, please submit [this application](https://docs.google.com/a/measurementlab.net/spreadsheet/viewform?formkey=dHNMZ2p0OU5TckxIUFg0RVNhSk5teEE6MQ#gid=0). The document [How to Deploy a New M-Lab Site]({{ site.baseurl }}/publications/how-to-deploy-mlab-site.pdf) outlines the resources needed for each M-Lab Measurement Point.
+M-Lab supporting partners may contribute or donate resources to provide new measurement points around the world. M-Lab places servers in locations whi  At a minimum, sponsoring a measurement point requires a commitment to provide:
 
-If you'd like to get involved as an M-Lab supporting partner, [contact](mailto:support@measurementlab.net) the M-Lab team and join the [public mailing list](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss){:target="_blank"}.
+* 5U rackspace and power
+* a /26 IPv4 block and /64 IPv6 block if available, both globally routed, and statically assigned to M-Lab equipment
+* a 1G dedicated, burstable to 10G uplink to a single transit provider
+* remote support in coordination with M-Lab for installation and periodic maintenance
+* three year commitment to sponsor costs of the above items
+
+If you represent an organization interested in becoming an M-Lab supporting partner, please [contact us](mailto:support@measurementlab.net).
 
 ## Analyze and Visualize M-Lab Data
 
