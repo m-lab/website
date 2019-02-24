@@ -2,7 +2,7 @@
 layout: blog
 title: "Retiring the Neubot Client"
 author: "Simone Basso"
-date: 2018-11-12
+date: 2019-01-11
 breadcrumb: blog
 categories:
   - neubot
