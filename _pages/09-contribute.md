@@ -35,7 +35,7 @@ You can find out more information:
 
 ## Host or Sponsor an M-Lab Measurement Site
 
-M-Lab supporting partners may contribute or donate resources to provide new measurement points around the world. M-Lab places servers in locations whi  At a minimum, sponsoring a measurement point requires a commitment to provide:
+M-Lab supporting partners may contribute or donate resources to provide new measurement points around the world. M-Lab places servers in datacenters where last mile ISPs interconnect with transit to the Internet. At a minimum, sponsoring a measurement point requires a commitment to provide:
 
 * 5U rackspace and power
 * a /26 IPv4 block and /64 IPv6 block if available, both globally routed, and statically assigned to M-Lab equipment
