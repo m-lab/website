@@ -47,4 +47,4 @@ In 2008, [Vint Cerf](http://www.google.com/corporate/execs.html#vint){:target="_
 
 There also was no public resource that could provide combined performance data to policymakers or to consumers interested in understanding their Internet performance over time. As a result of these conversations, M-Lab was founded to help address the core problems experienced by researchers and to promote large-scale open source measurement of the Internet.
 
-M-Lab was [founded]({{ site.baseurl }}/who) in 2009 by [New America’s Open Technology Institute](https://www.newamerica.org/oti){:target="_blank"}, the [PlanetLab Consortium](https://www.planet-lab.org/){:target="_blank"}, Google, and a large body of academic researchers.
+M-Lab was [founded]({{ site.baseurl }}/who) in 2009 by [New America’s Open Technology Institute](https://www.newamerica.org/oti){:target="_blank"}, the [PlanetLab Consortium](https://www.planet-lab.org/){:target="_blank"}, Google, and a group of academic researchers.
