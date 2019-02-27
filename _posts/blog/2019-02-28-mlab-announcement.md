@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "After A Decade of Growth, Measurement Lab Spins Out of New America to Join Code for Science & Society"
-author: "Chris Ritzo"
+author: "M-Lab Team"
 date: 2019-02-28
 breadcrumb: blog
 categories:
