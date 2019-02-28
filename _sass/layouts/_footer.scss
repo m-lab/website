@@ -47,6 +47,17 @@
     }
   }
 
+  .footer-tag {
+    font-style: italic;
+
+    a {
+      color: #e35343;
+    }
+    a:hover {
+      color: #000000;
+    }
+  }
+
   .privacy-policy {
     font-size: 13px;
     line-height: 15px;

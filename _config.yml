@@ -27,6 +27,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - _scripts
+  - _site
   - vendor
   - travis
 

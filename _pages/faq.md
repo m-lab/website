@@ -156,9 +156,9 @@ For network administrators, the patterns below can be used in your firewall rule
 ## Who are M-Lab's supporting partners?
 {:.no_toc}
 
-M-Lab is supported by academic institutions, private foundations, private companies, and public interest organizations. M-Lab’s partners have committed resources to M-Lab in the form of infrastructure, funding, data storage/analysis, staffing, and other assistance dedicated to furthering M-Lab's mission. For a list of M-Lab’s partners, please see our [list of supporters]({{ site.baseurl }}/who).
+M-Lab is a community-based effort. We currently receive resources and financial assistance from our partners and welcome others who would like to support the platform's growth.
 
-M-Lab was [founded]({{ site.baseurl }}/who) by New America’s Open Technology Institute (OTI), the PlanetLab Consortium, Google Open Source Research, and a large body of academic researchers. The founding researchers collectively make up the steering committee that leads development of M-Lab's organizational policies and provides oversight of the platform. M-Lab is a community-based effort. We currently receive resources and financial assistance from our partners and welcome others who would like to support the platform's growth.
+M-Lab is supported by academic institutions, private foundations, private companies, and public interest organizations. M-Lab’s partners have committed resources to M-Lab in the form of infrastructure, funding, data storage/analysis, staffing, and other assistance dedicated to furthering M-Lab's mission. For a list of M-Lab’s partners, please see our [list of supporters]({{ site.baseurl }}/who).
 
 Interested in supporting M-Lab? Please see the FAQ section, [Supporting or Contributing to M-Lab]({{ site.baseurl }}/faq/#supporting-or-contributing-to-m-lab), and [contact us]({{ site.baseurl }}/contact) at [support@measurementlab.net](mailto:support@measurementlab.net) for more information.
 
