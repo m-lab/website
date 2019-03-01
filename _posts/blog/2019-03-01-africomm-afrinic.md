@@ -36,7 +36,7 @@ measurement, research and policy community in Africa. <!--more-->
 in Africa.*
 
 Award winning research from Amreesh Phokeer and Josiah Chavula (["Revealing
-Latency Clusters in Africa"][african-latency]){:target="_blank"} highlights
+Latency Clusters in Africa"][african-latency]{:target="_blank"}) highlights
 how Internet routing in Africa often takes paths outside of the continent,
 significantly impacting end to end latency. To facilitate this type of
 research, by the end of 2019, M-Lab is committed to deploying [CAIDA's
