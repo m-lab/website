@@ -11,6 +11,7 @@ categories:
 Hello M-Lab Community!
 
 **TLDR; Interested in working with M-Lab? We are hiring a Project Director! Read the [job description](/jobs/project-director/), and apply by March 31st!**
+<!--more-->
 
 As you may have seen, M-Lab recently [moved over to Code for Science & Society]({{ site.baseurl }}/blog/mlab-announcement/). One change that might not have been as visible is that I also recently moved into a [new role over at Simply Secure](https://simplysecure.org/blog/hello-georgia){:target="_blank"}. For those of you whom I've worked with over the years on many M-Lab related projects — It's important to note, that I'm still involved at M-Lab, I'm just moving out of my role in the day to day management, and instead still involved in some specific projects and in strategy and governance of M-Lab.
 
