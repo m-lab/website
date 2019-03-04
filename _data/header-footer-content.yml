@@ -104,8 +104,8 @@ footer:
         link: "/contact/"
         link-title: "Contact"
       -
-        link: "https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss"
-        link-title: "Discuss List"
+        link: "/jobs/"
+        link-title: "Jobs"
     column-two:
       items:
       -
