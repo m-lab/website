@@ -16,7 +16,7 @@ There are many ways to work with M-Lab, whether as a direct hire, through a fell
 
 ## Open Bid Contracts
 
-* [Development Sub-contract: Administration & User Facing Application, Institute for Museum and Library Services]({{ site.baseurl }}/jobs/imls-application-contract/)
+* [Development Sub-contract: Administration & User Facing Application]({{ site.baseurl }}/jobs/imls-application-contract/)
 
 ## Open Opportunities in the M-Lab Community
 

@@ -1,11 +1,11 @@
 ---
 layout: page
 permalink: /jobs/imls-application-contract/
-title: "Call for Bids - Administration & User Facing Application, Institute for Museum and Library Services"
+title: "Call for Proposals - Administrative & User Facing Application"
 breadcrumb: "contribute"
 ---
 
-# Development Sub-contract: Administration & User Facing Application, Institute for Museum and Library Services
+# Call for Proposals - Administrative & User Facing Application
 
 M-Lab invites bids for contractual services to develop an _Administration & User Facing Application_ for our grant [sub-award from Simmons University](https://slis.simmons.edu/blogs/mlbn/about/){:target="_blank"}, "Measuring Library Broadband Networks for the National Digital Platform", (award #LG-71-18-0110-18) from by the Institute of Museum and Library Services (IMLS) National Leadership Grant for Libraries program.
 
@@ -15,11 +15,11 @@ Under this program, M-Lab will design and produce an open source, replicable bro
 * Measurement System containerized code
 * Administration & User Facing Application
 
-## Call for Proposals - Administrative & User Facing Application
-
 This call solicits proposals for the _Administration & User Facing Application_ component.
 
-### Timeline
+## Proposal Submission and Project Timeline
+
+Please send us your proposals to [contact@measurementlab.net](mailto:contact@measurementlab.net) by March 31st, 2019 for full consideration. Proposals will be reviewed as they are received.
 
 The expected timeline for this project is March 2019 - June 2019, following the schedule below:
 
@@ -27,7 +27,7 @@ The expected timeline for this project is March 2019 - June 2019, following the 
 * **April - May 2019** - Development of Administrative & User Facing Application, and iterative changes in coordination with UI/UX and project team
 * **June 2019** - Acceptance testing and completion
 
-### Scope of Project Work
+## Scope of Project Work
 
 The _Administration & User Facing Application_ will be a web-based user management tool using Flask or other suitable web framework. This application should be deployable on a virtual machine within a cloud provider like Google Cloud, Linode, AWS, Azure or Heroku. It may make sense to compartmentalize the components of the application to be run individually or as a single application.
 
@@ -37,7 +37,7 @@ We envision the _Administration & User Facing Application_ will consist of the f
 * **Data Management Tools**
 * **Data Analysis & Visualization Tools** - A component of the User Portal, specifically the visualizations of data being collected by devices, as well as other sources of data
 
-#### User Management Tools
+### User Management Tools
 
 **Required:**
 
@@ -50,7 +50,7 @@ We envision the _Administration & User Facing Application_ will consist of the f
   * Add a new device to the platform, configuring the base OS image & provisioning the new device
   * Customize the device configuration, e.g. assign environment variables to devices, configure measurement devices, select which measurement tests to run on specific devices, etc.
 
-#### Data Management Tools
+### Data Management Tools
 
 **Required:**
 
@@ -61,7 +61,7 @@ We envision the _Administration & User Facing Application_ will consist of the f
 
 * Ability to add other data sources than the data collected by the IoT devices, e.g. through a plugin architecture to support connections to other network systems (i.e.: SNMP, Netflow) or the ability to upload this data
 
-#### Data Analysis & Visualization Tool
+### Data Analysis & Visualization Tool
 
 With support from the project team, develop a series of usable data visualization and analysis tools (e.g. charts, annotation, data entry) for measurements and other data collected by the platform. As part of this project, the core team will be working with users to develop needs and user workflows through a human-centered design process, which will provide the information for the interface needs. We expect this process to be iterative, with feedback from users fed back to the project team and selected contractor. Based on initial workshops with users, the following needs have been identified, but these are likely to evolve as the research continues:
 
@@ -90,11 +90,11 @@ With support from the project team, develop a series of usable data visualizatio
 * Report generation function - ability to assemble data from various sources (measured, internally uploaded, annotations/notes, external information, etc.) into downloadable reports
 * Identify and import, or use data feeds from data sources about overall Internet health and status, to identify externalities
 
-**Resources Available:**
+### Resources Available
 
 * [Measurement Lab Visualization Platform](https://github.com/m-lab/mlab-vis-client){:target="_blank"}
 
-### Appendix - Complete Measurement System Description
+## Appendix - Complete Measurement System Description
 
 Under this program, M-Lab will design and produce an open source, replicable broadband measurement platform consisting of three primary components:
 
@@ -104,7 +104,7 @@ Under this program, M-Lab will design and produce an open source, replicable bro
 
 While this call seeks proposals for the _Administration & User Facing Application_, we present a more complete system description in this appendix to aide developers who may submit bids in order to understand how this component fits within the complete system.
 
-#### IoT Device Management Platform
+### IoT Device Management Platform
 
 The program team has selected [Balena Cloud](https://www.balena.io/){:target="_blank"} to provision and manage devices for this project. Program staff are also evaluating the recently released [OpenBalena self-hosted server](https://www.balena.io/open/){:target="_blank"} as a functional replacement for Balena.io’s vendor hosted service.
 
@@ -114,10 +114,10 @@ We envision a complete broadband measurement system that will operate with eithe
 
 As described in the system diagram above, the Balena Cloud service or the balena-cli is used to register and configure new project devices, configure base OS images to be flashed onto each device’s SD card, push and update code running on remote devices, and to manage the entire device fleet.
 
-#### Measurement System containerized code
+### Measurement System containerized code
 
 The [measurement system code](https://github.com/critzo/mk-rpi){:target="_blank"} running in each device's application container includes measurement tests that are run from each provisioned device using a [Python wrapper script](https://github.com/critzo/mk-rpi/blob/master/test-runner/run.py#L417-L426){:target="_blank"}. The tests we intend to run are, from [Measurement Kit](https://measurement-kit.github.io/){:target="_blank"}: NDT, Neubot DASH, Paris Traceroute, and this open source [Speedtest.net](https://github.com/sivel/speedtest-cli){:target="_blank"} test. Results from each test are stored in JSON format.
 
-#### Administration & User Facing Application
+### Administration & User Facing Application
 
 Described in full in the section above, **Scope of Project Work**.
