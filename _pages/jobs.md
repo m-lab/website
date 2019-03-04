@@ -10,6 +10,8 @@ breadcrumb: "contribute"
 
 There are many ways to work with M-Lab, whether as a direct hire, through a fellowship or internship; as a contracor, collaborator, or researcher at another institution; or as an open source contributor. Here we list open opportunities to work for or with M-Lab directly, and also opportunities within other organizations with whom we collaborate.
 
+If you have open jobs that you'd like to have listed here, [contact us](mailto:contact@measurementlab.net)
+
 ## Open Postions at Measurement Lab
 
 * [M-Lab Project Director]({{ site.baseurl }}/jobs/project-director/) - (_Posted 2019-03-04, Applications through 2019-03-31_)
