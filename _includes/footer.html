@@ -57,6 +57,14 @@
             {% endfor %}
           
           </ul>
+          <ul class="footer-links">
+            
+            {% for item in footer.other-links.column-four.items %}
+              <li><a href="{{ item.link | prepend: site.baseurl }}">{{ item.link-title }}</a>
+              </li>
+            {% endfor %}
+          
+          </ul>
         </div>
 
     </div>

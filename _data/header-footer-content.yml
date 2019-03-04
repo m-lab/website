@@ -115,19 +115,25 @@ footer:
         link: "/blog/"
         link-title: "Blog"
       -
-        link: "/feed.xml"
-        link-title: "RSS"
+        link: "https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss"
+        link-title: "Discuss List"
     column-three:
       items:
       -
         link: "https://github.com/m-lab"
         link-title: "Code"
       -
+        link: "/feed.xml"
+        link-title: "RSS"
+    column-four:
+      items:
+      -
         link: "/privacy/"
         link-title: "Privacy Policy"
       -
         link: "/aup/"
         link-title: "Acceptable Use Policy"
+
   privacy:
     title: "Privacy Policy &amp; Acceptable Use Policy."
     link: "/privacy/"
