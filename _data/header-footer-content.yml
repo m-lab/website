@@ -70,6 +70,8 @@ header:
           url: "/contribute/"
         - text: "Developer"
           url:  "/develop/"
+        - text: "Jobs & Opportunities"
+          url: "/jobs/"
 
 footer:
   subscribe:

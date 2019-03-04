@@ -2,7 +2,8 @@
 layout: page
 permalink: /jobs/
 title: "Jobs &amp; Opportunties"
-breadcrumb: "jobs"
+page-title: "Jobs &amp; Opportunties"
+breadcrumb: "contribute"
 ---
 
 # Jobs &amp; Opportunties
