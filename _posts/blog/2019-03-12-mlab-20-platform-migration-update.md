@@ -19,7 +19,8 @@ Platform][modernize]{:target="_blank"}. This year, we’re bringing them to
 life. Here’s a summary of why the platform update is so valuable and what you
 can expect throughout the year.
 
-[modernize]: {{site.baseurl}}/blog/modernizing-mlab <!--more-->
+[modernize]: {{site.baseurl}}/blog/modernizing-mlab
+<!--more-->
 
 ## Advantages
 
