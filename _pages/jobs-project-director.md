@@ -53,7 +53,6 @@ Overall management and oversight of deliverables, time-tables, and budget alloca
 
 Submit a cover letter and resume to [jobs@measurementlab.net](mailto:jobs@measurementlab.net). We highly recommend including links to projects you’ve been involved in, including documentation and/or code samples with your application (you can link to Github or add an attachment to the application).
 
-### We are hoping to hire ASAP, and are interviewing candidates on a rolling basis. Apply now!
-
+We are hoping to hire as soon as possible, and are interviewing candidates on a rolling basis. **Apply now!**
 
 [CS&S](https://codeforscience.org) is an equal opportunity employer committed to hiring a diverse workforce at all levels of the organization thereby creating a culture that allows us to better serve our clientele, our employees and our communities. We value and encourage the contributions of our employees and strive to create an environment where everyone can reach their full potential and drive outstanding results. All qualified applicants will receive consideration for employment without regard to race, national origin, age, sex, religion, disability, sexual orientation, marital status, veteran status, gender identity or expression, or any other basis protected by local, state, or federal law. This policy applies with regard to all aspects of one’s employment, including hiring, transfer, promotion, compensation, eligibility for benefits, and termination.
