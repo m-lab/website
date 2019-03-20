@@ -2,6 +2,7 @@
 layout: page
 permalink: /status/
 title: "M-Lab Platform Status"
+audience: statusmap
 breadcrumb: data
 ---
 
@@ -11,11 +12,24 @@ M-Lab places server infrastructure for conductingt tests in diverse location aro
 
 ## Infrastructure Map
 
+<div id="map" class="map leaflet-container" style="height: 500px; position:relative;"></div>
+<script>
+  var center = [18.5554797,-42.4662712];
+  var zoom = 2;
+  var map = L.map('map', {}).setView(center, zoom);
+  var baseTileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' });
+    map.addLayer(baseTileLayer);
+
+</script>
+
+<!--
 <p><iframe src="https://mlab-ns.appspot.com/admin/map/ipv4/all" width="100%" height="660" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" align="left"></iframe></p>
 
 ## Server Status
 
 <p><iframe src="https://mlab-ns.appspot.com/admin/sliver_tools" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes"></iframe></p>
+-->
 
 ## M-Lab Naming Service
 
