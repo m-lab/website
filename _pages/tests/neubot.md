@@ -11,6 +11,6 @@ Neubot (the network neutrality bot) was a free software Internet bot, developed 
 
 **Data** collected by Neubot while hosted on M-Lab remains available in raw format at [https://console.cloud.google.com/storage/browser/archive-measurement-lab/neubot](https://console.cloud.google.com/storage/browser/archive-measurement-lab/neubot){:target="_blank"}.
 
-Please cite this data set as follows: **The M-Lab Neubot Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/neubot**
+Please cite this data set as follows: The M-Lab Neubot Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/neubot
 
 **Get more information** at [http://www.neubot.org/](http://www.neubot.org/){:target="_blank"}.
