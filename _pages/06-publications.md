@@ -17,6 +17,17 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2018
 {:.no_toc}
 
+### Access is more than cost: Measuring the quality of mobile broadband service
+{:.no_toc}
+
+{:.paper-description}
+A4AI’s December 2018 report examines the policy dynamics that define the quality of mobile broadband service experienced by users across low- and middle-income countries (LMICs). Taking a step beyond our core research around affordable access and the cost of connectivity, this brief report informs ongoing efforts to translate internet access into meaningful access for everyone.
+
+{:.paper-author}
+Teddy Woodhouse (Research Analyst and Advocate, A4AI) and Dhanaraj Thakur (Research Director, Web Foundation)
+
+[Read/Download](https://a4ai.org/access-is-more-than-cost-measuring-the-quality-of-mobile-broadband-service/){:.download-link .paper-download target="_blank"}
+
 ### Can Competition-Enhancing Regulation Bridge the Quality Divide in Internet Provision?
 {:.no_toc}
 
