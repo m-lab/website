@@ -11,7 +11,7 @@ breadcrumb: tests
 
 WindRider attempted to detect whether your mobile provider was performing application- or service-specific differentiation, such as prioritizing or slowing traffic to certain websites, applications, or content.
 
-Please cite this data set as follows: The M-Lab Windrider Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/windrider
+Please cite this data set as follows: **The M-Lab Windrider Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/windrider**
 
 **Source code** is available at[http://code.google.com/p/windrider/](http://code.google.com/p/windrider/).
 

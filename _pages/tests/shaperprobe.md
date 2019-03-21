@@ -15,6 +15,6 @@ ShaperProbe was a research prototype developed by Georgia Tech graduate student 
 
 For any questions regarding the code/tool, please contact Partha Kanuparthy (kvbp2k@gmail.com) or Constantine Dovrolis (constantine@gatech.edu).
 
-Please cite this data set as follows: The M-Lab ShaperProbe Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/shaperprobe
+Please cite this data set as follows: **The M-Lab ShaperProbe Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/shaperprobe**
 
 **Data** collected by ShaperProbe is available in raw format at [https://console.developers.google.com/storage/browser/archive-measurement-lab/shaperprobe/](https://console.developers.google.com/storage/browser/archive-measurement-lab/shaperprobe/){:target="_blank"}.
