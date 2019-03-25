@@ -14,6 +14,20 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 # Papers
 
+## 2019
+{:.no_toc}
+
+### Estimating Residential Broadband Capacity using Big Data from M-Lab
+{:.no_toc}
+
+{:.paper-description}
+Knowing residential broadband capacity profiles across a population is of interest to both consumers and regulators who want to compare or audit performance of various broadband service offerings. Unfortunately, extracting broadband capacity from speed tests in public datasets like M-Lab is challenging because tests are indexed by client IP address which can be dynamic and/or obfuscated by NAT, and variable network conditions can affect measurements. This paper presents the first systematic effort to isolate households and extract their broadband capacity using 63 million speed test measurements recorded over a 12 month period in the M-Lab dataset. We first identify a key parameter, the correlation between measured speed and congestion count for a specific client IP address, as an indicator of whether the IP address represents a single house, or a plurality of houses that may be dynamically sharing addresses or be aggregated behind a NAT. We then validate our approach by comparing to ground truth taken from a few known houses, and at larger scale by checking internal consistency across ISPs and across months. Lastly, we present results that isolate households and estimate their broadband capacity based on measured data, and additionally reveal insights into the prevalence of NAT and variations in service capacity tiers across ISPs.
+
+{:.paper-author}
+Xiaohong Deng, Yun Feng, Hassan Habibi Gharakheili, Vijay Sivaraman
+
+[Read/Download](https://arxiv.org/abs/1901.07059){:.download-link .paper-download target="_blank"}
+
 ## 2018
 {:.no_toc}
 
