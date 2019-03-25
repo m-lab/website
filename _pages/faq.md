@@ -14,7 +14,7 @@ breadcrumb: "about"
 ## What is M-Lab?
 {:.no_toc}
 
-Measurement Lab (M-Lab) is the largest open source Internet measurement effort in the world. (Open source refers to source code that is made available for free so that anyone can use or modify it to fit their own purposes.) M-Lab provides internet measurement [tests]({{ site.baseurl }}/tests) that help consumers develop an accurate picture of their Internet service by offering a state-of-the-art server platform that supports many measurement needs. The data are collected and then released to the public for use by policymakers, researchers, and others who are interested in Internet issues.
+Measurement Lab (M-Lab) is the largest open source Internet measurement effort in the world. (Open source refers to source code that is made available for free so that anyone can use or modify it to fit their own purposes.) M-Lab provides Internet measurement [tests]({{ site.baseurl }}/tests) that help consumers develop an accurate picture of their Internet service by offering a state-of-the-art server platform that supports many measurement needs. The data are collected and then released to the public for use by policymakers, researchers, and others who are interested in Internet issues.
 
 The graphic below illustrates the relationship between tests run by consumers and M-Lab’s data collection.
 
@@ -23,7 +23,7 @@ The graphic below illustrates the relationship between tests run by consumers an
 ## Where are M-Lab Servers hosted?
 {:.no_toc}
 
-M-Lab hosts our servers, which we call “pods”, in Tier 1 data-centers, connected to the internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible. You can view where M-Lab servers are hosted on our [platform status page]({{ site.baseurl }}/status).
+M-Lab hosts our servers, which we call “pods”, in Tier 1 data-centers, connected to the Internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible. You can view where M-Lab servers are hosted on our [platform status page]({{ site.baseurl }}/status).
 
 Once an M-Lab pod is online we make no changes in our systems for the life of each pod. Whenever there is a substantial change to our sites, such as renumbering of IP addresses, we retire the pod, retain its naming and metadata in our systems, and treat the pod as brand new.
 
@@ -118,7 +118,7 @@ In short, running one test will give you a sense of network conditions at that m
 ## NDT measurements satellite Internet connections
 {:.no_toc}
 
-The NDT test sometimes presents unexpected results when measuring a satellite internet connection. ISPs that use a proxy prior to the satellite uplink terminate the TCP flow at the proxy. As a result, NDT is measuring the speed and latency to the proxy rather than all the way through the proxy. M-Lab is working on updates to NDT which we hope will resolve this issue for satellite customers in the future.
+The NDT test sometimes presents unexpected results when measuring a satellite Internet connection. ISPs that use a proxy prior to the satellite uplink terminate the TCP flow at the proxy. As a result, NDT is measuring the speed and latency to the proxy rather than all the way through the proxy. M-Lab is working on updates to NDT which we hope will resolve this issue for satellite customers in the future.
 
 ## How do I report issues with M-Lab tests?
 {:.no_toc}

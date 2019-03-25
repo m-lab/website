@@ -21,7 +21,7 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 {:.no_toc}
 
 {:.paper-description}
-A4AI’s December 2018 report examines the policy dynamics that define the quality of mobile broadband service experienced by users across low- and middle-income countries (LMICs). Taking a step beyond our core research around affordable access and the cost of connectivity, this brief report informs ongoing efforts to translate internet access into meaningful access for everyone.
+A4AI’s December 2018 report examines the policy dynamics that define the quality of mobile broadband service experienced by users across low- and middle-income countries (LMICs). Taking a step beyond our core research around affordable access and the cost of connectivity, this brief report informs ongoing efforts to translate Internet access into meaningful access for everyone.
 
 {:.paper-author}
 Teddy Woodhouse (Research Analyst and Advocate, A4AI) and Dhanaraj Thakur (Research Director, Web Foundation)
@@ -43,7 +43,7 @@ Montenegro, Lourdes National University of Singapore (NUS)
 {:.no_toc}
 
 {:.paper-description}
-An overview of the internet conditions during the 2018 elections in Venezuela.
+An overview of the Internet conditions during the 2018 elections in Venezuela.
 
 {:.paper-author}
 IPYS Venezuela
@@ -79,7 +79,7 @@ Cable.co.uk
 {:.no_toc}
 
 {:.paper-description}
-An overview of internet speeds and access to information in Venezuela.
+An overview of Internet speeds and access to information in Venezuela.
 
 {:.paper-author}
 IPYS Venezuela
@@ -137,7 +137,7 @@ Reza Rajabiun, Catherine Middleton
 {:.no_toc}
 
 {:.paper-description}
-What is the malicious reflected distributed denial of service (rDDoS) mean potential of the internet? The authors have been using data from the openNTP project which measures the number of reflectors on the internet since 2014 until now, and completed a graph that roughly estimates a lower boundary for global rDDoS mean potential across four internet protocols (IPs); SSDP, NTP, SNMP and open recursive DNS.
+What is the malicious reflected distributed denial of service (rDDoS) mean potential of the Internet? The authors have been using data from the openNTP project which measures the number of reflectors on the Internet since 2014 until now, and completed a graph that roughly estimates a lower boundary for global rDDoS mean potential across four Internet protocols (IPs); SSDP, NTP, SNMP and open recursive DNS.
 
 {:.paper-author}
 Eireann Leverett, Aaron Kaplan
@@ -162,7 +162,7 @@ Chris Ritzo
 {:.no_toc}
 
 {:.paper-description}
-The authors analyse two complementary datasets to quantify the latency variation experienced by internet end-users: (i) a large-scale active measurement dataset (from the Measurement Lab Network Diagnostic Tool) which shed light on long-term trends and regional differences; and (ii) passive measurement data from an access aggregation link which is used to analyse the edge links closest to the user. The analysis shows that variation in latency is both common and of significant magnitude, with two thirds of samples exceeding 100 ms of variation. The variation is seen within single connections as well as between connections to the same client. The distribution of experienced latency variation is heavy-tailed, with the most affected clients seeing an order of magnitude larger variation than the least affected. In addition, there are large differences between regions, both within and between continents. Despite consistent improvements in throughput, most regions show no reduction in latency variation over time, and in one region it even increases.
+The authors analyse two complementary datasets to quantify the latency variation experienced by Internet end-users: (i) a large-scale active measurement dataset (from the Measurement Lab Network Diagnostic Tool) which shed light on long-term trends and regional differences; and (ii) passive measurement data from an access aggregation link which is used to analyse the edge links closest to the user. The analysis shows that variation in latency is both common and of significant magnitude, with two thirds of samples exceeding 100 ms of variation. The variation is seen within single connections as well as between connections to the same client. The distribution of experienced latency variation is heavy-tailed, with the most affected clients seeing an order of magnitude larger variation than the least affected. In addition, there are large differences between regions, both within and between continents. Despite consistent improvements in throughput, most regions show no reduction in latency variation over time, and in one region it even increases.
 
 {:.paper-author}
 Toke Hoiland-Jorgensen et al., CoNEXT '16
@@ -664,7 +664,7 @@ Stephen Soltesz
 [View Video](https://www.youtube.com/watch?v=ZJCrn5FV-TA){:.download-link .paper-download target="_blank"}
 [View Slides](https://goo.gl/UY7uXT){:.download-link .paper-download target="_blank"}
 
-### Visualizing the Health of the internet - Measurement Lab + Bocoup
+### Visualizing the Health of the Internet - Measurement Lab + Bocoup
 {:.no_toc}
 
 {:.paper-description}

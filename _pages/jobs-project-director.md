@@ -11,11 +11,11 @@ The M-Lab project director is responsible for managing the Measurement Lab proje
 
 ## Call for Applicants
 
-Are you looking to work with a dynamic interdisciplinary, multi-organization team on a project to measure and improve internet performance around the world? Are you motivated to make the web open? Do you love working with open data and working with a team to ask big questions? Do you love helping things run smoothly? Organizing information? Managing projects? Facilitating team communication? Sorting out logistics? Then we need you! Come help a small multi-organizational, distributed team work better together to help keep the internet open!
+Are you looking to work with a dynamic interdisciplinary, multi-organization team on a project to measure and improve Internet performance around the world? Are you motivated to make the web open? Do you love working with open data and working with a team to ask big questions? Do you love helping things run smoothly? Organizing information? Managing projects? Facilitating team communication? Sorting out logistics? Then we need you! Come help a small multi-organizational, distributed team work better together to help keep the Internet open!
 
-Measurement Lab (M-Lab) is the largest open internet measurement platform in the world, hosting internet-scale measurement experiments and releasing all data into the public domain (CC0). M-Lab advances network research and empowers the public with useful information about broadband and mobile connections, enhancing internet transparency, and helping to promote and sustain a healthy, innovative internet. Read more about the project at [https://www.measurementlab.net]({{ site.baseurl }}) or explore the data on [https://viz.measurementlab.net](https://viz.measurementlab.net).
+Measurement Lab (M-Lab) is the largest open Internet measurement platform in the world, hosting Internet-scale measurement experiments and releasing all data into the public domain (CC0). M-Lab advances network research and empowers the public with useful information about broadband and mobile connections, enhancing Internet transparency, and helping to promote and sustain a healthy, innovative Internet. Read more about the project at [https://www.measurementlab.net]({{ site.baseurl }}) or explore the data on [https://viz.measurementlab.net](https://viz.measurementlab.net).
 
-M-Lab is a consortium of research, industry, and public interest partners focused on fostering, collecting, and publishing open internet data led by teams based at Code for Science & Society, New America’s Open Technology Institute, Google, and Princeton University. We collaborate with organizations all over the world to build out the internet measurement platform, do research and data studies, inform policy work with regulators, policymakers, and advocacy organizations.
+M-Lab is a consortium of research, industry, and public interest partners focused on fostering, collecting, and publishing open Internet data led by teams based at Code for Science & Society, New America’s Open Technology Institute, Google, and Princeton University. We collaborate with organizations all over the world to build out the Internet measurement platform, do research and data studies, inform policy work with regulators, policymakers, and advocacy organizations.
 
 We are looking for someone with an entrepreneurial spirit to provide program management and leadership for the M-Lab team. The Program Director will help with everything from strategic planning, cross-org collaboration, day-to-day tasks, hiring processes, fundraising, and overall program design and management.
 
@@ -51,7 +51,7 @@ Overall management and oversight of deliverables, time-tables, and budget alloca
 
 ## Application Process
 
-Submit a cover letter and resume to [jobs@measurementlab.net](mailto:jobs@measurementlab.net). We highly recommend including links to projects you’ve been involved in, including documentation and/or code samples with your application (you can link to Github or add an attachment to the application).
+Submit a cover letter and resume to [jobs@measurementlab.net](mailto:jobs@measurementlab.net). We highly recommend including links to projects you’ve been involved in, including documentation and/or code samples with your application (you can link to GitHub or add an attachment to the application).
 
 We are hoping to hire as soon as possible, and are interviewing candidates on a rolling basis. **Apply now!**
 

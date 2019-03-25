@@ -8,7 +8,7 @@ breadcrumb: learn
 
 # Definitions of Terms
 
-To provide clarity for people of all expertise levels, here we provide definition of terms used in M-Lab documentation or with respect to internet research, measurement, etc.
+To provide clarity for people of all expertise levels, here we provide definition of terms used in M-Lab documentation or with respect to Internet research, measurement, etc.
 
 ## Infrastructure
 {:.no_toc}

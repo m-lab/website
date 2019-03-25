@@ -26,7 +26,7 @@ can expect throughout the year.
 
 Developing new tools for the modern M-Lab platform is easier than ever. If
 the tool runs in a [Docker container][docker]{:target="_blank"} (with or
-without `--net=host`), then it can run on M-Lab. Github repos connected to
+without `--net=host`), then it can run on M-Lab. GitHub repos connected to
 [Dockerhub.com][dockerhub]{:target="_blank"} build fresh containers on new
 tags. And, with approval from M-Lab staff, kubernetes will safely automate
 the rollout.
