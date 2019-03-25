@@ -82,7 +82,7 @@ You can contact your local data protection authority if you have concerns regard
 
 ## When this Policy Applies
 
-This policy applies to the processing of data through experiments on the M-Lab platform, as well as through use of the M-Lab website. It does not apply to the information practices of other companies and organizations, including information practices of members of the Steering Committee, experiment hosts, or clients occurring outside of the M-Lab platform.
+This policy applies to the processing of data through experiments on the M-Lab platform, as well as through use of the M-Lab website. It does not apply to the information practices of other companies and organizations, including information practices of members of the Experiment Review Committee, experiment hosts, or clients occurring outside of the M-Lab platform.
 
 Experiment hosts or clients may have additional privacy requirements for data that they collect that apply to your data. Our Acceptable Use Policy requires that experiments and clients using the platform notify users of this Policy and any additional applicable privacy policy or terms of service within the experiment or client.
 
