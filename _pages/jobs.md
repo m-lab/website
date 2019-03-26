@@ -23,5 +23,5 @@ If you have open jobs that you'd like to have listed here, [contact us](mailto:c
 ## Open Opportunities in the M-Lab Community
 
 * Tor Project
-  * (2019-01-25) - [Browser Developer (C++ and Javascript)](https://www.torproject.org/about/jobs-browserdeveloper.html.en){:target="_blank"}
-  * (2019-01-31) - [OONI Backend Developer](https://www.torproject.org/about/jobs-backenddeveloper.html.en){:target="_blank"}
+  * (2019-01-25) - [Browser Developer (C++ and Javascript)](https://www.torproject.org/about/jobs/browser-developer/){:target="_blank"}
+  * (2019-01-31) - [OONI Backend Engineer](https://www.torproject.org/about/jobs/backend-engineer-ooni/){:target="_blank"}
