@@ -7,12 +7,12 @@
       "**/node_modules/**"
     ],
     "redirects": [ {
-      "source": "/data/bq/examples/",
-      "destination": "/data/docs/bq/examples/",
+      "source": "/data/bq/examples",
+      "destination": "/data/docs/bq/examples",
       "type": 301
 	}, {
-      "source": "/data/bq/quickstart/",
-      "destination": "/data/docs/bq/quickstart/",
+      "source": "/data/bq/quickstart",
+      "destination": "/data/docs/bq/quickstart",
       "type": 301
     }, {
   
