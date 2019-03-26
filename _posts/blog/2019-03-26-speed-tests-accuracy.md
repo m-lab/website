@@ -33,9 +33,9 @@ M-Lab’s NDT test uses a single stream test because it more accurately measures
 
 **Let’s get Technical.**
 
-The two main design choices that characterize M-Lab's hosted NDT test —server placement at Internet exchange points and a single stream test protocol — leverage specific strengths and contain inherent limitations vis-a-vis many other Internet speed tests. To make the technical discussion below make some sense, we need to establish some terms of art:
+The two main design choices that characterize M-Lab's hosted NDT test — server placement at Internet exchange points and a single stream test protocol — leverage specific strengths and contain inherent limitations vis-a-vis many other Internet speed tests. To make the technical discussion below make some sense, we need to establish some terms of art:
 
-* The “bottleneck bandwidth speed” along an Internet path is the speed at which congestion is reached on the slowest link on a network path. Generally speaking, a higher bottleneck bandwidth speed is better, because it allows more data to be downloaded per second.
+* The “bottleneck bandwidth speed” along an Internet path is the data rate which causes congestion on the slowest link on a network path. Generally speaking, a higher bottleneck bandwidth speed is better, because it allows more data to be downloaded per second.
 * The "latency" is the time it takes for a single packet to travel from a server to a client and back. In other contexts, "latency" is sometimes called "ping time" or "round trip time". Generally speaking, lower latency is better, because it makes network-based applications more responsive.
 
 NDT's accuracy depends in large part on a combination of the properties of the network being measured, as well as the definition of "Internet speed" under consideration. Setting aside the definition of "Internet speed" for later, the accuracy of NDT can be described as follows:
@@ -46,9 +46,9 @@ NDT's accuracy depends in large part on a combination of the properties of the n
 
 NDT essentially measures how fast a file can be downloaded along a full Internet path via a single download stream, and, as such, its measurements precisely and accurately mirrors the user experience of accessing files on the Internet. But this is only one reasonable definition of Internet speed.
 
-For **high bandwidth** links with **high latency**, the accuracy of NDT depends on what you think "internet speed" is:
+For **high bandwidth** links with **high latency**, the accuracy of NDT depends on what you think "Internet speed" is:
 
-* If you think "internet speed" is "the speed at which I can download a thing", then NDT is accurate.
+* If you think "Internet speed" is "the speed at which I can download a thing", then NDT is accurate.
 * If you think "Internet speed" is "the maximum sum total of bits I can push across the local link, although the flows may need to be spread around to different locations so in order to actually achieve that level of saturation" then NDT’s results would likely be systematically lower.
 
 Therefore, the differences among testing regimes is the greatest when link speeds and latency are both high, and these different regimes are implicitly based on different underlying assumptions around the term "Internet speed".
