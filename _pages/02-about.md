@@ -38,7 +38,7 @@ M-Lab assists scientific research by providing widely distributed servers and am
 {:.about-h2}
 ## Better Open Data for Everyone
 
-All data collected via M-Lab are made available to the public M-Lab’s historical data archive providers  a common pool of historical network measurement information that anyone may use, and is a data source enabling consumers, operators, regulators, researchers, and civil society to understand the state and quality of the internet.
+All data collected via M-Lab are made available to the public M-Lab’s historical data archive providers  a common pool of historical network measurement information that anyone may use, and is a data source enabling consumers, operators, regulators, researchers, and civil society to understand the state and quality of the Internet.
 
 {:.about-h2}
 ## What is the history of M-Lab?

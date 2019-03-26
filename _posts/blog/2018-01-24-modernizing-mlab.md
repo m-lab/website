@@ -39,13 +39,13 @@ In 2016 M-Lab began a hardware refresh across the platform consisting of:
 * Switches and servers capable of 10 Gbps connections and iPXE network booting
 * Newer servers with faster processing power and more storage
 
-The M-Lab operations team identified suitable switches, servers, and network cards in early summer 2016. After testing, M-Lab determined that the Juniper QFX 5100 series switch and Dell R630 series servers would be the most appropriate hardware to support the new specification. M-Lab operations is now testing an additional replacement switch for locations where the internet is less mature, and available uplink connectivity is likely to not exceed 1Gbps.
+The M-Lab operations team identified suitable switches, servers, and network cards in early summer 2016. After testing, M-Lab determined that the Juniper QFX 5100 series switch and Dell R630 series servers would be the most appropriate hardware to support the new specification. M-Lab operations is now testing an additional replacement switch for locations where the Internet is less mature, and available uplink connectivity is likely to not exceed 1Gbps.
 
 Upgrades to nearly all locations in the United States were completed by mid-2017. Additionally, over 30 new sites in Europe have been added in 2017, and M-Lab operations is now beginning hardware upgrades for our sites elsewhere in the world. Where possible, our new sites in Europe will have 10 Gb connectivity. Beginning in Spring 2018, we will upgrade hardware at our existing locations worldwide, and increase connectivity to each location where possible.
 
 ### Open Source ETL Pipeline
 
-In late summer 2017, we moved to a new open source data acquisition and ETL pipeline for ingesting data into Google Cloud Storage and BigQuery. The pipeline code for [acquisition](https://github.com/m-lab/scraper) and [ETL](https://github.com/m-lab/etl) is available in Github and is now in production for NDT. It currently supports geographic annotations and will support ASN annotation this year. Our development team is currently experimenting with new efficient schemas for NDT and Paris Traceroute. Look for more on the open source ETL pipeline transition in an upcoming blog post.
+In late summer 2017, we moved to a new open source data acquisition and ETL pipeline for ingesting data into Google Cloud Storage and BigQuery. The pipeline code for [acquisition](https://github.com/m-lab/scraper) and [ETL](https://github.com/m-lab/etl) is available in GitHub and is now in production for NDT. It currently supports geographic annotations and will support ASN annotation this year. Our development team is currently experimenting with new efficient schemas for NDT and Paris Traceroute. Look for more on the open source ETL pipeline transition in an upcoming blog post.
 
 ### Monitoring and Alerting
 

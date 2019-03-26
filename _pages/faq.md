@@ -14,7 +14,7 @@ breadcrumb: "about"
 ## What is M-Lab?
 {:.no_toc}
 
-Measurement Lab (M-Lab) is the largest open source Internet measurement effort in the world. (Open source refers to source code that is made available for free so that anyone can use or modify it to fit their own purposes.) M-Lab provides internet measurement [tests]({{ site.baseurl }}/tests) that help consumers develop an accurate picture of their Internet service by offering a state-of-the-art server platform that supports many measurement needs. The data are collected and then released to the public for use by policymakers, researchers, and others who are interested in Internet issues.
+Measurement Lab (M-Lab) is the largest open source Internet measurement effort in the world. (Open source refers to source code that is made available for free so that anyone can use or modify it to fit their own purposes.) M-Lab provides Internet measurement [tests]({{ site.baseurl }}/tests) that help consumers develop an accurate picture of their Internet service by offering a state-of-the-art server platform that supports many measurement needs. The data are collected and then released to the public for use by policymakers, researchers, and others who are interested in Internet issues.
 
 The graphic below illustrates the relationship between tests run by consumers and M-Lab’s data collection.
 
@@ -23,7 +23,7 @@ The graphic below illustrates the relationship between tests run by consumers an
 ## Where are M-Lab Servers hosted?
 {:.no_toc}
 
-M-Lab hosts our servers, which we call “pods”, in Tier 1 data-centers, connected to the internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible. You can view where M-Lab servers are hosted on our [platform status page]({{ site.baseurl }}/status).
+M-Lab hosts our servers, which we call “pods”, in Tier 1 data-centers, connected to the Internet with links between 1-10 Gbps. In major metro areas, M-Lab strives to maintain multiple pods, each connected to as many distinct transit providers as possible. You can view where M-Lab servers are hosted on our [platform status page]({{ site.baseurl }}/status).
 
 Once an M-Lab pod is online we make no changes in our systems for the life of each pod. Whenever there is a substantial change to our sites, such as renumbering of IP addresses, we retire the pod, retain its naming and metadata in our systems, and treat the pod as brand new.
 
@@ -111,14 +111,14 @@ All NDT data collected by M-Lab are publicly available in both [visualized]({{ s
 
 **3. Changing network conditions and distinct test paths**
 
-The Internet is always changing, and test results reflect that. A test conducted five minutes ago may show very different results from a test conducted twenty minutes ago. This can be caused by the test traffic being routed differently. For example, one test might travel over a path with broken router, while another may not. A test run today may be directed to a test server located farther away than a test run yesterday.
+The Internet is always changing, and test results reflect that. A test conducted five minutes ago may show very different results from a test conducted twenty minutes ago. This can be caused by the test traffic being routed differently. For example, one test might travel over a path with broken router, while another may not. A test run today may be directed to a test server located farther away than a test run yesterday. Additionally, IPv4 and IPv6 routes may take different physical paths. Some [IPv6 routes may be tunneled through IPv4](https://tunnelbroker.net/){:target="_blank"}, from the client, or at any point after the client depending on local network management.
 
 In short, running one test will give you a sense of network conditions at that moment, across the best network path available at that time, to the specific server coordinating the test. But because Internet routing and infrastructure change dynamically, testing regularly and looking at the data over time are much more reliable ways to gauge representative performance.
 
 ## NDT measurements satellite Internet connections
 {:.no_toc}
 
-The NDT test sometimes presents unexpected results when measuring a satellite internet connection. ISPs that use a proxy prior to the satellite uplink terminate the TCP flow at the proxy. As a result, NDT is measuring the speed and latency to the proxy rather than all the way through the proxy. M-Lab is working on updates to NDT which we hope will resolve this issue for satellite customers in the future.
+The NDT test sometimes presents unexpected results when measuring a satellite Internet connection. ISPs that use a proxy prior to the satellite uplink terminate the TCP flow at the proxy. As a result, NDT is measuring the speed and latency to the proxy rather than all the way through the proxy. M-Lab is working on updates to NDT which we hope will resolve this issue for satellite customers in the future.
 
 ## How do I report issues with M-Lab tests?
 {:.no_toc}
@@ -165,7 +165,7 @@ Interested in supporting M-Lab? Please see the FAQ section, [Supporting or Contr
 ## How does M-Lab choose the tests it hosts?
 {:.no_toc}
 
-The Internet measurement tests running on the M-Lab platform are built and maintained by researchers interested in understanding the Internet and how people experience it. Interested researchers can build their own open source tests and apply to host them with M-Lab. Applications for new tests are reviewed by our operations team and our Steering Committee, and if approved, they are then installed on M-Lab’s global Internet measurement infrastructure. By making researchers’ tests available in this way and promoting their use by consumers, M-Lab serves both consumers and researchers, as well as regulators and others, by providing data collected over a period of time that is openly available for analysis. For more information, please see our FAQ: [Can I use M-Lab’s platform to host my own measurement experiment?]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software)
+The Internet measurement tests running on the M-Lab platform are built and maintained by researchers interested in understanding the Internet and how people experience it. Interested researchers can build their own open source tests and apply to host them with M-Lab. Applications for new tests are reviewed by our operations team and our Experiment Review Committee, and if approved, they are then installed on M-Lab’s global Internet measurement infrastructure. By making researchers’ tests available in this way and promoting their use by consumers, M-Lab serves both consumers and researchers, as well as regulators and others, by providing data collected over a period of time that is openly available for analysis. For more information, please see our FAQ: [Can I use M-Lab’s platform to host my own measurement experiment?]({{ site.baseurl }}/faq/#how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software)
 
 ## How can I contact M-Lab?
 {:.no_toc}
@@ -209,7 +209,7 @@ M-Lab is open to applications from researchers who develop and maintain open sou
 
 The researchers who are managing the current tests on the M-Lab platform have secured sufficient funding to support the test’s continued development, deployment, and maintenance throughout its entire life cycle. Your decision to host a particular test on the M-Lab platform is a commitment to provide substantial resources over a period of years and to an ongoing relationship with the M-Lab operations team.
 
-Applications for new tests are reviewed by M-Lab’s operations team and Steering Committee. The number of slots available is finite, so M-Lab will consider only serious inquiries from researchers who are working on mature tests that both align with the M-Lab mission and do not significantly overlap with the functionality of existing tests.
+Applications for new tests are reviewed by M-Lab’s operations team and Experiment Review Committee. The number of slots available is finite, so M-Lab will consider only serious inquiries from researchers who are working on mature tests that both align with the M-Lab mission and do not significantly overlap with the functionality of existing tests.
 
 If you are interested in deploying a new tool or test on the M-Lab platform, please first read [our document]({{ site.baseurl }}/publications/mlab-procedures-new-tools.pdf) outlining M-Lab's requirements and procedures for accepting new tools on the platform, and then [contact](mailto:support@measurementlab.net) the M-Lab Operations team for more information.
 

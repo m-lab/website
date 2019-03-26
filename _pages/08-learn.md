@@ -11,7 +11,7 @@ breadcrumb: learn
 
 This section of our site provides educational information about the Internet, M-Lab, and related services, terms and technologies. We also plan to publish tutorials in this section soon.
 
-Listed below are some publicly available resources for learning about the internet, measurement of the internet, networking, and related topics. If you have a resource that should be in this list, please [contact us](mailto:support@measurementlab.net).
+Listed below are some publicly available resources for learning about the Internet, measurement of the Internet, networking, and related topics. If you have a resource that should be in this list, please [contact us](mailto:support@measurementlab.net).
 
 ## Guides
 {:no-toc}
@@ -25,7 +25,7 @@ Listed below are some publicly available resources for learning about the intern
 ### Structured Courses
 
 * [Internet Measurements: a Hands-on Introduction](https://www.fun-mooc.fr/courses/course-v1:inria+41011+session02/about){:target="_blank"}
-  * This course is a hands-on introduction to internet measurements. You will learn about measuring the structure of the internet and the routes through that structure, about delays, losses and connectivity, about bandwidth, and about traffic.
+  * This course is a hands-on introduction to Internet measurements. You will learn about measuring the structure of the Internet and the routes through that structure, about delays, losses and connectivity, about bandwidth, and about traffic.
 
 * [NSRC Network Education and Training Events](https://nsrc.org/activities){:target="_blank"}
   * The Network Startup Resource Center works directly with the indigenous network engineers and operators who develop and maintain the Internet infrastructure in their respective countries and regions by providing technical information, engineering assistance, training, donations of networking books, equipment and other resources.
