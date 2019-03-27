@@ -11,7 +11,7 @@ categories:
 
 **‘How fast is my Internet?’**
 
-It seems like a simple question, but in fact there are several ways to approach the question and no one correct way to answer it. Given that there are so many different methods used to measure Internet speed, it’s not surprising that we get emails asking about people’s Internet connection speeds almost every day. There’s actually an area of academic study around this question — the [Internet Measurement Community](https://www.sigcomm.org/events/imc-conference){:target="_blank"}, which strives to develop scientifically rigorous methodologies that can be used to measure different aspects of Internet connectivity.
+It seems like a simple question, but in fact there are several ways to approach the question and no one correct way to answer it. Given that there are so many different methods used to measure Internet speed, it’s not surprising that we get emails asking about people’s Internet connection speeds almost every day. There’s actually an area of academic study around this question — the [Internet Measurement Community](https://www.sigcomm.org/events/imc-conference){:target="_blank"}, which strives to develop scientifically rigorous methodologies that can be used to measure different aspects of Internet connectivity.<!--more-->
 
 A question we are often asked is, “Why are M-Lab’s results different than other speed tests?”
 
