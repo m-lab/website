@@ -61,7 +61,7 @@ the new platform, we will provide a way of calibrating past data to be
 comparable to the new.
 
 [web100]: https://cloud.google.com/bigquery/docs/tcp-kis.txt
-[tcpinfo]: https://github.com/m-lab/tcp-info/blob/master/nl-proto/tcpinfo.proto
+[tcpinfo]: https://github.com/m-lab/tcp-info/
 
 ## Upcoming Milestones
 
