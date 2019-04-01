@@ -10,8 +10,6 @@ categories:
   - visualization
 ---
 
-# Visualization Site Update
-
 If you’ve clicked on the [Visualizations]({{ site.baseurl }}/visualizations) page on our website in the last year or so, and tried to find recent data for any location, you’ve likely been disappointed.
 
 **TLDR; - Our visualization site is BACK! Continue reading to learn more..**<!--more-->
