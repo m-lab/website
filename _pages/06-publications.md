@@ -605,7 +605,9 @@ Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center
 ## 2016
 {:.no_toc}
 
-### [10/11/2016 - NTIA](https://www.ntia.doc.gov/files/ntia/publications/m-lab.pdf){:target="_blank"}: Comments on the National Broadband Research Agenda, Docket Number: 160831803-6803-01
+<!-- ### [10/11/2016 - NTIA](https://www.ntia.doc.gov/files/ntia/publications/m-lab.pdf){:target="_blank"}: Comments on the National Broadband Research Agenda, Docket Number: 160831803-6803-01-->
+### 10/11/2016 - NTIA - https://www.ntia.doc.gov/files/ntia/publications/m-lab.pdf : Comments on the National Broadband Research Agenda, Docket Number: 160831803-6803-01
+
 {:.no_toc}
 
 [Download PDF]({{ site.baseurl }}/publications/regulator-filings/ntia/m-lab_ntia_10-11-2016.pdf){:.download-link .paper-download target="_blank"}
