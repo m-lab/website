@@ -8,6 +8,7 @@ categories:
   - data
   - data-analysis
   - visualization
+  - community
 ---
 
 M-Lab is excited to highlight the launch of "Michigan Moonshot", a pilot data collection project developed through a partnership with the [MERIT Network](https://www.merit.edu/){:target="_blank"}, [Michigan State University’s Quello Center](http://quello.msu.edu/){:target="_blank"}, and M-Lab. We worked with MERIT developers who adapted the [Piecewise codebase](https://github.com/m-lab/piecewise){:target="_blank"} to build the [Michigan Moonshot website](https://mi.broadbandtest.us/){:target="_blank"}.<!--more-->
