@@ -2,7 +2,7 @@
 layout: blog
 title: "Naming BQ Datasets after M-Lab Measurement Services & Data Types"
 author: "Stephen Soltesz"
-date: 2019-05-01
+date: 2019-05-02
 breadcrumb: blog
 categories:
   - data
@@ -28,7 +28,7 @@ The table below describes the new datasets and views:
 <table>
   <tr>
     <th>Measurement Service</th>
-    <th>Corresponding Old Datasets and Views</th>
+    <th>Old Datasets and Views</th>
     <th>New Datasets and Views</th>
   </tr>
   <tr>
