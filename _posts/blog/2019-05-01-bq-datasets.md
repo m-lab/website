@@ -25,71 +25,16 @@ Below is a summary of upcoming changes:
 
 The table below describes the new datasets and views:
 
-<table>
-  <tr>
-    <th>Measurement Service</th>
-    <th>Old Datasets and Views</th>
-    <th>New Datasets and Views</th>
-  </tr>
-  <tr>
-    <td>NDT</td>
-    <td>
-      <ul>
-        <li>N/A</li>
-        <li>measurement-lab.release.ndt_all</li>
-        <li>measurement-lab.release.ndt_downloads</li>
-        <li>measurement-lab.release.ndt_uploads</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>measurement-lab.ndt.web100</li>
-        <li>measurement-lab.ndt.recommended</li>
-        <li>measurement-lab.ndt.downloads</li>
-        <li>measurement-lab.ndt.uploads</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Paris Traceroute</td>
-    <td>
-      <ul>
-        <li>measurement-lab.base_tables.traceroute</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>measurement-lab.aggregate.traceroute</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Sidestream</td>
-    <td>
-      <ul>
-        <li>measurement-lab.base_tables.sidestream</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>measurement-lab.sidestream.web100</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Switch</td>
-    <td>
-      <ul>
-        <li>measurement-lab.base_tables.switch</li>
-      </ul>
-    </td>
-    <td>
-       <ul>
-         <li>measurement-lab.utilization.switch</li>
-       </ul>
-    </td>
-  </tr>
-</table>
+<div class="table-condensed" markdown="1">
+
+| Measurement Service | Old Datasets and Views          | New Datasets and Views        |
+|:--------------------------|:------------------------------|:-------------------|
+| NDT                 | * measurement-lab.base_tables.ndt<br>* measurement-lab.release.ndt_all<br>* measurement-lab.release.ndt_downloads<br>* measurement-lab.release.ndt_uploads<br>                      |* measurement-lab.ndt.web100<br>* measurement-lab.ndt.recommended<br>*  measurement-lab.ndt.downloads<br>* measurement-lab.ndt.uploads         |
+| Paris Traceroute    |* measurement-lab.base_tables.traceroute |* measurement-lab.aggregate.traceroute  |
+| Sidestream          |* measurement-lab.base_tables.sidestream |* measurement-lab.sidestream.web100 |
+| Switch              |* measurement-lab.base_tables.switch |* measurement-lab.utilization.switch |
+
+</div>
 
 ## Detail of Upcoming Changes to BigQuery Datasets
 
