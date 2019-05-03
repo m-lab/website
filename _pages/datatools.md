@@ -16,6 +16,7 @@ Supported tools are those which have been developed and are maintained by the co
 * [M-Lab Measure Chrome App](https://chrome.google.com/webstore/detail/m-lab-measure/leijmacehibmiomcnpaolboihcdepokh?utm_source=chrome-app-launcher-info-dialog){:target="_blank"} - _M-Lab Measure_ is an extension for the Google Chrome browser that lets users schedule NDT to run at regular intervals to track the performance of and Internet connection over time.
 * [MeasurementKit](https://measurement-kit.github.io/){:target="_blank"} _MeasurementKit_ is a C++ library supported by M-Lab, supporting integrations outside of the browser. Supported tests include NDT, Neubot, and the OONI test suite.
 * [Murakami](https://github.com/m-lab/murakami) - _Murakami_ is a tool for creating an automatic M-Lab testing platform with as little effort as possible. Once running, Murakami runs an NDT test roughly every twelve hours and stores the results for your analysis.
+* [speed.measurementlab.net](https://github.com/m-lab/mlab-speedtest) - _speed.measurementlab.net_ is a standalone M-Lab NDT test site that supports multiple languages.
 * [Telescope](https://github.com/m-lab/telescope){:target="_blank"} - _Telescope_ is a Python framework designed to extract raw measurements from M-Lab to allow the easy production of research.
 
 ## Community
@@ -41,9 +42,13 @@ Community tools are developed by other organizations or individuals, but which l
 
 ### Website Integrations
 
-* [The Berlin broadband network](https://www.breitband-berlin.de/#speedtest){:target="_blank"}
+* [Broadband Berlin](https://www.breitband-berlin.de/#speedtest){:target="_blank"}
 * [Broadband Now.com](https://broadbandnow.com/speedtest){:target="_blank"}
 * [Canadian Internet Registration Authority - Internet Performance Test](https://performance.cira.ca){:target="_blank"}
 * [Google OneBox Search Results Widget](https://www.google.com/search?q=internet+speed+test&oq=internet+speed){:target="_blank"}
 * [High Speed Internet.com](https://www.highspeedinternet.com/tools/speed-test){:target="_blank"}
 * [West London Business](https://www.westlondon.com/techwestlondon/partners/internet-connection-speed/){:target="_blank"}
+
+## Have we missed something?
+
+If you have an M-Lab integration that isn't featured here, [please let us know](mailto:support@measurementlab.net)!
