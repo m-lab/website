@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Traceroute BigQuery Table New Data Temporarily Halted for Scehma Change"
+title: "Traceroute BigQuery Table New Data Temporarily Halted for Schema Change"
 author: "Chris Ritzo"
 date: 2019-06-24
 breadcrumb: blog
