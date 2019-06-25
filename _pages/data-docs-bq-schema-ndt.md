@@ -77,7 +77,7 @@ Currently, the following values are present in NDT data from 2010-01-01 to 2015-
 <div class="table-responsive" markdown="1">
 
 | Field name                                           |     Type     |  Description                              |
-|:----------------------------------------------------|:------------:|:------------------------------------------|
+| :----------------------------------------------------|:------------:|:------------------------------------------|
 | `partition_date`                                    | `date`  |  The day (in UTC) in which the data was loaded. For more precise datetime or timestamp of each test, use the field `web100_log_entry.log_time` |
 | `test_id`                                           |  `string`    |  ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20090819T02:01:04.507508000Z_189.6.232.77:3859.c2s_snaplog.gz`). |
 | `task_filename`                                      | `string`     |  The raw data file in Google Cloud Storage from which the test row was parsed. |
@@ -260,5 +260,6 @@ Currently, the following values are present in NDT data from 2010-01-01 to 2015-
 | `web100_log_entry.snap.X_dbg4`                       | `integer` |                                        |
 | `web100_log_entry.snap.X_rcv_ssthresh`               | `integer` |                                        |
 | `web100_log_entry.snap.X_wnd_clamp`                  | `integer` |                                        |
-| `web100_log_entry.deltas`                  | `record` | Placeholder subrecord where M-Lab may add intermediate snaplog changes to `web100_log_entry` fields that take place over the course of each test. Currenly, only the final `web100_log_entry.snap` field values are stored in the above record section of the schema.|
+| `web100_log_entry.deltas`                  | `record` | Placeholder subrecord where M-Lab may add intermediate snaplog changes to `web100_log_entry` fields that take place over the course of each test. Currenly, only the final `web100_log_entry.snap` field values are stored in the above record section of the schema. |
+
 </div>
