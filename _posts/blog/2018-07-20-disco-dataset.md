@@ -23,7 +23,7 @@ Originally designed to detect switch discards from
 [`measurement-lab.base_tables.switch`][switch-schema]
 
 [microbursts]: {{site.baseurl}}/blog/traffic-microbursts-and-their-effect-on-internet-measurement
-[switch-schema]: {{site.baseurl}}/data/docs/bq/schema/#switch---measurement-labbase_tablesswitch
+[switch-schema]: {{site.baseurl}}/data/docs/bq/schema/utilization
 
 <!--more-->
 ## DISCO Metrics
@@ -36,7 +36,7 @@ To see the complete list of DISCO metrics, run the following
 SELECT
     metric
 FROM
-    `measurement-lab.base_tables.switch*`
+    `measurement-lab.utilization.switch*`
 GROUP BY
     metric
 ORDER BY
@@ -120,7 +120,7 @@ SELECT
   metric,
   8 * ROUND(AVG(sample.value) / 1e6, 1) / 10 AS mbps
 FROM
-  `measurement-lab.base_tables.switch*`,
+  `measurement-lab.utilization.switch*`,
   UNNEST(sample) AS sample
 WHERE
   metric = "switch.octets.uplink.tx"
@@ -148,7 +148,7 @@ SELECT
   metric,
   APPROX_QUANTILES(sample.value / 10, 100)[OFFSET(99)] AS pps
 FROM
-  `measurement-lab.base_tables.switch*`,
+  `measurement-lab.utilization.switch*`,
   UNNEST(sample) AS sample
 WHERE
   metric = "switch.discards.uplink.tx"
@@ -188,7 +188,7 @@ SELECT
   SUM(IF(metric = "switch.octets.local.rx" AND hostname like "%mlab3%", sample.value, 0)) as mlab3_total,
   SUM(IF(metric = "switch.octets.uplink.tx" AND hostname like "%mlab1%", sample.value, 0)) as uplink_total
 FROM
-  `measurement-lab.base_tables.switch*`,
+  `measurement-lab.utilization.switch*`,
   UNNEST(sample) AS sample
 WHERE
   (metric = "switch.octets.uplink.tx" OR metric = "switch.octets.local.rx")
