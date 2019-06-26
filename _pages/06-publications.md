@@ -145,7 +145,7 @@ Invocations of Europe are increasingly evident in Canadian debates about wholesa
 {:.paper-author}
 Reza Rajabiun, Catherine Middleton
 
-[Download PDF](https://www.ceps.eu/system/files/IEForum42017_5.pdf){:.download-link .paper-download target="_blank"}
+[Download](https://link.springer.com/article/10.1007/s10272-017-0678-3){:.download-link .paper-download target="_blank"}
 
 ### Towards estimating the untapped potential: a global malicious DDoS mean capacity estimate
 {:.no_toc}
