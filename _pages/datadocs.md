@@ -15,7 +15,7 @@ The links below provide the basics of querying M-Lab data.
 
 * [BigQuery QuickStart]({{ site.baseurl }}/data/docs/bq/quickstart/)
 * [BigQuery Examples]({{ site.baseurl }}/data/docs/bq/examples/)
-* [BigQuery Schema]({{ site.baseurl }}/data/docs/bq/schema/)
+* [BigQuery Schemas]({{ site.baseurl }}/data/docs/bq/schema/)
 * [Calculating Common Metrics]({{ site.baseurl }}/data/docs/bq/ndtmetrics/)
 * [Migrating Queries to Use Current M-Lab Tables and Views]({{ site.baseurl }}/data/docs/bq/legacymigration/)
 
