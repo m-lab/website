@@ -90,7 +90,7 @@ M-Lab also publishes public data sets about the M-Lab Platform, listed below.
   * More information is available at [MPI SWS](http://broadband.mpi-sws.org/transparency/bttest-mlab.php){:target="_blank"} and [GitHub](https://github.com/marcelscode/glasnost){:target="_blank"}.
   * [Glasnost Raw Data (archived)](https://console.developers.google.com/storage/browser/archive-measurement-lab/glasnost/){:target="_blank"}
 * [Neubot]({{site.baseurl}}/tests/neubot)
-  * Neubot measured the Internet in order to gather data useful to study broadband performance, network neutrality, and Internet censorship. Neubot data is processed by the M-Lab ETL Pipeline.
+  * Neubot measured the Internet in order to gather data useful to study broadband performance, network neutrality, and Internet censorship.
   * More information is available at [Nexa Center](https://neubot.nexacenter.org/){:target="_blank"} and [GitHub](https://github.com/neubot){:target="_blank"}.
   * [Neubot Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/neubot/){:target="_blank"}
 * [Pathload2]({{site.baseurl}}/tests/pathload2)

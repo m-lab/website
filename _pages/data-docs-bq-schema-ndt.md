@@ -59,9 +59,9 @@ In 2019, M-Lab will transition its hosted experiments to use the netlink socket 
 The field `blacklist_flags` was used to mark test affected by the "switch discard issue" [identified in 2015-2016]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement). M-Lab NDT data from 2010-01-01 to 2015-10-02 was marked using this field. M-Lab may use the field for other use cases in the future for tests potentially impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test.
 
 Since the NDT v3.1 schema, a sub-record has been present in NDT views, `anomalies`, which contains an equivalent field, `anomalies.blacklist_flags`.
- 
+
 Currently, the following values are present in NDT data from 2010-01-01 to 2015-10-02 in these fields:
- 
+
 <div class="table-responsive" markdown="1">
 
 | Field Name | Value | Description |
