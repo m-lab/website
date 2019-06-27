@@ -34,7 +34,7 @@ M-Lab is committed to preserving user privacy. M-Lab does not permit collection 
 
 Clients or experiments may collect additional, generalized information about the user's environment in order to support analysis of measurement data, such as web browser and operating system version. However, M-Lab does not allow the storage of descriptive information on the platform that would associate individuals or clients to their history of tests or devices, such as the hardware identifier, service plan, or network signal metrics.
 
-While an experiment may wish to collect personal information for research purposes, M-Lab infrastructure cannot be used for collection or storage of this information. The collection of personal information by an experiment should be clearly indicated to users. Any experiment hosted on M-Lab that intends to begin collecting personal information even where outside of M-Lab must get approval from the Steering Committee prior to such collection, and be voluntary and gathered based on user consent.
+While an experiment may wish to collect personal information for research purposes, M-Lab infrastructure cannot be used for collection or storage of this information. The collection of personal information by an experiment should be clearly indicated to users. Any experiment hosted on M-Lab that intends to begin collecting personal information even where outside of M-Lab must get approval from the Experiment Review Committee prior to such collection, and be voluntary and gathered based on user consent.
 
 ## Contact
 

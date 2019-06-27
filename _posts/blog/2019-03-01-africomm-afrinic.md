@@ -25,10 +25,10 @@ in Tunisia and to give a keynote about M-Lab and open internet measurement at
 [AFRICOMM
 2018](http://africommconference2018.eai-conferences.org/){:target="_blank"}
 in Senegal. Both trips were a fantastic opportunity to deepen our
-relationship with researchers focused on the African internet, learn more
+relationship with researchers focused on the African Internet, learn more
 about how our platform is serving community needs, foster conversation around
-open internet measurement, and identify opportunities for further
-collaboration, research and tool development to better support the internet
+open Internet measurement, and identify opportunities for further
+collaboration, research and tool development to better support the Internet
 measurement, research and policy community in Africa. <!--more-->
 
 ![AFRINIC-29]({{ site.baseurl }}/images/blog/afrinic-mlab.jpg)

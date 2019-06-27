@@ -1,624 +1,59 @@
 ---
 layout: page
-title: "BigQuery Schema"
+title: "BigQuery Schemas"
 permalink: /data/docs/bq/schema/
 breadcrumb: data
 ---
 
-# BigQuery Schema
+# BigQuery Schemas
 
 ## Background
 
-* Each M-Lab tool consists of a **client** and a **server**.
+* Each M-Lab test consists of a **client** and a **server**.
 * Whenever an M-Lab user starts a test, the client and server interact to measure different aspects of that user's connection.
 * A single user request triggers one or more **tests** (e.g., client-to-server test, server-to-client test).
 * For each test, a server collects a **log**, and the test can be uniquely identified by its log filename.
 * Timestamp fields are stored in our schema in UTC
 * Time only fields are stored in milliseconds (ms)
 
-## BigQuery Storage and Processing Datasets
+## M-Lab Hosted BigQuery Datasets, Tables, and Views
 
-For each release, M-Lab publishes tables and views in two groups of datasets. One group of datasets is used primarily for storage and processing, and another group which we recommended that most researchers use to query for M-Lab data.
- 
-Four _storage and processing datasets_ are published for each release, beginning with v3.1:
- 
-* **base_tables**
-  * Contains the raw NDT and Switch tables.
-  * This dataset will eventually hold all M-Lab data, from 2009 to present, for NDT, Sidestream, Switch, and Paris Traceroute.
- 
-* **batch**
-  * Destination for batch processed data prior to dedupping.
- 
-* **intermediate_vX_Y_Z**
-  * Provides working, intermediate BigQuery Views for each release version
-  * These views adapt data from tables in the **base_tables** dataset to make **release** views available.
-  * Intermediate dataset views are publicly visible for transparency, but we discourage most people from using them directly.
- 
-* **legacy**
-  * Contains exact copies of the data stored in our previous NDT fast tables, for use in the intermediate and release views.
-  * This dataset will eventually include all legacy Sidestream and Paris Traceroute tables.
+M-Lab publishes BigQuery tables and views for tests that have implemented a parser in our [ETL pipeline](https://github.com/m-lab/etl){:target="_blank"}. The following list provides links to schema pages for each test we publish to BigQuery. Please visit the page for each dataset's schema for more information.
 
-## Recommended Datasets and Views for Most Researcher Queries
+* [Network Diagnostic Tool (NDT)]({{ site.base_url }}/data/docs/bq/schema/ndt)
+* [Paris Traceroute]({{ site.base_url }}/data/docs/bq/schema/traceroute)
+* [Sidestream]({{ site.base_url }}/data/docs/bq/schema/sidestream)
 
-The datasets in the previous section outline where raw M-Lab test data is parsed and stored. While they are also queryable in the above locations, M-Lab recommends that most researchers instead begin querying the views published in our **release** dataset. This will make future table schema transitions less impactful since queries can be pinned to the release views instead of to a specific table name.
- 
-Three _researcher query datasets_ are published for each new release:
+Additionally, M-Lab publishes the following datasets that provide information about M-Lab platform infrastructure.
 
-* **rc**
-  * Beta test version of the next release of views.
-  * These views represent the most recent _release-candidate_.
- 
-* **rc_vX_Y_Z**
-  * Recent stable releases.
- 
-* **release**
-  * An alias to current supported release.
-  * This is the set of views that most people should use.
-  * These views are updated to include any refinements to the recommended filtering, and may include changes to the schema over time.
+* [Utilization]({{ site.base_url }}/data/docs/bq/schema/utilization)
 
-Beginning with the upcoming v3.1 release, in the **rc**, **rc_vX_Y_Z**, and **release** datasets we will publish the following views:
- 
-* _ndt_all_
-* _ndt_all_legacysql_
-* _ndt_downloads_
-* _ndt_downloads_legacysql_
-* _ndt_uploads_
-* _ndt_uploads_legacysql_
+## Datasets Hosted by Third-Party Researchers
 
-The views above ending in `_legacysql` require you to use [legacySQL](https://cloud.google.com/bigquery/docs/reference/legacy-sql) queries, and those labeled without it `(standardSQL)` require you the use of [standardSQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/) queries. Additionally, the views which include '_uploads_' or '_downloads_' provide a subset of NDT data that are valid, completed tests which meet the criteria described on our page, [Calculating Common Metrics](https://www.measurementlab.net/data/docs/bq/ndtmetrics/). We highly recommend using standardSQL as this will be required to query all M-Lab tables in the future.
- 
-Researchers interested in querying unfiltered NDT data should use the table in the **base_tables** dataset. Sidestream and Paris Traceroute tables will also be added to the **base_tables** dataset in the coming weeks:
- 
-* **base_tables**
-  * ndt - `measurement-lab.base_tables.ndt`
-  * _sidestream - `measurement-lab.base_tables.sidestream`_
-  * switch - `measurement-lab.base_tables.switch`
-  * _traceroute - `measurement-lab.base_tables.traceroute`_
+Researchers who host their tests on the M-Lab platform have the option to host test results on M-Lab infrastructure as described in the previous section, or to host that data elsewhere. The M-Lab hosted tests below do not provide their data on M-Lab infrastructure. Please consult each project's website or contact their maintainers for information about these tests' schemas.
 
-## Summary of BigQuery Tables (v3.1)
+* [BISmark]({{site.baseurl}}/tests/bismark) - [Project BISmark website](http://projectbismark.net/){:target="_blank"}
+* [MobiPerf]({{site.baseurl}}/tests/mobiperf) - [MobiPerf website](http://www.mobiperf.com/){:target="_blank"}
+* [SamKnows]({{site.baseurl}}/tests/samknows) - [SamKnows website](https://www.samknows.com/){:target="_blank"}
 
-The current version of M-Lab BigQuery tables is v3.1, and are listed below. Tables are **bolded** and table views are listed underneath where applicable.
+## BigQuery Datasets Named Using M-Lab Measurement Services & Data Types
 
-### Base Tables for Historical and Current Data
+Datasets in the `measurement-lab` project in BigQuery are named for each measurement service, and views within each dataset contain data relevant to that service. Prior to May 2019, M-Lab published versioned tables and views in a dataset called `release`. The transition in our naming of datasets, tables, and views is [discussed on our blog]({{ site.baseurl }}/blog/bq-datasets). In brief, the table below summarizes our old and new datasets and tables/views as discussed on the blog.
 
-* **[measurement-lab.legacy.ndt](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt)** (data ~ 2015-01-01 - 2017-05-10)
-* **[measurement-lab.legacy.ndt_pre2015](https://bigquery.cloud.google.com/table/measurement-lab:legacy.ndt_pre2015)** (data ~ 2009-02-18 - 2014-12-31)
-* **[measurement-lab.base_tables.ndt](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.ndt)**
-* **[measurement-lab.base_tables.sidestream](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.sidestream)**
-* **[measurement-lab.base_tables.switch](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.switch)**
-* **[measurement-lab.base_tables.traceroute](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.traceroute)**
+<div class="table-condensed" markdown="1">
 
-### Recommended Datasets and Views for Research Queries
-
-* **[measurement-lab.rc](https://bigquery.cloud.google.com/dataset/measurement-lab:rc)**
-* **[measurement-lab.rc_v3_1](https://bigquery.cloud.google.com/dataset/measurement-lab:rc_v3_1)**
-* **[measurement-lab.release](https://bigquery.cloud.google.com/dataset/measurement-lab:release)**
-  * [_measurement-lab.release.ndt_all_](https://bigquery.cloud.google.com/table/measurement-lab:release.ndt_all)
-  * [_measurement-lab.release.ndt_all_legacysql_](https://bigquery.cloud.google.com/table/measurement-lab:release.ndt_all_legacysql)
-  * [_measurement-lab.release.ndt_downloads_](https://bigquery.cloud.google.com/table/measurement-lab:release.ndt_downloads)
-  * [_measurement-lab.release.ndt_downloads_legacysql_](https://bigquery.cloud.google.com/table/measurement-lab:release.ndt_downloads_legacysql)
-  * [_measurement-lab.release.ndt_uploads_](https://bigquery.cloud.google.com/table/measurement-lab:release.ndt_uploads)
-  * [_measurement-lab.release.ndt_uploads_legacysql_](https://bigquery.cloud.google.com/table/measurement-lab:release.ndt_uploads_legacysql)
-
-If you have queries that reference historical M-Lab tables, please review [Migrating Queries]({{ site.baseurl }}/data/docs/bq/legacymigration/) to learn how to convert them to use M-Lab's **release** views.
-
-Please also review the table/view schema version history and changelog at the end of this page for more information.
-
-## Equivalent BigQuery and Web100 Field Types
-
-[tcp-kis.txt](https://cloud.google.com/bigquery/docs/tcp-kis.txt){:target="_blank"} defines each Web100 variable with a specific [SNMP type](http://tools.ietf.org/html/rfc4898){:target="_blank"}. This table shows how to map each SNMP type to a BigQuery type.
-
-<div class="table-responsive" markdown="1">
-
-| BigQuery Type |  Corresponding SNMP Type |
-| ------------- | -------------------------|
-| `integer`     |  `Integer32`, `Integer`, `INTEGER`, `Gauge32`, `ZeroBasedCounter32`, `Unsigned32`, `Unsigned16`, `Counter32`, `ZeroBasedCounter64` |
-| `string`      |  `Ip_Address`            |
-| `bool`        |  `TruthValue`            |
+| Measurement Service | Old Datasets and Views          | New Datasets and Views        |
+|:--------------------------|:------------------------------|:-------------------|
+| NDT                 | * measurement-lab.base_tables.ndt<br>* measurement-lab.release.ndt_all<br>* measurement-lab.release.ndt_downloads<br>* measurement-lab.release.ndt_uploads<br>                      |* measurement-lab.ndt.web100<br>* measurement-lab.ndt.recommended<br>*  measurement-lab.ndt.downloads<br>* measurement-lab.ndt.uploads         |
+| Paris Traceroute    |* measurement-lab.base_tables.traceroute |* measurement-lab.aggregate.traceroute  |
+| Sidestream          |* measurement-lab.base_tables.sidestream |* measurement-lab.sidestream.web100 |
+| Switch              |* measurement-lab.base_tables.switch |* measurement-lab.utilization.switch |
 
 </div>
 
-## Blacklist Flags Field
+## M-Lab BigQuery Schemas - Changelog
 
-The field `blacklist_flags` was used to mark test affected by the "switch discard issue" [identified in 2015-2016]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement). M-Lab NDT data from 2010-01-01 to 2015-10-02 was marked using this field. M-Lab may use the field for other use cases in the future for tests potentially impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test.
-
-In the NDT v3.1 schema, we have added a sub-record, `anomalies`, which contains an equivalent field, `anomalies.blacklist_flags`.
- 
-Currently, the following values are present in NDT data from 2010-01-01 to 2015-10-02 in these fields:
- 
-<div class="table-responsive" markdown="1">
-
-| Field Name | Value | Description |
-| ---------- | ----- | ----------- |
-| `blacklist_flags` or `anomalies.blacklist_flags` | `0` or `NULL` | unaffected tests |
-| | `1` | tests affected by switch discards |
-| | `2` | tests not shown to be unaffected by switch discards |
-
-</div>
-
-All views in the `release` dataset limit to tests where `blacklist_flags` is `0` or `NULL`.
- 
-## Table Schemas (v3.1)
-
-The schemas for NDT, Sidestream, and Paris Traceroute are provided below. Note that the schemas for **release** views of NDT are largely the same as listed below with the exception of the date partition field.
-
-### NDT - measurement-lab.base_tables.ndt
-
-<div class="table-responsive" markdown="1">
-
-| Field name                                           |     Type     |  Description                              |
-|:----------------------------------------------------|:------------:|:------------------------------------------|
-| `_PARTITIONTIME`                                    | `timestamp`  |  This pseudo column contains a timestamp for the start of the day (in UTC) in which the data was loaded. For the YYYYMMDD partition, this pseudo column will contain the value TIMESTAMP('YYYY-MM-DD'). |
-| `test_id`                                           |  `string`    |  ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20090819T02:01:04.507508000Z_189.6.232.77:3859.c2s_snaplog.gz`). |
-| `task_filename`                                      | `string`     |  The raw data file in Google Cloud Storage from which the test row was parsed. |
-| `parse_time`                                         | `timestamp`  |  Timestamp of when test data was parsed into BigQuery from Google Cloud Storage. |
-| `log_time`                                           | `timestamp`  |  Timestamp of when test log was created (in seconds since Unix epoch).<br><br>For NDT and NPAD, this is derived from the "Date/Time" field in the .meta file (for NDT and NPAD, prefer the `web100_log_entry.log_time` field, as it is more reliable).<br><br>For SideStream and Paris Traceroute, this is the timestamp as represented in the test log file's filename.  |
-| `blacklist_flags`                                    |  `integer` |  Deprecated field formerly used to store blacklist flags. Superceded by `anomalies.blacklist_flags`. |
-| `anomalies`                                          | `record`  | A sub-record section containing anomalies fields. |
-| `anomalies.no_meta`                                  | `boolean` | If a test record did not contain a metadata file, this field is set to 1. |
-| `anomalies.snaplog_error`                            | `boolean` | If there are erros in the snaplogs for a test, this field is set to 1. |
-| `anomalies.num_snaps`                                | `integer` | A count of the number of snaplogs captured during a given test. |
-| `anomalies.blacklist_flags`                          | `integer` | Used to mark test results that could be impacted by site configuration issues, or otherwise communicate potentially relevant information about the state of the platform at the time of the test. |
-| `connection_spec`                                   | `record`    | Sub-record section containing fields describing the client which initiated a test and the M-Lab server through which the test was conducted. |
-| `connection_spec.client_af`                          | `integer`   |  Address family of the client's IP address. (This field is **optional**.)<br>AF_UNSPEC = `0`<br>AF_INET (IPv4) = `2`<br>AF_INET6 (IPv6) = `10` |
-| `connection_spec.client_application`                 | `string`    |  Client application that ran the test. (This field is **optional**.) |
-| `connection_spec.client_browser`                     | `string`    |  Client's browser. (This field is **optional**.) |
-| `connection_spec.client_hostname`                    | `string`    |  Client's hostname. (This field is **optional**.) |
-| `connection_spec.client_ip`                          | `string`    |  IP address of the user's client. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.remote_ip`.) |
-| `connection_spec.client_kernel_version`              | `string`    |  Client's kernel version. (This field is **optional**.) |
-| `connection_spec.client_os`                          | `string`    |  Client's operating system. (This field is **optional**.) |
-| `connection_spec.client_version`                     | `string`    |  Client's version. (This field is **optional**.) |
-| `connection_spec.data_direction`                     | `integer` |  Direction of the data sent during the test:<br>CLIENT_TO_SERVER = `0`<br>SERVER_TO_CLIENT = `1` |
-| `connection_spec.server_af`                          | `integer` |  Address family of the server's IP address. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.local_af`.)<br>AF_UNSPEC = `0`<br>AF_INET (IPv4) = `2`<br>AF_INET6 (IPv6) = `10` |
-| `connection_spec.server_hostname`                    | `string`    |  Server's hostname. (This field is **optional**.) |
-| `connection_spec.server_ip`                          | `string`    |  Server's IP address. (This field is **optional**. It's preferable to use `web100_log_entry.connection_spec.local_ip`.) |
-| `connection_spec.server_kernel_version`              | `string`    |  Server's kernel version. (This field is **optional**.) |
-| `connection_spec.tls`                                | `boolean` |                                        |
-| `connection_spec.websockets`                         | `boolean` |                                        |
-| `connection_spec.client_geolocation`                 | `record`  | Sub-record section containing geolocation annotations for the client that initiated the test. Geolocation fields extracted from open dataset created by MaxMind and available at [www.maxmind.com](https://www.maxmind.com). (These fields are **optional**.)|
-| `client_geolocation.area_code`                       | `integer` |  |
-| `client_geolocation.city`                            | `string`    |                                        |
-| `client_geolocation.continent_code`                  | `string`    |                                        |
-| `client_geolocation.country_code`                    | `string`    |                                        |
-| `client_geolocation.country_code3`                   | `string`    |                                        |
-| `client_geolocation.country_name`                    | `string`    |                                        |
-| `client_geolocation.latitude`                        | `float`     |                                        |
-| `client_geolocation.longitude`                       | `float`     |                                        |
-| `client_geolocation.metro_code`                      | `integer` |                                        |
-| `client_geolocation.postal_code`                     | `string`    |                                        |
-| `client_geolocation.region`                          | `string`    |                                        |
-| `connection_spec.server_geolocation`                 | `record`  | Sub-record section containing geolocation annotations for the M-Lab server that received the test. Geolocation fields extracted from open dataset created by MaxMind and available at [www.maxmind.com](https://www.maxmind.com). (These fields are **optional**.)
-| `server_geolocation.area_code`                       | `integer` |                                        |
-| `server_geolocation.city`                            | `string`    |                                        |
-| `server_geolocation.continent_code`                  | `string`    |                                        |
-| `server_geolocation.country_code`                    | `string`    |                                        |
-| `server_geolocation.country_code3`                   | `string`    |                                        |
-| `server_geolocation.country_name`                    | `string`    |                                        |
-| `server_geolocation.latitude`                        | `float`     |                                        |
-| `server_geolocation.longitude`                       | `float`     |                                        |
-| `server_geolocation.metro_code`                      | `integer` |                                        |
-| `server_geolocation.postal_code`                     | `string`    |                                        |
-| `server_geolocation.region`                          | `string`    |                                        |
-| `web100_log_entry`                                   | `record`  | Sub-record section containing the web100 variables collected during the test. See [tcp-kis.txt](https://cloud.google.com/bigquery/docs/tcp-kis.txt){:target="_blank"} for more information about these fields. |
-| `web100_log_entry.log_time`                          | `integer` |                                        |
-| `web100_log_entry.version`                           | `string`    |                                        |
-| `web100_log_entry.connection_spec.local_af`          | `integer` | IPv4 = `0`<br>IPv6 = `1` |
-| `web100_log_entry.connection_spec.local_ip`          | `string`    |                                        |
-| `web100_log_entry.connection_spec.local_port`        | `integer` |                                        |
-| `web100_log_entry.connection_spec.remote_ip`         | `string`    |                                        |
-| `web100_log_entry.connection_spec.remote_port`       | `integer` |                                        |
-| `web100_log_entry.snap.AbruptTimeouts`               | `integer` |                                        |
-| `web100_log_entry.snap.ActiveOpen`                   | `integer` |                                        |
-| `web100_log_entry.snap.CERcvd`                       | `integer` |                                        |
-| `web100_log_entry.snap.CongAvoid`                    | `integer` |                                        |
-| `web100_log_entry.snap.CongOverCount`                | `integer` |                                        |
-| `web100_log_entry.snap.CongSignals`                  | `integer` |                                        |
-| `web100_log_entry.snap.CountRTT`                     | `integer` |                                        |
-| `web100_log_entry.snap.CurAppRQueue`                 | `integer` |                                        |
-| `web100_log_entry.snap.CurAppWQueue`                 | `integer` |                                        |
-| `web100_log_entry.snap.CurCwnd`                      | `integer` |                                        |
-| `web100_log_entry.snap.CurMSS`                       | `integer` |                                        |
-| `web100_log_entry.snap.CurRTO`                       | `integer` |                                        |
-| `web100_log_entry.snap.CurReasmQueue`                | `integer` |                                        |
-| `web100_log_entry.snap.CurRetxQueue`                 | `integer` |                                        |
-| `web100_log_entry.snap.CurRwinRcvd`                  | `integer` |                                        |
-| `web100_log_entry.snap.CurRwinSent`                  | `integer` |                                        |
-| `web100_log_entry.snap.CurSsthresh`                  | `integer` |                                        |
-| `web100_log_entry.snap.CurTimeoutCount`              | `integer` |                                        |
-| `web100_log_entry.snap.DSACKDups`                    | `integer` |                                        |
-| `web100_log_entry.snap.DataSegsIn`                   | `integer` |                                        |
-| `web100_log_entry.snap.DataSegsOut`                  | `integer` |                                        |
-| `web100_log_entry.snap.DupAcksIn`                    | `integer` |                                        |
-| `web100_log_entry.snap.DupAcksOut`                   | `integer` |                                        |
-| `web100_log_entry.snap.Duration`                     | `integer` |                                        |
-| `web100_log_entry.snap.ECN`                          | `integer` |                                        |
-| `web100_log_entry.snap.FastRetran`                   | `integer` |                                        |
-| `web100_log_entry.snap.HCDataOctetsIn`               | `integer` |                                        |
-| `web100_log_entry.snap.HCDataOctetsOut`              | `integer` |                                        |
-| `web100_log_entry.snap.HCThruOctetsAcked`            | `integer` |                                        |
-| `web100_log_entry.snap.HCThruOctetsReceived`         | `integer` |                                        |
-| `web100_log_entry.snap.LimCwnd`                      | `integer` |                                        |
-| `web100_log_entry.snap.LimRwin`                      | `integer` |                                        |
-| `web100_log_entry.snap.LocalAddress`                 | `string`    |                                        |
-| `web100_log_entry.snap.LocalAddressType`             | `integer` |                                        |
-| `web100_log_entry.snap.LocalPort`                    | `integer` |                                        |
-| `web100_log_entry.snap.MSSRcvd`                      | `integer` |                                        |
-| `web100_log_entry.snap.MaxAppRQueue`                 | `integer` |                                        |
-| `web100_log_entry.snap.MaxAppWQueue`                 | `integer` |                                        |
-| `web100_log_entry.snap.MaxMSS`                       | `integer` |                                        |
-| `web100_log_entry.snap.MaxRTO`                       | `integer` |                                        |
-| `web100_log_entry.snap.MaxRTT`                       | `integer` |                                        |
-| `web100_log_entry.snap.MaxReasmQueue`                | `integer` |                                        |
-| `web100_log_entry.snap.MaxRetxQueue`                 | `integer` |                                        |
-| `web100_log_entry.snap.MaxRwinRcvd`                  | `integer` |                                        |
-| `web100_log_entry.snap.MaxRwinSent`                  | `integer` |                                        |
-| `web100_log_entry.snap.MaxSsCwnd`                    | `integer` |                                        |
-| `web100_log_entry.snap.MaxSsthresh`                  | `integer` |                                        |
-| `web100_log_entry.snap.MinMSS`                       | `integer` |                                        |
-| `web100_log_entry.snap.MinRTO`                       | `integer` |                                        |
-| `web100_log_entry.snap.MinRTT`                       | `integer` |                                        |
-| `web100_log_entry.snap.MinRwinRcvd`                  | `integer` |                                        |
-| `web100_log_entry.snap.MinRwinSent`                  | `integer` |                                        |
-| `web100_log_entry.snap.MinSsthresh`                  | `integer` |                                        |
-| `web100_log_entry.snap.Nagle`                        | `integer` |                                        |
-| `web100_log_entry.snap.NonRecovDA`                   | `integer` |                                        |
-| `web100_log_entry.snap.OctetsRetrans`                | `integer` |                                        |
-| `web100_log_entry.snap.OtherReductions`              | `integer` |                                        |
-| `web100_log_entry.snap.PostCongCountRTT`             | `integer` |                                        |
-| `web100_log_entry.snap.PostCongSumRTT`               | `integer` |                                        |
-| `web100_log_entry.snap.PreCongSumCwnd`               | `integer` |                                        |
-| `web100_log_entry.snap.PreCongSumRTT`                | `integer` |                                        |
-| `web100_log_entry.snap.QuenchRcvd`                   | `integer` |                                        |
-| `web100_log_entry.snap.RTTVar`                       | `integer` |                                        |
-| `web100_log_entry.snap.RcvNxt`                       | `integer` |                                        |
-| `web100_log_entry.snap.RcvRTT`                       | `integer` |                                        |
-| `web100_log_entry.snap.RcvWindScale`                 | `integer` |                                        |
-| `web100_log_entry.snap.RecInitial`                   | `integer` |                                        |
-| `web100_log_entry.snap.RemAddress`                   | `string`    |                                        |
-| `web100_log_entry.snap.RemPort`                      | `integer` |                                        |
-| `web100_log_entry.snap.RetranThresh`                 | `integer` |                                        |
-| `web100_log_entry.snap.SACK`                         | `integer` |                                        |
-| `web100_log_entry.snap.SACKBlocksRcvd`               | `integer` |                                        |
-| `web100_log_entry.snap.SACKsRcvd`                    | `integer` |                                        |
-| `web100_log_entry.snap.SampleRTT`                    | `integer` |                                        |
-| `web100_log_entry.snap.SegsIn`                       | `integer` |                                        |
-| `web100_log_entry.snap.SegsOut`                      | `integer` |                                        |
-| `web100_log_entry.snap.SegsRetrans`                  | `integer` |                                        |
-| `web100_log_entry.snap.SendStall`                    | `integer` |                                        |
-| `web100_log_entry.snap.SlowStart`                    | `integer` |                                        |
-| `web100_log_entry.snap.SmoothedRTT`                  | `integer` |                                        |
-| `web100_log_entry.snap.SndInitial`                   | `integer` |                                        |
-| `web100_log_entry.snap.SndLimBytesCwnd`              | `integer` |                                        |
-| `web100_log_entry.snap.SndLimBytesRwin`              | `integer` |                                        |
-| `web100_log_entry.snap.SndLimBytesSender`            | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTimeCwnd`               | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTimeRwin`               | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTimeSnd`                | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTransCwnd`              | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTransRwin`              | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTransSnd`               | `integer` |                                        |
-| `web100_log_entry.snap.SndMax`                       | `integer` |                                        |
-| `web100_log_entry.snap.SndNxt`                       | `integer` |                                        |
-| `web100_log_entry.snap.SndUna`                       | `integer` |                                        |
-| `web100_log_entry.snap.SndWindScale`                 | `integer` |                                        |
-| `web100_log_entry.snap.SpuriousFrDetected`           | `integer` |                                        |
-| `web100_log_entry.snap.StartTimeStamp`               | `integer` |                                        |
-| `web100_log_entry.snap.StartTimeUsec`                | `integer` |                                        |
-| `web100_log_entry.snap.State`                        | `integer` |                                        |
-| `web100_log_entry.snap.SubsequentTimeouts`           | `integer` |                                        |
-| `web100_log_entry.snap.SumRTT`                       | `integer` |                                        |
-| `web100_log_entry.snap.TimeStamps`                   | `integer` |                                        |
-| `web100_log_entry.snap.Timeouts`                     | `integer` |                                        |
-| `web100_log_entry.snap.WinScaleRcvd`                 | `integer` |                                        |
-| `web100_log_entry.snap.WinScaleSent`                 | `integer` |                                        |
-| `web100_log_entry.snap.X_OtherReductionsCM`          | `integer` |                                        |
-| `web100_log_entry.snap.X_OtherReductionsCV`          | `integer` |                                        |
-| `web100_log_entry.snap.X_Rcvbuf`                     | `integer` |                                        |
-| `web100_log_entry.snap.X_Sndbuf`                     | `integer` |                                        |
-| `web100_log_entry.snap.X_dbg1`                       | `integer` |                                        |
-| `web100_log_entry.snap.X_dbg2`                       | `integer` |                                        |
-| `web100_log_entry.snap.X_dbg3`                       | `integer` |                                        |
-| `web100_log_entry.snap.X_dbg4`                       | `integer` |                                        |
-| `web100_log_entry.snap.X_rcv_ssthresh`               | `integer` |                                        |
-| `web100_log_entry.snap.X_wnd_clamp`                  | `integer` |                                        |
-
-</div>
-
-### Sidestream - measurement-lab.base_tables.sidestream
-
-<div class="table-responsive" markdown="1">
-
-| Field name                                           |     Type     |  Description                              |
-| :----------------------------------------------------|:------------:|:------------------------------------------|
-| `_PARTITIONTIME`                                    | `timestamp`  |  This pseudo column contains a timestamp for the start of the day (in UTC) in which the data was loaded. For the YYYYMMDD partition, this pseudo column will contain the value TIMESTAMP('YYYY-MM-DD'). |
-| `test_id`                                           |  `string`    |  ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20090819T02:01:04.507508000Z_189.6.232.77:3859.c2s_snaplog.gz`). |
-| `project`                              | `integer` |                                        |
-| `log_time`                             | `timestamp` |                                        |
-| `type`                                | `integer` |                                        |
-| `web100_log_entry.log_time`           | `integer` |                                        |
-| `web100_log_entry.version`            | `string` |                                        |
-| `web100_log_entry.group_name`         | `string` |                                        |
-| `web100_log_entry.connection_spec.local_af` | `integer` | IPv4 = `0`<br>IPv6 = `1`                                        |
-| `web100_log_entry.connection_spec.local_ip` | `string` |                                        |
-| `web100_log_entry.connection_spec.local_port` | `integer` |                                        |
-| `web100_log_entry.connection_spec.remote_ip`  | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_port` | `integer` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.area_code`  | `integer` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.city`  | `string` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.continent_code` | `string` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.country_code` | `string` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.country_code3` | `string` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.country_name` | `string` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.latitude` | `float` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.longitude` | `float` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.metro_code` | `integer` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.postal_code` | `string` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.region` | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.area_code` | `integer` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.city` | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.continent_code` | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.country_code` | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.country_code3` | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.country_name` | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.latitude` | `float` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.longitude` | `float` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.metro_code` | `integer` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.postal_code` | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.region` | `string` |                                        |
-| `web100_log_entry.snap.AbruptTimeouts` | `integer` |                                        |
-| `web100_log_entry.snap.ActiveOpen` | `integer` |                                        |
-| `web100_log_entry.snap.CERcvd` | `integer` |                                        |
-| `web100_log_entry.snap.CongAvoid` | `integer` |                                        |
-| `web100_log_entry.snap.CongOverCount` | `integer` |                                        |
-| `web100_log_entry.snap.CongSignals`  | `integer` |                                        |
-| `web100_log_entry.snap.CountRTT` | `integer` |                                        |
-| `web100_log_entry.snap.CurAppRQueue1` | `integer` |                                        |
-| `web100_log_entry.snap.CurAppWQueue`  | `integer` |                                        |
-| `web100_log_entry.snap.CurCwnd` | `integer` |                                        |
-| `web100_log_entry.snap.CurMSS`  | `integer` |                                        |
-| `web100_log_entry.snap.CurRTO`  | `integer` |                                        |
-| `web100_log_entry.snap.CurReasmQueue` | `integer` |                                        |
-| `web100_log_entry.snap.CurRetxQueue`  | `integer` |                                        |
-| `web100_log_entry.snap.CurRwinRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.CurRwinSent` | `integer` |                                        |
-| `web100_log_entry.snap.CurSsthresh` | `integer` |                                        |
-| `web100_log_entry.snap.CurTimeoutCount` | `integer` |                                        |
-| `web100_log_entry.snap.DSACKDups`     | `integer` |                                        |
-| `web100_log_entry.snap.DataOctetsIn`  | `integer` |                                        |
-| `web100_log_entry.snap.DataOctetsOut` | `integer` |                                        |
-| `web100_log_entry.snap.DataSegsIn`    | `integer` |                                        |
-| `web100_log_entry.snap.DataSegsOut` | `integer` |                                        |
-| `web100_log_entry.snap.DupAckEpisodes` | `integer` |                                        |
-| `web100_log_entry.snap.DupAcksIn`     | `integer` |                                        |
-| `web100_log_entry.snap.DupAcksOut`    | `integer` |                                        |
-| `web100_log_entry.snap.Duration` | `integer` |                                        |
-| `web100_log_entry.snap.ECESent`  | `integer` |                                        |
-| `web100_log_entry.snap.ECN`  | `integer` |                                        |
-| `web100_log_entry.snap.ECNNonceRcvd`  | `integer` |                                        |
-| `web100_log_entry.snap.ECNsignals`    | `integer` |                                        |
-| `web100_log_entry.snap.ElapsedMicroSecs` | `integer` |                                        |
-| `web100_log_entry.snap.ElapsedSecs` | `integer` |                                        |
-| `web100_log_entry.snap.FastRetran`    | `integer` |                                        |
-| `web100_log_entry.snap.HCDataOctetsIn` | `integer` |                                        |
-| `web100_log_entry.snap.HCDataOctetsOut` | `integer` |                                        |
-| `web100_log_entry.snap.HCSumRTT`      | `integer` |                                        |
-| `web100_log_entry.snap.HCThruOctetsAcked` | `integer` |                                        |
-| `web100_log_entry.snap.HCThruOctetsReceived` | `integer` |                                        |
-| `web100_log_entry.snap.InRecovery`    | `integer` |                                        |
-| `web100_log_entry.snap.IpTosIn`       | `integer` |                                        |
-| `web100_log_entry.snap.IpTosOut`      | `integer` |                                        |
-| `web100_log_entry.snap.IpTtl`         | `integer` |                                        |
-| `web100_log_entry.snap.LimCwnd`       | `integer` |                                        |
-| `web100_log_entry.snap.LimMSS`        | `integer` |                                        |
-| `web100_log_entry.snap.LimRwin`       | `integer` |                                        |
-| `web100_log_entry.snap.LimSsthresh` | `integer` |                                        |
-| `web100_log_entry.snap.LocalAddress`  | `string` |                                        |
-| `web100_log_entry.snap.LocalAddressType` | `integer` |                                        |
-| `web100_log_entry.snap.LocalPort`     | `integer` |                                        |
-| `web100_log_entry.snap.MSSRcvd`       | `integer` |                                        |
-| `web100_log_entry.snap.MSSSent`       | `integer` |                                        |
-| `web100_log_entry.snap.MaxAppRQueue`  | `integer` |                                        |
-| `web100_log_entry.snap.MaxAppWQueue`  | `integer` |                                        |
-| `web100_log_entry.snap.MaxCaCwnd`     | `integer` |                                        |
-| `web100_log_entry.snap.MaxMSS`        | `integer` |                                        |
-| `web100_log_entry.snap.MaxPipeSize` | `integer` |                                        |
-| `web100_log_entry.snap.MaxRTO`        | `integer` |                                        |
-| `web100_log_entry.snap.MaxRTT`        | `integer` |                                        |
-| `web100_log_entry.snap.MaxReasmQueue` | `integer` |                                        |
-| `web100_log_entry.snap.MaxRetxQueue`  | `integer` |                                        |
-| `web100_log_entry.snap.MaxRwinRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.MaxRwinSent` | `integer` |                                        |
-| `web100_log_entry.snap.MaxSsCwnd`     | `integer` |                                        |
-| `web100_log_entry.snap.MaxSsthresh` | `integer` |                                        |
-| `web100_log_entry.snap.MinMSS`        | `integer` |                                        |
-| `web100_log_entry.snap.MinRTO`        | `integer` |                                        |
-| `web100_log_entry.snap.MinRTT`        | `integer` |                                        |
-| `web100_log_entry.snap.MinRwinRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.MinRwinSent` | `integer` |                                        |
-| `web100_log_entry.snap.MinSsthresh` | `integer` |                                        |
-| `web100_log_entry.snap.Nagle`         | `integer` |                                        |
-| `web100_log_entry.snap.NonRecovDA`    | `integer` |                                        |
-| `web100_log_entry.snap.NonRecovDAEpisodes` | `integer` |                                        |
-| `web100_log_entry.snap.OctetsRetrans` | `integer` |                                        |
-| `web100_log_entry.snap.OtherReductions` | `integer` |                                        |
-| `web100_log_entry.snap.PipeSize`      | `integer` |                                        |
-| `web100_log_entry.snap.PostCongCountRTT`  | `integer` |                                        |
-| `web100_log_entry.snap.PostCongSumRTT` | `integer` |                                        |
-| `web100_log_entry.snap.PreCongSumCwnd` | `integer` |                                        |
-| `web100_log_entry.snap.PreCongSumRTT` | `integer` |                                        |
-| `web100_log_entry.snap.QuenchRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.RTTVar` | `integer` |                                        |
-| `web100_log_entry.snap.RcvNxt` | `integer` |                                        |
-| `web100_log_entry.snap.RcvRTT` | `integer` |                                        |
-| `web100_log_entry.snap.RcvWindScale` | `integer` |                                        |
-| `web100_log_entry.snap.RecInitial` | `integer` |                                        |
-| `web100_log_entry.snap.RemAddress` | `integer` |                                        |
-| `web100_log_entry.snap.RemPort` | `integer` |                                        |
-| `web100_log_entry.snap.RetranThresh` | `integer` |                                        |
-| `web100_log_entry.snap.SACK` | `integer` |                                        |
-| `web100_log_entry.snap.SACKBlocksRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.SACKsRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.SampleRTT` | `integer` |                                        |
-| `web100_log_entry.snap.SegsIn` | `integer` |                                        |
-| `web100_log_entry.snap.SegsOut` | `integer` |                                        |
-| `web100_log_entry.snap.SegsRetrans` | `integer` |                                        |
-| `web100_log_entry.snap.SendStall` | `integer` |                                        |
-| `web100_log_entry.snap.SlowStart` | `integer` |                                        |
-| `web100_log_entry.snap.SmoothedRTT` | `integer` |                                        |
-| `web100_log_entry.snap.SndInitial` | `integer` |                                        |
-| `web100_log_entry.snap.SndLimBytesCwnd` | `integer` |                                        |
-| `web100_log_entry.snap.SndLimBytesRwin` | `integer` |                                        |
-| `web100_log_entry.snap.SndLimBytesSender` | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTimeCwnd` | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTimeRwin` | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTimeSnd` | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTransCwnd` | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTransRwin` | `integer` |                                        |
-| `web100_log_entry.snap.SndLimTransSnd` | `integer` |                                        |
-| `web100_log_entry.snap.SndMax` | `integer` |                                        |
-| `web100_log_entry.snap.SndNxt` | `integer` |                                        |
-| `web100_log_entry.snap.SndUna` | `integer` |                                        |
-| `web100_log_entry.snap.SndWindScale` | `integer` |                                        |
-| `web100_log_entry.snap.SoftErrorReason` | `integer` |                                        |
-| `web100_log_entry.snap.SoftErrors` | `integer` |                                        |
-| `web100_log_entry.snap.SpuriousFrDetected` | `integer` |                                        |
-| `web100_log_entry.snap.SpuriousRtoDetected` | `integer` |                                        |
-| `web100_log_entry.snap.StartTimeStamp` | `integer` |                                        |
-| `web100_log_entry.snap.State` | `integer` |                                        |
-| `web100_log_entry.snap.SubsequentTimeouts` | `integer` |                                        |
-| `web100_log_entry.snap.SumOctetsReordered` | `integer` |                                        |
-| `web100_log_entry.snap.SumRTT` | `integer` |                                        |
-| `web100_log_entry.snap.ThruOctetsAcked` | `integer` |                                        |
-| `web100_log_entry.snap.ThruOctetsReceived` | `integer` |                                        |
-| `web100_log_entry.snap.TimeStampRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.TimeStampSent` | `integer` |                                        |
-| `web100_log_entry.snap.TimeStamps` | `integer` |                                        |
-| `web100_log_entry.snap.Timeouts` | `integer` |                                        |
-| `web100_log_entry.snap.WAD_CwndAdjust` | `integer` |                                        |
-| `web100_log_entry.snap.WAD_IFQ` | `integer` |                                        |
-| `web100_log_entry.snap.WAD_MaxBurst` | `integer` |                                        |
-| `web100_log_entry.snap.WAD_MaxSsthresh` | `integer` |                                        |
-| `web100_log_entry.snap.WAD_NoAI` | `integer` |                                        |
-| `web100_log_entry.snap.WillSendSACK` | `integer` |                                        |
-| `web100_log_entry.snap.WillUseSACK` | `integer` |                                        |
-| `web100_log_entry.snap.WinScaleRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.WinScaleSent` | `integer` |                                        |
-| `web100_log_entry.snap.X_OtherReductionsCM` | `integer` |                                        |
-| `web100_log_entry.snap.X_OtherReductionsCV` | `integer` |                                        |
-| `web100_log_entry.snap.X_Rcvbuf` | `integer` |                                        |
-| `web100_log_entry.snap.X_Sndbuf` | `integer` |                                        |
-| `web100_log_entry.snap.X_dbg1` | `integer` |                                        |
-| `web100_log_entry.snap.X_dbg2` | `integer` |                                        |
-| `web100_log_entry.snap.X_dbg3` | `integer` |                                        |
-| `web100_log_entry.snap.X_dbg4` | `integer` |                                        |
-| `web100_log_entry.snap.X_rcv_ssthresh` | `integer` |                                        |
-| `web100_log_entry.snap.X_wnd_clamp` | `integer` |                                        |
-| `web100_log_entry.snap.ZeroRwinRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.ZeroRwinSent` | `integer` |                                        |
-
-</div>
-
-### Paris Traceroute - measurement-lab.base_tables.traceroute
-
-<div class="table-responsive" markdown="1">
-
-| Field name                                           |     Type     |  Description                              |
-| :----------------------------------------------------|:------------:|:------------------------------------------|
-| `_PARTITIONTIME`                                    | `timestamp`  |  This pseudo column contains a timestamp for the start of the day (in UTC) in which the data was loaded. For the YYYYMMDD partition, this pseudo column will contain the value TIMESTAMP('YYYY-MM-DD'). |
-| `test_id`                                           |  `string`    |  ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20090819T02:01:04.507508000Z_189.6.232.77:3859.c2s_snaplog.gz`). |
-| `project`                              | `integer` | |
-| `log_time`  | `integer` |                                        |
-| `connection_spec.client_af` | `integer` |                                        |
-| `connection_spec.client_application` | `string` |                                        |
-| `connection_spec.client_browser` | `string` |                                        |
-| `connection_spec.client_hostname`  | `string` |                                        |
-| `connection_spec.client_ip` | `string` |                                        |
-| `connection_spec.client_kernel_version` | `string` |                                        |
-| `connection_spec.client_os` | `string` |                                        |
-| `connection_spec.client_version` | `string` |                                        |
-| `connection_spec.data_direction` | `integer` |                                        |
-| `connection_spec.server_af` | `integer` |                                        |
-| `connection_spec.server_hostname` | `string` |                                        |
-| `connection_spec.server_ip` | `string` |                                        |
-| `connection_spec.server_kernel_version` | `string` |                                        |
-| `connection_spec.client_geolocation.area_code` | `integer` |                                        |
-| `connection_spec.client_geolocation.city` | `string` |                                        |
-| `connection_spec.client_geolocation.continent_code` | `string` |                                        |
-| `connection_spec.client_geolocation.country_code` | `string` |                                        |
-| `connection_spec.client_geolocation.country_code3` | `string` |                                        |
-| `connection_spec.client_geolocation.country_name` | `string` |                                        |
-| `connection_spec.client_geolocation.latitude` | `float` |                                        |
-| `connection_spec.client_geolocation.longitude` | `float` |                                        |
-| `connection_spec.client_geolocation.metro_code` | `integer` |                                        |
-| `connection_spec.client_geolocation.postal_code` | `string` |                                        |
-| `connection_spec.client_geolocation.region` | `string` |                                        |
-| `connection_spec.server_geolocation.area_code` | `integer` |                                        |
-| `connection_spec.server_geolocation.city` | `string` |                                        |
-| `connection_spec.server_geolocation.continent_code` | `string` |                                        |
-| `connection_spec.server_geolocation.country_code` | `string` |                                        |
-| `connection_spec.server_geolocation.country_code3` | `string` |                                        |
-| `connection_spec.server_geolocation.country_name` | `string` |                                        |
-| `connection_spec.server_geolocation.latitude` | `float` |                                        |
-| `connection_spec.server_geolocation.longitude` | `float` |                                        |
-| `connection_spec.server_geolocation.metro_code` | `integer` |                                        |
-| `connection_spec.server_geolocation.postal_code` | `string` |                                        |
-| `connection_spec.server_geolocation.region` | `string` |                                        |
-| `paris_traceroute_hop.protocol` | `string` |                                        |
-| `paris_traceroute_hop.src_ip` | `string` |                                        |
-| `paris_traceroute_hop.src_af` | `integer` |<br>AF_UNSPEC = `0`<br>AF_INET (IPv4) = `2`<br>AF_INET6 (IPv6) = `10`             |
-| `paris_traceroute_hop.src_hostname` | `string` |                                        |
-| `paris_traceroute_hop.src_geolocation.area_code` | `integer` |                                        |
-| `paris_traceroute_hop.src_geolocation.city` | `string` |                                        |
-| `paris_traceroute_hop.src_geolocation.continent_code` | `string` |                                        |
-| `paris_traceroute_hop.src_geolocation.country_code` | `string` |                                        |
-| `paris_traceroute_hop.src_geolocation.country_code3` | `string` |                                        |
-| `paris_traceroute_hop.src_geolocation.country_name` | `string` |                                        |
-| `paris_traceroute_hop.src_geolocation.latitude` | `float` |                                        |
-| `paris_traceroute_hop.src_geolocation.longitude` | `float` |                                        |
-| `paris_traceroute_hop.src_geolocation.metro_code` | `integer` |                                        |
-| `paris_traceroute_hop.src_geolocation.postal_code` | `string` |                                        |
-| `paris_traceroute_hop.src_geolocation.region` | `string` |                                        |
-| `paris_traceroute_hop.dest_ip` | `string` |                                        |
-| `paris_traceroute_hop.dest_af` | `integer` | <br>AF_UNSPEC = `0`<br>AF_INET (IPv4) = `2`<br>AF_INET6 (IPv6) = `10`         |
-| `paris_traceroute_hop.dest_hostname` | `string` |                                        |
-| `paris_traceroute_hop.dest_geolocation.area_code` | `integer` |                                        |
-| `paris_traceroute_hop.dest_geolocation.continent_code` | `string` |                                        |
-| `paris_traceroute_hop.dest_geolocation.country_code` | `string` |                                        |
-| `paris_traceroute_hop.dest_geolocation.country_code3` | `string` |                                        |
-| `paris_traceroute_hop.dest_geolocation.country_name` | `string` |                                        |
-| `paris_traceroute_hop.dest_geolocation.latitude` | `float` |                                        |
-| `paris_traceroute_hop.dest_geolocation.longitude` | `float` |                                        |
-| `paris_traceroute_hop.dest_geolocation.metro_code` | `integer` |                                        |
-| `paris_traceroute_hop.dest_geolocation.postal_code` | `string` |                                        |
-| `paris_traceroute_hop.dest_geolocation.region` | `string` |                                        |
-| `paris_traceroute_hop.dest_geolocation.rtt` | `float (repeated)` |                                        |
-
-</div>
-
-### Switch - measurement-lab.base_tables.switch
-
-The switch table schema (also known as "DISCO", named after the "DIScard COllection" service that records the switch data).
-
-<div class="table-responsive" markdown="1">
-
-| Field name                                          |     Type     |  Description                                                                                                      |
-|:----------------------------------------------------|:------------:|:----------------------------------------------|
-| `_PARTITIONTIME`                                    | `timestamp`  |  This pseudo column contains a timestamp for the start of the day (in UTC) in which the data was loaded. For the YYYYMMDD partition, this pseudo column will contain the value TIMESTAMP('YYYY-MM-DD'). |
-| `test_id`                                           |  `string`    |  ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20180608T05:00:00-to-20180608T06:00:00-switch.json.gz`). |
-| `task_filename`                                     | `string`     |  The raw data file in Google Cloud Storage from which the test row was parsed. |
-| `parse_time`                                        | `timestamp`  |  Timestamp of when test data was parsed into BigQuery from Google Cloud Storage. |
-| `parser_version`                                    | `string`     |  The version of the parser that created this row. |
-| `log_time`                                          | `timestamp`  |  Never set for the switch data. The sample.timestamp should be used instead for the sample collection time. |
-| `sample`                                            | `record`     |  A repeated record with the value and timestamp of each 10 second observation. Typically, there will be 360 samples per hour. Due to system maintenance, or machine restarts, some intervals may contain more or less samples. |
-| `sample.timestamp`                                  | `timestamp`  |  Timestamp of the beginning of the 10 second time bin. |
-| `sample.value`                                      | `float`      |  Delta value of the `metric` during this 10 second time bin. |
-| `metric`                                            | `string`     |  The canonical metric name for samples, e.g. `switch.discards.uplink.tx` |
-| `hostname`                                          | `string`     |  The fully qualified domain name of the machine that collected the data, e.g. `mlab2.abc01.measurement-lab.org`. |
-| `experiment`                                        | `string`     |  The fully qualified domain name of the switch that produced the data, e.g. `s1.abc01.measurement-lab.org`. |
-
-</div>
-
-**v2 - March 2016**
+### [v2] - 2016-03
 
 * Began the publication of per project "fast tables" for NDT, NPAD, Paris Traceroute, and Sidestream.
   * `plx.google:m_lab.ndt.all`
@@ -631,23 +66,23 @@ The switch table schema (also known as "DISCO", named after the "DIScard COllect
   * `web100_log_entry.is_last_entry`
   * `web100_log_entry.group_name`
 
-**v2.1 - November 2016**
+### [v2.1] - 2016-11
 
 * The field `blacklist_flags` was added to v2 per project "fast tables", and  historical data from 201001-01 to 2015-10-02 was re-parsed to add this annotation, due to a [switch discard issue related to traffic microbursts]({{ site.baseurl }}/blog/traffic-microbursts-and-their-effect-on-internet-measurement/).
 
-**v3 - May 2017**
+### [v3] - 2017-05
 
 * Began publication to new date partitioned table and updated schema to support the new, open source, ETL pipeline.
 * Data publication to v2 tables stopped at this time.
 
-**v3.0.1 - October / November 2017**
+### [v3.0.1] - 2017-10
 
 * The schema for v3.0.1 tables was updated, removing an alpha feature called deltas, which attempted to log the differences between test snaplogs instead of the final test values. This feature will be revisited in future schema updates.
 * Newly released data annotation engine added geolocation and some metadata to tests from 2016 to present.
 * Published a series of beta BigQuery views for NDT data,  to allow data queries across both v2 and v3.0.x tables.
 * Published traceroute and sidestream table to replace v2 versions, migrated data, re-annotated data.
 
-**v3.0.2 - December 2017**
+### [v3.0.2] - 2017-12
 
 * Standardized the naming scheme for BigQuery table and view names to be consistent with new semantic versioning.
 * All tables and views must be queried using StandardSQL, except for views with “legacysql” in the name.
@@ -659,11 +94,11 @@ The switch table schema (also known as "DISCO", named after the "DIScard COllect
 * Previous versions of our tables will be referenced by versions 1.0, 2.0, etc. in our documentation but actual table names will not be changed.
 * Re-ran historical annotations for traceroute, npad, and sidestream data due to a bug where some geolocation annotations was not present in all past test data.
 
-**v3.1 - February 2018**
+### [v3.1] - 2018-02
 
 * First official release of v3 tables, with all historical data re-parsed, and annotated with geolocation metadata.
 
-**v3.1.1 - July 2018**
+### [v3.1.1] - 2018-07
 
 * Publish official Switch tables from the DISCO dataset.
 
@@ -684,14 +119,13 @@ Published **tables** and views are:
   * _measurement-lab.release.ndt_uploads_
   * _measurement-lab.release.ndt_uploads_legacysql_
 
-## Planned Additions/Enhancements for Future Releases
+### [v4] - 2019-05
 
-* Begin publishing new Sidestream and Paris Traceroute data to tables in the `base_tables` dataset:
-  * **measurement-lab.base_tables.sidestream**
-  * **measurement-lab.base_tables.traceroute**
-* Publish `release` BigQuery Views for Sidestream and Paris Traceroute
-* Publish Sidestream and Paris Traceroute collected prior to the switch to `base_tables` in the `legacy` dataset
-  * **measurement-lab.legacy.sidestream**
-  * **measurement-lab.legacy.traceroute**
-* Move historical NPAD data into the `legacy` dataset
-  * **measurement-lab.legacy.npad**
+* In previous [release convention]({{ site.baseurl }}/blog/etl-pipeline/#new-etl-pipeline-and-transition-to-new-bigquery-tables) a hierarchy of releases, release candidates “rc”, versioned release candidates, and versioned intermediate views were published, but they will cease being updated with new data starting May 6, 2019.
+* BigQuery datasets named after M-Lab measurement services & data types.
+* Each measurement service (ndt, traceroute, sidestream, utilization) will have a corresponding BigQuery dataset and view in the `measurement-lab` project, managed by our [data reprocessing service](https://github.com/m-lab/etl-gardener){:target="_blank"}.
+* LegacySQL support is now deprecated, but a single LegacySQL view of the legacy data may be kept for historical purposes.
+* Only StandardSQL is supported in any new views of the comprehensive reprocessed data.
+* Views that combine legacy tables and recently parsed data will no longer be offered.
+* Historically, Paris Traceroute data was collected for every measurement service. For this data type, a view in the `aggregate` dataset is now provided.
+* Over the next year, M-Lab will restructure the traceroute schema to support reprocessing using the [Gardener service](https://github.com/m-lab/etl-gardener), and to unify the schema for historical and future data collection by [Scamper](https://www.caida.org/tools/measurement/scamper/){:target="_blank"}.

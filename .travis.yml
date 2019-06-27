@@ -41,6 +41,4 @@ deploy:
   script: "firebase use mlab-oti && firebase deploy --only hosting --token $FIREBASE_TOKEN"
   on:
     repo: m-lab/website
-    all_branches: true
-    condition: "$TRAVIS_BRANCH == master"
     tags: true

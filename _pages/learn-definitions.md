@@ -8,7 +8,7 @@ breadcrumb: learn
 
 # Definitions of Terms
 
-To provide clarity for people of all expertise levels, here we provide definition of terms used in M-Lab documentation or with respect to internet research, measurement, etc.
+To provide clarity for people of all expertise levels, here we provide definition of terms used in M-Lab documentation or with respect to Internet research, measurement, etc.
 
 ## Infrastructure
 {:.no_toc}
@@ -62,7 +62,7 @@ The fraction of packets (bundles of Internet data) that need to be sent more tha
 ### Round Trip Time (Milliseconds, ms)
 {:.no_toc}
 
-How much data can be downloaded (server to user computer) per unit of time. Note that networking capacity is generally measured in bits per second, while application file sizes are generally measured in bytes, which are 8 bit each. So for example downloading a 1 megabyte photo image in 10 seconds would be 8 Megabits per second or 8 Mbps. How much time does it take for a packet to go from point A to point B and back. The shorter the time, the better. Minimum: the minimum latency measured in transmissions from the server to the client, reported in milliseconds. Normally, this is a good indication of physical path distance, except when there is high load. ISPs with smaller RTTs are probably better connected to other ISPs, meaning that they have more interconnections in more widely distributed geographic locations. Average: the average latency of data transfers from the server to the client. This is calculated as the sum of round trip times sampled during the test against the number of samples, reported in milliseconds.Comparing Average and Minimum RTTs provides an estimate of the average delay caused by queuing traffic in the network.
+Also sometimes referred to as **Latency**, Round Trip Time is a measure of the time it take for a packet to go from point A to point B and back. The shorter the time, the better. Minimum: the minimum latency measured in transmissions from the server to the client, reported in milliseconds. Normally, this is a good indication of physical path distance, except when there is high load. ISPs with smaller RTTs are probably better connected to other ISPs, meaning that they have more interconnections in more widely distributed geographic locations. Average: the average latency of data transfers from the server to the client. This is calculated as the sum of round trip times sampled during the test against the number of samples, reported in milliseconds.Comparing Average and Minimum RTTs provides an estimate of the average delay caused by queuing traffic in the network.
 
 ### Upload Throughput (Megabits per second, Mbps)
 {:.no_toc}

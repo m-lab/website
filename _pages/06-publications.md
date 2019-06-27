@@ -14,8 +14,33 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 # Papers
 
+## 2019
+{:.no_toc}
+
+### Estimating Residential Broadband Capacity using Big Data from M-Lab
+{:.no_toc}
+
+{:.paper-description}
+Knowing residential broadband capacity profiles across a population is of interest to both consumers and regulators who want to compare or audit performance of various broadband service offerings. Unfortunately, extracting broadband capacity from speed tests in public datasets like M-Lab is challenging because tests are indexed by client IP address which can be dynamic and/or obfuscated by NAT, and variable network conditions can affect measurements. This paper presents the first systematic effort to isolate households and extract their broadband capacity using 63 million speed test measurements recorded over a 12 month period in the M-Lab dataset. We first identify a key parameter, the correlation between measured speed and congestion count for a specific client IP address, as an indicator of whether the IP address represents a single house, or a plurality of houses that may be dynamically sharing addresses or be aggregated behind a NAT. We then validate our approach by comparing to ground truth taken from a few known houses, and at larger scale by checking internal consistency across ISPs and across months. Lastly, we present results that isolate households and estimate their broadband capacity based on measured data, and additionally reveal insights into the prevalence of NAT and variations in service capacity tiers across ISPs.
+
+{:.paper-author}
+Xiaohong Deng, Yun Feng, Hassan Habibi Gharakheili, Vijay Sivaraman
+
+[Read/Download](https://arxiv.org/abs/1901.07059){:.download-link .paper-download target="_blank"}
+
 ## 2018
 {:.no_toc}
+
+### Access is more than cost: Measuring the quality of mobile broadband service
+{:.no_toc}
+
+{:.paper-description}
+A4AI’s December 2018 report examines the policy dynamics that define the quality of mobile broadband service experienced by users across low- and middle-income countries (LMICs). Taking a step beyond our core research around affordable access and the cost of connectivity, this brief report informs ongoing efforts to translate Internet access into meaningful access for everyone.
+
+{:.paper-author}
+Teddy Woodhouse (Research Analyst and Advocate, A4AI) and Dhanaraj Thakur (Research Director, Web Foundation)
+
+[Read/Download](https://a4ai.org/access-is-more-than-cost-measuring-the-quality-of-mobile-broadband-service/){:.download-link .paper-download target="_blank"}
 
 ### Can Competition-Enhancing Regulation Bridge the Quality Divide in Internet Provision?
 {:.no_toc}
@@ -32,7 +57,7 @@ Montenegro, Lourdes National University of Singapore (NUS)
 {:.no_toc}
 
 {:.paper-description}
-An overview of the internet conditions during the 2018 elections in Venezuela.
+An overview of the Internet conditions during the 2018 elections in Venezuela.
 
 {:.paper-author}
 IPYS Venezuela
@@ -68,7 +93,7 @@ Cable.co.uk
 {:.no_toc}
 
 {:.paper-description}
-An overview of internet speeds and access to information in Venezuela.
+An overview of Internet speeds and access to information in Venezuela.
 
 {:.paper-author}
 IPYS Venezuela
@@ -120,13 +145,13 @@ Invocations of Europe are increasingly evident in Canadian debates about wholesa
 {:.paper-author}
 Reza Rajabiun, Catherine Middleton
 
-[Download PDF](https://www.ceps.eu/system/files/IEForum42017_5.pdf){:.download-link .paper-download target="_blank"}
+[Download](https://link.springer.com/article/10.1007/s10272-017-0678-3){:.download-link .paper-download target="_blank"}
 
 ### Towards estimating the untapped potential: a global malicious DDoS mean capacity estimate
 {:.no_toc}
 
 {:.paper-description}
-What is the malicious reflected distributed denial of service (rDDoS) mean potential of the internet? The authors have been using data from the openNTP project which measures the number of reflectors on the internet since 2014 until now, and completed a graph that roughly estimates a lower boundary for global rDDoS mean potential across four internet protocols (IPs); SSDP, NTP, SNMP and open recursive DNS.
+What is the malicious reflected distributed denial of service (rDDoS) mean potential of the Internet? The authors have been using data from the openNTP project which measures the number of reflectors on the Internet since 2014 until now, and completed a graph that roughly estimates a lower boundary for global rDDoS mean potential across four Internet protocols (IPs); SSDP, NTP, SNMP and open recursive DNS.
 
 {:.paper-author}
 Eireann Leverett, Aaron Kaplan
@@ -151,7 +176,7 @@ Chris Ritzo
 {:.no_toc}
 
 {:.paper-description}
-The authors analyse two complementary datasets to quantify the latency variation experienced by internet end-users: (i) a large-scale active measurement dataset (from the Measurement Lab Network Diagnostic Tool) which shed light on long-term trends and regional differences; and (ii) passive measurement data from an access aggregation link which is used to analyse the edge links closest to the user. The analysis shows that variation in latency is both common and of significant magnitude, with two thirds of samples exceeding 100 ms of variation. The variation is seen within single connections as well as between connections to the same client. The distribution of experienced latency variation is heavy-tailed, with the most affected clients seeing an order of magnitude larger variation than the least affected. In addition, there are large differences between regions, both within and between continents. Despite consistent improvements in throughput, most regions show no reduction in latency variation over time, and in one region it even increases.
+The authors analyse two complementary datasets to quantify the latency variation experienced by Internet end-users: (i) a large-scale active measurement dataset (from the Measurement Lab Network Diagnostic Tool) which shed light on long-term trends and regional differences; and (ii) passive measurement data from an access aggregation link which is used to analyse the edge links closest to the user. The analysis shows that variation in latency is both common and of significant magnitude, with two thirds of samples exceeding 100 ms of variation. The variation is seen within single connections as well as between connections to the same client. The distribution of experienced latency variation is heavy-tailed, with the most affected clients seeing an order of magnitude larger variation than the least affected. In addition, there are large differences between regions, both within and between continents. Despite consistent improvements in throughput, most regions show no reduction in latency variation over time, and in one region it even increases.
 
 {:.paper-author}
 Toke Hoiland-Jorgensen et al., CoNEXT '16
@@ -580,7 +605,9 @@ Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center
 ## 2016
 {:.no_toc}
 
-### [10/11/2016 - NTIA](https://www.ntia.doc.gov/files/ntia/publications/m-lab.pdf){:target="_blank"}: Comments on the National Broadband Research Agenda, Docket Number: 160831803-6803-01
+<!-- ### [10/11/2016 - NTIA](https://www.ntia.doc.gov/files/ntia/publications/m-lab.pdf){:target="_blank"}: Comments on the National Broadband Research Agenda, Docket Number: 160831803-6803-01-->
+### 10/11/2016 - NTIA - https://www.ntia.doc.gov/files/ntia/publications/m-lab.pdf : Comments on the National Broadband Research Agenda, Docket Number: 160831803-6803-01
+
 {:.no_toc}
 
 [Download PDF]({{ site.baseurl }}/publications/regulator-filings/ntia/m-lab_ntia_10-11-2016.pdf){:.download-link .paper-download target="_blank"}
@@ -653,7 +680,7 @@ Stephen Soltesz
 [View Video](https://www.youtube.com/watch?v=ZJCrn5FV-TA){:.download-link .paper-download target="_blank"}
 [View Slides](https://goo.gl/UY7uXT){:.download-link .paper-download target="_blank"}
 
-### Visualizing the Health of the internet - Measurement Lab + Bocoup
+### Visualizing the Health of the Internet - Measurement Lab + Bocoup
 {:.no_toc}
 
 {:.paper-description}

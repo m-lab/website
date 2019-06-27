@@ -4,7 +4,7 @@ permalink: /who/
 title: "Who we are"
 breadcrumb: "about"
 grid-section:
-  - group-heading: "Steering Committee Members"
+  - group-heading: "Experiment Review Committee"
     group-list-class: "l-grid l-3col"
     grid-img-class: " framed"
     grid-items:

@@ -55,7 +55,7 @@ grid-section:
         desc: "Measures the network path back to a user from selected network endpoints."
         categories: "network state"
   - group-heading: "Retired Tests"
-    group-description: "Tests in this section were once hosted with M-Lab but have since been retired. Data collected by these tests while hosted on with M-Lab remains available. Please see each individual test's page for more information."
+    group-description: "Tests in this section were once hosted with M-Lab but have since been retired. The data collected by these tests while they were hosted on with M-Lab remains available. Please see each individual test's page for more information."
     group-list-class: "l-grid l-3col"
     grid-items:
       - link: "/tests/neubot/"

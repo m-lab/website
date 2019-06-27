@@ -11,7 +11,7 @@ BISmark is an OpenWRT-based (http://openwrt.org) platform that measures Internet
 
 [Apply to host a BISmark gateway](http://projectbismark.net/){:target="_blank"}
 
-Please cite this data set as follows: **The M-Lab BISmark Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/bismark
+Please cite this data set as follows: **The M-Lab BISmark Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/bismark**
 
 **Data** collected by BISmark is available in raw format at [http://uploads.projectbismark.net/](http://uploads.projectbismark.net/){:target="_blank"}.
 
