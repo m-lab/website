@@ -11,8 +11,9 @@ breadcrumb: data
 M-Lab places server infrastructure for conductingt tests in diverse location around the world. Typically we seek hosting in well connected data centers where ISPs interconnect with one another. Each M-Lab "pod" consists of 3-4 servers and one switch, connected directly to an upstream provider. In large metro areas, we attempt to place multiple pods to obtain diversity in transit and routes.
 
 ## Infrastructure Map
-
-<div id="map" class="map leaflet-container" style="height: 500px; position:relative;"></div>
+<p>
+<div id="map" class="map leaflet-container" style="height: 350px; width:100%; position:relative;"></div>
+</p>
 <script>
   var center = [18.5554797,-42.4662712];
   var zoom = 2;
@@ -22,14 +23,6 @@ M-Lab places server infrastructure for conductingt tests in diverse location aro
     map.addLayer(baseTileLayer);
 
 </script>
-
-<!--
-<p><iframe src="https://mlab-ns.appspot.com/admin/map/ipv4/all" width="100%" height="660" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" align="left"></iframe></p>
-
-## Server Status
-
-<p><iframe src="https://mlab-ns.appspot.com/admin/sliver_tools" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes"></iframe></p>
--->
 
 ## M-Lab Naming Service
 
