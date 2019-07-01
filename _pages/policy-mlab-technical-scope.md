@@ -2,6 +2,7 @@
 layout: page
 permalink: /mlab-scope/
 title: "M-Lab - Conceptual & Technical Scope & Policies"
+breadcrumb: "about"
 ---
 
 # M-Lab - Conceptual & Technical Scope & Policies
@@ -208,9 +209,7 @@ Table 1 gives the bill of materials required to build a site.
 | 1     | 4    | 4 x 1U     | Server hardware (with rack-mount kit), dual-processor, octo-core |
 | 2     | 1    | 1U         | Rack switch |
 | 3     | 2    |            | Rack mountable PDU |
-| 4     | 6    |            | Ethernet cables, Cat5e or better<br>
-(4 used between servers & switch)<br>
-(2 used between switch & PDUs) |
+| 4     | 6    |            | Ethernet cables, Cat5e or better: (4 used between servers & switch), (2 used between switch & PDUs) |
 | 5     | 4    |            | Fiber patch cables (servers to switch) |
 | 5     | 8    |            | Power cords (server to PDU) |
 | 6     | 2    |            | Power cord (switch to PDU) |

@@ -2,6 +2,7 @@
 layout: page
 permalink: /aup/
 title: "M-Lab Acceptable Use Policy"
+breadcrumb: "about"
 ---
 
 # M-Lab Acceptable Use Policy Summary

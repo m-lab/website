@@ -2,6 +2,7 @@
 layout: page
 permalink: /site-host-mou/
 title: "Memorandum of Understanding for M-Lab Site Hosts"
+breadcrumb: "about"
 ---
 
 # Memorandum of Understanding for M-Lab Site Hosts

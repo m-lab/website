@@ -2,6 +2,7 @@
 layout: page
 permalink: /privacy-v1/
 title: "M-Lab Privacy Policy [v1]"
+breadcrumb: "about"
 ---
 
 # Measurement Lab Privacy Policy
