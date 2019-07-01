@@ -17,8 +17,8 @@ header:
           url:  "/faq/"
         - text: "Who we are"
           url:  "/who/"
-        - text: "Privacy"
-          url:  "/privacy/"
+        - text: "Policies"
+          url:  "/policies/"
         - text: "Contact"
           url:  "/contact/"
     -
