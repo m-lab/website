@@ -36,10 +36,10 @@ The easiest way to access M-Lab data on GCS programmatically is by using the [`g
 
 ~~~ shell
 # List the contents of the M-Lab NDT data in GCS.
-$ gsutil ls -l gsutil ls -l gs://m-lab/
+$ gsutil ls -l gs://archive-measurement-lab/
 
 # Copy a file from GCS locally.
-$ gsutil cp gs://m-lab/ndt/2009/02/18/20090218T000000Z-mlab1-lga01-ndt-0000.tgz .
+$ gsutil cp gs://archive-measurement-lab/ndt/2009/02/18/20090218T000000Z-mlab1-lga01-ndt-0000.tgz .
 ~~~
 
 ### Accessing Data With Common HTTP Tools
