@@ -18,16 +18,16 @@ Let's start with something simple. How many distinct users (distinct IPs, for si
 SELECT
   COUNT(DISTINCT web100_log_entry.connection_spec.remote_ip) AS num_clients
 FROM
-  `measurement-lab.release.ndt_all`
+  `measurement-lab.ndt.recommended`
 WHERE
   web100_log_entry.connection_spec.remote_ip IS NOT NULL;
 ~~~
 
-**Result (_last updated 1/25/2018_):**
+**Result (_last updated 2019-07-03_):**
 
 | num_clients |
 |-------------|
-| 154370043   |
+| 258929080   |
 
 ## Computing Statistics Over Time: How Many Users Per Day?
 
@@ -39,7 +39,7 @@ SELECT
   partition_date AS day,
   COUNT(DISTINCT web100_log_entry.connection_spec.remote_ip) AS num_clients
 FROM
-  `measurement-lab.release.ndt_all`
+  `measurement-lab.ndt.recommended`
 WHERE
   web100_log_entry.connection_spec.remote_ip IS NOT NULL
 GROUP BY
@@ -58,8 +58,8 @@ ORDER BY
 | 2009-02-23  |          73 |
 | 2009-02-24  |         105 |
 | ...         |         ... |
-| 2018-01-24  |      379663 |
-| 2018-01-25  |      189486 |
+| 2019-07-02  |      566874 |
+| 2019-07-03  |      542708 |
 
 ## Dealing with IP Addresses: How Many Users from Distinct Subnets?
 
@@ -92,14 +92,14 @@ SELECT
   COUNT(DISTINCT computeSubnet(web100_log_entry.connection_spec.remote_ip, connection_spec.client_af)) AS num_subnets
 
 FROM
-  `measurement-lab.release.ndt_all`;
+  `measurement-lab.ndt.recommended`;
 ~~~
 
 **Result**
 
 | num_subnets |
 |-------------|
-| 5234754     |
+| 5695037     |
 
 ## Computing Distributions of Tests Across Users: How Many Users Have Run a Certain Number of Tests?
 
@@ -119,10 +119,10 @@ FROM
   SELECT COUNT(*) AS num_tests,
     web100_log_entry.connection_spec.remote_ip AS remote_ip
   FROM
-    `measurement-lab.release.ndt_all`
+    `measurement-lab.ndt.recommended`
   WHERE
-    partition_date >= '2017-01-01'
-    AND partition_date <= '2017-12-31'
+    partition_date >= '2019-01-01'
+    AND partition_date <= '2019-06-30'
   GROUP BY remote_ip
   )
 GROUP BY
@@ -135,10 +135,10 @@ ORDER BY
 
 |num_tests|num_clients|
 |---------|-----------|
-| 1       | 2475002   |
-| 2       | 15446047  |
-| 3       | 1489116   |
+| 1       | 7150238   |
+| 2       | 27778272  |
+| 3       | 2933916   |
 | ...     | ...       |
-| 30941   | 1         |
-| 109399  | 1         |
-| 339105  | 1         |
+| 67692   | 1         |
+| 68644   | 1         |
+| 76317   | 1         |
