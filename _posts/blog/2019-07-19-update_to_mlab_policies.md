@@ -59,7 +59,7 @@ Along with the new policy requirements, M-Lab also will require technical change
 * **Containers will be allocated dedicated public IP addresses**
   Experiments will be allocated one IPv4 address and one IPv6 address per machine (if IPv6 is available at that site).
 * **Resource allocations will be applied per experiment**
-  To safeguard the platform and ensure that any one experiment on the platform does not interfere with measurements of all experiments, each experiment will be assigned resource allocations that will limit the maximum resource utilization over a short time period.
+  To safeguard the platform and ensure that any one experiment on the platform does not interfere with measurements of all experiments, each experiment will be allocated soft resource quotas. Usage outside of those quotas will be permitted (they are soft quotas, rather than hard ones), but the quotas will be operationally monitored and persistent usage outside of those bounds will cause us to engage with experiment owners in an attempt to bring usage back into expected/acceptable bounds.
 
   Default Resource Allocations:
 
@@ -69,7 +69,7 @@ Along with the new policy requirements, M-Lab also will require technical change
   * Disk I/O: 10%
   * Network bandwidth: 100 Mbps Avg over 5 min
 
-  Based on the available capacity and experiment requirements, default allocations may be adjusted on a case-by-case basis. However, M-Lab expects that these allocations will be sufficient for most experiments that pace clients in such a way to respect the resource utilization limits.
+  Based on the available capacity and experiment requirements, default allocations may be adjusted on a case-by-case basis. However, M-Lab expects that these allocations will be sufficient for most experiments.
 
 ### Core Infrastructure Partners
 
