@@ -125,7 +125,7 @@ Regardless of whether or not a website visitor is a GDPR data subject, this data
 
 ## Transfers of personal data from the EU to our cloud storage
 
-Google LLC is certified under the EU-US and Swiss Privacy Shield Frameworks and their certifications can be viewed on the [Privacy Shield list](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI){:target="_blank"}. Google is [committed](https://cloud.google.com/security/compliance/gdpr/){:target="_blank"} to complying with the EU General Data Protection Regulation (GDPR) for G Suite and Google Cloud Platform services. You can find GDPR-updated [Data Processing Amendment](https://gsuite.google.com/terms/dpa_terms.html){:target="_blank"} for G Suite and [Data Processing and Security Terms](https://cloud.google.com/terms/data-processing-terms){;target="_blank"} for Google Cloud Platform [here](https://cloud.google.com/security/gdpr/){:target="_blank"}.
+Google LLC is certified under the EU-US and Swiss Privacy Shield Frameworks and their certifications can be viewed on the [Privacy Shield list](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI){:target="_blank"}. Google is [committed](https://cloud.google.com/security/compliance/gdpr/){:target="_blank"} to complying with the EU General Data Protection Regulation (GDPR) for G Suite and Google Cloud Platform services. You can find GDPR-updated [Data Processing Amendment](https://gsuite.google.com/terms/dpa_terms.html){:target="_blank"} for G Suite and [Data Processing and Security Terms](https://cloud.google.com/terms/data-processing-terms){:target="_blank"} for Google Cloud Platform [here](https://cloud.google.com/security/gdpr/){:target="_blank"}.
 
 ## Availability of test data
 
