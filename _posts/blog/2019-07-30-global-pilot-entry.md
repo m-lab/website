@@ -35,7 +35,7 @@ Since early June, we’ve run a limited pilot on a small number of production
 machines. First we started in New York and Los Angeles. In July we added two
 more sites in Mumbai, and Amsterdam. From these trials, we’ve found that
 performance matches or exceeds the current software stack, and success
-frequence for NDT clients has improved for browser-based clients while
+rate for NDT clients has improved for browser-based clients while
 remaining compatible with most earlier NDT clients. Based on these
 measurements, we are launching the new software stack to [one third of the
 production platform][3]{:target="_blank"}.
