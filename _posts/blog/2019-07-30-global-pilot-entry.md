@@ -92,14 +92,15 @@ downloads.
 
 ## Test Counts
 
-Clients are directed to M-Lab servers at a site randomly by the M-Lab
-location service. So, if all servers at a site are healthy, then we would
-expect all three to receive about the same number of tests over the same time
-period. For our analysis, all machines at each site were nominally healthy.
+Clients are randomly directed to M-Lab servers at a site by the M-Lab
+[location service](https://locate.measurementlab.net). So, if all servers at
+a site are healthy, then we would expect all three to receive about the same
+number of tests over the same time period. For our analysis, all machines at
+each site were nominally healthy.
 
 Our methodology for comparing aggregate test counts:
 
-* Select the fastest test per IP over the time window (i.e. 1 day or 1 week).
+* Select the fastest test per IP over the time window (1 day or 1 week).
 * Round web100 rates to an integer number of websocket messages to emulate the
   new NDT server.
 * Exclude tests with duration <= 9 sec (a normal test is 10 sec)
@@ -127,16 +128,16 @@ server handles WSS+JSON clients better than the web100 NDT server.
 
 ## Test Performance Distributions
 
-The web100 platform use the TCP Reno congestion control algorithm while the
+The web100 platform uses the TCP Reno congestion control algorithm while the
 new platform uses TCP Cubic. We want to verify that typical performance is
 not affected by this change. NDT is the first experiment running on the new
-platform. And the test count analysis above show that at least as many tests
+platform. The test count analysis above shows that at least as many tests
 are recorded. So below, we use the NDT test rates as representative of
 platform performance.
 
 Our methodology for comparing current and new platform performance
 
-* Select the fastest test per IP over the time window (i.e. 1 day or 1 week)
+* Select the fastest test per IP over the time window (1 day or 1 week)
 * Round web100 rates to an integer number of websocket messages to emulate the
   new NDT server
 * Exclude tests with duration <= 9 sec (a normal test is 10 sec)
