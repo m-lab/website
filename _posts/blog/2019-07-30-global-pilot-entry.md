@@ -163,5 +163,5 @@ ndt5 (mlab3) at AMS03. If performance between the two systems were
 identical, then the decile curves would fall exactly on the trendline. We find most
 variation in the lowest and highest deciles. The lowest decile includes
 measurements most affected by message size rounding, and the highest decile
-includes less frequent measurements. The intermediate deciles aline nicely
+includes less frequent measurements. The intermediate deciles align nicely
 with the trendline with slight bias toward the new platform.
