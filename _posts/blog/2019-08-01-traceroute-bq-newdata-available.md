@@ -24,9 +24,11 @@ Here is the new schema, which also adds ASn annotation for traceroute source, de
 
 The new BigQuery table preserves all information in legacy tables, with better Geolocation annotation coverage using time-based Maxmind databases. The Geolocation annotation rate for traceroute source and destination are 100%. For traceroute tests since 2017, the Geolocation annotation rate for hops almost doubled from ~20% in legacy BigQuery table, to >40% in current BigQuery table. The ASN annotation rate is about 97%.
 
+# Sample BigQuery
+
 Here are the sample BigQuery to access the table with new schema:
 
-
+## Count how many traceroute tests per day given a time range
 SELECT
 ts,
 COUNT(*) AS num
@@ -45,7 +47,7 @@ DATE(TestTime) BETWEEN DATE("2016-01-01") AND DATE("2018-06-30")
 GROUP BY ts
 ORDER BY ts DESC
 
-Count rate of source and destination IP being annotated with Geolocation information:
+## Count rate of source and destination IP being annotated with Geolocation information
 
 SELECT
 ts,
@@ -70,7 +72,7 @@ DATE(TestTime) BETWEEN DATE("2016-11-01") AND DATE("2016-11-30")
 GROUP BY ts
 ORDER BY ts DESC
 
-Count how many hops was in “New York” per day.
+## Count how many hops was in “New York” per day.
 
 SELECT
 ts,
@@ -99,7 +101,7 @@ GROUP BY ts
 ORDER BY ts DESC
 
 
-4. Count how many hops was in a specific ASN:
+## Count how many hops was in a specific ASN
 
 SELECT
 ts,
@@ -126,7 +128,7 @@ GROUP BY ts
 ORDER BY ts DESC
 
 
-5. The annotation rate of ASN for hops:
+## Count the annotation rate of ASN for hops
 
 SELECT
 ts,
