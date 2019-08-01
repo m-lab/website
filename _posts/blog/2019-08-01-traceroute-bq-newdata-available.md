@@ -6,7 +6,7 @@ date: 2019-08-01
 breadcrumb: blog
 categories:
   - data
-  - traceroute
+  - paris-traceroute
   - community
 ---
 
