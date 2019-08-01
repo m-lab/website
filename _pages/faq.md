@@ -216,6 +216,6 @@ If you are interested in deploying a new tool or test on the M-Lab platform, ple
 ## How can I add an M-Lab test to my website, app or other software?
 {:.no_toc}
 
-M-Lab's open source tests can be added to your website, mobile application, or other software. The Network Diagnostic Tool (NDT) has been used by a number of third party websites and application developers, including [internethealthtest.org](http://internethealthtest.org/), [the city of Seattle's broadband map](http://www.seattle.gov/broadband-speed-test), Bittorrent's [uTorrent client](http://www.utorrent.com/intl/en/), and several others.
+M-Lab's open source tests can be added to your website, mobile application, or other software. The Network Diagnostic Tool (NDT) has been used by a number of third party websites and application developers, including [internethealthtest.org](http://internethealthtest.org/), Bittorrent's [uTorrent client](http://www.utorrent.com/intl/en/), and several others.
 
 The M-Lab team regularly consults with and supports application and web developers interested in integrating our client tests. If you are interested in adding an M-Lab test to your website or application, please review our [developer guide]({{ site.baseurl }}/develop) or [contact us](mailto:support@measurementlab.net).
