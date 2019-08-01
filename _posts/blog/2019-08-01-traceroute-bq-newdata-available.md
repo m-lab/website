@@ -75,7 +75,7 @@ ORDER BY ts DESC
 SELECT
   ts,
   COUNTIF(hop_ip IS NOT NULL) AS total_hops,
-  COUNTIF(hop_city = 'New York' ) AS num_ny_hops\
+  COUNTIF(hop_city = 'New York' ) AS num_ny_hops
 FROM (
   SELECT
     DATE(TestTime) as ts,
