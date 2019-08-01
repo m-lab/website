@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "New Traceroute Table Available to public"
+title: "New Traceroute Table and Schema Now Available"
 author: "Ya Chang"
 date: 2019-08-01
 breadcrumb: blog
