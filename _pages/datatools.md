@@ -28,7 +28,6 @@ Community tools are developed by other organizations or individuals, but which l
   * [Michigan](https://mi.broadbandtest.us/){:target="_blank"}
   * [Pennsylvania](https://pa.broadbandtest.us/){:target="_blank"}
   * [Ferry County, WA](https://ferrycountybroadband.com/){:target="_blank"}
-  * [Seattle, WA](https://www.seattle.gov/tech/initiatives/broadband/speed-test){:target="_blank"}
 * [Speedup America](https://github.com/Hack4Eugene/SpeedUpAmerica){:target=:"_blank"} - _Speed Up America's_ project vision is an open source nation-wide map that pulls individual internet speed test data from M-Lab and breaking down the results on maps and charts by points, census blocks, ISP, date range, and speed. Census block data and FCC 477 data will used to supplement both the analysis and maps.
 
 ## M-Lab Integrations
