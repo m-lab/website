@@ -64,7 +64,7 @@ SELECT
     web100_log_entry.snap.SndLimTimeCwnd +
     web100_log_entry.snap.SndLimTimeSnd)) AS download_Mbps
 FROM
-  `measurement-lab.release.ndt_all`
+  `measurement-lab.ndt.recommended`
 WHERE
   partition_date BETWEEN '2017-01-01' AND '2017-08-28'
   AND connection_spec.data_direction = 1
@@ -101,7 +101,7 @@ The complete BigQuery example is:
 SELECT
  8 * (web100_log_entry.snap.HCThruOctetsReceived/web100_log_entry.snap.Duration) AS upload_Mbps
 FROM
-  `measurement-lab.release.ndt_all`
+  `measurement-lab.ndt.recommended`
 WHERE
   connection_spec.client_geolocation.country_code = 'US'
   AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
@@ -117,7 +117,7 @@ WHERE
 
 ### Alternate BigQuery Views for Only Valid Download & Upload Tests
 
-Note that in the queries above for Upload and Download throughput, the example uses the BigQuery View, `measurement-lab.release.ndt_all`, and filters for valid **download** tests using `WHERE ...` statements used to filter for acceptable TCP parameters indicating such. This method would provide researchers with the ability to tune their queries to investigate tests with specific values.
+Note that in the queries above for Upload and Download throughput, the example uses the BigQuery View, `measurement-lab.ndt.recommended`, and filters for valid **download** tests using `WHERE ...` statements used to filter for acceptable TCP parameters indicating such. This method would provide researchers with the ability to tune their queries to investigate tests with specific values.
 
 Alternately, M-Lab provides BigQuery views that apply the parameters for valid upload and download tests. For researchers interested in using what M-Lab considers valid tests for research, the examples above can be simplified by querying the appropriate view:
 
@@ -131,7 +131,7 @@ SELECT
     web100_log_entry.snap.SndLimTimeCwnd +
     web100_log_entry.snap.SndLimTimeSnd)) AS download_Mbps
 FROM
-  `measurement-lab.release.ndt_downloads`
+  `measurement-lab.ndt.downloads`
 WHERE
   partition_date BETWEEN '2017-01-01' AND '2017-08-28'
   LIMIT 100
@@ -144,7 +144,7 @@ WHERE
 SELECT
  8 * (web100_log_entry.snap.HCThruOctetsReceived/web100_log_entry.snap.Duration) AS upload_Mbps
 FROM
-  `measurement-lab.release.ndt_uploads`
+  `measurement-lab.ndt.uploads`
 WHERE
   connection_spec.client_geolocation.country_code = 'US'
   AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
@@ -177,7 +177,7 @@ The complete BigQuery example is:
 SELECT
   web100_log_entry.snap.MinRTT AS min_rtt
 FROM
-  `measurement-lab.release.ndt_all`
+  `measurement-lab.ndt.recommended`
 WHERE
   connection_spec.client_geolocation.country_code = 'US'
   AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
@@ -203,7 +203,7 @@ The above example using the `ndt_downloads` BigQuery view:
 SELECT
   web100_log_entry.snap.MinRTT AS min_rtt
 FROM
-  `measurement-lab.release.ndt_downloads`
+  `measurement-lab.ndt.downloads`
 WHERE
   connection_spec.client_geolocation.country_code = 'US'
   AND partition_date BETWEEN '2017-01-01' AND '2017-01-02'
@@ -230,7 +230,7 @@ SELECT
  web100_log_entry.connection_spec.local_ip AS local_ip,
  (web100_log_entry.snap.SegsRetrans / web100_log_entry.snap.DataSegsOut) AS packet_retransmission_rate
 FROM
-  `measurement-lab.release.ndt_downloads`
+  `measurement-lab.ndt.downloads`
 LIMIT 100
 ```
 
@@ -261,7 +261,7 @@ SELECT
     web100_log_entry.snap.SndLimTimeCwnd +
     web100_log_entry.snap.SndLimTimeSnd) AS network_limited_time
 FROM
-  `measurement-lab.release.ndt_all`
+  `measurement-lab.ndt.recommended`
 WHERE
  connection_spec.data_direction = 1
  AND web100_log_entry.snap.HCThruOctetsAcked >= 8192
@@ -289,7 +289,7 @@ SELECT
     web100_log_entry.snap.SndLimTimeCwnd +
     web100_log_entry.snap.SndLimTimeSnd) AS receiver_limited_time
 FROM
-  `measurement-lab.release.ndt_all`
+  `measurement-lab.ndt.recommended`
 WHERE
  connection_spec.data_direction = 1
  AND web100_log_entry.snap.HCThruOctetsAcked >= 8192
@@ -322,7 +322,7 @@ SELECT
  web100_log_entry.connection_spec.local_ip AS local_ip,
  web100_log_entry.snap.WinScaleRcvd
 FROM
- `measurement-lab.release.ndt_all`
+ `measurement-lab.ndt.recommended`
 WHERE
  connection_spec.data_direction = 1
  AND web100_log_entry.snap.HCThruOctetsAcked >= 8192

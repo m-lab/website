@@ -17,8 +17,8 @@ header:
           url:  "/faq/"
         - text: "Who we are"
           url:  "/who/"
-        - text: "Privacy"
-          url:  "/privacy/"
+        - text: "Policies"
+          url:  "/policies/"
         - text: "Contact"
           url:  "/contact/"
     -
@@ -137,7 +137,7 @@ footer:
         link-title: "Acceptable Use Policy"
 
   privacy:
-    title: "Privacy Policy &amp; Acceptable Use Policy."
+    title: "Privacy Policy Policy."
     link: "/privacy/"
     blurb: "All original material on Measurement Lab is licensed under a <a href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\">Creative Commons Attribution-Noncommercial-Share Alike 4.0 International License.</a> M-Lab is a <a href=\"/who/\">collaborative effort</a> led by researchers in partnership with companies and other institutions."
   mobile-error-msg: "For a fuller experience of data visualisation please visit our desktop site."
