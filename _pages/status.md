@@ -12,16 +12,70 @@ M-Lab places server infrastructure for conductingt tests in diverse location aro
 
 ## Infrastructure Map
 <p>
-<div id="map" class="map leaflet-container" style="height: 350px; width:100%; position:relative;"></div>
+<div id="map" class="map leaflet-container" style="height: 500px; width:100%; position:relative;"></div>
 </p>
 <script>
-  var center = [18.5554797,-42.4662712];
-  var zoom = 2;
-  var map = L.map('map', {}).setView(center, zoom);
-  var baseTileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' });
-    map.addLayer(baseTileLayer);
+mapboxgl.accessToken = 'pk.eyJ1IjoibS1sYWIiLCJhIjoiY2p3eWtxOXZ4MDFkMzQ5cG95ODFhbWJieiJ9.9G1YGnkme4goR0Ly3kqovA';
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v11',
+  center: [12,25],
+  zoom: 0.8
+});
 
+var url = '{{ site.baseurl }}/static/sitegeo.json';
+map.on('load', function () {
+  window.setInterval(function() {
+    map.getSource('mlab-sites').setData(url);
+  }, 43200000);
+
+  map.addSource('mlab-sites', {
+    'type': 'geojson',
+    'data': url
+  });
+  map.addLayer({
+    "id": "mlab-sites",
+    "type": "circle",
+    "source": "mlab-sites",
+    "paint": {
+      "circle-radius": {
+        "base": 10,
+        "stops": [[0, 8],[12, 5],[22, 5]]
+      },
+    "circle-color": [
+      "match",
+        ["get","uplink"],
+      "1g", "#3bb2d0",
+      "10g", "#223b53",
+      "#ccc"
+    ]}
+  });
+
+  map.on('click','mlab-sites', function(e) {
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var description = "<h4>" + e.features[0].properties.city + ", " +
+      e.features[0].properties.name + "</h4>" +
+      "Provider: " + e.features[0].properties.asn + " - " +
+      e.features[0].properties.provider + "<br>" +
+      "Uplink Speed: " + e.features[0].properties.uplink + "<br>" +
+      "IPv4 Prefix: " + e.features[0].properties.ipv4_prefix + "<br>" +
+      "IPv6 Prefix: " + e.features[0].properties.ipv6_prefix;
+
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+    new mapboxgl.Popup()
+      .setLngLat(coordinates)
+      .setHTML(description)
+      .addTo(map);
+  });
+  map.on('mouseenter','mlab-sites', function () {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+  map.on('mouseleave','mlab-sites', function () {
+    map.getCanvas().style.cursor = '';
+  });
+});
 </script>
 
 ## M-Lab Naming Service
