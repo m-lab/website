@@ -1,0 +1,2825 @@
+{
+   "features": [
+      {
+         "geometry": {
+            "coordinates": [
+               174.78299999999999,
+               -36.850000000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS38022",
+            "city": "Auckland",
+            "ipv4_prefix": "163.7.129.0/26",
+            "ipv6_prefix": "2404:138:4009::/64",
+            "metro": "akl",
+            "name": "akl01",
+            "provider": "REANNZ National Research and Education Network",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               4.7638999999999996,
+               52.308599999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Amsterdam",
+            "ipv4_prefix": "80.239.169.0/26",
+            "ipv6_prefix": "2001:2030:32::/64",
+            "metro": "ams",
+            "name": "ams03",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               4.7638999999999996,
+               52.308599999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Amsterdam",
+            "ipv4_prefix": "77.67.114.64/26",
+            "ipv6_prefix": "2001:668:1f:5f::/64",
+            "metro": "ams",
+            "name": "ams04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               4.7638999999999996,
+               52.308599999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1273",
+            "city": "Amsterdam",
+            "ipv4_prefix": "195.89.145.0/26",
+            "ipv6_prefix": "2001:5002:100:21::/64",
+            "metro": "ams",
+            "name": "ams05",
+            "provider": "Vodafone Group PLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               4.7638999999999996,
+               52.308599999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS30282",
+            "city": "Amsterdam",
+            "ipv4_prefix": "31.186.242.0/26",
+            "ipv6_prefix": "2a02:b50:4020:cfb1::/64",
+            "metro": "ams",
+            "name": "ams07",
+            "provider": "Internap Corporation",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               4.7638999999999996,
+               52.308599999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Amsterdam",
+            "ipv4_prefix": "213.244.128.128/26",
+            "ipv6_prefix": "2001:4c08:2003:2::/64",
+            "metro": "ams",
+            "name": "ams08",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               17.918600000000001,
+               59.651899999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1273",
+            "city": "Stockholm",
+            "ipv4_prefix": "195.89.146.192/26",
+            "ipv6_prefix": "2001:5012:100:24::/64",
+            "metro": "arn",
+            "name": "arn02",
+            "provider": "Vodafone Group PLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               17.918600000000001,
+               59.651899999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Stockholm",
+            "ipv4_prefix": "213.242.86.64/26",
+            "ipv6_prefix": "2001:4c08:2003:44::/64",
+            "metro": "arn",
+            "name": "arn03",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               17.918600000000001,
+               59.651899999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Stockholm",
+            "ipv4_prefix": "62.115.225.128/26",
+            "ipv6_prefix": "2001:2030:0:38::/64",
+            "metro": "arn",
+            "name": "arn04",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               17.918600000000001,
+               59.651899999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Stockholm",
+            "ipv4_prefix": "77.67.119.64/26",
+            "ipv6_prefix": "2001:668:1f:6a::/64",
+            "metro": "arn",
+            "name": "arn05",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               23.944400000000002,
+               37.936399999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS203348",
+            "city": "Athens",
+            "ipv4_prefix": "193.201.166.128/26",
+            "ipv6_prefix": "2001:648:25e0::/64",
+            "metro": "ath",
+            "name": "ath03",
+            "provider": "Hellenic Telecommunications and Post Commision",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -84.428100000000001,
+               33.636699999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS174",
+            "city": "Atlanta",
+            "ipv4_prefix": "38.112.151.64/26",
+            "ipv6_prefix": "2001:550:5b00:1::/64",
+            "metro": "atl",
+            "name": "atl02",
+            "provider": "Cogent Communications",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -84.428100000000001,
+               33.636699999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "Atlanta",
+            "ipv4_prefix": "64.86.200.192/26",
+            "ipv6_prefix": "2001:5a0:3b02::/64",
+            "metro": "atl",
+            "name": "atl03",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -84.428100000000001,
+               33.636699999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Atlanta",
+            "ipv4_prefix": "173.205.0.192/26",
+            "ipv6_prefix": "2001:668:1f:1c::/64",
+            "metro": "atl",
+            "name": "atl04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -84.428100000000001,
+               33.636699999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS14745",
+            "city": "Atlanta",
+            "ipv4_prefix": "70.42.177.64/26",
+            "ipv6_prefix": "2600:c0b:2002:5::/64",
+            "metro": "atl",
+            "name": "atl06",
+            "provider": "Internap Corporation",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -84.428100000000001,
+               33.636699999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Atlanta",
+            "ipv4_prefix": "209.170.91.128/26",
+            "ipv6_prefix": "2001:2030:0:42::/64",
+            "metro": "atl",
+            "name": "atl07",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -84.428100000000001,
+               33.636699999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Atlanta",
+            "ipv4_prefix": "4.71.254.128/26",
+            "ipv6_prefix": "2001:1900:3001:c::/64",
+            "metro": "atl",
+            "name": "atl08",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               2.0811000000000002,
+               41.297400000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS49638",
+            "city": "Barcelona",
+            "ipv4_prefix": "91.213.30.192/26",
+            "ipv6_prefix": "2001:67c:137c:5::/64",
+            "metro": "bcn",
+            "name": "bcn01",
+            "provider": "Consorci de Serveis Universitaris de Catalunya",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               20.292100000000001,
+               44.821599999999997
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS13004",
+            "city": "Belgrade",
+            "ipv4_prefix": "188.120.127.0/26",
+            "ipv6_prefix": "2001:7f8:1e:6::/64",
+            "metro": "beg",
+            "name": "beg01",
+            "provider": "Serbian Open Exchange DOO",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               72.868099999999998,
+               19.0886
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS9498",
+            "city": "Mumbai",
+            "ipv4_prefix": "125.18.112.64/26",
+            "ipv6_prefix": "2404:a800:2000:217::/64",
+            "metro": "bom",
+            "name": "bom01",
+            "provider": "BHARTI Airtel Ltd.",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               72.868099999999998,
+               19.0886
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS4755",
+            "city": "Mumbai",
+            "ipv4_prefix": "14.143.58.128/26",
+            "ipv6_prefix": "2403:0:100:66::/64",
+            "metro": "bom",
+            "name": "bom02",
+            "provider": "TATA Communications formerly VSNL is Leading ISP",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               3.3527999999999998,
+               50.497399999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1273",
+            "city": "Brussels",
+            "ipv4_prefix": "195.89.146.128/26",
+            "ipv6_prefix": "2001:5005:200::/64",
+            "metro": "bru",
+            "name": "bru01",
+            "provider": "Vodafone Group PLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               3.3527999999999998,
+               50.497399999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Brussels",
+            "ipv4_prefix": "212.3.248.192/26",
+            "ipv6_prefix": "2001:4c08:2003:45::/64",
+            "metro": "bru",
+            "name": "bru02",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               3.3527999999999998,
+               50.497399999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Brussels",
+            "ipv4_prefix": "62.115.229.192/26",
+            "ipv6_prefix": "2001:2030:0:39::/64",
+            "metro": "bru",
+            "name": "bru03",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               3.3527999999999998,
+               50.497399999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Brussels",
+            "ipv4_prefix": "77.67.119.0/26",
+            "ipv6_prefix": "2001:668:1f:69::/64",
+            "metro": "bru",
+            "name": "bru04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -80.039184000000006,
+               32.896662999999997
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS15169",
+            "city": "Charleston",
+            "ipv4_prefix": "35.237.214.243/32",
+            "ipv6_prefix": null,
+            "metro": "chs",
+            "name": "chs0c",
+            "provider": "Google",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               18.601800000000001,
+               -33.9724
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS2018",
+            "city": "Cape",
+            "ipv4_prefix": "154.114.19.64/26",
+            "ipv6_prefix": "2001:4200:0:e::/64",
+            "metro": "cpt",
+            "name": "cpt01",
+            "provider": "TENET (The UNINET Project)",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               77.099999999999994,
+               28.5562
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS4755",
+            "city": "New Delhi",
+            "ipv4_prefix": "115.113.240.192/26",
+            "ipv6_prefix": "2403:0:400:56::/64",
+            "metro": "del",
+            "name": "del01",
+            "provider": "TATA Communications formerly VSNL is Leading ISP",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -104.6737,
+               39.856099999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Denver",
+            "ipv4_prefix": "4.34.58.0/26",
+            "ipv6_prefix": "2001:1900:2200:49::/64",
+            "metro": "den",
+            "name": "den02",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -104.6737,
+               39.856099999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6461",
+            "city": "Denver",
+            "ipv4_prefix": "128.177.109.64/26",
+            "ipv6_prefix": "2001:438:fffd:2c::/64",
+            "metro": "den",
+            "name": "den04",
+            "provider": "Zayo Bandwidth",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -104.6737,
+               39.856099999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Denver",
+            "ipv4_prefix": "209.170.120.64/26",
+            "ipv6_prefix": "2001:2030:0:3b::/64",
+            "metro": "den",
+            "name": "den05",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -104.6737,
+               39.856099999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Denver",
+            "ipv4_prefix": "208.116.164.0/26",
+            "ipv6_prefix": "2001:668:1f:b3::/64",
+            "metro": "den",
+            "name": "den06",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -97.0381,
+               32.896900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "Dallas",
+            "ipv4_prefix": "64.86.132.64/26",
+            "ipv6_prefix": "2001:5a0:3f00::/64",
+            "metro": "dfw",
+            "name": "dfw02",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -97.0381,
+               32.896900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Dallas",
+            "ipv4_prefix": "4.15.35.128/26",
+            "ipv6_prefix": "2001:1900:2200:44::/64",
+            "metro": "dfw",
+            "name": "dfw03",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -97.0381,
+               32.896900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6461",
+            "city": "Dallas",
+            "ipv4_prefix": "128.177.163.64/26",
+            "ipv6_prefix": "2001:438:fffd:30::/64",
+            "metro": "dfw",
+            "name": "dfw05",
+            "provider": "Zayo Bandwidth",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -97.0381,
+               32.896900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS12179",
+            "city": "Dallas",
+            "ipv4_prefix": "63.251.44.192/26",
+            "ipv6_prefix": "2600:c12:1002:4::/64",
+            "metro": "dfw",
+            "name": "dfw06",
+            "provider": "Internap Corporation",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -97.0381,
+               32.896900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Dallas",
+            "ipv4_prefix": "209.170.119.128/26",
+            "ipv6_prefix": "2001:2030:0:1f::/64",
+            "metro": "dfw",
+            "name": "dfw07",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -97.0381,
+               32.896900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS174",
+            "city": "Dallas",
+            "ipv4_prefix": "38.107.216.0/26",
+            "ipv6_prefix": "2001:550:2000::/64",
+            "metro": "dfw",
+            "name": "dfw08",
+            "provider": "Cogent Communications",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -6.25,
+               53.433300000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1213",
+            "city": "Dublin",
+            "ipv4_prefix": "193.1.12.192/26",
+            "ipv6_prefix": "2001:770:b5::/64",
+            "metro": "dub",
+            "name": "dub01",
+            "provider": "HEAnet Limited",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -48.545999999999999,
+               -27.668500000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS11242",
+            "city": "Florianopolis",
+            "ipv4_prefix": "200.237.203.0/26",
+            "ipv6_prefix": "2801:80:a88:4006::/64",
+            "metro": "fln",
+            "name": "fln01",
+            "provider": "Universidade Federal de Santa Catarina",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               8.5622000000000007,
+               50.0379
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Frankfurt",
+            "ipv4_prefix": "80.239.199.0/26",
+            "ipv6_prefix": "2001:2030:2f::/64",
+            "metro": "fra",
+            "name": "fra01",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               8.5622000000000007,
+               50.0379
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Frankfurt",
+            "ipv4_prefix": "77.67.114.0/26",
+            "ipv6_prefix": "2001:668:1f:5e::/64",
+            "metro": "fra",
+            "name": "fra02",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               8.5622000000000007,
+               50.0379
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1273",
+            "city": "Frankfurt",
+            "ipv4_prefix": "195.89.146.64/26",
+            "ipv6_prefix": "2001:5001:200:30::/64",
+            "metro": "fra",
+            "name": "fra03",
+            "provider": "Vodafone Group PLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               8.5622000000000007,
+               50.0379
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Frankfurt",
+            "ipv4_prefix": "62.67.198.192/26",
+            "ipv6_prefix": "2001:4c08:2003:40::/64",
+            "metro": "fra",
+            "name": "fra04",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -46.472999999999999,
+               -23.430499999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3549",
+            "city": "Sao Paulo",
+            "ipv4_prefix": "189.125.228.64/26",
+            "ipv6_prefix": "2804:4c0:ffff:fac3::/64",
+            "metro": "gru",
+            "name": "gru01",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               9.9832999999999998,
+               53.633299999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Hamburg",
+            "ipv4_prefix": "80.239.142.192/26",
+            "ipv6_prefix": "2001:2030:0:19::/64",
+            "metro": "ham",
+            "name": "ham02",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               139.78,
+               35.552199999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS2500",
+            "city": "Tokyo",
+            "ipv4_prefix": "203.178.130.192/26",
+            "ipv6_prefix": "2001:200:0:b801::/64",
+            "metro": "hnd",
+            "name": "hnd01",
+            "provider": "WIDE Project",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               139.78,
+               35.552199999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS2518",
+            "city": "Tokyo",
+            "ipv4_prefix": "210.151.179.128/26",
+            "ipv6_prefix": "2001:260:8a::/64",
+            "metro": "hnd",
+            "name": "hnd02",
+            "provider": "BIGLOBE Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               139.78,
+               35.552199999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS2516",
+            "city": "Tokyo",
+            "ipv4_prefix": "111.109.1.64/26",
+            "ipv6_prefix": "2001:268:809:b::/64",
+            "metro": "hnd",
+            "name": "hnd03",
+            "provider": "KDDI Corporation",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -77.455799999999996,
+               38.944400000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS174",
+            "city": "Washington",
+            "ipv4_prefix": "38.90.140.128/26",
+            "ipv6_prefix": "2001:550:200:7::/64",
+            "metro": "iad",
+            "name": "iad02",
+            "provider": "Cogent Communications",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -77.455799999999996,
+               38.944400000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "Washington",
+            "ipv4_prefix": "66.198.10.128/26",
+            "ipv6_prefix": "2001:5a0:3c03::/64",
+            "metro": "iad",
+            "name": "iad03",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -77.455799999999996,
+               38.944400000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Washington",
+            "ipv4_prefix": "173.205.4.0/26",
+            "ipv6_prefix": "2001:668:1f:21::/64",
+            "metro": "iad",
+            "name": "iad04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -77.455799999999996,
+               38.944400000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Washington",
+            "ipv4_prefix": "4.35.238.192/26",
+            "ipv6_prefix": "2001:1900:2200:46::/64",
+            "metro": "iad",
+            "name": "iad05",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -77.455799999999996,
+               38.944400000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Washington",
+            "ipv4_prefix": "209.170.119.192/26",
+            "ipv6_prefix": "2001:2030:0:29::/64",
+            "metro": "iad",
+            "name": "iad06",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -77.455799999999996,
+               38.944400000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS15169",
+            "city": "Washington",
+            "ipv4_prefix": "35.236.226.12/32",
+            "ipv6_prefix": null,
+            "metro": "iad",
+            "name": "iad0c",
+            "provider": "Google",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               28.133500000000002,
+               -26.203499999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS2018",
+            "city": "Johannesburg",
+            "ipv4_prefix": "196.24.45.128/26",
+            "ipv6_prefix": "2001:4200:fff0:4512::/64",
+            "metro": "jnb",
+            "name": "jnb01",
+            "provider": "TENET (The UNINET Project)",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -118.4072,
+               33.942500000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "Los Angeles",
+            "ipv4_prefix": "63.243.240.64/26",
+            "ipv6_prefix": "2001:5a0:3a01::/64",
+            "metro": "lax",
+            "name": "lax02",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -118.4072,
+               33.942500000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Los Angeles",
+            "ipv4_prefix": "173.205.3.64/26",
+            "ipv6_prefix": "2001:668:1f:1e::/64",
+            "metro": "lax",
+            "name": "lax03",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -118.4072,
+               33.942500000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Los Angeles",
+            "ipv4_prefix": "4.15.166.0/26",
+            "ipv6_prefix": "2001:1900:2100:15::/64",
+            "metro": "lax",
+            "name": "lax04",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -118.4072,
+               33.942500000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6461",
+            "city": "Los Angeles",
+            "ipv4_prefix": "128.177.109.192/26",
+            "ipv6_prefix": "2001:438:fffd:2e::/64",
+            "metro": "lax",
+            "name": "lax05",
+            "provider": "Zayo Bandwidth",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -118.4072,
+               33.942500000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS174",
+            "city": "Los Angeles",
+            "ipv4_prefix": "38.98.51.0/26",
+            "ipv6_prefix": "2001:550:6800::/64",
+            "metro": "lax",
+            "name": "lax06",
+            "provider": "Cogent Communications",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -118.4072,
+               33.942500000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS15169",
+            "city": "Los Angeles",
+            "ipv4_prefix": "35.235.125.164/32",
+            "ipv6_prefix": null,
+            "metro": "lax",
+            "name": "lax0c",
+            "provider": "Google",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               33.625999999999998,
+               34.880899999999997
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3268",
+            "city": "Larnaca",
+            "ipv4_prefix": "82.116.199.0/26",
+            "ipv6_prefix": null,
+            "metro": "lca",
+            "name": "lca01",
+            "provider": "University of Cyprus",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -73.866699999999994,
+               40.7667
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "New York",
+            "ipv4_prefix": "64.86.148.128/26",
+            "ipv6_prefix": "2001:5a0:4300::/64",
+            "metro": "lga",
+            "name": "lga03",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -73.866699999999994,
+               40.7667
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "New York",
+            "ipv4_prefix": "173.205.4.64/26",
+            "ipv6_prefix": "2001:668:1f:22::/64",
+            "metro": "lga",
+            "name": "lga04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -73.866699999999994,
+               40.7667
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "New York",
+            "ipv4_prefix": "4.35.94.0/26",
+            "ipv6_prefix": "2001:1900:2100:14::/64",
+            "metro": "lga",
+            "name": "lga05",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -73.866699999999994,
+               40.7667
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6461",
+            "city": "New York",
+            "ipv4_prefix": "128.177.119.192/26",
+            "ipv6_prefix": "2001:438:fffd:2b::/64",
+            "metro": "lga",
+            "name": "lga06",
+            "provider": "Zayo Bandwidth",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -73.866699999999994,
+               40.7667
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS10910",
+            "city": "New York",
+            "ipv4_prefix": "66.151.223.128/26",
+            "ipv6_prefix": "2600:c0f:2002::/64",
+            "metro": "lga",
+            "name": "lga07",
+            "provider": "Internap Corporation",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -73.866699999999994,
+               40.7667
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS174",
+            "city": "New York",
+            "ipv4_prefix": "38.106.70.128/26",
+            "ipv6_prefix": "2001:550:1d00:100::/64",
+            "metro": "lga",
+            "name": "lga08",
+            "provider": "Cogent Communications",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -73.866699999999994,
+               40.7667
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "New York",
+            "ipv4_prefix": "4.14.159.64/26",
+            "ipv6_prefix": "2001:1900:2100:2d::/64",
+            "metro": "lga",
+            "name": "lga0t",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -73.866699999999994,
+               40.7667
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "New York",
+            "ipv4_prefix": "4.14.3.0/26",
+            "ipv6_prefix": "2001:1900:2100:1::/64",
+            "metro": "lga",
+            "name": "lga1t",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -0.45140000000000002,
+               51.469700000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "London",
+            "ipv4_prefix": "80.239.170.192/26",
+            "ipv6_prefix": "2001:2030:33::/64",
+            "metro": "lhr",
+            "name": "lhr02",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -0.45140000000000002,
+               51.469700000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "London",
+            "ipv4_prefix": "77.67.114.192/26",
+            "ipv6_prefix": "2001:668:1f:61::/64",
+            "metro": "lhr",
+            "name": "lhr03",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -0.45140000000000002,
+               51.469700000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1273",
+            "city": "London",
+            "ipv4_prefix": "195.89.146.0/26",
+            "ipv6_prefix": "2001:5000:1100:31::/64",
+            "metro": "lhr",
+            "name": "lhr04",
+            "provider": "Vodafone Group PLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -0.45140000000000002,
+               51.469700000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "London",
+            "ipv4_prefix": "212.113.31.0/26",
+            "ipv6_prefix": "2001:4c08:2003:3c::/64",
+            "metro": "lhr",
+            "name": "lhr05",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -9.1354000000000006,
+               38.775599999999997
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Lisbon",
+            "ipv4_prefix": "213.242.96.192/26",
+            "ipv6_prefix": "2001:4c08:2003:3d::/64",
+            "metro": "lis",
+            "name": "lis01",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -9.1354000000000006,
+               38.775599999999997
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1273",
+            "city": "Lisbon",
+            "ipv4_prefix": "195.89.147.128/26",
+            "ipv6_prefix": "2001:500d:200:3::/64",
+            "metro": "lis",
+            "name": "lis02",
+            "provider": "Vodafone Group PLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               14.4575,
+               46.223599999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS198644",
+            "city": "Ljubljana",
+            "ipv4_prefix": "91.239.96.64/26",
+            "ipv6_prefix": "2001:67c:27e4:100::/64",
+            "metro": "lju",
+            "name": "lju01",
+            "provider": "Zavod za IPv6 - go6",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               80.170900000000003,
+               12.9941
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS4755",
+            "city": "Chennai",
+            "ipv4_prefix": "121.242.229.64/26",
+            "ipv6_prefix": "2403:0:200:3c::/64",
+            "metro": "maa",
+            "name": "maa01",
+            "provider": "TATA Communications formerly VSNL is Leading ISP",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -3.5667,
+               40.466700000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Madrid",
+            "ipv4_prefix": "213.242.96.128/26",
+            "ipv6_prefix": "2001:4c08:2003:3e::/64",
+            "metro": "mad",
+            "name": "mad02",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -3.5667,
+               40.466700000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Madrid",
+            "ipv4_prefix": "80.239.229.128/26",
+            "ipv6_prefix": "2001:2030:34::/64",
+            "metro": "mad",
+            "name": "mad03",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -3.5667,
+               40.466700000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Madrid",
+            "ipv4_prefix": "77.67.115.64/26",
+            "ipv6_prefix": "2001:668:1f:63::/64",
+            "metro": "mad",
+            "name": "mad04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -80.2667,
+               25.783300000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS174",
+            "city": "Miami",
+            "ipv4_prefix": "38.109.21.0/26",
+            "ipv6_prefix": "2001:550:6c01::/64",
+            "metro": "mia",
+            "name": "mia02",
+            "provider": "Cogent Communications",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -80.2667,
+               25.783300000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "Miami",
+            "ipv4_prefix": "66.110.73.0/26",
+            "ipv6_prefix": "2001:5a0:3801::/64",
+            "metro": "mia",
+            "name": "mia03",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -80.2667,
+               25.783300000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Miami",
+            "ipv4_prefix": "173.205.3.128/26",
+            "ipv6_prefix": "2001:668:1f:1f::/64",
+            "metro": "mia",
+            "name": "mia04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -80.2667,
+               25.783300000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6461",
+            "city": "Miami",
+            "ipv4_prefix": "128.177.109.0/26",
+            "ipv6_prefix": "2001:438:fffd:29::/64",
+            "metro": "mia",
+            "name": "mia05",
+            "provider": "Zayo Bandwidth",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -80.2667,
+               25.783300000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Miami",
+            "ipv4_prefix": "4.71.210.192/26",
+            "ipv6_prefix": "2001:1900:3001:a::/64",
+            "metro": "mia",
+            "name": "mia06",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               9.1915999999999993,
+               45.463999999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Milan",
+            "ipv4_prefix": "80.239.222.0/26",
+            "ipv6_prefix": "2001:2030:30::/64",
+            "metro": "mil",
+            "name": "mil02",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               9.1915999999999993,
+               45.463999999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Milan",
+            "ipv4_prefix": "77.67.115.0/26",
+            "ipv6_prefix": "2001:668:1f:62::/64",
+            "metro": "mil",
+            "name": "mil03",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               9.1915999999999993,
+               45.463999999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Milan",
+            "ipv4_prefix": "213.242.77.128/26",
+            "ipv6_prefix": "2001:1900:2200:af::/64",
+            "metro": "mil",
+            "name": "mil04",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               9.1915999999999993,
+               45.463999999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1273",
+            "city": "Milan",
+            "ipv4_prefix": "195.89.147.0/26",
+            "ipv6_prefix": "2001:5008:100:14::/64",
+            "metro": "mil",
+            "name": "mil05",
+            "provider": "Vodafone Group PLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               121.0194,
+               14.508599999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS9821",
+            "city": "Manila",
+            "ipv4_prefix": "202.90.156.0/26",
+            "ipv6_prefix": "2001:d18:0:35::/64",
+            "metro": "mnl",
+            "name": "mnl01",
+            "provider": "Department of Science and Technology",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               32.572499999999998,
+               -25.9208
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS327700",
+            "city": "Maputo",
+            "ipv4_prefix": "41.94.23.0/26",
+            "ipv6_prefix": null,
+            "metro": "mpm",
+            "name": "mpm01",
+            "provider": "Mozambique Research & Education Network - MoRENet",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               36.925800000000002,
+               -1.3191999999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS36914",
+            "city": "Nairobi",
+            "ipv4_prefix": "197.136.0.64/26",
+            "ipv6_prefix": "2c0f:fe08:10:64::/64",
+            "metro": "nbo",
+            "name": "nbo01",
+            "provider": "Kenya Education Network",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.0667,
+               37.383299999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1280",
+            "city": "San Francisco Bay Area",
+            "ipv4_prefix": "149.20.5.64/26",
+            "ipv6_prefix": "2001:4f8:1:1001::/64",
+            "metro": "nuq",
+            "name": "nuq02",
+            "provider": "Internet Systems Consortium, Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.0667,
+               37.383299999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS174",
+            "city": "San Francisco Bay Area",
+            "ipv4_prefix": "38.102.163.128/26",
+            "ipv6_prefix": "2001:550:1502::/64",
+            "metro": "nuq",
+            "name": "nuq03",
+            "provider": "Cogent Communications",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.0667,
+               37.383299999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "San Francisco Bay Area",
+            "ipv4_prefix": "66.110.32.64/26",
+            "ipv6_prefix": "2001:5a0:3e00::/64",
+            "metro": "nuq",
+            "name": "nuq04",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.0667,
+               37.383299999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6461",
+            "city": "San Francisco Bay Area",
+            "ipv4_prefix": "128.177.109.128/26",
+            "ipv6_prefix": "2001:438:fffd:2d::/64",
+            "metro": "nuq",
+            "name": "nuq06",
+            "provider": "Zayo Bandwidth",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.0667,
+               37.383299999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "San Francisco Bay Area",
+            "ipv4_prefix": "209.170.110.192/26",
+            "ipv6_prefix": "2001:2030:0:12::/64",
+            "metro": "nuq",
+            "name": "nuq07",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -95.893281999999999,
+               41.303759999999997
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS15169",
+            "city": "Omaha",
+            "ipv4_prefix": "35.226.110.109/32",
+            "ipv6_prefix": null,
+            "metro": "oma",
+            "name": "oma0c",
+            "provider": "Google",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -87.904700000000005,
+               41.9786
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS174",
+            "city": "Chicago",
+            "ipv4_prefix": "38.65.210.192/26",
+            "ipv6_prefix": "2001:550:1b01:1::/64",
+            "metro": "ord",
+            "name": "ord02",
+            "provider": "Cogent Communications",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -87.904700000000005,
+               41.9786
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "Chicago",
+            "ipv4_prefix": "66.198.24.64/26",
+            "ipv6_prefix": "2001:5a0:4200::/64",
+            "metro": "ord",
+            "name": "ord03",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -87.904700000000005,
+               41.9786
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Chicago",
+            "ipv4_prefix": "173.205.3.192/26",
+            "ipv6_prefix": "2001:668:1f:20::/64",
+            "metro": "ord",
+            "name": "ord04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -87.904700000000005,
+               41.9786
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6461",
+            "city": "Chicago",
+            "ipv4_prefix": "128.177.163.0/26",
+            "ipv6_prefix": "2001:438:fffd:2f::/64",
+            "metro": "ord",
+            "name": "ord05",
+            "provider": "Zayo Bandwidth",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -87.904700000000005,
+               41.9786
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Chicago",
+            "ipv4_prefix": "4.71.251.128/26",
+            "ipv6_prefix": "2001:1900:3001:b::/64",
+            "metro": "ord",
+            "name": "ord06",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               2.3490000000000002,
+               48.858400000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Paris",
+            "ipv4_prefix": "212.73.231.192/26",
+            "ipv6_prefix": "2001:4c08:2003:3f::/64",
+            "metro": "par",
+            "name": "par02",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               2.3490000000000002,
+               48.858400000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Paris",
+            "ipv4_prefix": "80.239.222.64/26",
+            "ipv6_prefix": "2001:2030:35::/64",
+            "metro": "par",
+            "name": "par03",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               2.3490000000000002,
+               48.858400000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Paris",
+            "ipv4_prefix": "77.67.119.128/26",
+            "ipv6_prefix": "2001:668:1f:6b::/64",
+            "metro": "par",
+            "name": "par04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               2.3490000000000002,
+               48.858400000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1273",
+            "city": "Paris",
+            "ipv4_prefix": "195.89.147.192/26",
+            "ipv6_prefix": "2001:5003:300:e::/64",
+            "metro": "par",
+            "name": "par05",
+            "provider": "Vodafone Group PLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.600228,
+               45.589191
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS15169",
+            "city": "Portland",
+            "ipv4_prefix": "35.230.97.78/32",
+            "ipv6_prefix": null,
+            "metro": "pdx",
+            "name": "pdx0c",
+            "provider": "Google",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               14.416700000000001,
+               50.083300000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Prague",
+            "ipv4_prefix": "195.122.159.128/26",
+            "ipv6_prefix": "2001:4c08:2003:42::/64",
+            "metro": "prg",
+            "name": "prg02",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               14.416700000000001,
+               50.083300000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Prague",
+            "ipv4_prefix": "80.239.156.128/26",
+            "ipv6_prefix": "2001:2030:31::/64",
+            "metro": "prg",
+            "name": "prg03",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               14.416700000000001,
+               50.083300000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Prague",
+            "ipv4_prefix": "77.67.114.128/26",
+            "ipv6_prefix": "2001:668:1f:60::/64",
+            "metro": "prg",
+            "name": "prg04",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               14.416700000000001,
+               50.083300000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1273",
+            "city": "Prague",
+            "ipv4_prefix": "195.89.147.64/26",
+            "ipv6_prefix": "2001:5016:100:3::/64",
+            "metro": "prg",
+            "name": "prg05",
+            "provider": "Vodafone Group PLC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.3094,
+               47.448900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "Seattle",
+            "ipv4_prefix": "63.243.224.0/26",
+            "ipv6_prefix": "2001:5a0:4400::/64",
+            "metro": "sea",
+            "name": "sea02",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.3094,
+               47.448900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3257",
+            "city": "Seattle",
+            "ipv4_prefix": "173.205.3.0/26",
+            "ipv6_prefix": "2001:668:1f:1d::/64",
+            "metro": "sea",
+            "name": "sea03",
+            "provider": "GTT Communications Inc.",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.3094,
+               47.448900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS3356",
+            "city": "Seattle",
+            "ipv4_prefix": "4.71.157.128/26",
+            "ipv6_prefix": "2001:1900:2100:16::/64",
+            "metro": "sea",
+            "name": "sea04",
+            "provider": "Level 3 Parent, LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.3094,
+               47.448900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS14744",
+            "city": "Seattle",
+            "ipv4_prefix": "64.74.15.192/26",
+            "ipv6_prefix": "2600:c00:0:202::/64",
+            "metro": "sea",
+            "name": "sea06",
+            "provider": "Internap Corporation",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.3094,
+               47.448900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1299",
+            "city": "Seattle",
+            "ipv4_prefix": "209.170.110.128/26",
+            "ipv6_prefix": "2001:2030:0:a::/64",
+            "metro": "sea",
+            "name": "sea07",
+            "provider": "Telia Company AB",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.3094,
+               47.448900000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS174",
+            "city": "Seattle",
+            "ipv4_prefix": "38.102.0.64/26",
+            "ipv6_prefix": "2001:550:3200:1::/64",
+            "metro": "sea",
+            "name": "sea08",
+            "provider": "Cogent Communications",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               103.988,
+               1.355
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6453",
+            "city": "Singapore",
+            "ipv4_prefix": "180.87.97.64/26",
+            "ipv6_prefix": "2405:2000:301::/64",
+            "metro": "sin",
+            "name": "sin01",
+            "provider": "TATA COMMUNICATIONS (AMERICA) INC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -122.0667,
+               37.383299999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS12182",
+            "city": "San Francisco Bay Area",
+            "ipv4_prefix": "70.42.244.64/26",
+            "ipv6_prefix": "2600:c02:2:82::/64",
+            "metro": "sjc",
+            "name": "sjc01",
+            "provider": "Internap Corporation",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               5.6378000000000004,
+               58.8767
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS29695",
+            "city": "Stavanger",
+            "ipv4_prefix": "81.167.39.0/26",
+            "ipv6_prefix": "2a01:798:0:13::/64",
+            "metro": "svg",
+            "name": "svg01",
+            "provider": "Altibox AS",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               151.17699999999999,
+               -33.946100000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS4826",
+            "city": "Sydney",
+            "ipv4_prefix": "175.45.79.0/26",
+            "ipv6_prefix": "2402:7800:0:12::/64",
+            "metro": "syd",
+            "name": "syd02",
+            "provider": "Vocus Connect International Backbone",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               151.17699999999999,
+               -33.946100000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS7575",
+            "city": "Sydney",
+            "ipv4_prefix": "203.5.76.128/26",
+            "ipv6_prefix": "2001:388:d0::/64",
+            "metro": "syd",
+            "name": "syd03",
+            "provider": "Australian Academic and Reasearch Network (AARNet)",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               18.761600000000001,
+               42.107799999999997
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS8585",
+            "city": "Podgorica",
+            "ipv4_prefix": "213.149.127.0/26",
+            "ipv6_prefix": "2a00:fe80:0:104::/64",
+            "metro": "tgd",
+            "name": "tgd01",
+            "provider": "Crnogorski Telekom a.d.Podgorica",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               47.4788,
+               -18.796900000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS37054",
+            "city": "Antananarivo",
+            "ipv4_prefix": "41.188.12.64/26",
+            "ipv6_prefix": null,
+            "metro": "tnr",
+            "name": "tnr01",
+            "provider": "Telecom Malagasy",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               121.224,
+               25.0778
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1659",
+            "city": "Taipei",
+            "ipv4_prefix": "163.22.28.0/26",
+            "ipv6_prefix": "2001:e10:6840:28::/64",
+            "metro": "tpe",
+            "name": "tpe01",
+            "provider": "Taiwan Academic Network (TANet) Information Center",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               7.6497000000000002,
+               45.200800000000001
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS41364",
+            "city": "Turin",
+            "ipv4_prefix": "194.116.85.192/26",
+            "ipv6_prefix": "2001:7f8:23:307::/64",
+            "metro": "trn",
+            "name": "trn01",
+            "provider": "CONSORZIO TOP IX - TORINO E PIEMONTE EXCHANGE POINT CC",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               10.229100000000001,
+               36.851599999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS2609",
+            "city": "Tunis",
+            "ipv4_prefix": "41.231.21.0/26",
+            "ipv6_prefix": "2001:4350:3000:1::/64",
+            "metro": "tun",
+            "name": "tun01",
+            "provider": "Tunisia BackBone AS",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               139.78,
+               35.552199999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS15169",
+            "city": "Tokyo",
+            "ipv4_prefix": "35.200.102.226/32",
+            "ipv6_prefix": null,
+            "metro": "tyo",
+            "name": "tyo01",
+            "provider": "Google",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               139.78,
+               35.552199999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS15169",
+            "city": "Tokyo",
+            "ipv4_prefix": "35.200.34.149/32",
+            "ipv6_prefix": null,
+            "metro": "tyo",
+            "name": "tyo02",
+            "provider": "Google",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               139.78,
+               35.552199999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS15169",
+            "city": "Tokyo",
+            "ipv4_prefix": "35.200.112.17/32",
+            "ipv6_prefix": null,
+            "metro": "tyo",
+            "name": "tyo03",
+            "provider": "Google",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               16.410699999999999,
+               48.268999999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS1764",
+            "city": "Vienna",
+            "ipv4_prefix": "213.208.152.0/26",
+            "ipv6_prefix": "2a01:190:1700:38::/64",
+            "metro": "vie",
+            "name": "vie01",
+            "provider": "Next Layer Telekommunikationsdienstleistungs- und Beratungs GmbH",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               174.80500000000001,
+               -41.327199999999998
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS38022",
+            "city": "Wellington",
+            "ipv4_prefix": "163.7.129.64/26",
+            "ipv6_prefix": "2404:138:4009:1::/64",
+            "metro": "wlg",
+            "name": "wlg02",
+            "provider": "REANNZ National Research and Education Network",
+            "uplink": "10g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -64.6738,
+               46.107300000000002
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6939",
+            "city": "Moncton",
+            "ipv4_prefix": "209.51.169.128/26",
+            "ipv6_prefix": "2001:470:1:820::/64",
+            "metro": "yqm",
+            "name": "yqm01",
+            "provider": "Hurricane Electric LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -73.749700000000004,
+               45.457599999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6939",
+            "city": "Montreal",
+            "ipv4_prefix": "216.66.14.64/26",
+            "ipv6_prefix": "2001:470:1:48f::/64",
+            "metro": "yul",
+            "name": "yul02",
+            "provider": "Hurricane Electric LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -123.1837,
+               49.190199999999997
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6939",
+            "city": "Vancouver",
+            "ipv4_prefix": "184.105.70.192/26",
+            "ipv6_prefix": "2001:470:1:822::/64",
+            "metro": "yvr",
+            "name": "yvr01",
+            "provider": "Hurricane Electric LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -97.237300000000005,
+               49.905999999999999
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6939",
+            "city": "Winnipeg",
+            "ipv4_prefix": "184.105.55.64/26",
+            "ipv6_prefix": "2001:470:1:81f::/64",
+            "metro": "ywg",
+            "name": "ywg01",
+            "provider": "Hurricane Electric LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -114.0106,
+               51.131500000000003
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6939",
+            "city": "Calgary",
+            "ipv4_prefix": "65.49.72.192/26",
+            "ipv6_prefix": "2001:470:1:42c::/64",
+            "metro": "yyc",
+            "name": "yyc02",
+            "provider": "Hurricane Electric LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      },
+      {
+         "geometry": {
+            "coordinates": [
+               -79.630600000000001,
+               43.676699999999997
+            ],
+            "type": "Point"
+         },
+         "properties": {
+            "asn": "AS6939",
+            "city": "Toronto",
+            "ipv4_prefix": "216.66.68.128/26",
+            "ipv6_prefix": "2001:470:1:70a::/64",
+            "metro": "yyz",
+            "name": "yyz02",
+            "provider": "Hurricane Electric LLC",
+            "uplink": "1g"
+         },
+         "type": "Feature"
+      }
+   ],
+   "type": "FeatureCollection"
+}
