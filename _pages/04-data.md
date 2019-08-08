@@ -102,7 +102,6 @@ M-Lab also publishes public data sets about the M-Lab Platform, listed below.
   * [Shaperprobe Raw Data (archived)](https://console.developers.google.com/storage/browser/archive-measurement-lab/shaperprobe/){:target="_blank"}
 * [Windrider]({{site.baseurl}}/tests/windrider)
   * WindRider attempted to detect whether your mobile provider was performing application- or service-specific differentiation.
-  * More information is available at [Windrider](http://www.cs.northwestern.edu/~ict992/mobile.htm){:target="_blank"}.
 
 ## Data License and Citing M-Lab Data
 

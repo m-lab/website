@@ -1,9 +1,22 @@
 ---
 layout: page
-title: "BigQuery Examples"
-permalink: /data/docs/bq/examples/
-breadcrumb: data
+permalink: /learn/ndt/
+title: "Getting Started with NDT"
+page-title: "Getting Started with NDT"
+breadcrumb: learn
 ---
+
+# Getting Started with NDT
+
+## Illustration of how NDT works
+
+The illustration below provides an overview of how NDT works.
+
+![Illustration of the NDT test protocol]({{ site.baseurl }}/images/tests/ndt_explanation.png)
+
+## Common Metrics
+
+Commonly reported metrics such as upload or download speed are calculated from individual fields saved by the Network Diagnostic Tool. See our page on [calculating common metrics from NDT data]({{ site.baseurl }}/data/docs/bq/ndtmetrics/) for more information.
 
 # BigQuery Examples
 
