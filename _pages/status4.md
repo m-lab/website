@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /status2/
+permalink: /status4/
 title: "M-Lab Platform Status"
 audience: statusmap
 breadcrumb: data
@@ -89,15 +89,11 @@ map.on('load', function () {
   map.on('click','clusters', function(e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['clusters'] });
     var clusterId = features[0].properties.cluster_id;
+    console.log(features[0]);
 
-    for (i=0; i < features.length; i++) {
-      console.log(features[i].properties.cluster_id);
-      clusterSource = map.getSource('clusters');
-
-      clusterSource.getClusterChildren(features[i].properties.cluster_id, function(err, aFeatures){
+    map.getSource('clusters').getClusterChildren(features[0].properties.cluster_id, function(err, aFeatures){
         console.log('getClusterChildren', err, aFeatures);
-      });
-    }
+    });
 
     map.getSource('mlab-sites').getClusterExpansionZoom(clusterId, function (err, zoom) {
         if (err)
