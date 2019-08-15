@@ -62,15 +62,15 @@ To make NDT data more readily available for research and analysis, M-Lab parses 
 M-Lab provides two sets of BigQuery tables/views for NDT data:
 
 * **Helpful tables/views** - _brief description_
-  * downloads - [NDT downloads in BigQuery](ndt-downloads-helpful){:target="_blank"} \| [ndt downloads schema](ndt-downloads-schema)
+  * downloads - [NDT downloads in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=downloads&page=table){:target="_blank"} \| [ndt downloads schema]({{ site.baseurl }}/tests/ndt/schemas/helpful/ndt5downloads)
     * A subset view of all NDT download tests from `measurement-lab.ndt.recommended` where:
       * At least 8 KB of data was transferred
       * Test duration was between 9 and 60 seconds
       * Congestion was detected
-  * uploads - [NDT uploads in BigQuery](ndt-uploads-helpful){:target="_blank"} \| [ndt uploads schema](ndt-uploads-schema)
+  * uploads - [NDT uploads in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=uploads&page=table){:target="_blank"} \| [ndt uploads schema]({{ site.baseurl }}/tests/ndt/schemas/helpful/ndt5uploads)
     * A subset view of all NDT upload tests from `measurement-lab.ndt.recommended` where:
     * A sensible total number of bytes was received (8192)
-  * recommended - [NDT recommended in BigQuery](ndt-recommended-helpful){:target="_blank"} \| [ndt recommended schema](ndt-recommended-schema)
+  * recommended - [NDT recommended in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=recommended&page=table){:target="_blank"} \| [ndt recommended schema]({{ site.baseurl }}/tests/ndt/schemas/helpful/ndt5recommended)
     * A subset view of all NDT upload and download tests from `measurement-lab.ndt.web100` where:
       * TCP end state is sensible
       * Test duration was between 9 and 60 seconds
@@ -78,24 +78,10 @@ M-Lab provides two sets of BigQuery tables/views for NDT data:
       * Internal M-Lab end-to-end monitoring tests
       * Tests not marked as blacklisted
 
-[ndt-downloads-helpful]: https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=downloads&page=table
-[ndt-downloads-schema]: {{ site.baseurl }}/data/docs/bq/schema/ndt5
-[ndt-uploads-helpful]: https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=uploads&page=table
-[ndt-uploads-schema]: {{ site.baseurl }}/data/docs/bq/schema/ndt5
-[ndt-recommended-helpful]: https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=recommended&page=table
-[ndt recommended schema]: {{ site.baseurl }}/data/docs/bq/schema/ndt5
-
 * **Faithful tables/views** - _brief description_
-  * ndt5 - [ndt5 in BigQuery](ndt5faithful){:target="_blank"} \| [ndt5 schema](ndt5schema)
+  * ndt5 - [ndt5 in BigQuery](https://console.cloud.google.com/bigquery?project=mlab-oti&p=mlab-oti&d=base_tables&t=result&page=table){:target="_blank"} \| [ndt5 schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/ndt5)
     * _description_
-  * ndt7 - [ndt7 in BigQuery](ndt7faithful){:target="_blank"} \| [ndt7 schema](ndt5schema)
+  * ndt7 - [ndt7 in BigQuery](https://console.cloud.google.com/bigquery?project=mlab-oti&p=mlab-oti&d=base_tables&t=result&page=table){:target="_blank"} \| [ndt7 schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/ndt7)
     * _description_
-  * web100 (legacy ndt) - [web100 in BigQuery](web100faithful){:target="_blank"} \| [web100 schema](web100schema)
+  * web100 (legacy ndt) - [web100 in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=web100&page=table){:target="_blank"} \| [web100 schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/web100)
     * _description_
-
-[ndt5faithful]: https://console.cloud.google.com/bigquery?project=mlab-oti&p=mlab-oti&d=base_tables&t=result&page=table
-[ndt5schema]: {{ site.baseurl }}/data/docs/bq/schema/ndt5
-[ndt7faithful]: https://console.cloud.google.com/bigquery?project=mlab-oti&p=mlab-oti&d=base_tables&t=result&page=table
-[ndt7schema]: {{ site.baseurl }}/data/docs/bq/schema/ndt5
-[web100faithful]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=web100&page=table
-[web100schema]: {{ site.baseurl }}/data/docs/bq/schema/ndt5
