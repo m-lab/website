@@ -1,0 +1,35 @@
+{% assign header = site.data.header-footer-content.header %}
+
+<div class="subpage-content col-xs-12 {{ last_crumb | downcase }}-page">
+{% capture num_crumbs %}{{ breadcrumbs | size}}{% endcapture %}
+{% assign num_crumbs = num_crumbs | minus: 1 %}
+{% if num_crumbs >= 2 %}
+<nav class="breadcrumbs">
+   <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+      {% for crumb in breadcrumbs %} 
+         {% if forloop.first and site.breadcrumbs.root.image %}
+         <li class="breadcrumb-item breadcrumb-item-icon" property="itemListElement" typeof="ListItem">
+            <a property="item" typeof="WebPage" href="{{ crumb.url | relative_url }}">
+               <span class="icon" property="name">{% include nav-breadcrumb-icon.svg %}</span>
+               <meta property="position" content="{{ crumb.position }}" />
+            </a>
+         </li>
+         {% continue %} 
+      {% endif %} 
+      {% if forloop.last %}
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+         <span property="name">{{ crumb.title }}</span>
+         <meta property="position" content="{{ crumb.position }}" />
+      </li>
+      {% continue %} {% endif %}
+      {% if forloop.first %}{% continue %}{% endif %}
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+         <a property="item" typeof="WebPage" href="{{ crumb.url | relative_url }}">
+            <span property="name">{{ crumb.title }}</span>
+            <meta property="position" content="{{ crumb.position }}" />
+         </a>
+      </li>
+      {% endfor %}
+   </ol>
+{% endif %}
+</nav>

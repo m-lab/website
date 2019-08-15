@@ -45,6 +45,11 @@ plugins: ['jekyll-paginate', 'jekyll-feed', 'jekyll-jupyter-notebook']
 paginate: 5
 paginate_path: "/blog/page/:num"
 
+breadcrumbs:
+  root:
+    hide: false  # show breadcrumbs on root/home page
+    image: false # Show image or title text
+    
 # HTML Compression settings
 compress_html:
   clippings: [ ]
