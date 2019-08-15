@@ -62,15 +62,15 @@ To make NDT data more readily available for research and analysis, M-Lab parses 
 M-Lab provides two sets of BigQuery tables/views for NDT data:
 
 * **Helpful tables/views** - _brief description_
-  * downloads - [NDT downloads in BigQuery](ndt-downloads-helpful){:target="_blank"} | [ndt downloads schema](ndt-downloads-schema)
+  * downloads - [NDT downloads in BigQuery](ndt-downloads-helpful){:target="_blank"} \| [ndt downloads schema](ndt-downloads-schema)
     * A subset view of all NDT download tests from `measurement-lab.ndt.recommended` where:
       * At least 8 KB of data was transferred
       * Test duration was between 9 and 60 seconds
       * Congestion was detected
-  * uploads - [NDT uploads in BigQuery](ndt-uploads-helpful){:target="_blank"} | [ndt uploads schema](ndt-uploads-schema)
+  * uploads - [NDT uploads in BigQuery](ndt-uploads-helpful){:target="_blank"} \| [ndt uploads schema](ndt-uploads-schema)
     * A subset view of all NDT upload tests from `measurement-lab.ndt.recommended` where:
     * A sensible total number of bytes was received (8192)
-  * recommended - [NDT recommended in BigQuery](ndt-recommended-helpful){:target="_blank"} | [ndt recommended schema](ndt-recommended-schema)
+  * recommended - [NDT recommended in BigQuery](ndt-recommended-helpful){:target="_blank"} \| [ndt recommended schema](ndt-recommended-schema)
     * A subset view of all NDT upload and download tests from `measurement-lab.ndt.web100` where:
       * TCP end state is sensible
       * Test duration was between 9 and 60 seconds
@@ -86,11 +86,11 @@ M-Lab provides two sets of BigQuery tables/views for NDT data:
 [ndt recommended schema]: {{ site.baseurl }}/data/docs/bq/schema/ndt5
 
 * **Faithful tables/views** - _brief description_
-  * ndt5 - [ndt5 in BigQuery](ndt5faithful){:target="_blank"} | [ndt5 schema](ndt5schema)
+  * ndt5 - [ndt5 in BigQuery](ndt5faithful){:target="_blank"} \| [ndt5 schema](ndt5schema)
     * _description_
-  * ndt7 - [ndt7 in BigQuery](ndt7faithful){:target="_blank"} | [ndt7 schema](ndt5schema)
+  * ndt7 - [ndt7 in BigQuery](ndt7faithful){:target="_blank"} \| [ndt7 schema](ndt5schema)
     * _description_
-  * web100 (legacy ndt) - [web100 in BigQuery](web100faithful){:target="_blank"} | [web100 schema](web100schema)
+  * web100 (legacy ndt) - [web100 in BigQuery](web100faithful){:target="_blank"} \| [web100 schema](web100schema)
     * _description_
 
 [ndt5faithful]: https://console.cloud.google.com/bigquery?project=mlab-oti&p=mlab-oti&d=base_tables&t=result&page=table

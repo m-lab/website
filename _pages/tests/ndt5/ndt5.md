@@ -2,7 +2,7 @@
 layout: page
 permalink: /tests/ndt/ndt5
 title: "ndt5 Protocol - NDT (Network Diagnostic Tool)"
-breadcrumb: tests/ndt
+breadcrumb: tests
 ---
 
 # ndt5 Protocol - NDT (Network Diagnostic Tool)
