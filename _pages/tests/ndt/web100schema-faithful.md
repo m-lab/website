@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "web100 (legacy ndt) BigQuery Schema"
-permalink: /tests/ndt/schemas/faithful/web100
+permalink: /tests/ndt/schemas/faithful/web100/
 breadcrumb: tests
 ---
 

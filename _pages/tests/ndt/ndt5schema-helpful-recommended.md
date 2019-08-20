@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "NDT 5 Recommended - BigQuery 'Helpful' Schema"
-permalink: /tests/ndt/schemas/helpful/ndt5recommended
+permalink: /tests/ndt/schemas/helpful/ndt5recommended/
 breadcrumb: tests
 ---
 

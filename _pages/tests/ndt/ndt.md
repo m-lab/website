@@ -29,7 +29,7 @@ In 2019, M-Lab launched a completely re-written [ndt-server](ndt-server){:target
 
 ## Source code
 
-* [web100 legacy ndt](ndt-legacy){:target="_blank"}
+* [web100 historical ndt](ndt-legacy){:target="_blank"}
 * [ndt-server](ndt-server){:target="_blank"}
 * ndt reference clients
   * [Go](https://github.com/m-lab/ndt7-client-go){:target="_blank"}

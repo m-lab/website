@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "NDT 5 BigQuery 'Faithful' Schema"
-permalink: /tests/ndt/schemas/faithful/ndt5
+permalink: /tests/ndt/schemas/faithful/ndt5/
 breadcrumb: tests
 ---
 
