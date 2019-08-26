@@ -95,14 +95,6 @@ map.on('load', function () {
     var features = map.queryRenderedFeatures(e.point, { layers: ['clusters'] });
     var clusterId = features[0].properties.cluster_id;
 
-    for (i=0; i < features.length; i++) {
-      var coordinates = e.lngLat;
-      var description = "<h4>"+features[i].properties.tenG+" pods @ 10Gbps</h4>"+
-        "<h4>"+features[i].properties.oneG+" pods @ 1Gbps</h4>";
-      new mapboxgl.Popup().setLngLat(coordinates).setHTML(description)
-        .addTo(map);
-    }
-
     map.getSource('mlab-sites').getClusterExpansionZoom(clusterId, function (err, zoom) {
         if (err)
           return;
@@ -115,26 +107,13 @@ map.on('load', function () {
   });
 
   map.on('click','unclustered-point', function(e) {
-    var coordinates = e.features[0].geometry.coordinates.slice();
-    var description = "<h4>" + e.features[0].properties.city + " - " +
-      e.features[0].properties.name + " - "+ e.features[0].properties.uplink +"</h4>" +
-      e.features[0].properties.provider + " ("+e.features[0].properties.asn + ")<br>" +
-      "IPv4 Prefix: " + e.features[0].properties.ipv4_prefix;
-      if (e.features[0].properties.ipv6_prefix != null ) {
-        description += "<br>IPv6 Prefix: " + e.features[0].properties.ipv6_prefix;
-      }
-
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-    }
-    new mapboxgl.Popup()
-      .setLngLat(coordinates)
-      .setHTML(description)
-      .addTo(map);
   });
 
   var clusterPopup = new mapboxgl.Popup({
     className: 'cluster-popup'
+  });
+  var pointPopup = new mapboxgl.Popup({
+    className: 'point-popup'
   });
 
   map.on('mouseenter','clusters', function (e) {
@@ -164,13 +143,27 @@ map.on('load', function () {
   });
   map.on('mouseleave','clusters', function () {
     map.getCanvas().style.cursor = '';
+    clusterPopup.remove();
   });
-
-  map.on('mouseenter','unclustered-point', function () {
+  map.on('mouseenter','unclustered-point', function (e) {
     map.getCanvas().style.cursor = 'pointer';
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var description = "<h4>" + e.features[0].properties.city + " - " +
+      e.features[0].properties.name + " - "+ e.features[0].properties.uplink +"</h4>" +
+      e.features[0].properties.provider + " ("+e.features[0].properties.asn + ")<br>" +
+      "IPv4 Prefix: " + e.features[0].properties.ipv4_prefix;
+      if (e.features[0].properties.ipv6_prefix != null ) {
+        description += "<br>IPv6 Prefix: " + e.features[0].properties.ipv6_prefix;
+      }
+
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+    pointPopup.setLngLat(coordinates).setHTML(description).addTo(map);
   });
   map.on('mouseleave','unclustered-point', function () {
     map.getCanvas().style.cursor = '';
+    pointPopup.remove();
   });
 });
 </script>
