@@ -91,24 +91,6 @@ map.on('load', function () {
     }
   });
 
-  map.on('click','clusters', function(e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['clusters'] });
-    var clusterId = features[0].properties.cluster_id;
-
-    map.getSource('mlab-sites').getClusterExpansionZoom(clusterId, function (err, zoom) {
-        if (err)
-          return;
-
-        map.easeTo({
-          center: features[0].geometry.coordinates,
-          zoom: zoom
-        });
-    });
-  });
-
-  map.on('click','unclustered-point', function(e) {
-  });
-
   var clusterPopup = new mapboxgl.Popup({
     className: 'cluster-popup'
   });
@@ -116,8 +98,7 @@ map.on('load', function () {
     className: 'point-popup'
   });
 
-  map.on('mouseenter','clusters', function (e) {
-    map.getCanvas().style.cursor = 'pointer';
+  map.on('click','clusters', function(e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['clusters'] });
     var clusterId = features[0].properties.cluster_id,
     point_count = features[0].properties.point_count,
@@ -141,12 +122,8 @@ map.on('load', function () {
       clusterPopup.setLngLat(coordinates).setHTML(desc).addTo(map);
     });
   });
-  map.on('mouseleave','clusters', function () {
-    map.getCanvas().style.cursor = '';
-    clusterPopup.remove();
-  });
-  map.on('mouseenter','unclustered-point', function (e) {
-    map.getCanvas().style.cursor = 'pointer';
+
+  map.on('click','unclustered-point', function(e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description = "<h4>" + e.features[0].properties.city + " - " +
       e.features[0].properties.name + " - "+ e.features[0].properties.uplink +"</h4>" +
@@ -161,9 +138,18 @@ map.on('load', function () {
     }
     pointPopup.setLngLat(coordinates).setHTML(description).addTo(map);
   });
+
+  map.on('mouseenter','clusters', function (e) {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+  map.on('mouseleave','clusters', function () {
+    map.getCanvas().style.cursor = '';
+  });
+  map.on('mouseenter','unclustered-point', function (e) {
+    map.getCanvas().style.cursor = 'pointer';
+  });
   map.on('mouseleave','unclustered-point', function () {
     map.getCanvas().style.cursor = '';
-    pointPopup.remove();
   });
 });
 </script>
