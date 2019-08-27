@@ -7,7 +7,7 @@ var map = new mapboxgl.Map({
   zoom: 0.8
 });
 
-var url = '{{site.baseurl}}/static/sitegeo.json'
+var url = '{{site.baseurl}}/static/sitegeo.json';
 
 map.on('load', function () {
 
