@@ -7,7 +7,7 @@ var map = new mapboxgl.Map({
   zoom: 0.8
 });
 
-var url = fetch('https://siteinfo.mlab-oti.measurementlab.net/v1/adhoc/sitegeo.json', { method: 'GET', mode: 'no-cors', });
+var url = '{{site.baseurl}}/static/sitegeo.json'
 
 map.on('load', function () {
 
