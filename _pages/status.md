@@ -23,7 +23,7 @@ var map = new mapboxgl.Map({
   zoom: 0.8
 });
 
-var url = '{{ site.baseurl }}/static/sitegeo.json';
+var url = 'https://siteinfo.mlab-sandbox.measurementlab.net/v1/adhoc/sitegeo.json';
 
 map.on('load', function () {
 
