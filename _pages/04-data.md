@@ -40,7 +40,7 @@ M-Lab also publishes public data sets about the M-Lab Platform, listed below.
   * Network Diagnostic Tool (NDT) measures characteristics of a TCP connection under heavy load.
   * NDT data is processed by the M-Lab ETL Pipeline.
   * More information is available at [Internet2](http://software.internet2.edu/ndt/){:target="_blank"} and [GitHub](https://github.com/ndt-project/ndt){:target="_blank"}.
-  * [NDT Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/){:target="_blank"} - [NDT BigQuery Dataset](https://bigquery.cloud.google.com/dataset/measurement-lab:release)
+  * [NDT Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/){:target="_blank"} - [NDT BigQuery Dataset](https://bigquery.cloud.google.com/dataset/measurement-lab:ndt)
 * [NPAD]({{site.baseurl}}/tests/npad)
   * Network Path and Application Diagnosis (NPAD) diagnoses issues in a network path that can degrade network performance.
   * NPAD data is processed by the M-Lab ETL Pipeline.
