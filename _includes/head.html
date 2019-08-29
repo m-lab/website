@@ -33,12 +33,11 @@
   <!-- Styles -->
   <link href="{{ site.baseurl }}/css/base.css" rel="stylesheet" />
 
-  {% if page.audience == "observatory" %}
-  <!-- Observatory page styles -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/mlab_observatory/static/js/observatory/vendor/bootstrap/bootstrap.min.css" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/mlab_observatory/static/js/observatory/vendor/bootstrap/bootstrap-theme.css" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/mlab_observatory/static/js/observatory/vendor/bootstrap/bootstrap-select.min.css" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/mlab_observatory/static/css/observatory/mlabOpenInternet.css" />
+  {% if page.audience == "statusmap" %}
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=yes' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/mapbox.css"/>
   {% endif %}
 
   <!-- JS Libs -->

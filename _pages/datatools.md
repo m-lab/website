@@ -26,8 +26,6 @@ Community tools are developed by other organizations or individuals, but which l
 * [I3 Connectivity Explorer](https://i3cex.internet-is-infrastructure.org/){:target="_blank"} - Part of the [Internet as Infrastructure Project](https://internet-is-infrastructure.org/){:target="_blank"}, "_I3 Connectivity Explorer pulls data from U.S. Government agencies — FCC, Census, EPA, USDA — and public sources including the Measurement Lab and the Pro Publica Congress API. It then combines the sources across the places we live: towns, counties and county subdivisions, tribal regions, school and congressional districts; and presents the data in both graphical (maps and charts) and tabular formats using multiple resolutions: block, block group, tract, county, and state._"
 * [Piecewise](https://github.com/opentechinstitute/piecewise){:target="_blank"} - _Piecewise_ is a tool for digesting and aggregating user-volunteered Internet performance test results data from Measurement Lab, and visualizing aggregate data on the web.
   * [Michigan](https://mi.broadbandtest.us/){:target="_blank"}
-  * [Pennsylvania](https://pa.broadbandtest.us/){:target="_blank"}
-  * [Ferry County, WA](https://ferrycountybroadband.com/){:target="_blank"}
 * [Speedup America](https://github.com/Hack4Eugene/SpeedUpAmerica){:target=:"_blank"} - _Speed Up America's_ project vision is an open source nation-wide map that pulls individual internet speed test data from M-Lab and breaking down the results on maps and charts by points, census blocks, ISP, date range, and speed. Census block data and FCC 477 data will used to supplement both the analysis and maps.
 
 ## M-Lab Integrations

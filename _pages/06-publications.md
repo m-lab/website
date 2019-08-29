@@ -134,7 +134,7 @@ This article investigates how infrastructure competition among broadband network
 {:.paper-author}
 Reza Rajabiun, Catherine Middleton
 
-[Download](http://www.sciencedirect.com/science/article/pii/S0308596117301143){:.download-link .paper-download target="_blank"}
+[Download](https://doi.org/10.1016/j.telpol.2017.08.001){:.download-link .paper-download target="_blank"}
 
 ### Regulatory Federalism and Broadband Divergence: Implications of Invoking Europe in the Making of Canadian Telecom Policy
 {:.no_toc}
