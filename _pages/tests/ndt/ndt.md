@@ -23,8 +23,8 @@ In 2019, M-Lab launched a completely re-written [ndt-server](https://github.com/
 
 ## Source code
 
-* [web100 historical ndt](ndt-legacy){:target="_blank"}
-* [ndt-server](ndt-server){:target="_blank"}
+* [web100 historical ndt](https://github.com/ndt-project/ndt/){:target="_blank"}
+* [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
 * ndt reference clients
   * [Go](https://github.com/m-lab/ndt7-client-go){:target="_blank"}
   * [JavaScript](https://github.com/m-lab/ndt7-client-javascript){:target="_blank"}
@@ -54,13 +54,13 @@ To make NDT data more readily available for research and analysis, M-Lab parses 
 M-Lab provides two sets of BigQuery tables/views for NDT data:
 
 * **Faithful tables/views** - the base tables/views for each NDT data type
-  * **ndt5** - NDT data collected using the [ndt 5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after **##DATE##**, using tcp-info for all TCP metrics.
+  * **ndt5** - NDT data collected using the [ndt5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after **##DATE##**, using tcp-info for all TCP metrics.
     * [ndt5 in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=ndt5&page=table){:target="_blank"}
     * [ndt5 schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/ndt5)
-  * **ndt7** - NDT data collected using the [ndt 7 protocol]({{ site.basurl }}/tests/ndt/ndt7) on or after **##DATE##**, using tcp-info for all TCP metrics.
+  * **ndt7** - NDT data collected using the [ndt7 protocol]({{ site.basurl }}/tests/ndt/ndt7) on or after **##DATE##**, using tcp-info for all TCP metrics.
     * ndt7 in BigQuery (coming soon)
     * [ndt7 schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/ndt7)
-  * **web100 (legacy ndt)** - NDT data collected using the [ndt 4 protocol]({{ site.basurl }}/tests/ndt/web100) prior to **##DATE##**, using the web100 Linux kernel patch for all TCP metrics.
+  * **web100 (legacy ndt)** - NDT data collected using the [web100 protocol]({{ site.basurl }}/tests/ndt/web100) prior to **##DATE##**, using the web100 Linux kernel patch for all TCP metrics.
     * [web100 in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=web100&page=table){:target="_blank"}
     * [web100 schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/web100)
 

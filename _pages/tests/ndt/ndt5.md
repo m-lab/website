@@ -13,6 +13,6 @@ NDT data collected before **2019-07-19** used the Web100 Linux kernel patch for 
 
 NDT data using the ndt5 protocol collected on or after **2019-07-19** uses [tcp-info]({{ site.baseurl }}/learn) for all TCP metrics.
 
-More details about the NDT 5 protocol can be found in the [README for NDT 5 on Github](https://github.com/m-lab/ndt-server/tree/master/ndt5#ndt5-metrics){:target="_blank"}.
+More details about the ndt5 protocol can be found in the [README for ndt5 on Github](https://github.com/m-lab/ndt-server/tree/master/ndt5#ndt5-metrics){:target="_blank"}.
 
 

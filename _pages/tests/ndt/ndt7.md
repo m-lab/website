@@ -11,6 +11,6 @@ The ndt7 protocol is a new NDT protocol version provided by in [ndt-server](http
 
 NDT data using the ndt7 protocol has been collected since **##DATE##** using [tcp-info](https://github.com/m-lab/tcp-info){:target="_blank"} for all TCP metrics.
 
-More details about the _ndt 7_ protocol can be found in the [ndt 7 protocol specification on Github](https://github.com/m-lab/ndt-server/blob/master/spec/ndt7-protocol.md){:target="_blank"}.
+More details about the ndt7 protocol can be found in the [ndt7 protocol specification on Github](https://github.com/m-lab/ndt-server/blob/master/spec/ndt7-protocol.md){:target="_blank"}.
 
-[Details about the _ndt 7_ data format](https://github.com/m-lab/ndt-server/blob/master/spec/data-format.md){:target="_blank"} can also be found on Github.
+[Details about the ndt7 data format](https://github.com/m-lab/ndt-server/blob/master/spec/data-format.md){:target="_blank"} can also be found on Github.
