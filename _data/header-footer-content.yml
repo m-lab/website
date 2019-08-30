@@ -59,10 +59,6 @@ header:
       sub-nav:
         - text: "Learning Resources"
           url:  "/learn/"
-        - text: "How the Internet Works"
-          url:  "/learn/m-lab-internet-topology"
-        - text: "Definitions of Terms"
-          url:  "/learn/definitions"
     -
       title: "contribute"
       sub-nav:
