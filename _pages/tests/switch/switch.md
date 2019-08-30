@@ -19,9 +19,12 @@ Switch (DISCO) data in raw format can be found in Google Cloud Storage: [https:/
 
 ## Switch (DISCO) Data in BigQuery
 
-M-Lab parses all switch data into BigQuery tables and views, and makes query access available for free by subscription to a Google Group. Find out more about how to get access on our [BigQuery QuickStart page]({{ site.baseurl }}/data/docs/bq/quickstart/).
+M-Lab parses all switch data into [BigQuery tables and views](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=utilization&t=switch&page=table){:target="_blank"}, and makes query access available for free by subscription to a Google Group. Find out more about how to get access on our [BigQuery QuickStart page]({{ site.baseurl }}/data/docs/bq/quickstart/).
 
 BigQuery Tables/Views for Switch Data:
 
-* [Switch \(DISCO\) data in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=utilization&t=switch&page=table){:target="_blank"}
-* [Switch \(DISCO\) schema]({{ site.baseurl }}/tests/switch/schema)
+* [Switch \(DISCO\) data in BigQuery]
+
+## Switch (DISCO) BigQuery Schema
+
+{% include schema_switch.html %}

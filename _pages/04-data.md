@@ -78,7 +78,6 @@ M-Lab also publishes public data sets about the M-Lab Platform, listed below.
   * More information is available in the [blog post announcing this dataset]({{site.baseurl}}/blog/disco-dataset/#new-disco-switch-telemetry-dataset) provides more information about the DISCO dataset.
   * [M-Lab DISCO Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/switch/){:target="_blank"}
   * [M-Lab DISCO Data in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=utilization&t=switch&page=table){:target="_blank"}
-  * [M-Lab DISCO Schema]({{ site.baseurl }}/tests/switch/schema)
 
 ## Historical Data Sets (e.g. Retired Tests)
 
