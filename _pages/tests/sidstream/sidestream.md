@@ -31,4 +31,4 @@ BigQuery Tables/Views for SideStream Data:
 
 * [SideStream data in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=sidestream&t=web100&page=table){:target="
 _blank"}
-* [SideStream schema]({{ site.baseurl }}/tests/sidestream/schema)
+* _SideStream schema_

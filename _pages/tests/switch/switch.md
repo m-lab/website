@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Switch (DISCO) - BigQuery Schema"
+title: "Switch (DISCO) Dataset"
 permalink: /tests/switch/
 breadcrumb: tests
 ---
 
-# Switch (DISCO) BigQuery Schema
+# Switch (DISCO) Dataset
 
 Since June 2016, M-Lab has collected high resolution switch telemetry for each M-Lab server and site uplink and published it as the DIScard COllection (a.k.a. DISCO) dataset. We publish this data in the `utilization` dataset in the `switch` BigQuery View(s).
 
@@ -24,3 +24,4 @@ M-Lab parses all switch data into BigQuery tables and views, and makes query acc
 BigQuery Tables/Views for Switch Data:
 
 * [Switch \(DISCO\) data in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=utilization&t=switch&page=table){:target="_blank"}
+* [Switch \(DISCO\) schema]({{ site.baseurl }}/tests/switch/schema)

@@ -11,25 +11,22 @@ NDT is a single stream performance measurement of a connection's capacity for "b
 
 ## History
 
-From 2009-2019, M-Lab ran the default [NDT server](https://github.com/ndt-project/ndt/){:target="_blank"} originally [developed by Internet2](https://software.internet2.edu/ndt/){:target="_blank"}. This version used the [web100 linux kernel extension](https://dl.acm.org/citation.cfm?id=956993.957002){:target="_blank"} for gathering data points about the TCP connection. The web100 version of server has been decommissioned on M-Lab as of ##date##. However, data collected while it was in production is available in the `web100` tables referenced below.
+From 2009-2019, M-Lab has run the default [NDT server](https://github.com/ndt-project/ndt/){:target="_blank"} originally [developed by Internet2](https://software.internet2.edu/ndt/){:target="_blank"}. This version uses the [web100 linux kernel extension](https://dl.acm.org/citation.cfm?id=956993.957002){:target="_blank"} for gathering data points about the TCP connection.
 
-In 2019, M-Lab launched a completely re-written [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}, providing the ndt5 and ndt7 protocols. M-Lab also transitioned hosted experiments to use the netlink socket and [TCP_INFO](https://github.com/m-lab/tcp-info/){:target="_blank"} kernel instrumentation in 2019, replacing our reliance on Web100.
+By the end of 2019, M-Lab will launch a completely re-written [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}, providing the ndt5 and ndt7 protocols. M-Lab also will transition hosted experiments to use the netlink socket and [TCP_INFO](https://github.com/m-lab/tcp-info/){:target="_blank"} kernel instrumentation in 2019, replacing our reliance on Web100. The web100 version of server will be decommissioned on M-Lab once `ndt-server` has been tested and launched. M-Lab will retain data collected while it was in production is available in the `web100` tables referenced below.
 
 ## NDT Testing Protocols
 
-* [ndt5]({{ site.baseurl }}/tests/ndt/ndt5)
-* [ndt7]({{ site.baseurl }}/tests/ndt/ndt7)
-* [web100]({{ site.baseurl }}/tests/ndt/web100) (legacy ndt, deprecated)
+As a part of our transition from the web100 version of NDT server to the new platform, M-Lab has named specific protocol versions for the current server and the new one we are testing.
+
+* [web100]({{ site.baseurl }}/tests/ndt/web100) is the protocol refering to data collected by the current NDT server
+* [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is a new NDT protocol designed to be backward compatible with current clients
+* ndt7 is a new NDT protocol that operates solely over TLS port 443, and will provide new measurement methods and capabilities
 
 ## Source code
 
 * [web100 historical ndt](https://github.com/ndt-project/ndt/){:target="_blank"}
 * [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
-* ndt reference clients
-  * [Go](https://github.com/m-lab/ndt7-client-go){:target="_blank"}
-  * [JavaScript](https://github.com/m-lab/ndt7-client-javascript){:target="_blank"}
-  * [iOS](https://github.com/m-lab/ndt7-client-ios){:target="_blank"}
-  * [Android](https://github.com/m-lab/ndt7-client-android){:target="_blank"}
 
 ## Citing the M-Lab NDT Dataset
 
@@ -51,18 +48,43 @@ Advanced users may also be interested in obtaining raw M-Lab test data for detai
 
 To make NDT data more readily available for research and analysis, M-Lab parses all NDT data into BigQuery tables and views, and makes query access available for free by subscription to a Google Group. Find out more about how to get access on our [BigQuery QuickStart page]({{ site.baseurl }}/data/bq/quickstart/).
 
-M-Lab provides two sets of BigQuery tables/views for NDT data:
+M-Lab BigQuery tables/views for NDT data are in transition as of Sept. 2019, as the team completes our [Global Pilot of the M-Lab 2.0 platform]({{ site.baseurl }}/blog/global-pilot-entry/). Below we provide two lists of BigQuery tables/views: our current tables and views, and those which M-Lab will transition to by the end of the global pilot.
+
+### Current BigQuery Tables/Views
+
+* [measurement-lab.ndt.recommended](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=recommended&page=table){:target="_blank"}
+  * A subset view of all NDT upload and download tests from `measurement-lab.ndt.web100` where:
+    * TCP end state is sensible
+    * Test duration was between 9 and 60 seconds
+  * except:
+    * Internal M-Lab end-to-end monitoring tests
+    * Tests not marked as blacklisted
+
+* [measurement-lab.ndt.downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=downloads&page=table){:target="_blank"}
+  * A subset view of all NDT download tests from `measurement-lab.ndt.recommended` where:
+    * At least 8 KB of data was transferred
+    * Test duration was between 9 and 60 seconds
+    * Congestion was detected
+
+* [measurement-lab.ndt.uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=uploads&page=table){:target="_blank"}
+  * A subset view of all NDT upload tests from `measurement-lab.ndt.recommended` where:
+    * A sensible total number of bytes was received (8192)
+
+* [measurement-lab.ndt.web100](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=web100&page=table){:target="_blank"}
+  * A root view that all other views in the `ndt` dataset are derived from.
+
+### Planned BigQuery Tables/Views (Post M-Lab 2.0 Global Pilot)
 
 * **Faithful tables/views** - the base tables/views for each NDT data type
-  * **ndt5** - NDT data collected using the [ndt5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after **##DATE##**, using tcp-info for all TCP metrics.
+  * **web100** - NDT data collected using the [web100 protocol]({{ site.baseurl }}/tests/ndt/web100), using the web100 Linux kernel patch for all TCP metrics.
+    * [web100 in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=web100&page=table){:target="_blank"}
+    * _web100 schema_
+  * **ndt5** - NDT data collected using the [ndt5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after 2019-07-19, using tcp-info for all TCP metrics.
     * [ndt5 in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=ndt5&page=table){:target="_blank"}
     * [ndt5 schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/ndt5)
-  * **ndt7** - NDT data collected using the [ndt7 protocol]({{ site.basurl }}/tests/ndt/ndt7) on or after **##DATE##**, using tcp-info for all TCP metrics.
-    * ndt7 in BigQuery (coming soon)
-    * [ndt7 schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/ndt7)
-  * **web100 (legacy ndt)** - NDT data collected using the [web100 protocol]({{ site.basurl }}/tests/ndt/web100) prior to **##DATE##**, using the web100 Linux kernel patch for all TCP metrics.
-    * [web100 in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=web100&page=table){:target="_blank"}
-    * [web100 schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/web100)
+  * **ndt7** - (TBA) NDT data collected using the ndt7 protocol using tcp-info for all TCP metrics.
+    * _ndt7 in BigQuery_
+    * _ndt7 schema_
 
 * **Helpful tables/views** - a set of tables/views that are pre-filtered for commonly used queries that are derived from the "faithful" tables/views
   * **downloads**
@@ -70,12 +92,12 @@ M-Lab provides two sets of BigQuery tables/views for NDT data:
       * At least 8 KB of data was transferred
       * Test duration was between 9 and 60 seconds
       * Congestion was detected
-    * [ndt downloads in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=downloads&page=table){:target="_blank"}
-    * [ndt downloads schema]({{ site.baseurl }}/tests/ndt/schemas/helpful/ndt5downloads)
+    * _ndt downloads in BigQuery_
+    * _ndt downloads schema_
   * **uploads**
     * A subset view of all NDT upload tests from `measurement-lab.ndt.recommended` where a sensible total number of bytes was received (8192)
-    * [ndt uploads in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=uploads&page=table){:target="_blank"}
-    * [ndt uploads schema]({{ site.baseurl }}/tests/ndt/schemas/helpful/ndt5uploads)
+    * _ndt uploads in BigQuery_
+    * _ndt uploads schema_
   * **recommended**
     * A subset view of all NDT upload and download tests from `measurement-lab.ndt.web100` where:
       * TCP end state is sensible
@@ -83,5 +105,5 @@ M-Lab provides two sets of BigQuery tables/views for NDT data:
     * except:
       * Internal M-Lab end-to-end monitoring tests
       * Tests not marked as blacklisted
-    * [ndt recommended in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=recommended&page=table){:target="_blank"}
-    * [ndt recommended schema]({{ site.baseurl }}/tests/ndt/schemas/helpful/ndt5recommended)
+    * _ndt recommended in BigQuery_
+    * _ndt recommended schema_

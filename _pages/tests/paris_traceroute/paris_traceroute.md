@@ -31,4 +31,4 @@ M-Lab parses all Paris Traceroute data into BigQuery tables and views, and makes
 BigQuery Tables/Views/Schema(s) for Paris Traceroute Data:
 
 * [Paris Traceroute data in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=aggregate&t=traceroute&page=table){:target="_blank"}
-* [Paris Traceroute schema]({{ site.baseurl }}/tests/paris_traceroute/schema)
+* _Paris Traceroute schema_
