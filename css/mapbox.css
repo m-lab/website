@@ -1,0 +1,27 @@
+div.pod-popup {
+	width: 175px;
+	display: block;
+	float: left;
+	padding: 5px;
+
+}
+.cluster-popup {
+	width: 400px;
+}
+.cluster-popup div.mapboxgl-popup-content {
+
+}
+div.mapboxgl-popup-content {
+	max-width: 400px;
+	max-height: 200px;
+	overflow-y: scroll;
+	overflow-x: scroll;
+	background: rgba(255,255,255,0.85);
+	border-radius: 10px;
+	color: black;
+}
+div.mapboxgl-popup-content h4 {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: black;
+}
