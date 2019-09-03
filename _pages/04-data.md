@@ -40,17 +40,12 @@ M-Lab also publishes public data sets about the M-Lab Platform, listed below.
   * Network Diagnostic Tool (NDT) measures characteristics of a TCP connection under heavy load.
   * NDT data is processed by the M-Lab ETL Pipeline.
   * More information is available at [Internet2](http://software.internet2.edu/ndt/){:target="_blank"} and [GitHub](https://github.com/ndt-project/ndt){:target="_blank"}.
-  * [NDT Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/){:target="_blank"} - [NDT BigQuery Dataset](https://bigquery.cloud.google.com/dataset/measurement-lab:release)
+  * [NDT Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/){:target="_blank"} - [NDT BigQuery Dataset](https://bigquery.cloud.google.com/dataset/measurement-lab:ndt)
 * [NPAD]({{site.baseurl}}/tests/npad)
   * Network Path and Application Diagnosis (NPAD) diagnoses issues in a network path that can degrade network performance.
   * NPAD data is processed by the M-Lab ETL Pipeline.
   * More information is available from archived [UCAR](https://web.archive.org/web/20180714140225/https://www.ucar.edu/npad/){:target="_blank"} pages and [GitHub](https://github.com/npad/npad){:target="_blank"}.
   * [NPAD Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/npad/){:target="_blank"}
-* [OONI]({{site.baseurl}}/tests/ooni)
-  * OONI measures censorship, surveillance, and traffic manipulation on the Internet.
-  * OONI data is not processed by the M-Lab ETL Pipeline.
-  * More information is available at [OONI](https://ooni.torproject.org/){:target="_blank"}
-  * [OONI Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ooni/){:target="_blank"}
 * [Paris Traceroute]({{site.baseurl}}/tests/paris_traceroute)
   * Paris Traceroute maps network topology between two points on the Internet.
   * Paris Traceroute data is processed by the M-Lab ETL Pipeline.
@@ -78,10 +73,11 @@ M-Lab also publishes public data sets about the M-Lab Platform, listed below.
   * M-Lab Collectd is a monitoring tool for M-Lab slices, which collects resource utilization information about all M-Lab servers.
   * More information is available on [Github](https://github.com/m-lab/collectd-mlab){:target="_blank"}.
   * [M-Lab Collectd Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/utilization/){:target="_blank"}.
-* [M-Lab DISCO Switch Telemetry Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/switch/){:target="_blank"}
+* [M-Lab DISCO Switch Telemetry Data]({{ site.baseurl }}/tests/switch)
   * Since June 2016, M-Lab has collected high resolution switch telemetry for each M-Lab server and site uplink and published it as the **DIS**card **CO**llection (a.k.a. DISCO) dataset.
   * More information is available in the [blog post announcing this dataset]({{site.baseurl}}/blog/disco-dataset/#new-disco-switch-telemetry-dataset) provides more information about the DISCO dataset.
-  * [M-Lab DISCO Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/switch/){:target="_blank"} - [M-Lab DISCO BigQuery Dataset](https://bigquery.cloud.google.com/table/measurement-lab:base_tables.switch){:target="_blank"}
+  * [M-Lab DISCO Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/switch/){:target="_blank"}
+  * [M-Lab DISCO Data in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=utilization&t=switch&page=table){:target="_blank"}
 
 ## Historical Data Sets (e.g. Retired Tests)
 
@@ -93,6 +89,11 @@ M-Lab also publishes public data sets about the M-Lab Platform, listed below.
   * Neubot measured the Internet in order to gather data useful to study broadband performance, network neutrality, and Internet censorship.
   * More information is available at [Nexa Center](https://neubot.nexacenter.org/){:target="_blank"} and [GitHub](https://github.com/neubot){:target="_blank"}.
   * [Neubot Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/neubot/){:target="_blank"}
+* [OONI]({{site.baseurl}}/tests/ooni)
+  * OONI measures censorship, surveillance, and traffic manipulation on the Internet.
+  * OONI data is not processed by the M-Lab ETL Pipeline.
+  * More information is available at [OONI](https://ooni.torproject.org/){:target="_blank"}
+  * [OONI Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ooni/){:target="_blank"}
 * [Pathload2]({{site.baseurl}}/tests/pathload2)
   * Pathload2 measured the available bandwidth of an Internet connection.
   * More information is available at [https://code.google.com/p/pathload2-gatech/](https://code.google.com/p/pathload2-gatech/){:target="_blank"}.
@@ -102,7 +103,6 @@ M-Lab also publishes public data sets about the M-Lab Platform, listed below.
   * [Shaperprobe Raw Data (archived)](https://console.developers.google.com/storage/browser/archive-measurement-lab/shaperprobe/){:target="_blank"}
 * [Windrider]({{site.baseurl}}/tests/windrider)
   * WindRider attempted to detect whether your mobile provider was performing application- or service-specific differentiation.
-  * More information is available at [Windrider](http://www.cs.northwestern.edu/~ict992/mobile.htm){:target="_blank"}.
 
 ## Data License and Citing M-Lab Data
 

@@ -1,0 +1,94 @@
+<div class="table-responsive" markdown="1">
+
+| Field name                                           |     Type     |  Description                              |
+| :----------------------------------------------------|:------------:|:------------------------------------------|
+| **ParseInfo** | record |                        |
+| ParseInfo.**TaskFileName** | string | The raw data file in Google Cloud Storage from which the test row was parsed. |
+| ParseInfo.**ParseTime** | timestamp (required) | The timestamp of when test data was parsed into BigQuery from Google Cloud Storage. |
+| ParseInfo.**ParserVersion** | string | A link to the tagged version of the M-Lab ETL parser which processed the test row. |
+| **test_id** | string | ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20090819T02:01:04.507508000Z_189.6.232.77:3859.c2s_snaplog.gz`). |
+| **log_time** | integer | The timestamp of when test log was created (in seconds since Unix epoch). This is derived from the "Date/Time" field in the .meta file |
+| **result** | record |                        |
+| result.**GitShortCommit** | string |                        |
+| result.**Version** | string |                        |
+| result.**ServerIP** | string |                        |
+| result.**ServerPort** | integer |                        |
+| result.**ClientIP** | string |                        |
+| result.**ClientPort** | integer |                        |
+| result.**StartTime** | timestamp (required) |                        |
+| result.**EndTime** | timestamp (required) |                        |
+| result.**Control** | record |                        |
+| result.Control.**UUID** | string |                        |
+| result.Control.**Protocol** | string |                        |
+| result.Control.**MessageProtocol** | string |                        |
+| **result.C2S** | record |                        |
+| result.C2S.**ServerIP** | string |                        |
+| result.C2S.**ServerPort** | integer |                        |
+| result.C2S.**ClientIP** | string |                        |
+| result.C2S.**ClientPort** | integer |                        |
+| result.C2S.**UUID** | string |                        |
+| result.C2S.**StartTime** | timestamp (required) |                        |
+| result.C2S.**EndTime** | timestamp (required) |                        |
+| result.C2S.**MeanThroughputMbps** | float |                        |
+| result.C2S.**Error** | string |                        |
+| **result.S2C** | record |                        |
+| result.S2C.**UUID** | string |                        |
+| result.S2C.**ServerIP** | string |                        |
+| result.S2C.**ServerPort** | integer |                        |
+| result.S2C.**ClientIP** | string |                        |
+| result.S2C.**ClientPort** | integer |                        |
+| result.S2C.**StartTime** | timestamp (required) |                        |
+| result.S2C.**EndTime** | timestamp (required) |                        |
+| result.S2C.**MeanThroughputMbps** | float |                        |
+| result.S2C.**MinRTT** | integer |                        |
+| result.S2C.**ClientReportedMbps** | float |                        |
+| result.S2C.**Error** | string |                        |
+| **result.Upload** | record |                        |
+| result.Upload.**UUID** | string |                        |
+| result.Upload.**StartTime** | timestamp (required) |                        |
+| result.Upload.**EndTime** | timestamp (required) |                        |
+| **result.Upload.ServerMeasurements.AppInfo** | record |                        |
+| result.Upload.ServerMeasurement.**NumBytes** | integer |                        |
+| **result.Upload.ServerMeasurements.BBRInfo** | record |                        |
+| result.Upload.ServerMeasurements.BBRInfo.**MaxBandwidth** | integer |                        |
+| result.Upload.ServerMeasurements.BBRInfo.**MinRTT** | float |                        |
+| result.Upload.ServerMeasurements.**Elapsed** | float |                        |
+| **result.Upload.ServerMeasurements.TCPInfo** | record |                        |
+| result.Upload.ServerMeasurements.TCPInfo.**SmoothedRTT** | float |                        |
+| result.Upload.ServerMeasurements.TCPInfo.**RTTVar** | float |                        |
+| **result.Upload.ClientMeasurements** | record (repeated) |                        |
+| **result.Upload.ClientMeasurements.AppInfo** | record |                        |
+| result.Upload.ClientMeasurements.AppInfo.**NumBytes** | integer |                        |
+| **result.Upload.ClientMeasurements.BBRInfo** | record |                        |
+| result.Upload.ClientMeasurements.BBRInfo.**MaxBandwidth** | integer |                        |
+| result.Upload.ClientMeasurements.BBRInfo.**MinRTT** | float |                        |
+| result.Upload.ClientMeasurements.**Elapsed** | float |                        |
+| **result.Upload.ClientMeasurements.TCPInfo** | record |                        |
+| result.Upload.ClientMeasurements.TCPInfo.**SmoothedRTT** | float |                        |
+| result.Upload.ClientMeasurements.**RTTVar** | float |                        |
+| **result.Download** | record |                        |
+| result.Download.**UUID** | string |                        |
+| result.Download.**StartTime** | timestamp (required) |                        |
+| result.Download.**EndTime** | timestamp (required) |                        |
+| **result.Download.ServerMeasurements** | record (repeated) |                        |
+| **result.Download.ServerMeasurements.AppInfo** | record |                        |
+| result.Download.ServerMeasurements.AppInfo.**NumBytes** | integer |                        |
+| **result.Download.ServerMeasurements.BBRInfo** | record |                        |
+| result.Download.ServerMeasurements.BBRInfo.**MaxBandwidth** | integer |                        |
+| result.Download.ServerMeasurements.BBRInfo.**MinRTT** | float |                        |
+| result.Download.ServerMeasurements.**Elapsed** | float |                        |
+| **result.Download.ServerMeasurements.TCPInfo** | record |                        |
+| result.Download.ServerMeasurements.TCPInfo.**SmoothedRTT** | float |                        |
+| result.Download.ServerMeasurements.TCPInfo.**RTTVar** | float |                        |
+| **result.Download.ClientMeasurements** | record (repeated) |                        |
+| **result.Download.ClientMeasurements.AppInfo** | record |                        |
+| result.Download.ClientMeasurements.AppInfo.**NumBytes** | integer |                        |
+| **result.Download.ClientMeasurements.BBRInfo** | record |                        |
+| result.Download.ClientMeasurements.BBRInfo.**MaxBandwidth** | integer |                        |
+| result.Download.ClientMeasurements.BBRInfo.**MinRTT** | float |                        |
+| result.Download.ClientMeasurements.**Elapsed** | float |                        |
+| **result.Download.ClientMeasurements.TCPInfo** | record |                        |
+| result.Download.ClientMeasurements.TCPInfo.**SmoothedRTT** | float |                        |
+| result.Download.ClientMeasurements.TCPInfo.**RTTVar** | float |                        |
+
+</div>
