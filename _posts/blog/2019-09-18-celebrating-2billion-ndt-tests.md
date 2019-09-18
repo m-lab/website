@@ -12,254 +12,250 @@ While we've been hard at work this year on the [M-Lab 2.0 Platform Upgrade]({{ s
 
 It took us 6 years to get our first 500 million rows, and we now receive that many measurements every 6 months!
 
-Our data scale has grown exponentially, our usage has grown tremendously, and our platform keep chugging along. We now regularly serve more than 3 million NDT tests a day worldwide! To break that down a little further, we've compiled the table below showing the average number of tests per day over the last month by country.
+Our data scale has grown exponentially, our usage has grown tremendously, and our platform keep chugging along. We now regularly serve more than 3 million NDT tests a day worldwide! To break that down a little further, we've compiled the table below showing the number of tests per country from Jan 1 - June 30, 2019.
 
 Thanks to all of our users around the world for using M-Lab!!
 
-| 2019 Average Daily Tests | Country |
+| Number of Tests Jan-Jun 2019  | Country |
 |:------------------------|:-------|
-| 51 | Afghanistan |
-| 216 | Albania |
-| 1227 | Algeria |
-| 6 | American Samoa |
-| 48 | Andorra |
-| 100 | Angola |
-| 4 | Anguilla |
-| 23 | Antigua and Barbuda |
-| 3389 | Argentina |
-| 83 | Armenia |
-| 50 | Aruba |
-| 102874 | Australia |
-| 15026 | Austria |
-| 267 | Azerbaijan |
-| 89 | Bahamas |
-| 128 | Bahrain |
-| 1446 | Bangladesh |
-| 60 | Barbados |
-| 552 | Belarus |
-| 10923 | Belgium |
-| 57 | Belize |
-| 21 | Benin |
-| 78 | Bermuda |
-| 3 | Bhutan |
-| 667 | Bolivia |
-| 5 | Bonaire, Sint Eustatius, and Saba |
-| 423 | Bosnia and Herzegovina |
-| 28 | Botswana |
-| 42867 | Brazil |
-| 2 | British Indian Ocean Territory |
-| 19 | British Virgin Islands |
-| 54 | Brunei |
-| 603 | Bulgaria |
-| 33 | Burkina Faso |
-| 10 | Burundi |
-| 11 | Cabo Verde |
-| 172 | Cambodia |
-| 52 | Cameroon |
-| 83457 | Canada |
-| 67 | Cayman Islands |
-| 2 | Central African Republic |
-| 4 | Chad |
-| 1033 | Chile |
-| 3129 | China |
-| 6 | Christmas Island |
-| 5 | Cocos [Keeling] Islands |
-| 4510 | Colombia |
-| 5 | Comoros |
-| 20 | Congo |
-| 3 | Cook Islands |
-| 714 | Costa Rica |
-| 631 | Croatia |
-| 6 | Cuba |
-| 62 | Curaﺃao |
-| 1411 | Cyprus |
-| 6865 | Czechia |
-| 5 | Democratic Republic of Timor-Leste |
-| 2342 | Denmark |
-| 15 | Djibouti |
-| 7 | Dominica |
-| 871 | Dominican Republic |
-| 2464 | Ecuador |
-| 4939 | Egypt |
-| 516 | El Salvador |
-| 8 | Equatorial Guinea |
-| 3 | Eritrea |
-| 235 | Estonia |
-| 12 | Eswatini |
-| 169 | Ethiopia |
-| 3 | Falkland Islands |
-| 4 | Faroe Islands |
-| 6 | Federated States of Micronesia |
-| 19 | Fiji |
-| 875 | Finland |
-| 39900 | France |
-| 25 | French Guiana |
-| 30 | French Polynesia |
-| 31 | Gabon |
-| 15 | Gambia |
-| 165 | Georgia |
-| 126913 | Germany |
-| 797 | Ghana |
-| 13 | Gibraltar |
-| 1757 | Greece |
-| 10 | Greenland |
-| 14 | Grenada |
-| 38 | Guadeloupe |
-| 29 | Guam |
-| 670 | Guatemala |
-| 36 | Guernsey |
-| 60 | Guinea |
-| 4 | Guinea-Bissau |
-| 80 | Guyana |
-| 44 | Haiti |
-| 382 | Hashemite Kingdom of Jordan |
-| 548 | Honduras |
-| 1308 | Hong Kong |
-| 2156 | Hungary |
-| 125 | Iceland |
-| 10550 | India |
-| 59575 | Indonesia |
-| 41 | Iran |
-| 1820 | Iraq |
-| 14674 | Ireland |
-| 82 | Isle of Man |
-| 1161 | Israel |
-| 115448 | Italy |
-| 62 | Ivory Coast |
-| 174 | Jamaica |
-| 59390 | Japan |
-| 170 | Jersey |
-| 386 | Kazakhstan |
-| 5778 | Kenya |
-| 2 | Kiribati |
-| 31 | Kosovo |
-| 312 | Kuwait |
-| 60 | Kyrgyzstan |
-| 47 | Laos |
-| 239 | Latvia |
-| 752 | Lebanon |
-| 4 | Lesotho |
-| 14 | Liberia |
-| 267 | Libya |
-| 26 | Liechtenstein |
-| 287 | Luxembourg |
-| 539 | Macao |
-| 231 | Macedonia |
-| 388 | Madagascar |
-| 13 | Malawi |
-| 1114 | Malaysia |
-| 58 | Maldives |
-| 31 | Mali |
-| 95 | Malta |
-| 7 | Marshall Islands |
-| 32 | Martinique |
-| 24 | Mauritania |
-| 165 | Mauritius |
-| 10 | Mayotte |
-| 12072 | Mexico |
-| 42 | Monaco |
-| 19 | Mongolia |
-| 174 | Montenegro |
-| 4 | Montserrat |
-| 10220 | Morocco |
-| 396 | Mozambique |
-| 160 | Myanmar |
-| 50 | Namibia |
-| 2 | Nauru |
-| 955 | Nepal |
-| 25095 | Netherlands |
-| 29 | New Caledonia |
-| 10233 | New Zealand |
-| 411 | Nicaragua |
-| 16 | Niger |
-| 1574 | Nigeria |
-| 4 | Niue |
-| 2 | Norfolk Island |
-| 2 | North Korea |
-| 204 | North Macedonia |
-| 4 | Northern Mariana Islands |
-| 4986 | Norway |
-| 320 | Oman |
-| 1368 | Pakistan |
-| 4 | Palau |
-| 203 | Palestine |
-| 367 | Panama |
-| 9 | Papua New Guinea |
-| 216 | Paraguay |
-| 1135 | Peru |
-| 59094 | Philippines |
-| 2717 | Poland |
-| 14748 | Portugal |
-| 707 | Puerto Rico |
-| 269 | Qatar |
-| 366 | Republic of Lithuania |
-| 158 | Republic of Moldova |
-| 7 | Republic of the Congo |
-| 1189 | Romania |
-| 10276 | Russia |
-| 17 | Rwanda |
-| 65 | Rﺃﺏunion |
-| 9 | Saint Barthﺃﺏlemy |
-| 2 | Saint Helena |
-| 14 | Saint Lucia |
-| 15 | Saint Martin |
-| 4 | Saint Pierre and Miquelon |
-| 10 | Saint Vincent and the Grenadines |
-| 4 | Samoa |
-| 4 | San Marino |
-| 1856 | Saudi Arabia |
-| 84 | Senegal |
-| 10598 | Serbia |
-| 19 | Seychelles |
-| 20 | Sierra Leone |
-| 9409 | Singapore |
-| 14 | Sint Maarten |
-| 1090 | Slovakia |
-| 418 | Slovenia |
-| 3 | Solomon Islands |
-| 64 | Somalia |
-| 32537 | South Africa |
-| 3 | South Georgia and the South Sandwich Islands |
-| 1615 | South Korea |
-| 5 | South Sudan |
-| 70185 | Spain |
-| 121 | Sri Lanka |
-| 9 | St Kitts and Nevis |
-| 11 | Sudan |
-| 38 | Suriname |
-| 2 | Svalbard and Jan Mayen |
-| 7828 | Sweden |
-| 3916 | Switzerland |
-| 26 | Syria |
-| 15 | Sﺃ£o Tomﺃﺏ and Prﺃﺝncipe |
-| 1387 | Taiwan |
-| 16 | Tajikistan |
-| 382 | Tanzania |
-| 29683 | Thailand |
-| 32 | Togo |
-| 5 | Tokelau |
-| 3 | Tonga |
-| 130 | Trinidad and Tobago |
-| 5431 | Tunisia |
-| 2939 | Turkey |
-| 13 | Turkmenistan |
-| 13 | Turks and Caicos Islands |
-| 2 | Tuvalu |
-| 3 | U.S. Minor Outlying Islands |
-| 46 | U.S. Virgin Islands |
-| 457 | Uganda |
-| 2713 | Ukraine |
-| 2716 | United Arab Emirates |
-| 181544 | United Kingdom |
-| 865919 | United States |
-| 223 | Uruguay |
-| 177 | Uzbekistan |
-| 16 | Vanuatu |
-| 5 | Vatican City |
-| 695 | Venezuela |
-| 2257 | Vietnam |
-| 2 | Wallis and Futuna |
-| 2 | Western Sahara |
-| 320 | Yemen |
-| 31 | Zambia |
-| 46 | Zimbabwe |
+| 8746 | Afghanistan |
+| 28550 | Albania |
+| 180976 | Algeria |
+| 515 | American Samoa |
+| 8621 | Andorra |
+| 12932 | Angola |
+| 316 | Anguilla |
+| 4058 | Antigua and Barbuda |
+| 426821 | Argentina |
+| 12607 | Armenia |
+| 7563 | Aruba |
+| 16632689 | Australia |
+| 2532621 | Austria |
+| 36826 | Azerbaijan |
+| 13881 | Bahamas |
+| 19203 | Bahrain |
+| 224918 | Bangladesh |
+| 8486 | Barbados |
+| 91965 | Belarus |
+| 1807273 | Belgium |
+| 9567 | Belize |
+| 1943 | Benin |
+| 12606 | Bermuda |
+| 67 | Bhutan |
+| 95890 | Bolivia |
+| 763 | Bonaire, Sint Eustatius, and Saba |
+| 72540 | Bosnia and Herzegovina |
+| 3448 | Botswana |
+| 7296632 | Brazil |
+| 47 | British Indian Ocean Territory |
+| 1562 | British Virgin Islands |
+| 7734 | Brunei |
+| 97284 | Bulgaria |
+| 4077 | Burkina Faso |
+| 1034 | Burundi |
+| 1720 | Cabo Verde |
+| 22534 | Cambodia |
+| 6791 | Cameroon |
+| 12904120 | Canada |
+| 10385 | Cayman Islands |
+| 47 | Central African Republic |
+| 156 | Chad |
+| 142953 | Chile |
+| 305630 | China |
+| 61 | Christmas Island |
+| 170 | Cocos [Keeling] Islands |
+| 632599 | Colombia |
+| 507 | Comoros |
+| 2330 | Congo |
+| 30 | Cook Islands |
+| 102188 | Costa Rica |
+| 96966 | Croatia |
+| 535 | Cuba |
+| 9243 | Curaﺃao |
+| 224130 | Cyprus |
+| 1137009 | Czechia |
+| 709 | Democratic Republic of Timor-Leste |
+| 348134 | Denmark |
+| 2224 | Djibouti |
+| 898 | Dominica |
+| 126461 | Dominican Republic |
+| 352821 | Ecuador |
+| 613332 | Egypt |
+| 72729 | El Salvador |
+| 635 | Equatorial Guinea |
+| 63 | Eritrea |
+| 38318 | Estonia |
+| 1326 | Eswatini |
+| 21941 | Ethiopia |
+| 20 | Falkland Islands |
+| 214 | Faroe Islands |
+| 296 | Federated States of Micronesia |
+| 2141 | Fiji |
+| 129254 | Finland |
+| 6205621 | France |
+| 3731 | French Guiana |
+| 3771 | French Polynesia |
+| 3139 | Gabon |
+| 1046 | Gambia |
+| 25003 | Georgia |
+| 20940419 | Germany |
+| 112103 | Ghana |
+| 1680 | Gibraltar |
+| 285073 | Greece |
+| 1733 | Greenland |
+| 1582 | Grenada |
+| 5633 | Guadeloupe |
+| 3274 | Guam |
+| 100441 | Guatemala |
+| 5596 | Guernsey |
+| 12777 | Guinea |
+| 253 | Guinea-Bissau |
+| 9347 | Guyana |
+| 6314 | Haiti |
+| 49168 | Hashemite Kingdom of Jordan |
+| 78783 | Honduras |
+| 197754 | Hong Kong |
+| 379576 | Hungary |
+| 22097 | Iceland |
+| 1746883 | India |
+| 9104425 | Indonesia |
+| 7137 | Iran |
+| 211894 | Iraq |
+| 2362946 | Ireland |
+| 13396 | Isle of Man |
+| 183298 | Israel |
+| 19528272 | Italy |
+| 7201 | Ivory Coast |
+| 27795 | Jamaica |
+| 6923812 | Japan |
+| 27084 | Jersey |
+| 69697 | Kazakhstan |
+| 829093 | Kenya |
+| 32 | Kiribati |
+| 4436 | Kosovo |
+| 42573 | Kuwait |
+| 11246 | Kyrgyzstan |
+| 6933 | Laos |
+| 39639 | Latvia |
+| 105054 | Lebanon |
+| 132 | Lesotho |
+| 2103 | Liberia |
+| 37529 | Libya |
+| 4058 | Liechtenstein |
+| 45017 | Luxembourg |
+| 81990 | Macao |
+| 20798 | Macedonia |
+| 58284 | Madagascar |
+| 1563 | Malawi |
+| 164617 | Malaysia |
+| 9263 | Maldives |
+| 3584 | Mali |
+| 15405 | Malta |
+| 572 | Marshall Islands |
+| 4259 | Martinique |
+| 3461 | Mauritania |
+| 20936 | Mauritius |
+| 1291 | Mayotte |
+| 1661953 | Mexico |
+| 6069 | Monaco |
+| 2701 | Mongolia |
+| 25691 | Montenegro |
+| 167 | Montserrat |
+| 1492192 | Morocco |
+| 52623 | Mozambique |
+| 24369 | Myanmar |
+| 6462 | Namibia |
+| 11 | Nauru |
+| 137433 | Nepal |
+| 4098810 | Netherlands |
+| 4467 | New Caledonia |
+| 1598579 | New Zealand |
+| 57602 | Nicaragua |
+| 1871 | Niger |
+| 215105 | Nigeria |
+| 131 | Niue |
+| 11 | Norfolk Island |
+| 13027 | North Macedonia |
+| 158 | Northern Mariana Islands |
+| 826926 | Norway |
+| 43116 | Oman |
+| 196311 | Pakistan |
+| 191 | Palau |
+| 25968 | Palestine |
+| 56976 | Panama |
+| 1094 | Papua New Guinea |
+| 30396 | Paraguay |
+| 149744 | Peru |
+| 9699182 | Philippines |
+| 445818 | Poland |
+| 2320824 | Portugal |
+| 97530 | Puerto Rico |
+| 36891 | Qatar |
+| 59598 | Republic of Lithuania |
+| 25165 | Republic of Moldova |
+| 619 | Republic of the Congo |
+| 192155 | Romania |
+| 1726912 | Russia |
+| 2150 | Rwanda |
+| 7004 | Rﺃﺏunion |
+| 1201 | Saint Barthﺃﺏlemy |
+| 1831 | Saint Lucia |
+| 2341 | Saint Martin |
+| 88 | Saint Pierre and Miquelon |
+| 833 | Saint Vincent and the Grenadines |
+| 144 | Samoa |
+| 344 | San Marino |
+| 244623 | Saudi Arabia |
+| 9115 | Senegal |
+| 1776274 | Serbia |
+| 2023 | Seychelles |
+| 1980 | Sierra Leone |
+| 1501853 | Singapore |
+| 2190 | Sint Maarten |
+| 191418 | Slovakia |
+| 70471 | Slovenia |
+| 161 | Solomon Islands |
+| 7273 | Somalia |
+| 5092969 | South Africa |
+| 5 | South Georgia and the South Sandwich Islands |
+| 212622 | South Korea |
+| 228 | South Sudan |
+| 11522800 | Spain |
+| 22374 | Sri Lanka |
+| 1013 | St Kitts and Nevis |
+| 684 | Sudan |
+| 5358 | Suriname |
+| 979473 | Sweden |
+| 628667 | Switzerland |
+| 3914 | Syria |
+| 2105 | Sﺃ£o Tomﺃﺏ and Prﺃﺝncipe |
+| 222844 | Taiwan |
+| 2538 | Tajikistan |
+| 51643 | Tanzania |
+| 4518301 | Thailand |
+| 2408 | Togo |
+| 12 | Tokelau |
+| 82 | Tonga |
+| 17954 | Trinidad and Tobago |
+| 846596 | Tunisia |
+| 451622 | Turkey |
+| 2346 | Turkmenistan |
+| 2113 | Turks and Caicos Islands |
+| 7 | Tuvalu |
+| 4587 | U.S. Virgin Islands |
+| 57340 | Uganda |
+| 450214 | Ukraine |
+| 249877 | United Arab Emirates |
+| 28500362 | United Kingdom |
+| 134569463 | United States |
+| 30699 | Uruguay |
+| 31571 | Uzbekistan |
+| 1421 | Vanuatu |
+| 373 | Vatican City |
+| 90792 | Venezuela |
+| 282759 | Vietnam |
+| 28 | Wallis and Futuna |
+| 8 | Western Sahara |
+| 40232 | Yemen |
+| 4219 | Zambia |
+| 6226 | Zimbabwe |
