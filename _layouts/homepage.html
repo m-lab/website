@@ -60,10 +60,16 @@ layout: default
       </aside>
 
       <aside class="mission-col col-sm-12 col-md-5 col-lg-5">
-
-        <div>
-          <img src="images/{{ page.mission-image }}" alt="{{ page.mission-image-alt }}" />
-          {{ content }}
+        <div style="display:block; width: 20%; height: 100px; float:left;">
+          <a href="https://speed.measurementlab.net" target="_blank">
+            <img src="images/{{ page.mission-image }}" alt="{{ page.mission-image-alt }}" title="{{ page.mission-image-alt }}" style="float:left; text-align: center;" />
+          </a>
+        </div>
+        <div style="display:block; width: 80%; height: 100px; float:left;">
+          <h3 style="margin-top:1.5em;"><a href="https://speed.measurementlab.net" target="_blank">Run an NDT Test</a></h3>
+        </div>
+        <div style="width: 100%;">
+          <p>{{ content }}</p>
         </div>
 
       </aside>
