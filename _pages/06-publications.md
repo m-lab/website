@@ -17,6 +17,15 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2019
 {:.no_toc}
 
+### title
+{:.no_toc}
+
+{:.paper-description}
+
+{:.paper-author}
+
+[Read/Download](https://www.tandfonline.com/eprint/Eagps7UkB6cxnb3e3Xk3/full?target=10.1080%2F01972243.2019.1574533&){:.download-link .paper-download target="_blank"}
+
 ### Estimating Residential Broadband Capacity using Big Data from M-Lab
 {:.no_toc}
 
@@ -664,6 +673,57 @@ Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center
 [Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/7021981429_06-29-2012.pdf){:.download-link .paper-download target="_blank"}
 
 # Presentations
+
+## 2019
+{:.no_toc}
+
+### Hack for a Cause 2019
+{:.no_toc}
+
+{:.paper-description}
+
+{:.paper-author}
+Chris Ritzo
+
+[View Video](){:.download-link .paper-download target="_blank"}
+[View Slides](){:.download-link .paper-download target="_blank"}
+
+### CSVconf
+{:.no_toc}
+
+{:.paper-description}
+
+{:.paper-author}
+Chris Ritzo
+
+[View Video](){:.download-link .paper-download target="_blank"}
+[View Slides](){:.download-link .paper-download target="_blank"}
+
+### AIS
+{:.no_toc}
+
+{:.paper-description}
+
+{:.paper-author}
+Chris Ritzo
+
+[View Video](){:.download-link .paper-download target="_blank"}
+[View Slides](){:.download-link .paper-download target="_blank"}
+
+### RightsCon?
+{:.no_toc}
+
+{:.paper-description}
+
+{:.paper-author}
+Chris Ritzo
+
+[View Video](){:.download-link .paper-download target="_blank"}
+[View Slides](){:.download-link .paper-download target="_blank"}
+
+## 2018
+
+### The Quilt
 
 ## 2017
 {:.no_toc}

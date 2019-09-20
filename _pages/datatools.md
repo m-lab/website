@@ -44,6 +44,7 @@ Community tools are developed by other organizations or individuals, but which l
 * [Canadian Internet Registration Authority - Internet Performance Test](https://performance.cira.ca){:target="_blank"}
 * [Google OneBox Search Results Widget](https://www.google.com/search?q=internet+speed+test&oq=internet+speed){:target="_blank"}
 * [High Speed Internet.com](https://www.highspeedinternet.com/tools/speed-test){:target="_blank"}
+* [SWIFT Rural Broadband in Canada](https://swiftruralbroadband.ca/broadband-speed-test/){:target="_blank"}
 * [West London Business](https://www.westlondon.com/techwestlondon/partners/internet-connection-speed/){:target="_blank"}
 
 ## Have we missed something?
