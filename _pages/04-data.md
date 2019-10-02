@@ -115,3 +115,19 @@ The M-Lab *test name* Data Set, *date range used*. *M-Lab test URL*
 For example:
 
 The M-Lab NDT Data Set 2009-02-11–2015-12-21. [https://measurementlab.net/tests/ndt]({{ site.baseurl }}/tests/ndt)
+
+or, in BibTeX:
+
+```
+@misc{mlab,
+        author="Measurement Lab",
+        title="The {M}-{L}ab {NDT} Data Set",
+        year="(2009-02-11 -- 2015-12-21)",
+        howpublished="\url{https://measurementlab.net/tests/ndt}",
+
+        comment="Depending on if you used viz.measurementlab.net, bigquery, or the raw data, please use one of the following notes:",
+        note="Bigquery table {\tt measurement-lab.ndt.download}",
+        note1="Google cloud storage {\tt gs://archive-measurement-lab/ndt}",
+        note2="Data visualization system \url{https://viz.measurementlab.net}",
+}
+```
