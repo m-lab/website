@@ -36,6 +36,23 @@ As a part of our transition from the web100 version of NDT server to the new pla
 
 Please cite the NDT data set as follows: **The M-Lab NDT Data Set, &lt;date range used&gt; https://measurementlab.net/tests/ndt**
 
+or, in BibTeX format:
+
+```bibtex
+@misc{mlab,
+        author="Measurement Lab",
+        title="The {M}-{L}ab {NDT} Data Set",
+        year="(2009-02-11 -- 2015-12-21)",
+        howpublished="\url{https://measurementlab.net/tests/ndt}",
+
+        comment="Depending on if you used viz.measurementlab.net, bigquery, or the raw data, please use one of the following notes:",
+        note="Bigquery table {\tt measurement-lab.ndt.download}",
+        note1="Google cloud storage {\tt gs://archive-measurement-lab/ndt}",
+        note2="Data visualization system \url{https://viz.measurementlab.net}",
+}
+```
+
+
 ## Data Collected by NDT
 
 When you run NDT, the IP address provided by your Internet Service Provider will be collected along with your measurement results. M-Lab conducts the test and publishes all test results to promote Internet research. NDT does not collect any information about you as an Internet user.

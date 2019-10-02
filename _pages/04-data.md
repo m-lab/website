@@ -116,7 +116,7 @@ For example:
 
 The M-Lab NDT Data Set 2009-02-11–2015-12-21. [https://measurementlab.net/tests/ndt]({{ site.baseurl }}/tests/ndt)
 
-or, in BibTeX:
+or, in BibTeX format:
 
 ```bibtex
 @misc{mlab,
