@@ -36,7 +36,7 @@ As a part of our transition from the web100 version of NDT server to the new pla
 
 Please cite the NDT data set as follows: **The M-Lab NDT Data Set, &lt;date range used&gt; https://measurementlab.net/tests/ndt**
 
-or, in BibTeX format:
+or, in [BibTeX](https://en.wikipedia.org/wiki/BibTeX) format:
 
 ```bibtex
 @misc{mlab,
