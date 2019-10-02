@@ -118,7 +118,7 @@ The M-Lab NDT Data Set 2009-02-11–2015-12-21. [https://measurementlab.net/test
 
 or, in BibTeX:
 
-```
+```bibtex
 @misc{mlab,
         author="Measurement Lab",
         title="The {M}-{L}ab {NDT} Data Set",
