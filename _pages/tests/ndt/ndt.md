@@ -40,7 +40,7 @@ or, in [BibTeX](https://en.wikipedia.org/wiki/BibTeX){:target="_blank"} format:
 
 ```bibtex
 @misc{mlab,
-        author="Measurement Lab",
+        author="{Measurement Lab}",
         title="The {M}-{L}ab {NDT} Data Set",
         year="(2009-02-11 -- 2015-12-21)",
         howpublished="\url{https://measurementlab.net/tests/ndt}",
