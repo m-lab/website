@@ -32,46 +32,48 @@ that naturally occurs at that site.
 
 For every site we created a q-q plot to compare upload and dowload performance, and we also calculated the expected performance at each site.  An [ipython notebook containing the full analysis] is available, but we reproduce one figure here:
 
->                                                                   akl01
->                                                                   ams03
->                                                                   ams04
->                                                                   ams05 atl08
->                                                                   ams08 bru01
->                                                                   ath03 bru03
->                                                                   beg01 den02
->                                                                   bom01 dfw03
->                                                                   bom02 dfw07
->                                                                   bru02 dub01 arn03
->                                                                   bru04 fln01 arn04
->                                                                   cpt01 fra03 atl02
->                                                                   fra01 iad02 atl03
->                                                                   fra02 iad03 atl04
->                                                                   fra04 iad04 atl07
->                                                                   ham02 iad05 den04
->                                                                   lhr02 iad06 den05
->                                                                   lhr03 lga03 dfw02
->                                                                   lhr04 lga04 dfw05
->                                                                   lhr05 lga06 dfw08
->                                                                   lis01 lga08 lax02
->                                                                   lju01 lis02 lax03
->                                                                   mad03 mia04 lax04
->                                                                   mad04 mia06 lax05
->                                                                   mil02 mnl01 lax06
->                                                                   mil03 nuq02 mia02
->                                                                   mil05 nuq03 mia03
->                                                                   nbo01 nuq04 mia05
->                                                                   par04 nuq06 nuq07
->                                                             jnb01 prg02 ord06 ord02
->                                                             mad02 prg03 sea02 ord03
->                                                             mil04 prg04 sea04 ord04 arn02
->                                                             par02 prg05 sea08 ord05 arn05
->                                                             par03 syd02 sin01 sea07 bcn01
->                                                             par05 syd03 svg01 tgd01 hnd02
->                                                             tnr01 tpe01 trn01 wlg02 sea03       lga05
->                                                             vie01 tun01 yyz02 yvr01 ywg01 yqm01 yyc02
-> -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
->    0%   10%   20%   30%   40%   50%   60%   70%   80%   90%  100%  110%  120%  130%  140%  150%  160%  170%
->            Each site's new download performance as a percentage of old (Arithmetic Mean)
+```txt
+                                                                   akl01
+                                                                   ams03
+                                                                   ams04
+                                                                   ams05 atl08
+                                                                   ams08 bru01
+                                                                   ath03 bru03
+                                                                   beg01 den02
+                                                                   bom01 dfw03
+                                                                   bom02 dfw07
+                                                                   bru02 dub01 arn03
+                                                                   bru04 fln01 arn04
+                                                                   cpt01 fra03 atl02
+                                                                   fra01 iad02 atl03
+                                                                   fra02 iad03 atl04
+                                                                   fra04 iad04 atl07
+                                                                   ham02 iad05 den04
+                                                                   lhr02 iad06 den05
+                                                                   lhr03 lga03 dfw02
+                                                                   lhr04 lga04 dfw05
+                                                                   lhr05 lga06 dfw08
+                                                                   lis01 lga08 lax02
+                                                                   lju01 lis02 lax03
+                                                                   mad03 mia04 lax04
+                                                                   mad04 mia06 lax05
+                                                                   mil02 mnl01 lax06
+                                                                   mil03 nuq02 mia02
+                                                                   mil05 nuq03 mia03
+                                                                   nbo01 nuq04 mia05
+                                                                   par04 nuq06 nuq07
+                                                             jnb01 prg02 ord06 ord02
+                                                             mad02 prg03 sea02 ord03
+                                                             mil04 prg04 sea04 ord04 arn02
+                                                             par02 prg05 sea08 ord05 arn05
+                                                             par03 syd02 sin01 sea07 bcn01
+                                                             par05 syd03 svg01 tgd01 hnd02
+                                                             tnr01 tpe01 trn01 wlg02 sea03       lga05
+                                                             vie01 tun01 yyz02 yvr01 ywg01 yqm01 yyc02
+ -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+    0%   10%   20%   30%   40%   50%   60%   70%   80%   90%  100%  110%  120%  130%  140%  150%  160%  170%
+            Each site's new download performance as a percentage of old (Arithmetic Mean)
+```
 
 From this chart, we can see that no site saw worse performance on the new
 platform as compared to the old platform. As such, we are rolling ahead with the
