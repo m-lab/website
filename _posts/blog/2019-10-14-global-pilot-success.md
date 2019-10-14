@@ -30,7 +30,7 @@ some sites experience highly variable Internet performance, so whether a worse
 performance is statistically significant depends on the base level of variation
 that naturally occurs at that site.
 
-For every site we created a q-q plot to compare upload and dowload performance, and we also calculated the expected performance at each site.  An [ipython notebook containing the full analysis](/data/docs/analysis/2019-10-14-pilot-analysis) is available, but we reproduce one figure here:
+For every site we created a q-q plot to compare upload and dowload performance, and we also calculated the expected performance at each site.  An [ipython notebook containing the full analysis](/data/docs/analysis/2019-10-14-pilot-assessment) is available, but we reproduce one figure here:
 
 ```txt
                    akl01
