@@ -14,7 +14,7 @@ categories:
   - tcp-info
 ---
 
-We deployed [the new M-Lab platform to 1/3rd of the M-Lab fleet](), and now we
+We deployed [the new M-Lab platform to 1/3rd of the M-Lab fleet](/data/docs/analysis/2019-10-14-pilot-assessment/), and now we
 need to assess whether or not it is a performance regression, relative to the
 old platform.  As long as we can be sure the performance of the new platform
 does not constitute a regression, then we can roll out the new platform and be
