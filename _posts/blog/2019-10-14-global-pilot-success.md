@@ -22,6 +22,12 @@ confident that we have not made anything worse.
 
 <!--more-->
 
+We found no site saw worse performance on the new
+platform as compared to the old platform. As such, we are rolling ahead with the
+new M-Lab platform worldwide, with a small exception for our US sites, where we
+are keeping the old platform running for the duration of the FCC's [Measuring Broadband
+America Program](https://www.fcc.gov/general/measuring-broadband-america){:target="_blank"} quiet period in support of a long-term project partner.
+
 In an effort to allow others to reproduce our work, we put everything in the
 following
 Jupyter notebook:
