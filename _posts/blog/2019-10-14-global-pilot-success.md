@@ -22,7 +22,7 @@ confident that we have not made anything worse.
 
 <!--more-->
 
-We found no site saw worse performance on the new
+We found that no site saw worse performance on the new
 platform as compared to the old platform. As such, we are rolling ahead with the
 new M-Lab platform worldwide, with a small exception for our US sites, where we
 are keeping the old platform running for the duration of the FCC's [Measuring Broadband
