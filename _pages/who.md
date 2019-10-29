@@ -71,7 +71,7 @@ grid-section:
         image: "ooni.png"
         heading: "OONI"
         desc: "Open Observatory for Network Interference"
-      - link: "http://www.upmc.fr/en/"
+      - link: "https://paris-traceroute.net/"
         image: "paris-traceroute.png"
         heading: "Paris Traceroute"
         desc: "University Pierre et Marie Curie"
