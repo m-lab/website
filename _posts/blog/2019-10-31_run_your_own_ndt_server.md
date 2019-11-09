@@ -67,7 +67,6 @@ cd ndt-server
 
 ```~bash
 $ docker run -d --network=host              \
-           --publish 443:4443               \
            --volume `pwd`/certs:/certs:ro   \
            --volume `pwd`/datadir:/datadir  \
            --read-only                      \
@@ -164,21 +163,13 @@ When running `ndt-server` Full Stack, we use a different mount point in the cont
 
 * ```--volume `pwd`/datadir:/var/spool/ndt``` replaces ```--volume `pwd`/datadir:/datadir```
 
-And we'll add a volume to support UUID generation:
-
-* ```--volume `pwd`/var-local:/var/local```
-
-Create the folder to support UUIDs: ```mkdir -p `var-local/local` ```
-
 Then run our "fullstack" container, `measurementlab/ndt`:
 
 ```~bash
-docker run -d --network=host                \
-           --publish 443:4443               \
+docker run --network=host                \
            --volume `pwd`/certs:/certs:ro   \
            --volume `pwd`/datadir:/var/spool/ndt  \
-           --volume `pwd`/var-local:/var/local    \
-           --read-only                      \
+           --volume `pwd`/var-local:/var/local \
            --user `id -u`:`id -g`           \
            --cap-drop=all                   \
         measurementlab/ndt                  \
@@ -189,6 +180,8 @@ docker run -d --network=host                \
            -ndt5_addr 192.168.1.123:3001    \
            -ndt5_wss_addr 192.168.1.123:3010
 ```
+
+docker run --network=host                           --volume `pwd`/certs:/certs:ro              --volume `pwd`/datadir:/var/spool/ndt             --volume `pwd`/var-local:/var/local            --user `id -u`:`id -g`                      --cap-drop=all                           critzo/ndt:testing                             -cert /certs/cert.pem                       -key /certs/key.pem                         -datadir /var/spool/ndt                           -ndt7_addr 192.168.1.123:4443               -ndt5_addr 192.168.1.123:3001               -ndt5_wss_addr 192.168.1.123:3010
 
 ### Full Stack ndt-server Data
 
@@ -277,5 +270,5 @@ docker run -it libndt:latest
 /libndt # ./libndt-client --upload --json --websocket --tls --insecure --batch 192.168.1.123
 
 ## ndt7 over TLS
-/libndt # ./libndt-client --upload --json --websocket --ndt7 --port 4443 --tls -
--insecure --batch 192.168.1.123
+/libndt # ./libndt-client --upload --json --websocket --ndt7 --port 4443 --tls --insecure --batch 192.168.1.123
+```
