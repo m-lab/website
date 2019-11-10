@@ -2,18 +2,23 @@
 layout: blog
 title: "Running Your Own ndt-server and Clients"
 author: "Chris Ritzo"
-date: 2019-10-31
+date: 2019-11-11
 breadcrumb: blog
 categories:
-  - platform
-  - research
   - data
-  - kernel
   - open-source
   - performance
   - tcp-info
   - ndt-server
 ---
+
+If you've followed the M-Lab blog over the past year and a half, you'll know that we've been engineering and testing a massive upgrade to our server software and how it's managed and deployed \[[1]({{ site.baseurl }}/blog/modernizing-mlab)\] \[[2]({{ site.baseurl }}/blog/mlab-20-platform-migration-update)\] \[[3]({{ site.baseurl }}/blog/global-pilot-entry/)\] \[[4]({{ site.baseurl }}/blog/global-pilot-success/)\]. That's been a ton of work, and our team is excited to now complete the migration from the PLC/vserver platform to the new k8s stack.
+
+We expect some great derivative outcomes of migrating to Docker and Kubernetes both for ourselves in managing the platform and measurement tests we host, and for the community as well. In particular, the NDT server was completely rewritten in _Golang_, and being fully "dockerized" the server is now portable and usable outside of the M-Lab platform by others. This is really exciting because not only can M-Lab use our tools to measure the public Internet, but _anyone_ can run our server now to measure their network privately using the same methods and tools.<!-- more -->
+
+To illustrate the use of _ndt-server_ outside of the M-Lab context, I put together this post as a demo so others might take _ndt-server_ for a test drive in their networks. I've used a publicly available [ndt fullstack](#link){:target="_blank"} Docker image for NDT from [M-Lab's Dockerhub](#link){:target="_blank"}. The fullstack image provides the _ndt-server_ container, and all of the "sidecar" container services that M-Lab uses on our servers to gather rich data from client tests: _tcp-info_, _traceroute_, _uuid_, and _packet header captures_.
+
+Important to note here is that every network that might run their own _ndt-server_ will have unique needs and configurations. The demo assumes a basic understanding of installing and configuring linux systems, are comfortable with the command line, and can make configurations to your network. The hardware used in this demo doesn't mean we recommend it for production use. Lastly, our _fullstack_ image should be considered a demo at this time, not intended for production use **_yet_**. As we complete our production rollout of the new platform, the fullstack image will be improved to make it more production ready. In the meantime, if you give this demo a try yourself and need help, reach out to us at [support@measurementlab.net](mailto:support@measurementlab.ndt).
 
 ## Setup and run an ndt-server on Ubuntu 18.04 LTS
 
