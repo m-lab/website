@@ -17,4 +17,6 @@ More details about the ndt5 protocol can be found in the [README for ndt5 on Git
 
 ## ndt5 BigQuery "Faithful" Schema
 
-{% include schema_ndt5_faithful.html %}
+<div class="table-responsive" markdown="1">
+{% include schema_ndtresultrow.md %}
+</div>

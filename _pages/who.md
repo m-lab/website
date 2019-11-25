@@ -67,7 +67,7 @@ grid-section:
         image: "npad.png"
         heading: "NPAD"
         desc: "Pittsburgh Supercomputing Center"
-      - link: "https://ooni.torproject.org/"
+      - link: "https://ooni.org/"
         image: "ooni.png"
         heading: "OONI"
         desc: "Open Observatory for Network Interference"
