@@ -2,7 +2,7 @@
 layout: blog
 title: "Supporting Internet Self Determination at the 2019 Indigenous Connectivity Summit"
 author: "Chris Ritzo"
-date: 2019-10-22
+date: 2019-10-25
 breadcrumb: blog
 categories:
   - community
@@ -24,10 +24,10 @@ The two day conference in Hilo was followed by a three day community network tra
 
 ![2019 ICS Network Training & Build]({{ site.baseurl }}/images/blog/2019-11-21_ICS/ICS_network_build1.png)
 
-The Nation partnered with Hawaiian Telcom to bring fiber service to the community, which is now the backhaul for two LTE-U base stations and several Customer Premise Equipment units (CPEs) that spread the service throughout the community. The community is excited about the network, as [Brandon Maka'awa'awa](https://twitter.com/ISOC_NA/status/1195452508669300736){:target="_blank"}, the Deputy Head of State for the Nation of Hawai'i noted, "we see the internet as providing a better way of life for us ... politically, economically, even socially. It means that our kids can do their homework at home now. They don't have to go to Starbucks. They don't have to go to McDonalds at 8 o'clock at night to finish a project because they can't upload something because we don't have the bandwidth."
+The Nation partnered with Hawaiian Telcom to bring fiber service to the community, which is now the [backhaul](https://en.wikipedia.org/wiki/Backhaul_(telecommunications)){:target="_blank"} for two [LTE-U](https://en.wikipedia.org/wiki/LTE_in_unlicensed_spectrum){:target="_blank"} base stations and several Customer Premise Equipment units (CPEs) that spread the service throughout the community. The community is excited about the network, as [Brandon Maka'awa'awa](https://twitter.com/ISOC_NA/status/1195452508669300736){:target="_blank"}, the Deputy Head of State for the Nation of Hawai'i noted, "we see the internet as providing a better way of life for us ... politically, economically, even socially. It means that our kids can do their homework at home now. They don't have to go to Starbucks. They don't have to go to McDonalds at 8 o'clock at night to finish a project because they can't upload something because we don't have the bandwidth."
 
 ![2019 ICS Network Training & Build]({{ site.baseurl }}/images/blog/2019-11-21_ICS/ICS_network_build2.png)
 
-The Nation's leadership allowed M-Lab to install one of the measurement computers we're using in our IMLS project, to measure the performance of the network connection using M-Lab's NDT test and using Speedtest.net. As the measurements come in, our staff will work with community members to access and use the test data to confirm that the community is receiving advertised levels of service.
+The Nation's leadership allowed M-Lab to install one of the measurement computers we're using in our IMLS project, to measure the performance of the network connection using M-Lab's NDT test and using Speedtest.net as described above. As the measurements come in, our staff will work with community members to access and use the test data to confirm that the community is receiving advertised levels of service.
 
 We're thrilled to be a supporting organization to all communities, but in particular with the network of people, nations, and networks attending ICS, and are looking forward to future work and partnerships, as well as continued support of the ICS and ISOC communities.
