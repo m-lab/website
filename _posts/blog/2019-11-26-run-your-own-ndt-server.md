@@ -2,7 +2,7 @@
 layout: blog
 title: "Running Your Own ndt-server"
 author: "Chris Ritzo"
-date: 2019-11-11
+date: 2019-11-26
 breadcrumb: blog
 categories:
   - data
@@ -16,7 +16,7 @@ If you've followed the M-Lab blog over the past year and a half, you'll know tha
 
 We expect some great derivative outcomes of migrating to Docker and Kubernetes both for ourselves in managing the platform and measurement tests we host, and for the community as well. In particular, the NDT server was completely rewritten in _Golang_, and being fully "dockerized" the server is now portable and usable outside of the M-Lab platform by others. This is really exciting because not only can M-Lab use our tools to measure the public Internet, but _anyone_ can run our server now to measure their network privately using the same methods and tools. This post kicks off a series of blogs that will demonstrate various ways to use M-Lab server and client tools, starting with `ndt-server`.<!--more-->
 
-To illustrate the use of _ndt-server_ outside of the M-Lab context, I put together this post as a demo so others might take _ndt-server_ for a test drive in their networks. I've used a publicly available [ndt fullstack](#link){:target="_blank"} Docker image for NDT from [M-Lab's Dockerhub](#link){:target="_blank"}. The fullstack image provides the _ndt-server_ container, and all of the "sidecar" container services that M-Lab uses on our servers to gather rich data from client tests: _tcp-info_, _traceroute_, _uuid_, and _packet header captures_.
+To illustrate the use of _ndt-server_ outside of the M-Lab context, I put together this post as a demo so others might take _ndt-server_ for a test drive in their networks. I've used a publicly available [ndt fullstack](https://github.com/m-lab/ndt-server/tree/master/fullstack){:target="_blank"} Docker image for NDT from [M-Lab's Dockerhub](https://hub.docker.com/repository/docker/measurementlab/ndt){:target="_blank"}. The fullstack image provides the _ndt-server_ container, and all of the "sidecar" container services that M-Lab uses on our servers to gather rich data from client tests: _tcp-info_, _traceroute_, _uuid_, and _packet header captures_.
 
 Important to note here is that every network that might run their own _ndt-server_ will have unique needs and configurations. The demo assumes that you have a basic understanding of installing and configuring linux systems, are comfortable with the command line, and can make configurations to your network, such as setting a static IP address for the server. The hardware used in this demo doesn't mean we recommend it for production use. Lastly, our _fullstack_ image should be considered a demo at this time, not intended for production use **_yet_**. As we complete our production rollout of the new platform, the fullstack image will be improved to make it more production ready. In the meantime, if you give this demo a try yourself and need help, reach out to us at [support@measurementlab.net](mailto:support@measurementlab.ndt).
 
@@ -234,4 +234,4 @@ Of course, not everyone needs to run their own server. You may want a better way
 * run an NDT client from a container
 * automatically run multiple tests to M-Lab servers, or your own `ndt-server`
 
-Fortunately, all this is possible and then some. In my next demo post, I'll demo how to use two of our supported command line client libraries, [_libndt_](#){:target="_blank"} and [_ndt7-client-go_](#){:target="_blank"}, and also demo _[Murakami](#){:target="_blank"}_ an automated test runner container with some really great features. Stay tuned!
+Fortunately, all this is possible and then some. In my next demo post, I'll demo how to use two of our supported command line client libraries, [_libndt_](https://github.com/measurement-kit/libndt/){:target="_blank"} and [_ndt7-client-go_](https://github.com/m-lab/ndt7-client-go){:target="_blank"}, and also demo _[Murakami](https://github.com/m-lab/murakami){:target="_blank"}_ an automated test runner container with some really great features. Stay tuned!
