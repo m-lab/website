@@ -1,15 +1,13 @@
 ---
 layout: blog
-title: "Running Your Own ndt-server"
+title: "Platform Transition Update - NDT Dataset, Tables, & Views"
 author: "Chris Ritzo"
-date: 2019-11-26
+date: 2019-12-13
 breadcrumb: blog
 categories:
   - data
-  - open-source
-  - performance
-  - tcp-info
-  - ndt-server
+  - ndt
+  - schema
 ---
 
 If you've followed the M-Lab blog over the past year and a half, you'll know that we've been engineering and testing a massive upgrade to our server software and how it's managed and deployed \[[1]({{ site.baseurl }}/blog/modernizing-mlab)\] \[[2]({{ site.baseurl }}/blog/mlab-20-platform-migration-update)\] \[[3]({{ site.baseurl }}/blog/global-pilot-entry/)\] \[[4]({{ site.baseurl }}/blog/global-pilot-success/)\]. That's been a ton of work, and our team is excited to now complete the migration from the PLC/vserver platform to the new k8s stack.
