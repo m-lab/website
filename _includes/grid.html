@@ -19,7 +19,9 @@
 
 {% if page.url == '/tests/' %}
   {% assign img_dir = "/tests" %}
-{% elsif page.url == '/who/' %}
+{% elsif page.url == '/who/' || page.url == '/about/' %}
+  {% assign img_dir = "/about" %}
+{% elsif page.url == '/about/' %}
   {% assign img_dir = "/about" %}
 {% endif %}
 

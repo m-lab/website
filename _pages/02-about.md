@@ -4,10 +4,36 @@ permalink: /about/
 title: About
 page-title: "What is Measurement Lab?"
 menu-item: true
-videoid: "RnIVMfBP4So"
-video-heading: "Video Overview of M-Lab"
-video-subheading: ""
 breadcrumb: about
+grid-section:
+  - group-heading: "M-Lab Founders"
+    group-list-class: "l-grid l-3col"
+    grid-img-class: " framed"
+    grid-items:
+      - link: ""
+        image: "vint-cerf.png"
+        heading: "Vint Cerf"
+        desc: "Google"
+      - link: ""
+        image: "sascha-meinrath.jpg"
+        heading: "Sascha Meinrath"
+        desc: "Open Technology Institute"
+      - link: ""
+        image: "larry-peterson.jpg"
+        heading: "Larry Peterson"
+        desc: "Princeton University"
+      - link: ""
+        image: "derek-slater.png"
+        heading: "Derek Slater"
+        desc: "Google"
+      - link: ""
+        image: "stephen-stuart.png"
+        heading: "Stephen Stuart"
+        desc: "Google"
+      - link: ""
+        image: "meredith-whittaker.png"
+        heading: "Meredith Whittaker"
+        desc: "Google"
 ---
 
 # Open Internet Measurement
