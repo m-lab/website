@@ -5,35 +5,6 @@ title: About
 page-title: "What is Measurement Lab?"
 menu-item: true
 breadcrumb: about
-grid-section:
-  - group-heading: "M-Lab Founders"
-    group-list-class: "l-grid l-3col"
-    grid-img-class: " framed"
-    grid-items:
-      - link: "https://ai.google/research/people/author32412"
-        image: "vint-cerf.png"
-        heading: "Vint Cerf"
-        desc: "Google"
-      - link: "https://thexlab.org/"
-        image: "sascha-meinrath.jpg"
-        heading: "Sascha Meinrath"
-        desc: "X-Lab"
-      - link: "https://www.cs.princeton.edu/~llp/"
-        image: "larry-peterson.jpg"
-        heading: "Larry Peterson"
-        desc: "Princeton University"
-      - link: "https://www.linkedin.com/in/derekslater/"
-        image: "derek-slater.png"
-        heading: "Derek Slater"
-        desc: "Google"
-      - link: "https://research.google/people/StephenStuart/"
-        image: "stephen-stuart.png"
-        heading: "Stephen Stuart"
-        desc: "Google"
-      - link: "https://ainowinstitute.org/people/meredith-whittaker.html"
-        image: "meredith-whittaker.png"
-        heading: "Meredith Whittaker"
-        desc: "AI Now Institute"
 ---
 
 # Open Internet Measurement
@@ -73,4 +44,4 @@ In 2008, [Vint Cerf](http://www.google.com/corporate/execs.html#vint){:target="_
 
 There also was no public resource that could provide combined performance data to policymakers or to consumers interested in understanding their Internet performance over time. As a result of these conversations, M-Lab was founded to help address the core problems experienced by researchers and to promote large-scale open source measurement of the Internet.
 
-M-Lab was [founded]({{ site.baseurl }}/who) in 2009 by [New America’s Open Technology Institute](https://www.newamerica.org/oti){:target="_blank"}, the [PlanetLab Consortium](https://www.planet-lab.org/){:target="_blank"}, Google, and a group of academic researchers.
+M-Lab was [founded]({{ site.baseurl }}/who/#m-lab-founders) in 2009 by [New America’s Open Technology Institute](https://www.newamerica.org/oti){:target="_blank"}, the [PlanetLab Consortium](https://www.planet-lab.org/){:target="_blank"}, Google, and a group of academic researchers.
