@@ -10,13 +10,15 @@ categories:
   - schema
 ---
 
-If you've been following our blog over the last few months, you know M-Lab has been working toward a complete server platform upgrade. In September and October, we paused our platform upgrade to support the United States Federal Communications Commission's (FCC) annual Measuring Broadband America program (MBA). For many years, FCC contractor SamKnows has used the M-Lab platform for the "off-net" measurements in the MBA program. Once the official end of the MBA data collection period was announced, the M-Lab team began upgrading the remaining servers in our fleet. As of November 20, 2019, all M-Lab servers are now managed by Kubernetes, running Docker container services for all experiments.
+If you've been following our blog over the last few months, you know M-Lab has been working toward a complete server platform upgrade. As of November 20, 2019, all M-Lab servers are now managed by Kubernetes, running Docker container services for all experiments. This transition has greatly improved our platform management, this post addresses the short term impact on downstream data users and applications, and outlines a temporary solution and our longer term for new NDT tables/views.<!--more-->
 
-This transition has greatly improved our platform management, this post addresses the short term impact on downstream data users and applications, and outlines a temporary solution and our longer term for new NDT tables/views.<!--more-->
+## Platform Transition Timeline
+
+At the end of August, the platform was ready to be fully transitioned. In September and October, we paused the platform upgrade to support the United States Federal Communications Commission's (FCC) annual [Measuring Broadband America program (MBA)](https://www.fcc.gov/general/measuring-broadband-america){:target="_blank"}. For many years, M-Lab has donated space on our servers for use by [SamKnows](https://www.samknows.com/){:target="_blank"}, the FCC's contractor for the MBA program. SamKnows has used the M-Lab platform for the MBA program's "off-net" measurements. Once the official end of the MBA data collection period was announced, the M-Lab team began upgrading the remaining servers in our fleet.
 
 ## Change in NDT data publishing dataset, tables, and views
 
-During the staged rolling upgrade to `ndt-server`, NDT test data were published to two different datasets. Our ETL pipeline made NDT tests collected by the `web100` version of the NDT server available in these BigQuery Views:
+During the staged rolling upgrade to `ndt-server` from [web100 to tcp_info]({{ site.baseurl }}/blog/modernizing-mlab/), NDT test data were published to two different datasets. Our ETL pipeline made NDT tests collected by the `web100` version of the NDT server available in these BigQuery Views:
 
 * `measurement-lab.ndt.recommended`
 * `measurement-lab.ndt.downloads`
@@ -33,7 +35,7 @@ And a new view has been created, which stores `tcpinfo` values, and client / ser
 
 ## Current impact of tcpinfo transition on queries
 
-Having the transition to the new `ndt-server` completed is an accomplishment that our team is celebrating. However, we still have a little more work to do. If you've tried to query `ndt.web100`, `ndt.recommended`, `ndt.downloads`, or `ndt.uploads` recently, you may have noticed a decrease in test volume through November, with no results after November 20.
+The transition to the new `ndt-server` completed is an accomplishment that our team is celebrating. However, we still have a little more work to do. If you've tried to query `ndt.web100`, `ndt.recommended`, `ndt.downloads`, or `ndt.uploads` recently, you may have noticed a decrease in test volume through November, with no results after November 20.
 
 To see the impact of this transition in test counts, we can run a query to count the number of tests in each table per day over the timeline of the platform transition, roughly 2019-07-01 through 2019-11-20:
 
@@ -59,7 +61,7 @@ ORDER BY web100_date
 
 The query results show decreasing daily test counts in `measurement-lab.ndt.recommended` and increasing daily test counts in `measurement-lab.ndt.ndt5` between 2019-07-18 and 2019-11-20.
 
-Our new canonical table for `ndt5` data is `measurement-lab.ndt.ndt5`, but currently only test data is present there-- it doesn't yet contain annotated fields parsed by our annotation service. So in the short term, to query for client geographic fields or other metadata, you must query both tables to get NDT results from `measurement-lab.ndt.ndt5` and some test metadata from `measurement-lab.ndt.tcpinfo` using the `UUID` field.
+All new test data are available in `measurement-lab.ndt.ndt5` and test annotations are available in `measurement-lab.net.tcpinfo`. If you need annotation fields with the test results, in the short term you must query both tables using the `UUID` field to match test rows with their annotations.
 
 Additionally, the platform change from `web100` to `tcp_info` will likely require some changes to your queries. There are big differences in the values collected by `web100` and `tcp_info`. We have attempted to map the most common metrics and fields from each in the table below. If there are `web100` values that you previously used that are not listed below, please let us know.
 
@@ -182,6 +184,6 @@ ORDER BY ndt5.partition_date ASC, ndt5.log_time ASC
 <br>
 ## What's next?
 
-By the end of January 2020, the M-Lab team will create and update the schema for `measurement-lab.ndt.ndt5`, providing unified views of NDT data collected before and after our transition to the new `ndt-server`. Until that time, we encourage users of our datasets to either use a JOIN to retrieve metadata for NDT tests results, and to wait for the updated `ndt5` schema to update their queries or applications that query for M-Lab data.
+By the end of January 2020, the M-Lab team will update the schema for `measurement-lab.ndt.ndt5`, providing unified views of NDT data collected before and after our transition to the new `ndt-server`. Until that time, we encourage users of the `ndt` dataset to retrieve test metadata from the `measurement-lab.ndt.tcpinfo` table as described above. Watch for future blog posts for updates.
 
 If you have questions or concerns with these changes or need assistance transitioning your queries, please reach out via support@measurementlab.net.
