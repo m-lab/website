@@ -23,7 +23,7 @@ based on docker, kubernetes, and runs on stock Linux kernels. It leverages
 kernel APIs and virtualization technologies that did not exist when the first
 M-Lab was built and provides unprecedented transparency and reproducibility.
 
-Now we're running new and backward compatible measurement services, with
+Now we're running both new and backward compatible measurement services, with
 plans to add more soon:
 
 * [NDT]({{site.baseurl}}/tests/ndt/)
