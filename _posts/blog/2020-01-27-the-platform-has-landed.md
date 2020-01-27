@@ -31,8 +31,8 @@ plans to add more soon:
 * [WeHe](https://dd.meddle.mobi/)
 
 These primary measurement services run alongside core service and sidecar
-containers that collect additional instrumentation from tcp-info,
-packet-headers, traceroute-caller, and switch utilization.
+containers that collect additional instrumentation from [tcp-info][11],
+[packet-headers][13], [traceroute-caller][12], and [switch utilization][14].
 
 Increasingly, we are focused on accessibility of these new datatypes such as
 in [NDT Dataset, Tables, & Views][5]. Look forward to more updates soon!
@@ -41,8 +41,8 @@ in [NDT Dataset, Tables, & Views][5]. Look forward to more updates soon!
 
 We could not have done this alone.
 
-From 2009 through 2019, [PlanetLab][6] kept the web100- and vserver-based
-M-Lab platform running. This included building custom kernels to fix bugs and
+From 2009 through 2019, [PlanetLab][6] kept the web100- and vserver-based M-Lab
+platform running. This included building custom kernels to fix bugs and
 support each new generation of hardware. This included keeping the boot
 servers running through certificate updates, server failures, and major
 upgrades. Special thanks to Michael Wawrzoniak for his years of support to
@@ -51,7 +51,8 @@ support.
 
 Thanks to [isc.org](https://isc.org) and
 [greenhost.net](https://greenhost.net/) for providing M-Lab with
-primary/secondary DNS resolution for millions of clients around the world.
+primary/secondary DNS resolution for hundreds of millions of clients around
+the world.
 
 Thanks to [New America's Open Technology Institute][8] for leadership and
 support over the years.
@@ -80,3 +81,7 @@ Thank you!
 [8]: https://www.newamerica.org/oti/
 [9]: https://www.fcc.gov/general/measuring-broadband-america
 [10]: https://www.measurementlab.net/who/#supporting-partners
+[11]: https://github.com/m-lab/tcp-info
+[12]: https://github.com/m-lab/traceroute-caller
+[13]: https://github.com/m-lab/packet-headers
+[14]: https://github.com/m-lab/collectd-mlab
