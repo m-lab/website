@@ -26,14 +26,15 @@ COUNT(*) AS num
 FROM (
 SELECT
   DATE(TestTime) as ts
-FROM `mlab-oti.base_tables.traceroute` 
-WHERE 
+FROM `mlab-oti.base_tables.traceroute`
+WHERE
 DATE(_PARTITIONTIME) BETWEEN DATE("2019-01-01") AND DATE("2020-01-31")
 )
 
 GROUP BY ts
 ORDER BY ts ASC
 ~~~
+
 ![tests_change]({{ site.baseurl }}/images/blog/tests.png)
 
 For number of hops in all those tests, we observed the drop of hops during platform rollout process as well due to the same reason described above. After we launched the fixed Docker image in early Jan, 2020, the number of hops jump back and expected to recover over time.
@@ -49,7 +50,7 @@ SELECT
   hops.Source.IP AS hop_ip,
 FROM  `mlab-oti.batch.traceroute` as traceroute,
      UNNEST(traceroute.Hop) as hops
-WHERE 
+WHERE
 
 DATE(_PARTITIONTIME) BETWEEN DATE("2019-01-01") AND DATE("2020-01-31")
 
@@ -59,4 +60,5 @@ GROUP BY ts
 ORDER BY ts ASC
 
 ~~~
+
 ![hops_change]({{ site.baseurl }}/images/blog/hop.png)
