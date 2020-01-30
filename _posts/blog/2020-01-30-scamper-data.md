@@ -31,7 +31,6 @@ FROM `mlab-oti.base_tables.traceroute`
 WHERE
 DATE(_PARTITIONTIME) BETWEEN DATE("2019-01-01") AND DATE("2020-01-31")
 )
-
 GROUP BY ts
 ORDER BY ts ASC
 ~~~
@@ -52,14 +51,97 @@ SELECT
 FROM  `mlab-oti.batch.traceroute` as traceroute,
      UNNEST(traceroute.Hop) as hops
 WHERE
-
 DATE(_PARTITIONTIME) BETWEEN DATE("2019-01-01") AND DATE("2020-01-31")
-
 )
-
 GROUP BY ts
 ORDER BY ts ASC
 
 ~~~
 
 ![hops_change]({{ site.baseurl }}/images/blog/hop.png)
+
+We further compare the pool of NDT and the traceroute coverage for those tests by the uuid binding:
+
+Number of new-platform S2C tests during this time range that have a traceroute with the same UUID as the s2c channel's UUID:
+
+~~~sql
+SELECT COUNT(*) as total
+FROM `measurement-lab.ndt.ndt5` as ndt5 INNER JOIN `mlab-oti.base_tables.traceroute` as troute on ndt5.result.s2c.uuid = troute.uuid
+WHERE result.S2C IS NOT NULL
+  AND ndt5.partition_date BETWEEN DATE("2020-01-10") AND DATE("2020-01-20")
+  AND ndt5.result.S2C.uuid IS NOT NULL
+  AND ndt5.result.S2C.uuid != ""
+  AND ndt5.result.Control.uuid IS NOT NULL
+  AND ndt5.result.Control.uuid != ""
+  AND EXTRACT(DATE FROM troute._PARTITIONTIME) BETWEEN DATE("2020-01-10") AND DATE("2020-01-20")
+  AND troute.uuid IS NOT NULL
+  AND troute.uuid != ""
+~~~
+
+The output is 13,323,344.
+The total number of new-platform S2C tests during this time range:
+
+~~~sql
+SELECT COUNT(*) as total
+FROM `measurement-lab.ndt.ndt5` as ndt5
+WHERE result.S2C IS NOT NULL
+  AND ndt5.partition_date BETWEEN DATE("2020-01-10") AND DATE("2020-01-20")
+  AND ndt5.result.S2C.uuid IS NOT NULL
+  AND ndt5.result.S2C.uuid != ""
+  AND ndt5.result.Control.uuid IS NOT NULL
+  AND ndt5.result.Control.uuid != ""
+~~~
+
+The output is 21,553,152. This indicates that 13,323,344 / 21,553,152 = 62% of tests have a corresponding traceroute.
+
+We can further check how many unique client IPs from NDT tests covered by traceroute. If we set the time window as 2 days (2020/01/10 - 2020/01/11):
+
+~~~sql
+SELECT
+COUNT(DISTINCT client_ip) AS num
+FROM (
+SELECT ndt5.result.s2c.ClientIP as client_ip
+FROM `measurement-lab.ndt.ndt5` as ndt5
+WHERE result.S2C IS NOT NULL
+  AND ndt5.partition_date BETWEEN DATE("2020-01-10") AND DATE("2020-01-11")
+  AND ndt5.result.S2C.uuid IS NOT NULL
+  AND ndt5.result.S2C.uuid != ""
+  AND ndt5.result.Control.uuid IS NOT NULL
+  AND ndt5.result.Control.uuid != ""
+)
+~~~
+
+Output is 1,526,624 unique IP from NDT tests within 2 days.
+
+This is the unique IP of those NDT tests that also have a traceroute in the same time range:
+
+~~~sql
+SELECT
+COUNT(DISTINCT client_ip) AS num
+FROM (
+SELECT ndt5.result.s2c.ClientIP as client_ip
+FROM `measurement-lab.ndt.ndt5` as ndt5 LEFT JOIN `mlab-oti.base_tables.traceroute` as troute on ndt5.result.s2c.ClientIP = troute.Destination.IP
+WHERE result.S2C IS NOT NULL
+  AND ndt5.partition_date BETWEEN DATE("2020-01-10") AND DATE("2020-01-11")
+  AND ndt5.result.S2C.uuid IS NOT NULL
+  AND ndt5.result.S2C.uuid != ""
+  AND ndt5.result.ClientIP IS NOT NULL
+  AND ndt5.result.ClientIP != ""
+  AND ndt5.result.Control.uuid IS NOT NULL
+  AND ndt5.result.Control.uuid != ""
+  AND EXTRACT(DATE FROM troute._PARTITIONTIME) BETWEEN DATE("2020-01-10") AND DATE("2020-01-11")
+  AND troute.uuid IS NOT NULL
+  AND troute.uuid != ""
+  AND troute.Destination.IP IS NOT NULL
+  AND troute.Destination.IP != ""
+  )
+~~~
+
+The output is 1,078,092. That indicated that 1,078,092/1,526,624 = 70% unique IPs has a traceroute test in our dataset within 2 days.
+
+If we reduce the window to one day (2020/01/10), the coverage is about the same: 579,229/814,794 = 70%
+
+If we extend the time range from 2 days to 3 days (2020/01/10 - 2020/01/12), The coverage is 1,529,755/2,184,580 = 70% in this 3-day time range. So it is relatively stable that 70% client IPs have a traceroute in our database.
+
+Overall, we can conclude that the new traceroute data set can be binded with corresponding NDT tests much more easily through uuid and BigQuery join tables. The number of tests are more than legacy test sets. And we will continue to make the traceroute data more reliable and easier to use for researchers and M-Lab partners.
+
