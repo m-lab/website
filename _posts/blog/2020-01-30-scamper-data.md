@@ -9,6 +9,7 @@ categories:
   - paris-traceroute
   - traceroute
   - community
+---
 
 M-Lab has always committed to provide traceroute data for the tests running on M-Lab platform. Since we launched [new platform](https://www.measurementlab.net/blog/global-pilot-success/#m-lab-2.0-platform:-global-pilot-assessment) in 2019 Q4, the new traceroute binary, [Scamper](https://www.caida.org/tools/measurement/scamper/), replaced [Paris Traceroute](https://paris-traceroute.net/) on all our servers. Our BigQuery table for traceroute now has unified [schema](https://www.measurementlab.net/blog/traceroute-bq-newdata-available/#new-traceroute-table-and-schema-now-available) to cover both the legacy Paris Traceroute test data and new Scamper data. This blog is to analyze the difference between the legacy data and new data.
 
