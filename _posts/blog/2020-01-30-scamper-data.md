@@ -2,7 +2,7 @@
 layout: blog
 title: "New Traceroute Binary on M-Lab platform"
 author: "Ya Chang"
-date: 2020-01-20
+date: 2020-01-31
 breadcrumb: blog
 categories:
   - data
