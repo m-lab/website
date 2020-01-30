@@ -681,14 +681,65 @@ Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center
 {:.no_toc}
 
 {:.paper-description}
+M-Lab's Program Management and Community Lead, Chris Ritzo, gave a keynote to kick off Hack for a Cause 2019, April 26-28, 2019 in Eugene, OR. The grand challenge was Speedup America, a web application that aggregates M-Lab data, the NDT speed test, and requests enhanced geolocation within the web browser. The grand challenge was put forward by Lane County government, to encourage innovation to build understanding of broadband availability and quality of service with high geographic accuracy. For M-Lab, Speedup America represents a growing developer community and the use of our public data and open source tools to serve the needs of local and regional governments and municipalities.
 
 {:.paper-author}
 Chris Ritzo
 
-[View Video](){:.download-link .paper-download target="_blank"}
-[View Slides](){:.download-link .paper-download target="_blank"}
+[2019 Hack for a Cause Challenges](https://hackforacause.org/challenges-2019){:.download-link .paper-download target="_blank"}
+[Speedupamerica.com](https://speedupamerica.com){:.download-link .paper-download target="_blank"}
 
-### CSVconf
+### Measurement Lab - Open Data on Global Internet Health - csv,conf,v4
+{:.no_toc}
+
+{:.paper-description}
+Measurement Lab (M-Lab) is the largest open internet measurement platform in the world, hosting internet-scale measurement experiments and releasing all data into the public domain (CC0). We are an open source project with contributors from civil society organizations, educational institutions, and private sector companies, and are a fiscally sponsored project of Code for Science & Society. Our mission is to Measure the Internet, save the data, and make it universally accessible and useful. M-Lab works to advance network research and empowers the public with useful information about broadband and mobile connections by maintaining a scalable, global platform for conducting internet measurements, and by supporting an ecosystem of external partners and users around the world interested in using the resulting open data. Our users are researchers, activists, analysts, journalists, experiment developers, hosting providers, regulators, municipalities, and every day consumers. M-Lab works to enhance internet transparency, and help to promote and sustain a healthy, innovative internet by supporting our users in their research and data analyses, developing and publicizing new use cases for our datasets, forming collaborative partnerships, and building open source measurement tools. In this talk we will introduce the M-Lab platform with the csvconf audience, share how our open data and open source tools are being used by communities around the world, and provide resources on how attendees might use them as well.
+
+{:.paper-author}
+Chris Ritzo
+
+[Conference Website Session](https://csvconf.com/2019/speakers/#chris-ritzo){:.download-link .paper-download target="_blank"}
+[Watch Talk Recording](https://youtu.be/ygsxexNHYsk){:.download-link .paper-download target="_blank"}
+
+### University of Guelf Broadband Analytics Workshop
+{:.no_toc}
+
+{:.paper-description}
+The [Regional and Rural Broadband (R2B2) Project](http://www.r2b2project.ca/){:target="_blank"} hosted guests from Measurement Lab (M-Lab) which provides the largest collection of open Internet performance data on the planet. The workshop also considers new and existing tools for broadband infrastructure mapping, data visualization and analysis.
+
+{:.paper-author}
+Chris Ritzo
+
+[Event Description](https://news.uoguelph.ca/event/broadband-analytics-workshop/){:.download-link .paper-download target="_blank"}
+[Morning Overview Slides](https://docs.google.com/presentation/d/1muranZUeHWlV0dmJ6XiRqsEyHxpkYIXlVwesaNFk7pc/edit?usp=sharing){:.download-link .paper-download target="_blank"}
+
+[Afternoon Workshop Slides](https://docs.google.com/presentation/d/1x-kVBudSZaRDJ_GOwvpcCg7B4YK_Dmc7IFiXCxJQkDw/edit?usp=sharing){:.download-link .paper-download target="_blank"}
+
+### Supporting Open Internet Research - IETF 105 - Global Access to the Internet for All (GAIA)
+{:.no_toc}
+
+{:.paper-description}
+M-Lab Director, Lai Yi Ohlsen, and Community Lead, Chris Ritzo, presented remotely to the GAIA working group at IETF 105. The talk, "Supporting Open Internet Research", provided an introduction to M-Lab tools and data, and how our platform is currently used by researchers.
+
+{:.paper-author}
+Lai Yi Ohlsen, Chris Ritzo
+
+[IETF, GAIA Agenda](https://datatracker.ietf.org/doc/agenda-105-gaia/){:.download-link .paper-download target="_blank"}
+[View Slides](https://docs.google.com/presentation/d/1RrDep7KFm9H5opGQMRol-s3OsR2fotOJ0-92GBA-nOI/edit?usp=sharing){:.download-link .paper-download target="_blank"}
+
+### Supporting Open Internet Research - RIPE 79 Plenary
+{:.no_toc}
+
+{:.paper-description}
+M-Lab Director, Lai Yi Ohlsen, gave a plenary session at RIPE 79, providing an overview of Measurement Lab, our community of users, and how our open source tools and data support researchers around the world.
+
+{:.paper-author}
+Lai Yi Ohlsen
+
+[View Video](https://ripe79.ripe.net/archives/video/186/){:.download-link .paper-download target="_blank"}
+[View Slides](https://ripe79.ripe.net/presentations/46-M-Lab-Presentation-Outline-RIPE-79.pdf){:.download-link .paper-download target="_blank"}
+
+### SHLB Coalition AnchorNets
 {:.no_toc}
 
 {:.paper-description}
@@ -699,31 +750,79 @@ Chris Ritzo
 [View Video](){:.download-link .paper-download target="_blank"}
 [View Slides](){:.download-link .paper-download target="_blank"}
 
-### AIS
+### NACo Annual Conference
 {:.no_toc}
 
 {:.paper-description}
+M-Lab Community Lead, Chris Ritzo, provided an overview of M-Lab to NACo’s Rural Action Caucus (RAC). NACo's “TestIT” app that integrates M-Lab's NDT test was of specific interest as the national association of county elected officials explores the connection between national broadband data and federal funding. RAC members also had the opportunity to ask questions of NACo's developer of the TestIT App, learn how to access and analyze the data being collected.
 
 {:.paper-author}
 Chris Ritzo
 
-[View Video](){:.download-link .paper-download target="_blank"}
-[View Slides](){:.download-link .paper-download target="_blank"}
+[View Slides](https://docs.google.com/presentation/d/1DKdZ5wroGI2HNn2c3qW_Rh_JhpDma-HShj0jwK7d6_4/edit?usp=sharing){:.download-link .paper-download target="_blank"}
 
-### RightsCon?
+### NACo Rural Action Caucus Summit
 {:.no_toc}
 
 {:.paper-description}
+M-Lab's Community Lead, Chris Ritzo, provided a follow up talk about M-Lab default NDT data and test data collected by NACo's TestIT mobile app, and discussed the nuances and differences between these two sources of broadband measurements and the various FCC data sources.
 
 {:.paper-author}
 Chris Ritzo
 
-[View Video](){:.download-link .paper-download target="_blank"}
-[View Slides](){:.download-link .paper-download target="_blank"}
+[View Event Agenda](https://www.naco.org/events/2019-rural-action-caucus-rac-summit-bridging-economic-divide){:.download-link .paper-download target="_blank"}
+[View Slides](https://docs.google.com/presentation/d/1RO61u0hvd_o5QVaWVXVqLZJNkB4EMOjkvyAmumeBtXY/edit?usp=sharing){:.download-link .paper-download target="_blank"}
+
+### African Internet Summit 2019 - M-Lab Workshop
+{:.no_toc}
+
+{:.paper-description}
+M-Lab tech lead, Peter Boothe, and M-Lab Advisory Committee Chair, Georgia Bullen, attended [AIS 2019](https://2019.internetsummit.afhrica/en/about/ais-19){:target="_blank"} in Kampala, Uganda. Working with local and regional research partners, Georgia and Peter presented a workshop on Internet measurement data, including data from M-Lab and RIPE Atlas.
+
+{:.paper-author}
+Georgia Bullen, Peter Boothe
+
+[View Slides](https://docs.google.com/presentation/d/1DEIkbNgXbYq7bRLfxGA_GU7sgEC-vc90HML-OzIxcDU/edit?usp=sharing){:.download-link .paper-download target="_blank"}
+
+### Supporting Open Internet Research - Quilt Community Call Presentation
+{:.no_toc}
+
+{:.paper-description}
+M-Lab Director, Lai Yi Ohlsen, and Community Lead, Chris Ritzo, presented to the regional research and education network community, The Quilt, in their December community call. The talk, "Supporting Open Internet Research", provided an introduction to M-Lab tools and data, and how our platform is currently used by researchers and M-Lab open source tools available to the R&E Network community.
+
+{:.paper-author}
+Lai Yi Ohlsen, Chris Ritzo
+
+[View Slides](https://docs.google.com/presentation/d/1u67SS3nr93LdXW5aKdk9r4FWz2Q1lEldZjDJdtRtrGM/edit#slide=id.p){:.download-link .paper-download target="_blank"}
+[The Quilt Website](https://www.thequilt.net/){:.download-link .paper-download target="_blank"}
+
+### Measuring Internet Performance - 2019 Indigenous Connectivity Summit
+{:.no_toc}
+
+{:.paper-description}
+M-Lab Community Lead, Chris Ritzo, co-presented with May Lynn Lee from [Cybera](https://www.cybera.ca/){:target="_blank"}, a breakout session on measuring Internet performance at the 2019 Indigenous Connectivity Summit. Both M-Lab and Cybera are involved in similar premise device-based measurement initiatives with community anchor institutions in the United States and Canada respectively.
+
+{:.paper-author}
+May Lynn Lee, Cybera; Chris Ritzo, Measurement Lab
+
+[View Video](https://livestream.com/internetsociety/2019ics/videos/200458006){:.download-link .paper-download target="_blank"}
+[View Slides](https://drive.google.com/a/measurementlab.net/file/d/1O9GcGHC-e0PrpyEMaor-HbQUj61tCNfd/view?usp=sharing){:.download-link .paper-download target="_blank"}
+
+### Internet2 Tech Exchange - Bring NDT Back: Measurement Lab Modernizes NDT Server
+{:.no_toc}
+
+{:.paper-description}
+The R&E network community using perfSONAR used to include the Network Diagnostic Tool (NDT), a single stream performance measurement of bulk transport capacity. Many years ago, perfSONAR dropped support for NDT since its dependence on the web100 kernel library required running old, outdated, and hard to secure linux kernels. Measurement Lab (M-Lab) had the same problem, but has continued to host NDT as an Internet measurement service on our global server platform. Over the past two years, M-Lab developers have been working through the technical debt to migrate our platform to Docker containers, managed by Kubernetes, and concurrently have refactored NDT server, and developed reference clients for various languages and operating systems. The new NDT server is 'Docker-ized' and is based on WebSocket and TLS, uses TCP BBR where it is available, and is backward compatible with previous clients. M-Lab anticipates that. by the end of Q3 2019, all our servers worldwide will be running the new NDT version, managed by Kubernetes.
+
+The M-Lab team is eager to share this work with the R&E network community and offers to contribute this work to the perfSONAR toolkit. This session will demo the new NDT server and reference clients, and we hope to engage with the R&E network community on this exciting development.
+
+{:.paper-author}
+Chris Ritzo, Matt Mathis
+
+[Conference Website Session Description](https://meetings.internet2.edu/2019-technology-exchange/detail/10005563/){:.download-link .paper-download target="_blank"}
+[View Slides](https://meetings.internet2.edu/media/medialibrary/2019/12/06/20191212-ritzo-bring-ndt-back_FshWz0j.pdf){:.download-link .paper-download target="_blank"}
 
 ## 2018
-
-### The Quilt
 
 ## 2017
 {:.no_toc}
