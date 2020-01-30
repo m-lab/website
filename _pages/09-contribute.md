@@ -16,13 +16,13 @@ M-Lab welcomes the participation of individuals and researchers, as well as comp
 
 ## Develop a Test
 
-Researchers developing and maintaining open source network measurement tests may apply to host a new test on M-Lab. If your project fits within M-Lab's guidelines and principles, we invite you to [apply for M-Lab hosting](https://docs.google.com/a/opentechinstitute.org/forms/d/1Dz-d8bs92ltlKKxWDCoi2nFC6wmBrBq6vrLIwhYyiDM/viewform).
+Researchers developing and maintaining open source network measurement tests may apply to host a new test on M-Lab. If your project fits within M-Lab's guidelines and principles, we invite you to [apply for M-Lab hosting](https://docs.google.com/forms/d/1nVV-oKNuOp4k8c6nQVscp1YNFMfg9OKlZEMYCXwIYBE/){:target="_blank"}.
 
 Please review the documents below before applying:
 
-* [M-Lab's conceptual and technical scope and policies]({{ site.baseurl }}/publications/mlab-founding-vision.pdf)
-* [M-Lab's roles & responsibilities for new researchers]({{ site.baseurl }}/publications/mlab-roles-responsibilities.pdf)
-* [M-Lab's requirements and procedures for accepting new tools]({{ site.baseurl }}/publications/mlab-procedures-new-tools.pdf)
+* [M-Lab Conceptual & Technical Scope & Related Policies]({{ site.baseurl }}/mlab-scope/)
+* [M-Lab Memorandum of Understanding for Experiment Developers]({{ site.baseurl }}/experimenter-mou/)
+* [M-Lab Experiment Developer Responsibilities, Requirements, and Guidelines]({{ site.baseurl }}/experimenter-requirements-guidelines/)
 
 ## Use an M-Lab Test in Your Website or Application
 
