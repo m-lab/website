@@ -27,9 +27,9 @@ COUNT(*) AS num
 FROM (
 SELECT
   DATE(TestTime) as ts
-FROM `mlab-oti.base_tables.traceroute`
+FROM `measurement-lab.aggregate.traceroute`
 WHERE
-DATE(_PARTITIONTIME) BETWEEN DATE("2019-01-01") AND DATE("2020-01-31")
+DATE(TestTime) BETWEEN DATE("2019-01-01") AND DATE("2020-01-31")
 )
 GROUP BY ts
 ORDER BY ts ASC
@@ -48,10 +48,10 @@ FROM (
 SELECT
   DATE(TestTime) as ts,
   hops.Source.IP AS hop_ip,
-FROM  `mlab-oti.batch.traceroute` as traceroute,
+FROM  `measurement-lab.aggregate.traceroute` as traceroute,
      UNNEST(traceroute.Hop) as hops
 WHERE
-DATE(_PARTITIONTIME) BETWEEN DATE("2019-01-01") AND DATE("2020-01-31")
+DATE(TestTime) BETWEEN DATE("2019-01-01") AND DATE("2020-01-31")
 )
 GROUP BY ts
 ORDER BY ts ASC
@@ -66,7 +66,7 @@ Number of new-platform S2C tests during this time range that have a traceroute w
 
 ~~~sql
 SELECT COUNT(*) as total
-FROM `measurement-lab.ndt.ndt5` as ndt5 INNER JOIN `mlab-oti.base_tables.traceroute` as troute on ndt5.result.s2c.uuid = troute.uuid
+FROM `measurement-lab.ndt.ndt5` as ndt5 INNER JOIN `measurement-lab.aggregate.traceroute` as troute on ndt5.result.s2c.uuid = troute.uuid
 WHERE result.S2C IS NOT NULL
   AND ndt5.partition_date BETWEEN DATE("2020-01-10") AND DATE("2020-01-20")
   AND ndt5.result.S2C.uuid IS NOT NULL
@@ -120,7 +120,7 @@ SELECT
 COUNT(DISTINCT client_ip) AS num
 FROM (
 SELECT ndt5.result.s2c.ClientIP as client_ip
-FROM `measurement-lab.ndt.ndt5` as ndt5 LEFT JOIN `mlab-oti.base_tables.traceroute` as troute on ndt5.result.s2c.ClientIP = troute.Destination.IP
+FROM `measurement-lab.ndt.ndt5` as ndt5 LEFT JOIN `measurement-lab.aggregate.traceroute` as troute on ndt5.result.s2c.ClientIP = troute.Destination.IP
 WHERE result.S2C IS NOT NULL
   AND ndt5.partition_date BETWEEN DATE("2020-01-10") AND DATE("2020-01-11")
   AND ndt5.result.S2C.uuid IS NOT NULL
