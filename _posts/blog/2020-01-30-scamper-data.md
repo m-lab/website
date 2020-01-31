@@ -62,7 +62,7 @@ ORDER BY ts ASC
 
 We further compare the pool of NDT and the traceroute coverage for those tests by the uuid binding:
 
-Number of new-platform download(S2C) tests during this time range that have a traceroute with the same UUID as the download(S2C) channel's UUID:
+Number of new-platform download(S2C) tests during this time range that have a traceroute with the same ```UUID``` as the download(S2C) channel's ```UUID```:
 
 ~~~sql
 SELECT COUNT(*) as total
@@ -143,5 +143,5 @@ If we reduce the window to one day (2020/01/10), the coverage is about the same:
 
 If we extend the time range from 2 days to 3 days (2020/01/10 - 2020/01/12), The coverage is 1,529,755/2,184,580 = 70% in this 3-day time range. So it is relatively stable that 70% client IPs have a traceroute in our database.
 
-Overall, we can conclude that the new traceroute data set can be binded with corresponding NDT tests much more easily through uuid and BigQuery join tables. The number of tests are more than legacy test sets. And we will continue to make the traceroute data more reliable and easier to use for researchers and M-Lab partners.
+Overall, we can conclude that the new traceroute data set can be binded with corresponding NDT tests much more easily through ```UUID``` and BigQuery join tables. The number of tests are more than legacy test sets. And we will continue to make the traceroute data more reliable and easier to use for researchers and M-Lab partners.
 
