@@ -62,7 +62,7 @@ ORDER BY ts ASC
 
 We further compare the pool of NDT and the traceroute coverage for those tests by the uuid binding:
 
-Number of new-platform S2C tests during this time range that have a traceroute with the same UUID as the s2c channel's UUID:
+Number of new-platform download(S2C) tests during this time range that have a traceroute with the same UUID as the download(S2C) channel's UUID:
 
 ~~~sql
 SELECT COUNT(*) as total
