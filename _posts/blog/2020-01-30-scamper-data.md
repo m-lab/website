@@ -13,7 +13,7 @@ categories:
 
 M-Lab has always committed to provide traceroute data for the tests running on M-Lab platform. Since we launched [new platform]({{ site.baseurl }}/blog/global-pilot-success) in 2019 Q4, the new traceroute binary, [Scamper](https://www.caida.org/tools/measurement/scamper/){:target="_blank"}, replaced [Paris Traceroute](https://paris-traceroute.net/){:target="_blank"} on all our servers. Our BigQuery table for traceroute now has unified [schema]({{ site.baseurl }}/blog/new-traceroute-table-and-schema-now-available) to cover both the legacy Paris Traceroute test data and new Scamper data. This blog is to analyze the difference between the legacy data and new data.<!--more-->
 
-The legacy data and new data are merged in the same BigQuery table ```measurement-lab.aggregate.traceroute```. The easiest way to tell the difference between them is to check the uuid field. The legacy data has empty uuid field while the new data has a value like “neubot-sb9zt_1576697510_0000000000006A41”.
+The legacy data and new data are merged in the same BigQuery table ```measurement-lab.aggregate.traceroute```. The easiest way to tell the difference between them is to check the ```UUID``` field. The legacy data has empty ```UUID``` field while the new data has a value like “neubot-sb9zt_1576697510_0000000000006A41”.
 
 First we would like to check the test volume change. We observed significant increase in number of tests per day due to improvement of the traceroute caller code in Jan, 2020.
 
@@ -60,7 +60,7 @@ ORDER BY ts ASC
 
 ![hops_change]({{ site.baseurl }}/images/blog/2020-01-30-scamper/hop.png)
 
-We further compare the pool of NDT and the traceroute coverage for those tests by the uuid binding:
+We further compare the pool of NDT and the traceroute coverage for those tests by the ```UUID``` binding:
 
 Number of new-platform download(S2C) tests during this time range that have a traceroute with the same ```UUID``` as the download(S2C) channel's ```UUID```:
 
