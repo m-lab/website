@@ -17,7 +17,7 @@ The legacy data and new data are merged in the same BigQuery table ```measuremen
 
 First we would like to check the test volume change. We observed significant increase in number of tests per day due to improvement of the traceroute caller code in Jan, 2020.
 
-Before the Scamper launch, the average number of tests for March, 2019 is 6710952. After the Scamper launch, we reached 10 million traceroute tests per day for the first time in Jan. 2020. The drop in late 2019 was caused by some Scamper bug. After we fixed the problem with Scamper author at the end of 2019, the number of traceroute tests bounced back dramatically.
+Before the Scamper launch, the average number of tests per day was between 6 million and 7.5 million. After the Scamper launch, we reached 10 million traceroute tests per day for the first time in Jan. 2020. The drop in late 2019 was caused by some Scamper bug. After we fixed the problem with Scamper author at the end of 2019, the number of traceroute tests bounced back dramatically.
 
 ~~~sql
 SELECT
