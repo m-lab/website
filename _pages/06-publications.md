@@ -17,12 +17,14 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2019
 {:.no_toc}
 
-### title
+### Complementary realities: Public domain Internet measurements in the development of Canada’s universal access policies
 {:.no_toc}
 
 {:.paper-description}
+As access to the Internet has become increasingly essential for social and economic participation, public domain Internet measurements have become indispensable for users to validate quality of service their network operator delivers and for policymakers to identify and address gaps in broadband infrastructure. This article evaluates public domain Internet performance measurements available for assessing the state of connectivity and developing universal access service quality standards in Canada. The analysis suggests that different approaches to Internet measurement represent complementary windows into a complex and fast evolving reality of broadband connectivity. Despite their potential shortcomings, large-scale crowdsourced open data network testing platforms have a central role to play in enabling broadband infrastructure policy coordination across different levels of government, empowerment of consumers, and achievement of universal service objectives for quality of service users experience when accessing the open Internet.
 
 {:.paper-author}
+Reza Rajabiun, Fenwick McKelvey
 
 [Read/Download](https://www.tandfonline.com/eprint/Eagps7UkB6cxnb3e3Xk3/full?target=10.1080%2F01972243.2019.1574533&){:.download-link .paper-download target="_blank"}
 
