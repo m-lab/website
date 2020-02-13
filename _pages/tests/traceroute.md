@@ -19,7 +19,16 @@ Please cite this data set as follows: **The M-Lab Traceroute Data Set, &lt;date 
 
 ## Traceroute Data in Raw Format
 
-Data collected by Traceroute is available in raw format in Google Cloud Storage: [https://console.cloud.google.com/storage/browser/archive-measurement-lab/traceroute/](https://console.cloud.google.com/storage/browser/archive-measurement-lab/traceroute/){:target="_blank"}.
+Data collected by Traceroute is available in raw format in Google Cloud Storage for each hosted measurement service:
+
+* M-Lab Host Server - [https://console.cloud.google.com/storage/browser/archive-measurement-lab/host/traceroute/](https://console.cloud.google.com/storage/browser/archive-measurement-lab/host/traceroute/){:target="
+_blank"}
+* NDT - [https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt/traceroute/](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt/traceroute/){:target="
+_blank"}
+* Neubot - [https://console.cloud.google.com/storage/browser/archive-measurement-lab/neubot/traceroute/?project=measurement-lab](https://console.cloud.google.com/storage/browser/archive-measurement-lab/neubot/traceroute/){:target="
+_blank"}
+* WeHe- [https://console.cloud.google.com/storage/browser/archive-measurement-lab/wehe/traceroute/?project=measurement-lab](https://console.cloud.google.com/storage/browser/archive-measurement-lab/wehe/traceroute/){:target="
+_blank"}
 
 ## Traceroute Data in BigQuery
 
@@ -27,4 +36,7 @@ M-Lab parses all Traceroute data into BigQuery tables and views, and makes query
 
 BigQuery Tables/Views/Schema(s) for Traceroute Data:
 
-* [Traceroute data in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=aggregate&t=traceroute&page=table){:target="_blank"}
+* M-Lab Host Server Traceroute data - [measurement-lab.aggregate.traceroute](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=aggregate&t=traceroute&page=table){:target="_blank"}
+* NDT Traceroute data - [measurement-lab.ndt.traceroute](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&p=measurement-lab&d=ndt&t=tcpinfo&page=table){:target="_blank"}
+* Neubot TCP INFO data - Coming soon: _measurement-lab.neubot.traceroute_
+* WeHe TCP INFO data - Coming soon: _measurement-lab.wehe.traceroute_

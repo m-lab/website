@@ -28,8 +28,12 @@ grid-section:
     grid-items:
       - link: "/tests/tcp-info/"
         image: "sidestream.png"
-        heading: "SideStream"
+        heading: "TCP INFO"
         desc: "Collects statistics about the TCP connections running on the M-Lab platform using tcp-info."
+      - link: "/tests/pcap/"
+        image: "arrow-swoop.png"
+        heading: "Packet Headers"
+        desc: "Collects packet headers for all incoming TCP flows and saves each stream of packet captures into a per-stream .pcap file."
       - link: "/tests/traceroute/"
         image: "arrow-swoop.png"
         heading: "Traceroute"
