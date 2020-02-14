@@ -52,6 +52,12 @@ or, in [BibTeX](https://en.wikipedia.org/wiki/BibTeX){:target="_blank"} format:
 }
 ```
 
+## Policies & Support Information
+
+NDT is maintained by Measurement Lab, and is governed by the [M-Lab Privacy Policy]({{ site.baseurl }}/privacy/).
+
+Get support for NDT emailing [support@measurementlab.net](mailto:support@measurementlab.net).
+
 ## Data Collected by NDT
 
 When you run NDT, the IP address provided by your Internet Service Provider will be collected along with your measurement results. M-Lab conducts the test and publishes all test results to promote Internet research. NDT does not collect any information about you as an Internet user.
