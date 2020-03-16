@@ -26,21 +26,21 @@ For more on M-Lab’s privacy requirements, please see our [AUP]({{ site.baseurl
 
 Client developers are welcome to use any production M-Lab site according to their preference and testing plans. However, developers should keep in mind that certain servers can encounter disruption or administrative maintenance with short to no notice. Planning should allow for changes in availability for servers. The easiest and recommended way to deal with changing server availability is to use our directory service.
 
-We provide a directory service named [mlab-ns](http://mlab-ns.appspot.com/admin/map/ipv4/all) that provides structured data on the availability of servers on the platform. By default, the mlab-ns service provides the client with the address of one of the servers geographically closest to the user. However, other information is available within mlab-ns based on the parameters provided to the API, including a list of all available servers. Applications should not cache values returned by mlab-ns for a long time; we recommended that maintainers’ applications query the service in real time to ensure the availability of any server and to monitor for new servers on the platform. This is important whether or not a client bases its selection of geographic closeness. At a minimum, we recommend applications invalidate their cache and query mlab-ns again when the connection fails to a server name cached from an old mlab-ns response.
+We provide a directory service named [Locate](https://locate.measurementlab.net/admin/map/ipv4/all) (also historically referred to as mlab-ns) that provides structured data on the availability of servers on the platform. By default, the Locate service provides the client with the address of one of the servers geographically closest to the user. However, other information is available within the Locate service based on the parameters provided to the API, including a list of all available servers. Applications should not cache values returned by mlab-ns for a long time; we recommended that maintainers’ applications query the service in real time to ensure the availability of any server and to monitor for new servers on the platform. This is important whether or not a client bases its selection of geographic closeness. At a minimum, we recommend applications invalidate their cache and query the Locate service again when the connection fails to a server name cached from an old response.
 
-For more information on the mlab-ns directory service, please refer to the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md).
+For more information on using the Locate service, please refer to the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md).
 
-### Using the M-Lab Naming Service (mlab-ns) for Server Selection
+### Using the M-Lab Locate Service (mlab-ns) for Server Selection
 
-M-Lab encourages developers to use the M-Lab Naming Service (mlab-ns) to route all client requests to the closest available M-Lab server. Mlab-ns is a distributed system based on Google AppEngine that ‘routes’ HTTP requests for tools hosted on M-Lab to the best server, according to different policies. See the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md) for the original list of requirements for mlab-ns.
+M-Lab encourages developers to use the M-Lab Locate Service (mlab-ns) to route all client requests to the closest available M-Lab server. mlab-ns is a distributed service hosted on Google AppEngine that ‘routes’ HTTP requests for tests hosted on M-Lab to the closest available server, according to different policies. See the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md) for the original list of requirements for mlab-ns.
 
-mlab-ns provides this service for the following M-Lab tests:
+The Locate service is enabled for the following M-Lab tests:
 
 * NDT, NDT SSL
-* Neubot
-* Mobiperf
+* Neubot DASH
+* WeHe
 
-In a typical scenario, an app or web-based NDT implementation will make a call to mlab-ns to determine which M-Lab server is closest and available to the user to conduct the test. Calls to the mlab-ns server hosted on Google AppEngine should at a minimum include the tool name within the path, for example: https://mlab-ns.appspot.com/ndt
+In a typical scenario, an app or web-based NDT implementation will make a call to the locate service to determine which M-Lab server is closest and available to the user to conduct the test. Calls to the locate service should at a minimum include the tool name within the path, for example: https://locate.measurementlab.net/ndt
 
 A response in JSON format is returned which the application then uses to provide the client a server to use to conduct the test:
 
@@ -48,7 +48,7 @@ A response in JSON format is returned which the application then uses to provide
 {"city": "Washington_DC", "url": "http://ndt.iupui.mlab1.iad05.measurement-lab.org:7123", "ip": ["4.35.238.203"], "fqdn": "ndt.iupui.mlab1.iad05.measurement-lab.org", "site": "iad05", "country": "US"}
 ```
 
-When the request arrives to mlab-ns, the geolocation of the user is automatically included in the HTTP headers by the Google AppEngine infrastructure. The mlab-ns logs are not governed by M-Lab's open-data policy. Queries to mlab-ns may be sent prior to acquiring user consent to run the actual test. Using the location from AppEngine, mlab-ns selects the best M-Lab server (according to various metrics) and redirects the user to the corresponding URL. Additional query parameters are available, which are detailed in the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md).
+When the request arrives to the locate service, the geolocation of the user is automatically included in the HTTP headers by the Google AppEngine infrastructure. The Locate service logs are not governed by M-Lab's open-data policy. Queries to the Locate service may be sent prior to acquiring user consent to run the actual test. Using the location from AppEngine, Locate service selects the nearest available M-Lab server and redirects the user to the corresponding URL. Additional query parameters are available, which are detailed in the [M-Lab NS Design Document](https://github.com/m-lab/mlab-ns/blob/master/DESIGN_DOC.md).
 
 ### Where does M-Lab place servers?
 
@@ -62,7 +62,7 @@ Building out an international presence that covers all users is a process that r
 
 M-Lab welcomes automated and repeated testing. However, doing so requires user consent and care in implementation so that clients do not unintentionally overload the platform.
 
-The M-Lab platform is well provisioned to handle a large amount of concurrent tests. However, in order to avoid potential site-reliability issues, M-Lab imposes a rate limit of 40 tests per client per day to each M-Lab server. For individual users running regular tests, 40 tests per day is more than sufficient.
+The M-Lab platform is well provisioned to handle a large amount of concurrent tests. However, in order to avoid potential site-reliability issues, **M-Lab imposes a rate limit of 40 tests per client per day**. For individual users running regular tests, 40 tests per day is more than sufficient. Clients that hit this rate limit will be provided a [204 No Content response](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#204){:target="_blank"}.
 
 **For software or hardware integrations M-Lab recommends testing no more than 4 times per day.** Because client integrations are likely to have a large number of device installs, batch scheduled and interactive scheduled tests should be randomized over each day, to spread the distribution of their clients’ tests evenly. M-Lab recommends that client integrations use a [Poisson](https://en.wikipedia.org/wiki/Poisson_point_process){:target="_blank"} process to schedule no more than 4 tests per day at randomized times. For example, using a Poisson process to randomize test start times can be done by choosing each inter-test wait time from an exponential distribution. In python, the appropriate function for this is `random.expovariate`, but similar functions are available in all major programming languages.
 
@@ -70,16 +70,27 @@ The M-Lab platform is well provisioned to handle a large amount of concurrent te
 
 NDT is the test most commonly integrated into third party websites or applications. There is no API key needed to use the M-Lab infrastructure, though we do recommend that you make use of mlab-ns in developing your application. Developers may integrate M-Lab tests or tools into software applications or web sites, leveraging our server infrastructure and available tests to provide a service to site visitors or application users.
 
-### Integrating NDT in Javascript
+### Integrating NDT in JavaScript
 
 NDT can be integrated quickly and easily using a basic iframe:
 `<iframe src="//www.measurementlab.net/p/ndt-ws.html" align="middle"></iframe>`
 
-For developers interested in a custom integration, the NDT Javascript library can be found in the [current NDT repository](https://github.com/ndt-project/ndt/tree/master/HTML5-frontend). A custom integration in Angular.js is available as an [example](https://github.com/opentechinstitute/mlab-speedtest).
+For developers interested in a custom integration:
+
+* The [current NDT JavaScript library](https://github.com/ndt-project/ndt/tree/master/HTML5-frontend)
+* A custom integration in Angular.js is available as an [example](https://github.com/m-lab/mlab-speedtest)
+* Work is in progress on an [official JavaScript client for the ndt7 protocol](https://github.com/m-lab/ndt-server/issues/237)
 
 ### Integrating NDT on Mobile or Desktop
 
-For deployments of NDT outside of the browser, we also support [MeasurementKit](https://measurement-kit.github.io/), which is a software library for integrations. Supported tests include NDT, Neubot, and the OONI test suite.
+For deployments of NDT outside of the browser, we provide several reference client repositories:
+
+* Officially Supported
+  * NDT 7 Go - [https://github.com/m-lab/ndt7-client-go](https://github.com/m-lab/ndt7-client-go)
+
+* Community Supported Clients
+  * NDT 7 Android - [https://github.com/m-lab/ndt7-client-android](https://github.com/m-lab/ndt7-client-android)
+  * NDT 7 iOS - [https://github.com/m-lab/ndt7-client-ios](https://github.com/m-lab/ndt7-client-ios)
 
 ### Can I use M-Lab’s services without measurements being added to the public dataset?
 
