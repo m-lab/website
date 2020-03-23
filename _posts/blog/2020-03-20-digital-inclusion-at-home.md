@@ -11,7 +11,9 @@ categories:
   - community
 ---
 
+<div class="container" markdown="1">
 [![National Digital Inclusion Alliance]({{ site.baseurl }}/images/blog/2020-03-20/NDIA-logo.png){:.scaled-blog-logo}](https://www.digitalinclusion.org/) [![Institute for Local Self-Reliance]({{ site.baseurl }}/images/blog/2020-03-20/ilsr_logo-1.png){:.scaled-blog-logo}](https://ilsr.org/) [![X-Lab]({{ site.baseurl }}/images/blog/2020-03-20/XLAB-logo.png){:.scaled-blog-logo}](https://thexlab.org/) [![The Marconi Society]({{ site.baseurl }}/images/blog/2020-03-20/Marconi-Web-Logo.png){:.scaled-blog-logo}](http://marconisociety.org/)
+</div>
 
 As COVID-19’s impact increases globally, more people are working, learning and living online. In partnership with NDIA, X-Lab, ILSR and Marconi Society, Measurement Lab has set up a [speed test portal](http://speed.digitalinclusion.org/){:target="_blank"} to collect geolocated data with an accompanying survey focused on Digital Inclusion @ Home.<!--more-->
 
