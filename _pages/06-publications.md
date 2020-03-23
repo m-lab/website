@@ -778,16 +778,16 @@ Lai Yi Ohlsen
 [View Video](https://ripe79.ripe.net/archives/video/186/){:.download-link .paper-download target="_blank"}
 [View Slides](https://ripe79.ripe.net/presentations/46-M-Lab-Presentation-Outline-RIPE-79.pdf){:.download-link .paper-download target="_blank"}
 
-### SHLB Coalition AnchorNets
+### SHLB Coalition AnchorNets 2019 Session
 {:.no_toc}
 
 {:.paper-description}
+Staff from Simmons University, Measurement Lab, and Internet2 presented at the Schools Health & Libraries Broadband Coalition's annual AnchorNets conference, October 17, 2019 in Alexandria, Virgina. The session provided an introduction and update to the research project, Measuring Library Broadband Networks, in which partners are working together with public libraries in the United States to measure their broadband networks. The purpose is to better understand how libraries can leverage broadband to better serve their communities’ digital needs. Funded by a grant (award #LG-71-18-0110-18) from the U.S. Institute of Museum and Library Service (IMLS), the team will work with up to 60 libraries in rural, suburban, and urban communities through May 2020, to gather quantitative and qualitative data using participatory design approaches. The project aims to: understand the broadband speeds and quality of service that public libraries receive; assess how well broadband service and infrastructure are supporting libraries’ communities’ digital needs; understand broadband network usage and capacity, along with additional data that would be useful to public libraries in providing their communities with online software applications and social and technical infrastructure, and increase libraries’ knowledge of networked services and connectivity needs.
 
 {:.paper-author}
-Chris Ritzo
+Jo Dutilloy (Simmons), Susan Kennedy (Simmons), Stephanie Stenberg (Internet2), Chris Ritzo (M-Lab)
 
-[View Video](){:.download-link .paper-download target="_blank"}
-[View Slides](){:.download-link .paper-download target="_blank"}
+[View Slides](https://docs.google.com/presentation/d/1z4dHXS0NTDg_HSXTwN6e8kTEir_srBn-A1B5YcUNM1c/edit?usp=sharing){:.download-link .paper-download target="_blank"}
 
 ### NACo Annual Conference
 {:.no_toc}
