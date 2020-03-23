@@ -676,6 +676,43 @@ Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center
 
 # Presentations
 
+## 2020
+{:.no_toc}
+
+### Open Broadband Measurement Tools for Community Driven Data Collection
+{:.no_toc}
+
+{:.paper-description}
+As a part of the [Michigan Moonshot Webinar series](https://www.merit.edu/services/moonshot/community-events/#1584730458109-03431efd-3f4d), M-Lab Community Lead, Chris Ritzo, shared information about the publicly available datasets and tools from Measurement Lab (M-Lab), and how they have been used for planning, decision making, and advocacy. M-Lab is an open source, civil society led, global platform for measuring broadband Internet service. In addition to supporting a portion of the FCC’s Measuring Broadband America program since its beginnings, M-Lab’s open source tools and data have been used in similar initiatives on local and regional levels, enabling communities to gather data about broadband in their communities, including the Michigan Moonshot initiative.
+
+{:.paper-author}
+Chris Ritzo
+
+[View Slides](https://docs.google.com/presentation/d/1g7OB9atKKGJnOj9h8nSAy_ytmPGLrhTC2OWLPFG9PiA/edit?usp=sharing){:.download-link .paper-download target="_blank"}
+[Watch Recording](https://www.youtube.com/watch?v=pZJ0ZhFPs3Y){:.download-link .paper-download target="_blank"}
+
+### M-Lab : Internet Measurement - Open Source, Open Data
+{:.no_toc}
+
+{:.paper-description}
+M-Lab Community Lead, Chris Ritzo, presented remotely to the Network Technologies and Services Evolution work group of the GÉANT GN4-3 project, at their [workshop on Performance Management](https://wiki.geant.org/display/PUB/Performance+Management+Workshop), held in Zagreb on 4th-5th March 2020.
+
+{:.paper-author}
+Chris Ritzo
+
+[View Slides](https://docs.google.com/presentation/d/15x5mEawJN_HoVUyinZAMqfeUfqYU2UVpfnNS2zZu0FQ/){:.download-link .paper-download target="_blank"}
+
+### ACT Broadband Hackaton Presentation
+{:.no_toc}
+
+{:.paper-description}
+M-Lab Project Director, Lai Yi Ohlsen, presented to the [ACT Broadband](http://actbroadband.online:3000/) Hackathon on 2020-03-14, an overview of the M-Lab platform's tools and tests enabling community-driven data collection of Internet speeds and quality of service.
+
+{:.paper-author}
+Lai Yi Ohlsen
+
+[View Slides](https://docs.google.com/presentation/d/15x5mEawJN_HoVUyinZAMqfeUfqYU2UVpfnNS2zZu0FQ/){:.download-link .paper-download target="_blank"}
+
 ## 2019
 {:.no_toc}
 
