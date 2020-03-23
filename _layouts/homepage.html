@@ -36,7 +36,7 @@ layout: default
           {% if word_count > 40 %}
             <h2 id="{{ post.title | downcase }}">
             <a class="anchor-link" href="{{ site.baseurl }}{{ post.url }}#{{ post.title | downcase | replace: ' ', '-' }}" data-icon=""></a>
-            {{ post.title }}
+            <a href="{{ site.baseurl }}{{ post.url }}#{{ post.title | downcase | replace: ' ', '-' }}">{{ post.title }}</a>
             </h2>
             {% include post-meta-index-pages.html %}
             {{ blog_content }}
@@ -44,7 +44,7 @@ layout: default
             <div>
             <h2 id="{{ post.title | downcase }}">
             <a class="anchor-link" href="{{ site.baseurl }}{{ post.url }}#{{ post.title | downcase | replace: ' ', '-' }}" data-icon=""></a>
-            {{ post.title }}
+            <a href="{{ site.baseurl }}{{ post.url }}#{{ post.title | downcase | replace: ' ', '-' }}">{{ post.title }}</a>
             </h2>
             {% include post-meta-index-pages.html %}
             {{ blog_content }}
