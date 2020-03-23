@@ -676,6 +676,43 @@ Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center
 
 # Presentations
 
+## 2020
+{:.no_toc}
+
+### Open Broadband Measurement Tools for Community Driven Data Collection
+{:.no_toc}
+
+{:.paper-description}
+As a part of the [Michigan Moonshot Webinar series](https://www.merit.edu/services/moonshot/community-events/#1584730458109-03431efd-3f4d), M-Lab Community Lead, Chris Ritzo, shared information about the publicly available datasets and tools from Measurement Lab (M-Lab), and how they have been used for planning, decision making, and advocacy. M-Lab is an open source, civil society led, global platform for measuring broadband Internet service. In addition to supporting a portion of the FCC’s Measuring Broadband America program since its beginnings, M-Lab’s open source tools and data have been used in similar initiatives on local and regional levels, enabling communities to gather data about broadband in their communities, including the Michigan Moonshot initiative.
+
+{:.paper-author}
+Chris Ritzo
+
+[View Slides](https://docs.google.com/presentation/d/1g7OB9atKKGJnOj9h8nSAy_ytmPGLrhTC2OWLPFG9PiA/edit?usp=sharing){:.download-link .paper-download target="_blank"}
+[Watch Recording](https://www.youtube.com/watch?v=pZJ0ZhFPs3Y){:.download-link .paper-download target="_blank"}
+
+### M-Lab : Internet Measurement - Open Source, Open Data
+{:.no_toc}
+
+{:.paper-description}
+M-Lab Community Lead, Chris Ritzo, presented remotely to the Network Technologies and Services Evolution work group of the GÉANT GN4-3 project, at their [workshop on Performance Management](https://wiki.geant.org/display/PUB/Performance+Management+Workshop), held in Zagreb on 4th-5th March 2020.
+
+{:.paper-author}
+Chris Ritzo
+
+[View Slides](https://docs.google.com/presentation/d/15x5mEawJN_HoVUyinZAMqfeUfqYU2UVpfnNS2zZu0FQ/){:.download-link .paper-download target="_blank"}
+
+### ACT Broadband Hackathon Presentation
+{:.no_toc}
+
+{:.paper-description}
+M-Lab Project Director, Lai Yi Ohlsen, presented to the [ACT Broadband](http://actbroadband.online:3000/) Hackathon on 2020-03-14, an overview of the M-Lab platform's tools and tests enabling community-driven data collection of Internet speeds and quality of service.
+
+{:.paper-author}
+Lai Yi Ohlsen
+
+[View Slides](https://docs.google.com/presentation/d/1AYaR82CVfZbyvZuX5HmQukkQiGwaLdxK8sHLNWpuvo4/){:.download-link .paper-download target="_blank"}
+
 ## 2019
 {:.no_toc}
 
@@ -741,16 +778,16 @@ Lai Yi Ohlsen
 [View Video](https://ripe79.ripe.net/archives/video/186/){:.download-link .paper-download target="_blank"}
 [View Slides](https://ripe79.ripe.net/presentations/46-M-Lab-Presentation-Outline-RIPE-79.pdf){:.download-link .paper-download target="_blank"}
 
-### SHLB Coalition AnchorNets
+### SHLB Coalition AnchorNets 2019 Session
 {:.no_toc}
 
 {:.paper-description}
+Staff from Simmons University, Measurement Lab, and Internet2 presented at the Schools Health & Libraries Broadband Coalition's annual AnchorNets conference, October 17, 2019 in Alexandria, Virgina. The session provided an introduction and update to the research project, Measuring Library Broadband Networks, in which partners are working together with public libraries in the United States to measure their broadband networks. The purpose is to better understand how libraries can leverage broadband to better serve their communities’ digital needs. Funded by a grant (award #LG-71-18-0110-18) from the U.S. Institute of Museum and Library Service (IMLS), the team will work with up to 60 libraries in rural, suburban, and urban communities through May 2020, to gather quantitative and qualitative data using participatory design approaches. The project aims to: understand the broadband speeds and quality of service that public libraries receive; assess how well broadband service and infrastructure are supporting libraries’ communities’ digital needs; understand broadband network usage and capacity, along with additional data that would be useful to public libraries in providing their communities with online software applications and social and technical infrastructure, and increase libraries’ knowledge of networked services and connectivity needs.
 
 {:.paper-author}
-Chris Ritzo
+Jo Dutilloy (Simmons), Susan Kennedy (Simmons), Stephanie Stenberg (Internet2), Chris Ritzo (M-Lab)
 
-[View Video](){:.download-link .paper-download target="_blank"}
-[View Slides](){:.download-link .paper-download target="_blank"}
+[View Slides](https://docs.google.com/presentation/d/1z4dHXS0NTDg_HSXTwN6e8kTEir_srBn-A1B5YcUNM1c/edit?usp=sharing){:.download-link .paper-download target="_blank"}
 
 ### NACo Annual Conference
 {:.no_toc}
