@@ -702,7 +702,7 @@ Chris Ritzo
 
 [View Slides](https://docs.google.com/presentation/d/15x5mEawJN_HoVUyinZAMqfeUfqYU2UVpfnNS2zZu0FQ/){:.download-link .paper-download target="_blank"}
 
-### ACT Broadband Hackaton Presentation
+### ACT Broadband Hackathon Presentation
 {:.no_toc}
 
 {:.paper-description}
@@ -711,7 +711,7 @@ M-Lab Project Director, Lai Yi Ohlsen, presented to the [ACT Broadband](http://a
 {:.paper-author}
 Lai Yi Ohlsen
 
-[View Slides](https://docs.google.com/presentation/d/15x5mEawJN_HoVUyinZAMqfeUfqYU2UVpfnNS2zZu0FQ/){:.download-link .paper-download target="_blank"}
+[View Slides](https://docs.google.com/presentation/d/1AYaR82CVfZbyvZuX5HmQukkQiGwaLdxK8sHLNWpuvo4/){:.download-link .paper-download target="_blank"}
 
 ## 2019
 {:.no_toc}
