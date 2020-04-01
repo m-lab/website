@@ -9,14 +9,14 @@ categories:
   - community
 ---
 
-As COVID-19's impact increases globally, more people are working, learning and living online. Internet infrastructure is critical in these moments. The user-initiated measurements collected by M-Lab provide an opportunity to understand whether our shared infrastructure can handle the unprecedented shift of load to the network’s edges. The following is a snapshot analysis of how our platform’s traffic has shifted in the last three weeks.<!--more-->
+As COVID-19's impact increases globally, more people are working, learning and living online. Internet infrastructure is critical in these moments. The user-initiated measurements collected by M-Lab provide an opportunity to understand whether our shared infrastructure can handle the unprecedented shift of load to the network’s edges. The following is a snapshot analysis of how our platform’s traffic has shifted in the last three weeks. We will follow up with DataStudio dashboards using our public data set soon.
 
-Key takeaways so far:
+As these dashboards will show, the benefit of open data is that anyone can access it, use it, and reproduce research done with it. If you are using or would like to use M-Lab data in your response to the Internet’s performance during COVID-19, please let us know!<!--more-->
+
+## Key Takeaways
 
 * Test volume is increasing
 * Some areas/networks appear to be saturated during peak times
-
-A benefit of open data is that anyone can access it, use it, and reproduce research done with it. If you are using or would like to use M-Lab data in your response to the Internet’s performance during COVID-19, please let us know!
 
 For this analysis, we have selected two time periods:
 
@@ -32,7 +32,7 @@ For this analysis, we have selected two time periods:
 
 ## Greater Increase for Regional Test Rates
 
-The NDT measurement service currently supports three protocols: WSS (Secure WebSockets) and PLAIN (TCP). Different protocols are used by different clients. The analysis below only uses download tests.
+The NDT measurement service currently supports three protocols: WSS (Secure WebSockets), WS (WebSockets), and PLAIN (TCP). Different protocols are used by different clients. The analysis below only uses download tests, and focuses on WSS and PLAIN test protocols.
 
 ### Area Surrounding New York, USA
 
