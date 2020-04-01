@@ -28,20 +28,16 @@
 
   img {
     max-width: 100%;
-    width: auto;
-    float: left;
     margin: 1em;
-    max-height: 80px;
-     .inherit-width {
+
+    .inherit-width {
       max-width: inherit;
     }
 
     &::after {
         clear: both;
     }
-
   }
-
 
   .section-heading {
     padding: 17px 0;
