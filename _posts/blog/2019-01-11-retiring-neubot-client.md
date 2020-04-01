@@ -31,7 +31,7 @@ These instructions were tested on a Docker container running Ubuntu Trusty. The 
 
 ### Mac OS
 
-Neubot for Mac OS also installs an [uninstall.sh](https://github.com/neubot/neubot-port-macosx/blob/master/MacOS/basedir-skel/versiondir-skel/uninstall.sh){:target="_blank"} script. We can confirm that installing Neubot on Mac OS 10.11.6 El Capitan and then running this script correctly uninstall Neubot.
+Neubot for Mac OS also installs an _uninstall.sh_ script. We can confirm that installing Neubot on Mac OS 10.11.6 El Capitan and then running this script correctly uninstall Neubot.
 
 Otherwise, the minimal manual steps to uninstall Neubot are:
 

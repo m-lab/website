@@ -80,4 +80,8 @@ The points of lowest performance between March 23rd and March 25th correspond to
 
 While the above analysis does not provide a conclusive understanding of the entire Internet at this time, the data shows that more people are testing their Internet and that some networks are showing a decreased performance from their usual behavior.
 
-As you all keep testing, we’ll keep our infrastructure open and healthy and keep publishing the data as we always do. If you are doing interesting analysis, please reach out and share it.
+Please continue to check back on our website for more COVID-19 related Internet research. We’ll be publishing new data, dashboards, and analyses as we complete them.
+
+## Are you doing research with M-Lab data?
+
+As you all keep testing, we’ll keep our infrastructure open and healthy and keep publishing the data as we always do. If you are doing interesting analysis with M-Lab, please reach out and share it to contact@measurementlab.net or tag us on Twitter @measurementlab.
