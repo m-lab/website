@@ -18,6 +18,8 @@ As these dashboards will show, the benefit of open data is that anyone can acces
 * Test volume is increasing
 * Some areas/networks appear to be saturated during peak times
 
+## Time Periods
+
 For this analysis, we have selected two time periods:
 
 * Recent:
