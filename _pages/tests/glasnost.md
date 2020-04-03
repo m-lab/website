@@ -15,8 +15,6 @@ Please cite this data set as follows: **The M-Lab Glasnost Data Set, &lt;date ra
 
 **Data** collected by Glasnost is available in raw format at [https://console.cloud.google.com/storage/browser/archive-measurement-lab/glasnost](https://console.cloud.google.com/storage/browser/archive-measurement-lab/glasnost){:target="_blank"}.
 
-**Data analysis code** is available at [http://code.google.com/p/glasnost/](http://code.google.com/p/glasnost/){:target="_blank"}.
+**Source code** is available at [https://github.com/marcelscode/glasnost](https://github.com/marcelscode/glasnost){:target="_blank"}.
 
-**Source code** is available at [http://broadband.mpi-sws.org/transparency/code.html](http://broadband.mpi-sws.org/transparency/code.html){:target="_blank"}.
-
-**Get more information** at [http://broadband.mpi-sws.org/transparency/bttest-mlab.php](http://broadband.mpi-sws.org/transparency/bttest-mlab.php){:target="_blank"}.
+**Get more information** at [https://github.com/marcelscode/glasnost](https://github.com/marcelscode/glasnost){:target="_blank"}.
