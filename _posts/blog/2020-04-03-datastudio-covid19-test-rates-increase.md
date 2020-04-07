@@ -16,7 +16,7 @@ Measurement Lab’s dataset is free, open, and full of data for Internet researc
 
 These dashboards use data publically available in BigQuery, which can be accessed directly for free. You can find information about how to access the data [here]({{ site.baseurl }}/quickstart).
 
-<iframe src="https://datastudio.google.com/embed/reporting/100hLnT1wz9h1-2aLItUi8aAxlRu28lLy/page/fP5KB" frameborder="0" style="width:100%; height:800px; border:0" allowfullscreen></iframe>
+<iframe src="https://datastudio.google.com/embed/reporting/1C-jD2PVmSikRFig1FC9FUSnDw1G1tWtK/page/fP5KB" frameborder="0" style="width:100%; height:800px; border:0" allowfullscreen></iframe>
 
 We are showing data from New York City, US; São Paulo, Brazil; and India as examples, but the M-Lab dataset has NDT test data from users all around the world, that can be queried for a multitude of specific research purposes. If you need any assistance using BigQuery or understanding what the data represents, please refer to our FAQ or reach out to support@measurementlab.net.
 
