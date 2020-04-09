@@ -595,6 +595,14 @@ Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center
 
 # Government / Regulatory Filings
 
+## 2020
+{:.no_toc}
+
+### [4/08/2020 - FCC](https://www.fcc.gov/ecfs/filing/10408231265942){:target="_blank"}: Matters Related to Measuring Broadband America Program and Performance Measurement, GN Docket No. 12-264
+{:.no_toc}
+
+[Download PDF]({{ site.baseurl }}/publications/regulator-filings/fcc/M-Lab_SamKnows_MBA_ECFS_Statement_04082020.pdf){:.download-link .paper-download target="_blank"}
+
 ## 2017
 {:.no_toc}
 
