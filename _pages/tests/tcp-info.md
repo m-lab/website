@@ -44,6 +44,6 @@ BigQuery Tables/Views for TCP INFO Data:
 * Neubot TCP INFO data - Coming soon: _measurement-lab.neubot.tcpinfo_
 * WeHe TCP INFO data - Coming soon: _measurement-lab.wehe.tcpinfo_
 
-## Schema for TCP INFO
+## TCP INFO Schema
 
 {% include schema_tcprow.md %}

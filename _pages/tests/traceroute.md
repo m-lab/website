@@ -38,5 +38,11 @@ BigQuery Tables/Views/Schema(s) for Traceroute Data:
 
 * M-Lab Host Server Traceroute data - [measurement-lab.aggregate.traceroute](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=aggregate&t=traceroute&page=table){:target="_blank"}
 * NDT Traceroute data - [measurement-lab.ndt.traceroute](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&p=measurement-lab&d=ndt&t=tcpinfo&page=table){:target="_blank"}
-* Neubot TCP INFO data - Coming soon: _measurement-lab.neubot.traceroute_
-* WeHe TCP INFO data - Coming soon: _measurement-lab.wehe.traceroute_
+
+## Traceroute Schema
+
+The table below describes the fields in: `measurement-lab.aggregate.traceroute`.
+
+<div class="table-responsive" markdown="1">
+Coming soon.
+</div>

@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "BigQuery Schemas"
+title: "M-Lab Dataset Schemas and Changelog"
 permalink: /data/docs/bq/schema/
 breadcrumb: data
 ---
 
-# BigQuery Schemas
+# M-Lab Dataset Schemas and Changelog
 
-## Background
+## How Data is Collected
 
 * Each M-Lab test consists of a **client** and a **server**.
 * Whenever an M-Lab user starts a test, the client and server interact to measure different aspects of that user's connection.
@@ -27,7 +27,7 @@ M-Lab publishes BigQuery tables and views for tests that have implemented a pars
 ### Current M-Lab Core Services and Platform Data
 
 * [Switch Utilization]({{ site.base_url }}/data/docs/bq/schema/utilization)
-* [TCP INFO]({{ site.base_url }}/data/docs/bq/schema/tcpinfo)
+* [TCP INFO]({{ site.base_url }}/tests/tcp-info/)
 * [Traceroute]({{ site.base_url }}/data/docs/bq/schema/traceroute)
 
 ### Retired Core Services and Platform Data for Historical Analysis

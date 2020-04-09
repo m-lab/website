@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: redirect
 title: "Migrating Queries to Use Current M-Lab Tables and Views"
 permalink: /data/docs/bq/legacymigration/
 breadcrumb: data
+redirect_to: "https://measurementlab.net/learn/"
 ---
 
 # Migrating to Current M-Lab Tables and Views

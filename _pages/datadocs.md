@@ -14,10 +14,7 @@ Here we document how to work with M-Lab data, covering some of the most common t
 The links below provide the basics of querying M-Lab data.
 
 * [BigQuery QuickStart]({{ site.baseurl }}/data/docs/bq/quickstart/)
-* [BigQuery Examples]({{ site.baseurl }}/data/docs/bq/examples/)
-* [BigQuery Schemas]({{ site.baseurl }}/data/docs/bq/schema/)
-* [Calculating Common Metrics]({{ site.baseurl }}/data/docs/bq/ndtmetrics/)
-* [Migrating Queries to Use Current M-Lab Tables and Views]({{ site.baseurl }}/data/docs/bq/legacymigration/)
+* [M-Lab Dataset Schemas and Changelog]({{ site.baseurl }}/data/docs/bq/schema/)
 
 ## Querying BigQuery (Advanced)
 
@@ -33,7 +30,7 @@ Advanced users may also be interested in obtaining raw M-Lab test data for detai
 
 * [DISCO dataset]({{ site.baseurl }}/blog/disco-dataset/)
 
-### Analysis
+### Analyses
 
 * [Discard Analysis 2018]({{ site.baseurl }}/data/docs/analysis/discard-analysis-2018/)
 
