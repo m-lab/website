@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: redirect
 title: "Traceroute - BigQuery Schema"
 permalink: /data/docs/bq/schema/traceroute/
 breadcrumb: data
+redirect_to: "https://measurementlab.net/tests/traceroute/#traceroute-schema"
 ---
 
 # Traceroute BigQuery Schema
@@ -99,5 +100,3 @@ Paris Traceroute collects network path information for every connection used by 
 | `paris_traceroute_hop.dest_geolocation.rtt` | `float (repeated)` |                                        |
 
 </div>
-
-

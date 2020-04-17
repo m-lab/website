@@ -74,38 +74,41 @@ Advanced users may also be interested in obtaining raw M-Lab test data for detai
 
 To make NDT data more readily available for research and analysis, M-Lab parses all NDT data into BigQuery tables and views, and makes query access available for free by subscription to a Google Group. Find out more about how to get access on our [BigQuery QuickStart page]({{ site.baseurl }}/data/bq/quickstart/).
 
-M-Lab BigQuery tables/views for NDT data are in transition as of Sept. 2019, as the team completes our [Global Pilot of the M-Lab 2.0 platform]({{ site.baseurl }}/blog/global-pilot-entry/). Below we provide two lists of BigQuery tables/views: our current tables and views, and those which M-Lab will transition to by the end of the global pilot.
-
 ## Current BigQuery Tables/Views
 
-* **Helpful tables/views** - a set of tables/views that are pre-filtered for commonly used queries, and are derived from the "faithful" tables/views
-  * [measurement-lab.ndt.downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=downloads&page=table){:target="_blank"}
-    * A subset view of all NDT download tests from `measurement-lab.ndt.recommended` where:
-      * At least 8 KB of data was transferred
-      * Test duration was between 9 and 60 seconds
-      * Congestion was detected
+Data collected by NDT is provided in multiple ways, each suited to specific segments of our community.
 
-  * [measurement-lab.ndt.uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=uploads&page=table){:target="_blank"}
-    * A subset view of all NDT upload tests from `measurement-lab.ndt.recommended` where a sensible total number of bytes was received (8192)
+* **Faithful Views**
+  * The base tables/views for each NDT data type, providing direct access to the unfiltered NDT data and the TCP INFO and Traceroute data associated with NDT tests.
+  * Faithful views will be of interest mostly to researchers interested in all testing conditions and results.
 
-  * [measurement-lab.ndt.recommended](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=recommended&page=table){:target="_blank"}
-    * A subset view of all NDT upload and download tests from `measurement-lab.ndt.web100` where:
-      * TCP end state is sensible
-      * Test duration was between 9 and 60 seconds
-    * except:
-      * Internal M-Lab end-to-end monitoring tests
-      * Tests marked as blacklisted
+* **Helpful Views**
+  * A set of tables/views derived from "Faithful Views" that are pre-filtered to only provide the most commonly used fields, and which only show tests that meet our current, best understanding of test completeness and research quality. More details on what consititutes "research quality" is listed below in the Helpful Views section.
+  * **The helpful views should be the starting point for most people**.
 
-## Planned BigQuery Tables/Views (Post M-Lab 2.0 Global Pilot)
+### Faithful Views
 
-* **Faithful tables/views** - the base tables/views for each NDT data type
-  * [measurement-lab.ndt.web100](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=web100&page=table){:target="_blank"}
-    * NDT data collected using the [web100 protocol]({{ site.baseurl }}/tests/ndt/web100), using the web100 Linux kernel patch for all TCP metrics.
-    * `web100` is root BigQuery view from which all current "Helpful" views are derived.
-    * [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
-  * [measurement-lab.ndt.ndt5](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=ndt5&page=table){:target="_blank"}
-    * NDT data collected using the [ndt5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after 2019-07-19, using tcp-info for all TCP metrics.
-    * [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/schemas/faithful/ndt5)
-  * ndt7 (coming soon)
-    * NDT data collected using the ndt7 protocol using tcp-info for all TCP metrics.
-    * _ndt7 description and schema_
+* [measurement-lab.ndt.ndt5](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=ndt5&page=table){:target="_blank"}
+  * NDT data collected using the [ndt5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after 2019-07-19, using tcp-info for all TCP metrics.
+  * [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-faithful-schema)
+* [measurement-lab.ndt.web100](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=web100&page=table){:target="_blank"}
+  * NDT data collected using the [web100 protocol]({{ site.baseurl }}/tests/ndt/web100), using the web100 Linux kernel patch for all TCP metrics.
+  * `web100` is root BigQuery view from which all current "Helpful" views are derived.
+  * [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
+* ndt7 (coming soon)
+  * NDT data collected using the ndt7 protocol using tcp-info for all TCP metrics.
+  * _ndt7 description and schema_
+* [measurement-lab.ndt.tcpinfo](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=tcpinfo&page=table){:target="_blank"}
+* [measurement-lab.ndt.traceroute](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=traceroute&page=table){:target="_blank"}
+
+### Helpful Views
+
+* [measurement-lab.ndt.unified_downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table){:target="_blank"}
+* [measurement-lab.ndt.unified_uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table){:target="_blank"}
+  * The _unified_downloads_ and _unified_uploads_ views provide our current best understanding of all NDT download and upload data across the entire platform over all time.
+  * These views filter all tests present in the "Faithful" views to only tests that meet a standard of research quality as defined by our team:
+    * At least 8 KB of data was transferred
+    * Test duration was between 9 and 60 seconds
+    * Congestion was detected
+    * Tests with NULL results excluded
+    * Tests from M-Lab Operations and Management infrastructure excluded

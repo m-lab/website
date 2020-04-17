@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: redirect
 title: "Network Diagnostic Tool (NDT) - BigQuery Schema"
 permalink: /data/docs/bq/schema/ndt/
 breadcrumb: data
+redirect_to: "https://measurementlab.net/tests/ndt/"
 ---
 
 # Network Diagnostic Tool (NDT) BigQuery Schema

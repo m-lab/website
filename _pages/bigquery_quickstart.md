@@ -92,4 +92,4 @@ M-Lab has confirmed that the following test did not incur billing:
 * The service account was added to the M-Lab Discuss Google Group
 * The Google Cloud SDK was installed on a Linux computer and configured to use the test GCP project, and its service account
 * Several queries were made to datasets within the `measurement-lab` project
-* Though these queries appeared in the GCP BigQuery query hostory for the test project, no billing transactions were present for the queries
+* Though these queries appeared in the GCP BigQuery query history for the test project, no billing transactions were present for the queries

@@ -15,7 +15,7 @@ NDT data using the ndt5 protocol collected on or after **2019-07-19** uses [tcp-
 
 More details about the ndt5 protocol can be found in the [README for ndt5 on Github](https://github.com/m-lab/ndt-server/tree/master/ndt5#ndt5-metrics){:target="_blank"}.
 
-## ndt5 BigQuery "Faithful" Schema
+## ndt5 BigQuery Schema
 
 <div class="table-responsive" markdown="1">
 {% include schema_ndtresultrow.md %}

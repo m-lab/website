@@ -27,12 +27,18 @@ There is typically at least a 24-hour delay between data collection and data pub
 * [NDT]({{site.baseurl}}/tests/ndt)
   * Network Diagnostic Tool (NDT) measures characteristics of a TCP connection under heavy load.
   * NDT data is processed by the M-Lab ETL Pipeline.
-  * More information is available at [Internet2](http://software.internet2.edu/ndt/){:target="_blank"} and [GitHub](https://github.com/ndt-project/ndt){:target="_blank"}.
+  * More technical information is available on [GitHub](https://github.com/ndt-project/ndt){:target="_blank"}.
+  * Protocols: _ndt7 (coming soon)_, [ndt5]({{ site.baseurl }}/tests/ndt/ndt5), [web100]({{ site.baseurl }}/tests/ndt/web100)
   * [NDT Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/){:target="_blank"} - [NDT BigQuery Dataset](https://bigquery.cloud.google.com/dataset/measurement-lab:ndt)
 * [Neubot DASH]({{site.baseurl}}/tests/neubot)
   * Neubot measured the Internet in order to gather data useful to study broadband performance, network neutrality, and Internet censorship.
   * More information is available at [Nexa Center](https://neubot.nexacenter.org/){:target="_blank"} and [GitHub](https://github.com/neubot){:target="_blank"}.
   * [Neubot Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/neubot/){:target="_blank"}
+* [Reverse Traceroute]({{site.baseurl}}/tests/reverse_traceroute)
+  * Reverse traceroute measures the network path back to a user from selected network endpoints, and provides a rich source of information on network routing and topology.
+  * Reverse Traceroute data is not processed by the M-Lab ETL Pipeline.
+  * More information is available at [Reverse Traceroute](https://research.cs.washington.edu/networking/astronomy/reverse-traceroute.html){:target="_blank"}
+  * [Reverse Traceroute Raw Data](https://console.cloud.google.com/storage/browser/m-lab_revtr){:target="_blank"}
 * [WeHe]({{site.baseurl}}/tests/wehe)
   * Wehe uses your device to exchange Internet traffic recorded from real, popular apps like YouTube and Spotify, and attempts to tell you whether your ISP is giving different performance to an app's network traffic.
   * More information is available from the [WeHe website](https://dd.meddle.mobi/){:target="_blank"} and [GitHub](https://dd.meddle.mobi/codeanddata.html){:target="_blank"}.
@@ -93,11 +99,6 @@ There is typically at least a 24-hour delay between data collection and data pub
   * Pathload2 measured the available bandwidth of an Internet connection.
   * More information is available at [https://code.google.com/p/pathload2-gatech/](https://code.google.com/p/pathload2-gatech/){:target="_blank"}.
   * [Pathload2 Raw Data (archived)](https://console.developers.google.com/storage/browser/archive-measurement-lab/pathload2/){:target="_blank"}
-* [Reverse Traceroute]({{site.baseurl}}/tests/reverse_traceroute)
-  * Reverse traceroute measures the network path back to a user from selected network endpoints, and provides a rich source of information on network routing and topology.
-  * Reverse Traceroute data is not processed by the M-Lab ETL Pipeline.
-  * More information is available at [Reverse Traceroute](https://research.cs.washington.edu/networking/astronomy/reverse-traceroute.html){:target="_blank"}
-  * [Reverse Traceroute Raw Data](https://console.cloud.google.com/storage/browser/m-lab_revtr){:target="_blank"}
 * [SamKnows]({{site.baseurl}}/tests/samknows)
   * The SamKnows performance testing platform is used by the USA's Federal Communications Commission (FCC), European Commission, UK government (Ofcom), Brazilian government (Anatel), Singapore's IDA and other government-backed studies worldwide.
   * SamKnows infrastructure includes off-net test servers hosted by M-Lab, and the M-Lab and SamKnows teams coordinate regularly to support the various regulatory reporting periods of data collection conducted by SamKnows.

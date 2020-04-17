@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: redirect
 title: "Sidestream - BigQuery Schema"
 permalink: /data/docs/bq/schema/sidestream/
 breadcrumb: data
+redirect_to: "https://measurementlab.net/tests/sidestream/#sidestream-schema"
 ---
 
 # Sidestream BigQuery Schema
