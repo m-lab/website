@@ -29,7 +29,9 @@ We refer to these as “Helpful Views”, since they present the most commonly u
 
 Helpful BigQuery Views are intended to support the majority of data users, who wish to understand what NDT data measured in a given locale and time period. Most people will want to use the NDT unified views, since they provide ground truth from NDT’s perspective on the service quality as measured by NDT.
 
-Raw measurement data from the M-Lab fleet is archived and presented in the Raw Views in BigQuery. The raw data includes observations that are less helpful for understanding the Internet, including aborted or failed tests, measurements that exhibit non-network bottlenecks, and M-Lab's own test traffic used to manage the fleet. We provide the raw views so that researchers can:
+Archived measurement data from the M-Lab fleet is parsed directly into the "Raw Views". Raw views are a faithful representation of the data as originally collected, with minimal to no translations before insertion into BigQuery. Raw views are always the foundation to helpful views. Unlike helpful views, raw views also include aborted or failed tests, measurements that exhibit non-network bottlenecks, and M-Lab's own test traffic used to manage the fleet. Because raw views include rows filtered by the helpful views, they may be less helpful for most users. However, for experiment authors and researchers interested in all testing conditions and results, raw views are the authoritative source for all recorded and parsed measurement data.
+
+We provide the raw views so that researchers can:
 
 * understand what has been excluded from the helpful views;
 * prototype new columns or algorithms that might be promoted into the helpful views;
@@ -48,9 +50,9 @@ Some new fields are available in the unified views that are worth mentioning:
 * **Client & Server ASNumber**
   * Provides the [Autonomous System Number](https://en.wikipedia.org/wiki/Autonomous_system_(Internet)){:target="_blank"} associated with the client’s connection, and the ASN associated with the connection used by the M-Lab server which conducted the measurement. This field is useful to identify the provider associated with the test IP address.
 * **UUID**
-  * Provides a Universally Unique Identifier for each test. This field is useful to match or join results from Faithful Views that may not be in the Helpful Views.
+  * Provides a Universally Unique Identifier for each test. This field is useful to match or join results from Raw Views that may not be in the Helpful Views.
 * **Congestion Control**
-  * Identifies the TCP congestion control algorithm used for the test. This field is useful in establishing provenance of the test with respect to the instrumentation or method used.
+  * Identifies the TCP congestion control algorithm used for the test. This field is useful in establishing provenance of the test with respect to the instrumentation and protocol used.
 
 ## Long Term Support
 
