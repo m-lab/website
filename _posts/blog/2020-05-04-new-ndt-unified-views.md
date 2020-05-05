@@ -2,7 +2,7 @@
 layout: blog
 title: "NDT Unified Views Now Published"
 author: "Chris Ritzo"
-date: 2020-05-04
+date: 2020-05-05
 breadcrumb: blog
 categories:
   - ndt
