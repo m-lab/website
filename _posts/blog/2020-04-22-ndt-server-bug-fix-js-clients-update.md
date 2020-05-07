@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "NDT JavaScript Integrations - Update to Include Recent ndt-server Bug Fix"
+title: "NDT JavaScript Integrations - Update to Include Recent Client Bug Fix"
 author: "Chris Ritzo"
 date: 2020-04-22
 breadcrumb: blog

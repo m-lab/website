@@ -34,6 +34,5 @@ Want more? Go for it!
 {:.circle-list}
 - **Query the RIPEstat widgets** from the RIPEstat web site at <https://stat.ripe.net/widget/network-activity> and <https://stat.ripe.net/widget/bandwidth>.
 - **Embed the RIPEstat widgets** in your own web site. (See the [instructions](https://stat.ripe.net/index/documentation/interfaces-apis).)
-- **Directly access the M-Lab data**, for free - about [800TB and growing]({{ site.baseurl }}/state/)! (See [instructions](https://code.google.com/p/m-lab/wiki/HowToAccessMLabData).)
 
 For more information about the widget, see the [RIPEstat launch blogpost](https://labs.ripe.net/Members/vastur/visualising-bandwidth-capacity-in-ripestat-using-m-lab-data).
