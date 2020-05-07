@@ -2,18 +2,18 @@
 layout: blog
 title: "Data Visualization Site Upgrade"
 author: "Chris Ritzo"
-date: 2020-05-05
+date: 2020-05-08
 breadcrumb: blog
 categories:
   - data
   - visualization
 ---
 
-The M-Lab team completed a major platform upgrade in November 2019, which required publication of NDT data to new BigQuery tables and views. Consequently, the aggregate NDT data presented on our [visualization website](https://viz.measurementlab.net) has not been updated. We're pleased to report that the M-Lab data visualization site is now being upgraded.<!--more-->
+The M-Lab team completed a major platform upgrade in November 2019, which required publication of NDT data to new BigQuery tables and views. Consequently, the aggregate NDT data presented on our [visualization website](https://viz.measurementlab.net) has not been updated. We're pleased to report that the M-Lab data visualization site will soon be upgraded.<!--more-->
 
 While all NDT test data is published in raw format and in BigQuery, the data visualization website was tied to one set of cannonical BigQuery tables. Because the platform upgrade last winter began publishing data to new tables and views, NDT data beyond mid-November was not available. Further delaying the update of the visualization site has been the publishing of unified views of the NDT data in BigQuery.
 
-The NDT unified views are available in preliminarily now, and a first version of their stable schema format will be published soon. The unified views' will provide a schema that can be queried across all of the NDT archive. M-Lab is proceeding with the work to upgrade the visualization site now, which we hope will be completed within the second quarter.
+The NDT unified views are available in preliminarily form now, and a first version of their stable schema format will be published soon. The unified views' will provide a schema that can be queried across all of the NDT archive. M-Lab is proceeding with the backend work to upgrade the visualization site now, we're [seeking a contract developer]({{ site.baseurl }}/jobs/2020-05/visualization-site/) to complete the frontend work. Check out this and other opportunities to work with M-Lab on our [Jobs Page]({{ site.baseurl }}/jobs/).
 
 ## If you need current data before then
 
