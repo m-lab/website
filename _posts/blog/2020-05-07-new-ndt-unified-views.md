@@ -2,7 +2,7 @@
 layout: blog
 title: "NDT Unified Views Now Published"
 author: "Chris Ritzo"
-date: 2020-05-05
+date: 2020-05-07
 breadcrumb: blog
 categories:
   - ndt
@@ -57,3 +57,11 @@ Some new fields are available in the unified views that are worth mentioning:
 ## Long Term Support
 
 Helpful Views will allow M-Lab to provide a better long-term supported schema for the most widely used parts of the NDT dataset. We intend to make incremental changes to the unified views schemas, but to ensure they are stable for use by researchers and also applications that integrate our data. Early testing of the NDT unified views has helped identify a couple changes needed before their first official release. For example, the annotated geographic fields will be standardized to use camel case rather than the current mix of field naming conventions. Future updates to these schemas will be tested to confirm that no breaking changes are added without proper notification.  Names with an underscore prefix ("_") are provisional, and likely to change in the future.  Our team is in the process of establishing a quality control check that includes confirming that schema changes don’t break the queries used by your applications. If you’d like us to include your query in our quality control checks, please email us at support@measurementlab.net
+
+## Differences between M-Lab 1.0 Views vs. M-Lab 2.0 Unified Views
+As mentioned, M-Lab 2.0 includes upgrades to our TCP measurement instrumentation. The upgrade might produce a difference in the numbers previously reported by our old platform in certain networks. There are few reasons why: first, to some degree, these changes are inherent to the nature of an Internet Performance dataset. As the Internet from the perspective of NDT changes and improves, our data reflects these changes. Additionally, TCP implementations are always improving and the new version of TCP introduced by the upgrade does a better job of compensating for some of the limitations of certain networks. How and why is an open research question our team is actively investigating. Finally, the upgrade provides additional metrics that provide more granular data about a TCP connection, such as the setup time for a packet to be sent during an upload and metrics around the recovery of packet loss. The addition of these metrics enable more detailed calculations when providing download and upload time in our Helpful Views, which can result in a shift in reported speeds.
+
+## Next Up
+M-Lab is committed to the openness and transparency of our longitudinal dataset and for this reason will always support access to past data, both raw and aggregated. But as we continue to evolve and refine the Helpful Views from M-Lab 2.0, we will also introduce a calibration model which provides an additional view of past NDT measurements that are adjusted in relation to current ones i.e. using our new data to learn more about our old data. We hope this will provide better insight into the NDT data produced by our old platform.
+
+Our efforts towards calibration and studying the improvements in TCP are open research questions; if they interest you, we can provide exports of the raw data from any of our tests and welcome collaboration.
