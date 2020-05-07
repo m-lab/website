@@ -2,13 +2,13 @@
 layout: blog
 title: "New FQDNs for Experiments"
 author: "Nathan Kinkade"
-date: 2020-05-06
+date: 2020-05-07
 breadcrumb: blog
 categories:
   - platform
 ---
 
-If you have integrated NDT into a client that does not use our Locate Service, please be aware of the following upgrade. If your NDT client uses our Locate Service, you should not notice a change.
+If you have integrated NDT into a client that does not use our Locate Service, please be aware of the following change. If your NDT client uses our Locate Service, you should not notice a change.
 
 Fully Qualified Domain Names for M-Lab experiments will be changing soon.<!--more--> The new names will replace all non-subdomain-designating dots with dashes, and will also include a Google Cloud Project name.  For example:
 
