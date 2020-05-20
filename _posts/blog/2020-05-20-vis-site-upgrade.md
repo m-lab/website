@@ -2,7 +2,7 @@
 layout: blog
 title: "Data Visualization Site Upgrade"
 author: "Chris Ritzo"
-date: 2020-05-18
+date: 2020-05-20
 breadcrumb: blog
 categories:
   - data
