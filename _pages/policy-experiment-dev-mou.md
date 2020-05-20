@@ -72,7 +72,7 @@ Experiment Developers are expected to follow the requirements and guidelines for
 
 ### M-Lab Data Processing Agreement
 
-If Experiment Developers wish to use M-Lab’s ETL pipeline to archive test data in M-Lab’s Google Cloud Storage and/or in BigQuery datasets, they must agree to the terms of M-Lab’s Data Processing Agreement as outlined in [Appendix A](#appendix-a).
+If Experiment Developers wish to use M-Lab’s ETL pipeline to archive test data in M-Lab’s Google Cloud Storage and/or in BigQuery datasets, they must agree to the terms of M-Lab’s Data Processing Agreement as outlined in **Appendix A**.
 
 ### Experiment Lifecycle Expectations
 
@@ -134,15 +134,58 @@ Signature:
 
 Date:
 
-## Appendix A
+## Appendix A - M-Lab Data Processing Agreement
 
-### M-Lab Data Processing Agreement
+When experimenters leverage the M-Lab ETL pipeline to publish raw test data and/or BigQuery datasets, the experimenter must consent to M-Lab being a data processor for the data collected by the experiment. This formalizes M-Lab’s role in processing the data and making it available publicly on the experimenter’s behalf. In this case, experimenters must also reflect M-Lab’s in their own experiment’s privacy policies, communicated at the time a person runs their test.
 
-When experimenters leverage the M-Lab ETL pipeline to publish raw test data and/or BigQuery datasets, the experimenter must consent to M-Lab being a joint controller of the resulting data collected by the experiment. This formalizes, and provides a legal basis under the European Union’s General Data Protection Regulation, M-Lab’s role in processing the data and making it available publicly on the experimenter’s behalf. In this case, experimenters must also reflect their roles as joint controllers with M-Lab in their own experiment’s privacy policies, communicated at the time a person runs their test, which should clearly describe which data serves what purpose and what legal base is applied for each.
+### Data Processing Agreement
 
-### Data Processing and Joint Controller Agreement
+As the maintainer of the network measurement experiment, _name of experiment_, hosted on the Measurement Lab platform, I/we consent to Measurement Lab’s role as a Data Processor with me/us. By this consent, I/we confirm that Measurement Lab will process and save the data resulting from data subject’s use of our experiment in M-Lab’s Google Cloud Storage and/or BigQuery datasets. Our experiment’s privacy policies will reiterate this Data Processor role.
 
-As the maintainer of the network measurement experiment, name of experiment, hosted on the Measurement Lab platform, I/we consent to Measurement Lab’s role as a Joint Controller with me/us, under the terms of the European Union’s General Data Protection Regulation (GDPR). By this consent, I/we confirm that Measurement Lab will process and save the data resulting from data subject’s use of our experiment in M-Lab’s Google Cloud Storage and/or BigQuery datasets. Our experiment’s privacy policies will reiterate this Joint Controller role, and will comply with all requirements of the GDPR.
+**Signature(s) For Experiment Developer(s):**
+
+Name:
+
+Designation:
+
+E-mail address:
+
+Organization:
+
+Physical Address:
+
+Signature:
+
+Date:
+
+**Signature(s) For Measurement Lab:**
+
+Name:
+
+Designation:
+
+E-mail address:
+
+Organization:
+
+  Measurement Lab
+
+Physical Address:
+
+  1221 SE 34th
+  Portland, OR 97214
+
+Signature:
+
+Date:
+
+## Appendix B - M-Lab Joint Controller Agreement
+
+When an experimenter hosts their experiment with M-Lab, their experiment code will be available globally. If the experiment collects the ISP-provided IP address of originating client running the test, or any other data considered Personally Identifiable Information (PII) as defined under the European Union’s General Data Protection Regulation (GDPR), the California Consumer Protection Act (CCPA), or other applicable consumer protection or privacy legislation for other jurisdictions, the experimenter must consent to M-Lab being a joint controller of the resulting data collected by the experiment. This formalizes, and provides a legal basis under these consumer protection and privacy laws. In this case, experimenters must also reflect their roles as joint controllers with M-Lab in their own experiment’s privacy policies, communicated at the time a person runs their test, which should clearly describe which data serves what purpose and what legal base is applied for each.
+
+### Joint Controller Agreement
+
+As the maintainer of the network measurement experiment, _name of experiment_, hosted on the Measurement Lab platform, I/we consent to Measurement Lab’s role as a Joint Controller with me/us, under the terms of the European Union’s General Data Protection Regulation (GDPR) as well as any similar provisions in the California Consumer Protection Act (CCPA) or other similar laws in other jurisdictions. By this consent, I/we confirm that Measurement Lab will process and save the data resulting from data subject’s use of our experiment in M-Lab’s Google Cloud Storage and/or BigQuery datasets. Our experiment’s privacy policies will reiterate this Joint Controller role, and will comply with all requirements of the GDPR and the CCPA.
 
 **Signature(s) For Experiment Developer(s):**
 
