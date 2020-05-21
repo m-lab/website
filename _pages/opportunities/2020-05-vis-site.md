@@ -16,7 +16,7 @@ Measurement Lab is a fiscally sponsored project of [Code for Science & Society](
 
 ## Contract Description
 
-We are hiring a front end developer to update our [visualization site](https://viz.measurementlab.net/). The site’s current features include comparisons of data across location and Internet Service Provider.
+We are hiring a front end developer to update our visualization site. The site’s current features include comparisons of data across location and Internet Service Provider.
 
 The contract will include three phases. The first phase will include an upgrade to represent data from M-Lab’s upgraded platform and an update to its infrastructure map. The second phase will include the addition of dashboards that reflect changes in the Internet Performance over the course of COVID-19’s global impact. The dashboards will be [prototyped in DataStudio]({{ site.baseur }}/blog/category/covid19/) and need to be converted to use D3 and React.js. The final phase will include unit testing, documentation and troubleshooting.
 

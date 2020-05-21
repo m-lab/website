@@ -31,10 +31,10 @@ In the Interconnection Study, we found a consistent theme across multiple access
 
 <table style="width: 100%;">
   <tr>
-    <td><a href="https://viz.measurementlab.net/compare/location?end=2014-01-01&filter1=AS10796x_AS11486x_AS32953&filter2=AS29791_AS174&selected=nausny&start=2013-01-01"><img alt="Verizon across Internap and Cogent in New York, January 2013 - January 2014, Download Throughput" title="Verizon across Internap and Cogent in New York, January 2013 - January 2014, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon-Internap_Cogent-NY.png"></a></td>
+    <td>img alt="Verizon across Internap and Cogent in New York, January 2013 - January 2014, Download Throughput" title="Verizon across Internap and Cogent in New York, January 2013 - January 2014, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon-Internap_Cogent-NY.png"></td>
   </tr>
   <tr>
-    <td style="font-style: italic;">Verizon across Internap and Cogent in New York, January 2013 - January 2014, Download Throughput - <a href="https://viz.measurementlab.net/compare/location?end=2014-01-01&filter1=AS10796x_AS11486x_AS32953&filter2=AS29791_AS174&selected=nausny&start=2013-01-01">Source</a>
+    <td style="font-style: italic;">Verizon across Internap and Cogent in New York, January 2013 - January 2014, Download Throughput
     </td>
   </tr>
 </table>
@@ -43,15 +43,15 @@ M-Lab has since invested resources to build up its presence in the United States
 
 <table style="width: 100%;">
   <tr>
-    <td><a href="https://viz.measurementlab.net/compare/location?breakdownBy=filter2&end=2015-06-01&filter1=AS11486x_AS10796x_AS13367x_AS11398x_AS10774x&filter2=AS3257&selected=naus&start=2014-01-01"><img alt="Verizon across GTT, January 2014 - June 2015, Download Throughput" title="Verizon across GTT, January 2014 - June 2015, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon-GTT.png"></a>
+    <td><img alt="Verizon across GTT, January 2014 - June 2015, Download Throughput" title="Verizon across GTT, January 2014 - June 2015, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon-GTT.png">
     </td>
-    <td><a href="https://viz.measurementlab.net/compare/location?breakdownBy=filter2&end=2015-06-01&filter1=AS11486x_AS10796x_AS13367x_AS11398x_AS10774x&filter2=AS3257&selected=naus&start=2014-01-01"><img alt="AT&T across GTT, January 2014 - June 2015, Download Throughput" title="AT&T across GTT, January 2014 - June 2015, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon-ATT.png"></a>
+    <td><img alt="AT&T across GTT, January 2014 - June 2015, Download Throughput" title="AT&T across GTT, January 2014 - June 2015, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon-ATT.png">
     </td>
-    <td><a href="https://viz.measurementlab.net/compare/location?breakdownBy=filter2&end=2015-06-01&filter1=AS11486x_AS10796x_AS13367x_AS11398x_AS10774x&filter2=AS3257&selected=naus&start=2014-01-01"><img alt="Cox across GTT, January 2014 - June 2015, Download Throughput" title="Cox across GTT, January 2014 - June 2015, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon-Cox.png"></a>
+    <td><img alt="Cox across GTT, January 2014 - June 2015, Download Throughput" title="Cox across GTT, January 2014 - June 2015, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon-Cox.png">
     </td>
   </tr>
   <tr>
-    <td colspan="3" style="font-style: italic;">Verizon, AT&T, and Cox across GTT, January 2014 - June 2015, Download Throughput - <a href="https://viz.measurementlab.net/compare/location?breakdownBy=filter2&end=2015-06-01&filter1=AS11486x_AS10796x_AS13367x_AS11398x_AS10774x&filter2=AS3257&selected=naus&start=2014-01-01">Source</a>
+    <td colspan="3" style="font-style: italic;">Verizon, AT&T, and Cox across GTT, January 2014 - June 2015, Download Throughput
     </td>
   </tr>
 </table>
@@ -67,32 +67,32 @@ In the most severe cases, degradation represented a substantial impediment to ac
 
 Since the issuance of the Open Internet Order in February 2015, Measurement Lab has found a significant overall improvement in performance in broadband access in the United States and a subsidence of interconnection-related degradation. Based on review of the congestion episodes documented in the Interconnection Study and a new analysis of the M-Lab data, the problems identified in previous reports are often alleviated in the months after second quarter of 2015 and onward. Whereas we also noted cases of intermittent, medium-term congestion episodes in past publications, such as with XO and Comcast, the restoration of performance has been sustained. Such issues are more rare than in the past. A broad search of the dataset only identifies a small numbers of cases where interconnection relationships exhibit indications of congestion. M-Lab has also observed an overall improvement in the performance of broadband across all metrics. These finding demonstrate that since our original research the Internet in the United States has become more reliable and better performing, with interconnection conditions less likely to be the bottleneck in consumers’ access to content than in the past.
 
-The most significant degradation identified in our search was for Comcast users to M-Lab sites located in the transit ISPs Tata and GTT. Underperformance appears from the outset of M-Lab hosting sites in GTT, therefore predating September 2014. The degradation for Comcast customers across Tata appears later, beginning around September 2015. While M-Lab had identified underperformance with Tata for multiple access ISPs in our June 2015 blogpost describing additional cases of congestion, those patterns were alleviated shortly after our research on the episode (notably with CenturyLink). Comcast is an exception: underperformance appears in the M-Lab data as a decrease of download throughput during peak hours that aligns with an increased packet loss at that time. The degradation represents a substantial overall change in performance from Comcast to both transit ISPs, well beyond half of the performance compared to earlier in the day. During the same period, other access ISPs, such as AT&T or Verizon, no longer exhibit patterns of degradation to Tata and GTT. Likewise, Comcast users [do not show the same underperformance](http://viz.measurementlab.net/compare/location?aggr=month&end=2017-06-01&filter1=AS10774x_AS11486x_AS13367x&filter2=AS6453_AS3257_AS174_AS6461_AS6939&metric=download&selected=naus&start=2016-01-01) to other sites, such as those on Cogent, Zayo, or Hurricane Electric. A review of collected data related to Comcast and Tata from May and June 2017 shows less degradation, which tentatively suggests that remediative measures may have been taken recently to improve performance.
+The most significant degradation identified in our search was for Comcast users to M-Lab sites located in the transit ISPs Tata and GTT. Underperformance appears from the outset of M-Lab hosting sites in GTT, therefore predating September 2014. The degradation for Comcast customers across Tata appears later, beginning around September 2015. While M-Lab had identified underperformance with Tata for multiple access ISPs in our June 2015 blogpost describing additional cases of congestion, those patterns were alleviated shortly after our research on the episode (notably with CenturyLink). Comcast is an exception: underperformance appears in the M-Lab data as a decrease of download throughput during peak hours that aligns with an increased packet loss at that time. The degradation represents a substantial overall change in performance from Comcast to both transit ISPs, well beyond half of the performance compared to earlier in the day. During the same period, other access ISPs, such as AT&T or Verizon, no longer exhibit patterns of degradation to Tata and GTT. Likewise, Comcast users do not show the same underperformance to other sites, such as those on Cogent, Zayo, or Hurricane Electric. A review of collected data related to Comcast and Tata from May and June 2017 shows less degradation, which tentatively suggests that remediative measures may have been taken recently to improve performance.
 
 <table style="width: 100%;">
   <tr>
-    <td><a href="https://viz.measurementlab.net/compare/location?aggr=month&end=2017-06-01&filter1=AS13367x&filter2=AS6453_AS3257_AS174&metric=download&selected=naus&start=2016-01-01"><img alt="Comcast across TATA, January 2016 - April 2017, Diurnal Pattern, Download Throughput" title="Comcast across TATA, January 2016 - April 2017, Diurnal Pattern, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Comcast-TATA.png" style="cursor:pointer;"></a>
+    <td><img alt="Comcast across TATA, January 2016 - April 2017, Diurnal Pattern, Download Throughput" title="Comcast across TATA, January 2016 - April 2017, Diurnal Pattern, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Comcast-TATA.png" style="cursor:pointer;">
     </td>
-    <td><a href="https://viz.measurementlab.net/compare/location?aggr=month&end=2017-06-01&filter1=AS13367x&filter2=AS6453_AS3257_AS174&metric=download&selected=naus&start=2016-01-01"><img alt="Comcast across GTT, January 2016 - April 2017, Diurnal Pattern, Download Throughput" title="Comcast across GTT, January 2016 - April 2017, Diurnal Pattern, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Comcast-GTT.png"></a>
+    <td><img alt="Comcast across GTT, January 2016 - April 2017, Diurnal Pattern, Download Throughput" title="Comcast across GTT, January 2016 - April 2017, Diurnal Pattern, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Comcast-GTT.png">
     </td>
   </tr>
   <tr>
-    <td colspan="3" style="font-style: italic;">Comcast across Tata and GTT (respectively), January 2016 - April 2017, Diurnal Pattern, Download Throughput - <a href="https://viz.measurementlab.net/compare/location?aggr=month&end=2017-06-01&filter1=AS13367x&filter2=AS6453_AS3257_AS174&metric=download&selected=naus&start=2016-01-01">Source</a>
+    <td colspan="3" style="font-style: italic;">Comcast across Tata and GTT (respectively), January 2016 - April 2017, Diurnal Pattern, Download Throughput
     </td>
   </tr>
 </table>
 
 <table style="width: 100%;">
   <tr>
-    <td><a href="https://viz.measurementlab.net/compare/location?end=2016-01-01&filter1=AS11486x&filter2=AS10753x&selected=naus&start=2015-01-01"><img alt="Verizon across Level 3, January 2014 - December 2014, Diurnal Pattern, Download Throughput" title="Verizon across Level 3, January 2014 - December 2014, Diurnal Pattern, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon_Level3-1.png"></a>
+    <td><img alt="Verizon across Level 3, January 2014 - December 2014, Diurnal Pattern, Download Throughput" title="Verizon across Level 3, January 2014 - December 2014, Diurnal Pattern, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon_Level3-1.png">
     </td>
-    <td><a href="https://viz.measurementlab.net/compare/location?end=2016-01-01&filter1=AS11486x&filter2=AS10753x&selected=naus&start=2015-01-01"><img alt="Verizon across Level 3, January 2015 - December 2015, Diurnal Pattern, Download Throughput" title="Verizon across Level 3, January 2015 - December 2015, Diurnal Pattern, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon_Level3-2.png"></a>
+    <td><img alt="Verizon across Level 3, January 2015 - December 2015, Diurnal Pattern, Download Throughput" title="Verizon across Level 3, January 2015 - December 2015, Diurnal Pattern, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-Verizon_Level3-2.png">
     </td>
   </tr>
   <tr>
-    <td style="font-style: italic;">Verizon across Level 3, January 2014 - December 2014, Diurnal Pattern, Download Throughput - <a href="https://viz.measurementlab.net/compare/location?end=2016-01-01&filter1=AS11486x&filter2=AS10753x&selected=naus&start=2015-01-01">Source</a>
+    <td style="font-style: italic;">Verizon across Level 3, January 2014 - December 2014, Diurnal Pattern, Download Throughput
     </td>
-    <td style="font-style: italic;">Verizon across Level 3, January 2015 - December 2015, Diurnal Pattern, Download Throughput - <a href="https://viz.measurementlab.net/compare/location?end=2016-01-01&filter1=AS11486x&filter2=AS10753x&selected=naus&start=2015-01-01">Source</a>
+    <td style="font-style: italic;">Verizon across Level 3, January 2015 - December 2015, Diurnal Pattern, Download Throughput
     </td>
   </tr>
 </table>
@@ -103,11 +103,11 @@ In several of the episodes covered by M-Lab’s research, the parties involved l
 
 <table style="width: 100%;">
   <tr>
-    <td><a href="https://viz.measurementlab.net/compare/location?aggr=month&breakdownBy=filter1&end=2016-01-01&filter1=AS10774x&filter2=AS3257&metric=download&selected=naus&start=2015-01-01"><img alt="AT&T across GTT, January 2015 - January 2016, Download Throughput" title="AT&T across GTT, January 2015 - January 2016, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-ATT_GTT.png"></a>
+    <td><img alt="AT&T across GTT, January 2015 - January 2016, Download Throughput" title="AT&T across GTT, January 2015 - January 2016, Download Throughput" src="{{ site.baseurl }}/images/blog/interconnection_update-ATT_GTT.png">
     </td>
   </tr>
   <tr>
-    <td style="font-style: italic;">AT&T across GTT, January 2015 - January 2016, Download Throughput - <a href="https://viz.measurementlab.net/compare/location?aggr=month&breakdownBy=filter1&end=2016-01-01&filter1=AS10774x&filter2=AS3257&metric=download&selected=naus&start=2015-01-01">Source</a>
+    <td style="font-style: italic;">AT&T across GTT, January 2015 - January 2016, Download Throughput
     </td>
   </tr>
 </table>
