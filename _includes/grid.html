@@ -44,13 +44,13 @@
           {% endif %}
 
             {% if grid.group-list-class == "l-grid l-3col" %}
-            <div class="grid-img{{ grid.grid-img-class }}"><img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.heading }} - {{ item.img_attribution }}" title="{{ item.heading }} - {{ item.img_attribution }}" class=""></div>
+            <div class="grid-img{{ grid.grid-img-class }}"><img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.heading }}" title="{{ item.heading }}" class=""></div>
             <div class="grid-info">
               <h3 class="grid-heading">{{ item.heading }}</h3>
               <div class="grid-description"><p>{{ item.desc }}</p></div>
             </div>
             {% else %}
-            <img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.alt }} - {{ item.img_attribution }}" title="{{ item.heading }} - {{ item.img_attribution }}" class="grid-link is-plain">
+            <img src="{{ site.baseurl }}/images{{ img_dir }}/{{ item.image }}" alt="{{ item.heading }}" title="{{ item.heading }}" class="grid-link is-plain">
             {% endif %}
 
           {% if item.link %}
