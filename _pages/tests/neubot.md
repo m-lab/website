@@ -33,7 +33,8 @@ Please cite this data set as follows: **The M-Lab Neubot - Dash Data Set, &lt;da
 
 ## Policies & Support Information
 
-**Get more information** at [http://www.neubot.org/](http://www.neubot.org/){:target="_blank"}.
+* **Get more information** at [http://www.neubot.org/](http://www.neubot.org/){:target="_blank"}.
+* **Neubot Privacy Policy**: [https://github.com/neubot/dash/blob/master/PRIVACY.md](https://github.com/neubot/dash/blob/master/PRIVACY.md){:target="_blank"}
 
 ## Data Collected by DASH in Raw Format
 
