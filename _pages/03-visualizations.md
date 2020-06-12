@@ -13,8 +13,8 @@ As of May 2020, M-Lab is upgrading the previous data visualizations that you use
 
 ## United States
 
-<iframe width="100%" height="1200" src="https://datastudio.google.com/u/0/reporting/1djtGEuqV4Qwrj26GQTN_xzp3rsMYYcmv/page/YW8NB/" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe width="100%" height="1200" src="https://datastudio.google.com/embed/reporting/1djtGEuqV4Qwrj26GQTN_xzp3rsMYYcmv/page/YW8NB" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 ## World
 
-<iframe width="100%" height="1200" src="https://datastudio.google.com/u/0/reporting/12XddYj7__cZOaBF2RwplImw_ZdQQ5Nuw/page/9GTNB/" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe width="100%" height="1200" src="https://datastudio.google.com/embed/reporting/12XddYj7__cZOaBF2RwplImw_ZdQQ5Nuw/page/9GTNB" frameborder="0" style="border:0" allowfullscreen></iframe>
