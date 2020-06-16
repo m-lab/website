@@ -6,6 +6,8 @@ page-title: "M-Lab Visualization Website Contract"
 breadcrumb: "contribute"
 ---
 
+## This opportunity has been filled (2020-06-01)
+
 Measurement Lab is hiring for a frontend development contract.
 
 ## About Measurement Lab

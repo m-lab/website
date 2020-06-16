@@ -15,10 +15,10 @@ In response to increased reliance on the Internet during the COVID-19 pandemic M
 DataStudio also provides the option to export data into a CSV but hovering on a visualization and clicking on the three dots in the right hand corner. We are also happy to provide queries being used, which can serve as a good starting point for early-stage researchers. If you plan to use our NDT data in your research, please feel free to reach out to us for a review or more information. Also, please note that the DataStudio reports may take some time to load, because they're querying our large dataset each time the page is loaded or the selected options have changed.
 
 ## US Dashboard
-<iframe src="https://datastudio.google.com/embed/reporting/1iH3kl_7vHzc8pRLIkabwzODMhJ1ZUhMl/page/YW8NB" frameborder="0" style="width:100%; height:800px; border:0" allowfullscreen></iframe>
+<iframe src="https://datastudio.google.com/embed/reporting/1djtGEuqV4Qwrj26GQTN_xzp3rsMYYcmv/page/YW8NB" frameborder="0" style="width:100%; height:800px; border:0" allowfullscreen></iframe>
 
 ## Global Dashboard
-<iframe src="https://datastudio.google.com/embed/reporting/1q1lVI0Wc7ZLSXWZn4hcYknp_Tz_BtgQV/page/9GTNB" frameborder="0" style="width:100%; height:800px; border:0" allowfullscreen></iframe>
+<iframe src="https://datastudio.google.com/embed/reporting/12XddYj7__cZOaBF2RwplImw_ZdQQ5Nuw/page/9GTNB" frameborder="0" style="width:100%; height:800px; border:0" allowfullscreen></iframe>
 
 ## Feedback
 
