@@ -6,6 +6,8 @@ page-title: "M-Lab Measure Chrome Extension Contract"
 breadcrumb: "contribute"
 ---
 
+## This opportunity has been filled (2020-06-01)
+
 Measurement Lab is hiring for a Chrome Extension and backend development contract.
 
 ## About Measurement Lab

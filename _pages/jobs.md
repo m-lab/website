@@ -16,8 +16,7 @@ There are many ways to work with M-Lab, whether as a direct hire, through a fell
 
 ## Contract Opportunities with M-Lab
 
-* [M-Lab Measure Chrome Extension Contract]({{ site.baseurl }}/jobs/2020-05/chrome-extension/)
-* [M-Lab Visualization Site Contract]({{ site.baseurl }}/jobs/2020-05/visualization-site/)
+* None at this time
 
 ## Open Opportunities in the M-Lab Community
 
