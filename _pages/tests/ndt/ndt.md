@@ -17,7 +17,7 @@ If you are interested in running an NDT test, please visit our standalone speed 
 
 From 2009-2019, M-Lab has run the default [NDT server](https://github.com/ndt-project/ndt/){:target="_blank"} originally [developed by Internet2](https://software.internet2.edu/ndt/){:target="_blank"}. This version uses the [web100 linux kernel extension](https://dl.acm.org/citation.cfm?id=956993.957002){:target="_blank"} for gathering data points about the TCP connection.
 
-By the end of 2019, M-Lab will launch a completely re-written [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}, providing the ndt5 and ndt7 protocols. M-Lab also will transition hosted experiments to use the netlink socket and [TCP_INFO](https://github.com/m-lab/tcp-info/){:target="_blank"} kernel instrumentation in 2019, replacing our reliance on Web100. The web100 version of server will be decommissioned on M-Lab once `ndt-server` has been tested and launched. M-Lab will retain data collected while it was in production is available in the `web100` tables referenced below.
+In Nov. 2019, M-Lab launched a completely re-written [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}, that provides the **ndt5** and **ndt7** protocols. At that time the web100 version of NDT server was decommissioned, and M-Lab hosted experiments now use the netlink socket and [TCP_INFO](https://github.com/m-lab/tcp-info/){:target="_blank"} kernel instrumentation. M-Lab will retain data collected while it was in production is available in the `web100` tables referenced below.
 
 ## NDT Testing Protocols
 
@@ -25,12 +25,22 @@ As a part of our transition from the web100 version of NDT server to the new pla
 
 * [web100]({{ site.baseurl }}/tests/ndt/web100) is the protocol refering to data collected by the current NDT server
 * [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is a new NDT protocol designed to be backward compatible with current clients
-* ndt7 is a new NDT protocol that uses TCP BBR where available in the network, and operates on TLS port 443 or via port 80
+* [ndt7]({{ site.baseurl }}/tests/ndt/ndt7) is a new NDT protocol that uses TCP BBR where available in the network, and operates on TLS port 443 or via port 80
+
+### Differences between NDT protocols
+
+TODO
 
 ## Source code
 
+**NDT Server**
 * [web100 historical ndt](https://github.com/ndt-project/ndt/){:target="_blank"}
 * [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
+
+**NDT Reference Clients**
+* [ndt5-client-go](https://github.com/m-lab/ndt5-client-go){:target="_blank"}
+* [ndt7-client-go](https://github.com/m-lab/ndt7-client-go){:target="_blank"}
+* [ndt7-js](https://github.com/m-lab/ndt7-js/){;target="_blank"}
 
 ## Citing the M-Lab NDT Dataset
 
@@ -90,14 +100,14 @@ Data collected by NDT is provided in multiple ways, each suited to specific segm
 
 * [measurement-lab.ndt.ndt5](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=ndt5&page=table){:target="_blank"}
   * NDT data collected using the [ndt5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after 2019-07-19, using tcp-info for all TCP metrics.
-  * [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-faithful-schema)
+  * [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-schema)
 * [measurement-lab.ndt.web100](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=web100&page=table){:target="_blank"}
   * NDT data collected using the [web100 protocol]({{ site.baseurl }}/tests/ndt/web100), using the web100 Linux kernel patch for all TCP metrics.
   * `web100` is root BigQuery view from which all current "Helpful" views are derived.
   * [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
-* ndt7 (coming soon)
+* [measurement-lab.ndt.ndt7](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=ndt7&page=table)
   * NDT data collected using the ndt7 protocol using tcp-info for all TCP metrics.
-  * _ndt7 description and schema_
+  * [ndt7 description and schema]({{ site.baseurl }}/tests/ndt/ndt7/#ndt7-bigquery-schema)
 * [measurement-lab.ndt.tcpinfo](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=tcpinfo&page=table){:target="_blank"}
 * [measurement-lab.ndt.traceroute](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=traceroute&page=table){:target="_blank"}
 
