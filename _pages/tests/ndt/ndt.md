@@ -27,10 +27,6 @@ As a part of our transition from the web100 version of NDT server to the new pla
 * [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is a new NDT protocol designed to be backward compatible with current clients
 * [ndt7]({{ site.baseurl }}/tests/ndt/ndt7) is a new NDT protocol that uses TCP BBR where available in the network, and operates on TLS port 443 or via port 80
 
-### Differences between NDT protocols
-
-TODO
-
 ## Source code
 
 **NDT Server**
