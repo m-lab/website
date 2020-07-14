@@ -1,9 +1,83 @@
 | Field name       | Type       | Description    |
 | :----------------|:----------:|:---------------|
+| **UUID** | STRING |  |
+| **TestTime** | TIMESTAMP |  |
+| **ClientASN** | INTEGER |  |
+| **ServerASN** | INTEGER |  |
 | **ParseInfo** | RECORD | Metadata about how the parser processed the measurement. |
 | ParseInfo.**TaskFileName** | STRING | GCS URL to the archive containing the test_id for this row. |
 | ParseInfo.**ParseTime** | TIMESTAMP | Time that the parser processed this row. |
 | ParseInfo.**ParserVersion** | STRING | Version of the parser that processed this row. |
+| ParseInfo.**Filename** | STRING |  |
+| **SockID** | RECORD |  |
+| SockID.**SPort** | INTEGER |  |
+| SockID.**DPort** | INTEGER |  |
+| SockID.**SrcIP** | STRING |  |
+| SockID.**DstIP** | STRING |  |
+| SockID.**Interface** | INTEGER |  |
+| SockID.**Cookie** | INTEGER |  |
+| **Server** | RECORD |  |
+| Server.**IP** | STRING |  |
+| Server.**Port** | INTEGER |  |
+| Server.**IATA** | STRING |  |
+| Server.**Geo** | RECORD |  |
+| Server.Geo.**continent_code** | STRING |  |
+| Server.Geo.**country_code** | STRING |  |
+| Server.Geo.**country_code3** | STRING |  |
+| Server.Geo.**country_name** | STRING |  |
+| Server.Geo.**region** | STRING |  |
+| Server.Geo.**metro_code** | INTEGER |  |
+| Server.Geo.**city** | STRING |  |
+| Server.Geo.**area_code** | INTEGER |  |
+| Server.Geo.**postal_code** | STRING |  |
+| Server.Geo.**latitude** | FLOAT |  |
+| Server.Geo.**longitude** | FLOAT |  |
+| Server.Geo.**radius** | INTEGER |  |
+| Server.**Network** | RECORD | Network information about connection. |
+| Server.Network.**IPPrefix** | STRING |  |
+| Server.Network.**Systems** | RECORD |  |
+| Server.Network.Systems.**ASNs** | INTEGER |  |
+| **Client** | RECORD |  |
+| Client.**IP** | STRING |  |
+| Client.**Port** | INTEGER |  |
+| Client.**Geo** | RECORD |  |
+| Client.Geo.**continent_code** | STRING |  |
+| Client.Geo.**country_code** | STRING |  |
+| Client.Geo.**country_code3** | STRING |  |
+| Client.Geo.**country_name** | STRING |  |
+| Client.Geo.**region** | STRING |  |
+| Client.Geo.**metro_code** | INTEGER |  |
+| Client.Geo.**city** | STRING |  |
+| Client.Geo.**area_code** | INTEGER |  |
+| Client.Geo.**postal_code** | STRING |  |
+| Client.Geo.**latitude** | FLOAT |  |
+| Client.Geo.**longitude** | FLOAT |  |
+| Client.Geo.**radius** | INTEGER |  |
+| Client.**Network** | RECORD | Network information about connection. |
+| Client.Network.**IPPrefix** | STRING |  |
+| Client.Network.**Systems** | RECORD |  |
+| Client.Network.Systems.**ASNs** | INTEGER |  |
+| **FinalSnapshot** | RECORD |  |
+| FinalSnapshot.**Timestamp** | TIMESTAMP |  |
+| FinalSnapshot.**Observed** | INTEGER |  |
+| FinalSnapshot.**NotFullyParsed** | INTEGER |  |
+| FinalSnapshot.**InetDiagMsg** | RECORD |  |
+| FinalSnapshot.InetDiagMsg.**IDiagFamily** | INTEGER |  |
+| FinalSnapshot.InetDiagMsg.**IDiagState** | INTEGER |  |
+| FinalSnapshot.InetDiagMsg.**IDiagTimer** | INTEGER |  |
+| FinalSnapshot.InetDiagMsg.**IDiagRetrans** | INTEGER |  |
+| FinalSnapshot.InetDiagMsg.**IDiagExpires** | INTEGER |  |
+| FinalSnapshot.InetDiagMsg.**IDiagRqueue** | INTEGER |  |
+| FinalSnapshot.InetDiagMsg.**IDiagWqueue** | INTEGER |  |
+| FinalSnapshot.InetDiagMsg.**IDiagUID** | INTEGER |  |
+| FinalSnapshot.InetDiagMsg.**IDiagInode** | INTEGER |  |
+| FinalSnapshot.**CongestionAlgorithm** | STRING |  |
+| FinalSnapshot.**TOS** | INTEGER |  |
+| FinalSnapshot.**TClass** | INTEGER |  |
+| FinalSnapshot.**ClassID** | INTEGER |  |
+| FinalSnapshot.**Shutdown** | INTEGER |  |
+| FinalSnapshot.**Protocol** | INTEGER |  |
+| FinalSnapshot.**Mark** | INTEGER |  |
 | FinalSnapshot.**TCPInfo** | RECORD | Results from getsockopt(..TCP_INFO..) |
 | FinalSnapshot.TCPInfo.**State** | INTEGER | TCP State<br>In MLab data TCP state is nominally 1 (Established). Other values reflect transient states having incomplete rows.<br>Kernel: See TCP_ESTABLISHED in include/net/tcp_states.h |
 | FinalSnapshot.TCPInfo.**CAState** | INTEGER | Loss recovery state machine<br>For traditional loss based congestion control algorithms, CAState is also used to control window adjustments.<br>Kernel: tcp_set_ca_state in include/net/tcp.h |
@@ -88,6 +162,27 @@
 | FinalSnapshot.BBRInfo.**MinRTT** | INTEGER |  |
 | FinalSnapshot.BBRInfo.**PacingGain** | INTEGER |  |
 | FinalSnapshot.BBRInfo.**CwndGain** | INTEGER |  |
+| **Snapshots** | RECORD |  |
+| Snapshots.**Timestamp** | TIMESTAMP |  |
+| Snapshots.**Observed** | INTEGER |  |
+| Snapshots.**NotFullyParsed** | INTEGER |  |
+| Snapshots.**InetDiagMsg** | RECORD |  |
+| Snapshots.InetDiagMsg.**IDiagFamily** | INTEGER |  |
+| Snapshots.InetDiagMsg.**IDiagState** | INTEGER |  |
+| Snapshots.InetDiagMsg.**IDiagTimer** | INTEGER |  |
+| Snapshots.InetDiagMsg.**IDiagRetrans** | INTEGER |  |
+| Snapshots.InetDiagMsg.**IDiagExpires** | INTEGER |  |
+| Snapshots.InetDiagMsg.**IDiagRqueue** | INTEGER |  |
+| Snapshots.InetDiagMsg.**IDiagWqueue** | INTEGER |  |
+| Snapshots.InetDiagMsg.**IDiagUID** | INTEGER |  |
+| Snapshots.InetDiagMsg.**IDiagInode** | INTEGER |  |
+| Snapshots.**CongestionAlgorithm** | STRING |  |
+| Snapshots.**TOS** | INTEGER |  |
+| Snapshots.**TClass** | INTEGER |  |
+| Snapshots.**ClassID** | INTEGER |  |
+| Snapshots.**Shutdown** | INTEGER |  |
+| Snapshots.**Protocol** | INTEGER |  |
+| Snapshots.**Mark** | INTEGER |  |
 | Snapshots.**TCPInfo** | RECORD | Results from getsockopt(..TCP_INFO..) |
 | Snapshots.TCPInfo.**State** | INTEGER | TCP State<br>In MLab data TCP state is nominally 1 (Established). Other values reflect transient states having incomplete rows.<br>Kernel: See TCP_ESTABLISHED in include/net/tcp_states.h |
 | Snapshots.TCPInfo.**CAState** | INTEGER | Loss recovery state machine<br>For traditional loss based congestion control algorithms, CAState is also used to control window adjustments.<br>Kernel: tcp_set_ca_state in include/net/tcp.h |

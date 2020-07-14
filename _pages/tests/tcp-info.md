@@ -46,4 +46,6 @@ BigQuery Tables/Views for TCP INFO Data:
 
 ## TCP INFO Schema
 
+<div class="table-responsive" markdown="1">
 {% include schema_tcprow.md %}
+</div>

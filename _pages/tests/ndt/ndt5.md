@@ -18,5 +18,5 @@ More details about the ndt5 protocol can be found in the [README for ndt5 on Git
 ## ndt5 BigQuery Schema
 
 <div class="table-responsive" markdown="1">
-{% include schema_ndtresultrow.md %}
+{% include schema_ndt5resultrow.md %}
 </div>
