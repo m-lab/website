@@ -41,8 +41,8 @@ BigQuery Tables/Views/Schema(s) for Traceroute Data:
 
 ## Traceroute Schema
 
-The table below describes the fields in: `measurement-lab.aggregate.traceroute`.
+**Note:** The tracerout schema has not yet been migrated to standard columns. Until that time, this schema should be considered temporary or unstable.
 
 <div class="table-responsive" markdown="1">
-Coming soon.
+{% include schema_pttest.md %}
 </div>

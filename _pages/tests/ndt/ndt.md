@@ -17,20 +17,35 @@ If you are interested in running an NDT test, please visit our standalone speed 
 
 From 2009-2019, M-Lab has run the default [NDT server](https://github.com/ndt-project/ndt/){:target="_blank"} originally [developed by Internet2](https://software.internet2.edu/ndt/){:target="_blank"}. This version uses the [web100 linux kernel extension](https://dl.acm.org/citation.cfm?id=956993.957002){:target="_blank"} for gathering data points about the TCP connection.
 
-By the end of 2019, M-Lab will launch a completely re-written [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}, providing the ndt5 and ndt7 protocols. M-Lab also will transition hosted experiments to use the netlink socket and [TCP_INFO](https://github.com/m-lab/tcp-info/){:target="_blank"} kernel instrumentation in 2019, replacing our reliance on Web100. The web100 version of server will be decommissioned on M-Lab once `ndt-server` has been tested and launched. M-Lab will retain data collected while it was in production is available in the `web100` tables referenced below.
+In Nov. 2019, M-Lab launched a completely re-written [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}, that provides the **ndt5** and **ndt7** protocols. After launching the updated server, the web100 kernel instrumentation was retired in favor of using [TCP_INFO](https://github.com/m-lab/tcp-info/){:target="_blank"}. NDT data collected by the `web100` protocol will remain in the M-Lab data archive and in BigQuery, along with NDT data from the `ndt5` and `ndt7` protocols.
 
 ## NDT Testing Protocols
 
-As a part of our transition from the web100 version of NDT server to the new platform, M-Lab has named specific protocol versions for the current server and the new one we are testing.
+As a part of our transition from the web100 version of NDT server to the new platform, M-Lab has named specific protocol versions for the original server and the new one we are now using.
 
 * [web100]({{ site.baseurl }}/tests/ndt/web100) is the protocol refering to data collected by the current NDT server
-* [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is a new NDT protocol designed to be backward compatible with current clients
-* ndt7 is a new NDT protocol that uses TCP BBR where available in the network, and operates on TLS port 443 or via port 80
+  * Relied on the web100 kernel module for tcp statistics
+  * Collected using the original version of NDT server
+  * Retired in November 2019
+* [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is a new NDT protocol designed to be backward compatible with past NDT clients
+  * Relies on tcp-info for tcp statistics
+  * Collected using M-Lab's re-written ndt-server, which follows the legacy NDT protocol to support existing NDT clients that use it
+  * Uses the Cubic and Reno TCP congestion control algorithms
+* [ndt7]({{ site.baseurl }}/tests/ndt/ndt7) is a new NDT protocol that uses TCP BBR where available, operates on standard HTTP(S) ports (80, 443), and uses TCP_INFO instrumentation for TCP statistics
+  * Relies on tcp-info for tcp statistics
+  * Collected using M-Lab's re-written ndt-server
+  * Uses the BBR TCP congestion control algorithm, falling back to Cubic when BBR is not available in the client operating system
 
 ## Source code
 
+**NDT Server**
 * [web100 historical ndt](https://github.com/ndt-project/ndt/){:target="_blank"}
 * [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
+
+**NDT Reference Clients**
+* [ndt5-client-go](https://github.com/m-lab/ndt5-client-go){:target="_blank"}
+* [ndt7-client-go](https://github.com/m-lab/ndt7-client-go){:target="_blank"}
+* [ndt7-js](https://github.com/m-lab/ndt7-js/){:target="_blank"}
 
 ## Citing the M-Lab NDT Dataset
 
@@ -90,14 +105,14 @@ Data collected by NDT is provided in multiple ways, each suited to specific segm
 
 * [measurement-lab.ndt.ndt5](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=ndt5&page=table){:target="_blank"}
   * NDT data collected using the [ndt5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after 2019-07-19, using tcp-info for all TCP metrics.
-  * [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-faithful-schema)
+  * [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-schema)
 * [measurement-lab.ndt.web100](https://console.cloud.google.com/bigquery?project=measurement-lab&folder&organizationId=433637338589&p=measurement-lab&d=ndt&t=web100&page=table){:target="_blank"}
   * NDT data collected using the [web100 protocol]({{ site.baseurl }}/tests/ndt/web100), using the web100 Linux kernel patch for all TCP metrics.
   * `web100` is root BigQuery view from which all current "Helpful" views are derived.
   * [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
-* ndt7 (coming soon)
+* [measurement-lab.ndt.ndt7 (coming soon)](#)
   * NDT data collected using the ndt7 protocol using tcp-info for all TCP metrics.
-  * _ndt7 description and schema_
+  * [ndt7 description and schema]({{ site.baseurl }}/tests/ndt/ndt7/#ndt7-bigquery-schema)
 * [measurement-lab.ndt.tcpinfo](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=tcpinfo&page=table){:target="_blank"}
 * [measurement-lab.ndt.traceroute](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=traceroute&page=table){:target="_blank"}
 

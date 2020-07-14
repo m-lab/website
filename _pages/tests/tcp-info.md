@@ -46,4 +46,8 @@ BigQuery Tables/Views for TCP INFO Data:
 
 ## TCP INFO Schema
 
+**Note:** The tcpinfo schema has not yet been migrated to standard columns. Until that time, this schema should be considered temporary or unstable.
+
+<div class="table-responsive" markdown="1">
 {% include schema_tcprow.md %}
+</div>
