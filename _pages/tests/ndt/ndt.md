@@ -25,7 +25,7 @@ As a part of our transition from the web100 version of NDT server to the new pla
 
 * [web100]({{ site.baseurl }}/tests/ndt/web100) is the protocol refering to data collected by the current NDT server
 * [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is a new NDT protocol designed to be backward compatible with past NDT clients
-* [ndt7]({{ site.baseurl }}/tests/ndt/ndt7) is a new NDT protocol that uses TCP BBR where available, operates on standard ports, and uses TCP_INFO instrumentation for TCP statistics
+* [ndt7]({{ site.baseurl }}/tests/ndt/ndt7) is a new NDT protocol that uses TCP BBR where available, operates on standard HTTP(S) ports (80, 443), and uses TCP_INFO instrumentation for TCP statistics
 
 ## Source code
 
