@@ -24,8 +24,17 @@ In Nov. 2019, M-Lab launched a completely re-written [ndt-server](https://github
 As a part of our transition from the web100 version of NDT server to the new platform, M-Lab has named specific protocol versions for the original server and the new one we are now using.
 
 * [web100]({{ site.baseurl }}/tests/ndt/web100) is the protocol refering to data collected by the current NDT server
+  * Relied on the web100 kernel module for tcp statistics
+  * Collected using the original version of NDT server
+  * Retired in November 2019
 * [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is a new NDT protocol designed to be backward compatible with past NDT clients
+  * Relies on tcp-info for tcp statistics
+  * Collected using M-Lab's re-written ndt-server, which follows the legacy NDT protocol to support existing NDT clients that use it
+  * Uses the Cubic and Reno TCP congestion control algorithms
 * [ndt7]({{ site.baseurl }}/tests/ndt/ndt7) is a new NDT protocol that uses TCP BBR where available, operates on standard HTTP(S) ports (80, 443), and uses TCP_INFO instrumentation for TCP statistics
+  * Relies on tcp-info for tcp statistics
+  * Collected using M-Lab's re-written ndt-server
+  * Uses the BBR TCP congestion control algorithm, falling back to Cubic when BBR is not available in the client operating system
 
 ## Source code
 
