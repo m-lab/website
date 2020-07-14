@@ -45,7 +45,7 @@ As a part of our transition from the web100 version of NDT server to the new pla
 **NDT Reference Clients**
 * [ndt5-client-go](https://github.com/m-lab/ndt5-client-go){:target="_blank"}
 * [ndt7-client-go](https://github.com/m-lab/ndt7-client-go){:target="_blank"}
-* [ndt7-js](https://github.com/m-lab/ndt7-js/){;target="_blank"}
+* [ndt7-js](https://github.com/m-lab/ndt7-js/){:target="_blank"}
 
 ## Citing the M-Lab NDT Dataset
 
