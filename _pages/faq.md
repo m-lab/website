@@ -120,6 +120,24 @@ In short, running one test will give you a sense of network conditions at that m
 
 The NDT test sometimes presents unexpected results when measuring a satellite Internet connection. ISPs that use a proxy prior to the satellite uplink terminate the TCP flow at the proxy. As a result, NDT is measuring the speed and latency to the proxy rather than all the way through the proxy. M-Lab is working on updates to NDT which we hope will resolve this issue for satellite customers in the future.
 
+## How do the different NDT protocols report "Jitter"?
+
+There are different definitions of what "jitter" means, but it is an often a requested metric. "Jitter" is a metric that is often confusing because there are different definitions in various communities.
+
+[IETF references that the term jitter is deprecated](https://tools.ietf.org/html/rfc3393#section-4.5){:target="_blank"} in its discussion of various ways of computing it or estimating it. Some of the definitions include:
+
+* The spread of latencies for a connection -- shortest - longest latency
+* The spread of latencies as described above, but using the 90th percentile in the spread instead of the maximum
+* The spread of latencies, but using the 25-75th percentile spread
+* The standard deviation of the difference in latencies
+* The variation of a signal with respect to a common clock signal “drift”
+
+The web100 NDT client reported "jitter", which was actually an estimate of "jitter" calculated on the client side as "MaxRTT - MinRTT". For self clocked, throughput maximizing congestion control, MaxRTT - MinRTT is a plausible definition of jitter, but it is different than what might be expected by VoIP or Real Time applications communities.
+
+ndt5 does not report jitter. We removed it due to avoid confusion around the definitions above and the estimate method just described.
+
+ndt7 will provide the Round Trip Time Variation (RTTVar), [as defined in the Linux kernel](https://github.com/torvalds/linux/blob/master/include/uapi/linux/tcp.h#L245){:target="_blank"}. This measures round trip time variance, which frequently what people mean when they ask for jitter.
+
 ## How do I report issues with M-Lab tests?
 {:.no_toc}
 
