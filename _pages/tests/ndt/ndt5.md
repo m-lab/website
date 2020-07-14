@@ -17,6 +17,8 @@ More details about the ndt5 protocol can be found in the [README for ndt5 on Git
 
 ## ndt5 BigQuery Schema
 
+**Note:** The ndt5 schema has not yet been migrated to standard columns. Until that time, this schema should be considered temporary or unstable.
+
 <div class="table-responsive" markdown="1">
 {% include schema_ndt5resultrow.md %}
 </div>
