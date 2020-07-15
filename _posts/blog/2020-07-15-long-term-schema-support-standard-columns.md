@@ -2,7 +2,7 @@
 layout: blog
 title: "Long Term Supported Schemas Using Standardized BigQuery Columns"
 author: "Chris Ritzo"
-date: 2020-07-14
+date: 2020-07-15
 breadcrumb: blog
 categories:
   - data
@@ -22,7 +22,7 @@ Several sub-projects are in progress that will enable M-Lab to provide Standard 
 
 ### Universal Gardener Service
 
-Our [etl-gardener](https://github.com/m-lab/etl-gardener/){:target="_blank"} service provides services for maintaining and reprocessing M-Lab data. This service is being simplified to create a single deployment across our internal projects, and reduce the number of components in the original pipeline to just the parsers, the gardener service, and job state in Datastore.
+Our [etl-gardener](https://github.com/m-lab/etl-gardener/){:target="_blank"} service maintains and reprocesses M-Lab data. This service is being simplified to create a single deployment across our internal projects, and reduce the number of components in the original pipeline to just the parsers, the gardener service, and job state in Datastore.
 
 ### Uniform Naming of Services and Data Types
 
