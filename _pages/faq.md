@@ -121,22 +121,34 @@ In short, running one test will give you a sense of network conditions at that m
 The NDT test sometimes presents unexpected results when measuring a satellite Internet connection. ISPs that use a proxy prior to the satellite uplink terminate the TCP flow at the proxy. As a result, NDT is measuring the speed and latency to the proxy rather than all the way through the proxy. M-Lab is working on updates to NDT which we hope will resolve this issue for satellite customers in the future.
 
 ## How do the different NDT protocols report "Jitter"?
+{:.no_toc}
 
-There are different definitions of what "jitter" means, but it is an often a requested metric. "Jitter" is a metric that is often confusing because there are different definitions in various communities.
+"Jitter" is an often requested metric. However, there are different definitions. This can make it confusing across user communities. Section 1.1 - Terminology in [IETF RFC 3393](https://tools.ietf.org/html/rfc3393){:target="_blank"}, discusses the two most common meanings of "jitter" and to avoid confusion, uses the more precise term, "delay variation":
 
-[IETF references that the term jitter is deprecated](https://tools.ietf.org/html/rfc3393#section-4.5){:target="_blank"} in its discussion of various ways of computing it or estimating it. Some of the definitions include:
+```text
+"Jitter" commonly has two meanings: The first meaning is the
+variation of a signal with respect to some clock signal, where the
+arrival time of the signal is expected to coincide with the arrival
+of the clock signal. This meaning is used with reference to
+synchronous signals and might be used to measure the quality of
+circuit emulation, for example. There is also a metric called
+"wander" used in this context.
 
-* The spread of latencies for a connection -- shortest - longest latency
-* The spread of latencies as described above, but using the 90th percentile in the spread instead of the maximum
-* The spread of latencies, but using the 25-75th percentile spread
-* The standard deviation of the difference in latencies
-* The variation of a signal with respect to a common clock signal “drift”
+The second meaning has to do with the variation of a metric (e.g.,
+delay) with respect to some reference metric (e.g., average delay or
+minimum delay). This meaning is frequently used by computer
+scientists and frequently (but not always) refers to variation in
+delay.
 
-The web100 NDT client reported "jitter", which was actually an estimate of "jitter" calculated on the client side as "MaxRTT - MinRTT". For self clocked, throughput maximizing congestion control, MaxRTT - MinRTT is a plausible definition of jitter, but it is different than what might be expected by VoIP or Real Time applications communities.
+... we will avoid the term "jitter" whenever possible and stick to delay
+variation which is more precise.
+```
 
-ndt5 does not report jitter. We removed it due to avoid confusion around the definitions above and the estimate method just described.
+The web100 NDT client reported "jitter", which was actually an estimate calculated on the client side as "MaxRTT - MinRTT".
 
-ndt7 will provide the Round Trip Time Variation (RTTVar), [as defined in the Linux kernel](https://github.com/torvalds/linux/blob/master/include/uapi/linux/tcp.h#L245){:target="_blank"}. This measures round trip time variance, which frequently what people mean when they ask for jitter.
+ndt5 does not report jitter. We removed it due to avoid confusion.
+
+ndt7 will provide the Round Trip Time Variation (RTTVar), [as defined in the Linux kernel](https://github.com/torvalds/linux/blob/master/include/uapi/linux/tcp.h#L245){:target="_blank"}. This measures round trip time variance, which is frequently what people mean when they ask for jitter.
 
 ## How do I report issues with M-Lab tests?
 {:.no_toc}
