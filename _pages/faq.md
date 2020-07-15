@@ -146,9 +146,9 @@ variation which is more precise.
 
 The web100 NDT client reported "jitter", which was actually an estimate calculated on the client side as "MaxRTT - MinRTT".
 
-ndt5 does not report jitter. We removed it due to avoid confusion.
+ndt5 does not report jitter. We removed it to avoid confusion.
 
-ndt7 will provide the Round Trip Time Variation (RTTVar), [as defined in the Linux kernel](https://github.com/torvalds/linux/blob/master/include/uapi/linux/tcp.h#L245){:target="_blank"}. This measures round trip time variance, which is frequently what people mean when they ask for jitter.
+ndt7 will provide the Round Trip Time Variation (RTTVar), [as defined in the Linux kernel](https://github.com/torvalds/linux/blob/master/include/uapi/linux/tcp.h#L245){:target="_blank"}. This measures round trip time variation, which is frequently what people mean when they ask for jitter.
 
 ## How do I report issues with M-Lab tests?
 {:.no_toc}
