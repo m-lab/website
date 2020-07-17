@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "Measurement Observations on Network Performance During the COVID-19 Pandemic in Northern Italy"
-author: " Simone Basso (OONI), Chris Ritzo (M-Lab), Maria Xynou (OONI)"
+author: "Simone Basso (OONI), Chris Ritzo (M-Lab), Maria Xynou (OONI)"
 date: 2020-07-17
 breadcrumb: blog
 categories:
@@ -11,7 +11,7 @@ categories:
   - covid19
 ---
 
-We were recently invited to participate in a [NetGain Partnership webinar](https://www.netgainpartnership.org/){:target="_blank"} (titled “[Surging Demand and The Global Internet Infrastructure](https://www.netgainpartnership.org/events/covid19/global-infrastructure){:target="_blank"}”) to discuss the changing landscape for internet infrastructure and technology in the wake of the COVID-19 pandemic.
+OONI was recently invited to participate in a [NetGain Partnership webinar](https://www.netgainpartnership.org/){:target="_blank"} (titled “[Surging Demand and The Global Internet Infrastructure](https://www.netgainpartnership.org/events/covid19/global-infrastructure){:target="_blank"}”) to discuss the changing landscape for internet infrastructure and technology in the wake of the COVID-19 pandemic.
  
 As part of our preparation for this webinar, we looked at network performance measurements collected from northern Italy over the last months (i.e. when Italy was hit hard by the COVID-19 pandemic) in an attempt to understand whether and to what extent there was a correlation between increased internet use and reduced network performance. As our observations may be of public interest, we decided to share them through this blog post.<!--more-->
 
@@ -23,9 +23,9 @@ In summary, we observe:
 
 Further details are shared through this report.
 
-* The NDT speed test
-* Data analysis
-* Conclusion
+* [The NDT speed test]({{ site.baseurl }}/blog/measurement-observations-on-network-performance-during-the-COVID-19-pandemic-in-Northern-Italy/#the-ndt-speed-test)
+* [Data analysis]({{ site.baseurl }}/blog/measurement-observations-on-network-performance-during-the-COVID-19-pandemic-in-Northern-Italy/#data-analysis)
+* [Conclusion]({{ site.baseurl }}/blog/measurement-observations-on-network-performance-during-the-COVID-19-pandemic-in-Northern-Italy/#conclusion)
 
 ## The NDT speed test
 
