@@ -697,7 +697,7 @@ On 6/15/2020, M-Lab Director, Lai Yi Ohlsen, presented about M-Lab's tools, meth
 Lai Yi Ohlsen
 
 [View Slides](https://docs.google.com/presentation/d/19NzvQITGau94RLX1-LhM1JuqjuqAy3MnfiJnWBp1b9w/edit?usp=sharing){:.download-link .paper-download target="_blank"}
-[Watch Recording](https://www.youtube.com/watch?v=oRtvj4v0EeE){:.download-link .paper-download target="_blank"}
+[Watch Recording](https://www.youtube.com/watch?v=cjUv93GqP5I){:.download-link .paper-download target="_blank"}
 
 ### ESnet CI Engineering Brownbag - NDT, its evolution, and how you can now easily run your own server
 {:.no_toc}
