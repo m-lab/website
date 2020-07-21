@@ -22,7 +22,10 @@ M-Lab publishes BigQuery tables and views for tests that have implemented a pars
 
 ### Measurement Data (Active Tests)
 
-* [Network Diagnostic Tool (NDT)]({{ site.base_url }}/data/docs/bq/schema/ndt)
+* [Network Diagnostic Tool (NDT)]({{ site.base_url }}/tests/ndt)
+  * [web100 protocol schema]({{ site.baseurl }}/tests/ndt/web100/#web100-ndt-bigquery-schema)
+  * [ndt5 protocol schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-schema)
+  * [ndt7 protocol schema]({{ site.baseurl }}/tests/ndt/ndt7/#ndt7-bigquery-schema)
 
 ### Current M-Lab Core Services and Platform Data
 

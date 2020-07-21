@@ -28,7 +28,7 @@ There is typically at least a 24-hour delay between data collection and data pub
   * Network Diagnostic Tool (NDT) measures characteristics of a TCP connection under heavy load.
   * NDT data is processed by the M-Lab ETL Pipeline.
   * More technical information is available on [GitHub](https://github.com/ndt-project/ndt){:target="_blank"}.
-  * Protocols: _ndt7 (coming soon)_, [ndt5]({{ site.baseurl }}/tests/ndt/ndt5), [web100]({{ site.baseurl }}/tests/ndt/web100)
+  * Protocols: [ndt7]({{ site.baseurl }}/tests/ndt/ndt7), [ndt5]({{ site.baseurl }}/tests/ndt/ndt5), [web100]({{ site.baseurl }}/tests/ndt/web100)
   * [NDT Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/){:target="_blank"} - [NDT BigQuery Dataset](https://bigquery.cloud.google.com/dataset/measurement-lab:ndt)
 * [Neubot DASH]({{site.baseurl}}/tests/neubot)
   * Neubot measured the Internet in order to gather data useful to study broadband performance, network neutrality, and Internet censorship.
