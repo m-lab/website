@@ -11,7 +11,7 @@ Since June 2016, M-Lab has collected high resolution switch telemetry for each M
 
 ## Utilization Data in Raw Format
 
-Utilization data in raw format can be found in Google Cloud Storage: [https://console.developers.google.com/storage/browser/archive-measurement-lab/switch/](https://console.developers.google.com/storage/browser/archive-measurement-lab/utilization/){:target="_blank"}.
+Utilization data in raw format can be found in Google Cloud Storage: [https://console.developers.google.com/storage/browser/archive-measurement-lab/utilization/](https://console.developers.google.com/storage/browser/archive-measurement-lab/utilization/){:target="_blank"}.
 
 ## Utilization Data in BigQuery
 

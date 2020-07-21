@@ -69,19 +69,19 @@ Data collected by NDT is provided in multiple ways, each suited to specific segm
 
 ### Faithful Views
 
-* measurement-lab.raw_ndt.ndt5
+* measurement-lab.raw_ndt.ndt5 (coming soon)
   * Contains NDT data collected using the [ndt5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after 2019-07-19, using tcp-info for all TCP metrics.
   * [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-schema)
-* measurement-lab.raw_ndt.ndt7
+* measurement-lab.raw_ndt.ndt7 (coming soon)
   * Contains NDT data collected using the [ndt7 protocol]({{ site.basurl }}/tests/ndt/ndt5) using tcp-info for all TCP metrics.
   * [ndt7 description and schema]({{ site.baseurl }}/tests/ndt/ndt7/#ndt7-bigquery-schema)
-* measurement-lab.raw_ndt.tcpinfo
-  * Contains tcp-info data associated with ndt5 protocol tests.
+* measurement-lab.raw_ndt.tcpinfo (coming soon)
+  * Contains tcp-info data associated with all NDT measurements.
   * General [tcp-info description and schema]({{ site.basurl }}/tests/tcp-info)
 * measurement-lab.raw_ndt.traceroute
-  * Contains traceroute data associated with ndt5 protocol tests.
+  * Contains traceroute data associated with all NDT measurements.
   * General [tcp-info description and schema]({{ site.basurl }}/tests/traceroute)  
-* measurement-lab.raw_ndt.web100
+* measurement-lab.raw_ndt.web100 (future)
   * Contains historical NDT data collected using the [web100 protocol]({{ site.baseurl }}/tests/ndt/web100), using the web100 Linux kernel patch for all TCP metrics.
   * [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
 
