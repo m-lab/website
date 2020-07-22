@@ -44,7 +44,7 @@ client can be implemented in just 122 lines. We are publishing two reference
 client implementations here:
 
 * [github.com/m-lab/ndt7-client-go][ndt7-client-go]{:target="_blank"}
-* [github.com/m-lab/ndt7-js/][ndt7-js]{:target="_blank"} (in progress)
+* [github.com/m-lab/ndt7-js][ndt7-js]{:target="_blank"} (in progress)
 
 On the M-Lab platform, ndt7 uses BBR TCP. BBR is a new congestion control
 algorithm that uses the network more efficiently. It does so by explicitly
