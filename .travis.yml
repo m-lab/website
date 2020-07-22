@@ -19,8 +19,17 @@ script:
 #
 # You can find the latest tags in:
 #   https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags
-- docker run -v $PWD:/workspace -w /workspace
-    -it measurementlab/generate-schema-docs:v0.1.0 -doc.output _includes
+#
+# Note: the travis integration below doesn't work right because the include
+#    files have to be present in the repo so the Jekyll linter doesn't error
+#    when it finds include files that are referenced but don't exist. Further,
+#    any changes to the include files from a new tag on generate-schema-docs
+#    would need to be commited to the repository as well. So basically, the
+#    command below does something, but you still have to run the command 
+#    locally to commit new schema files or changes to existing ones.
+
+#- docker run -v $PWD:/workspace -w /workspace
+#    -it measurementlab/generate-schema-docs:v2.4.1 -doc.output _includes
 - nvm install $NODE_VERSION
 - npm install -g firebase-tools
 - "./_tests/travis-checks --quick"
