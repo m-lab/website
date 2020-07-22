@@ -78,7 +78,7 @@ Data collected by NDT is provided in multiple ways, each suited to specific segm
 * measurement-lab.raw_ndt.tcpinfo (coming soon)
   * Contains tcp-info data associated with all NDT measurements.
   * General [tcp-info description and schema]({{ site.basurl }}/tests/tcp-info)
-* measurement-lab.raw_ndt.traceroute
+* measurement-lab.raw_ndt.traceroute (coming soon)
   * Contains traceroute data associated with all NDT measurements.
   * General [tcp-info description and schema]({{ site.basurl }}/tests/traceroute)  
 * measurement-lab.raw_ndt.web100 (future)
