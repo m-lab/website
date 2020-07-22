@@ -29,7 +29,7 @@ There is typically at least a 24-hour delay between data collection and data pub
   * NDT data is processed by the M-Lab ETL Pipeline.
   * More technical information is available on [GitHub](https://github.com/ndt-project/ndt){:target="_blank"}.
   * Protocols: [ndt7]({{ site.baseurl }}/tests/ndt/ndt7), [ndt5]({{ site.baseurl }}/tests/ndt/ndt5), [web100]({{ site.baseurl }}/tests/ndt/web100)
-  * [NDT Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/){:target="_blank"} - [NDT BigQuery Dataset](https://bigquery.cloud.google.com/dataset/measurement-lab:ndt)
+  * [NDT Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/){:target="_blank"} - [NDT Data in BigQuery]({{ site.baseurl }}/tests/ndt/#ndt-data-in-bigquery)
 * [Neubot DASH]({{site.baseurl}}/tests/neubot)
   * Neubot measured the Internet in order to gather data useful to study broadband performance, network neutrality, and Internet censorship.
   * More information is available at [Nexa Center](https://neubot.nexacenter.org/){:target="_blank"} and [GitHub](https://github.com/neubot){:target="_blank"}.
@@ -59,15 +59,11 @@ There is typically at least a 24-hour delay between data collection and data pub
   * More information is available from [CAIDA](https://www.caida.org/tools/measurement/scamper/){:target="_blank"}.
   * [Traceroute Raw Data]({{site.baseurl}}/tests/traceroute/#traceroute-data-in-raw-format).
   * [Traceroute Data in BigQuery]({{site.baseurl}}/tests/traceroute/#traceroute-data-in-bigquery)
-* [M-Lab Collectd](https://github.com/m-lab/collectd-mlab){:target="_blank"}
-  * M-Lab Collectd is a monitoring tool for M-Lab slices, which collects resource utilization information about all M-Lab servers.
-  * More information is available on [Github](https://github.com/m-lab/collectd-mlab){:target="_blank"}.
-  * [M-Lab Collectd Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/utilization/){:target="_blank"}.
-* [M-Lab DISCO Switch Telemetry Data]({{ site.baseurl }}/tests/switch)
-  * Since June 2016, M-Lab has collected high resolution switch telemetry for each M-Lab server and site uplink and published it as the **DIS**card **CO**llection (a.k.a. DISCO) dataset.
-  * More information is available in the [blog post announcing this dataset]({{site.baseurl}}/blog/disco-dataset/#new-disco-switch-telemetry-dataset) provides more information about the DISCO dataset.
-  * [M-Lab DISCO Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/switch/){:target="_blank"}
-  * [M-Lab DISCO Data in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=utilization&t=switch&page=table){:target="_blank"}
+* [M-Lab Utilization Telemetry Data]({{ site.baseurl }}/tests/utilization)
+  * Since June 2016, M-Lab has collected high resolution switch telemetry for each M-Lab server and site uplink and published it in the _utilization_ dataset.
+  * More information is available in the [blog post announcing this dataset]({{site.baseurl}}/blog/disco-dataset/#new-disco-switch-telemetry-dataset) provides more information about the _utilization_ dataset.
+  * [M-Lab _utilization_ Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/utilization/){:target="_blank"}
+  * [M-Lab _utilization_ Data in BigQuery]({{ site.baseurl }}/tests/utilization)
 
 ## Historical Data Sets (Inactive/Retired Tests)
 
