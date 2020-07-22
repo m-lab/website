@@ -14,13 +14,14 @@ categories:
   - kernel
 ---
 
-The new ndt7 protocol for the [Network Diagnostic Tool (NDT)][ndt] is now
-generally available on the M-Lab platform. Since 2009, NDT has been the
-premier TCP performance measurement service test hosted by M-Lab. During its
-history on the platform, NDT has produced the largest test volume to date,
-spanning the longest history. Since late 2018, M-Lab has worked with
-researcher [Simone Basso][simone] to develop the ndt7 protocol and archival
-data format.
+The new ndt7 protocol for the [Network Diagnostic Tool
+(NDT)][ndt]{:target="_blank"} is now generally available on the M-Lab
+platform. Since 2009, NDT has been the premier TCP performance measurement
+service test hosted by M-Lab. During its history on the platform, NDT has
+produced the largest test volume to date, spanning the longest history. Since
+late 2018, M-Lab has worked with researcher [Simone
+Basso][simone]{:target="_blank"} to develop the ndt7 protocol and archival
+data format.<!--more-->
 
 The ndt7 protocol measures the application-level download or upload
 performance using WebSockets over a single TCP connection. The ndt7 protocol
@@ -62,7 +63,7 @@ information about current migrations and how this will improve our data and
 affect longitudinal analysis.
 
 For a recent introduction to BBR see: [TCP BBR - Exploring TCP congestion
-control | by Andree Toonk][morebbr]
+control | by Andree Toonk][morebbr]{:target="_blank"}
 
 [ndt]: https://www.measurementlab.net/tests/ndt/
 [simone]: https://github.com/bassosimone
