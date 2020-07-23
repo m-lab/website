@@ -95,7 +95,7 @@
 | FinalSnapshot.TCPInfo.**Sacked** | INTEGER | Scoreboard segment marked SACKED by sack blocks<br>Accounting for the Pipe algorithm<br>Kernel: sacked_out in include/linux/tcp.h |
 | FinalSnapshot.TCPInfo.**Lost** | INTEGER | Scoreboard segments marked lost by loss detection heuristics<br>Accounting for the Pipe algorithm<br>Kernel: lost_out in include/linux/tcp.h |
 | FinalSnapshot.TCPInfo.**Retrans** | INTEGER | Scoreboard segments marked retransmitted<br>Accounting for the Pipe algorithm<br>Kernel: retrans_out in include/linux/tcp.h |
-| FinalSnapshot.TCPInfo.**Fackets** | INTEGER | BUG This is gone now????  What field overlays it? |
+| FinalSnapshot.TCPInfo.**Fackets** | INTEGER | Unused<br>Kernel: tcpi_fackets in include/uapi/linux/tcp.h |
 | FinalSnapshot.TCPInfo.**LastDataSent** | INTEGER | Time since last data segment was sent<br>Quantized to jiffies<br>Kernel: lsndtime in include/linux/tcp.h |
 | FinalSnapshot.TCPInfo.**LastAckSent** | INTEGER | Time since last ACK was sent (Not implemented)<br>Present in TCP_INFO but not elsewhere in the kernel |
 | FinalSnapshot.TCPInfo.**LastDataRecv** | INTEGER | Time since last data segment was received<br>Quantized to jiffies<br>Kernel: lrcvtime in icsk_ack in include/net/inet_connection_sock.h |
@@ -146,22 +146,22 @@
 | FinalSnapshot.SocketMem.**Optmem** | INTEGER |  |
 | FinalSnapshot.SocketMem.**Backlog** | INTEGER |  |
 | FinalSnapshot.SocketMem.**Drops** | INTEGER |  |
-| FinalSnapshot.**VegasInfo** | RECORD |  |
+| FinalSnapshot.**VegasInfo** | RECORD | Instrumntation in Vegas TCP<br>Not used by M-Lab |
 | FinalSnapshot.VegasInfo.**Enabled** | INTEGER |  |
 | FinalSnapshot.VegasInfo.**RTTCount** | INTEGER |  |
 | FinalSnapshot.VegasInfo.**RTT** | INTEGER |  |
 | FinalSnapshot.VegasInfo.**MinRTT** | INTEGER |  |
-| FinalSnapshot.**DCTCPInfo** | RECORD |  |
+| FinalSnapshot.**DCTCPInfo** | RECORD | Instrumentation in DCTCP<br>Not used by M-Lab |
 | FinalSnapshot.DCTCPInfo.**Enabled** | INTEGER |  |
 | FinalSnapshot.DCTCPInfo.**CEState** | INTEGER |  |
 | FinalSnapshot.DCTCPInfo.**Alpha** | INTEGER |  |
 | FinalSnapshot.DCTCPInfo.**ABEcn** | INTEGER |  |
 | FinalSnapshot.DCTCPInfo.**ABTot** | INTEGER |  |
-| FinalSnapshot.**BBRInfo** | RECORD |  |
-| FinalSnapshot.BBRInfo.**BW** | INTEGER |  |
-| FinalSnapshot.BBRInfo.**MinRTT** | INTEGER |  |
-| FinalSnapshot.BBRInfo.**PacingGain** | INTEGER |  |
-| FinalSnapshot.BBRInfo.**CwndGain** | INTEGER |  |
+| FinalSnapshot.**BBRInfo** | RECORD | Instrumentation in the BBR TCP module in the kernel. |
+| FinalSnapshot.BBRInfo.**BW** | INTEGER | The maximum end-to-end bandwidth from the server to the client as measured by BBR. |
+| FinalSnapshot.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. |
+| FinalSnapshot.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.<br>The binary point varies by kernel version but the statistical mode is always 1.0. |
+| FinalSnapshot.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT. |
 | **Snapshots** | RECORD |  |
 | Snapshots.**Timestamp** | TIMESTAMP |  |
 | Snapshots.**Observed** | INTEGER |  |
@@ -200,7 +200,7 @@
 | Snapshots.TCPInfo.**Sacked** | INTEGER | Scoreboard segment marked SACKED by sack blocks<br>Accounting for the Pipe algorithm<br>Kernel: sacked_out in include/linux/tcp.h |
 | Snapshots.TCPInfo.**Lost** | INTEGER | Scoreboard segments marked lost by loss detection heuristics<br>Accounting for the Pipe algorithm<br>Kernel: lost_out in include/linux/tcp.h |
 | Snapshots.TCPInfo.**Retrans** | INTEGER | Scoreboard segments marked retransmitted<br>Accounting for the Pipe algorithm<br>Kernel: retrans_out in include/linux/tcp.h |
-| Snapshots.TCPInfo.**Fackets** | INTEGER | BUG This is gone now????  What field overlays it? |
+| Snapshots.TCPInfo.**Fackets** | INTEGER | Unused<br>Kernel: tcpi_fackets in include/uapi/linux/tcp.h |
 | Snapshots.TCPInfo.**LastDataSent** | INTEGER | Time since last data segment was sent<br>Quantized to jiffies<br>Kernel: lsndtime in include/linux/tcp.h |
 | Snapshots.TCPInfo.**LastAckSent** | INTEGER | Time since last ACK was sent (Not implemented)<br>Present in TCP_INFO but not elsewhere in the kernel |
 | Snapshots.TCPInfo.**LastDataRecv** | INTEGER | Time since last data segment was received<br>Quantized to jiffies<br>Kernel: lrcvtime in icsk_ack in include/net/inet_connection_sock.h |
@@ -251,19 +251,19 @@
 | Snapshots.SocketMem.**Optmem** | INTEGER |  |
 | Snapshots.SocketMem.**Backlog** | INTEGER |  |
 | Snapshots.SocketMem.**Drops** | INTEGER |  |
-| Snapshots.**VegasInfo** | RECORD |  |
+| Snapshots.**VegasInfo** | RECORD | Instrumntation in Vegas TCP<br>Not used by M-Lab |
 | Snapshots.VegasInfo.**Enabled** | INTEGER |  |
 | Snapshots.VegasInfo.**RTTCount** | INTEGER |  |
 | Snapshots.VegasInfo.**RTT** | INTEGER |  |
 | Snapshots.VegasInfo.**MinRTT** | INTEGER |  |
-| Snapshots.**DCTCPInfo** | RECORD |  |
+| Snapshots.**DCTCPInfo** | RECORD | Instrumentation in DCTCP<br>Not used by M-Lab |
 | Snapshots.DCTCPInfo.**Enabled** | INTEGER |  |
 | Snapshots.DCTCPInfo.**CEState** | INTEGER |  |
 | Snapshots.DCTCPInfo.**Alpha** | INTEGER |  |
 | Snapshots.DCTCPInfo.**ABEcn** | INTEGER |  |
 | Snapshots.DCTCPInfo.**ABTot** | INTEGER |  |
-| Snapshots.**BBRInfo** | RECORD |  |
-| Snapshots.BBRInfo.**BW** | INTEGER |  |
-| Snapshots.BBRInfo.**MinRTT** | INTEGER |  |
-| Snapshots.BBRInfo.**PacingGain** | INTEGER |  |
-| Snapshots.BBRInfo.**CwndGain** | INTEGER |  |
+| Snapshots.**BBRInfo** | RECORD | Instrumentation in the BBR TCP module in the kernel. |
+| Snapshots.BBRInfo.**BW** | INTEGER | The maximum end-to-end bandwidth from the server to the client as measured by BBR. |
+| Snapshots.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. |
+| Snapshots.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.<br>The binary point varies by kernel version but the statistical mode is always 1.0. |
+| Snapshots.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT. |

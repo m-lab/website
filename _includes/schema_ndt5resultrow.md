@@ -24,24 +24,24 @@
 | result.Control.ClientMetadata.**Name** | STRING | If set, contains text that identifies and provides context for the corresponding metadata value. For example, "OS" or "clientApplication" |
 | result.Control.ClientMetadata.**Value** | STRING | If set, contains a value corresponding to metadata name. For example, "Windows 10" or "ndtJS" |
 | result.**C2S** | RECORD | Metadata for Client-to-Server (upload) measurements performed using the ndt5 protocol. |
-| result.C2S.**ServerIP** | STRING | The IP address assigned to the M-Lab server that conducted the easurement. |
-| result.C2S.**ServerPort** | INTEGER | The port used by the server to conduct the upload measurement. |
+| result.C2S.**ServerIP** | STRING | The IP address assigned to the M-Lab server that conducted the measurement. |
+| result.C2S.**ServerPort** | INTEGER | The port used by the server to conduct the measurement. |
 | result.C2S.**ClientIP** | STRING | The IP address assigned to the client that conducted the measurement. |
-| result.C2S.**ClientPort** | INTEGER | The port used by the client to conduct the upload measurement. |
-| result.C2S.**UUID** | STRING | The Universally Unique Identifier assigned to the upload measurement. |
+| result.C2S.**ClientPort** | INTEGER | The port used by the client to conduct the measurement. |
+| result.C2S.**UUID** | STRING | The Universally Unique Identifier assigned to the meeasurement. |
 | result.C2S.**StartTime** | TIMESTAMP | The date and time when the measurement began in UTC. |
 | result.C2S.**EndTime** | TIMESTAMP | The date and time when the measurement ended in UTC. |
-| result.C2S.**MeanThroughputMbps** | FLOAT | The upload rate as calculated by the server. Presented in megabits per second, or Mbit/s, this value is the average of tcp-info snapshots taken at the beginning and end of an ndt5 measurement. Therefore it is identified as "MeanThroughputMbps". |
-| result.C2S.**Error** | STRING |  |
+| result.C2S.**MeanThroughputMbps** | FLOAT | The measured rate as calculated by the server. Presented in megabits per second, or Mbit/s, this value is the average of tcp-info snapshots taken at the beginning and end of an ndt5 measurement. Therefore it is identified as "MeanThroughputMbps". |
+| result.C2S.**Error** | STRING | Any error message(s) recorded during a measurement. |
 | result.**S2C** | RECORD | Metadata for Server-to-Client (download) measurements performed using the ndt5 protocol. |
-| result.S2C.**UUID** | STRING | The Universally Unique Identifier assigned to the download measurement. |
+| result.S2C.**UUID** | STRING | The Universally Unique Identifier assigned to the meeasurement. |
 | result.S2C.**ServerIP** | STRING | The IP address assigned to the M-Lab server that conducted the measurement. |
-| result.S2C.**ServerPort** | INTEGER | The port used by the server to conduct the download measurement. |
+| result.S2C.**ServerPort** | INTEGER | The port used by the server to conduct the measurement. |
 | result.S2C.**ClientIP** | STRING | The IP address assigned to the client that conducted the measurement. |
-| result.S2C.**ClientPort** | INTEGER | The port used by the client to conduct the download measurement. |
-| result.S2C.**StartTime** | TIMESTAMP | The date and time when the download measurement began in UTC. |
-| result.S2C.**EndTime** | TIMESTAMP | The date and time when the download measurement ended in UTC. |
-| result.S2C.**MeanThroughputMbps** | FLOAT | The download rate as calculated by the server. Saved in megabits per second, or Mbit/s, this value is the average of tcp-info snapshots taken at the beginning and end of an ndt5 measurement. Therefore it is identified as "MeanThroughputMbps". |
+| result.S2C.**ClientPort** | INTEGER | The port used by the client to conduct the measurement. |
+| result.S2C.**StartTime** | TIMESTAMP | The date and time when the measurement began in UTC. |
+| result.S2C.**EndTime** | TIMESTAMP | The date and time when the measurement ended in UTC. |
+| result.S2C.**MeanThroughputMbps** | FLOAT | The measured rate as calculated by the server. Presented in megabits per second, or Mbit/s, this value is the average of tcp-info snapshots taken at the beginning and end of an ndt5 measurement. Therefore it is identified as "MeanThroughputMbps". |
 | result.S2C.**MinRTT** | INTEGER | The minimum RTT observed during the download measurement, recorded in milliseconds. |
 | result.S2C.**MaxRTT** | INTEGER | The maximum sampled round trip time, recorded in milliseconds. |
 | result.S2C.**SumRTT** | INTEGER | The sum of all sampled round trip times, recorded in milliseconds. |
@@ -100,4 +100,4 @@
 | result.S2C.TCPInfo.**BytesRetrans** | INTEGER | Bytes retransmitted. May include headers and new data carried with a retransmission (for thin flows).<br>Kernel: bytes_retrans |
 | result.S2C.TCPInfo.**DSackDups** | INTEGER | Duplicate segments reported by DSACK. Not reported by some Operating Systems.<br>Kernel: dsack_dups |
 | result.S2C.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
-| result.S2C.**Error** | STRING | Any error message(s) recorded during a download measurement. |
+| result.S2C.**Error** | STRING | Any error message(s) recorded during a measurement. |
