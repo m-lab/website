@@ -11,16 +11,7 @@ script:
 - sudo apt-get install -y python3-pip
 - sudo python3 -m pip install --upgrade setuptools pip
 - sudo python3 -m pip install jupyter nbconvert
-# NOTE: generate-schema-docs uses templates from most recent v* tagged release:
-#   https://github.com/m-lab/etl/tree/master/schema/descriptions
-#
-# The docker image is versioned using the same v* pattern as the release.
-# (the prod-v* patterns are for parser deployments).
-#
-# You can find the latest tags in:
-#   https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags
-- docker run -v $PWD:/workspace -w /workspace
-    -it measurementlab/generate-schema-docs:v0.1.0 -doc.output _includes
+
 - nvm install $NODE_VERSION
 - npm install -g firebase-tools
 - "./_tests/travis-checks --quick"

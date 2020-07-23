@@ -1,5 +1,5 @@
 # Contributing to `m-lab.github.io`
- 
+
 This document outlines setup, standards, and practices for contributing to the M-Lab website.
 
 ## Setting up Local Development Environment
@@ -36,7 +36,7 @@ To build and preview the website locally, install the following for your system 
 
 This section highlights the coding standards to be used for this project to ensure consistency across the codebase for current and future development
 
-* **File Names** 
+* **File Names**
   * Use all lowercase characters in filenames
   * Concatenate multiple words in a filename with a hypen
 
@@ -45,8 +45,28 @@ This section highlights the coding standards to be used for this project to ensu
   * Concatenate multiple words in a `yml` frontmatter variables and keys with a hyphen
 
 * **Liquid Variables**
-  * For Liquid variables with more than one words, concatenate with an underscore character to differentiate from `yml` frontmatter variables
-  * When using Liquid tags, objects, and filters, use a space at the beginning and end of the contents of curly braces (eg: `{{ site.base_url }}` )
+  * For Liquid variables with more than one words, concatenate with an
+  underscore character to differentiate from yml frontmatter variables
+  * When using Liquid tags, objects, and filters, use a space at the beginning
+  and end of the contents of curly braces (eg: `{{ site.base_url }}` )
+
+## Updating Schema Include Files
+
+Schema descriptions for M-Lab tables and views are updated using a Dockerhub
+image created by continuous integration on the `etl` repository.
+
+* Update or make additions to the templated schema descriptions in: [https://github.com/m-lab/etl/tree/master/schema/descriptions](https://github.com/m-lab/etl/tree/master/schema/descriptions)
+* Commit changes to the schema descriptions, and tag a release using the
+pattern `v.X.X.X`. The latest tags can be found in: https://github.com/m-lab/etl/tags
+* Once tagged, wait for the new dockerhub image to be available in https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags](https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags)
+* Use the command below in the root folder of the website repository
+to generated updated schema include files. Don't forget to update the image tag
+to the latest release tag.
+
+`docker run -v $PWD:/ -w /workspace -it
+measurementlab/generate-schema-docs:v2.4.2 -doc.output _includes`
+
+* Commit your changes, push, and issue a pull request.
 
 ## Travis CI integration
 
@@ -66,7 +86,7 @@ The file `.travis.tml` is configured to do the following actions:
   * Travis CI builds the site and publishes it to an Amazon S3 bucket
   * The [production website](https://www.measurementlab.net) is then updated with the content from this release
 
-## Security 
+## Security
 
 Before pushing any commit to the remote repository on Github, developers should ensure that any secrets required for publication are encrypted. **If you're unsure whether the values in `.travis.yml` related to publication are encrypted, please ask a colleague before proceeding.**
 
@@ -78,10 +98,10 @@ Files containing secrets may be encrypted using the `travis encrypt-file` comman
 
 ```$ travis encrypt-file -r m-lab/m-lab.github.io  _cf_s3_invalidator.yml --add```
 
-Currently `sandbox` and `staging` commits are deployed to GCS, and tagged release builds are deployed to AWS. 
+Currently `sandbox` and `staging` commits are deployed to GCS, and tagged release builds are deployed to AWS.
 
-* More information about [Travis CI deployment to GCS](https://docs.travis-ci.com/user/deployment/gcs/) 
-* More information about [Travis CI deployment to AWS](https://docs.travis-ci.com/user/deployment/aws/) 
+* More information about [Travis CI deployment to GCS](https://docs.travis-ci.com/user/deployment/gcs/)
+* More information about [Travis CI deployment to AWS](https://docs.travis-ci.com/user/deployment/aws/)
 
 ### Encrypting Keys & Secrets for Amazon S3 Deployments
 
@@ -101,14 +121,14 @@ For GCS deployments, use ```$ travis encrypt secret_access_key:<SECRET KEY> -r m
 
 ```
 ...
-    secret_access_key: 
+    secret_access_key:
       secure: pdKctNlM2bfEzyFBi9Rr6BYua8hWXsyzUDm5WI4Alr06qLmp1zFNcPymKcihgoE8k2vr85B4BN8HYpUPvPPpzb/KlAZAuUjbKGH0hIklBN4+G+ldt2IBN+2YxYYKYu3bXjKJ5yQOHKCBVU/CR3O6UB+Llp3Ty42OCa71WDfsG2aW6EHGkWV1TljXl3fGVerPfcNeyigIFZ6Qz2Vy0Ay+hzXEZBxjLjUsrWbK5aM6PX7OuErBzKk/kFTlQNkuRQdJs7nS4Y+Pxjyjr6NVd0wjFGqtP+sLjC9hvNaaCHdQ46kA24BqNWwNq1c3++9/0NrEj2MbRrAWNrEcSDskX+XJdV+wantzJ0xQAdqgYUugLj+TSYTKTxrPnwy9WGcWxsfdlrrlnysWVDc1OpQgtXNtU66qwgsjflsOijNeV/XBhR4bOifhRJ80VcQ6KyDWwIAKcJbU8prkMAqr1SqyVbw35gH6ZfHxBcf1CYCEoCGlVn00QPyEQDBkSCFzQC8coSZStGGnxGaebHomxMiOsowM4JIZqjB3RWg+Gf5S6dAZZUQTHoYHAU02Kil+wHmYWEcJ+3eb/FWtNokeZRX3zNCKncBAaZWef+JzMuEtcq67cio/io3z9yglVcWpZz/xGSMOTOVIbHwFIjyzO8cSvp6IWLrlq8MJOge5u0ADgi0rMAE=
 ...
 ```
 
 ## Publication Process
 
-The website publication process uses a combination of continuous integration using Travis CI, pull requests, code review and release tagging. 
+The website publication process uses a combination of continuous integration using Travis CI, pull requests, code review and release tagging.
 
 ### Previewing and Discussing New Features in Sandbox Branches
 
@@ -116,7 +136,7 @@ New site features and larger content changes are previewed in the mlab-sandbox p
 
 * After cloning the code repository, create your own sandbox branch using the pattern: `sandbox-<USERNAME>`
 * To preview content or features in the sandbox GCS bucket, push a commit to your sandbox branch.
-* Once Travis CI builds your sandbox branch, the content can then be previewed at [http://website.mlab-sandbox.measurementlab.net/](http://website.mlab-sandbox.measurementlab.net/) and discussed by relevant team members 
+* Once Travis CI builds your sandbox branch, the content can then be previewed at [http://website.mlab-sandbox.measurementlab.net/](http://website.mlab-sandbox.measurementlab.net/) and discussed by relevant team members
 * Please check with colleagues and coordinate commits to their sandbox branches in order to not stomp on the work of others
 
 ### Pull Requests - Staging Content for Publication
