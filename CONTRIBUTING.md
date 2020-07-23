@@ -45,7 +45,7 @@ This section highlights the coding standards to be used for this project to ensu
   * Concatenate multiple words in a `yml` frontmatter variables and keys with a hyphen
 
 * **Liquid Variables**
-  * For Liquid variables with more than one wors, concatenate with an
+  * For Liquid variables with more than one words, concatenate with an
   underscore character to differentiate from yml frontmatter variables
   * When using Liquid tags, objects, and filters, use a space at the beginning
   and end of the contents of curly braces (eg: `{{ site.base_url }}` )
