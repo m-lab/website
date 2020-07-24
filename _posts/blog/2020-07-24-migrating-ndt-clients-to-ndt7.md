@@ -50,7 +50,7 @@ performance.
 The entry criteria use two datasets:
 
 * [measurement-lab.ndt.unified_downloads][unified_download]
-* [measurement-lab.raw_ndt.alpha_ndt7][alpha_ndt7] (temporary)
+* [measurement-lab.raw_ndt.alpha_ndt7][alpha_ndt7] (preview)
 
 Together, these datasets allow the comparison of ndt5 and ndt7 measurements
 from the same clients.
