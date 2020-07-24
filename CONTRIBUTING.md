@@ -68,6 +68,18 @@ measurementlab/generate-schema-docs:v2.4.2 -doc.output _includes`
 
 * Commit your changes, push, and issue a pull request.
 
+
+## How this site packages and ships Jupyter Notebooks
+
+* notebooks are packaged and shipped on the website using the
+`jekyll-jupyter-notebook` gem.
+* `juypter` itself needs to be installed on your system for the gem to use.
+* We're saving `.ipynb` notebook files in `/notebook`
+* They are included in website pages using this syntax: `{% jupyter_notebook "/notebooks/discard-analysis-2018.ipynb" %}`.
+* When the site is generated, notebooks in `/notebooks` are converted to
+`.html`, which are added as iframe content by the `jupyter_notebook` include
+command above.
+
 ## Travis CI integration
 
 We use Travis CI to automate site builds to enable previewing new site content or features, to stage site updates approved through pull requests, and to build and publish approved and staged site updates through periodic releases.
