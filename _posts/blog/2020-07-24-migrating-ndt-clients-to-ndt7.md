@@ -1,8 +1,8 @@
 ---
 layout: blog
 title: "Migrating NDT clients to ndt7"
-author: "Lai Yi Ohlsen, Chris Ritzo, Greg Russel, Matt Mathis, Stephen Soltesz"
-date: 2020-07-22
+author: "Lai Yi Ohlsen, Chris Ritzo, Greg Russell, Matt Mathis, Stephen Soltesz"
+date: 2020-07-24
 breadcrumb: blog
 categories:
   - ndt
