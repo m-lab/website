@@ -106,6 +106,11 @@ the majority of clients migrate to ndt7 we will complete the following:
 After these are complete, we will continue the work to migrate the majority
 of NDT clients to use ndt7.
 
+The migration to ndt7 with BBR provides model based metrics about the global
+Internet. These are generational updates of tools that help us investigate
+and understand networks and a foundation for exciting future work. We look
+forward to exploring it with you.
+
 [ndt7intro]: https://www.measurementlab.net/blog/ndt7-introduction/
 [pastmigration]: https://www.measurementlab.net/blog/global-pilot-entry/
 [unified_download]: https://console.cloud.google.com/bigquery?folder=&organizationId=&project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table
