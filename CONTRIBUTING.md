@@ -1,4 +1,4 @@
-# Contributing to `m-lab.github.io`
+# Contributing to `github.com/m-lab/website`
 
 This document outlines setup, standards, and practices for contributing to
 the M-Lab website.
@@ -8,7 +8,7 @@ the M-Lab website.
 * Clone this repository, and update its submodules:
 
   ```sh
-  git clone git@github.com:m-lab/m-lab.github.io.git
+  git clone git@github.com:m-lab/website.git
   git submodule init
   git submodule update
   ```
@@ -176,14 +176,14 @@ should ensure that any secrets required for publication are encrypted. **If**
 Use the `travis encrypt` command to encrypt a secret access key:
 
 ```sh
-travis encrypt secret_access_key:<SECRET KEY> -r m-lab/m-lab.github.io
+travis encrypt secret_access_key:<SECRET KEY> -r m-lab/website
 ```
 
 Files containing secrets may be encrypted using the `travis encrypt-file`
 command:
 
 ```sh
-travis encrypt-file -r m-lab/m-lab.github.io  _cf_s3_invalidator.yml --add
+travis encrypt-file -r m-lab/website _cf_s3_invalidator.yml --add
 ```
 
 Currently `sandbox` and `staging` commits are deployed to GCS, and tagged
@@ -210,7 +210,7 @@ entered in plain text, but the secret key should be encryped using the
 [travis-cli]: https://github.com/travis-ci/travis.rb
 
 ```sh
-travis encrypt secret_access_key:<SECRET KEY> -r m-lab/m-lab.github.io
+travis encrypt secret_access_key:<SECRET KEY> -r m-lab/website
 ```
 
 In addition to deploying the site to S3, Travis also handles invalidating the
@@ -227,7 +227,7 @@ can then encrypt the file with a command like:
 [travis-encrypt]: https://docs.travis-ci.com/user/encrypting-files/
 
 ```sh
-travis encrypt-file -r m-lab/m-lab.github.io  _cf_s3_invalidator.yml --add
+travis encrypt-file -r m-lab/website _cf_s3_invalidator.yml --add
 ```
 
 Delete the unencrypted file after running the above command and be sure to
@@ -238,7 +238,7 @@ __not__ commit the unencrypted file to the repository.
 For GCS deployments, generate the encrypted `secure:` key using:
 
 ```sh
-travis encrypt secret_access_key:<SECRET KEY> -r m-lab/m-lab.github.io
+travis encrypt secret_access_key:<SECRET KEY> -r m-lab/website
 ```
 
 ```yaml

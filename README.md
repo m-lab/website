@@ -2,7 +2,7 @@
 
 This is the source code of the Measurement Lab website built using [Jekyll](http://jekyllrb.com) and utilizing [GitHub Pages](https://pages.github.com/) to publish and host the site.
 
-Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/m-lab.github.io.png?branch=master)](http://travis-ci.org/m-lab/m-lab.github.io)
+Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/website.png?branch=master)](http://travis-ci.org/m-lab/website)
 
 ## Site Structure
 
