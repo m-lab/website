@@ -11,7 +11,15 @@ err() {
   echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $@" >&2
 }
 
-./_tests/travis-checks
+RUN=
+if docker inspect --type=image local-website &> /dev/null ; then
+  RUN="docker run --rm --volume $PWD:/home/website --tty local-website"
+else
+  echo "WARNING: building website using local system environment."
+  echo "WARNING: use officially supported docker image environment by running:"
+  echo "         docker build -t local-website ."
+fi
+$RUN ./_tests/travis-checks
 
 if [ $? -eq 0 ]; then
   exit 0
