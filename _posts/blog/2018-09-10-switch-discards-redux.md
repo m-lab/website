@@ -34,4 +34,4 @@ The report:
 * describes the analysis used to conclude that the configuration change was positive.
 * describes how to determine whether experiment data was affected by switch discards.
 
-The report: [HTML](/data/docs/analysis/discard-analysis-2018/), [PDF](/publications/discard-analysis-2018.pdf), [ipynb](https://github.com/m-lab/m-lab.github.io/raw/master/notebooks/discard-analysis-2018.ipynb)
+The report: [HTML](/data/docs/analysis/discard-analysis-2018/), [PDF](/publications/discard-analysis-2018.pdf), [ipynb](https://github.com/m-lab/website/raw/master/notebooks/discard-analysis-2018.ipynb)
