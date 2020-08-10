@@ -8,7 +8,7 @@ layout: compress
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
-{% include head.html %} 
+{% include head.html %}
 
   <body>
   <!--[if lt IE 7]>
@@ -32,11 +32,8 @@ layout: compress
       <span>Back to Top</span>
     </a>
 
-  
-  {% if page.audience != "observatory" %}
-    {% include footer.html %}
-  {% endif %}
-
+  {% include footer.html %}
+  {% include cookie-consent.html %}
   </body>
 
 </html>

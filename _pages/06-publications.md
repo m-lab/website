@@ -727,7 +727,7 @@ Matt Mathis
 {:.no_toc}
 
 {:.paper-description}
-As a part of the [Michigan Moonshot Webinar series](https://www.merit.edu/services/moonshot/community-events/#1584730458109-03431efd-3f4d), M-Lab Community Lead, Chris Ritzo, shared information about the publicly available datasets and tools from Measurement Lab (M-Lab), and how they have been used for planning, decision making, and advocacy. M-Lab is an open source, civil society led, global platform for measuring broadband Internet service. In addition to supporting a portion of the FCC’s Measuring Broadband America program since its beginnings, M-Lab’s open source tools and data have been used in similar initiatives on local and regional levels, enabling communities to gather data about broadband in their communities, including the Michigan Moonshot initiative.
+As a part of the [Michigan Moonshot Webinar series](https://www.merit.edu/services/moonshot/), M-Lab Community Lead, Chris Ritzo, shared information about the publicly available datasets and tools from Measurement Lab (M-Lab), and how they have been used for planning, decision making, and advocacy. M-Lab is an open source, civil society led, global platform for measuring broadband Internet service. In addition to supporting a portion of the FCC’s Measuring Broadband America program since its beginnings, M-Lab’s open source tools and data have been used in similar initiatives on local and regional levels, enabling communities to gather data about broadband in their communities, including the Michigan Moonshot initiative.
 
 {:.paper-author}
 Chris Ritzo
