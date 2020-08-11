@@ -50,7 +50,7 @@ performance.
 The entry criteria use two datasets:
 
 * [measurement-lab.ndt.unified_downloads][unified_download]
-* [measurement-lab.raw_ndt.alpha_ndt7][alpha_ndt7] (preview)
+* [measurement-lab.raw_ndt.ndt7][ndt7-view]
 
 Together, these datasets allow the comparison of ndt5 and ndt7 measurements
 from the same clients.
@@ -111,7 +111,7 @@ Internet. These are generational updates of tools that help us investigate
 and understand networks and a foundation for exciting future work. We look
 forward to exploring it with you.
 
-[ndt7intro]: https://www.measurementlab.net/blog/ndt7-introduction/
-[pastmigration]: https://www.measurementlab.net/blog/global-pilot-entry/
+[ndt7intro]: {{ site.baseurl }}/blog/ndt7-introduction/
+[pastmigration]: {{ site.baseurl }}/blog/global-pilot-entry/
 [unified_download]: https://console.cloud.google.com/bigquery?folder=&organizationId=&project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table
-[alpha_ndt7]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=raw_ndt&t=alpha_ndt7&page=table
+[ndt7-view]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=raw_ndt&t=ndt7&page=table

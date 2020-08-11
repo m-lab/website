@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "ndt7 Introduction"
+title: "Introducing ndt7"
 author: "Lai Yi Ohlsen, Matt Mathis, Stephen Soltesz, Simone Basso"
 date: 2020-07-22
 breadcrumb: blog
@@ -65,7 +65,7 @@ affect longitudinal analysis.
 For a recent introduction to BBR see: [TCP BBR - Exploring TCP congestion
 control | by Andree Toonk][morebbr]{:target="_blank"}
 
-[ndt]: https://www.measurementlab.net/tests/ndt/
+[ndt]: {{ site.baseurl }}/tests/ndt/
 [simone]: https://github.com/bassosimone
 [morebbr]: https://medium.com/@atoonk/tcp-bbr-exploring-tcp-congestion-control-84c9c11dc3a9
 [ndt7-client-go]: https://github.com/m-lab/ndt7-client-go
