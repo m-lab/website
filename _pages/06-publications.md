@@ -703,15 +703,14 @@ Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center
 {:.no_toc}
 
 {:.paper-description}
-A presentation submitted to the virtual ACM SIGCOMM 2020. Best of CCR session
-The original paper was published in CCR October 2019.
+A presentation submitted to the virtual ACM SIGCOMM 2020, best of CCR session.
+The original paper was published in CCR in October 2019.
 
 {:.paper-author}
 Matt Mathis
 
 {:.download-link .paper-download target="_blank"}
-[Watch Recording](https://www.youtube.com/watch?v=HSy8-g7-G24){:.download-link .paper-download target="_blank"}
-
+[Watch Recording](https://www.youtube.com/watch?v=1QQXFp5eGgs){:.download-link .paper-download target="_blank"}
 
 ### M-Lab: Measuring Internet Performance
 {:.no_toc}
