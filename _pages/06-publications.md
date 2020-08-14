@@ -17,6 +17,18 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2019
 {:.no_toc}
 
+### Deprecating the TCP Macroscopic Model
+{:.no_toc}
+
+{:.paper-description}
+The TCP Macroscopic Model will be completely obsolete soon. It was a closed form performance model for Van Jacobson’s land- mark congestion control algorithms presented at Sigcomm’88. Ja- cobson88 requires relatively large buffers to function as intended, while Moore’s law is making them uneconomical. BBR-TCP is a break from the past, unconstrained by many of the assumptions and principles defined in Jacobson88. It already out performs Reno and CUBIC TCP over large portions of the Internet, generally without creating queues of the sort needed by earlier congestion control algorithms. It offers the potential to scale better while using less queue buffer space than existing algorithms. Because BBR-TCP is built on an entirely new set of principles, it has the potential to deprecate many things, including the Macro- scopic Model. New research will be required to lay a solid founda- tion for an Internet built on BBR.
+
+{:.paper-author}
+Matt Mathis, Jamshid Mahdavi
+
+[Read/Download](https://ccronline.sigcomm.org/2019/ccr-october-2019/deprecating-the-tcp-macroscopic-model/){:.download-link .paper-download target="_blank"}
+
+
 ### Complementary realities: Public domain Internet measurements in the development of Canada’s universal access policies
 {:.no_toc}
 
@@ -686,6 +698,19 @@ Matthew Mathis, Jeffrey Semke, Jamshid Mahdavi (Pittsburgh Supercomputing Center
 
 ## 2020
 {:.no_toc}
+
+### Deprecating the TCP Macroscopic Model (ACM SIGCOMM 2020, Best of CCR, Aug. 2020)
+{:.no_toc}
+
+{:.paper-description}
+A presentation submitted to the virtual ACM SIGCOMM 2020, best of CCR session.
+The original paper was published in CCR in October 2019.
+
+{:.paper-author}
+Matt Mathis
+
+{:.download-link .paper-download target="_blank"}
+[Watch Recording](https://www.youtube.com/watch?v=1QQXFp5eGgs){:.download-link .paper-download target="_blank"}
 
 ### M-Lab: Measuring Internet Performance
 {:.no_toc}
