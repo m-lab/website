@@ -15,9 +15,7 @@ If you are interested in running an NDT test, please visit our standalone speed 
 
 ## History
 
-From 2009-2019, M-Lab has run the default [NDT server](https://github.com/ndt-project/ndt/){:target="_blank"} originally [developed by Internet2](https://software.internet2.edu/ndt/){:target="_blank"}. This version uses the [web100 linux kernel extension](https://dl.acm.org/citation.cfm?id=956993.957002){:target="_blank"} for gathering data points about the TCP connection.
-
-In Nov. 2019, M-Lab launched a completely re-written [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}, that provides the **ndt5** and **ndt7** protocols. After launching the updated server, the web100 kernel instrumentation was retired in favor of using [TCP_INFO](https://github.com/m-lab/tcp-info/){:target="_blank"}. NDT data collected by the `web100` protocol will remain in the M-Lab data archive and in BigQuery, along with NDT data from the `ndt5` and `ndt7` protocols.
+Originally developed by Rich Carlson and the Internet2 team, M-Lab has hosted NDT since M-Lab began in 2009, and helped maintain and develop NDT for most of its history on the M-Lab platform. Over the last decade, there are three primary themes that have driven the evolution of NDT: standard kernel instrumentation, advances in TCP congestion control, and protocols and ports to support more clients. For more information, please see our blog post discussing the [Evolution of NDT]({{ site.baseurl }}/blog/evolution-of-ndt/).
 
 ## NDT Testing Protocols
 
@@ -80,7 +78,7 @@ Data collected by NDT is provided in multiple ways, each suited to specific segm
   * General [tcp-info description and schema]({{ site.basurl }}/tests/tcp-info)
 * measurement-lab.raw_ndt.traceroute (coming soon)
   * Contains traceroute data associated with all NDT measurements.
-  * General [tcp-info description and schema]({{ site.basurl }}/tests/traceroute)  
+  * General [tcp-info description and schema]({{ site.basurl }}/tests/traceroute)
 * measurement-lab.raw_ndt.web100 (future)
   * Contains historical NDT data collected using the [web100 protocol]({{ site.baseurl }}/tests/ndt/web100), using the web100 Linux kernel patch for all TCP metrics.
   * [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
