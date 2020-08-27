@@ -9,13 +9,11 @@ categories:
   - ndt7
 ---
 
-Over the past month, M-Lab has published a series of blog posts.
+Over the past month, M-Lab has published a series of blog posts about ndt7. As of Thursday, August 13th, 2020 roughly 90% of NDT clients using secure websockets have completed the migration from ndt5 to ndt7.<!--more-->
 
-* Introducing ndt7
-* Migrating NDT clients to ndt7
-* Evolution of NDT
-
-As of Thursday, August 13th, 2020 roughly 90% of NDT clients using secure websockets have completed the migration from ndt5 to ndt7.<!--more-->
+* [Introducing ndt7]({{ site.baseurl }}/blog/ndt7-introduction)
+* [Migrating NDT clients to ndt7]({{ site.baseurl }}/blog/migrating-ndt-clients-to-ndt7)
+* [Evolution of NDT]({{ site.baseurl }}/blog/evolution-of-ndt)
 
 Below is a screenshot of our internal monitoring for test traffic on August 14th, 2020, showing the ndt7 test count (green, above) in relation to the ndt5 test count (yellow, below).
 
@@ -155,6 +153,7 @@ WHERE
   AND ndt7_clients.minRTT BETWEEN 0 and 25
 ```
 
+<br/><br/>
 ✅ **Publish advice for working with the longitudinal history of all NDT data**
 
 In our [Evolution of NDT blog post]({{ site.baseurl }}/blog/evolution-of-ndt), we introduced the nuances of comparing the NDT datasets across significant transitions. Each dataset is internally consistent. Until more research is completed, comparisons of measurements across transition points should be done with care.
