@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "The majority of NDT clients have migrated to ndt7"
-author: "Stephen Soltesz"
+author: "Lai Yi Ohlsen, Stephen Soltesz"
 date: 2020-08-27
 breadcrumb: blog
 categories:
