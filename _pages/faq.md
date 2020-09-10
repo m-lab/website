@@ -1,9 +1,8 @@
 ---
-layout: page
+layout: redirect
 permalink: /faq/
 title: "FAQ"
-sub-nav: true
-breadcrumb: "about"
+redirect_to: "https://support.measurementlab.net/help/en-us"
 ---
 
 * Table of Contents

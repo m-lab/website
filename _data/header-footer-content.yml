@@ -13,8 +13,6 @@ header:
       sub-nav:
         - text: "What is Measurement Lab?"
           url:  "/about/"
-        - text: "FAQ"
-          url:  "/faq/"
         - text: "Who we are"
           url:  "/who/"
         - text: "Policies"
@@ -72,11 +70,11 @@ header:
 footer:
   subscribe:
     items:
-    - 
+    -
       link: "https://github.com/m-lab"
       link-title: "GitHub"
       link-class: "github-share"
-    - 
+    -
       link: "https://twitter.com/measurementlab"
       link-title: "Twitter"
       link-class: "twitter-share"
@@ -107,14 +105,14 @@ footer:
     column-two:
       items:
       -
-        link: "/faq/"
-        link-title: "FAQ"
+        link: "https://support.measurementlab.net/help/en-us"
+        link-title: "Support"
       -
         link: "/blog/"
         link-title: "Blog"
       -
         link: "https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss"
-        link-title: "Discuss List"
+        link-title: "Discuss Group"
     column-three:
       items:
       -

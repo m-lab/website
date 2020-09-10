@@ -20,6 +20,11 @@ grid-section:
         img_attribution: ""
         heading: "Neubot DASH"
         desc: "DASH is designed to measure the quality of tested networks by emulating a video streaming player."
+      - link: "/tests/reverse_traceroute/"
+        image: "arrow-swoop.png"
+        img_attribution: ""
+        heading: "Reverse Traceroute"
+        desc: "Measures the network path back to a user from selected network endpoints."
       - link: "/tests/wehe/"
         image: "wehe.png"
         img_attribution: ""
@@ -44,14 +49,6 @@ grid-section:
         img_attribution: "Created by Popular from Noun Project"
         heading: "Traceroute"
         desc: "Collects network path information for every connection to the M-Lab platform."
-  - group-heading: "Inactive Tests"
-    group-description: "Tests that were recently active on the M-Lab 1.0 platform, but have not yet been redesigned by their developers to run on the M-Lab 2.0 platform."
-    group-list-class: "l-grid l-3col"
-    grid-items:
-      - link: "/tests/reverse_traceroute/"
-        image: "arrow-swoop.png"
-        heading: "Reverse Traceroute"
-        desc: "Measures the network path back to a user from selected network endpoints."
   - group-heading: "Retired Tests"
     group-description: "Tests in this section were once hosted with M-Lab but have since been retired. The data collected by these tests while they were hosted on with M-Lab remains available. Please see each individual test's page for more information."
     group-list-class: "l-grid l-3col"
@@ -122,10 +119,4 @@ Please review M-Lab’s [Privacy Policy]({{ site.baseurl }}/privacy) before init
 
 ## Using and Troubleshooting M-Lab Tests
 
-Below are a few of our most [Frequently Asked Questions]({{ site.baseurl }}/faq/) about M-Lab tests.
-
-* [What measurement tests can I run?]({{ site.baseurl }}/faq/#what-measurement-tests-can-i-run)
-* [How are the results I get from NDT different from other speed tests?]({{ site.baseurl }}/faq/#why-are-my-m-lab-results-different-from-other-speed-tests)
-* [An M-Lab test is not working, what should I do?]({{ site.baseurl }}/faq/#how-do-i-report-issues-with-m-lab-tests)
-* [What data will be collected when I run a test?]({{ site.baseurl }}/faq/#what-data-will-be-collected-when-i-run-a-test)
-* [Will these tests monitor my private Internet activity, like email messages or, browsing and search history?]({{ site.baseurl }}/faq/#will-these-tests-monitor-my-private-internet-activity-like-email-messages-or-browsing-and-search-history)
+If you need help or have questions about using M-Lab tests, you can search our answers to commonly asked questions through our [support website](https://support.measurementlab.net/help/en-us){:target="_blank"}, or email us at [support@measurementlab.net](mailto:support@measurementlab.net) and our team will get back to you.
