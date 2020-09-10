@@ -74,25 +74,34 @@ Host entities may withdraw from M-Lab at any time, but are expected to give M-La
 **For Host Entity:**
 
 Name:
+
 Designation:
+
 E-mail address:
+
 Organization:
 
 Physical Address:
 
 Signature:
+
 Date:
 
 **For Measurement Lab:**
+
 Name:
+
 Designation:
+
 E-mail address:
-Organization:
-Measurement Lab, a fiscally sponsored project of Code for Science and Society, LLC
+
+Organization: **Measurement Lab**
 
 Physical Address:
-2805 SE Grant St
-Portland, OR 97214-5642
+
+**1221 SE 34th**
+**Portland, OR 97214**
 
 Signature:
+
 Date:
