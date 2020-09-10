@@ -122,14 +122,12 @@ Designation:
 
 E-mail address:
 
-Organization:
-
-  Measurement Lab
+Organization: **Measurement Lab**
 
 Physical Address:
 
-  1221 SE 34th
-  Portland, OR 97214
+**1221 SE 34th**
+**Portland, OR 97214**
 
 Signature:
 
@@ -167,14 +165,12 @@ Designation:
 
 E-mail address:
 
-Organization:
-
-  Measurement Lab
+Organization: **Measurement Lab**
 
 Physical Address:
 
-  1221 SE 34th
-  Portland, OR 97214
+**1221 SE 34th**
+**Portland, OR 97214**
 
 Signature:
 
@@ -212,14 +208,12 @@ Designation:
 
 E-mail address:
 
-Organization:
-
-  Measurement Lab
+Organization: **Measurement Lab**
 
 Physical Address:
 
-  1221 SE 34th
-  Portland, OR 97214
+**1221 SE 34th**
+**Portland, OR 97214**
 
 Signature:
 

@@ -58,9 +58,8 @@ NDT can be integrated quickly and easily using a basic iframe:
 
 For developers interested in a custom integration:
 
-* The [current NDT JavaScript library](https://github.com/ndt-project/ndt/tree/master/HTML5-frontend)
+* The [current NDT7 JavaScript library](https://github.com/m-lab/ndt7-js)
 * A custom integration in Angular.js is available as an [example](https://github.com/m-lab/mlab-speedtest)
-* Work is in progress on an [official JavaScript client for the ndt7 protocol](https://github.com/m-lab/ndt-server/issues/237)
 
 ### Integrating NDT on Mobile or Desktop
 

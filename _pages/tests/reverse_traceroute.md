@@ -13,6 +13,8 @@ Please cite this data set as follows: **The M-Lab Reverse Traceroute Data Set, &
 
 **Data** collected by Reverse Traceroute is available in raw format at[https://console.cloud.google.com/storage/browser/m-lab_revtr/](https://console.cloud.google.com/storage/browser/m-lab_revtr/).
 
+If you are interested in accessing data from the Reverse Traceroute test in BigQuery, please [contact us](mailto:support@measurementlab.net)!
+
 **Source code** is available at [http://github.com/drchoffnes/uw-prober](https://github.com/drchoffnes/uw-prober){:target="_blank"}.
 
 **Get more information** at [http://www.cs.washington.edu/research/networking/astronomy/reverse-traceroute.html](http://www.cs.washington.edu/research/networking/astronomy/reverse-traceroute.html){:target="_blank"}.
