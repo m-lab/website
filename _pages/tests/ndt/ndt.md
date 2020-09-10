@@ -15,7 +15,7 @@ If you are interested in running an NDT test, please visit our standalone speed 
 
 ## History
 
-Originally developed by Rich Carlson and the Internet2 team, M-Lab has hosted NDT since M-Lab began in 2009, and helped maintain and develop NDT for most of its history on the M-Lab platform. Over the last decade, there are three primary themes that have driven the evolution of NDT: standard kernel instrumentation, advances in TCP congestion control, and protocols and ports to support more clients. For more information, please see our blog post discussing the [Evolution of NDT]({{ site.baseurl }}/blog/evolution-of-ndt/).
+Originally developed at [Internet2](https://github.com/ndt-project/){:target="_blank"}, M-Lab has hosted NDT since our founding in 2009, and helped maintain and develop NDT for most of its history on the M-Lab platform. Over the last decade, there are three primary themes that have driven the evolution of NDT: standard kernel instrumentation, advances in TCP congestion control, and protocols and ports to support more clients. For more information, please see our blog post discussing the [Evolution of NDT]({{ site.baseurl }}/blog/evolution-of-ndt/).
 
 ## NDT Testing Protocols
 
