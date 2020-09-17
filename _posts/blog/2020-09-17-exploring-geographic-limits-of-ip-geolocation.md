@@ -2,7 +2,7 @@
 layout: blog
 title: "Exploring NDT Data by Geography in Baltimore City"
 author: "Chris Ritzo"
-date: 2020-09-14
+date: 2020-09-17
 breadcrumb: blog
 categories:
   - ndt
