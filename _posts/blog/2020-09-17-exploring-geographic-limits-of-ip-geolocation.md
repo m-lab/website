@@ -2,7 +2,7 @@
 layout: blog
 title: "Exploring NDT Data by Geography in Baltimore City"
 author: "Chris Ritzo"
-date: 2020-09-17
+date: 2020-09-18
 breadcrumb: blog
 categories:
   - ndt
@@ -15,19 +15,19 @@ categories:
 
 ## Supporting Community - Data Initiatives
 
-The Baltimore Neighborhood Indicators Alliance is at the Jacob France Institute at the University of Baltimore, [whose mission](https://bniajfi.org/about_bnia/){:target="_blank"} is to, “provide open access to meaningful, reliable, and actionable data about, and for, the City of Baltimore and its communities.” BNIA is a member of a national network of organizations called the [Community Indicators Consortium](https://communityindicators.net/){:target="_blank"}, whose mission is to, “advances and supports the development, availability and effective use of community indicators for making measurable and sustainable improvements in quality of community life.” BNIA’s annual Data Science Corps program provides internship opportunities for local undergraduate students to gain experience through data science projects. BNIA’s invitation to present about M-Lab came after their staff contacted us to inquire about our open data, and support for one of their Data Science Corps interns.
+The Baltimore Neighborhood Indicators Alliance is at the Jacob France Institute at the University of Baltimore, [whose mission](https://bniajfi.org/about_bnia/){:target="_blank"} is to, “provide open access to meaningful, reliable, and actionable data about, and for, the City of Baltimore and its communities.” BNIA is a member of a national network of organizations called the [Community Indicators Consortium](https://communityindicators.net/){:target="_blank"}, whose mission “advances and supports the development, availability and effective use of community indicators for making measurable and sustainable improvements in quality of community life.” BNIA’s annual Data Science Corps program provides internship opportunities for local undergraduate students to gain experience through data science projects. BNIA’s invitation to present about M-Lab came after their staff contacted us to inquire about our open data, and support for one of their Data Science Corps interns.
 
-The COVID-19 pandemic has exposed what many people and organizations already knew-- that quality, affordable Internet access is not available to everyone equitably, and disparities in access, provider choice, quality of service, and affordability need to be addressed. Digital Inclusion organizations and coalitions at the local and national level have been working hard to provide access to people who are not connected, to address these disparities in this extremely challenging time. For example, the [Baltimore Digital Equity Coalition](https://digitalequitybaltimore.org/about-us/){:target="_blank"}  was formed to respond to the needs that  COVID-19 exacerbated, forming a rapid response in key areas: access to devices, greater Internet connectivity, digital skills training and technical support, and advocacy.
+The COVID-19 pandemic has exposed what many people and organizations already knew-- that quality, affordable Internet access is not available to everyone equitably, and disparities in access, provider choice, quality of service, and affordability need to be addressed. Digital Inclusion organizations and coalitions at the local and national level have been working hard to provide access to people who are not connected, to address these disparities in this extremely challenging time. For example, the [Baltimore Digital Equity Coalition](https://digitalequitybaltimore.org/about-us/){:target="_blank"}  was formed to respond to the needs that COVID-19 exacerbated, forming a rapid response in key areas: access to devices, greater Internet connectivity, digital skills training and technical support, and advocacy.
 
-BNIA and their Data Science Corp were looking for a baseline of data measuring the performance and quality of Internet service across the city, and sought a way to assess the service being provided or improved through the Baltimore Digital Equity Coalition’s initiatives. Data Science Corps members, Ruth Robinson and Priya Kanneboyina, published this [blog post](https://bniajfi.org/2020/09/02/is-baltimore-city-getting-fast-enough-internet-speeds/){:target="_blank"} as a result. Definitely checkout the awesome work BNIA and the Data Science Corps are doing.
+BNIA and their Data Science Corp were looking for baseline data measuring the performance and quality of Internet service across the city, and sought a way to assess the service being provided or improved through the Baltimore Digital Equity Coalition’s initiatives. Data Science Corps members, Ruth Robinson and Priya Kanneboyina, published this [blog post](https://bniajfi.org/2020/09/02/is-baltimore-city-getting-fast-enough-internet-speeds/){:target="_blank"} as a result. Definitely check out the awesome work BNIA and the Data Science Corps are doing.
 
 ## Exploring M-Lab Data by Geography
 
 The initial exploration of M-Lab data and my talk at Baltimore Data Week provides a good example of what communities can learn from M-Lab’s data, particularly when grouping or aggregating data by geographic areas.
 
-When exploring or aggregating M-Lab test data by geographies, it’s important to understand the limits of geographic granularity in our public data in BigQuery. When you run an M-Lab test, in addition to providing you with a measurement, we collect the IP address assigned to your cable modem, router, etc. by your ISP. By looking up the IP address in a publicly available dataset, we “annotate” each test result with geographic fields like latitude and longitude coordinates, continent, country, city, and postal code. Location using IP address geolocation is not street address level accurate like a GPS might be, so we usually recommend aggregating M-Lab data at the city, county level in the United States when using our public data.
+When exploring or aggregating M-Lab test data by geographies, it’s important to understand the limits of geographic granularity in our public data in BigQuery. When you run an M-Lab test, in addition to providing you with a measurement, we collect the IP address assigned to your cable modem, router, etc. by your ISP. By looking up the IP address in a publicly available dataset, we “annotate” each test result with geographic fields like latitude and longitude coordinates, continent, country, city, and postal code. IP address geolocation is not street address level accurate like a GPS might be, so we usually recommend aggregating M-Lab data at the city or county level in the United States when using our public data.
 
-Let’s look at an example to illustrate this issue. One of the great things about organizations like BNIA is their focus on data. For this example I’ve used [BNIA’s Geographic Information Systems (GIS) shapefiles](https://bniajfi.org/mapping-resources/) for Baltimore’s “statistical community areas”.  Shapefiles basically define a perimeter boundary for a geographic area, and provide a way to correlate datasets from multiple datasets that have geographic properties, such as demographic data from the US Census. BNIA’s community mapping work is awesome, and I’m looking forward to exploring their [community mapping resources](https://bniajfi.org/community_mapping/) in more depth.
+Let’s look at an example to illustrate this limitation. One of the great things about organizations like BNIA is their focus on data. For this example I’ve used [BNIA’s Geographic Information Systems (GIS) shapefiles](https://bniajfi.org/mapping-resources/) for Baltimore’s “statistical community areas”. Shapefiles define a perimeter boundary for a geographic area, and provide a way to correlate data from multiple datasets that have geographic properties, such as demographic data from the US Census. BNIA’s community mapping work is awesome, and I’m looking forward to exploring their [community mapping resources](https://bniajfi.org/community_mapping/) in more depth.
 
 You can use shapefiles in multiple ways, and with different programs or services. For this exploration I used BNIA’s GIS Community Areas shapefile in the desktop GIS program, QGIS, and also imported the areas into a BigQuery table. I also used shapefiles for US Counties provided by the US Census for this analysis.
 
@@ -45,9 +45,9 @@ Finally, I imported BNIA’s shapefile for Baltimore’s community statistical a
 
 ![Map of BNIA Baltimore City Statistical Areas in QGIS]({{ site.baseurl }}/images/blog/2020-09-14-baltimore/image3.png)
 
-Now we’re ready to add data from M-Lab. That data could take many forms, from aggregate measurements by community area, color coded by the average, median, or other statistic for download or upload speed. M-Lab’s measurement service, NDT, provides baseline measurement of TCP’s reliability, using a single stream of data. TCP stands for Transmission Communication Protocol and is what computers use to send and receive data over the Internet.  Since we’re just exploring at this point to see what is possible, I started with looking at where in the city NDT tests from 2020 have been located in our public dataset.
+Now we’re ready to add data from M-Lab. That data could take many forms, from aggregate measurements by community area, color coded by the average, median, or other statistic for download or upload speed. M-Lab’s measurement service, NDT, provides a baseline measurement of TCP’s reliability, using a single stream of data. TCP stands for Transmission Communication Protocol and is what computers use to send and receive data over the Internet. Since we’re just exploring at this point to see what is possible, I started with looking at where in the city NDT tests from 2020 have been located in our public dataset.
 
-To obtain the common latitude and longitude coordinates for all tests in 2020 submitted by Marylanders in Baltimore City, I used BigQuery to search M-Lab’s NDT data. If you’re interested in querying our data yourself, sign up your Google account to our access group by following the [M-Lab Quickstart guide]({{ site.baseurl }}/quickstart). We have some [documentation online]({{ site.baseurl }}/data/docs) as well, and you can obtain some sample queries from my [Baltimore Data Week slide deck](https://bit.ly/mlab-baltimore-data-week-2020-07-23). Here is the query I used, which returns a total of 50 points:
+To obtain the common latitude and longitude coordinates for all tests in 2020 submitted by Marylanders in Baltimore City, I used BigQuery to search M-Lab’s NDT data. If you’re interested in querying our data yourself, sign up your Google account to our access group by following the [M-Lab Quickstart guide]({{ site.baseurl }}/quickstart). We have some [documentation online]({{ site.baseurl }}/data/docs) as well, and you can obtain some sample queries from my [Baltimore Data Week slide deck](https://bit.ly/mlab-baltimore-data-week-2020-07-23). Here is the query I used, which returns a total of 50 common latitude and longitude points:
 
 ```~sql
 WITH dl AS (
@@ -56,7 +56,7 @@ WITH dl AS (
   WHERE client.geo.country_code = "US"
   AND client.geo.region = "MD"
   AND client.geo.city = "Baltimore"
-  AND test_date BETWEEN "2018-01-01" AND "2018-12-31"
+  AND test_date >= "2020-01-01"
   GROUP BY latitude, longitude
 ),
 ul AS (
@@ -65,7 +65,7 @@ ul AS (
   WHERE client.geo.country_code = "US"
   AND client.geo.region = "MD"
   AND client.geo.city = "Baltimore"
-  AND test_date BETWEEN "2018-01-01" AND "2018-12-31"
+  AND test_date >= "2020-01-01"
   GROUP BY latitude, longitude
 ),
 joined AS (
@@ -91,41 +91,51 @@ As the analysis above shows, aggregating NDT data by geographic areas this small
 In BigQuery, I used a more complex query that uses GIS functions to aggregate statistics for each community area. The query below calculates the [5 number summary](https://en.wikipedia.org/wiki/Five-number_summary) for each community area between Jan 1 and June 30, 2020. A subset of the results for download tests are in the table following the query.
 
 ```~sql
- GROUP BY community
+WITH
+bmore_communities AS (
+  SELECT * FROM `measurement-lab.geographies.baltimore_community_statistical_areas`
 ),
-download_stats AS (
-  SELECT
-    MIN(download_mbps) as MIN_download,
-    APPROX_QUANTILES(download_mbps, 100) [SAFE_ORDINAL(25)] AS Q25_download,
-    APPROX_QUANTILES(download_mbps, 100) [SAFE_ORDINAL(50)] AS MED_download,
-    AVG(download_mbps) as AVG_download,
-    APPROX_QUANTILES(download_mbps, 100) [SAFE_ORDINAL(75)] AS Q75_download,
-    MAX(download_mbps) AS MAX_download,
-    community
-  FROM
-    download_tests
-  GROUP BY community
-),
-joined AS (
-  SELECT * FROM download_stats
-  JOIN upload_stats USING (community)
+dl AS (
+  SELECT a.MeanThroughputMbps AS download_mbps, community
+  FROM `measurement-lab.ndt.unified_downloads`, bmore_communities
+  WHERE client.geo.country_code = "US"
+  AND client.geo.region = "MD"
+  AND client.geo.city = "Baltimore"
+  AND test_date BETWEEN "2020-01-01" AND "2020-06-30"
+  AND ST_WITHIN(
+    ST_GeogPoint(
+      client.Geo.longitude,
+      client.Geo.latitude
+    ), bmore_communities.WKT
+  )
 )
-SELECT * FROM joined
+SELECT
+  community,
+  MIN(download_mbps) as MIN_download,
+  APPROX_QUANTILES(download_mbps, 100) [SAFE_ORDINAL(25)] AS Q25_download,
+  APPROX_QUANTILES(download_mbps, 100) [SAFE_ORDINAL(50)] AS MED_download,
+  AVG(download_mbps) as AVG_download,
+  APPROX_QUANTILES(download_mbps, 100) [SAFE_ORDINAL(75)] AS Q75_download,
+  MAX(download_mbps) AS MAX_download
+FROM
+  dl
+GROUP BY community
+ORDER BY community
 ```
 <br>
 <div class="table-responsive" markdown="1">
 
 | Community | MIN | Q25 | MEDIAN | AVG | Q75 | MAX |
-| Allendale/Irvington/S. Hilton | 0 | 3.16 | 13.59 | 46.68 | 44.18 | 8746.57 |
-| Beechfield/Ten Hills/West Hills | 0 | 3.16 | 13.59 | 46.68 | 44.2 | 8746.57 |
-| Belair-Edison | 0 |3.17 | 13.61 | 46.68 | 44.2 | 8746.57 |
-| Brooklyn/Curtis Bay/Hawkins Point | 0 | 3.17 | 13.59 | 46.68 | 44.2 | 8746.57 |
-| Canton | 0 | 3.16 | 13.58 | 46.68 | 44.14 | 8746.57 |
-| Cedonia/Frankford | 0 | 3.16 | 13.59 | 46.68 | 44.16 | 8746.57 |
-| Cherry Hill | 0 | 3.16 |13.59 | 46.68 | 44.16 | 8746.57 |
-| Chinquapin Park/Belvedere | 0 | 3.16 | 13.59 | 46.68 | 44.16 | 8746.57 |
-| Claremont/Armistead | 0 | 3.16 | 13.59 | 46.68 | 44.17 | 8746.57 |
-| Clifton-Berea | 0 | 3.16 | 13.59 | 46.68 | 44.2 | 8746.57 |
+| Allendale/Irvington/S. Hilton|0|5.85|26.99|78.67|94.11|1363.68|
+| Beechfield/Ten Hills/West Hills|0|5.74|26.67|77.9|93.03|1363.68|
+| Belair-Edison|0|5.74|26.67|77.9|93.03|1363.68|
+| Brooklyn/Curtis Bay/Hawkins Point|0|5.74|26.67|77.9|93.03|1363.68|
+| Canton|0|5.74|26.67|77.9|93.03|1363.68|
+| Cedonia/Frankford|0|5.59|25.93|76.81|92.23|1363.68|
+| Cherry Hill|0|5.74|26.67|77.9|93.03|1363.68|
+| Chinquapin Park/Belvedere|0|6|27.16|79.26|95.29|1363.68|
+| Claremont/Armistead|0|5.74|26.67|77.9|93.03|1363.68|
+| Clifton-Berea|0|5.96|27.33|79|94.15|1363.68|
 
 </div>
 
@@ -133,7 +143,7 @@ The first thing you’ll likely note in the results table, is that many of Balti
 
 ## M-Lab Community Tools for Collecting New Data with Geographic Precision
 
-Because M-Lab maintains a public archive of our measurement data, we sacrifice a bit of geographic accuracy by annotating our test data using the IP address. The advantage is that we’re respecting the privacy of people who run tests. It’s a tradeoff. But there are ways for communities to collect locally specific data using open source tools that use the M-Lab platform. We’ve supported and developed applications that communities can use to collect new test data with more geographic precision.
+Because M-Lab maintains a public archive of our measurement data, we sacrifice a bit of geographic accuracy by annotating our test data using the IP address. It’s a tradeoff. This disadvantage is the geographic issue demonstrated in this post. However, the advantage is that we’re respecting the privacy of people who run tests. But there are ways for communities to collect locally specific data using open source tools that use the M-Lab platform. We’ve supported and developed applications that communities can use to collect new test data with more geographic precision.
 
 ### Piecewise - Public Engagement Web Portal
 
@@ -149,4 +159,4 @@ The [M-Lab Measure Chrome browser extension](https://chrome.google.com/webstore/
 
 ## Conclusion
 
-I hope this post has been informative about the default geographic specificity of M-Lab’s NDT data. When the desire is to examine local trends and statistics in our data at smaller geographies than City or County, the need to collect new data at the community level becomes more important. One of our goals is to enable communities to use our platform as a service, to enable new data collection with more accuracy, and the tools mentioned here can help with that. As always, we’re also here to support and answer questions about these tools or our platform and data. Reach out to support@measurementlab.net to get help.
+I hope this post has been informative about the default geographic specificity of M-Lab’s NDT data. When the desire is to examine local trends and statistics in our data at smaller geographies than city or county, the need to collect new data at the community level becomes more important. One of our goals is to enable communities to use our platform as a service, to enable new data collection with more accuracy, and the tools mentioned here can help with that. As always, we’re also here to support and answer questions about these tools or our platform and data. Reach out to support@measurementlab.net to get help.
