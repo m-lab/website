@@ -17,6 +17,18 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 ## 2019
 {:.no_toc}
 
+### How to leverage Measurement Lab Internet metrics to get useful insights through Data Science
+{:.no_toc}
+
+{:.paper-description}
+Measurement Lab is an open source project that provides data on Internet performance measure ments. TOP-IX Consortium decided to leverage the open data provided by M-Lab to explore the impact of its network on the territory and the factors that might influence the performances of the connectivity providers among its members, in particular FWA operators. This paper presents the data acquisition process and three case studies related to commercial plans comparison, coverage and weather, including the advantages and obstacles of the data used and approach presented.
+
+{:.paper-author}
+Stefania Delprete, Christian Racca - TOP-IX Consortium
+Gianni Spalluto - Eutelsat Communications
+
+[Download](https://www.garr.it/it/chi-siamo/documenti/selected-papers/selected-papers-conferenza-2019/4953-selected-papers-conferenza-2019-08-delprete){:.download-link .paper-download target="_blank"}
+
 ### Deprecating the TCP Macroscopic Model
 {:.no_toc}
 
