@@ -1,11 +1,11 @@
-{% comment %} 
+{% comment %}
 <!--
   Header
 
   This partial is included on every page except to consistently
   display the same header on each page.
-  
---> 
+
+-->
 {% endcomment %}
 
 {% assign header = site.data.header-footer-content.header %}
@@ -17,7 +17,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-2 col-sm-2 col-md-4">
-        <h1 class="main-logo"><a href="{{ site.baseurl }}/">{{ header.logo-title }}</a></h1>
+        <div class="main-logo"><a href="{{ site.baseurl }}/">{{ header.logo-title }}</a></div>
       </div>
 
       <!-- Mobile Hamburger Menu -->

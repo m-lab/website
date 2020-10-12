@@ -38,31 +38,31 @@ The table below describes the schema for the table: `measurement-lab.sidestream.
 
 <div class="table-responsive" markdown="1">
 
-| Field name                                           |     Type     |  Description                              |
-| :----------------------------------------------------|:------------:|:------------------------------------------|
-| `partition_date`                                    | `date`  | The day (in UTC) in which the data was loaded. |
-| `test_id`                                           |  `string`    |  ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20090819T02:01:04.507508000Z_189.6.232.77:3859.c2s_snaplog.gz`). |
-| `task_filename`                                      | `string`     |  The raw data file in Google Cloud Storage from which the test row was parsed. |
-| `parse_time`                                         | `timestamp`  |  The timestamp of when test data was parsed into BigQuery from Google Cloud Storage. |
-| `parser_version`    | `string` | A link to the tagged version of the M-Lab ETL parser which processed the test row. |
-| `project`                              | `integer` |                                        |
-| `log_time`                             | `timestamp` |                                        |
-| `type`                                | `integer` |                                        |
-| `anomalies`                                | `record` |                                        |
-| `anomalies.exclusion_level`           | `integer` |                                        |
-| `web100_log_entry`           | `record` |                                        |
-| `web100_log_entry.log_time`           | `integer` |                                        |
-| `web100_log_entry.version`            | `string` |                                        |
-| `web100_log_entry.group_name`         | `string` |                                        |
-| `web100_log_entry.connection_spec.local_af` | `integer` | IPv4 = `0`<br>IPv6 = `1`                                        |
-| `web100_log_entry.connection_spec.local_ip` | `string` |                                        |
-| `web100_log_entry.connection_spec.local_port` | `integer` |                                        |
-| `web100_log_entry.connection_spec.remote_ip`  | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_port` | `integer` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation`  | `record` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.area_code`  | `integer` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.city`  | `string` |                                        |
-| `web100_log_entry.connection_spec.local_geolocation.continent_code` | `string` |                                        |
+| Field name | Type | Description |
+| :----------|:----:|:------------|
+| `partition_date` | `date` | The day (in UTC) in which the data was loaded. |
+| `test_id` | `string` | ID of the test. It represents the filename of the log that contains the data generated during the test (e.g. `20090819T02:01:04.507508000Z_189.6.232.77:3859.c2s_snaplog.gz`). |
+| `task_filename` | `string` | The raw data file in Google Cloud Storage from which the test row was parsed. |
+| `parse_time` | `timestamp` | The timestamp of when test data was parsed into BigQuery from Google Cloud Storage. |
+| `parser_version` | `string` | A link to the tagged version of the M-Lab ETL parser which processed the test row. |
+| `project` | `integer` |         |
+| `log_time` | `timestamp` |           |
+| `type` | `integer` |        |
+| `anomalies`                                | `record` |
+| `anomalies.exclusion_level`           | `integer` |
+| `web100_log_entry`           | `record` |      |
+| `web100_log_entry.log_time`           | `integer` |        |
+| `web100_log_entry.version`            | `string` |     |
+| `web100_log_entry.group_name`         | `string` |        |
+| `web100_log_entry.connection_spec.local_af` | `integer` | IPv4 = `0`<br>IPv6 = `1` |
+| `web100_log_entry.connection_spec.local_ip` | `string` |          |
+| `web100_log_entry.connection_spec.local_port` | `integer` |           |
+| `web100_log_entry.connection_spec.remote_ip`  | `string` |       |
+| `web100_log_entry.connection_spec.remote_port` | `integer` |           |
+| `web100_log_entry.connection_spec.local_geolocation`  | `record` |         |
+| `web100_log_entry.connection_spec.local_geolocation.area_code`  | `integer` |        |
+| `web100_log_entry.connection_spec.local_geolocation.city`  | `string` |      |
+| `web100_log_entry.connection_spec.local_geolocation.continent_code` | `string` |            |
 | `web100_log_entry.connection_spec.local_geolocation.country_code` | `string` |                                        |
 | `web100_log_entry.connection_spec.local_geolocation.country_code3` | `string` |                                        |
 | `web100_log_entry.connection_spec.local_geolocation.country_name` | `string` |                                        |
@@ -76,7 +76,7 @@ The table below describes the schema for the table: `measurement-lab.sidestream.
 | `web100_log_entry.connection_spec.remote_geolocation` | `record` |                                        |
 | `web100_log_entry.connection_spec.remote_geolocation.area_code` | `integer` |                                        |
 | `web100_log_entry.connection_spec.remote_geolocation.city` | `string` |                                        |
-| `web100_log_entry.connection_spec.remote_geolocation.continent_code` | `string` |                                        |
+| `web100_log_entry.connection_spec.remote_geolocation.continent_code` | `string` |    |
 | `web100_log_entry.connection_spec.remote_geolocation.country_code` | `string` |                                        |
 | `web100_log_entry.connection_spec.remote_geolocation.country_code3` | `string` |                                        |
 | `web100_log_entry.connection_spec.remote_geolocation.country_name` | `string` |                                        |
@@ -236,5 +236,6 @@ The table below describes the schema for the table: `measurement-lab.sidestream.
 | `web100_log_entry.snap.X_rcv_ssthresh` | `integer` |                                        |
 | `web100_log_entry.snap.X_wnd_clamp` | `integer` |                                        |
 | `web100_log_entry.snap.ZeroRwinRcvd` | `integer` |                                        |
-| `web100_log_entry.snap.ZeroRwinSent` | `integer` |                                        |
+| `web100_log_entry.snap.ZeroRwinSent` | `integer` |   |
+
 </div>
