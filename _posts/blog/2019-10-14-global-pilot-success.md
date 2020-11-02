@@ -30,6 +30,6 @@ America Program](https://www.fcc.gov/general/measuring-broadband-america){:targe
 
 In an effort to allow others to reproduce our work, we put everything in the
 following
-Jupyter notebook (also available for [direct download](https://github.com/m-lab/website/raw/master/notebooks/2019-10-14-pilot-assessment.ipynb):
+Jupyter notebook (also available for [direct download](https://github.com/m-lab/website/raw/main/notebooks/2019-10-14-pilot-assessment.ipynb):
 
 {% jupyter_notebook "/notebooks/2019-10-14-pilot-assessment.ipynb" %}
