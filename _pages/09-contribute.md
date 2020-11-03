@@ -16,7 +16,7 @@ M-Lab welcomes the participation of individuals and researchers, as well as comp
 
 ## Develop a Test
 
-Researchers developing and maintaining open source network measurement tests may apply to host a new test on M-Lab. If your project fits within M-Lab's guidelines and principles, we invite you to [apply for M-Lab hosting](https://docs.google.com/forms/d/1nVV-oKNuOp4k8c6nQVscp1YNFMfg9OKlZEMYCXwIYBE/){:target="_blank"}.
+Researchers developing and maintaining open source network measurement tests may apply to host a new test on M-Lab. If your project fits within M-Lab's guidelines and principles, we invite you to [email us about M-Lab hosting](mailto:suppport@measurementlab.net).
 
 Please review the documents below before applying:
 
