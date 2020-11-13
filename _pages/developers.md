@@ -10,6 +10,53 @@ breadcrumb: contribute
 
 M-Lab's mission of providing an open platform for Internet research depends on a diverse community that creates and deploys tools to collect measurement data. In order to achieve our objective of supporting global Internet research, we encourage the adoption of our resources for nearly all use cases, including within commercial environments. M-Lab’s primary concern is that clients and experiments comply with our privacy policies and do not interfere with the healthy functioning of the platform. This document is intended to provide guidance on expectations and best practices in the use of M-Lab.
 
+## Platform SLO
+
+Since the founding of the project in 2008, M-Lab has run on a best-effort
+business-hours-only SLO. M-Lab’s platform services are designed following
+many of the principles described in [Site Reliability Engineering][srebook],
+to be as reliable as possible in the face of individual component failures.
+
+In 2019, the M-Lab NDT measurement service was globally available between 99%
+and 99.9% of the time (i.e. we had only slightly more than 8 hours of
+downtime). But, software and people are still involved, so plan for the
+future accordingly.
+
+[srebook]: https://www.google.com/books/edition/Site_Reliability_Engineering/tYrPCwAAQBAJ?hl=en&gbpv=0
+
+### Using the Platform
+
+You are welcome to utilize the M-Lab platform by integrating an M-Lab
+measurement client into any application you want. We attempt to avoid a
+"tragedy of the commons" by asking that developers follow simple rules to
+ensure that resources are shared equitably and overall platform health is
+maintained.
+
+The team that runs the M-Lab platform currently does so with a best-effort
+business-hours-only SLO. Your integration with M-Lab services should fail
+gracefully when M-Lab is unavailable. Otherwise, your service will inherit
+our SLO.
+
+### Staying in Touch
+
+Whether you use one of our supported clients or develop a custom client of
+your own, you should follow our blog for major announcements. Also, subscribe
+to the discuss@ mailing list. This is helpful to ask questions, learn about
+known issues, or share your work with the M-Lab user community.
+
+### Knowing Your Limits
+
+The M-Lab platform has finite capacity. In order to preserve the expected
+measurement quality for as many clients as possible. So, we recommend [best
+practices][bestpractices] for client scheduling frequency. Beyond certain
+rates, the platform may stop serving an overzealous client’s requests. As a
+"last resort," a target server will always have the option of turning a
+client away when it believes the measurement quality would be degraded (e.g.
+saturated uplink). The Locate v2 API provides several candidate servers as
+fallback options.
+
+[bestpractices]: #best-practices-on-test-scheduling-and-frequency
+
 ## General Requirements
 
 ### Clients are required to provide informed consent about collection of personal information
