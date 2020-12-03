@@ -121,7 +121,7 @@ grid-section:
       - link: "http://www.heanet.ie/"
         image: "heanet.png"
         heading: "HEAnet"
-      - link: "https://www.ilsr.org"
+      - link: ""
         image: "ilsr_logo-1.png"
         heading: "Institute for Local Self-Reliance"
       - link: "https://www.isc.org/"

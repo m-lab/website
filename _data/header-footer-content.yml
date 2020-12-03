@@ -31,6 +31,13 @@ header:
         - text: "Tools"
           url:  "/data/tools/"
     -
+      title: "explore"
+      sub-nav:
+        - text: "Explore M-Lab Data"
+          url:  "/explore/"
+        - text: "TBD"
+          url:  "/visualizations/"
+    -
       title: "tests"
       sub-nav:
         - text: "Internet Measurement Tests"
