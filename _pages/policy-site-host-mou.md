@@ -99,8 +99,8 @@ Organization: **Measurement Lab**
 
 Physical Address:
 
-**1221 SE 34th**
-**Portland, OR 97214**
+**3439 SE HAWTHORNE BLVD, #247**
+**Portland, OR 97214-5048**
 
 Signature:
 
