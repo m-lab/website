@@ -31,12 +31,12 @@ header:
         - text: "Tools"
           url:  "/data/tools/"
     -
-      title: "explore"
+      title: "statistics"
       sub-nav:
-        - text: "Explore M-Lab Data"
-          url:  "/explore/"
-        - text: "TBD"
-          url:  "/visualizations/"
+        - text: "NDT"
+          url:  "/statistics/"
+        - text: "Data Exploration"
+          url:  "/statistics/ndt/explore/"
     -
       title: "tests"
       sub-nav:

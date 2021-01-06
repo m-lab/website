@@ -1,9 +1,9 @@
 ---
 layout: page
-permalink: /visualizations/
-title: "Visualizations"
-page-title: "Visualizations"
-breadcrumb: explore
+permalink: /statistics/ndt/explore/
+title: "NDT Data Exploration"
+page-title: "NDT Data Exploration"
+breadcrumb: statistics
 ---
 
 As of May 2020, M-Lab is upgrading the previous data visualizations that you used to see here. Until that time, we're providing two DataStudio dashboard reports to provide some access to our data for non-technical users. On this page we're embedding these reports, but you can access them directly as well using the links below. You can also read more about the dashboards [here]({{ site.baseurl }}/blog/covid-19-response-dashboards).
