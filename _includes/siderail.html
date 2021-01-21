@@ -17,7 +17,7 @@
   <div class="filter-col-ctn blog-cat-col">
     <h2>Categories</h2>
     <ul class="filter-col">
-    {% assign sorted_cats = (site.categories | sort:0) %}
+    {% assign sorted_cats = site.categories %}
     {% for cat in sorted_cats %}
 
       {% capture same_page %}/blog/category/{{ cat[0] | replace: ' ', '-' }}/{% endcapture %}
