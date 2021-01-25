@@ -103,15 +103,15 @@ curating views of that data to be used for attempting to answer various research
 questions. To aide understanding of this strategy and how to use NDT unified
 views, please see the links below:
 
-* [Why and how of NDT unified views](unified-views-why)
-* [Migrating from previous to current NDT unified views](migrate-queries-unified-views)
-* [Creating Custom Unified Views or Subqueries for your own research](custom-views-subqueries)
-* [Example Queries](example-queries)
+* [Why and How of NDT Unified Views](unified-views-why)
+* [Migrating Queries from Previous to Current NDT Unified Views](migrate-queries-unified-views)
+* [Creating Custom Unified Views or Subqueries for Your Own Research](custom-views-subqueries)
+* [NDT Unified Views Example Queries](example-queries)
 
-[unified-views-why]: 
-[migrate-queries-unified-views]:
-[custom-views-subqueries]:
-[example-queries]:
+[unified-views-why]: {{ site.baseurl }}/tests/ndt/unified-views
+[migrate-queries-unified-views]: {{ site.baseurl }}/tests/ndt/unified-views/migrate
+[custom-views-subqueries]: {{ site.baseurl }}/tests/ndt/unified-views/custom
+[example-queries]: {{ site.baseurl }}/tests/ndt/unified-views/examples
 
 ## Source Code
 
