@@ -1,4 +1,4 @@
-dist: xenial
+dist: focal
 language: ruby
 env:
   global:
@@ -8,9 +8,9 @@ env:
 script:
 - set -e
 - "$TRAVIS_BUILD_DIR/travis/install_gcloud.sh"
-- sudo apt-get install -y python3-pip jupyter-core jupyter-nbconvert
-python3-jupyter-core python3-nbconvert
+- sudo apt-get install -y python3-pip
 - sudo -H python3 -m pip install --upgrade setuptools pip
+- sudo python3 -m pip install jupyter nbconvert
 
 - nvm install $NODE_VERSION
 - npm install -g firebase-tools
