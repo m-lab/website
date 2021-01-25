@@ -6,6 +6,7 @@ date: 2021-01-25
 breadcrumb: blog
 categories:
   - wehe
+  - platform
 ---
 
 The M-Lab team is excited to officially announce the launch of the [Wehe][wehe-test] measurement service on the platform. Working closely with the Wehe research team headed by [David Choffnes][david-choffnes], Associate Professor at Northeastern University, M-Lab launched the new measurement service, which is focused on net neutrality, in late 2020. The French telecom regulator, Arcep, [announced their integration of Wehe][arcep-announce] in December.<!--more-->
