@@ -95,6 +95,24 @@ Data collected by NDT is provided in multiple ways, each suited to specific segm
     * Tests with NULL results excluded
     * Tests from M-Lab Operations and Management infrastructure excluded
 
+## Understanding and Using NDT Unified Views
+
+The presenation of NDT data in the **unified views** described here represents
+M-Lab's strategy for preserving test data as collected and annotated, and
+curating views of that data to be used for attempting to answer various research
+questions. To aide understanding of this strategy and how to use NDT unified
+views, please see the links below:
+
+* [Why and how of NDT unified views](unified-views-why)
+* [Migrating from previous to current NDT unified views](migrate-queries-unified-views)
+* [Creating Custom Unified Views or Subqueries for your own research](custom-views-subqueries)
+* [Example Queries](example-queries)
+
+[unified-views-why]: 
+[migrate-queries-unified-views]:
+[custom-views-subqueries]:
+[example-queries]:
+
 ## Source Code
 
 **NDT Server**
