@@ -103,15 +103,15 @@ curating views of that data to be used for attempting to answer various research
 questions. To aide understanding of this strategy and how to use NDT unified
 views, please see the links below:
 
-* [Why and How of NDT Unified Views](unified-views-why)
-* [Migrating Queries from Previous to Current NDT Unified Views](migrate-queries-unified-views)
-* [Creating Custom Unified Views or Subqueries for Your Own Research](custom-views-subqueries)
-* [NDT Unified Views Example Queries](example-queries)
+* [How NDT Views Are Derived and Published][ndt-views]
+* [Migrating Queries from Previous to Current NDT Unified Views][migrate-queries-unified-views]
+* [Creating Custom Unified Views or Subqueries for Your Own Research][custom-views-subqueries]
+* [NDT Unified Views Example Queries][example-queries]
 
-[unified-views-why]: {{ site.baseurl }}/tests/ndt/unified-views
-[migrate-queries-unified-views]: {{ site.baseurl }}/tests/ndt/unified-views/migrate
-[custom-views-subqueries]: {{ site.baseurl }}/tests/ndt/unified-views/custom
-[example-queries]: {{ site.baseurl }}/tests/ndt/unified-views/examples
+[ndt-views]: {{ site.baseurl }}/tests/ndt/views
+[migrate-queries-unified-views]: {{ site.baseurl }}/tests/ndt/views/migrate
+[custom-views-subqueries]: {{ site.baseurl }}/tests/ndt/views/custom
+[example-queries]: {{ site.baseurl }}/tests/ndt/views/examples
 
 ## Source Code
 
@@ -136,11 +136,6 @@ or, in [BibTeX](https://en.wikipedia.org/wiki/BibTeX){:target="_blank"} format:
         title="The {M}-{L}ab {NDT} Data Set",
         year="(2009-02-11 -- 2015-12-21)",
         howpublished="\url{https://measurementlab.net/tests/ndt}",
-
-        comment="Depending on if you used viz.measurementlab.net, bigquery, or the raw data, please use one of the following notes:",
-        note="Bigquery table {\tt measurement-lab.ndt.download}",
-        note1="Google cloud storage {\tt gs://archive-measurement-lab/ndt}",
-        note2="Data visualization system \url{https://viz.measurementlab.net}",
 }
 ```
 

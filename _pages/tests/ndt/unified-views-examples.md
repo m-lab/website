@@ -1,7 +1,8 @@
 ---
 layout: page
-permalink: /tests/ndt/unified-views/examples/
+permalink: /tests/ndt/views/examples/
 title: "NDT Unified Views Example Queries"
 breadcrumb: tests
 ---
 
+# NDT Unified Views Example Queries
