@@ -13,10 +13,9 @@ categories:
 M-Lab was pleased to be invited to contribute to the Internet Measurements
 workshop at the [2019 African Internet Summit][ais2019], June 15-16, 2019 in Kampala,
 Uganda. M-Lab tech lead, Peter Boothe, and advisor, Georgia Bullen, presented a
-hands-on tutorial on querying and visualiing performance and routing datasets.<!--more-->
+hands-on tutorial on querying and visualizing performance and routing datasets.<!--more-->
 
 [ais2019]: https://www.internetsociety.org/events/africa-internet-summit/2019/
-![AIS 2019 workshop photo 1]({{ site.baseurl }}/images/blog/2019-07-01-ais/ais-1.png)
 
 The two-day workshop featured presentations and hands-on sessions from several
 other Internet measurement initiatives and researchers, including M-Lab:
@@ -43,8 +42,6 @@ Aalto University School of Electrical Engineering
 [dns-memory]: https://bit.ly/2IJlayR
 [mlab]: https://bit.ly/mlab-ais2019
 [dns-hackathon]: https://bit.ly/2Fa0UWg
-
-![AIS 2019 workshop photo 2]({{ site.baseurl }}/images/blog/2019-07-01-ais/ais-2.png)
 
 For M-Lab, the workshop was an opportunity to contribute support and training for
 researchers interested in studying the Internet using a variety of datasets and
