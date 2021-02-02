@@ -10,6 +10,7 @@ breadcrumb: "about"
 ## Active and previous versions
 
 * Current version (this document): [v3] July 14, 2020.
+  * 2020-12-04 : Updated address for Code for Science, LLC.
 * Previous versions:
   * [[v1] July 12, 2018]({{ site.baseurl }}/privacy-v1/)
   * [[v2] July 1, 2019]({{ site.baseurl }}/privacy-v2)
@@ -32,7 +33,7 @@ Software clients developed by third parties using open source test(s) provided b
 
 ## Who we are and why we do what we do.
 
-Measurement Lab (further “**M-Lab**”) is a fiscally sponsored project of [Code for Science & Society](https://codeforscience.org){:target="_blank"} (CS&S) operating at 1221 SE 34th Ave., Portland, Oregon 97214.
+Measurement Lab (further “**M-Lab**”) is a fiscally sponsored project of [Code for Science & Society](https://codeforscience.org){:target="_blank"} (CS&S) operating at 3439 SE Hawthorne Blvd. #247, Portland, Oregon 97214-5048.
 
 ### Purpose of the processing of personal data
 
@@ -135,7 +136,7 @@ Your test data is made public under GDPR Art.6.1.f legitimate interest. The data
 
 ### How to exercise your rights under the GDPR
 
-For data processed in the scope of this policy where M-Lab assumes the role of data controller (GDPR Art. 4.7), please write to us at privacy@measurementlab.net or by post at Measurement Lab, 1221 SE 34th, Portland OR 97214; please explain which right you wish to exercise and in which capacity. For instance you may be a website visitor wishing to exercise your right to erasure.
+For data processed in the scope of this policy where M-Lab assumes the role of data controller (GDPR Art. 4.7), please write to us at privacy@measurementlab.net or by post at Measurement Lab, 3439 SE Hawthorne Blvd. #247, Portland, Oregon 97214-5048; please explain which right you wish to exercise and in which capacity. For instance you may be a website visitor wishing to exercise your right to erasure.
 
 ### Right to lodge a complaint
 
