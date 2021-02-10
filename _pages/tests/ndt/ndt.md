@@ -69,39 +69,34 @@ Note that we sometimes use the terms "table" and "view" interchangeably: they
 reflect different internal implementations, but due to billing and access controls
 everything documented here as a table is actually presented as a view.
 
-## Current BigQuery Tables and Views
+## Unified Views
+* A set of views designed to easily support studies of the evolution of the
+  Internet performance by geopolitical regions
+* **Unified Views should be the starting point for most people**.
+* Also called "Helpful Views" in some documentation
+* They present computed performance metrics (e.g. data rate, loss rate,
+  min RTT and more in the future)
+* Use Standardized schema
+* Upload and download are separated because the test details and data
+  processing are different for each direction
+* Assembled from all three ndt data sets (ndt7, ndt5 and web100)
+* They are strict subsets (rows and columns removed) of the union of the
+  Extended Views
+* Curated to only include tests that meet our current, best understanding of
+  correctness:
+  * At least 8 KB of data was transferred (extends below 9.6 kbits/second)
+  * Test duration was between 9 and 60 seconds
+  * Some form of network congestion was detected (i.e. tests with only non-network bottleneck are excluded)
+  * Tests with parser errors and NULL results are excluded
+  * Tests from M-Lab Operations and Management (OAM) infrastructure are excluded
+* In BigQuery, unified views are prepended with `unified_`:
+  * [measurement-lab.ndt.unified_downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table){:target="_blank"}
+  * [measurement-lab.ndt.unified_uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table){:target="_blank"}
+* Unified views with suffixes resembling date codes are to support
+  differential A/B testing across changes to our data processing which might
+  affect downstream research results.
 
-Data collected by NDT is provided in multiple ways, each suited to specific segments of our community.
-
-* **Unified Views**
-  * A set of views designed to easily support studies of the evolution of the
-    Internet performance by geopolitical regions
-  * **Unified Views should be the starting point for most people**.
-  * Also called "Helpful Views" in some documentation
-  * They present computed performance metrics (e.g. data rate, loss rate,
-    min RTT and more in the future)
-  * Use Standardized schema
-  * Upload and download are separated because the test details and data
-    processing are different for each direction
-  * Assembled from all three ndt data sets (ndt7, ndt5 and web100)
-  * They are strict subsets (rows and columns removed) of the union of the
-    Extended Views
-  * Curated to only include tests that meet our current, best understanding of
-    correctness:
-    * At least 8 KB of data was transferred (extends below 9.6 kbits/second)
-    * Test duration was between 9 and 60 seconds
-    * Some form of network congestion was detected (i.e. tests with only non-network bottleneck are excluded)
-    * Tests with parser errors and NULL results are excluded
-    * Tests from M-Lab Operations and Management (OAM) infrastructure are excluded
-  * In BigQuery, unified views are prepended with `unified_`:
-    * [measurement-lab.ndt.unified_downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table){:target="_blank"}
-    * [measurement-lab.ndt.unified_uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table){:target="_blank"}
-  * Unified views with suffixes resembling date codes are to support
-    differential A/B testing to facilitate understanding how our processing
-    changes (especially changes to row filtering criteria) might affect downstream research
-    results.
-
-* **Extended Views**
+## Extended Views
   * Maximal: every row from the raw tables with added columns describing everything that we know about the data
   * No filters have been applied but every row is labeled with the selection criteria used by the unified views
   * Calculated metrics and other standard columns have been added: data rate, loss rate, minimum RTT, etc
@@ -118,7 +113,7 @@ Data collected by NDT is provided in multiple ways, each suited to specific segm
     * measurement-lab.intermediate_ndt.extended_web100_uploads
   * **The starting point for nearly all alternative analysis of M-Lab data should be private custom unified views built on Extended Views**
   
-* **Raw Tables**
+## Raw Tables
   * The archived raw data parsed and imported into BigQuery
   * **They are provided for pedantic completeness but are no longer recommended for general use**
   * Also called "faithful views" in some documentation
