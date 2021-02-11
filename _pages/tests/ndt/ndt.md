@@ -79,98 +79,114 @@ reflect different internal implementations, but due to billing and access contro
 everything documented here as a table is actually presented as a view.
 
 ## Unified Views
-* A set of views designed to easily support studies of the evolution of the
-  Internet performance by geopolitical regions
-* **Unified Views should be the starting point for most people**.
-* Also called "Helpful Views" in some documentation
-* They present computed performance metrics (e.g. data rate, loss rate,
+A set of views designed to easily support studies of the evolution of the
+Internet performance by geopolitical regions. **Unified Views should be the starting point for most people**
+* Present computed performance metrics (e.g. data rate, loss rate,
   min RTT and more in the future)
-* Use Standardized schema
-* Upload and download are separated because the test details and data
-  processing are different for each direction
-* Assembled from all three ndt data sets (ndt7, ndt5 and web100)
-* They are strict subsets (rows and columns removed) of the union of the
-  Extended Views
-* Curated to only include tests that meet our current, best understanding of
-  correctness:
+* Use standardized schema
+* Also called "Helpful Views" in some documentation
+* Upload and download are separated because the test details and data processing
+  are different for each direction
+* Assembled from all three ndt data types (ndt7, ndt5 and web100)
+* Are strict subsets (some rows and columns removed) of the union of the Extended Views
+* Curated to only include tests that meet our current, best understanding of correctness:
   * At least 8 KB of data was transferred (extends below 9.6 kbits/second)
   * Test duration was between 9 and 60 seconds
-  * Some form of network congestion was detected (i.e. tests with only non-network bottleneck are excluded)
+  * Some form of network congestion was detected (i.e. tests with only
+    non-network bottleneck are excluded)
   * Tests with parser errors and NULL results are excluded
   * Tests from M-Lab Operations and Management (OAM) infrastructure are excluded
+
 * In BigQuery, unified views are prepended with `unified_`:
   * [measurement-lab.ndt.unified_downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table){:target="_blank"}
   * [measurement-lab.ndt.unified_uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table){:target="_blank"}
-* Unified views with suffixes resembling date codes are to support differential A/B testing across processing changes.
-  They give researchers a easy way to detect if our canges have any affect on downstream research results.
+* Unified views with suffixes resembling date codes are to support differential
+  A/B testing across processing changes (i.e. `unified_downloads_20201026x`).
+  They give researchers a easy way to detect if our canges have any affect on
+  downstream research results.
 
-For more background on unified views see [blogposts] @@@@ note that some of the terminology has evolved slightly since the blog posts.
+For more background on unified views and how to use them please see:
+* **Documentation**:
+  * [How NDT Views Are Derived and Published][ndt-views]
+  * [Migrating Queries from Previous to Current NDT Unified Views][migrate-queries-unified-views]
+  * [Creating Custom Unified Views or Subqueries for Your Own Research][custom-views-subqueries]
+  * [NDT Unified Views Example Queries][example-queries]
 
-## Extended Views
-  * Maximal: every row from the raw tables with added columns describing everything that we know about the data
-  * No filters have been applied but every row is labeled with the selection criteria used by the unified views
-  * Calculated metrics and other standard columns have been added: data rate, loss rate, minimum RTT, etc
-  * Joined with geographical annotations
-  * [Future] joined with traceroute and other data sets such as platform load telemetry and Internet health indicators
-  * Schemas are supersets of the unified view schema and raw tables schemas; They differs per tool and raw parser version
-  * Designed to support user implemented Custom Universal Views @@@@ links to instructions and examples
-  * In BigQuery, extended views are in the dataset measurement-lab.intermediate_ndt:  [@@@@ ADD Cloud LINKs and FUTURE ADD SCHEMAS]
-    * measurement-lab.intermediate_ndt.extended_ndt7_downloads
-    * measurement-lab.intermediate_ndt.extended_ndt7_uploads
-    * measurement-lab.intermediate_ndt.extended_ndt5_downloads
-    * measurement-lab.intermediate_ndt.extended_ndt5_uploads
-    * measurement-lab.intermediate_ndt.extended_web100_downloads
-    * measurement-lab.intermediate_ndt.extended_web100_uploads
-  * **The starting point for nearly all alternative analysis of M-Lab data should be private custom unified views built on Extended Views**
-    * Add pointers to Custom Unified View documentation @@@@@
-  
-## Raw Tables
-  * The archived raw data parsed and imported into BigQuery
-  * **They are provided for pedantic completeness but are no longer recommended for general use**
-  * Also called "faithful views" in some documentation
-  * Includes one row for every unique test that can be parsed, even if truncated or partially corrupted
-  * Small number of added columns indicating parse errors and [future] metrics computed directly from the snap logs (web100 or tcp-info)
-  * Currently web100 and ndt5 use the legacy parser
-  * The schemas reflect the original structure of the archived raw data and differ per tool and parser version
-  * They are subject to breaking changes
-  * In BigQuery, Raw tables are provided in datasets prepended with `raw_`.  Tables including `legacy_` in their names were generated by the older parser and are slated to being completely replaced in the future:  @@@@ Add cloud Links
-    * measurement-lab.raw_ndt.ndt7 - [ndt7 description and schema]({{ site.baseurl }}/tests/ndt/ndt7/#ndt7-bigquery-schema)
-    * measurement-lab.raw_ndt.legacy_ndt5 (TODO rename from measurement-lab.ndt.ndt5) [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-schema)
-    * measurement-lab.raw_ndt.legacy_web100 (TODO rename from measurement-lab.ndt.web100) - [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
-    * measurement-lab.raw_ndt.tcpinfo (TODO rename from measurement-lab.ndt.tcpinfo) - [tcp-info description and schema]({{ site.basurl }}/tests/tcp-info)
-    * measurement-lab.raw_ndt.traceroute (coming soon) - [tcp-info description and schema]({{ site.basurl }}/tests/traceroute)
-    * measurement-lab.raw_ndt.annotation (coming soon) - [annotation description and schema]({{ site.basurl }}/tests/annotations)   @@@@ think this through
-  
-## Understanding and Using NDT Unified Views
-
-@@@@ Move various items here up above and nuke this entire section
-
-The presentation of NDT data in the **unified views** described here represents
-M-Lab's strategy for preserving test data as collected and annotated, and
-curating views of that data to be used for attempting to answer various research
-questions. To aide understanding of this strategy and how to use NDT unified
-views, please see the links below:
-
-* [How NDT Views Are Derived and Published][ndt-views]
-* [Migrating Queries from Previous to Current NDT Unified Views][migrate-queries-unified-views]
-* [Creating Custom Unified Views or Subqueries for Your Own Research][custom-views-subqueries]
-* [NDT Unified Views Example Queries][example-queries]
+* **Blog posts**: 
+  * [NDT Unified Views Now Published ]({{ site.baseurl
+    }}/blog/new-ndt-unified-views/)
+  * [Long Term Supported Schemas Using Standardized BigQuery Columns]({{ site.baseurl
+}}/blog/long-term-schema-support-standard-columns/).
+  * Note that some of the terminology has evolved slightly since the blog posts.
 
 [ndt-views]: {{ site.baseurl }}/tests/ndt/views
 [migrate-queries-unified-views]: {{ site.baseurl }}/tests/ndt/views/migrate
 [custom-views-subqueries]: {{ site.baseurl }}/tests/ndt/views/custom
 [example-queries]: {{ site.baseurl }}/tests/ndt/views/examples
 
+## Extended Views
+A set of views that are maximal- providing every row from the raw tables with
+added columns describing everything that we know about the data. **The starting
+point for nearly all alternative analysis of M-Lab data should be private,
+custom unified views built on Extended Views.**
+
+* No filters have been applied but every row is labeled with the selection
+  criteria used by the unified views
+* Calculated metrics and other standard columns have been added: data rate, loss
+  rate, minimum RTT, etc
+* Joined with geographical annotations
+* (**Future**) joined with traceroute and other data sets such as platform load
+  telemetry and Internet health indicators
+* Schemas are supersets of the unified view schema and raw tables schemas; They
+  differs per tool and raw parser version
+* Designed to support user-implemented [Custom Universal Views]({{ site.baseurl }}/tests/ndt/views/custom/)
+* In BigQuery, extended views are in the dataset `measurement-lab.intermediate_ndt`:
+  * [measurement-lab.intermediate_ndt.extended_ndt7_downloads][extended-ndt7-down]
+  * [measurement-lab.intermediate_ndt.extended_ndt7_uploads][extended-ndt7-up]
+  * [measurement-lab.intermediate_ndt.extended_ndt5_downloads][extended-ndt5-down]
+  * [measurement-lab.intermediate_ndt.extended_ndt5_uploads][extended-ndt5-up]
+  * [measurement-lab.intermediate_ndt.extended_web100_downloads][extended-web100-down]
+  * [measurement-lab.intermediate_ndt.extended_web100_uploads][extended-web100-up]
+
+[extended-ndt7-down]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_ndt7_downloads&page=table
+[extended-ndt7-up]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_ndt7_uploads&page=table
+[extended-ndt5-down]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_ndt5_downloads&page=table
+[extended-ndt5-up]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_ndt5_uploads&page=table
+[extended-web100-down]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_web100_downloads&page=table
+[extended-web100-up]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_web100_uploads&page=table
+  
+## Raw Tables
+Raw tables contain archived raw data parsed and imported into BigQuery. **They
+are provided for pedantic completeness but are no longer recommended for general
+use.**
+* Also called "faithful views" in some documentation
+* Includes one row for every unique test that can be parsed, even if truncated
+  or partially corrupted
+* Small number of added columns indicating parse errors and future metrics
+  computed directly from the snap logs (web100 or tcp-info)
+* Currently web100 and ndt5 use the legacy parser
+* The schemas reflect the original structure of the archived raw data and differ
+  per tool and parser version
+* Subject to breaking changes
+* In BigQuery, Raw tables are provided in datasets prepended with `raw_`. Tables
+  including `legacy_` in their names were generated by the older parser and are
+  slated to being completely replaced in the future:
+  * [measurement-lab.raw_ndt.ndt7][raw-ndt7] - [ndt7 description and schema]({{ site.baseurl }}/tests/ndt/ndt7/#ndt7-bigquery-schema)
+  * measurement-lab.raw_ndt.legacy_ndt5 (coming soon) [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-schema)
+  * measurement-lab.raw_ndt.legacy_web100 (coming soon) - [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
+  * measurement-lab.raw_ndt.tcpinfo (coming soon) - [tcp-info description and schema]({{ site.basurl }}/tests/tcp-info)
+  * measurement-lab.raw_ndt.traceroute (coming soon) - [tcp-info description and schema]({{ site.basurl }}/tests/traceroute)
+  * [measurement-lab.raw_ndt.annotation][raw-annotation] (coming soon) - [annotation description
+    and schema]({{ site.basurl }}/tests/annotations)
+    
+[raw-ndt7]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=raw_ndt&t=ndt7&page=table
+[raw-annotation]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=raw_ndt&t=annotation&page=table
+
 ## Source Code
 
-**ETL Pipeline which parser NDT and other data into BigQuery**
-* etl @@@@
-* etl-schema @@@@
-* etl-Gardner (Manages reprocessing archived data) @@@@
-
 **NDT Server**
+* [Current ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
 * [web100 historical ndt](https://github.com/ndt-project/ndt/){:target="_blank"}
-* [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
 
 **NDT Reference Clients**
 * [ndt5-client-go](https://github.com/m-lab/ndt5-client-go){:target="_blank"}
