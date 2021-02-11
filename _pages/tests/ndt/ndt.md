@@ -139,7 +139,7 @@ custom unified views built on Extended Views.**
   telemetry and Internet health indicators
 * Schemas are supersets of the unified view schema and raw tables schemas; They
   differs per tool and raw parser version
-* Designed to support user-implemented [Custom Universal Views]({{ site.baseurl }}/tests/ndt/views/custom/)
+* Designed to support user-implemented [Custom Unified Views]({{ site.baseurl }}/tests/ndt/views/custom/)
 * In BigQuery, extended views are in the dataset `measurement-lab.intermediate_ndt`:
   * [measurement-lab.intermediate_ndt.extended_ndt7_downloads][extended-ndt7-down]
   * [measurement-lab.intermediate_ndt.extended_ndt7_uploads][extended-ndt7-up]
