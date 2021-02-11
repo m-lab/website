@@ -53,11 +53,18 @@ Please review M-Lab’s [Privacy Policy]({{ site.baseurl }}/privacy) to understa
 
 ## Unparsed Raw NDT Data in GCS
 
-All of the raw data and log files from the measurement fleet are archived in their original format and available in in Google Cloud Storage: [https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.   As our parsing and analysis algorithms improve M-Lab periodically reprocesses all of this archived data.
+All of the raw data and log files from the measurement fleet are archived in
+their original format and available in in Google Cloud Storage:
+[https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.
+As our parsing and analysis algorithms improve M-Lab periodically reprocesses
+all of this archived data.
 
-Generally BigQuery rows indicate the locations of the raw data from which they were derived. Dedicated users can reconstruct our analysis and in principle fully replicate our parsers.
-The raw data also includes TCP packet captures (.pcap files) for most NDT tests, however the pcap files are not indexed in BigQuery yet.
-Details on how M-Lab publishes test data in raw form are provided on our [Google Cloud Storage documentation page]({{ site.baseurl }}/data/docs/gcs).
+Generally BigQuery rows indicate the locations of the raw data from which they
+were derived. Dedicated users can reconstruct our analysis and in principle
+fully replicate our parsers.  The raw data also includes TCP packet captures
+(.pcap files) for most NDT tests, however the pcap files are not indexed in
+BigQuery yet.  Details on how M-Lab publishes test data in raw form are provided
+on our [Google Cloud Storage documentation page]({{ site.baseurl }}/data/docs/gcs).
 
 ## NDT Data in BigQuery
 
@@ -94,9 +101,8 @@ everything documented here as a table is actually presented as a view.
 * In BigQuery, unified views are prepended with `unified_`:
   * [measurement-lab.ndt.unified_downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table){:target="_blank"}
   * [measurement-lab.ndt.unified_uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table){:target="_blank"}
-* Unified views with suffixes resembling date codes are to support
-  differential A/B testing across changes to our data processing which might
-  affect downstream research results.
+* Unified views with suffixes resembling date codes are to support differential A/B testing across processing changes.
+  They give researchers a easy way to detect if our canges have any affect on downstream research results.
 
 For more background on unified views see [blogposts] @@@@ note that some of the terminology has evolved slightly since the blog posts.
 
@@ -116,12 +122,13 @@ For more background on unified views see [blogposts] @@@@ note that some of the 
     * measurement-lab.intermediate_ndt.extended_web100_downloads
     * measurement-lab.intermediate_ndt.extended_web100_uploads
   * **The starting point for nearly all alternative analysis of M-Lab data should be private custom unified views built on Extended Views**
+    * Add pointers to Custom Unified View documentation @@@@@
   
 ## Raw Tables
   * The archived raw data parsed and imported into BigQuery
   * **They are provided for pedantic completeness but are no longer recommended for general use**
   * Also called "faithful views" in some documentation
-  * Includes one row for every test record that can be parsed, even if truncated or partially corrupted
+  * Includes one row for every unique test that can be parsed, even if truncated or partially corrupted
   * Small number of added columns indicating parse errors and [future] metrics computed directly from the snap logs (web100 or tcp-info)
   * Currently web100 and ndt5 use the legacy parser
   * The schemas reflect the original structure of the archived raw data and differ per tool and parser version
@@ -136,7 +143,7 @@ For more background on unified views see [blogposts] @@@@ note that some of the 
   
 ## Understanding and Using NDT Unified Views
 
-@@@@ Move various items up above and nuke this entire section
+@@@@ Move various items here up above and nuke this entire section
 
 The presentation of NDT data in the **unified views** described here represents
 M-Lab's strategy for preserving test data as collected and annotated, and
