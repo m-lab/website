@@ -24,3 +24,4 @@ ENV LC_ALL=en_US.UTF-8
 
 # Include all dependencies needed by travis.
 RUN npm install -g firebase-tools
+RUN _tests/travis-checks --quick
