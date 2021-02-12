@@ -103,7 +103,9 @@ CustomUnifiedView AS (
 		WHERE _internal202010.web100_log_entry.snap.SndWindScale <= 14 
 		)
 	WHERE filter.IsValidBest 
-),
+)
+# The remaining part of this query is one example of a research query using the above custom "unified view" as expressed in a sub-query.
+
 SELECT 
 	EXTRACT(year FROM date) AS year,
 	WScale,

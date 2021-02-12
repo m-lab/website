@@ -107,7 +107,6 @@ Internet performance by geopolitical regions. **Unified Views should be the star
 
 For more background on unified views and how to use them please see:
 * **Documentation**:
-  * [How NDT Views Are Derived and Published][ndt-views]
   * [Migrating Queries from Previous to Current NDT Unified Views][migrate-queries-unified-views]
   * [Creating Custom Unified Views or Subqueries for Your Own Research][custom-views-subqueries]
   * [NDT Unified Views Example Queries][example-queries]
@@ -119,7 +118,6 @@ For more background on unified views and how to use them please see:
 }}/blog/long-term-schema-support-standard-columns/).
   * Note that some of the terminology has evolved slightly since the blog posts.
 
-[ndt-views]: {{ site.baseurl }}/tests/ndt/views
 [migrate-queries-unified-views]: {{ site.baseurl }}/tests/ndt/views/migrate
 [custom-views-subqueries]: {{ site.baseurl }}/tests/ndt/views/custom
 [example-queries]: {{ site.baseurl }}/tests/ndt/views/examples
