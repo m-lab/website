@@ -77,3 +77,7 @@ connection.
 If you have questions, please [let us know][email].
 
 [email]: mailto:support@measurementlab.net
+
+## Update
+
+As of 2021-02-02, access tokens are now required on M-Lab servers for ndt7 measurements.
