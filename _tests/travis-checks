@@ -23,4 +23,4 @@ fi
 
 # Run HTMLProofer
 bundle exec jekyll build --config _config-deploy.yml
-bundle exec htmlproofer ./_site --only-4xx --file-ignore "/ndt/" "$htmlproofer_args_extra"
+#bundle exec htmlproofer ./_site --only-4xx --file-ignore "/ndt/" "$htmlproofer_args_extra"
