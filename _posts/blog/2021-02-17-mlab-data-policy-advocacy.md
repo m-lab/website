@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "Using M-Lab Data in Broadband Advocacy and Policy"
-author: "Lai Yi Ohlsen, Stephen Soltesz"
+author: "Lai Yi Ohlsen, Greg Russell, Stephen Soltesz"
 date: 2021-02-17
 breadcrumb: blog
 categories:
