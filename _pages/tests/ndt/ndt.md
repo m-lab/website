@@ -54,7 +54,7 @@ Please review M-Lab’s [Privacy Policy]({{ site.baseurl }}/privacy) to understa
 ## Unparsed Raw NDT Data in GCS
 
 All of the raw data and log files from the measurement fleet are archived in
-their original format and available in in Google Cloud Storage:
+their original format and available in Google Cloud Storage:
 [https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.
 As our parsing and analysis algorithms improve M-Lab periodically reprocesses
 all of this archived data.
@@ -102,7 +102,7 @@ Internet performance by geopolitical regions. **Unified Views should be the star
   * [measurement-lab.ndt.unified_uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table){:target="_blank"}
 * Unified views with suffixes resembling date codes are to support differential
   A/B testing across processing changes (i.e. `unified_downloads_20201026x`).
-  They give researchers a easy way to detect if our canges have any affect on
+  They give researchers a easy way to detect if our changes have any affect on
   downstream research results.
 
 For more background on unified views and how to use them please see:
@@ -154,9 +154,13 @@ custom unified views built on Extended Views.**
 [extended-web100-up]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_web100_uploads&page=table
   
 ## Raw Tables
-Raw tables contain archived raw data parsed and imported into BigQuery. **They
-are provided for pedantic completeness but are no longer recommended for general
-use.**
+Raw tables contain archived raw data parsed and imported into BigQuery. They are
+provided for transparency and completeness by demonstrating a one-to-one
+correspondence between rows in BigQuery and files in Google Cloud Storage.
+Because the unified and extended views are designed for common use cases, these
+raw tables are not recommended for general use. However, they could be used to
+validate a low-level bug in the parsing or view logic.
+
 * Also called "faithful views" in some documentation
 * Includes one row for every unique test that can be parsed, even if truncated
   or partially corrupted
