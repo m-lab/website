@@ -6,7 +6,20 @@ page-title: "Visualizations"
 menu-item: true
 ---
 
-As of May 2020, M-Lab is upgrading the previous data visualizations that you used to see here. Until that time, we're providing two DataStudio dashboard reports to provide some access to our data for non-technical users. On this page we're embedding these reports, but you can access them directly as well using the links below. You can also read more about the dashboards [here]({{ site.baseurl }}/blog/covid-19-response-dashboards).
+As we have [outlined on our blog][research-recommend], analyses using NDT data
+should account for things like multimodal distributions, client bias,
+and population drift, and use histogram and logarithmic scales instead of basic statistics.
+
+[research-recommend]: {{ site.baseurl }}/blog/
+
+Developing robust analyses, however, typically **does** begin by examining basic,
+descriptive statistics of a dataset. To support our wide-ranging communities,
+here we provide some basic, descriptive statistics of NDT data, visualized in
+Google DataStudio reports. 
+
+These reports should be considered advisory, meaning that they should be used in
+exploratory analyses only, leading to more robust methods to make your analyses
+suitable for publication.
 
 * [United States](https://datastudio.google.com/s/rzD5rHYkLT4){:target="_blank"}
 * [World](https://datastudio.google.com/s/tA4mKm65BqY){:target="_blank"}
