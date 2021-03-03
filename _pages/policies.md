@@ -11,6 +11,7 @@ Measurement Lab has policies that apply to the general public using our platform
 
 ## General M-Lab Policies
 
+* [M-Lab Community Guidelines]({{ site.baseurl }}/community-guidelines/)
 * [M-Lab Privacy Policy]({{ site.baseurl }}/privacy/)
 * [M-Lab Acceptable Use Policy]({{ site.baseurl }}/aup/)
 * [M-Lab Conceptual & Technical Scope & Related Policies]({{ site.baseurl }}/mlab-scope/)

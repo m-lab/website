@@ -13,7 +13,16 @@ Please follow the steps below to configure free query access. If you have questi
 
 ## Subscribe your Google account to the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"}
 
-Members of this group are whitelisted to use the `measurement-lab` project in the Google Cloud Platform console or Google Cloud SDK so that queries charges are paid for by M-Lab.
+To gain access to M-Lab’s open dataset, you are asked to sign up for the M-Lab discuss mailing list. The M-Lab team uses this mailing list to communicate updates to the project including changes to the data’s format and updates to the platform as well information about upcoming events that M-Lab is hosting or participating in.
+
+The mailing list is also a place for discussion for M-Lab users. We invite our
+community to ask questions, become familiar with each other’s work, and directly
+communicate with our team. To facilitate constructive conversation, we ask all
+participants to adhere to [community guidelines]({{ site.baseurl
+}}/community-guidelines/). If you prefer to communicate with the M-Lab team
+directly, we are available at support@measurementlab.net
+
+Members of this group are give access to use the `measurement-lab` project in the Google Cloud Platform console or Google Cloud SDK so that query charges are paid for by M-Lab.
 
 ## Setup Access to M-Lab Datasets in the Google Cloud Console
 
