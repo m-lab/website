@@ -16,7 +16,7 @@ There are many ways to work with M-Lab, whether as a direct hire, through a fell
 
 ## Contract Opportunities with M-Lab
 
-* None at this time
+* [Javascript Developer contract position(s)]({{ site.baseurl }}/jobs/2021-03/javascript-developer/)
 
 ## Open Opportunities in the M-Lab Community
 
