@@ -10,7 +10,7 @@ Measurement Lab is seeking a Javascript developer for a contract position to com
 
 ## Contract Milestones
 
-### Consolidation of M-Lab websites
+## Consolidation of M-Lab websites
 
 **Background**
 
@@ -74,7 +74,7 @@ Convert existing website to new site
 * Documentation
   * Setting up a new developer environment for building, testing, and publishing
 
-### ndt7-js client
+## ndt7-js client
 
 **Background**
 
