@@ -6,12 +6,7 @@ page-title: "Javascript Developer contract position(s)"
 breadcrumb: "contribute"
 ---
 
-# Javascript Developer contract position(s)*
-
-Measurement Lab is seeking a Javascript developer for a contract position to
-complete the following milestones.
-
-* maybe same person, maybe not
+Measurement Lab is seeking a Javascript developer for a contract position to complete the following milestones.
 
 ## Contract Milestones
 
