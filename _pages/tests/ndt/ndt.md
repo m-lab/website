@@ -95,7 +95,7 @@ everything documented here as a table is actually presented as a view.
   correctness:
   * At least 8 KB of data was transferred (extends below 9.6 kbits/second)
   * Test duration was between 9 and 60 seconds
-  * Some form of network congestion was detected (i.e. tests with only non-network bottleneck are excluded)
+  * For downloads, some form of network congestion was detected (i.e. tests with only non-network bottleneck are excluded) @@@@
   * Tests with parser errors and NULL results are excluded
   * Tests from M-Lab Operations and Management (OAM) infrastructure are excluded
 * In BigQuery, unified views are prepended with `unified_`:
@@ -114,13 +114,13 @@ For more background on unified views see [blogposts] @@@@ note that some of the 
   * [Future] joined with traceroute and other data sets such as platform load telemetry and Internet health indicators
   * Schemas are supersets of the unified view schema and raw tables schemas; They differs per tool and raw parser version
   * Designed to support user implemented Custom Universal Views @@@@ links to instructions and examples
-  * In BigQuery, extended views are in the dataset measurement-lab.intermediate_ndt:  [@@@@ ADD Cloud LINKs and FUTURE ADD SCHEMAS]
-    * measurement-lab.intermediate_ndt.extended_ndt7_downloads
-    * measurement-lab.intermediate_ndt.extended_ndt7_uploads
-    * measurement-lab.intermediate_ndt.extended_ndt5_downloads
-    * measurement-lab.intermediate_ndt.extended_ndt5_uploads
-    * measurement-lab.intermediate_ndt.extended_web100_downloads
-    * measurement-lab.intermediate_ndt.extended_web100_uploads
+  * In BigQuery, extended views are in the dataset measurement-lab.ndt_intermediate:  [@@@@ ADD Cloud LINKs and FUTURE ADD SCHEMAS]
+    * measurement-lab.ndt_intermediate.extended_ndt7_downloads
+    * measurement-lab.ndt_intermediate.extended_ndt7_uploads
+    * measurement-lab.ndt_intermediate.extended_ndt5_downloads
+    * measurement-lab.ndt_intermediate.extended_ndt5_uploads
+    * measurement-lab.ndt_intermediate.extended_web100_downloads
+    * measurement-lab.ndt_intermediate.extended_web100_uploads
   * **The starting point for nearly all alternative analysis of M-Lab data should be private custom unified views built on Extended Views**
     * Add pointers to Custom Unified View documentation @@@@@
   
