@@ -6,22 +6,19 @@ page-title: "Javascript Developer contract position(s)"
 breadcrumb: "contribute"
 ---
 
-# Javascript Developer contract position(s)*
+<p>
+Measurement Lab is seeking a Javascript developer for a contract position to complete the following milestones.
+</p>
 
-Measurement Lab is seeking a Javascript developer for a contract position to
-complete the following milestones.
+## Contract Milestones:
 
-* maybe same person, maybe not
-
-## Contract Milestones
-
-### Consolidation of M-Lab websites
+## 1. Consolidation of M-Lab websites
 
 **Background**
 
 M-Lab currently has three web properties, each with different development/site generation frameworks, and two different hosting platforms:
 
-| Field name       | Type       | Description    |
+| Website       | Website Dev. Framework       | Hosting    |
 | :----------------|:----------:|:---------------|
 | https://measurementlab.net | Jekyll | Firebase |
 | https://speed.measurementlab.net | Angular | Firebase |
@@ -79,7 +76,7 @@ Convert existing website to new site
 * Documentation
   * Setting up a new developer environment for building, testing, and publishing
 
-### ndt7-js client
+## 2. ndt7-js client
 
 **Background**
 
