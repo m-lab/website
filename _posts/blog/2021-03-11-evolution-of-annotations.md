@@ -1,7 +1,7 @@
 ---
 layout: blog
-title: "Evolution of M-Lab's Data Annotations"
-author: "Chris Ritzo, Stephen Soltesz"
+title: "Evolution of M-Lab's Geographic and Network Annotations"
+author: "Chris Ritzo"
 date: 2021-02-22
 breadcrumb: blog
 categories:
@@ -16,8 +16,9 @@ Columns milestone references the [gardener service][gardener], which maintains a
 reprocesses M-Lab data, as well as the [UUID annotator][uuid-annotator], that
 generates and saves per-connection metadata as annotations to user-conducted
 measurements. This post provides more detailed information about how these
-services have annotated measurements in the past and present, and expands on
-what current work is happening now as mentioned in our roadmap post.<!--more-->
+services have annotated measurements with geographic and network information in
+the past and present, and expands on what current work is happening now as
+mentioned in our roadmap post.<!--more-->
 
 [roadmap]: {{ site.baseurl }}/blog/roadmap-update/
 [gardener]: https://github.com/m-lab/etl-gardener
@@ -47,7 +48,7 @@ measurement service, but as an example, the NDT performance test collects:
 * the packet headers collected during the test, used to calculate the
   measurement values
 * the measurement values you see at the end of the test
-* the IP address assigned by your ISP to your router, modem, or other premise device
+* the IP address assigned by ISPs to routers, modems, or other on-premises devices
 
 [tests]: {{ site.baseurl }}/tests/
 
@@ -111,7 +112,7 @@ our archives, our team is working now to migrate the remaining datatypes
 the **annotation-service** to the **uuid-annotator**. One part of this process
 is reconciling or mapping FIPS-10-4 and ISO 3166-2 subdivision codes, and
 adding support in the [gardener service][gardner] to re-annotate correct ISO
-codes in the ISO standard fields in our schemas. Annotations for our servers is
+codes in the ISO standard fields in our schemas. Accurate annotations for our servers are
 also being added as well. For data collected prior to 2020-03, a process of
 exporting synthetic uuid annotations and UUIDs is being designed, so that we can
 preserve the original and the new measurement annotations, and retire the
@@ -123,5 +124,5 @@ annotation-service.
 ## Wrap up
 
 We hope that this post provides more detail on some items in our roadmap that
-the team is currently working on completing this quarter. As always, if you have
+the team is currently working on completing. As always, if you have
 questions please reach out on support@measurementlab.net.
