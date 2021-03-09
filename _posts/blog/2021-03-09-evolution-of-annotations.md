@@ -2,7 +2,7 @@
 layout: blog
 title: "Evolution of M-Lab's Geographic and Network Annotations"
 author: "Chris Ritzo"
-date: 2021-02-22
+date: 2021-03-09
 breadcrumb: blog
 categories:
   - research
