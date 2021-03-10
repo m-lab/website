@@ -37,9 +37,8 @@ When you choose to run one of the tests M-Lab provides, you're first connected
 to one of our available servers nearest to you, through which the measurement is
 conducted. That server collects the measurement, but actually not much else. As
 measurements are collected, the IP address is used to provide _annotations_ that
-provide more context and usefulness to research and analysis.
-
-A big part of what makes NDT data interesting and useful are the annotated
+provide more context and usefulness to research and analysis. For example, a big
+part of what makes NDT data interesting and useful are the annotated
 fields allowing people to explore and aggregate by geography. 
 
 The values each of our [tests][tests] collect varies depending on the
@@ -58,10 +57,8 @@ used by M-Lab servers over our history:
 
 | **Geo Annotations** | Dates in use | **TCP Statistics Source** | Dates in use |
 |:-------------------:|:------------:|:-------------------------:|:------------:|
-| **geo1, annotation-service** | 2009-01 - 2017-08 | web100 | 2009-01 -
-2019-11 |   |
-| **geo2, annotation-service** | 2017-09 - 2020-02 | tcpinfo | 2019-11 -
-present | 
+| **geo1, annotation-service** | 2009-01 - 2017-08 | web100 | 2009-01 - 2019-11 |
+| **geo2, annotation-service** | 2017-09 - 2020-02 | tcpinfo | 2019-11 - present | 
 | **geo2, uuid-annotator**     | 2020-03 - present |  |  |
 
 For Geo annotations, there are three time periods of interest:
@@ -111,10 +108,10 @@ our archives, our team is working now to migrate the remaining datatypes
 (tcpinfo, ndt5, ndt.web100, traceroute1, traceroute2, sidestream) from
 the **annotation-service** to the **uuid-annotator**. One part of this process
 is reconciling or mapping FIPS-10-4 and ISO 3166-2 subdivision codes, and
-adding support in the [gardener service][gardner] to re-annotate correct ISO
-codes in the ISO standard fields in our schemas. Accurate annotations for our servers are
+adding support in the [gardener service][gardener] to re-annotate correct ISO
+codes in the new standard fields in our schemas. Accurate annotations for our servers are
 also being added as well. For data collected prior to 2020-03, a process of
-exporting synthetic uuid annotations and UUIDs is being designed, so that we can
+exporting synthetic uuid annotations and UUIDs is being designed so that we can
 preserve the original and the new measurement annotations, and retire the
 annotation-service.
 
