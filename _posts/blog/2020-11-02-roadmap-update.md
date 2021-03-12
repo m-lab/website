@@ -19,7 +19,7 @@ Following our platform upgrade in November 2019, we then focused on implementing
 [ndt-unified-views]: {{ site.baseurl }}/blog/new-ndt-unified-views/
 [helpful-views]: {{ site.baseurl }}/tests/ndt/#helpful-views
 [lts-support]: {{ site.baseurl }}/blog/long-term-schema-support-standard-columns/
-[announce-changes][https://groups.google.com/a/measurementlab.net/g/discuss]
+[announce-changes]: https://groups.google.com/a/measurementlab.net/g/discuss
 
 ### Datatype migration to universal gardener / standard columns
 
