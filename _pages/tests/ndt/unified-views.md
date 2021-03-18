@@ -6,6 +6,7 @@ breadcrumb: tests
 ---
 
 # How NDT Views Are Derived and Published
+## @@@@ remove this page?  Alternatively move the lower half of ndt.md to here.
 
 * Mostly drawn from blog post with some slight language changes.
 * Change “useful” to curated (short form) and/or unified and calibrated longitudinal views of our entire dataset (long form)
