@@ -7,7 +7,7 @@ breadcrumb: tests
 
 # Creating Custom Unified Views or Subqueries for Your Own Research
 
-[NDT Unified Views]() and the [statistics pipeline]() are optimized to provide
+[NDT Unified Views]({{ site.baseurl }}/tests/ndt/#unified-views) and the [statistics pipeline](https://github.com/m-lab/stats-pipeline/#statistics-pipeline-service) are optimized to provide
 researchers curated data to optimally support studies of the
 evolution of Internet performance organized by geopolitical boundaries.
 
@@ -16,18 +16,16 @@ alternative research questions.
 
 ## Structure of the NDT Unified Views
 
-Unified views are are built on **extended views**, [@@@@ link?] which are a
+Unified views are are built on **[extended views]({{ site.baseurl }}/tests/ndt/#extended-views)**, which are a
 maximal presentations of all M-Lab raw data: every measurement (raw row) is
 annotated with everything we know about the data, including filter flags, Geo
 labels, etc.
 
 The Unified Views are a `UNION` of selected fields from all three NDT data types,
 with a filter applied to only present completed, valid test results [according to
-our current, best understanding]({{ site.baseurl }}/tests/ndt/#helpful-views).   @@@@ This link should change (remove "helpful" from un-dated content)
-
+our current, best understanding]({{ site.baseurl }}/tests/ndt/#unified-views).
 Unified views can be customized to provide different data by simply replacing the last
 processing step with different filters.
-
 
 **Processing Steps in the Production of NDT Unified Views:**
 
@@ -38,7 +36,7 @@ The very last steps of the Measurement Lab data pipeline are as follows:
 2. Union across data sets (columns must have exactly matching types)
 3. Filter rows using filter flags that were computed in some earlier step
 
-If you open the NDT Unified Download View in the BigQuery console  [`measurement-lab.ndt.unified_downloads`](https://console.cloud.google.com/bigquery?project=measurement-lab&authuser=0&p=measurement-lab&d=ndt&t=unified_downloads&page=table) and 
+If you open the NDT Unified Download View in the BigQuery console  [`measurement-lab.ndt.unified_downloads`](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table) and 
 open the _Details_ tab, and you will see something like this:
 
 ```~sql
@@ -59,7 +57,7 @@ FROM (
 WHERE filter.IsValidBest
 ```
 
-(The Unified Upload View is similar).    @@@@ Link?
+The [Unified Upload View](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table) is similar.
 
 If you have your own GCP project, you can click _copy view_ and edit it there as a view.
 

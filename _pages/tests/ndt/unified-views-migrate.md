@@ -37,11 +37,11 @@ columns approach and NDT unified views remove this issue.
 
 ## NDT Views Reference
 
-We now publish two series of BigQuery Views for NDT data: "Faithful" and
-"Helpful". [As described on the NDT page](ndt-page). The Helpful views are another
-name for the Unified Views. Complete information about [how NDT views are
-derived and published](ndt-views) is also available. **This document will focus on
-migrating queries to use NDT "Helpful Views"**
+We now publish three series of BigQuery Views for NDT data: "Raw", "Extended"
+and "Unified". [As described on the NDT page](ndt-page). In past documentation
+and blog posts, Unified Views may also be referred to as "Helpful views".
+Complete information about [how NDT views are derived and published](ndt-views)
+is also available. **This document will focus on migrating queries to use NDT Unified Views**
 
 [ndt-page]: {{ site.baseurl }}/tests/ndt/#current-bigquery-tablesviews
 [ndt-views]: {{ site.baseurl }}/tests/ndt/views/
@@ -49,7 +49,7 @@ migrating queries to use NDT "Helpful Views"**
 ## NDT Unified Views Schema Crosswalk
 
 Most of our users are interested in NDT tests that meet our team's current, best
-understanding of test completeness and research quality. The NDT unified views
+understanding of test completeness and research quality. The NDT Unified Views
 provide this, and also present a standard set of columns of interest to most
 people. The current NDT unified views are:
 
