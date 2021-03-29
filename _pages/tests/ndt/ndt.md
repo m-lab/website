@@ -54,9 +54,9 @@ Please review M-Lab’s [Privacy Policy]({{ site.baseurl }}/privacy) to understa
 ## Unparsed Raw NDT Data in GCS
 
 All of the raw data and log files from the measurement fleet are archived in
-their original format and available in in Google Cloud Storage:
-[https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.
-As our parsing and analysis algorithms improve M-Lab periodically reprocesses
+their original format and available in Google Cloud Storage:
+https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.
+As our parsing and analysis algorithms improve, M-Lab periodically reprocesses
 all of this archived data.
 
 Generally BigQuery rows indicate the locations of the raw data from which they
@@ -113,6 +113,7 @@ views, please see the links below:
   * For downloads, some form of network congestion was detected (i.e. tests with only non-network bottleneck are excluded)
   * Tests with parser errors and NULL results are excluded
   * Tests from M-Lab Operations and Management (OAM) infrastructure are excluded
+
 * In BigQuery, unified views are prepended with `unified_`:
   * [measurement-lab.ndt.unified_downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table){:target="_blank"}
   * [measurement-lab.ndt.unified_uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table){:target="_blank"}
@@ -173,8 +174,8 @@ of the terminology has evolved slightly since the blog posts.
 ## Source Code
 
 **NDT Server**
+* [Current ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
 * [web100 historical ndt](https://github.com/ndt-project/ndt/){:target="_blank"}
-* [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
 
 **NDT Reference Clients**
 * [ndt5-client-go](https://github.com/m-lab/ndt5-client-go){:target="_blank"}

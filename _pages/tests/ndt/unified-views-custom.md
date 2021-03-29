@@ -69,7 +69,6 @@ To do this copy or cut and paste the SQL from MLab's unified view from the _Deta
 Note that this example includes subexpressions to standardize the encoding of the WScale 
 column and WHERE clauses to eliminate rows with invalid values.
 
-
 ```~sql
 # Tabulating Window Scale by year
 
@@ -81,19 +80,19 @@ CustomUnifiedView AS (
 	SELECT * EXCEPT (filter)
 	FROM (
 
-        -- 2020-03-12 to present
+    -- 2020-03-12 to present
 		SELECT id, date, a, filter, node, client, server,
 		_internal202010.lastsample.TCPInfo.WScale & 0xF AS WScale
 		FROM `measurement-lab.intermediate_ndt.extended_ndt7_downloads`
 	UNION ALL
-    
+
 		-- 2019-07-18 to present
 		SELECT id, date, a, filter, node, client, server,
 		_internal202010.S2C.TCPInfo.WScale & 0xF AS WScale
 		FROM `measurement-lab.intermediate_ndt.extended_ndt5_downloads`
 		WHERE _internal202010.S2C.TCPInfo.WScale IS NOT NULL
 	UNION ALL
-    
+
 		-- 2009-02-18 to 2019-11-20
 		SELECT id, date, a, filter, node, client, server,
 		greatest (_internal202010.web100_log_entry.snap.SndWindScale, 0) AS WScale
@@ -105,6 +104,9 @@ CustomUnifiedView AS (
 ),
 
 # Part 2, a research query that tabulates WScale by year.
+# The remaining part of this query is one example of a research query using the above custom 
+# "unified view" as expressed in a sub-query.
+
 SELECT 
 	EXTRACT(year FROM date) AS year,
 	WScale,
@@ -119,7 +121,7 @@ ORDER BY year, WScale
 
 ## Future-proofing Your Custom Unified Views or Subqueries
 
-All columns outside of the documented standard columns is unified views are subject to future
+All columns outside of the documented standard columns in unified views are subject to future
 changes. If a column name starts with an underscore, we already have plans to
 change it. If the name also contains something that looks like a date code or
 version tag, the column (or structure) is explicitly temporary and likely to be
