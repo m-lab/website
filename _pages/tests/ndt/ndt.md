@@ -15,25 +15,35 @@ If you are interested in running an NDT test, please visit our standalone speed 
 
 ## History
 
-Originally developed at [Internet2](https://github.com/ndt-project/){:target="_blank"}, M-Lab has hosted NDT since our founding in 2009, and helped maintain and develop NDT for most of its history on the M-Lab platform. Over the last decade, there are three primary themes that have driven the evolution of NDT: standard kernel instrumentation, advances in TCP congestion control, and protocols and ports to support more clients. For more information, please see our blog post discussing the [Evolution of NDT]({{ site.baseurl }}/blog/evolution-of-ndt/).
+Originally developed at
+[Internet2](https://github.com/ndt-project/){:target="_blank"}, M-Lab has hosted
+NDT since our founding in 2009, and helped maintain and develop NDT for most of
+its history on the M-Lab platform. Over the last decade, there are three primary
+themes that have driven the evolution of NDT: standard kernel instrumentation,
+advances in TCP congestion control, and protocols and ports to support more
+clients.
+For more information, please see our blog post discussing the
+[Evolution of NDT]({{ site.baseurl }}/blog/evolution-of-ndt/).
 
 ## NDT Testing Protocols
 
 As a part of our transition from the web100 version of NDT server to the new platform, M-Lab has named specific protocol versions for the original server and the new one we are now using.
 
-* [web100]({{ site.baseurl }}/tests/ndt/web100) is the protocol refering to data collected by the current NDT server
-  * Relied on the web100 kernel module for tcp statistics
+* [web100]({{ site.baseurl }}/tests/ndt/web100) is the protocol referring to data collected by the original NDT server
+  * Relied on the web100 kernel module for TCP statistics
   * Collected using the original version of NDT server
   * Used the Reno TCP congestion control algorithm
-  * Retired in November 2019
-* [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is a new NDT protocol designed to be backward compatible with past NDT clients
-  * Relies on tcp-info for tcp statistics
+  * Ran from 2009-02-18 to 2019-11-20.  The evolution to ndt5 was driven by staged server upgrades
+* [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is a new NDT server designed to be backward compatible with past NDT clients
+  * Relies on tcp-info for TCP statistics
   * Collected using M-Lab's re-written ndt-server, which follows the legacy NDT protocol to support existing NDT clients that use it
   * Uses the Cubic TCP congestion control algorithm
-* [ndt7]({{ site.baseurl }}/tests/ndt/ndt7) is a new NDT protocol that uses TCP BBR where available, operates on standard HTTP(S) ports (80, 443), and uses TCP_INFO instrumentation for TCP statistics
-  * Relies on tcp-info for tcp statistics
+  * Started 2019-07-18 and continues to present.   The evolution to ndt7 is driven by client upgrades and is expected to have a very long tail
+* [ndt7]({{ site.baseurl }}/tests/ndt/ndt7) is a new NDT protocol that uses TCP BBR where available, operates on standard HTTP(S) ports (80, 443)
+  * Relies on tcp-info for TCP statistics
   * Collected using M-Lab's re-written ndt-server
   * Uses the BBR TCP congestion control algorithm, falling back to Cubic when BBR is not available in the client operating system
+  * Started 2020-02-18
 
 ## Data Collected by NDT
 
@@ -41,65 +51,142 @@ When you run NDT, the IP address provided by your Internet Service Provider will
 
 Please review M-Lab’s [Privacy Policy]({{ site.baseurl }}/privacy) to understand what data is collected and how data is used before initiating a test.
 
-## NDT Data in Raw Format
+## Unparsed Raw NDT Data in GCS
 
-Data collected by NDT is available in raw format in Google Cloud Storage: [https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.
+All of the raw data and log files from the measurement fleet are archived in
+their original format and available in Google Cloud Storage:
+[https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.
+As our parsing and analysis algorithms improve M-Lab periodically reprocesses
+all of this archived data.
 
-Advanced users may also be interested in obtaining raw M-Lab test data for detailed analyses. For example, TCP packet captures are conducted for each NDT test, and are only available in M-Lab’s raw data archives. Details on how M-Lab publishes test data in raw form is provided on our [Google Cloud Storage documentation page]({{ site.baseurl }}/data/docs/gcs).
+Generally BigQuery rows indicate the locations of the raw data from which they
+were derived. Dedicated users can reconstruct our analysis and in principle
+fully replicate our parsers.  The raw data also includes TCP packet captures
+(.pcap files) for most NDT tests, however the pcap files are not indexed in
+BigQuery yet.  Details on how M-Lab publishes test data in raw form are provided
+on our [Google Cloud Storage documentation page]({{ site.baseurl }}/data/docs/gcs).
 
 ## NDT Data in BigQuery
 
-To make NDT data more readily available for research and analysis, M-Lab parses all NDT data into BigQuery tables and views, and makes query access available for free by subscription to a Google Group. Find out more about how to get access on our [BigQuery QuickStart page]({{ site.baseurl }}/data/bq/quickstart/).
+To make NDT data more readily available for research and analysis, M-Lab parses
+all NDT data into BigQuery tables and views, and makes query access available
+for free by subscription to a Google Group. Find out more about how to get
+access on
+our [BigQuery QuickStart page]({{ site.baseurl }}/data/bq/quickstart/).
 
-## Current BigQuery Tables/Views
+Note that we sometimes use the terms "table" and "view" interchangeably: they
+reflect different internal implementations, but due to billing and access controls
+everything documented here as a table is actually presented as a view.
 
-Data collected by NDT is provided in multiple ways, each suited to specific segments of our community.
+## Unified Views
+A set of views designed to easily support studies of the evolution of the
+Internet performance by geopolitical regions. **Unified Views should be the starting point for most people**
+* Present computed performance metrics (e.g. data rate, loss rate,
+  min RTT and more in the future)
+* Use standardized schema
+* Also called "Helpful Views" in some documentation
+* Upload and download are separated because the test details and data processing
+  are different for each direction
+* Assembled from all three ndt data types (ndt7, ndt5 and web100)
+* Are strict subsets (some rows and columns removed) of the union of the Extended Views
+* Curated to only include tests that meet our current, best understanding of correctness:
+  * At least 8 KB of data was transferred (extends below 9.6 kbits/second)
+  * Test duration was between 9 and 60 seconds
+  * Some form of network congestion was detected (i.e. tests with only
+    non-network bottleneck are excluded)
+  * Tests with parser errors and NULL results are excluded
+  * Tests from M-Lab Operations and Management (OAM) infrastructure are excluded
 
-* **Faithful Views**
-  * The base tables/views for each NDT data type, providing direct access to the unfiltered NDT data and the TCP INFO and Traceroute data associated with NDT tests.
-  * In BigQuery, Faithful Views are provided in datasets prepended with `raw_`
-  * **Faithful views will be of interest mostly to researchers interested in all testing conditions and results**.
+* In BigQuery, unified views are prepended with `unified_`:
+  * [measurement-lab.ndt.unified_downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table){:target="_blank"}
+  * [measurement-lab.ndt.unified_uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table){:target="_blank"}
+* Unified views with suffixes resembling date codes are to support differential
+  A/B testing across processing changes (i.e. `unified_downloads_20201026x`).
+  They give researchers a easy way to detect if our changes have any affect on
+  downstream research results.
 
-* **Helpful Views**
-  * A set of tables/views derived from "Faithful Views" that are pre-filtered to only provide the most commonly used fields, and which only show tests that meet our current, best understanding of test completeness and research quality. More details on what constitutes "research quality" is listed below in the Helpful Views section.
-  * In BigQuery, Helpful Views are provided in datasets labelled for each experiment (see the next sections of this document).
-  * **Helpful views should be the starting point for most people**.
+For more background on unified views and how to use them please see:
+* **Documentation**:
+  * [Migrating Queries from Previous to Current NDT Unified Views][migrate-queries-unified-views]
+  * [Creating Custom Unified Views or Subqueries for Your Own Research][custom-views-subqueries]
+  * [NDT Unified Views Example Queries][example-queries]
 
-### Faithful Views
+* **Blog posts**: 
+  * [NDT Unified Views Now Published ]({{ site.baseurl
+    }}/blog/new-ndt-unified-views/)
+  * [Long Term Supported Schemas Using Standardized BigQuery Columns]({{ site.baseurl
+}}/blog/long-term-schema-support-standard-columns/).
+  * Note that some of the terminology has evolved slightly since the blog posts.
 
-* measurement-lab.raw_ndt.ndt5 (coming soon)
-  * Contains NDT data collected using the [ndt5 protocol]({{ site.basurl }}/tests/ndt/ndt5) on or after 2019-07-19, using tcp-info for all TCP metrics.
-  * [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-schema)
-* measurement-lab.raw_ndt.ndt7 (coming soon)
-  * Contains NDT data collected using the [ndt7 protocol]({{ site.basurl }}/tests/ndt/ndt5) using tcp-info for all TCP metrics.
-  * [ndt7 description and schema]({{ site.baseurl }}/tests/ndt/ndt7/#ndt7-bigquery-schema)
-* measurement-lab.raw_ndt.tcpinfo (coming soon)
-  * Contains tcp-info data associated with all NDT measurements.
-  * General [tcp-info description and schema]({{ site.basurl }}/tests/tcp-info)
-* measurement-lab.raw_ndt.traceroute (coming soon)
-  * Contains traceroute data associated with all NDT measurements.
-  * General [tcp-info description and schema]({{ site.basurl }}/tests/traceroute)
-* measurement-lab.raw_ndt.web100 (future)
-  * Contains historical NDT data collected using the [web100 protocol]({{ site.baseurl }}/tests/ndt/web100), using the web100 Linux kernel patch for all TCP metrics.
-  * [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
+[migrate-queries-unified-views]: {{ site.baseurl }}/tests/ndt/views/migrate
+[custom-views-subqueries]: {{ site.baseurl }}/tests/ndt/views/custom
+[example-queries]: {{ site.baseurl }}/tests/ndt/views/examples
 
-### Helpful Views
+## Extended Views
+A set of views that are maximal- providing every row from the raw tables with
+added columns describing everything that we know about the data. **The starting
+point for nearly all alternative analysis of M-Lab data should be private,
+custom unified views built on Extended Views.**
 
-* [measurement-lab.ndt.unified_downloads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table){:target="_blank"}
-* [measurement-lab.ndt.unified_uploads](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table){:target="_blank"}
-  * The _unified_downloads_ and _unified_uploads_ views provide our current best understanding of all NDT download and upload data across the entire platform over all time.
-  * These views filter all tests present in the "Faithful" views to only tests that meet a standard of research quality as defined by our team:
-    * At least 8 KB of data was transferred
-    * Test duration was between 9 and 60 seconds
-    * Congestion was detected
-    * Tests with NULL results excluded
-    * Tests from M-Lab Operations and Management infrastructure excluded
+* No filters have been applied but every row is labeled with the selection
+  criteria used by the unified views
+* Calculated metrics and other standard columns have been added: data rate, loss
+  rate, minimum RTT, etc
+* Joined with geographical annotations
+* (**Future**) joined with traceroute and other data sets such as platform load
+  telemetry and Internet health indicators
+* Schemas are supersets of the unified view schema and raw tables schemas; They
+  differs per tool and raw parser version
+* Designed to support user-implemented [Custom Unified Views]({{ site.baseurl }}/tests/ndt/views/custom/)
+* In BigQuery, extended views are in the dataset `measurement-lab.intermediate_ndt`:
+  * [measurement-lab.intermediate_ndt.extended_ndt7_downloads][extended-ndt7-down]
+  * [measurement-lab.intermediate_ndt.extended_ndt7_uploads][extended-ndt7-up]
+  * [measurement-lab.intermediate_ndt.extended_ndt5_downloads][extended-ndt5-down]
+  * [measurement-lab.intermediate_ndt.extended_ndt5_uploads][extended-ndt5-up]
+  * [measurement-lab.intermediate_ndt.extended_web100_downloads][extended-web100-down]
+  * [measurement-lab.intermediate_ndt.extended_web100_uploads][extended-web100-up]
+
+[extended-ndt7-down]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_ndt7_downloads&page=table
+[extended-ndt7-up]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_ndt7_uploads&page=table
+[extended-ndt5-down]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_ndt5_downloads&page=table
+[extended-ndt5-up]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_ndt5_uploads&page=table
+[extended-web100-down]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_web100_downloads&page=table
+[extended-web100-up]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=intermediate_ndt&t=extended_web100_uploads&page=table
+  
+## Raw Tables
+Raw tables contain archived raw data parsed and imported into BigQuery. They are
+provided for transparency and completeness by demonstrating a one-to-one
+correspondence between rows in BigQuery and files in Google Cloud Storage.
+Because the unified and extended views are designed for common use cases, these
+raw tables are not recommended for general use. However, they could be used to
+validate a low-level bug in the parsing or view logic.
+
+* Also called "faithful views" in some documentation
+* Includes one row for every unique test that can be parsed, even if truncated
+  or partially corrupted
+* Small number of added columns indicating parse errors and future metrics
+  computed directly from the snap logs (web100 or tcp-info)
+* Currently web100 and ndt5 use the legacy parser
+* The schemas reflect the original structure of the archived raw data and differ
+  per tool and parser version
+* Subject to breaking changes
+* In BigQuery, Raw tables are provided in datasets, appended with the string`_raw`. Tables
+  appended with `_legacy` were generated by the older parser and are slated to being completely replaced in the future.
+  * [measurement-lab.ndt_raw.ndt7][raw-ndt7] - [ndt7 description and schema]({{ site.baseurl }}/tests/ndt/ndt7/#ndt7-bigquery-schema)
+  * measurement-lab.ndt_raw.ndt5_legacy - [ndt5 description and schema]({{ site.baseurl }}/tests/ndt/ndt5/#ndt5-bigquery-schema)
+  * measurement-lab.ndt_raw.web100_legacy - [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
+  * measurement-lab.ndt_raw.tcpinfo_legacy - [tcp-info description and schema]({{ site.basurl }}/tests/tcp-info)
+  * measurement-lab.ndt_raw.traceroute_legacy - [tcp-info description and schema]({{ site.basurl }}/tests/traceroute)
+  * [measurement-lab.ndt_raw.annotation][raw-annotation] - [annotation description and schema]({{ site.basurl }}/tests/annotations)
+    
+[raw-ndt7]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=raw_ndt&t=ndt7&page=table
+[raw-annotation]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=raw_ndt&t=annotation&page=table
 
 ## Source Code
 
 **NDT Server**
+* [Current ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
 * [web100 historical ndt](https://github.com/ndt-project/ndt/){:target="_blank"}
-* [ndt-server](https://github.com/m-lab/ndt-server){:target="_blank"}
 
 **NDT Reference Clients**
 * [ndt5-client-go](https://github.com/m-lab/ndt5-client-go){:target="_blank"}
@@ -118,11 +205,6 @@ or, in [BibTeX](https://en.wikipedia.org/wiki/BibTeX){:target="_blank"} format:
         title="The {M}-{L}ab {NDT} Data Set",
         year="(2009-02-11 -- 2015-12-21)",
         howpublished="\url{https://measurementlab.net/tests/ndt}",
-
-        comment="Depending on if you used viz.measurementlab.net, bigquery, or the raw data, please use one of the following notes:",
-        note="Bigquery table {\tt measurement-lab.ndt.download}",
-        note1="Google cloud storage {\tt gs://archive-measurement-lab/ndt}",
-        note2="Data visualization system \url{https://viz.measurementlab.net}",
 }
 ```
 
