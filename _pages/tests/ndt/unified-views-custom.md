@@ -7,18 +7,20 @@ breadcrumb: tests
 
 # Creating Custom Unified Views or Subqueries for Your Own Research
 
-[NDT Unified Views]() and the [statistics pipeline]() provide researchers with
-data optimized for studying the evolution of Internet performance organized by
-geopolitical boundaries. These views pre-filter NDT tests for completeness and
-our current, best understanding of "research quality". 
+[NDT Unified Views]({{ site.baseurl }}/tests/ndt/#current-bigquery-tablesviews)
+and the [statistics
+pipeline](https://github.com/m-lab/stats-pipeline/#statistics-pipeline-service)
+provide researchers with data optimized for studying the evolution of Internet
+performance organized by geopolitical boundaries. These views pre-filter NDT
+tests for completeness and our current, best understanding of "research quality". 
 
 In this document we introduce methodology for researchers to efficiently address
 alternative questions without becoming overly sensitive to changes M-Lab's
 BigQuery presentation of NDT data for more general inquiries.
 
-Custom unified views are built from **extended views**, which are a maximal
+Custom unified views are built from **intermediate views**, which are a maximal
 presentation of all M-Lab raw data: every measurement (raw row) and every
-intermediate column is represented in the extended views. The unified views are
+intermediate column is represented in the intermediate views. The unified views are
 one, carefully curated, set of choices for filtering the data. This document
 describes some techniques that might be used to implement alternate choices.
 
