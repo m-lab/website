@@ -54,8 +54,7 @@ Please review M-Lab’s [Privacy Policy]({{ site.baseurl }}/privacy) to understa
 ## Unparsed Raw NDT Data in GCS
 
 All of the raw data and log files from the measurement fleet are archived in
-their original format and available in Google Cloud Storage:
-https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.
+their original format and available in [Google Cloud Storage](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"}.
 As our parsing and analysis algorithms improve, M-Lab periodically reprocesses
 all of this archived data.
 
@@ -127,9 +126,8 @@ of the terminology has evolved slightly since the blog posts.
 * [Using M-Lab Data in Broadband Advocacy and Policy]({{ site.baseurl }}/blog/mlab-data-policy-advocacy/)
 * [M-Lab Roadmap Update - Q4 2020]({{ site.baseurl }}/blog/roadmap-update/)
 * [Evolution of NDT]({{ site.baseurl }}/blog/evolution-of-ndt/)
-* [Introducing ndt7](v/blog/ndt7-introduction/)
-* [Long Term Supported Schemas Using Standardized BigQuery
-  Columns]({{ site.baseurl }}/blog/long-term-schema-support-standard-columns/)
+* [Introducing ndt7]({{ site.baseurl }}/blog/ndt7-introduction/)
+* [Long Term Supported Schemas Using Standardized BigQuery Columns]({{ site.baseurl }}/blog/long-term-schema-support-standard-columns/)
 * [NDT Unified Views Now Published]({{ site.baseurl }}/blog/new-ndt-unified-views/)
 
 ## Extended Views
@@ -139,7 +137,8 @@ of the terminology has evolved slightly since the blog posts.
   * Joined with geographical annotations
   * [Future] joined with traceroute and other data sets such as platform load telemetry and Internet health indicators
   * Schemas are supersets of the unified view schema and raw tables schemas; They differs per tool and raw parser version
-  * Designed to support user implemented Custom Universal Views @@@@ links to instructions and examples
+  * Designed to support user implemented [Custom Universal Views]({{
+    site.baseurl }}/tests/ndt/views/custom/)
   * In BigQuery, extended views are in the dataset measurement-lab.ndt_intermediate:
     * measurement-lab.ndt_intermediate.extended_ndt7_downloads
     * measurement-lab.ndt_intermediate.extended_ndt7_uploads
@@ -169,7 +168,8 @@ of the terminology has evolved slightly since the blog posts.
     * measurement-lab.ndt_raw.legacy_web100 - [web100 description and schema]({{ site.baseurl }}/tests/ndt/web100/)
     * measurement-lab.ndt_raw.tcpinfo - [tcp-info description and schema]({{ site.basurl }}/tests/tcp-info)
     * measurement-lab.ndt_raw.traceroute - [traceroute description and schema]({{ site.basurl }}/tests/traceroute)
-    * measurement-lab.ndt_raw.annotation - [annotation description and schema]({{ site.basurl }}/tests/annotations)
+    * measurement-lab.ndt_raw.annotation - annotation description and schema
+      (coming soon)
 
 ## Source Code
 

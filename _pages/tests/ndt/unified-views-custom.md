@@ -86,7 +86,7 @@ CustomUnifiedView AS (
 		FROM `measurement-lab.intermediate_ndt.extended_ndt7_downloads`
 	UNION ALL
 
-		-- 2019-07-18 to present
+	-- 2019-07-18 to present
 		SELECT id, date, a, filter, node, client, server,
 		_internal202010.S2C.TCPInfo.WScale & 0xF AS WScale
 		FROM `measurement-lab.intermediate_ndt.extended_ndt5_downloads`
@@ -117,7 +117,7 @@ GROUP BY year, WScale
 ORDER BY year, WScale
 ```
 
-![Graph displaying WSCALE by year]({{ site.baseurl }}/images/tests/custom-unified-views-wscale-year.png)
+![Graph displaying WSCALE by year]({{ site.baseurl }}/images/tests/custom-unified-view-wscale-year.png)
 
 ## Future-proofing Your Custom Unified Views or Subqueries
 
