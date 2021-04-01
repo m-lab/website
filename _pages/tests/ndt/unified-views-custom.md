@@ -79,8 +79,7 @@ WITH
 CustomUnifiedView AS (
 	SELECT * EXCEPT (filter)
 	FROM (
-
-    -- 2020-03-12 to present
+	-- 2020-03-12 to present
 		SELECT id, date, a, filter, node, client, server,
 		_internal202010.lastsample.TCPInfo.WScale & 0xF AS WScale
 		FROM `measurement-lab.intermediate_ndt.extended_ndt7_downloads`
@@ -93,7 +92,7 @@ CustomUnifiedView AS (
 		WHERE _internal202010.S2C.TCPInfo.WScale IS NOT NULL
 	UNION ALL
 
-		-- 2009-02-18 to 2019-11-20
+	-- 2009-02-18 to 2019-11-20
 		SELECT id, date, a, filter, node, client, server,
 		greatest (_internal202010.web100_log_entry.snap.SndWindScale, 0) AS WScale
 		FROM `measurement-lab.intermediate_ndt.extended_web100_downloads`
