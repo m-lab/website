@@ -37,19 +37,27 @@ columns approach and NDT unified views remove this issue.
 
 ## NDT Views Reference
 
-We now publish two series of BigQuery Views for NDT data: "Faithful" and
-"Helpful". [As described on the NDT page](ndt-page). The Helpful views are another
-name for the Unified Views. Complete information about [how NDT views are
-derived and published](ndt-views) is also available. **This document will focus on
-migrating queries to use NDT "Helpful Views"**
+We now publish three series of Datasets in BigQuery containing Views for NDT
+data. These datasets and views mirror the processing stages of our ETL pipeline: 
 
-[ndt-page]: {{ site.baseurl }}/tests/ndt/#current-bigquery-tablesviews
-[ndt-views]: {{ site.baseurl }}/tests/ndt/views/
+<div class="table-responsive" markdown="1">
+
+| Dataset | Description |
+|:--------|:------------|
+| `measurement-lab.ndt.*` | [Unified Views](#unified-views) in the `ndt` dataset present a **stable, long term supported unified schema for all ndt datatypes** (web100, ndt5, ndt7), and filter to only provide tests meeting our team's current understanding of completeness & research quality as well as removing rows resulting from M-Lab's operations and monitoring systems. |
+| `measurement-lab.ndt_intermediate.*` | [Extended Views](#extended-views) in the `ndt_intermediate` dataset join raw measurements with annotations, and remap column names across all ndt datatypes (web100, ndt5, ndt7) to provide a common schema for use in the Unified Views. **M-Lab does not guarantee long term supported schemas for Views in the ndt_intermediate dataset.** Researchers using these views should be aware that breaking schema changes in future releases may affect your queries. |
+| `measurement-lab.ndt_raw.*` | [Raw Views](#raw-views) in the `ndt_raw` dataset provide a 1-to-1 mapping of tests contained in GCS archives to test rows. |
+</div>
+
+In past documentation and blog posts, Unified Views may also be referred to as
+"Helpful views".
+
+<span style="color:black;">**This document will focus on migrating queries to use NDT Unified Views**</span>
 
 ## NDT Unified Views Schema Crosswalk
 
 Most of our users are interested in NDT tests that meet our team's current, best
-understanding of test completeness and research quality. The NDT unified views
+understanding of test completeness and research quality. The NDT Unified Views
 provide this, and also present a standard set of columns of interest to most
 people. The current NDT unified views are:
 
@@ -65,17 +73,18 @@ the schemas for each NDT protocol (see links above), or email support@measuremen
 
 First, you'll need to update the tables/views in your queries. Below we list of
 previously published tables and views, and which tables/views you should use
-instead. If two tables are listed in the right column, this indicates that the original table included both upload and download tests.
+instead. If two tables are listed in the right column, this indicates that the
+original table included both upload and download tests.
 
 <div class="table-responsive" markdown="1">
 
 | Previously Published Tables/Views | Recommended Replacement |
 | :---------------------------------|:------------------------|
-| `measurement-lab.ndt.recommended` | `measurement-lab.ndt.unified_downloads`, `measurement-lab.ndt.unified_uploads`|
+| `measurement-lab.ndt.recommended` | `measurement-lab.ndt.unified_downloads`, <br>`measurement-lab.ndt.unified_uploads`|
 | `measurement-lab.ndt.downloads` | `measurement-lab.ndt.unified_downloads` |
 | `measurement-lab.ndt.uploads` | `measurement-lab.ndt.unified_uploads`|
-| `measurement-lab.release.ndt_all`| `measurement-lab.ndt.unified_downloads`, `measurement-lab.ndt.unified_uploads` |
-| `measurement-lab.release.ndt_all`| `measurement-lab.ndt.unified_downloads`, `measurement-lab.ndt.unified_uploads` |
+| `measurement-lab.release.ndt_all`| `measurement-lab.ndt.unified_downloads`, <br>`measurement-lab.ndt.unified_uploads` |
+| `measurement-lab.release.ndt_all`| `measurement-lab.ndt.unified_downloads`, <br>`measurement-lab.ndt.unified_uploads` |
 | `measurement-lab.release.ndt_downloads`| `measurement-lab.ndt.unified_downloads` |
 | `measurement-lab.release.ndt_uploads`| `measurement-lab.ndt.unified_uploads` |
 | `measurement-lab.release.ndt_downloads_legacysql`| `measurement-lab.ndt.unified_downloads` |
@@ -85,24 +94,23 @@ instead. If two tables are listed in the right column, this indicates that the o
 
 ### Updating Desired Metrics in Queries
 
-A goal of the NDT Unified Views is to present the most commonly needed test
+One goal of the NDT Unified Views is to present the most commonly needed test
 metrics and metadata in the first part of the views' schemas. For quick
 reference, those fields are listed below.
 
 <div class="table-responsive" markdown="1">
 
+| Field Name | Description |
+|:-----------|:------------|
 | id | The Universally Unique Identifier assigned to this test |
 | date | The date this test was run in UTC |
 | a. UUID | The Universally Unique Identifier assigned to this test |
 | a. TestTime  | The date and time this test was conducted in UTC |
-| a. CongestionControl | The TCP congestion control algorithm used during this
-measurement. One of: reno, cubic, bbr |
-| a. MeanThroughputMbps | The download or upload throughput measured in Megabits
-per second |
+| a. CongestionControl | The TCP congestion control algorithm used during this measurement. One of: reno, cubic,bbr |
+| a. MeanThroughputMbps | The download or upload throughput measured in Megabits per second |
 | a. MinRTT | The Minimum Round Trip Time in milliseconds |
 | a. LossRate | The packet loss rate in milliseconds |
-| node. _Instruments  | Indicates the server-side instrumentation that provided
-measurements for this test. One of: web100, tcpinfo, ndt7 |
+| node. _Instruments  | Indicates the server-side instrumentation that provided measurements for this test. One of: web100, tcpinfo, ndt7 |
 
 </div>
 
@@ -117,7 +125,6 @@ web100_log_entry.snap.SndLimTimeCwnd +
 web100_log_entry.snap.SndLimTimeSnd)
 ```
 <br>
-
 The new NDT Unified Views provide upload and download throughput as a single
 field: `a.MeanThroughputMbps`. It is labelled "Mean" because it is the average
 of each TCP snapshot that occurs during every NDT test. If you need upload
@@ -127,7 +134,7 @@ throughput, select `a.MeanThroughputMbps` from
 
 If your research requires access to additional metrics not present in the NDT
 Unified Views, please review [Obtaining Additional Metrics from Intermediate or
-Raw Tables & Views]({{ site.baseurl }}/tests/ndt/unified-views/migrate#obtaining-additional-metrics-from-intermediate-or-raw-tables-and-views),
+Raw Tables & Views]({{ site.baseurl }}/tests/ndt/views/migrate#obtaining-additional-metrics-from-intermediate-or-raw-tables-and-views),
 
 ### Name Changes to Annotated Fields
 
