@@ -47,6 +47,7 @@ data. These datasets and views mirror the processing stages of our ETL pipeline:
 | `measurement-lab.ndt.*` | [Unified Views](#unified-views) in the `ndt` dataset present a **stable, long term supported unified schema for all ndt datatypes** (web100, ndt5, ndt7), and filter to only provide tests meeting our team's current understanding of completeness & research quality as well as removing rows resulting from M-Lab's operations and monitoring systems. |
 | `measurement-lab.ndt_intermediate.*` | [Extended Views](#extended-views) in the `ndt_intermediate` dataset join raw measurements with annotations, and remap column names across all ndt datatypes (web100, ndt5, ndt7) to provide a common schema for use in the Unified Views. **M-Lab does not guarantee long term supported schemas for Views in the ndt_intermediate dataset.** Researchers using these views should be aware that breaking schema changes in future releases may affect your queries. |
 | `measurement-lab.ndt_raw.*` | [Raw Views](#raw-views) in the `ndt_raw` dataset provide a 1-to-1 mapping of tests contained in GCS archives to test rows. |
+
 </div>
 
 In past documentation and blog posts, Unified Views may also be referred to as
