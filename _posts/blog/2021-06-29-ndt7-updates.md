@@ -23,7 +23,7 @@ comment on the relevant Github issues.<!--more-->
   the WebSocket connection. After 15 seconds (5 seconds after the upload test ended) the server forcefully terminates the connection, causing a broken pipe. 
 * **Fix:** The client now terminates the upload worker after 10s, because after
 NDT sends data for 10s, there is no need to send the remaining data in the buffer. 
-* **PR:** https://github.com/m-lab/ndt7-js/pull/18/files
+* **PR:** [https://github.com/m-lab/ndt7-js/pull/18](https://github.com/m-lab/ndt7-js/pull/18)
 * **Status:** Fixed, Deployed to Production 
 * **Notes:** Some users described this bug as blocking migrating from ndt5 to
   ndt7. If you are currently using ndt5, we highly encourage you to migrate to ndt7. 
