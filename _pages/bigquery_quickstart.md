@@ -11,7 +11,7 @@ M-Lab provides query access to our datasets in BigQuery at no charge to interest
 
 Please follow the steps below to configure free query access. If you have questions, please contact us at [support@measurementlab.net](mailto:support@measurementlab.net)
 
-## Subscribe your Google account to the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"}
+## Subscribe your Google account to the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/g/discuss?pli=1){:target="_blank"}
 
 To gain access to M-Lab’s open dataset, you are asked to sign up for the M-Lab discuss mailing list. The M-Lab team uses this mailing list to communicate updates to the project including changes to the data’s format and updates to the platform as well information about upcoming events that M-Lab is hosting or participating in.
 
@@ -44,7 +44,7 @@ You may now query M-Lab datasets from this project at no charge. Note also that 
 
 You may prefer to use the Google Cloud SDK to query M-Lab data. The SDK provides a convenient command line interface for interacting with Google Cloud products.
 
-### First, subscribe the Google account you wish to use to the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/forum/#%21forum/discuss){:target="_blank"}.
+### First, subscribe the Google account you wish to use to the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/g/discuss?pli=1){:target="_blank"}.
 
 Members of this group are whitelisted to use the `measurement-lab` project in the Google Cloud Platform console or Google Cloud SDK so that queries charges are paid for by M-Lab.
 
@@ -78,7 +78,6 @@ BigQuery's command-line tools should now be available in your terminal and you s
 
 If you are new to BigQuery, we suggest that you next consult the following resources:
 
-* [BigQuery Examples]({{ site.baseurl }}/data/docs/bq/examples)
 * [BigQuery Schema]({{ site.baseurl }}/data/docs/bq/schema)
 * [Google's BigQuery documentation](https://cloud.google.com/bigquery/what-is-bigquery){:target="_blank"}
 * [Querying Date Partitioned Tables](https://cloud.google.com/bigquery/docs/querying-partitioned-tables){:target="_blank"}
