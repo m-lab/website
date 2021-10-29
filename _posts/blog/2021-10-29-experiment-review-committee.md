@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Upcoming M-Lab Community Call discussing Latency, Bufferbloat, Responsiveness"
+title: "Executive Summary of Q4 2021 Experiment Review Committee Meeting"
 author: "Lai Yi Ohlsen"
 date: 2021-10-29
 breadcrumb: blog
