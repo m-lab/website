@@ -15,7 +15,7 @@ Dataset](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3898339)” which
 raises relevant and timely questions about M-Lab’s NDT dataset and its potential
 applications. Please join us Wednesday, December 15, 2021 from 11am-12:00 pm
 Eastern for a presentation from the authors and a discussion with the M-Lab
-community.  
+community.<!--more-->
     
 **Abstract**
 
