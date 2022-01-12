@@ -4,7 +4,7 @@ jobs:
   include:
     - language: ruby
     - language: python
-      python: "3.0"
+      python: "3"
 
 env:
   global:
