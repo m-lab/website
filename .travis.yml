@@ -1,10 +1,5 @@
 dist: focal
-
-jobs:
-  include:
-    - language: ruby
-    - language: python
-      python: "3"
+language: ruby
 
 env:
   global:
