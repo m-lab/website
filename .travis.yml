@@ -4,7 +4,7 @@ language: ruby
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - NODE_VERSION=v10.17.0
+  - NODE_VERSION=v12
 
 script:
 - set -e
