@@ -33,7 +33,7 @@ for BGP data analysis.
 
 As an M-Lab fellow, Zhang will study control-plane-triggered traffic performance
 degradation by correlating anomalous NDT traffic data with BGP information.
-[Read the full project proposal](({{ site.baseurl }}/publications/research-fellows/2022/2021-mlab-proposal-zhang.pdf). 
+[Read the full project proposal]({{ site.baseurl }}/publications/research-fellows/2022/2021-mlab-proposal-zhang.pdf). 
 
 ## Localizing Neutrality Violations | Led by Zeinab Shmeis, supported by Muhammad Abdullah and Pavlos Nikolopoulos
 
