@@ -15,7 +15,7 @@ generously supported by Internet Society. The fellows were selected for the
 merit, rigor, and feasibility of their proposed project as well as their
 research's relevance to improvement for end-user Internet performance. Read
 below for more information about the fellows and their proposed
-projects<!--more--->:
+projects<!--more-->:
 
 ## Control-Plane-Triggered Traffic Performance Degradation Detection | Mingwei Zhang
 
