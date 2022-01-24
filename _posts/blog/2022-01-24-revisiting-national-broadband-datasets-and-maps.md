@@ -12,7 +12,7 @@ categories:
 ---
 
 When thinking about broadband in the United States, the first thing people
-generally think about is whether their connection is fast enough-- are they
+likely think about is whether their connection is fast enough-- are they
 getting the speeds they need to do business, go to school, etc. The dominance of
 “speed” in assessing broadband service goes all the way to the top- the FCC
 defines broadband according to the achievable download and upload speeds to the
@@ -31,7 +31,7 @@ are pleased to have NDT data from M-Lab represented in the map, there are some
 issues with the presentation that could make this data confusing at a basic
 level, and at worst could lead to incorrect conclusions.
 
-Our post from July discussed the various data sources in the NTIA Indicators map
+Our post from July 2021 discussed the various data sources in the NTIA Indicators map
 in relation to the FCC’s current definition for a broadband connection-- one
 that advertises 25 Mbps download and 3 Mbps upload speeds to the Internet. In
 most ISP’s terms of service, those speeds are the maximum possible speeds, not
@@ -180,7 +180,7 @@ to improve the NDT statistics provided in our statistics pipeline.
 
 [^1]:  An ndt7 test will use BBR. You can read more about BBR, congestion
     control algorithms and the evolution of NDT here:
-    https://www.measurementlab.net/blog/evolution-of-ndt/#evolution-of-ndt
+    [https://www.measurementlab.net/blog/evolution-of-ndt/#evolution-of-ndt](https://www.measurementlab.net/blog/evolution-of-ndt/#evolution-of-ndt)
 
-[^2]: https://www.fcc.gov/reports-research/reports/measuring-broadband-america/measuring-fixed-broadband-tenth-report#_Toc43144657
+[^2]: [https://www.fcc.gov/reports-research/reports/measuring-broadband-america/measuring-fixed-broadband-tenth-report/#_Toc43144657](https://www.fcc.gov/reports-research/reports/measuring-broadband-america/measuring-fixed-broadband-tenth-report/#_Toc43144657)
 
