@@ -16,9 +16,6 @@ format.<!--more-->
 
 ## Accessing Traceroute Data
 
-It seems like there is some confusion about accessing M-Lab's recent traceroutes
-due to a change in its datatype name.
-
 Up until early September 2021, MDA traceroutes were archived in Google Cloud
 Storage (GCS) as `traceroute` datatype.  Since then, they are archived as
 `scamper1` datatype without any changes to the content.
