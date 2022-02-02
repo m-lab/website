@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:focal
 
 RUN apt update
 ENV DEBIAN_FRONTEND noninteractive
@@ -16,6 +16,7 @@ COPY Gemfile .
 RUN gem install bundler
 RUN bundle update
 RUN bundle install
+RUN gem cleanup
 
 # Set the default locale for UTF-8 to allow jekyll and htmlproofer to
 # successfully process files with non-ascii characters.
