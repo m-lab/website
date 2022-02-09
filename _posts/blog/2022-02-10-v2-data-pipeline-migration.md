@@ -13,7 +13,7 @@ categories:
 
 If you typically use the `measurement-lab.ndt.unified_uploads` or
 `measurement-lab.ndt.unified_downloads` views, then nothing will change. We are
-updating the ndt5, switch, and tcpinfo schemas, removing obsolete views,
+updating the ndt5, switch, and tcpinfo schemas, removing obsolete views, and
 renaming some views in preparation for improving ease of use and documentation.
 <!--more-->
 
@@ -24,8 +24,8 @@ generation [v1 data pipeline][v1-pipeline] has continued to process datatypes
 collected from the web100 platform *and* many datatypes from the tcpinfo
 platform. Datatypes processed by the v1 data pipeline have "v1 schemas". These
 schemas typically use ad-hoc naming conventions that may be inconsistent between
-datatypes and use and documentation onerous. As well, these datatypes have had
-long standing data quality issues, such as server annotations.
+datatypes making use and documentation onerous. As well, these datatypes have had
+long standing data quality issues, such as accurate server annotations.
 
 Now we are migrating all datatypes collected from the tcpinfo platform to the v2
 data pipeline. The v2 data pipeline provides uniform naming conventions,
@@ -50,7 +50,7 @@ Users of the `measurement-lab.ndt.unified_uploads` and
 
 The views in the `measurement-lab.library` dataset are now obsolete. Each can be
 replaced by the equivalent view with the same datatype and direction suffix from
-the ndt_intermediate dataset.
+the `ndt_intermediate` dataset.
 
 |	To be removed	 |	 Use instead  |
 | -------------- | -------------- |
@@ -63,8 +63,8 @@ the ndt_intermediate dataset.
 
 Views in the `measurement-lab.ndt` dataset that use v1 schemas must be removed
 before we replace them with views using v2 schemas. This should be minimally
-disruptive because these v1 views are redundant because views with identical
-views that are already present in the `measurement-lab.ndt_raw` dataset.
+disruptive because these v1 views are redundant to identical views that are
+already present in the `measurement-lab.ndt_raw` dataset.
 
 | To be removed | Use instead |
 | --------------| ----------- |
