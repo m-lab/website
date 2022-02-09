@@ -91,7 +91,7 @@ Some questions/topics that NDT data can help answer then are:
 
 Next, let’s review the analysis recommendations our team made back in Feb. 2021:
 
-* **Don’t oversimplify too early in your analysis
+* Don’t oversimplify too early in your analysis
   * Aggregate by ISP in addition to time, date and location
   * Be aware of and illustrate [multimodal distributions](https://en.wikipedia.org/wiki/Normal_distribution)
 * Use histograms and logarithmic scales
