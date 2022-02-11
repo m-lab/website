@@ -1,6 +1,6 @@
 | Field name       | Type       | Description    |
 | :----------------|:----------:|:---------------|
-| **id** | STRING |  |
+| **id** | STRING | UUID of the connection under consideration. |
 | **server** | RECORD | Location information about the M-Lab server that collected the measurement. |
 | server.**Site** | STRING | The M-Lab site name. |
 | server.**Machine** | STRING | The machine name within the site. |
@@ -61,4 +61,5 @@
 | parser.**ArchiveURL** | STRING | The Google Cloud Storage URL to the archive containing the Filename for this row. |
 | parser.**Filename** | STRING |  |
 | parser.**Priority** | INTEGER |  |
+| parser.**GitCommit** | STRING |  |
 | **date** | DATE | Date is used by BigQuery to partition data to improve query performance. |

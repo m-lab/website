@@ -1,19 +1,28 @@
 # Contributing to `github.com/m-lab/website`
 
 This document outlines setup, standards, and practices for contributing to
-the M-Lab website.
+the M-Lab website. Content is written in markdown, and Jekyll applies templates
+and formatting when generating the final static site. We use Travis-ci to test
+site builds and deployments, previewing branches matching the pattern
+`sandbox-*` 
 
-## Setting up Local Development Environment
+## Install required tools on your system
 
-* Clone this repository, and update its submodules:
+To edit this website you need:
 
-  ```sh
-  git clone git@github.com:m-lab/website.git
-  git submodule init
-  git submodule update
-  ```
+* git, Github account
+* whatever you want to edit files with (eg. Sublime, VSCode, etc.)
+* Docker
 
-* Setup the M-Lab pre-commit hook
+The Dockerfile is used to manage everything needed to build the site with
+Jekyll and preview it locally. If you have installed any of the site build
+dependencies on your system, you may experience conflicts when running the
+Docker builds. Remove locally installed dependencies if this happens to you.
+
+## Get the site with Git
+
+* Clone this repository: `git clone git@github.com:m-lab/website.git`
+* Setup the pre-commit hook:
 
   ```sh
   rm -rf .git/hooks/
@@ -27,116 +36,10 @@ the M-Lab website.
   docker build -t local-website .
   ```
 
-### Run Local Website
+## Publication Process
 
-Run the jekyll server using the `local-website` docker image.
-
-NOTE: the `--host` flag is needed within the docker environment. An empty
-`--baseurl` is needed to test locally.
-
-```sh
-docker run --rm \
-    --publish 4000:4000 \
-    --volume $PWD:/home/website \
-    --interactive --tty local-website \
-      bundle exec jekyll serve --host 0.0.0.0 --baseurl ""
-```
-
-View the generated site by visiting:
-
-* [http://localhost:4000/](http://localhost:4000/)
-
-### Install Build Dependencies Locally
-
-We provide the `local-website` docker image to normalize and simplify
-development dependencies. You may also install these dependencies in your
-local environment. However, we will only officially support the docker
-environment.
-
-We do not specify how to install local dependencies, since you may choose to
-use virtual environments, install a package using `pip` with your system's
-package manager, etc. We leave this to developer preference, but if you would
-like to submit an install guide specific to your OS and environment, please
-send us a pull request.
-
-* Install website build dependencies for your operating system and environment
-
-  * [Jekyll](https://jekyllrb.com/docs/installation/)
-  * [Jupyter](https://jupyter.org/install)
-  * [Bundler](https://bundler.io/)
-  * [markdownlint](https://github.com/markdownlint/markdownlint)
-  * [Node.js](https://nodejs.org/en/download/)
-
-## Code Standards and Practice
-
-This section highlights the coding standards to be used for this project to
-ensure consistency across the codebase for current and future development
-
-* **File Names**
-
-  * Use all lowercase characters in filenames
-  * Concatenate multiple words in a filename with a hypen
-
-* **YML Variable Names and Keys**
-
-  * Use all lowercase characters for all `yml` frontmatter variables and keys
-  * Concatenate multiple words in a `yml` frontmatter variables and keys with a
-    hyphen
-
-* **Liquid Variables**
-
-  * For Liquid variables with more than one words, concatenate with an
-    underscore character to differentiate from yml frontmatter variables
-  * When using Liquid tags, objects, and filters, use a space at the beginning
-    and end of the contents of curly braces (eg: `{{ site.base_url }}` )
-
-## Updating Schema Include Files
-
-Schema descriptions for M-Lab tables and views are updated using a Dockerhub
-image created by continuous integration on the `etl` repository.
-
-* Update or make additions to the templated schema descriptions in:
-  [https://github.com/m-lab/etl/tree/master/schema/descriptions][schema]
-* Commit changes to the schema descriptions, and tag a release using the
-  pattern `vX.X.X`. The latest tags can be found in:
-    [https://github.com/m-lab/etl/tags](https://github.com/m-lab/etl/tags)
-* Once tagged, wait for the new dockerhub image to be available in
-  [https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags][tags]
-* Use the command below in the root folder of the website repository
-  to generated updated schema include files. Don't forget to update the image
-  tag to the latest release tag.
-
-  ```sh
-  docker run -v $PWD:/ -w /workspace -it \
-    measurementlab/generate-schema-docs:v2.4.2 -doc.output _includes
-  ```
-
-* Commit your changes, push, and issue a pull request.
-
-[schema]: https://github.com/m-lab/etl/tree/master/schema/descriptions
-[tags]: https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags
-
-## How this site packages and ships Jupyter Notebooks
-
-* Notebooks are packaged and shipped using the `jekyll-jupyter-notebook` gem
-* The gem uses `juypter`, so this must also be installed
-* We're saving `.ipynb` notebook files in `/notebook`
-* They are included in website pages using this syntax:
-
-  ```yaml
-  {% jupyter_notebook "/notebooks/discard-analysis-2018.ipynb" %}
-  ```
-
-* When the site is generated, notebooks in `/notebooks` are converted to
-  `.html`, which are added as iframe content by the `jupyter_notebook` include
-  command above.
-
-## Travis CI integration
-
-We use Travis CI to automate site builds to enable previewing new site
-content or features, to stage site updates approved through pull requests,
-and to build and publish approved and staged site updates through periodic
-releases.
+The website publication process uses a combination of continuous integration
+using Travis CI, pull requests, code review and release tagging.
 
 The file `.travis.tml` is configured to do the following actions:
 
@@ -148,7 +51,7 @@ The file `.travis.tml` is configured to do the following actions:
   * Content can then be previewed at
     [http://website.mlab-sandbox.measurementlab.net/][website-sandbox]
 
-* When a pull request is approved and merged into the `master` branch:
+* When a pull request is approved and merged into the `main` branch:
 
   * Travis CI builds the site and publishes to the GCS bucket
     `gs://website.mlab-staging.measurementlab.net` in the project
@@ -158,7 +61,7 @@ The file `.travis.tml` is configured to do the following actions:
 
 * When a repository owner tags a release in Github:
 
-  * Travis CI builds the site and publishes it to an Amazon S3 bucket
+  * Travis CI builds the site and publishes it to a Google Firebase project
   * The [production website][website-prod] is then updated with the content
     from this release
 
@@ -166,116 +69,116 @@ The file `.travis.tml` is configured to do the following actions:
 [website-staging]: https://website.mlab-staging.measurementlab.net/
 [website-prod]: https://www.measurementlab.net
 
-## Security
+## Contribution Process
 
-Before pushing any commit to the remote repository on Github, developers
-should ensure that any secrets required for publication are encrypted. **If**
-**you're unsure whether the values in `.travis.yml` related to publication are**
-**encrypted, please ask a colleague before proceeding.**
+Internal team members typically edit content for new posts or pages in a Google
+Doc, where the content is reviewed and commented on by others. Once ready, the
+Doc is converted to Markdown and added to a git branch for final review here.
 
-Use the `travis encrypt` command to encrypt a secret access key:
+Team members should always make changes to the site using a git branch (not
+`main`). Community contributors should fork this repository, and preview/test changes
+locally using provided the Docker container.
 
-```sh
-travis encrypt secret_access_key:<SECRET KEY> -r m-lab/website
-```
+When ready, team members may push their branch to preview (if using the
+`sandbox-*` branch name pattern) and submit a Pull Request to the `main` branch for code
+review. Community contributors should preview their changes locally, and issue a Pull
+Request from their fork to our `main` branch.
 
-Files containing secrets may be encrypted using the `travis encrypt-file`
-command:
+Once review is completed, a repository owner will tag a release to publish.
 
-```sh
-travis encrypt-file -r m-lab/website _cf_s3_invalidator.yml --add
-```
+## Previewing Site Locally and Offline
 
-Currently `sandbox` and `staging` commits are deployed to GCS, and tagged
-release builds are deployed to AWS.
+The `local-website` Docker image can be run on your machine to preview changes
+locally before pushing to Github and submitting pull requests.
 
-* More information about [Travis CI deployment to GCS][travis-gcs]
-* More information about [Travis CI deployment to AWS][travis-aws]
-
-[travis-gcs]: https://docs.travis-ci.com/user/deployment/gcs/
-[travis-gcs]: https://docs.travis-ci.com/user/deployment/aws/
-
-### Encrypting Keys & Secrets for Amazon S3 Deployments
-
-In order to deploy to [Amazon S3][s3], the secret key for the Amazon AWS [IAM
-account](https://aws.amazon.com/iam/) to be used must be encrypted in
-.travis.yml. The secret key is [encrypted][travis-keys] using the public key
-for the repository in Travis CI. If the Amazon credentials change, then the
-keys in .travis.yml will need to be updated. The `access_key_id` can be
-entered in plain text, but the secret key should be encryped using the
-[travis CLI utility][travis-cli] like so:
-
-[s3]: https://docs.travis-ci.com/user/deployment/s3/
-[travis-keys]: https://docs.travis-ci.com/user/encryption-keys/
-[travis-cli]: https://github.com/travis-ci/travis.rb
+Run the jekyll server using the `local-website` docker image using the command below.
 
 ```sh
-travis encrypt secret_access_key:<SECRET KEY> -r m-lab/website
+docker run --rm \
+    --publish 4000:4000 \
+    --volume $PWD:/home/website \
+    --interactive --tty local-website \
+      bundle exec jekyll serve --host 0.0.0.0 --baseurl ""
 ```
+NOTE: the `--host` flag is needed within the docker environment. An empty
+`--baseurl` is needed to test locally.
 
-In addition to deploying the site to S3, Travis also handles invalidating the
-Amazon CloudFront cache each time a new version of the site is pushed. This
-is handled via the [cf-s3-invalidator gem][cf-s3]. This utility makes use of
-the file _cf_s3_invalidator.yml.enc, which is an encrypted file generated
-with the [encrypt-file command][travis-encrypt] of the travis CLI utility.
-The [README.md][cf-s3-usage] for the cf-s3-invalidator utility has some
-information on how to create a &#95;cf&#95;s3&#95;invalidator.yml file. You
-can then encrypt the file with a command like:
+View the generated site by visiting: [http://localhost:4000/](http://localhost:4000/)
 
-[cf-s3]: https://rubygems.org/gems/cf-s3-invalidator/
-[cf-s3-usage]: https://github.com/laurilehmijoki/cf-s3-invalidator#usage
-[travis-encrypt]: https://docs.travis-ci.com/user/encrypting-files/
+## Notes on Site Structure and Specific Types of Content
+
+### Site Structure
+
+| Directory | Description |
+| ------------- |:------------- |
+| _data | Directory contains yml files that contain content that is not within individual pages or posts. Currently used on the home page. |
+| _hooks | Includes a pre-commit hook that runs tests from `_tests/travis-checks` on each commit. | 
+| _includes | Contains html, markdown, and JavaScript files that can be included on various pages. |
+| _layouts | Contains the templates that are used to generate pages with different layouts. Templates may include one another, and all pages use the `default.html` template. For example, see `page.html`.|
+| _linter | Contains a Ruby file defining rules that the markdown linter should use. |
+| _pages | Contains all non-blog post pages. Pages that have a number prepended to the filename signifies that they are used to dynamically generate the main navigational header. They will display in the header in the order of the prepended numbers.  These pages also must contain the `menu-item: true` frontmatter in the pages. |
+| _pages/301 | 301 redirects used when content is moved from one URL to a new one. |
+| _pages/categories | Contains category pages for each named tag used on blog posts. A category page must be added when new tags are added to the site. |
+| _pages/dates | Contains a "month index" page for each month in which blog posts are published. A new month index page must be added whenever a new post in a new month is published. |
+| _posts | Contains all of the individual blog entries. |
+| _sass | Contains the CSS for bootstrap and overrides. |
+| _tests | Contains travis checks run by the pre-commit hook. |
+| assets | Bootstrap fonts and JavaScripts |
+| blog | Contains the blog index page. |
+| css | Contains additional css to be included in the site. |
+| fonts | Contains the customized font libraries for the site. |
+| images | Contains all images used in the site. |
+| js | Contains JavaScript libraries included in the site. |
+| notebooks | Contains Jupyter notebooks to be included on pages or posts. |
+| publications | Contains all the pdfs and docs that are included or linked in the site. |
+| static | Contains additional static content. |
+| travis | Submodule for [m-lab/travis](https://github.com/m-lab/travis) to support deployment automation in Travis CI. |
+| .firebaserc | Defines the Firebase project and hosting. Used by Travis CI to automate publishing of tagged releases. |
+| .gitignore | Defines which files and file patterns should be excluded from Git commits. |
+| .gitmodules | Defines the Git submodules used in this repo. |
+| .travis.yml | Travis CI build and deployment configurations. |
+| CONTRIBUTING.md | Provides onboarding details for new contributors. |
+| Dockerfile | Defines the Docker container for building and previewing the site locally. |
+| LICENSE | Software license for the code in this repository. |
+| README.md | Read me. |
+| _config.yml | Defines the site settings Jekyll uses when building the site. |
+| favicon.ico | Favicon used for the site. |
+| firebase.json | Additional config file for Firebase to exclude some files from the published site. |
+
+### Updating Include Files for BigQuery Table/View Schemas
+
+Schema descriptions for M-Lab tables and views are located in the `m-lab/etl`
+repository. They are updated for this site using a Dockerhub
+image created by continuous integration on the `m-lab/etl-schema` repository.
+
+* Update or make additions to the templated schema descriptions in:
+  [https://github.com/m-lab/etl/tree/master/schema/descriptions][schema]
+* Commit changes to the schema descriptions, and tag a release using the
+  pattern `vX.X.X`. The latest tags can be found in:
+    [https://github.com/m-lab/etl/tags](https://github.com/m-lab/etl/tags)
+* Once tagged, wait for the new dockerhub image to be available in
+  [https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/](https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/)
+* Use the command below in the root folder of the website repository
+  to generated updated schema include files. Don't forget to update the image
+  tag to the latest release tag.
 
 ```sh
-travis encrypt-file -r m-lab/website _cf_s3_invalidator.yml --add
+docker run -v $PWD:/_includes -it measurementlab/generate-schema-docs:latest -doc.output /_includes
 ```
 
-Delete the unencrypted file after running the above command and be sure to
-__not__ commit the unencrypted file to the repository.
+[schema]: https://github.com/m-lab/etl/tree/master/schema/descriptions
+[tags]: https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags
 
-### Encrypting Keys & Secrets for GCS Deployments
+## Including Jupyter Notebooks in Pages or Posts
 
-For GCS deployments, generate the encrypted `secure:` key using:
+* Notebooks are included using the `jekyll-jupyter-notebook` gem
+* Save `.ipynb` notebook files in `/notebook`
+* And include them in website pages using this syntax:
 
-```sh
-travis encrypt secret_access_key:<SECRET KEY> -r m-lab/website
-```
+  ```yaml
+  {% jupyter_notebook "/notebooks/discard-analysis-2018.ipynb" %}
+  ```
 
-```yaml
-...
-    secret_access_key:
-      secure: pdKctNlM2bfEzyFBi9Rr6BYua8hWXsyzUDm5WI4Alr06qLmp1zFNcPymKcihgoE8k2vr85B4BN8HYpUPvPPpzb/KlAZAuUjbKGH0hIklBN4+G+ldt2IBN+2YxYYKYu3bXjKJ5yQOHKCBVU/CR3O6UB+Llp3Ty42OCa71WDfsG2aW6EHGkWV1TljXl3fGVerPfcNeyigIFZ6Qz2Vy0Ay+hzXEZBxjLjUsrWbK5aM6PX7OuErBzKk/kFTlQNkuRQdJs7nS4Y+Pxjyjr6NVd0wjFGqtP+sLjC9hvNaaCHdQ46kA24BqNWwNq1c3++9/0NrEj2MbRrAWNrEcSDskX+XJdV+wantzJ0xQAdqgYUugLj+TSYTKTxrPnwy9WGcWxsfdlrrlnysWVDc1OpQgtXNtU66qwgsjflsOijNeV/XBhR4bOifhRJ80VcQ6KyDWwIAKcJbU8prkMAqr1SqyVbw35gH6ZfHxBcf1CYCEoCGlVn00QPyEQDBkSCFzQC8coSZStGGnxGaebHomxMiOsowM4JIZqjB3RWg+Gf5S6dAZZUQTHoYHAU02Kil+wHmYWEcJ+3eb/FWtNokeZRX3zNCKncBAaZWef+JzMuEtcq67cio/io3z9yglVcWpZz/xGSMOTOVIbHwFIjyzO8cSvp6IWLrlq8MJOge5u0ADgi0rMAE=
-...
-```
-
-## Publication Process
-
-The website publication process uses a combination of continuous integration
-using Travis CI, pull requests, code review and release tagging.
-
-### Previewing and Discussing New Features in Sandbox Branches
-
-New site features and larger content changes are previewed in the mlab-sandbox
-project.
-
-* After cloning the code repository, create your own sandbox branch using the
-  pattern: `sandbox-<USERNAME>`
-* To preview content or features in the sandbox GCS bucket, push a commit to
-  your sandbox branch.
-* Once Travis CI builds your sandbox branch, the content can then be previewed
-  at [http://website.mlab-sandbox.measurementlab.net/][website-sandbox]
-  and discussed by relevant team members
-* Please check with colleagues and coordinate commits to their sandbox branches
-  in order to not stomp on the work of others
-
-### Pull Requests - Staging Content for Publication
-
-When your new content changes or new site features are ready for publication,
-submit a Pull Request to the `master` branch and request a code review from a
-colleague or repository owner.
-
-### Publishing Reviewed Pull Requests to Production
-
-Content that has been approved via code review in a pull request is
-periodically tagged in Github, which triggers Travis CI to build and push the
-release update to our production website location.
+* When the site is generated, notebooks in `/notebooks` are converted to
+  `.html`, which are added as iframe content by the `jupyter_notebook` include
+  command above.

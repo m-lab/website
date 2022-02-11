@@ -100,4 +100,6 @@
 | result.S2C.TCPInfo.**BytesRetrans** | INTEGER | Bytes retransmitted. May include headers and new data carried with a retransmission (for thin flows).<br>Kernel: bytes_retrans |
 | result.S2C.TCPInfo.**DSackDups** | INTEGER | Duplicate segments reported by DSACK. Not reported by some Operating Systems.<br>Kernel: dsack_dups |
 | result.S2C.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
+| result.S2C.TCPInfo.**RcvOooPack** | INTEGER |  |
+| result.S2C.TCPInfo.**SndWnd** | INTEGER |  |
 | result.S2C.**Error** | STRING | Any error message(s) recorded during a measurement. |

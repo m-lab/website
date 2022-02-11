@@ -1,6 +1,6 @@
 | Field name       | Type       | Description    |
 | :----------------|:----------:|:---------------|
-| **id** | STRING |  |
+| **id** | STRING | UUID of the connection under consideration. |
 | **a** | RECORD | Fields summarizing or derived from the raw data. |
 | a.**UUID** | STRING | UUID for TCP connection. |
 | a.**TestTime** | TIMESTAMP | The date and time of the measurement in UTC. |
@@ -14,8 +14,9 @@
 | parser.**ArchiveURL** | STRING | The Google Cloud Storage URL to the archive containing the Filename for this row. |
 | parser.**Filename** | STRING |  |
 | parser.**Priority** | INTEGER |  |
+| parser.**GitCommit** | STRING |  |
 | **date** | DATE | Date is used by BigQuery to partition data to improve query performance. |
-| **raw** | RECORD |  |
+| **raw** | RECORD | Fields from the raw data. |
 | raw.**GitShortCommit** | STRING | GitShortCommit is the Git commit (short form) of the running server code that produced this measurement. |
 | raw.**Version** | STRING | Version is the symbolic version (if any) of the running server code that produced this measurement. |
 | raw.**ServerIP** | STRING | The IP address assigned to the M-Lab server that conducted the measurement. |
@@ -91,6 +92,8 @@
 | raw.Upload.ServerMeasurements.TCPInfo.**BytesRetrans** | INTEGER | Bytes retransmitted. May include headers and new data carried with a retransmission (for thin flows).<br>Kernel: bytes_retrans |
 | raw.Upload.ServerMeasurements.TCPInfo.**DSackDups** | INTEGER | Duplicate segments reported by DSACK. Not reported by some Operating Systems.<br>Kernel: dsack_dups |
 | raw.Upload.ServerMeasurements.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
+| raw.Upload.ServerMeasurements.TCPInfo.**RcvOooPack** | INTEGER |  |
+| raw.Upload.ServerMeasurements.TCPInfo.**SndWnd** | INTEGER |  |
 | raw.Upload.ServerMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
 | raw.Upload.**ClientMeasurements** | RECORD | Periodic measurements reported by the client. Not all clients report this information. |
 | raw.Upload.ClientMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
@@ -155,6 +158,8 @@
 | raw.Upload.ClientMeasurements.TCPInfo.**BytesRetrans** | INTEGER | Bytes retransmitted. May include headers and new data carried with a retransmission (for thin flows).<br>Kernel: bytes_retrans |
 | raw.Upload.ClientMeasurements.TCPInfo.**DSackDups** | INTEGER | Duplicate segments reported by DSACK. Not reported by some Operating Systems.<br>Kernel: dsack_dups |
 | raw.Upload.ClientMeasurements.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
+| raw.Upload.ClientMeasurements.TCPInfo.**RcvOooPack** | INTEGER |  |
+| raw.Upload.ClientMeasurements.TCPInfo.**SndWnd** | INTEGER |  |
 | raw.Upload.ClientMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
 | raw.Upload.**ClientMetadata** | RECORD | Client-reported metadata as name/value pairs. |
 | raw.Upload.ClientMetadata.**Name** | STRING | If set, contains text that identifies and provides context for the corresponding metadata value. For example, "OS" or "clientApplication" |
@@ -226,6 +231,8 @@
 | raw.Download.ServerMeasurements.TCPInfo.**BytesRetrans** | INTEGER | Bytes retransmitted. May include headers and new data carried with a retransmission (for thin flows).<br>Kernel: bytes_retrans |
 | raw.Download.ServerMeasurements.TCPInfo.**DSackDups** | INTEGER | Duplicate segments reported by DSACK. Not reported by some Operating Systems.<br>Kernel: dsack_dups |
 | raw.Download.ServerMeasurements.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
+| raw.Download.ServerMeasurements.TCPInfo.**RcvOooPack** | INTEGER |  |
+| raw.Download.ServerMeasurements.TCPInfo.**SndWnd** | INTEGER |  |
 | raw.Download.ServerMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
 | raw.Download.**ClientMeasurements** | RECORD | Periodic measurements reported by the client. Not all clients report this information. |
 | raw.Download.ClientMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
@@ -290,6 +297,8 @@
 | raw.Download.ClientMeasurements.TCPInfo.**BytesRetrans** | INTEGER | Bytes retransmitted. May include headers and new data carried with a retransmission (for thin flows).<br>Kernel: bytes_retrans |
 | raw.Download.ClientMeasurements.TCPInfo.**DSackDups** | INTEGER | Duplicate segments reported by DSACK. Not reported by some Operating Systems.<br>Kernel: dsack_dups |
 | raw.Download.ClientMeasurements.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
+| raw.Download.ClientMeasurements.TCPInfo.**RcvOooPack** | INTEGER |  |
+| raw.Download.ClientMeasurements.TCPInfo.**SndWnd** | INTEGER |  |
 | raw.Download.ClientMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
 | raw.Download.**ClientMetadata** | RECORD | Client-reported metadata as name/value pairs. |
 | raw.Download.ClientMetadata.**Name** | STRING | If set, contains text that identifies and provides context for the corresponding metadata value. For example, "OS" or "clientApplication" |

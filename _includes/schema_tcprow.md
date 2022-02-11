@@ -26,6 +26,10 @@
 | Server.Geo.**country_code3** | STRING |  |
 | Server.Geo.**country_name** | STRING |  |
 | Server.Geo.**region** | STRING |  |
+| Server.Geo.**Subdivision1ISOCode** | STRING |  |
+| Server.Geo.**Subdivision1Name** | STRING |  |
+| Server.Geo.**Subdivision2ISOCode** | STRING |  |
+| Server.Geo.**Subdivision2Name** | STRING |  |
 | Server.Geo.**metro_code** | INTEGER |  |
 | Server.Geo.**city** | STRING |  |
 | Server.Geo.**area_code** | INTEGER |  |
@@ -33,8 +37,13 @@
 | Server.Geo.**latitude** | FLOAT |  |
 | Server.Geo.**longitude** | FLOAT |  |
 | Server.Geo.**radius** | INTEGER |  |
+| Server.Geo.**Missing** | BOOLEAN | The annotator looked for but was unable to find a Geo location for this IP. |
 | Server.**Network** | RECORD | Network information about connection. |
 | Server.Network.**IPPrefix** | STRING |  |
+| Server.Network.**CIDR** | STRING |  |
+| Server.Network.**ASNumber** | INTEGER | The Autonomous System Number, provided by RouteViews. |
+| Server.Network.**ASName** | STRING | Canonical name for the ASN, provided by ipinfo.io. |
+| Server.Network.**Missing** | BOOLEAN | The annotator looked but was unable to find a network for this IP. |
 | Server.Network.**Systems** | RECORD |  |
 | Server.Network.Systems.**ASNs** | INTEGER |  |
 | **Client** | RECORD |  |
@@ -46,6 +55,10 @@
 | Client.Geo.**country_code3** | STRING |  |
 | Client.Geo.**country_name** | STRING |  |
 | Client.Geo.**region** | STRING |  |
+| Client.Geo.**Subdivision1ISOCode** | STRING |  |
+| Client.Geo.**Subdivision1Name** | STRING |  |
+| Client.Geo.**Subdivision2ISOCode** | STRING |  |
+| Client.Geo.**Subdivision2Name** | STRING |  |
 | Client.Geo.**metro_code** | INTEGER |  |
 | Client.Geo.**city** | STRING |  |
 | Client.Geo.**area_code** | INTEGER |  |
@@ -53,8 +66,13 @@
 | Client.Geo.**latitude** | FLOAT |  |
 | Client.Geo.**longitude** | FLOAT |  |
 | Client.Geo.**radius** | INTEGER |  |
+| Client.Geo.**Missing** | BOOLEAN | The annotator looked for but was unable to find a Geo location for this IP. |
 | Client.**Network** | RECORD | Network information about connection. |
 | Client.Network.**IPPrefix** | STRING |  |
+| Client.Network.**CIDR** | STRING |  |
+| Client.Network.**ASNumber** | INTEGER | The Autonomous System Number, provided by RouteViews. |
+| Client.Network.**ASName** | STRING | Canonical name for the ASN, provided by ipinfo.io. |
+| Client.Network.**Missing** | BOOLEAN | The annotator looked but was unable to find a network for this IP. |
 | Client.Network.**Systems** | RECORD |  |
 | Client.Network.Systems.**ASNs** | INTEGER |  |
 | **FinalSnapshot** | RECORD |  |
@@ -131,6 +149,8 @@
 | FinalSnapshot.TCPInfo.**BytesRetrans** | INTEGER | Bytes retransmitted<br>May include headers and new data carried with a retransmission (for thin flows).<br>Kernel: bytes_retrans |
 | FinalSnapshot.TCPInfo.**DSackDups** | INTEGER | Duplicate segments reported by DSACK<br>Not reported by some OS<br>Kernel: dsack_dups |
 | FinalSnapshot.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order<br>Estimates reordering on the return path<br>Kernel: reord_seen |
+| FinalSnapshot.TCPInfo.**RcvOooPack** | INTEGER |  |
+| FinalSnapshot.TCPInfo.**SndWnd** | INTEGER |  |
 | FinalSnapshot.**MemInfo** | RECORD |  |
 | FinalSnapshot.MemInfo.**Rmem** | INTEGER |  |
 | FinalSnapshot.MemInfo.**Wmem** | INTEGER |  |
@@ -236,6 +256,8 @@
 | Snapshots.TCPInfo.**BytesRetrans** | INTEGER | Bytes retransmitted<br>May include headers and new data carried with a retransmission (for thin flows).<br>Kernel: bytes_retrans |
 | Snapshots.TCPInfo.**DSackDups** | INTEGER | Duplicate segments reported by DSACK<br>Not reported by some OS<br>Kernel: dsack_dups |
 | Snapshots.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order<br>Estimates reordering on the return path<br>Kernel: reord_seen |
+| Snapshots.TCPInfo.**RcvOooPack** | INTEGER |  |
+| Snapshots.TCPInfo.**SndWnd** | INTEGER |  |
 | Snapshots.**MemInfo** | RECORD |  |
 | Snapshots.MemInfo.**Rmem** | INTEGER |  |
 | Snapshots.MemInfo.**Wmem** | INTEGER |  |
@@ -267,3 +289,57 @@
 | Snapshots.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. |
 | Snapshots.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.<br>The binary point varies by kernel version but the statistical mode is always 1.0. |
 | Snapshots.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT. |
+| **ServerX** | RECORD |  |
+| ServerX.**Site** | STRING |  |
+| ServerX.**Machine** | STRING |  |
+| ServerX.**Geo** | RECORD |  |
+| ServerX.Geo.**ContinentCode** | STRING |  |
+| ServerX.Geo.**CountryCode** | STRING |  |
+| ServerX.Geo.**CountryCode3** | STRING |  |
+| ServerX.Geo.**CountryName** | STRING |  |
+| ServerX.Geo.**Region** | STRING |  |
+| ServerX.Geo.**Subdivision1ISOCode** | STRING |  |
+| ServerX.Geo.**Subdivision1Name** | STRING |  |
+| ServerX.Geo.**Subdivision2ISOCode** | STRING |  |
+| ServerX.Geo.**Subdivision2Name** | STRING |  |
+| ServerX.Geo.**MetroCode** | INTEGER |  |
+| ServerX.Geo.**City** | STRING |  |
+| ServerX.Geo.**AreaCode** | INTEGER |  |
+| ServerX.Geo.**PostalCode** | STRING |  |
+| ServerX.Geo.**Latitude** | FLOAT |  |
+| ServerX.Geo.**Longitude** | FLOAT |  |
+| ServerX.Geo.**AccuracyRadiusKm** | INTEGER |  |
+| ServerX.Geo.**Missing** | BOOLEAN | The annotator looked for but was unable to find a Geo location for this IP. |
+| ServerX.**Network** | RECORD | Network information about connection. |
+| ServerX.Network.**CIDR** | STRING |  |
+| ServerX.Network.**ASNumber** | INTEGER | The Autonomous System Number, provided by RouteViews. |
+| ServerX.Network.**ASName** | STRING | Canonical name for the ASN, provided by ipinfo.io. |
+| ServerX.Network.**Missing** | BOOLEAN | The annotator looked but was unable to find a network for this IP. |
+| ServerX.Network.**Systems** | RECORD |  |
+| ServerX.Network.Systems.**ASNs** | INTEGER |  |
+| **ClientX** | RECORD |  |
+| ClientX.**Geo** | RECORD |  |
+| ClientX.Geo.**ContinentCode** | STRING |  |
+| ClientX.Geo.**CountryCode** | STRING |  |
+| ClientX.Geo.**CountryCode3** | STRING |  |
+| ClientX.Geo.**CountryName** | STRING |  |
+| ClientX.Geo.**Region** | STRING |  |
+| ClientX.Geo.**Subdivision1ISOCode** | STRING |  |
+| ClientX.Geo.**Subdivision1Name** | STRING |  |
+| ClientX.Geo.**Subdivision2ISOCode** | STRING |  |
+| ClientX.Geo.**Subdivision2Name** | STRING |  |
+| ClientX.Geo.**MetroCode** | INTEGER |  |
+| ClientX.Geo.**City** | STRING |  |
+| ClientX.Geo.**AreaCode** | INTEGER |  |
+| ClientX.Geo.**PostalCode** | STRING |  |
+| ClientX.Geo.**Latitude** | FLOAT |  |
+| ClientX.Geo.**Longitude** | FLOAT |  |
+| ClientX.Geo.**AccuracyRadiusKm** | INTEGER |  |
+| ClientX.Geo.**Missing** | BOOLEAN | The annotator looked for but was unable to find a Geo location for this IP. |
+| ClientX.**Network** | RECORD | Network information about connection. |
+| ClientX.Network.**CIDR** | STRING |  |
+| ClientX.Network.**ASNumber** | INTEGER | The Autonomous System Number, provided by RouteViews. |
+| ClientX.Network.**ASName** | STRING | Canonical name for the ASN, provided by ipinfo.io. |
+| ClientX.Network.**Missing** | BOOLEAN | The annotator looked but was unable to find a network for this IP. |
+| ClientX.Network.**Systems** | RECORD |  |
+| ClientX.Network.Systems.**ASNs** | INTEGER |  |
