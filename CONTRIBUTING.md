@@ -71,13 +71,17 @@ The file `.travis.tml` is configured to do the following actions:
 
 ## Contribution Process
 
-Contributors should make changes to the site using git branches (for team
-members) or forks (for community members), and preview and test locally using the
-Docker container. 
+Internal team members typically edit content for new posts or pages in a Google
+Doc, where the content is reviewed and commented on by others. Once ready, the
+Doc is converted to Markdown and added to a git branch for final review here.
+
+Team members should always make changes to the site using a git branch (not
+`main`). Community contributors should fork this repository, and preview/test changes
+locally using provided the Docker container.
 
 When ready, team members may push their branch to preview (if using the
 `sandbox-*` branch name pattern) and submit a Pull Request to the `main` branch for code
-review. Non-team members should preview their changes locally, and issue a Pull
+review. Community contributors should preview their changes locally, and issue a Pull
 Request from their fork to our `main` branch.
 
 Once review is completed, a repository owner will tag a release to publish.
