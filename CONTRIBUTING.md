@@ -161,9 +161,9 @@ image created by continuous integration on the `etl-schema` repository.
   to generated updated schema include files. Don't forget to update the image
   tag to the latest release tag.
 
-  ```sh
+```sh
 docker run -v $PWD:/_includes -it measurementlab/generate-schema-docs:latest -doc.output /_includes
-  ```
+```
 
 [schema]: https://github.com/m-lab/etl/tree/master/schema/descriptions
 [tags]: https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags
