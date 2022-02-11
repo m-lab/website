@@ -162,8 +162,7 @@ image created by continuous integration on the `etl-schema` repository.
   tag to the latest release tag.
 
   ```sh
-  docker run -v $PWD:/ -w /workspace -it \
-    measurementlab/generate-schema-docs:v2.4.2 -doc.output _includes
+docker run -v $PWD:/_includes -it measurementlab/generate-schema-docs:latest -doc.output /_includes
   ```
 
 [schema]: https://github.com/m-lab/etl/tree/master/schema/descriptions
