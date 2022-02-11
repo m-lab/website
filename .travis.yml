@@ -38,7 +38,7 @@ deploy:
   on:
     repo: m-lab/website
     all_branches: true
-    condition: "$TRAVIS_BRANCH == master && $TRAVIS_EVENT_TYPE == push"
+    condition: "$TRAVIS_BRANCH == main && $TRAVIS_EVENT_TYPE == push"
 
 ## - production
 - provider: script
