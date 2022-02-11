@@ -151,12 +151,12 @@ Schema descriptions for M-Lab tables and views are updated using a Dockerhub
 image created by continuous integration on the `etl-schema` repository.
 
 * Update or make additions to the templated schema descriptions in:
-  [https://github.com/m-lab/etl/tree/master/schema/descriptions][schema]
+  [https://github.com/m-lab/etl-schema/tree/master/schema/descriptions][schema]
 * Commit changes to the schema descriptions, and tag a release using the
   pattern `vX.X.X`. The latest tags can be found in:
-    [https://github.com/m-lab/etl/tags](https://github.com/m-lab/etl/tags)
+    [https://github.com/m-lab/etl-schema/tags](https://github.com/m-lab/etl/tags)
 * Once tagged, wait for the new dockerhub image to be available in
-  [https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags][tags]
+  [https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/](https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/)
 * Use the command below in the root folder of the website repository
   to generated updated schema include files. Don't forget to update the image
   tag to the latest release tag.
@@ -165,7 +165,7 @@ image created by continuous integration on the `etl-schema` repository.
 docker run -v $PWD:/_includes -it measurementlab/generate-schema-docs:latest -doc.output /_includes
 ```
 
-[schema]: https://github.com/m-lab/etl/tree/master/schema/descriptions
+[schema]: https://github.com/m-lab/etl-schema/tree/master/schema/descriptions
 [tags]: https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags
 
 ## Including Jupyter Notebooks in Pages or Posts
