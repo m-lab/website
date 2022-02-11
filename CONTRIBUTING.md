@@ -21,7 +21,7 @@ Docker builds. Remove locally installed dependencies if this happens to you.
 
 ## Get the site with Git
 
-* Clone this repositoryL: `git clone git@github.com:m-lab/website.git`
+* Clone this repository: `git clone git@github.com:m-lab/website.git`
 * Setup the pre-commit hook:
 
   ```sh
@@ -132,7 +132,7 @@ View the generated site by visiting: [http://localhost:4000/](http://localhost:4
 | notebooks | Contains Jupyter notebooks to be included on pages or posts. |
 | publications | Contains all the pdfs and docs that are included or linked in the site. |
 | static | Contains additional static content. |
-| travis | Submodule for [m-lab/travis][https://github.com/m-lab/travis] to support deployment automation in Travis CI. |
+| travis | Submodule for [m-lab/travis](https://github.com/m-lab/travis) to support deployment automation in Travis CI. |
 | .firebaserc | Defines the Firebase project and hosting. Used by Travis CI to automate publishing of tagged releases. |
 | .gitignore | Defines which files and file patterns should be excluded from Git commits. |
 | .gitmodules | Defines the Git submodules used in this repo. |
@@ -147,14 +147,15 @@ View the generated site by visiting: [http://localhost:4000/](http://localhost:4
 
 ### Updating Include Files for BigQuery Table/View Schemas
 
-Schema descriptions for M-Lab tables and views are updated using a Dockerhub
-image created by continuous integration on the `etl-schema` repository.
+Schema descriptions for M-Lab tables and views are located in the `m-lab/etl`
+repository. They are updated for this site using a Dockerhub
+image created by continuous integration on the `m-lab/etl-schema` repository.
 
 * Update or make additions to the templated schema descriptions in:
-  [https://github.com/m-lab/etl-schema/tree/master/schema/descriptions][schema]
+  [https://github.com/m-lab/etl/tree/master/schema/descriptions][schema]
 * Commit changes to the schema descriptions, and tag a release using the
   pattern `vX.X.X`. The latest tags can be found in:
-    [https://github.com/m-lab/etl-schema/tags](https://github.com/m-lab/etl/tags)
+    [https://github.com/m-lab/etl/tags](https://github.com/m-lab/etl/tags)
 * Once tagged, wait for the new dockerhub image to be available in
   [https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/](https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/)
 * Use the command below in the root folder of the website repository
@@ -165,7 +166,7 @@ image created by continuous integration on the `etl-schema` repository.
 docker run -v $PWD:/_includes -it measurementlab/generate-schema-docs:latest -doc.output /_includes
 ```
 
-[schema]: https://github.com/m-lab/etl-schema/tree/master/schema/descriptions
+[schema]: https://github.com/m-lab/etl/tree/master/schema/descriptions
 [tags]: https://hub.docker.com/repository/docker/measurementlab/generate-schema-docs/tags
 
 ## Including Jupyter Notebooks in Pages or Posts
