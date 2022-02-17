@@ -167,10 +167,16 @@ ndt_1635357954_0000000000000031.00000.jsonl.zst
 ndt_1635357954_0000000000000032.00000.jsonl.zst
 ```
 
-Each is an archive compressed by the `zstd` utility. You'll need to install it
-using `sudo apt install zstd`, then use a command like this to extract a result:
-`zstd -d ndt_1635357954_0000000000000021.00000.jsonl.zst`. The result is a
-single JSONL test result: `ndt_1635357954_0000000000000021.00000.jsonl`
+Each is an archive compressed by the `zstd` utility. To uncompress the archive
+and dump the json content into a usable format, the M-Lab engineering team
+has [provided](https://github.com/m-lab/tcp-info/tree/master/cmd/csvtool#readme)
+a tool called `csvtool`:
+
+```
+go get github.com/m-lab/tcp-info/cmd/csvtool 
+docker run -v $PWD:/data --rm --entrypoint /bin/zstd -it measurementlab/tcp-info:v1.5.3 -cd /
+data/ndt_1635357954_0000000000000032.00000.jsonl.zst | ~/bin/csvtool
+```
 
 ## Optional Bonus! Generating and Using an SSL Certificate from Let's Encrypt
 
@@ -268,13 +274,7 @@ starts so the server always starts when the server reboots or restarts.
 
 * Enable Docker: `sudo systemctl enable docker`'
 * Then use the `--restart=always` flag with your Docker command using the
-  `--restart=always` flag:
-
-```~bash
-docker run -d --restart=always       \
-...
-```
-<br>
+  `--restart=always` flag in the Docker command above
 
 ## Wrap up
 
