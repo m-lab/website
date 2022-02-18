@@ -239,7 +239,7 @@ final graph of the colab notebook. We can see some interesting results for peak
 and off peak metrics in Q3 2020 for Comcast in 21837 in the chart below. 
 
 ![NDT Peak/Off-Peak Comparison of Comcast Users in Maryland Postal Code 21837 in
-Q3 2020]({{ site.baseurl }}/images/blog/2022-02-17-arc-research3/peak-off-peak-21837.png)
+Q3 2020]({{ site.baseurl }}/images/blog/2022-02-21-arc-research3/peak-off-peak-21837.png)
 
 At first glance we can see the metrics for off-peak times are oddly the same.
 The peak hours graphs show some variation. In the Colab notebook, we can hover
@@ -247,9 +247,9 @@ over each bar to reveal the rounded throughput measured, and view the tables
 below showing the number of samples and the number of unique IP addresses that
 produced the sample. This reveals a very small number of tests and IP addresses:
 
-![Example 3 - Number of Tests and Unique IPs in Peak Hours]({{ site.baseurl }}/images/blog/2022-02-17-arc-research3/21837-peak-num_samples_ips.png)
+![Example 3 - Number of Tests and Unique IPs in Peak Hours]({{ site.baseurl }}/images/blog/2022-02-21-arc-research3/21837-peak-num_samples_ips.png)
 ![Example 3 - Number of Tests and Unique IPs in Off-Peak Hours]({{ site.baseurl
-}}/images/blog/2022-02-17-arc-research3/21837-off-peak_num_samples_ips.png)
+}}/images/blog/2022-02-21-arc-research3/21837-off-peak_num_samples_ips.png)
 
 This should make it clear that we don’t have enough data in the sample from
 enough unique users to really trust these results to be generalizable across the
@@ -268,9 +268,9 @@ graph below which can be explored in more detail in our notebook.
 
 ![NDT Peak/Off-Peak Comparison of Comcast Users in Maryland Postal Code 21216 in
 Q3 2020]({{ site.baseurl }}/images/blog/2022-02-17-arc-research3/peak-off-peak-21216.png)
-![Example 4 - Number of Tests and Unique IPs in Peak Hours]({{ site.baseurl }}/images/blog/2022-02-17-arc-research3/21216-peak-num_samples_ips.png)
+![Example 4 - Number of Tests and Unique IPs in Peak Hours]({{ site.baseurl }}/images/blog/2022-02-21-arc-research3/21216-peak-num_samples_ips.png)
 ![Example 4 - Number of Tests and Unique IPs in Off-Peak Hours]({{ site.baseurl
-}}/images/blog/2022-02-17-arc-research3/21216-off-peak-num_samples_ips.png)
+}}/images/blog/2022-02-21-arc-research3/21216-off-peak-num_samples_ips.png)
 
 ## Wrapping up
 
