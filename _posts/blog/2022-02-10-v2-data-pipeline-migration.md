@@ -68,7 +68,7 @@ already present in the `measurement-lab.ndt_raw` dataset.
 
 | To be removed | Use instead |
 | --------------| ----------- |
-| `ndt.traceroute` (v1)	| `ndt_raw.traceroute_legacy` |
+| `ndt.traceroute` (v1)	| `ndt_raw.paris1_legacy` |
 | `ndt.ndt5` (v1)       | `ndt_raw.ndt5_legacy` |
 | `ndt.tcpinfo` (v1)    | `ndt_raw.tcpinfo_legacy` |
 | `ndt.web100` (v1)     | `ndt_raw.web100_legacy` |
@@ -105,6 +105,12 @@ naming conventions, including:
 * scamper1
 * tcpinfo
 * pcap
+
+*UPDATE*: 2022-02-28 - we changed the alternate name for the legacy
+`ndt.traceroute` view to `ndt_raw.paris1_legacy` (instead of
+`ndt_raw.traceroute_legacy`) to be consistent with the underlying datatype name
+and further move away from uses of "traceroute" as a single datatype name, when
+instead "traceroute" is a dataset consisting of many sources.
 
 [platform]: https://www.measurementlab.net/blog/the-platform-has-landed
 [v1-pipeline]: https://www.measurementlab.net/blog/etl-pipeline
