@@ -18,7 +18,7 @@ As an open, crowd-sourced dataset, M-Lab aims to protect the privacy of users wh
 If you can’t make it, but want to provide feedback, the session will be recorded. If you can attend though, please do, so we can engage in an active group dialogue as much as possible. 
 
 ## To RSVP
-- If you have previously RSVP’d to our community calls, you should have already received a calendar invite with a Zoom link included. If not, please reply directly to this email. 
+- If you have previously RSVP’d to our community calls, you should have already received a calendar invite with a Zoom link included. If not, please reach out to laiyi@measurementlab.net.
 - If you have not previously RSVP’d, but would like to attend, [please do so here](https://docs.google.com/forms/d/e/1FAIpQLSeHKN2MUP1IAReB8KNJM9jIdbazpaUQscdj0zZ5PbbO9K0fTA/viewform). You’ll be sent a Zoom link shortly after.
 
 ## Please Note
