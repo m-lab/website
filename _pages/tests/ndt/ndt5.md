@@ -34,5 +34,5 @@ Github][ndt5-metrics]{:target="_blank"}.
 ## ndt5 BigQuery Schema
 
 <div class="table-responsive" markdown="1">
-{% include schema_ndt5resultrow.md %}
+{% include schema_ndt5resultrowv2.md %}
 </div>
