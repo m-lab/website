@@ -232,6 +232,14 @@ current BigQuery Views, please review the pages below:
 * [ndt7-client-go](https://github.com/m-lab/ndt7-client-go){:target="_blank"}
 * [ndt7-js](https://github.com/m-lab/ndt7-js/){:target="_blank"}
 
+**NDT Community-Supported Clients**
+* https://github.com/m-lab/ndt7-client-ios (swift)
+* https://github.com/m-lab/ndt7-client-android (kotlin)
+* https://github.com/m-lab/ndt7-client-android-java (java)
+* https://github.com/measurement-kit/libndt/blob/master/single_include/libndt.hpp (c++, missing [Locate v2][locatev2] support, help welcome)
+
+[locatev2]: https://github.com/m-lab/locate/blob/master/USAGE.md
+
 ## Citing the M-Lab NDT Dataset
 
 Please cite the NDT data set as follows: **The M-Lab NDT Data Set, &lt;date range used&gt; https://measurementlab.net/tests/ndt**
