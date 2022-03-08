@@ -164,6 +164,9 @@
 | raw.Upload.**ClientMetadata** | RECORD | Client-reported metadata as name/value pairs. |
 | raw.Upload.ClientMetadata.**Name** | STRING | If set, contains text that identifies and provides context for the corresponding metadata value. For example, "OS" or "clientApplication" |
 | raw.Upload.ClientMetadata.**Value** | STRING | If set, contains a value corresponding to metadata name. For example, "Windows 10" or "ndtJS" |
+| raw.Upload.**ServerMetadata** | RECORD | Authoritative metadata added by the server configuration. |
+| raw.Upload.ServerMetadata.**Name** | STRING | If set, contains the name of a single piece of metadata. This name will be the same for all measurements collected while this server was running with this configuration. |
+| raw.Upload.ServerMetadata.**Value** | STRING | If name is set, contains the text of a server configuration value. This value will be the same for all measurements collected while this server was running with this configuration. |
 | raw.**Download** | RECORD |  |
 | raw.Download.**UUID** | STRING | UUID for TCP connection for this measurement. |
 | raw.Download.**StartTime** | TIMESTAMP | The date and time when the measurement began in UTC. |
@@ -303,3 +306,6 @@
 | raw.Download.**ClientMetadata** | RECORD | Client-reported metadata as name/value pairs. |
 | raw.Download.ClientMetadata.**Name** | STRING | If set, contains text that identifies and provides context for the corresponding metadata value. For example, "OS" or "clientApplication" |
 | raw.Download.ClientMetadata.**Value** | STRING | If set, contains a value corresponding to metadata name. For example, "Windows 10" or "ndtJS" |
+| raw.Download.**ServerMetadata** | RECORD | Authoritative metadata added by the server configuration. |
+| raw.Download.ServerMetadata.**Name** | STRING | If set, contains the name of a single piece of metadata. This name will be the same for all measurements collected while this server was running with this configuration. |
+| raw.Download.ServerMetadata.**Value** | STRING | If name is set, contains the text of a server configuration value. This value will be the same for all measurements collected while this server was running with this configuration. |

@@ -1,24 +1,35 @@
 ---
 layout: page
 permalink: /tests/ndt/ndt5/
-title: "ndt5 Protocol - NDT (Network Diagnostic Tool)"
+title: "ndt5 Data - NDT (Network Diagnostic Tool)"
 breadcrumb: tests
 ---
 
-# ndt5 Protocol - NDT (Network Diagnostic Tool)
+# ndt5 Data - NDT (Network Diagnostic Tool)
 
-The ndt5 protocol in [ndt-server](https://github.com/m-lab/ndt-server/tree/master/ndt5/){:target="_blank"} supports the many NDT clients which use the previous web100 legacy NDT server. As a part of M-Lab's platform upgrade in 2019, [ndt-server](https://github.com/m-lab/ndt-server/){:target="_blank"} replaced the former web100 based ndt4 protocol with the ndt5 protocol, and added the ndt7 protocol for future client use. New clients will be encouraged to use the ndt7 protocol once the platform transition is completed.
+Since M-Lab's platform upgrade in 2019, the ndt5 protocol continues to support
+many NDT clients that used earlier [NDT protocol versions][ndt-evolution].
+Measurements from the ndt5 protocol are based on [TCP INFO][tcp-info]
+instrumentation.
 
-NDT data collected before **2019-07-19** used the Web100 Linux kernel patch for TCP statistics. This data can be found in the [NDT web100 (legacy) dataset]({{ site.baseurl }}/tests/ndt/web100).
+*NOTE*: New client integrations are strongly encouraged to use the [ndt7
+protocol][ndt7-clients]{:target="_blank"} for better support, ease of
+integraiton, and client performance.
 
-NDT data using the ndt5 protocol collected on or after **2019-07-19** uses [tcp-info]({{ site.baseurl }}/learn) for all TCP metrics is available in both [raw format in Google Cloud Storage](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt){:target="_blank"} and in [queryable format in BigQuery](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=ndt5&page=table){:target="_blank"}.
+* [ndt5 raw data in Cloud Storage][ndt5-storage]
 
-More details about the ndt5 protocol can be found in the [README for ndt5 on Github](https://github.com/m-lab/ndt-server/tree/master/ndt5#ndt5-metrics){:target="_blank"}.
+[ndt-evolution]: {{ site.baseurl }}/blog/evolution-of-ndt/
+[ndt5-server]: https://github.com/m-lab/ndt-server/tree/master/ndt5/
+[ndt-server]: https://github.com/m-lab/ndt-server/
+[tcp-info]: {{ site.baseurl }}/tests/tcp-info
+[ndt5-storage]: https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt/ndt5
+[ndt5-table]: https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=ndt5&page=table
+[ndt7-clients]: {{ site.baseurl }}/tests/ndt/#source-code
 
 ## ndt5 BigQuery Schema
 
-**Note:** The ndt5 schema has not yet been migrated to standard columns. Until that time, this schema should be considered temporary or unstable.
+* [ndt5 parsed & annotated dataset in BigQuery][ndt5-table]
 
 <div class="table-responsive" markdown="1">
-{% include schema_ndt5resultrow.md %}
+{% include schema_ndt5resultrowv2.md %}
 </div>

@@ -37,15 +37,18 @@ the new one we are now using. We now refer to these as "datatypes" for the NDT t
   * Used the Reno TCP congestion control algorithm
   * Ran from 2009-02-18 to 2019-11-20
 * [ndt5]({{ site.baseurl }}/tests/ndt/ndt5) is an NDT protocol designed to be backward compatible with legacy NDT clients
-  * Relies on tcp-info for TCP statistics
-  * Collected using [ndt-server](https://github.com/m-lab/ndt-server), which follows the legacy NDT protocol to support existing NDT clients that use it
+  * Relies on [tcp-info][tcp-info] for TCP statistics
+  * Collected using [ndt-server][ndt-server], which follows the legacy NDT protocol to support existing NDT clients that use it
   * Uses the Cubic TCP congestion control algorithm
-  * Started 2019-07-18 and continues to present. The evolution to ndt7 is driven by client upgrades and is expected to have a very long tail
+  * Started 2019-07-18 and continues to present.
 * [ndt7]({{ site.baseurl }}/tests/ndt/ndt7) is an NDT protocol that uses TCP BBR where available, operates on standard HTTP(S) ports (80, 443)
-  * Relies on tcp-info for TCP statistics
-  * Collected using [ndt-server](https://github.com/m-lab/ndt-server)
+  * Relies on [tcp-info][tcp-info] for TCP statistics
+  * Collected using [ndt-server][ndt-server]
   * Uses the BBR TCP congestion control algorithm, falling back to Cubic when BBR is not available on the client side
-  * Started 2020-02-18 and continues to present
+  * Started 2020-02-18 and continues to present.
+
+[ndt-server]: https://github.com/m-lab/ndt-server
+[tcp-info]: {{ site.baseurl }}/tests/tcp-info
 
 ## Data Collected by NDT
 
@@ -147,7 +150,7 @@ of the terminology has evolved slightly since the blog posts.
 
 NDT Extended Views are published in the `ndt_intermediate` dataset, and
 contain every row from the raw views, with added columns
-describing everything that we know about the data. 
+describing everything that we know about the data.
 
 <span style="color: black;">**Custom unified views based on the NDT Extended Views
 should be the starting point for nearly all alternative analyses of M-Lab
@@ -178,7 +181,7 @@ Research][custom-views-subqueries]
   * `measurement-lab.ndt_intermediate.extended_web100_uploads`
 
 [custom-views-subqueries]: {{ site.baseurl }}/tests/ndt/views/custom
-  
+
 ## Raw Views
 
 NDT Raw Views are published in the `ndt_raw` dataset, and provide a 1-to-1
@@ -228,6 +231,14 @@ current BigQuery Views, please review the pages below:
 * [ndt5-client-go](https://github.com/m-lab/ndt5-client-go){:target="_blank"}
 * [ndt7-client-go](https://github.com/m-lab/ndt7-client-go){:target="_blank"}
 * [ndt7-js](https://github.com/m-lab/ndt7-js/){:target="_blank"}
+
+**NDT Community-Supported Clients**
+* https://github.com/m-lab/ndt7-client-ios (swift)
+* https://github.com/m-lab/ndt7-client-android (kotlin)
+* https://github.com/m-lab/ndt7-client-android-java (java)
+* https://github.com/measurement-kit/libndt/blob/master/single_include/libndt.hpp (c++, missing [Locate v2][locatev2] support, help welcome)
+
+[locatev2]: https://github.com/m-lab/locate/blob/master/USAGE.md
 
 ## Citing the M-Lab NDT Dataset
 
