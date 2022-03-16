@@ -13,6 +13,7 @@ RUN apt-get install -y nodejs
 
 WORKDIR /home/website
 COPY Gemfile .
+COPY Gemfile.lock .
 RUN gem install bundler
 RUN bundle update
 RUN bundle install
