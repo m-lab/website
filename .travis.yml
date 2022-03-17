@@ -13,9 +13,6 @@ script:
 - sudo -H python3 -m pip install --upgrade setuptools pip
 - nvm install $NODE_VERSION
 - npm install -g firebase-tools
-- gem install bundler
-- bundle update
-- bundle install
 - "./_tests/travis-checks --quick"
 
 deploy:
@@ -24,7 +21,7 @@ deploy:
 - provider: script
   skip_cleanup: true
   script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/"
+    && gsutil -m cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/"
   on:
     repo: m-lab/website
     all_branches: true
@@ -34,7 +31,7 @@ deploy:
 - provider: script
   skip_cleanup: true
   script: "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
-    && gsutil cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/"
+    && gsutil -m cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/"
   on:
     repo: m-lab/website
     all_branches: true
