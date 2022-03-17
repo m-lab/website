@@ -8,7 +8,7 @@ breadcrumb: tests
 
 # Traceroute
 
-For every TCP connection to an M-Lab server, the Traceroute core service collects network path information from the M-Lab server back to the client IP that initiated the connection. This traceroute collection is done by M-Lab’s `[traceroute-caller](https://github.com/m-lab/traceroute-caller/)` which uses traceroute tools like `[Paris Traceroute](https://paris-traceroute.net/)` and `[scamper](https://www.caida.org/catalog/software/scamper/)` (from the [Center for Applied Internet Data Analysis](https://www.caida.org/)) to collect the actual traceroute data between the M-Lab server and the client.
+For every TCP connection to an M-Lab server, the Traceroute core service collects network path information from the M-Lab server back to the client IP that initiated the connection. This traceroute collection is done by M-Lab’s [traceroute-caller](https://github.com/m-lab/traceroute-caller/) which uses traceroute tools like [Paris Traceroute](https://paris-traceroute.net/) and [scamper](https://www.caida.org/catalog/software/scamper/) (from the [Center for Applied Internet Data Analysis](https://www.caida.org/)) to collect the actual traceroute data between the M-Lab server and the client.
 
 Traceroute is both one of the most unique and the most complex datatypes on the M-Lab platform. The traceroute format has evolved over time, so in the context of M-Lab the name `traceroute` has meant several things:
 
@@ -55,7 +55,7 @@ As mentioned earlier, up until early September 2021, traceroutes were archived i
     * [NDT](https://pantheon.corp.google.com/storage/browser/archive-measurement-lab/ndt/scamper1)
     * [Host](https://pantheon.corp.google.com/storage/browser/archive-measurement-lab/host/scamper1)
     * [Neubot](https://pantheon.corp.google.com/storage/browser/archive-measurement-lab/neubot/scamper1)
-* `[paris-traceroute](https://pantheon.corp.google.com/storage/browser/archive-measurement-lab/paris-traceroute/2019?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false)` (May 2013 to November 2019)
+* [paris-traceroute](https://pantheon.corp.google.com/storage/browser/archive-measurement-lab/paris-traceroute/2019?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false) (May 2013 to November 2019)
 
 Each bucket contains thousands of compressed files in `tar` format organized by date and each `tar` file contains individual traceroutes between an M-Lab server and a client.
 
@@ -231,7 +231,7 @@ M-Lab parses all traceroute data from NDT measurement services into BigQuery tab
 
 BigQuery Tables/Views/Schema(s) for traceroute data.
 
-As the schema names suggest, `scamper1` is created by the `[scamper](https://www.caida.org/catalog/software/scamper/)` tool and `paris1_legacy` is created by the `[Paris Traceroute](https://paris-traceroute.net/)` tool.  The `scamper1` schema uses standard columns as described in the blog post [Long Term Supported Schemas Using Standardized BigQuery Columns](https://www.measurementlab.net/blog/long-term-schema-support-standard-columns/#long-term-supported-schemas-using-standardized-bigquery-columns).  The `paris1_legacy` schema does not use standard columns and, therefore, has the `_legacy` suffix. As mentioned above, M-Lab is not using the `Paris Traceroute` tool anymore.
+As the schema names suggest, `scamper1` is created by the [scamper](https://www.caida.org/catalog/software/scamper/) tool and `paris1_legacy` is created by the [Paris Traceroute](https://paris-traceroute.net/) tool.  The `scamper1` schema uses standard columns as described in the blog post [Long Term Supported Schemas Using Standardized BigQuery Columns]({{ site.baseurl }}/tests/traceroute/scamper1/blog/long-term-schema-support-standard-columns/#long-term-supported-schemas-using-standardized-bigquery-columns).  The `paris1_legacy` schema does not use standard columns and, therefore, has the `_legacy` suffix. As mentioned above, M-Lab is not using the `Paris Traceroute` tool anymore.
 
 
 * scamper1: [measurement-lab.ndt_raw.scamper1](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt_raw&t=scamper1&page=table)
