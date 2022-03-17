@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /tests/traceroute/
-title: "Traceroute"
+permalink: /tests/traceroute-new/
+title: "Traceroute New"
 breadcrumb: tests
 ---
 
