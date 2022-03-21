@@ -8,7 +8,7 @@ breadcrumb: tests
 
 # Traceroute
 
-For every TCP connection to an M-Lab server, the Traceroute core service collects network path information from the M-Lab server back to the client IP that initiated the connection. This traceroute collection is done by M-Lab’s [traceroute-caller](https://github.com/m-lab/traceroute-caller/) which uses traceroute tools like [Paris Traceroute](https://paris-traceroute.net/) and [scamper](https://www.caida.org/catalog/software/scamper/) (from the [Center for Applied Internet Data Analysis](https://www.caida.org/)) to collect the actual traceroute data between the M-Lab server and the client.
+For every TCP connection to an M-Lab server, the Traceroute core service collects network path information from the M-Lab server back to the client IP that initiated the connection. This traceroute collection is done by M-Lab’s [`traceroute-caller`](https://github.com/m-lab/traceroute-caller/) which uses traceroute tools like [Paris Traceroute](https://paris-traceroute.net/) and [scamper](https://www.caida.org/catalog/software/scamper/) (from the [Center for Applied Internet Data Analysis](https://www.caida.org/)) to collect the actual traceroute data between the M-Lab server and the client.
 
 Traceroute is both one of the most unique and the most complex datatypes on the M-Lab platform. The traceroute format has evolved over time, so in the context of M-Lab the name `traceroute` has meant several things:
 
@@ -19,18 +19,18 @@ Traceroute is both one of the most unique and the most complex datatypes on the 
 * In 2020, the real-time UUID annotator became an architectural requirement.
 * In September 2021, we stopped using the datatype name `traceroute` in favor of `scamper1` (`traceroute` and `scamper1` datatypes are identical) and made traceroute data generated before September 2021 available as `scamper1`. Also, for hop annotations at runtime, we started generating a structured `.json` file for a new datatype called `hopannotation1`. We also synthetically generated `hopannotation1` for historical `scamper1` (i.e., for traceroute data that was not annotated in real-time). 
 
-In short, for every TCP connection from a client to an M-Lab server, traceroute-caller invokes `scamper` to collect a [Multipath Detection Algorithm](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.169.7024&rep=rep1&type=pdf) (MDA) traceroute and uses the [uuid-annotator](https://github.com/m-lab/uuid-annotator) to annotate the hops in the traceroute data. Therefore, for every TCP connection, traceroute-caller generates the following two files that are archived in Google Cloud Storage (GCS) and parsed into Google BigQuery `scamper1` and `hopannotation1` tables:
+In short, for every TCP connection from a client to an M-Lab server, `traceroute-caller` invokes `scamper` to collect a [Multipath Detection Algorithm](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.169.7024&rep=rep1&type=pdf) (MDA) traceroute and uses the [uuid-annotator](https://github.com/m-lab/uuid-annotator) to annotate the hops in the traceroute data. Therefore, for every TCP connection, `traceroute-caller` generates the following two files that are archived in Google Cloud Storage (GCS) and parsed into Google BigQuery `scamper1` and `hopannotation1` tables:
 
 
 
 * Traceroute data (`scamper1` datatype)
-* Hope annotations (`hopannotation1` dataype)
+* Hop annotations (`hopannotation1` dataype)
 
 
 
 ## Source Code
 
-* [traceroute-caller source code](https://github.com/m-lab/traceroute-caller/)
+* [`traceroute-caller` source code](https://github.com/m-lab/traceroute-caller/)
 * [scamper source code](https://www.caida.org/catalog/software/scamper/#H2157)
 * [paris-traceroute source code](https://github.com/libparistraceroute)
 
@@ -45,21 +45,21 @@ Please cite this dataset as follows: **The M-Lab Traceroute Dataset, &lt;date ra
 
 ## Traceroute Data in GCS
 
-Data collected by traceroute-caller is available in raw format in Google Cloud Storage (GCS) for each one of the Host, NDT, and Neubot measurement services.
+Data collected by `traceroute-caller` is available in raw format in Google Cloud Storage (GCS) for each one of the Host, NDT, and Neubot measurement services.
 
 As mentioned earlier, up until early September 2021, traceroutes were archived in GCS as `traceroute` datatype. Since then, they are archived as `scamper1` datatype without any changes to the content. You can visit the links below to access traceroute archives:
 
 
 
 * `scamper1` (March 2019 to Present) 
-    * [NDT](https://pantheon.corp.google.com/storage/browser/archive-measurement-lab/ndt/scamper1)
-    * [Host](https://pantheon.corp.google.com/storage/browser/archive-measurement-lab/host/scamper1)
-    * [Neubot](https://pantheon.corp.google.com/storage/browser/archive-measurement-lab/neubot/scamper1)
-* [paris-traceroute](https://pantheon.corp.google.com/storage/browser/archive-measurement-lab/paris-traceroute/2019?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false) (May 2013 to November 2019)
+    * [NDT](https://console.cloud.google.com/storage/browser/archive-measurement-lab/ndt/scamper1)
+    * [Host](https://console.cloud.google.com/storage/browser/archive-measurement-lab/host/scamper1)
+    * [Neubot](https://console.cloud.google.com/storage/browser/archive-measurement-lab/neubot/scamper1)
+* [paris-traceroute](https://console.cloud.google.com/storage/browser/archive-measurement-lab/paris-traceroute) (May 2013 to November 2019)
 
 Each bucket contains thousands of compressed files in `tar` format organized by date and each `tar` file contains individual traceroutes between an M-Lab server and a client.
 
-Paris Traceroute tar files are organized by the M-Lab server (e.g., `mlab1.lax04`) that ran the traceroute and individual files are normal text files with a `.paris` suffix. For example, below is a snippet of the tar file `20190610T000000Z-mlab1-lax04-paris-traceroute-0000.tgz`:
+`Paris Traceroute` `tar` files are organized by the M-Lab server (e.g., `mlab1.lax04`) that ran the traceroute and individual files are normal text files with a `.paris` suffix. For example, below is a snippet of the `tar` file `20190610T000000Z-mlab1-lax04-paris-traceroute-0000.tgz`:
 
 
 ```
@@ -73,7 +73,7 @@ Paris Traceroute tar files are organized by the M-Lab server (e.g., `mlab1.lax04
 ```
 
 
-`scamper` tar files are organized in [JSONL](https://jsonlines.org/) format and each JSONL file contains four lines.  The first line is a metadata line created by traceroute-caller followed by `scamper` output as the remaining three lines:
+`scamper` `tar` files are organized in [JSONL](https://jsonlines.org/) format and each JSONL file contains four lines.  The first line is a metadata line created by `traceroute-caller` followed by `scamper` output as the next three lines:
 
 
 
@@ -82,7 +82,7 @@ Paris Traceroute tar files are organized by the M-Lab server (e.g., `mlab1.lax04
 * Line 3: MDA traceroute data
 * Line 4: cycle stop
 
-It is worth noting that the idea of a cycle is somewhat outdated. The original idea around 2003 was that `scamper` would do cycles across the same set of addresses over time. A list was a unique set of addresses, and a cycle was a pass over it. This might be an artifact of `[skitter](https://catalog.caida.org/details/software/skitter)`, or `[arts++](https://catalog.caida.org/details/software/arts)`. So the cycle id probably starts at zero, and increments by one each pass through a list.
+It is worth noting that the idea of a cycle is somewhat outdated. The original idea around 2003 was that `scamper` would do cycles across the same set of addresses over time. A list was a unique set of addresses, and a cycle was a pass over it. This might be an artifact of [`skitter`](https://catalog.caida.org/details/software/skitter), or [`arts++`](https://catalog.caida.org/details/software/arts). So the cycle id probably starts at zero, and increments by one each pass through a list.
 
 The commands below show how an individual traceroute file can be viewed in a human-readable format using the `jq` tool.  When printed in human-readable format, the JSONL files can be anywhere in size from around 100 lines to more than 4,000 lines. In the example below, “...” denotes output lines that were removed for brevity:
 
@@ -222,7 +222,7 @@ $ jq . < 20220223T002735Z_ndt-4fwxc_1642668804_000000000036DEB2.jsonl | more
 ```
 
 
-Note that `links` is a two-dimensional array.  This is because when there might be a per-packet load balancer, or an unresponsive hop, `scamper` creates a link structure that crosses that unresponsive hop / per packet load balancer until the path converges at a hop.  The nodes observed are in that array.
+Note that `links` is a two-dimensional array.  This is because when there might be a per-packet load balancer, or an unresponsive hop, `scamper` creates a link structure that crosses that per-packet load balancer, or unresponsive hop, until the path converges at a hop.  The nodes observed are in that array.
 
 
 ## Traceroute Data in BigQuery
@@ -231,7 +231,7 @@ M-Lab parses all traceroute data from NDT measurement services into BigQuery tab
 
 BigQuery Tables/Views/Schema(s) for traceroute data.
 
-As the schema names suggest, `scamper1` is created by the [scamper](https://www.caida.org/catalog/software/scamper/) tool and `paris1_legacy` is created by the [Paris Traceroute](https://paris-traceroute.net/) tool.  The `scamper1` schema uses standard columns as described in the blog post [Long Term Supported Schemas Using Standardized BigQuery Columns]({{ site.baseurl }}/tests/traceroute/scamper1/blog/long-term-schema-support-standard-columns/#long-term-supported-schemas-using-standardized-bigquery-columns).  The `paris1_legacy` schema does not use standard columns and, therefore, has the `_legacy` suffix. As mentioned above, M-Lab is not using the `Paris Traceroute` tool anymore.
+As the schema names suggest, `scamper1` is created by the [scamper](https://www.caida.org/catalog/software/scamper/) tool and `paris1_legacy` is created by the [Paris Traceroute](https://paris-traceroute.net/) tool.  The `scamper1` schema uses standard columns as described in the blog post [Long Term Supported Schemas Using Standardized BigQuery Columns]({{ site.baseurl }}/blog/long-term-schema-support-standard-columns/#long-term-supported-schemas-using-standardized-bigquery-columns).  The `paris1_legacy` schema does not use standard columns and, therefore, has the `_legacy` suffix. As mentioned above, M-Lab is not using the `Paris Traceroute` tool anymore.
 
 
 * scamper1: [measurement-lab.ndt_raw.scamper1](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt_raw&t=scamper1&page=table)
