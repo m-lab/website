@@ -31,8 +31,8 @@ In short, for every TCP connection from a client to an M-Lab server, `traceroute
 ## Source Code
 
 * [`traceroute-caller` source code](https://github.com/m-lab/traceroute-caller/)
-* [scamper source code](https://www.caida.org/catalog/software/scamper/#H2157)
-* [paris-traceroute source code](https://github.com/libparistraceroute)
+* [`scamper` source code](https://www.caida.org/catalog/software/scamper/#H2157)
+* [`paris-traceroute` source code](https://github.com/libparistraceroute)
 
 
 
