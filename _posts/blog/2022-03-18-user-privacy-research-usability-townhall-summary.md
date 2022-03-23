@@ -26,7 +26,7 @@ Slides used during the presentation can be found [here](https://docs.google.com/
 ## Summary 
 * The collection of IP addresses poses a set of challenges for some while also enabling research for others. 
     * For example, we need to be able to dedupe clients, which IP addresses enable us to do. 
-* We proposed an inventory of partial techniques to redact IP addresses which could be combined in various ways to provide more than one complete solution, with slightly different properties (e.g. the addition of more annotations).
+* We proposed an inventory of partial techniques to add annotation and redact IP addresses which could be combined in various ways to provide more than one complete solution, with slightly different properties.
 * We can make use of BigQuery’s column-specific Access Control Level (ACL)  capabilities.  
 * We are also considering Acceptable Use Agreements that could also be used to grant access to redacted data. 
 * Risks include: IP address leaking; significantly weakening traceroute research; and a series of IPv4 and IPv6 related risks. 
