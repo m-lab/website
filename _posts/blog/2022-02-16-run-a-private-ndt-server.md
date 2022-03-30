@@ -69,8 +69,8 @@ container to your local server.
 
 Then run the "fullstack" ndt server container, `measurementlab/ndt`, image from
 Measurement Lab's Dockerhub. Of course, substitute the IP address of your server
-in the command below, and change the ports if desired. Please note that some of
-the ndt server's fullstack image must be run as root.
+in the command below, and change the ports if desired. Please note that some
+components of the ndt fullstack image must be run as root.
 
 ```~bash
 sudo docker run -d --network=bridge                \
