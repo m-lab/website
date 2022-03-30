@@ -69,24 +69,24 @@ container to your local server.
 
 Then run the "fullstack" ndt server container, `measurementlab/ndt`, image from
 Measurement Lab's Dockerhub. Of course, substitute the IP address of your server
-in the command below, and change the ports if desired.
+in the command below, and change the ports if desired. Please note that some
+components of the ndt fullstack image must be run as root.
 
 ```~bash
-docker run -d --network=host                \
-           --user `id -u`:`id -g`           \
-           --volume `pwd`/certs:/certs:ro   \
-           --volume `pwd`/datadir:/var/spool/ndt  \
-           --volume `pwd`/var-local:/var/local \
-           --cap-drop=all                   \
-        measurementlab/ndt                  \
-           -cert /certs/cert.pem            \
-           -key /certs/key.pem              \
-           -datadir /datadir                \
-           -ndt7_addr 10.10.20.15:4443    \
-           -ndt7_addr_cleartext 10.10.20.15:8080 \
-           -ndt5_addr 10.10.20.15:3001    \
-           -ndt5_wss_addr 10.10.20.15:3010
-
+sudo docker run -d --network=bridge                \
+           -p 8080:8080 -p 4443:4443               \
+           -p 3001:3001 -p 3002:3002 -p 3010:3010  \
+           --volume `pwd`/certs:/certs:ro          \
+           --volume `pwd`/datadir:/var/spool/ndt   \
+           --volume `pwd`/var-local:/var/local     \
+        measurementlab/ndt:latest                  \
+           -cert /certs/cert.pem                   \
+           -key /certs/key.pem                     \
+           -datadir /datadir                       \
+           -ndt7_addr :4443                        \
+           -ndt7_addr_cleartext :8080              \
+           -ndt5_addr :3001                        \
+           -ndt5_wss_addr :3010
 ```
 Here we're starting the container in daemon mode, which results in a container
 ID getting printed to the terminal. For example:
