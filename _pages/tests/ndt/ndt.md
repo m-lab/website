@@ -207,7 +207,7 @@ has been parsed and imported into BigQuery.
   * `measurement-lab.ndt_raw.ndt5_legacy`
   * `measurement-lab.ndt_raw.web100_legacy`
   * `measurement-lab.ndt_raw.tcpinfo_legacy`
-  * `measurement-lab.ndt_raw.traceroute_legacy`
+  * `measurement-lab.ndt_raw.paris1_legacy`
   * `measurement-lab.ndt_raw.annotation`
 
 ## Example Queries and Updating Past Queries
