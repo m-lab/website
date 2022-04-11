@@ -18,7 +18,7 @@ Changes to our geographic annotations have resulted in changes to geographic fil
 ## Takeaways 
 
 * As of 2022-03-16, M-Lab client geographic annotations now refer to the [ISO3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) Subdivision standard for geographic annotations for all NDT data types. 
-* Queries that previously used `client.Geo.Region` to identify US states, should now use `client.Geo.Subdivsion1ISOCode` instead. 
+* Queries that previously used `client.Geo.Region` to identify US states, should now use `client.Geo.Subdivision1ISOCode` instead.
 Queries filtering on `client.Geo.Region` will return “no data.” 
 * If you ran queries prior to 2022-03-17 that used `client.Geo.Region` for dates between 2020-02 and 2022-03-17, you should rerun these queries using `client.Geo.Subdivsion1ISOCode` to get results that include ndt7.
 * These changes are part of a [long-term effort](https://www.measurementlab.net/blog/evolution-of-annotations/#evolution-of-m-lab's-geographic-and-network-annotations) to normalize and improve our geographic annotations by standardizing on ISO 3166-2 subdivision used by maxmind geo2 (vs FIPS-10-4 region coding used by maxmind geo1 formats). 
