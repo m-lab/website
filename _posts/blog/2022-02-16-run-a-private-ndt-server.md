@@ -73,9 +73,7 @@ in the command below, and change the ports if desired. Please note that some
 components of the ndt fullstack image must be run as root.
 
 ```~bash
-sudo docker run -d --network=bridge                \
-           -p 8080:8080 -p 4443:4443               \
-           -p 3001:3001 -p 3002:3002 -p 3010:3010  \
+sudo docker run -d --network=host                \
            --volume `pwd`/certs:/certs:ro          \
            --volume `pwd`/datadir:/var/spool/ndt   \
            --volume `pwd`/var-local:/var/local     \
