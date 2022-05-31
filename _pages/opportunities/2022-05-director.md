@@ -61,7 +61,7 @@ We are looking for someone with an entrepreneurial spirit to help grow the M-Lab
 * Measurement Lab is a fiscally sponsored project of [Code for Science & Society](https://codeforsociety.org), which offers employee benefits through TriNet including health insurance and retirement.
 * The team is distributed across the US and Europe, so while this position can be based anywhere, the candidate should be able to easily collaborate with Central European, US Eastern and Pacific time zones.
 * Travel to conferences, events, and team meetings is anticipated to be 20%.
-Salary Range: $100-110k
+* Salary Range: $100-110k
 
 # Application Process
 [Click here to apply!](https://airtable.com/shrMs0x8w15BQhXAy)
