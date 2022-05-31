@@ -40,7 +40,7 @@ Community tools are developed by other organizations or individuals, but which l
 * [Broadband Now.com](https://broadbandnow.com/speedtest){:target="_blank"}
 * [Canadian Internet Registration Authority - Internet Performance Test](https://performance.cira.ca){:target="_blank"}
 * [Google OneBox Search Results Widget](https://www.google.com/search?q=internet+speed+test&oq=internet+speed){:target="_blank"}
-* [Google Stadia](https://projectstream.google.com/speedtest){:target="_blank"}
+* [Google Stadia](https://stadia.google.com/speedtest){:target="_blank"}
 * [High Speed Internet.com](https://www.highspeedinternet.com/tools/speed-test){:target="_blank"}
 * [Minnesota Office of Broadband Development](https://mn.gov/deed/programs-services/broadband/checkspeedmn/){:target="_blank"}
 * [West London Business](https://www.westlondon.com/techwestlondon/partners/internet-connection-speed/){:target="_blank"}
