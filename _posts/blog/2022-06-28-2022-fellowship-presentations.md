@@ -21,8 +21,8 @@ Presentations will be 20-30 minutes with time for Q/A after and a 15 minute brea
 
 Time | Topic | Fellow
 11:00-11:45 | Localizing Neutrality Violations | Led by Zeinab Shmeis, supported by Muhammad Abdullah and Pavlos Nikolopoulos
-12:00-12:45 | Inferring QoE from active and passive measurements | Sanjay Chandrasekaran
-1:00-1:45 | Control-Plane-Triggered Traffic Performance Degradation Detection and NDTGuide, a Python package for NDT | Mingwei Zhang
+12:00-12:45 |  Control-Plane-Triggered Traffic Performance Degradation Detection and NDTGuide, a Python package for NDT | Mingwei Zhang
+1:00-1:45 | Inferring QoE from active and passive measurements | Sanjay Chandrasekaran
 
 
 Sessions will be recorded and posted online. 
