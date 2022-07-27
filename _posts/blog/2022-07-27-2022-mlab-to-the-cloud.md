@@ -17,9 +17,9 @@ M-Lab is excited to announce “M-Lab to the Cloud”, beginning with our pilot 
 
 Since our launch in 2009, M-Lab’s server-side software has been deployed on physical, bare metal machines. At the time, cloud storage and computing were only beginning to develop, but over the past decade the relevance of cloud technologies to Internet measurement has only increased.
 
-As of May 2022, M-Lab is proud to announce that we are expanding our infrastructure into the cloud. Our motivations include:
-* **Diversity of measured paths.** As an increasing amount of traffic is served from cloud architecture, including cloud nodes will diversify our representation of a user’s experience. Providing measurements from these pathways will benefit researchers who use our data to derive insights about the quality of user experience, as well as end users who use our tests to better understand the quality of their connection. 
-* **Flexible deployments.** Cloud deployments offer more flexibility and ease when deploying new servers and change the cost/benefit considerations forfactors when considering a new location.
+As of June 2022, M-Lab is proud to announce that we are expanding our infrastructure into the cloud. Our motivations include:
+* **Measure more Internet paths.**  Increasingly, users depend on services hosted in Cloud providers. By including Cloud providers as part of M-Lab's measurement platform, we will measure more paths representative of users' experience. Measuring these paths benefits researchers who use our data to derive insights about the quality of user experience, as well as end users who use our tests to better understand the quality of their connection. 
+* **Flexible deployments.** Cloud deployments offer more flexibility and ease when deploying new servers and change the cost/benefit considerations for factors when considering a new location.
 * **Alternate deployment models for measurement services.** Hosting measurements on cloud services may introduce novel approaches to measurement not possible with bare metal alone. We look forward to collaborating with the Internet Research community to discover what new measurements become possible with cloud architecture. 
 
 ## Pilot Deployment
@@ -28,4 +28,4 @@ As a first step, we’ve deployed a pilot deployment of NDT into Google Cloud. A
 
 ## Call for Collaborators
 
-We are using Google Cloud Platform as an initial test target, due to our team’s familiarity with GCP. However, our next target is test deployments within other cloud providers such as Amazon Web Services and Microsoft Azure. We are seeking partners to support our efforts either monetarily and/or with expertise in these services. [link to separate blog post with more explicit/detailed fundraising call] 
+We are using Google Cloud Platform as an initial test target, due to our team’s familiarity with GCP. However, our next target is test deployments within other cloud providers such as Amazon Web Services and Microsoft Azure. We are seeking partners to support our efforts either monetarily and/or with expertise in these services. 
