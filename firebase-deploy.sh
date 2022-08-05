@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 set -e
-tmpfile=$( mktemp )
-echo "${SERVICE_ACCOUNT_mlab_oti}" > $tmpfile
+tmpdir=$( mktemp -d )
+echo "${SERVICE_ACCOUNT_mlab_oti}" > $tmpdir/sa.json
 
 set -x
-export GOOGLE_APPLICATION_CREDENTIALS=$tmpfile
+export GOOGLE_APPLICATION_CREDENTIALS=$tmpdir/sa.json
 firebase use mlab-oti && firebase deploy --only hosting
