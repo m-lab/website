@@ -40,11 +40,7 @@ deploy:
 ## - production
 - provider: script
   skip_cleanup: true
-  script:
-    ( set +x; echo "${SERVICE_ACCOUNT_mlab_oti}" > /tmp/sa.json ) &&
-    export GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa.json &&
-    firebase use mlab-oti &&
-    firebase deploy --only hosting
+  script: "$TRAVIS_BUILD_DIR/firebase-deploy.sh"
   on:
     repo: m-lab/website
     tags: true
