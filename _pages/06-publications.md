@@ -14,6 +14,21 @@ Papers, presentations, and other documents that describe the M-Lab platform, tes
 
 # Papers
 
+## 2022
+
+### M-Lab: User Initiated Internet Data for the Research Community
+{:.no_toc}
+
+{:.paper-description}
+Measurement Lab (M-Lab) is an open, distributed server platform
+on which researchers have deployed measurement tools. Its mission is to measure the Internet, save the data and make it universally accessible and useful. This paper serves as an update on the MLab platform 10+ years after its initial introduction to the research community. Here, we detail the current state of the M-Lab distributed platform, highlights existing measurements/data available on the platform, and describes opportunities for further engagement between the networking research community and the platform.
+
+{:.paper-author}
+Phillipa Gill, Christophe Diot, Lai Yi Ohlsen, Matt Mathis, and Stephen Soltesz
+
+[Download](https://people.cs.umass.edu/~phillipa/index.php?p=publications){:.download-link .paper-download target="_blank"}
+
+
 ## 2019
 {:.no_toc}
 
