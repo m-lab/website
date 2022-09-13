@@ -26,7 +26,7 @@ on which researchers have deployed measurement tools. Its mission is to measure 
 {:.paper-author}
 Phillipa Gill, Christophe Diot, Lai Yi Ohlsen, Matt Mathis, and Stephen Soltesz
 
-[Download](https://people.cs.umass.edu/~phillipa/index.php?p=publications){:.download-link .paper-download target="_blank"}
+[Download](https://ccronline.sigcomm.org/2022/ccr-january-2022/m-lab-user-initiated-internet-data-for-the-research-community/){:.download-link .paper-download target="_blank"}
 
 
 ## 2019
