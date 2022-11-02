@@ -28,7 +28,7 @@ Udit Paul, Jiamo Liu, Mengyang Gu, Arpit Gupta, Elizabeth Belding
 
 [Download](https://dl.acm.org/doi/10.1145/3517745.3561441){:.download-link .paper-download target="_blank"}
 
-### The ukrainian internet under attack: an NDT perspective
+### The ukrainian internet under attack: an NDT perspective *
 {:.no_toc}
 
 {:.paper-description}
