@@ -21,7 +21,7 @@ We hosted 23 participants at our hackathon from a wide range of regions and univ
 
 In only 90 minutes of hacking, our participants came up with some impressive results. 
 
-Our winning submission was by Gautam Akiwate of USCB in which he identified disparities in network performance by continent using NDT data. He organized his submission into six key findings including the following:  
+Our winning submission was by Gautam Akiwate of Standford University, in which he identified disparities in network performance by continent using NDT data. He organized his submission into six key findings including the following:  
 
 
 ![IMC 2022 participants]({{ site.baseurl }}/images/blog/2022-11-imc-hackathon/akiwate-analysis.png){: width="750"}
