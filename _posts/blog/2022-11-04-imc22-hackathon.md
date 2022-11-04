@@ -34,8 +34,7 @@ Our winning submission was by Gautam Akiwate of Standford University, in which h
 
 You can view all key findings and the underlying queries in the full CoLab [here](https://colab.research.google.com/drive/1xIJZcvyu5UrZ7Vry5gTW4A20BzMAkGhD?usp=sharing#scrollTo=dr8d57Ouh2Wj). 
 
-Honorable mentions included:
-
+Honorable mentions included
 
 * Ramakrishnan Sundara Raman and Reethika Ramesh who looked at [NDT data across the Russian conflict in Ukraine](https://colab.research.google.com/drive/1DISBnHBP3URGs2QUdAYofpOzHu91WC4p). 
 * Rashna Kumar and Hendrik Cceh looked at [differences between IPv4 and IPv6 NDT results](https://colab.research.google.com/drive/196P1Hk2IRmzzDU2VKd4q_VaZRmiaAjFc#scrollTo=R7pSs9CVLh5p). 

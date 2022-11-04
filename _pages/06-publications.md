@@ -10,13 +10,37 @@ breadcrumb: publications
 # Papers, Presentations, and Regulator Filings
 {:.no_toc}
 
-Papers, presentations, and other documents that describe the M-Lab platform, tests, and data, as well as research results obtained from the analysis of M-Lab data, are shown below.
+Papers, presentations, and other documents that describe the M-Lab platform, tests, and data, as well as research results obtained from the analysis of M-Lab data, are shown below. (*) Denotes paper contributed to by member(s) of the M-Lab team (at the time of publication).
 
 # Papers
 
 ## 2022
 
-### M-Lab: User Initiated Internet Data for the Research Community
+### The importance of contextualization of crowdsourced active speed test measurements
+{:.no_toc}
+
+{:.paper-description}
+Crowdsourced speed test measurements, such as those by Ookla® and Measurement Lab (M-Lab), offer a critical view of network access and performance from the user's perspective. However, we argue that taking these measurements at surface value is problematic. It is essential to contextualize these measurements to understand better what the attained upload and download speeds truly measure. To this end, we develop a novel Broadband Subscription Tier (BST) methodology that associates a speed test data point with a residential broadband subscription plan. Our evaluation of this methodology with the FCC's MBA dataset shows over 96% accuracy. We augment approximately 1.5M Ookla and M-Lab speed test measurements from four major U.S. cities with the BST methodology. We show that many low-speed data points are attributable to lower-tier subscriptions and not necessarily poor access. Then, for a subset of the measurement sample (80k data points), we quantify the impact of access link type (WiFi or wired), WiFi spectrum band and RSSI (if applicable), and device memory on speed test performance. Interestingly, we observe that measurement time of day only marginally affects the reported speeds. Finally, we show that the median throughput reported by Ookla speed tests can be up to two times greater than M-Lab measurements for the same subscription tier, city, and ISP due to M-Lab's employment of different measurement methodologies. Based on our results, we put forward a set of recommendations for both speed test vendors and the FCC to con-textualize speed test data points and correctly interpret measured performance.
+
+{:.paper-author}
+Udit Paul, Jiamo Liu, Mengyang Gu, Arpit Gupta, Elizabeth Belding
+
+
+[Download](https://dl.acm.org/doi/10.1145/3517745.3561441){:.download-link .paper-download target="_blank"}
+
+### The ukrainian internet under attack: an NDT perspective *
+{:.no_toc}
+
+{:.paper-description}
+On February 24, 2022, Russia began a large-scale invasion of Ukraine, the first widespread conflict in a country with high levels of network penetration. Because the Internet was designed with resilience under warfare in mind, the war in Ukraine offers the networking community a unique opportunity to evaluate whether and to what extent this design goal has been realized. We provide an early glimpse at Ukrainian network resilience over 54 days of war using data from Measurement Lab's Network Diagnostic Tool (NDT). We find that NDT users' network performance did indeed degrade - e.g. with average packet loss rates increasing by as much as 500% relative to pre-wartime baselines in some regions - and that the intensity of the degradation correlated with the presence of Russian troops in the region. Performance degradation also correlated with changes in traceroute paths; we observed an increase in path diversity and significant changes to routing decisions at Ukrainian border Autonomous Systems (ASes) post-invasion. Overall, the use of diverse and changing paths speaks to the resilience of the Internet's underlying routing algorithms, while the correlated degradation in performance highlights a need for continued efforts to ensure usability and stability during war.
+
+{:.paper-author}
+Akshath Jain, Deepayan Patra, Peijing Xu, Justine Sherry, Phillipa Gill
+
+[Download](https://dl.acm.org/doi/10.1145/3517745.3561449){:.download-link .paper-download target="_blank"}
+
+
+### M-Lab: User Initiated Internet Data for the Research Community *
 {:.no_toc}
 
 {:.paper-description}
@@ -208,7 +232,7 @@ Eireann Leverett, Aaron Kaplan
 
 [Download PDF]({{ site.baseurl }}/publications/Leverett-Kaplan-2017.pdf){:.download-link .paper-download target="_blank"}
 
-### Measuring Broadband in Schools
+### Measuring Broadband in Schools *
 {:.no_toc}
 
 {:.paper-description}
@@ -255,7 +279,7 @@ Kinga Farkas
 
 [Download PDF]({{ site.baseurl }}/publications/CUSUMAnomalyDetection.pdf){:.download-link .paper-download target="_blank"}
 
-### Traffic Microbursts and their Effect on Internet Measurement
+### Traffic Microbursts and their Effect on Internet Measurement *
 {:.no_toc}
 
 {:.paper-description}
@@ -338,7 +362,7 @@ Office of Engineering and Technology and Consumer and Governmental Affairs Burea
 ## 2014
 {:.no_toc}
 
-### ISP Interconnection and Its Impact on Consumer Internet Performance—A Measurement Lab Consortium Technical Report
+### ISP Interconnection and Its Impact on Consumer Internet Performance—A Measurement Lab Consortium Technical Report *
 {:.no_toc}
 
 {:.paper-description}
@@ -388,7 +412,7 @@ Giuseppe Futia, Enrico Zimuel, Simone Basso, Juan Carlos De Martin
 
 [Download PDF]({{ site.baseurl }}/publications/neuviz-data-visualization-tool.pdf){:.download-link .paper-download target="_blank"}
 
-### Dimming the Internet: Detecting Throttling as a Mechanism of Censorship in Iran
+### Dimming the Internet: Detecting Throttling as a Mechanism of Censorship in Iran *
 {:.no_toc}
 
 {:.paper-description}
@@ -457,7 +481,7 @@ B. Lehr, S. Bauer, D. Clark
 
 [Download PDF]({{ site.baseurl }}/publications/measuring-internet-performance.pdf){:.download-link .paper-download target="_blank"}
 
-### Estimating Packet Loss Rate in the Access through Application-level Measurements
+### Estimating Packet Loss Rate in the Access through Application-level Measurements 
 {:.no_toc}
 
 {:.paper-description}
@@ -549,11 +573,11 @@ P. Kanuparthy, C. Dovrolis
 ## 2010
 {:.no_toc}
 
-### Measurement Lab: Overview and an Invitation to the Research Community
+### Measurement Lab: Overview and an Invitation to the Research Community *
 {:.no_toc}
 
 {:.paper-description}
-Discussion of the scope of the effort by M-Lab founders, and an invitation to the research community to join them in expanding global measurement
+Discussion of the scope of the effort by M-Lab founders, and an invitation to the research community to join them in expanding global measurement 
 
 {:.paper-author}
 C. Dovrolis, K. Gummadi, A. Kuzmanovic, S. D. Meinrath
