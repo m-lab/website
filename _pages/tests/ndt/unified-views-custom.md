@@ -11,112 +11,55 @@ breadcrumb: tests
 researchers curated data to optimally support studies of the
 evolution of Internet performance organized by geopolitical boundaries.
 
-In this document we describe how to create Custom Unified Views to efficiently address
-alternative research questions.
+However, some researchers with unique research goals might want to filter the data differently than presented in the Unified Views. So, in this document we describe how to create Custom Unified Views to efficiently address alternative research questions.
 
-## Structure of the NDT Unified Views
+## Background
 
-Unified views are are built on **[extended views]({{ site.baseurl }}/tests/ndt/#extended-views)**, which are a
-maximal presentations of all M-Lab raw data: every measurement (raw row) is
-annotated with everything we know about the data, including filter flags, Geo
-labels, etc.
+**Structure of the NDT Unified Views**
 
-The Unified Views are a `UNION` of selected fields from all three NDT data types,
-with a filter applied to only present completed, valid test results [according to
-our current, best understanding]({{ site.baseurl }}/tests/ndt/#unified-views).
+Unified views are are built on [extended views]({{ site.baseurl }}/tests/ndt/#extended-views), which are a
+maximal presentations of all M-Lab raw data: every measurement (raw row) is annotated with everything we know about the data, including filter flags, Geo labels, etc.
+
+The Unified Views are a `UNION` of selected fields from all three NDT data types, with a filter applied to only present completed, valid test results [according to our current, best understanding]({{ site.baseurl }}/tests/ndt/#unified-views). 
+
+To create the Unified Views, we complete the following steps as the last part of our data processing pipeline: 
+
+1. Create the extended views, which contain every row and every column
+1. Filter columns to a standardized subset
+1. Union across data sets (columns must have exactly matching types)
+1. Filter rows using filter flags that were computed in some earlier step  
+<br>
 Unified views can be customized to provide different data by simply replacing the last
-processing step with different filters.
+processing step, step 4, with different filters. We describe how to do so in the next section.  
+<br>
 
-**Processing Steps in the Production of NDT Unified Views:**
+## Create your own Custom Unified view
 
-The very last steps of the Measurement Lab data pipeline are as follows:
+1. Open the NDT Unified Download View [`measurement-lab.ndt.unified_downloads`](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table) or the NDT Unified Upload View [`measurement-lab.ndt.unified_uploads`](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table) in the BigQuery console,  and then open the _Details_ tab. You will see an SQL query that starts with the following:     
 
-0. Precursor - The extended views contain every row and every column
-1. Filter columns to a standardized subset (top level structs make this easier)
-2. Union across data sets (columns must have exactly matching types)
-3. Filter rows using filter flags that were computed in some earlier step
 
-If you open the NDT Unified Download View in the BigQuery console  [`measurement-lab.ndt.unified_downloads`](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table) and 
-open the _Details_ tab, and you will see something like this:
+	```~sql
+	WITH
+	UnifiedExtendedDownloads AS (
+	SELECT *,
+	```   
+	<br>
+1. Copy the entire query, starting with the lines above.  
 
-```~sql
-SELECT * EXCEPT (filter)
-FROM (
-    -- 2020-03-12 to present
-    SELECT id, date, a, filter, node, client, server,
-    FROM `measurement-lab.intermediate_ndt.extended_ndt7_downloads`
- UNION ALL
-    -- 2019-07-18 to present
-    SELECT id, date, a, filter, node, client, server,
-    FROM `measurement-lab.intermediate_ndt.extended_ndt5_downloads`
- UNION ALL
-    -- 2009-02-18 to 2019-11-20
-    SELECT id, date, a, filter, node, client, server,
-    FROM `measurement-lab.intermediate_ndt.extended_web100_downloads`
-)
-WHERE filter.IsValidBest
-```
+1. Remove the following section:     
 
-The [Unified Upload View](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table) is similar.
+	```~sql
+	SELECT * EXCEPT ( filter )
+	FROM UnifiedExtendedDownloads
+	WHERE IsValidBest
+	```  
+	<br>
+1. Modify the query to include or exclude results based on your custom criteria.  
+<br>
 
-If you have your own GCP project, you can click _copy view_ and edit it there as a view.
+## In Practice
 
-Most people will want to copy and edit this view as a subquery of a larger research query.
-To do this copy or cut and paste the SQL from MLab's unified view from the _Details_ tab to the query editor. 
-
-## Example - Custom unified view to explore WScale  
-
-Note that this example includes subexpressions to standardize the encoding of the WScale 
-column and WHERE clauses to eliminate rows with invalid values.
-
-```~sql
-# Tabulating Window Scale by year
-
-# Part 1, a subquery that defines CustomUnifiedView, with an additional
-# WScale column.
-
-WITH 
-CustomUnifiedView AS (
-	SELECT * EXCEPT (filter)
-	FROM (
-	-- 2020-03-12 to present
-		SELECT id, date, a, filter, node, client, server,
-		_internal202010.lastsample.TCPInfo.WScale & 0xF AS WScale
-		FROM `measurement-lab.intermediate_ndt.extended_ndt7_downloads`
-	UNION ALL
-
-	-- 2019-07-18 to present
-		SELECT id, date, a, filter, node, client, server,
-		_internal202010.S2C.TCPInfo.WScale & 0xF AS WScale
-		FROM `measurement-lab.intermediate_ndt.extended_ndt5_downloads`
-		WHERE _internal202010.S2C.TCPInfo.WScale IS NOT NULL
-	UNION ALL
-
-	-- 2009-02-18 to 2019-11-20
-		SELECT id, date, a, filter, node, client, server,
-		greatest (_internal202010.web100_log_entry.snap.SndWindScale, 0) AS WScale
-		FROM `measurement-lab.intermediate_ndt.extended_web100_downloads`
-		# 3 corrupted values in 2017
-		WHERE _internal202010.web100_log_entry.snap.SndWindScale <= 14 
-	)
-	WHERE filter.IsValidBest 
-),
-
-# Part 2, a research query that tabulates WScale by year.
-# The remaining part of this query is one example of a research query using the above custom 
-# "unified view" as expressed in a sub-query.
-
-SELECT 
-	EXTRACT(year FROM date) AS year,
-	WScale,
-	COUNT (*) AS tests,
-FROM CustomUnifiedView
-WHERE date > '2009-01-01'
-GROUP BY year, WScale
-ORDER BY year, WScale
-```
-
-![Graph displaying WSCALE by year]({{ site.baseurl }}/images/tests/custom-unified-view-wscale-year.png)
+For demonstrations of how custom unified views can be used in your research, please see [these examples in CoLab](https://colab.research.google.com/drive/1i0XGPeMcvr2ZPO6EMIh86mNWPS0qzbit#scrollTo=G3o4Ati2WspD). 
 
 ## Future-proofing Your Custom Unified Views or Subqueries
 
