@@ -35,7 +35,7 @@ processing step, step 4, with different filters. We describe how to do so in the
 
 ## Create your own Custom Unified view
 
-1. Open the NDT Unified Download View [`measurement-lab.ndt.unified_downloads`](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table) or the NDT Unified Upload View [`measurement-lab.ndt.unified_uploads`](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table) in the BigQuery console,  and then open the _Details_ tab. You will see an SQL query that starts with the following:     
+1. Open the NDT Unified Download View [`measurement-lab.ndt.unified_downloads`](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_downloads&page=table) or the NDT Unified Upload View [`measurement-lab.ndt.unified_uploads`](https://console.cloud.google.com/bigquery?project=measurement-lab&p=measurement-lab&d=ndt&t=unified_uploads&page=table) in the BigQuery console,  and then open the _Details_ tab. You will see an SQL query that starts a long comment and then the following:     
 
 
 	```~sql
@@ -74,8 +74,6 @@ maintain clean separation between data grooming in their custom unified view,
 and their research logic in subordinate queries. All of the columns presented by
 the custom unified view should be standardized either by the researcher themselves or by
 following MLab standard views.
-
-Note that we plan to overhaul the row filtering logic in the future.
 
 Researchers are encouraged to monitor and track changes to published unified views.
 
