@@ -20,7 +20,7 @@ grid-section:
       - image: "nathan.jpg"
         heading: "Nathan Kinkade"
         desc: "Platform Engineer, Code for Science & Society"
-      - image: "person.png"
+      - image: "cristina.jpg"
         heading: "Cristina Leon"
         desc: "Software Engineer, Google"
       - image: "matt.jpg"
