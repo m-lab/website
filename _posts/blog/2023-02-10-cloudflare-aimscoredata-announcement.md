@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "M-Lab is now providing Cloudflare AIM data for free and open access"
+title: "M-Lab is now providing Cloudflare AIM data for open access"
 author: "Lai Yi Ohlsen"
 date: 2023-02-15
 breadcrumb: blog
@@ -29,7 +29,7 @@ AIM was designed to address the following scenario many of you have either exper
 
 ![IMC 2022 participants]({{ site.baseurl }}/images/blog/2023-02-cloudflare/speedtest-example.png){: width="750"}
 
-If you want to see what that looks like for you, try it yourself here. But what do those numbers mean?  What is bandwidth and how does it make your Netflix experience better?  What is jitter and how does it impact your Zoom calls?  What is responsiveness and how does it make your League of Legends game better?  There are so many numbers on a speed test page and they are all supposedly very important, but the one thing that isn’t immediately clear is: how do these numbers explain why I can’t watch the newest season of Love is Blind?  Do they even explain that at all?
+If you want to see what that looks like for you, try it yourself [here](https://speed.cloudflare.com/). But what do those numbers mean?  What is bandwidth and how does it make your Netflix experience better?  What is jitter and how does it impact your Zoom calls?  What is responsiveness and how does it make your League of Legends game better?  There are so many numbers on a speed test page and they are all supposedly very important, but the one thing that isn’t immediately clear is: how do these numbers explain why I can’t watch the newest season of Love is Blind?  Do they even explain that at all?
 
 To help answer this, Cloudflare is launching the Aggregated Internet Measurement (AIM) initiative: a new format for displaying Internet quality in a way that makes sense to end users of the Internet while keeping the underlying data that network engineers need to make it better. 
 
