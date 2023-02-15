@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Announcement: M-Lab is now providing Cloudflare AIM data for free and open access"
+title: "M-Lab is now providing Cloudflare AIM data for free and open access"
 author: "Lai Yi Ohlsen"
 date: 2023-02-10
 breadcrumb: blog
@@ -10,9 +10,10 @@ categories:
   - bigquery
   - AIM
   - cloudflare
+  - announcement
 ---
 
-Want to know more about your Internet connection? M-Lab is proud to announce that we are now hosting Cloudflare’s Aggregated Internet Measurement (AIM) dataset, which puts network quality in an end-user context.<!--more-->
+Want to know more about your Internet connection? M-Lab is proud to announce that we are now publishing Cloudflare’s Aggregated Internet Measurement (AIM) dataset, which puts network quality in an end-user context.<!--more-->
 
 
 ![logos]({{ site.baseurl }}/images/blog/2023-02-cloudflare/logos.jpeg){: width="750"}
