@@ -20,7 +20,7 @@ Want to know more about your Internet connection? M-Lab is proud to announce tha
 
 
 
-M-Lab’s mission is to measure the Internet, save the data, and make it universally accessible and useful. Today we are excited to announce that as part of that mission, we are providing free and open access to a new dataset from Cloudflare that was designed with the end-user in mind. 
+M-Lab’s mission is to measure the Internet, save the data, and make it universally accessible and useful. Today we are excited to announce that as part of that mission, we are providing open access to a new dataset from Cloudflare that was designed with the end-user in mind. 
 
 ## What is AIM? 
 
@@ -36,7 +36,7 @@ To help answer this, Cloudflare is launching the Aggregated Internet Measurement
 Interested? We highly recommend reading the full blog post [on Cloudflare’s website](https://blog.cloudflare.com/aim-database-for-internet-quality/). 
 
 ## How do I access the data? 
-If you already have access to M-Lab’s free and open database, good news, you already have access to AIM data! If you don’t, all you have to do is follow the instructions on our [BigQuery quick start page](https://www.measurementlab.net/data/docs/bq/quickstart/).
+If you already have access to M-Lab’s open database, good news, you already have access to AIM data! If you don’t, all you have to do is follow the instructions on our [BigQuery quick start page](https://www.measurementlab.net/data/docs/bq/quickstart/).
 
 From there, you can follow this [example CoLab](https://colab.research.google.com/drive/1xgc-7L1Okr04MSjsYJfiFeUN0Gu05bpQ?usp=sharing) to run queries for both M-Lab’s NDT and Cloudflare’s AIM. 
 
