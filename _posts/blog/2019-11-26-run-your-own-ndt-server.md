@@ -64,19 +64,19 @@ Once the server is up, then also demo how to run NDT client tests from a Docker 
 * Pull and run the latest `ndt-server` image from Measurement Lab's dockerhub:
 
 ```~bash
-docker run -d --network=host                      \
-           --volume `pwd`/certs:/certs:ro         \
-           --volume `pwd`/datadir:/datadir        \
-           --read-only                            \
-           --user `id -u`:`id -g`                 \
-           --cap-drop=all                         \
-           measurementlab/ndt-server:latest       \
-           -cert /certs/cert.pem                  \
-           -key /certs/key.pem                    \
-           -datadir /datadir                      \
-           -ndt7_addr :4443          \
-           -ndt5_addr :3001          \
-           -ndt5_wss_addr :3010      \
+docker run -d --network=host                    \
+           --volume `pwd`/certs:/certs:ro       \
+           --volume `pwd`/datadir:/datadir      \
+           --read-only                          \
+           --user `id -u`:`id -g`               \
+           --cap-drop=all                       \
+           measurementlab/ndt-server:latest     \
+           -cert /certs/cert.pem                \
+           -key /certs/key.pem                  \
+           -datadir /datadir                    \
+           -ndt7_addr :4443                     \
+           -ndt5_addr :3001                     \
+           -ndt5_wss_addr :3010                 \
            -ndt7_addr_cleartext :8080
 
 2820cd8907550a55fdb5663b6b5718184359d86ab371f277b8f2e8b49fa6562e
@@ -163,15 +163,15 @@ docker run --network=host                \
            --volume `pwd`/certs:/certs:ro   \
            --volume `pwd`/datadir:/var/spool/ndt  \
            --volume `pwd`/var-local:/var/local \
-           --user `id -u`:`id -g`           \
-           --cap-drop=all                   \
-        measurementlab/ndt                  \
-           -cert /certs/cert.pem            \
-           -key /certs/key.pem              \
-           -datadir /datadir                \
-           -ndt7_addr :4443           \
-	   -ndt7_addr_cleartext :8080 \
-           -ndt5_addr :3001           \
+           --user `id -u`:`id -g`       \
+           --cap-drop=all               \
+        measurementlab/ndt              \
+           -cert /certs/cert.pem        \
+           -key /certs/key.pem          \
+           -datadir /datadir            \
+           -ndt7_addr :4443             \
+	   -ndt7_addr_cleartext :8080   \
+           -ndt5_addr :3001             \
            -ndt5_wss_addr :3010
 ```
 
