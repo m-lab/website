@@ -169,9 +169,10 @@ docker run --network=host                \
            -cert /certs/cert.pem            \
            -key /certs/key.pem              \
            -datadir /datadir                \
-           -ndt7_addr 192.168.1.123:4443    \
-           -ndt5_addr 192.168.1.123:3001    \
-           -ndt5_wss_addr 192.168.1.123:3010
+           -ndt7_addr :4443           \
+	   -ndt7_addr_cleartext :8080 \
+           -ndt5_addr :3001           \
+           -ndt5_wss_addr :3010
 ```
 
 ## Full Stack ndt-server Data
