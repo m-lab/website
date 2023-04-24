@@ -2,7 +2,7 @@
 layout: blog
 title: "M-Lab is now providing Cloudflare AIM data for open access"
 author: "Lai Yi Ohlsen"
-date: 2023-02-15
+date: 2023-04-18
 breadcrumb: blog
 categories:
   - partnership
