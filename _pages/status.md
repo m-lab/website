@@ -16,7 +16,9 @@ The M-Lab infrastructure map displays information about our server pods around t
 <div id="map" class="map leaflet-container" style="height: 500px; width:100%; position:relative;"></div>
 </p>
 
+<script>
 {% include infrastructure-map.js %}
+</script>
 
 ## M-Lab Naming Service
 
