@@ -1,4 +1,3 @@
-<script>
 mapboxgl.accessToken = 'pk.eyJ1IjoibS1sYWIiLCJhIjoiY2p3eWtxOXZ4MDFkMzQ5cG95ODFhbWJieiJ9.9G1YGnkme4goR0Ly3kqovA';
 var map = new mapboxgl.Map({
   container: 'map',
@@ -18,8 +17,7 @@ map.on('load', function () {
     type: "geojson",
     data: url,
     cluster: true,
-    clusterRadius: 10,
-    clusterMaxZoom: 15,
+    clusterRadius: 1,
     clusterProperties: {
       'oneG': ['+', ['case', oneG, 1, 0]],
       'tenG': ['+', ['case', tenG, 1, 0]],
@@ -136,4 +134,3 @@ map.on('load', function () {
     map.getCanvas().style.cursor = '';
   });
 });
-</script>
