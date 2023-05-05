@@ -20,12 +20,16 @@ The M-Lab infrastructure map displays information about our server pods around t
 {% include infrastructure-map.js %}
 </script>
 
-## M-Lab Naming Service
+## M-Lab Locate Service
 
-M-Lab Naming Service (mlab-ns) is a distributed service based on Google AppEngine that ‘routes’ test requests from M-Lab measurement tools’ clients to the best M-Lab servers. "Best" is defined by different, client-defined policies. Selecting the proper server for a given measurement is critical to ensure that measurement tests collect robust and meaningful data.
+The Locate Service and API provides consistent, expected measurement quality for M-Lab
+clients. The Locate API is a GCP hosted service that "locates" the best M-Lab
+server for a user request. For different use cases, "best" could mean different
+things. See [USAGE.md](https://github.com/m-lab/locate/blob/main/USAGE.md) and
+the documents below for hints on supported queries.
 
-- Homepage: <http://mlab-ns.appspot.com/>
-- [M-Lab NS Design
-  document](https://docs.google.com/a/google.com/document/d/1eJhS75EZHDLmC6exggStr_b1euiR24_MVBJc1L6eH2c/view)
+- Homepage: <https://locate.measurementlab.net/>
+- [USAGE.md]: https://github.com/m-lab/locate/blob/main/USAGE.md
+- [M-Lab Locate v2 Design](https://docs.google.com/document/d/1az-4Fojf_0REQopCyA9WDS54ZNILQDuTc5SnWkbozbE/view)
 - Mailing list:
   [discuss@measurementlab.net](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss)
