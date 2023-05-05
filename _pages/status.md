@@ -29,7 +29,6 @@ things. See [USAGE.md](https://github.com/m-lab/locate/blob/main/USAGE.md) and
 the documents below for hints on supported queries.
 
 - Homepage: <https://locate.measurementlab.net/>
-- [USAGE.md]: https://github.com/m-lab/locate/blob/main/USAGE.md
-- [M-Lab Locate v2 Design](https://docs.google.com/document/d/1az-4Fojf_0REQopCyA9WDS54ZNILQDuTc5SnWkbozbE/view)
-- Mailing list:
-  [discuss@measurementlab.net](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss)
+- Usage: [USAGE.md](https://github.com/m-lab/locate/blob/main/USAGE.md)
+- Design doc: [M-Lab Locate v2](https://docs.google.com/document/d/1az-4Fojf_0REQopCyA9WDS54ZNILQDuTc5SnWkbozbE/view)
+- Mailing list: [discuss@measurementlab.net](https://groups.google.com/a/measurementlab.net/forum/#!forum/discuss)
