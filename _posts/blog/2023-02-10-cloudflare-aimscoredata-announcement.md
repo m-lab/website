@@ -16,7 +16,7 @@ categories:
 Want to know more about your Internet connection? M-Lab is proud to announce that we are now publishing Cloudflare’s Aggregated Internet Measurement (AIM) dataset, which puts network quality in an end-user context.<!--more-->
 
 
-![logos]({{ site.baseurl }}/images/blog/2023-02-cloudflare/logos.jpeg){: width="750"}
+![logos]({{ site.baseurl }}/images/blog/2023-02-cloudflare/logos.png){: width="750"}
 
 
 
