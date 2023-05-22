@@ -83,7 +83,7 @@ If your custom client depends on mlab-ns.appspot.com, you can find guidance for
 ## Let us know
 
 If you have exceptional concerns about the retirement of ndt5+raw or
-mlab-ns.appspot.com, [please let us know](mailto:support@measuermentlab.net).
+mlab-ns.appspot.com, [please let us know](mailto:support@measurementlab.net).
 
 [clients]: https://github.com/m-lab/ndt-server#clients
 [intro]: {{ site.baseurl }}/blog/ndt7-introduction
