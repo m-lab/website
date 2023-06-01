@@ -12,7 +12,7 @@ script:
 - sudo apt-get install -y python3-pip jupyter jupyter-nbconvert
 - sudo -H python3 -m pip install --upgrade setuptools pip
 - nvm install $NODE_VERSION
-- npm install -g firebase-tools
+- npm install -g firebase-tools@11.30.0
 - "./_tests/travis-checks --quick"
 
 deploy:
