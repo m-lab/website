@@ -39,7 +39,8 @@
     }
 
     a {
-      font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+      font-family: Arial,Helvetica,sans-serif;
+      font-weight: bold;
       display: block;
       padding: 0 5px;
       border: 0;
@@ -65,7 +66,8 @@
 //Read More links
 .info-link {
     color: #454545;
-    font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold;
     display: block;
 
   &:before {
@@ -92,7 +94,8 @@
 .download-link {
   color: #454545;
   font-size: 16px;
-  font-family: "Proxima Nova Semi Bold",Arial,Helvetica,sans-serif;
+  font-family: Arial,Helvetica,sans-serif;
+  font-weight: bold;
 
   &:after {
     @include arrow_link();
