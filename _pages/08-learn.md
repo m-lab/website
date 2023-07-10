@@ -19,7 +19,7 @@ M-Lab hosts community “office hours” on the third Thursday of every month at
 * Foster idea exchange and potential collaborations within the M-Lab community.
 
 
-### You might conisder attending office hours if...
+### You might consider attending Office Hours if...
 * You have a tactical question (e.g. "How do I write this query?") or a theoretical question (e.g. “How should I shape my research question?”).
 * You are new to using M-Lab data and want more about best practices for its use. 
 * You are curious abuot how other's are using M-Lab data and want to share your own work as well. 
