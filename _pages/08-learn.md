@@ -36,4 +36,4 @@ To attend the next office hours, sign-up [here](https://docs.google.com/forms/d/
 ## Coming Soon 
 We are restructuring this section of our site to provide more educational resources, tutorials, and documentation about the Internet, M-Lab, and related services, terms and technologies.
 
-For Frequently Asked Questions, please see our [FAQ page](http://website.mlab-sandbox.measurementlab.net/frequently-asked-questions/). 
+For Frequently Asked Questions, please see our [FAQ page](https://www.measurementlab.net/frequently-asked-questions/). 
