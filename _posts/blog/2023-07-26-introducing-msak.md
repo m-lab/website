@@ -31,6 +31,6 @@ This is the first UDP-based latency test available on the M-Lab platform, and wh
 
 ## Summary
 
-MSAK is under active development, and the best way to stay up-to-date is by following its [official GitHub repository](https://github.com/m-lab/msak). Our first priority is to support Georgia Tech's CellWatch app for mobile measurement. A JavaScript client library for the throughput protocol is planned and will enable us to provide a multi-stream option on [our official speedtest](https://speed.measurementlab.net).
+MSAK is under active development, and the best way to stay up-to-date is by following its [official GitHub repository](https://github.com/m-lab/msak). Our first milestone is to support Georgia Tech's CellWatch app for mobile measurement. A JavaScript client library for the throughput protocol is planned and will enable us to provide a multi-stream option on [our official speedtest](https://speed.measurementlab.net).
 
 To learn more about the technical design, you can watch the official presentation at our community call in July ([recording](https://youtu.be/Lvo-nlX5YeM)) ([slides](https://docs.google.com/presentation/d/1IbqMhmBwP2ul0Y7I-haIICc3tTjHsuRAKofzR5J-0gM/edit#slide=id.g255b8295bce_1_63))
