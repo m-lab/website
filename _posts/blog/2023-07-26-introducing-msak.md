@@ -11,9 +11,9 @@ categories:
 
 Since its inception, M-Lab's flagship **bulk transport capacity** (BTC) measurement protocol, NDT, has always been using a single TCP stream. While this allowed us to get better diagnostic data about the user's connection, over time many have expressed concerns about the ability of the single-stream approach to also effectively fill the link and double as a measurement of **link capacity**. <!--more-->
 
-NDT data is also frequently compared to Internet speed test services with a substantially **different server placement model** (usually much closer to the end user, often on the same network as the user's ISP), which makes apples-to-apples comparisons harder. We realized that a multi-stream measurement hosted on the M-Lab platform could provide the missing data to understand the effective impact of multiple streams on throughput measurements and, at the same time, provide a platform to experiment with and shape the next generation of NDT versions.
+NDT data is also frequently compared to Internet speed test services with a substantially different server placement model (usually much closer to the end user, often on the same network as the user's ISP), which makes apples-to-apples comparisons harder. We realized that a multi-stream measurement hosted on the M-Lab platform could provide the missing data to understand the effective impact of multiple streams on throughput measurements and, at the same time, provide a platform to experiment with and shape the next generation of NDT versions.
 
-In addition to this, the FCC's **mobile broadband measurement program** explicitly requires that the measurement happens over 3 concurrent streams. By supporting multi-stream measurements, we will be able to fulfill the FCC's requirements.
+In addition to this, the FCC's **[mobile broadband measurement program](https://www.fcc.gov/general/measuring-mobile-broadband-performance)** explicitly requires that the measurement happens over 3 concurrent streams. By supporting multi-stream measurements, we will be able to fulfill the FCC's requirements.
 
 What originally started as a "configurable multi-stream ndt7 server" has now evolved into its own M-Lab-hosted experiment: Measurement Swiss-Army Knife, or MSAK.
 
@@ -25,7 +25,7 @@ This combination of options will allow us to test the relative performance of si
 
 ## Latency testing
 
-MSAK also provides a client-initiated UDP-based latency testing protocol, which measures latency by sending small UDP packets at a fast rate that is compatible with real-time UDP-based protocols. By running this test, the client will know its latency, jitter, and packet loss.
+MSAK also provides a client-initiated UDP-based latency testing protocol, which measures latency by sending small UDP packets at a fast rate that is comparable with real-time UDP-based protocols. By running this test, the client will know its latency, jitter, and packet loss.
 
 This is the first UDP-based latency test available on the M-Lab platform, and while not a complete solution, it is part of a longer-term strategy to measure more dimensions of the user's Internet experience, including the quality of audio and video conferencing and the effects of bufferbloat on latency.
 
