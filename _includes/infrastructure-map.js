@@ -2,8 +2,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibS1sYWIiLCJhIjoiY2p3eWtxOXZ4MDFkMzQ5cG95ODFhb
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/dark-v10',
-  center: [12,25],
-  zoom: 0.8
+  center: [5,17],
+  zoom: 1.2
 });
 
 var url = 'https://siteinfo.mlab-oti.measurementlab.net/v1/sites/geo.json';
@@ -32,20 +32,16 @@ map.on('load', function () {
       "circle-radius": [
         "step",
         ["get", "point_count"],
-        5,
-        2,
-        10,
-        6,
-        15
+        7,     /* lt 3 -> 7 */
+        3, 11, /* gte 3 -> 11 */
+        6, 15, /* gte 6 -> 15 */
       ],
       "circle-color": [
         "step",
           ["get","point_count"],
           "#deebf7",
-          2,
-          "#9ecae1",
-          6,
-          "#3182bd"
+          3, "#9ecae1",
+          6, "#3182bd"
       ]}
   });
   map.addLayer({
@@ -66,10 +62,21 @@ map.on('load', function () {
     "source": "mlab-sites",
     "filter": ["!", ["has", "point_count"]],
     "paint": {
-      "circle-radius": 5,
+      "circle-radius": 7,
       "circle-color": "#deebf7",
-      "circle-stroke-width": 1,
-      "circle-stroke-color": "#000"
+      "circle-stroke-width": 0
+    }
+  });
+  map.addLayer({
+    "id": "unclustered-count",
+    "type": "symbol",
+    "source": "mlab-sites",
+    "filter": ["!", ["has", "point_count"]],
+    "layout": {
+      "text-field": "1",
+      "text-font": ["DIN Offc Pro Medium",
+        "Arial Unicode MS Bold"],
+        "text-size": 12
     }
   });
 
