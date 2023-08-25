@@ -8,7 +8,9 @@ breadcrumb: data
 
 # M-Lab Platform Status
 
-M-Lab places server infrastructure for conducting tests in diverse location around the world. Typically we seek hosting in well connected data centers where ISPs interconnect with one another. Each M-Lab "pod" consists of 3-4 servers and one switch, connected directly to an upstream provider. In large metro areas, we attempt to place multiple pods to obtain diversity in transit and routes.
+M-Lab places server infrastructure for conducting tests in diverse location around the world. Since 2008, we have sought hosting in well connected data centers where ISPs interconnect with one another. In 2022, we also began incoporating [virtual servers in cloud networks]({{ site.baseurl }}/blog/2022-mlab-to-the-cloud/#m-lab-to-the-cloud) into the platform, [starting with Google Cloud]({{ site.baseurl }}/blog/virtual-sites-gcp/#m-lab-to-the-cloud:-virtual-sites-in-all-google-cloud-regions).  Each M-Lab "site" consists of 3-4 servers and one switch, connected directly to an upstream provider. In large metro areas, we attempt to place multiple sites to obtain diversity in transit and routes.
+
+If you are a service provider interest in hosting an M-Lab Measurement site, please [review our requirements]({{ site.baseurl }}/contribute/#host-or-sponsor-an-m-lab-measurement-site) and [reach out](mailto:hello@measurementlab.net). 
 
 ## Infrastructure Map
 <p>
