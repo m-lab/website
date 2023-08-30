@@ -45,10 +45,12 @@ the new one we are now using. We now refer to these as "datatypes" for the NDT t
   * Relies on [tcp-info][tcp-info] for TCP statistics
   * Collected using [ndt-server][ndt-server]
   * Uses the BBR TCP congestion control algorithm, falling back to Cubic when BBR is not available on the client side
+  * Client supports an [opt-in data transfer limit]({{ site.baseurl }}/blog/short-ndt/#introducing-data-transfer-limits-to-ndt)
   * Started 2020-02-18 and continues to present.
 
 [ndt-server]: https://github.com/m-lab/ndt-server
 [tcp-info]: {{ site.baseurl }}/tests/tcp-info
+
 
 ## Data Collected by NDT
 
