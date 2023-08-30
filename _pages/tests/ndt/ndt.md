@@ -50,6 +50,9 @@ the new one we are now using. We now refer to these as "datatypes" for the NDT t
 [ndt-server]: https://github.com/m-lab/ndt-server
 [tcp-info]: {{ site.baseurl }}/tests/tcp-info
 
+## ndt-server
+The open source server side component of NDT, [ndt-server][ndt-server] can be [run on a server]({{ site.baseurl }}/tests/ndt/ndt-server) of your own to measure your own networks and particular segements along a path a specific path.  
+
 ## Data Collected by NDT
 
 When you run NDT, the IP address provided by your Internet Service Provider will be collected along with your measurement results. M-Lab conducts the test and publishes all test results to promote Internet research. NDT does not collect any information about you as an Internet user.
