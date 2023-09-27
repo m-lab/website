@@ -21,7 +21,7 @@ Please cite this paper for using the Wehe dataset: **A large-scale analysis of d
 
 ## Policies & Support Information
 
-The Wehe project is led by [researchers](https://dd.meddle.mobi/about_dd.html){:target="_blank"} at Northeastern University and the University of Massachusetts at Amherst, and is governed by their [privacy policy](https://wehe.meddle.mobi/consent.html){:target="_blank"}.
+The Wehe project is led by [researchers](https://dd.meddle.mobi/about_dd.html){:target="_blank"} at Northeastern University and is governed by their [privacy policy](https://wehe.meddle.mobi/consent.html){:target="_blank"}.
 
 * [Wehe Website](https://dd.meddle.mobi/){:target="_blank"}
 * [Support/Contact](https://dd.meddle.mobi/contact_dd.html){:target="_blank"}
@@ -32,4 +32,145 @@ Data collected by Wehe while hosted on the M-Lab platform is available in raw fo
 
 ## Wehe Data in BigQuery
 
-Wehe data is not published to BigQuery at this time.
+
+To make NDT data more readily available for research and analysis, M-Lab parses all WeHe data into BigQuery tables and views, and makes query access available for free by subscription to a Google Group. Find out more about how to get access on our[ BigQuery QuickStart page](https://www.measurementlab.net/quickstart/).
+
+Note that we sometimes use the terms “table” and “view” interchangeably: they reflect different internal implementations, but due to billing and access controls everything documented here as a table is actually presented as a view.
+
+Note that each WeHe test consists of two replays: a replay of the original application traces and a bit-inverted version of it. Therefore, in some of the tables (ClientXputs1) you will find two rows that belong to the same test. While in others, we only report for one of the two replays to avoid repetitions (ReplayInfo and Decisions1). 
+
+The WeHe data has three tables. 
+
+| Tables       | Description                                                                                                                                                                                                                                              |
+|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ReplayInfo1  | Contains metadata for the user and the test. For example: the time at which the test was performed, the network the user was connected to, the device the user was using, and many more.                                                                 |
+| ClientXputs1 | Contains throughout samples of the replay collected at the client side.                                                                                                                                                                                  |
+| Decisions1   | Contains statistics of the Kolmogorov-Smirnov test performed on the throughput samples present in the ClientXputs1 table. A differentiation is reported if all these are true:  (1) KSAcceptRatio > 0.95,  (2) KSPVal < 0.05  (3) avgXputDiffPct > 0.1.  
+
+
+### ReplayInfo_SCHEMA Schema
+
+
+| Field Name            | Nested Field       | Nested Field | Type      | Mode     | Description                                                |
+|-----------------------|--------------------|--------------|-----------|----------|------------------------------------------------------------|
+| timestamp             |                    |              | TIMESTAMP | REQUIRED |                                                            |
+| userID                |                    |              | STRING    | REQUIRED |                                                            |
+| clientIP              |                    |              | STRING    | REQUIRED | IP Address is truncated to /24                             |
+| clientIP2             |                    |              | STRING    |          |                                                            |
+| replayName            |                    |              | STRING    | REQUIRED |                                                            |
+| extraString           |                    |              | STRING    |          | Extra string sent from the client (not used)               |
+| historyCount          |                    |              | INTEGER   | REQUIRED |                                                            |
+| testID                |                    |              | STRING    | REQUIRED | Replay type (0 for original and 1 for bit-inverted replay) |
+| exception             |                    |              | STRING    |          |                                                            |
+| testFinished          |                    |              | BOOLEAN   |          |                                                            |
+| testFinishedWoutError |                    |              | BOOLEAN   |          |                                                            |
+| iperfInfo             |                    |              | STRING    |          |                                                            |
+| testDurationServer    |                    |              | FLOAT     |          | Test length (in seconds) recorded on the server")          |
+| testDurationClient    |                    |              | FLOAT     |          | Test length (in seconds) recorded on the server")          |
+| metadata              |                    |              | RECORD    |          |                                                            |
+|                       | cellInfo           |              | STRING    |          |                                                            |
+|                       | model              |              | STRING    |          |                                                            |
+|                       | manufacturer       |              | STRING    |          |                                                            |
+|                       | carrierName        |              | STRING    |          |                                                            |
+|                       | os                 |              | RECORD    |          |                                                            |
+|                       |                    | INCREMENTAL  | STRING    |          |                                                            |
+|                       |                    | RELEASE      | STRING    |          |                                                            |
+|                       |                    | SDK_INT      | INTEGER   |          |                                                            |
+|                       | networkType        |              | STRING    |          |                                                            |
+|                       | locationInfo       |              | RECORD    |          |                                                            |
+|                       |                    | latitude     | FLOAT     |          |                                                            |
+|                       |                    | longitude    | FLOAT     |          |                                                            |
+|                       |                    | country      | STRING    |          |                                                            |
+|                       |                    | countryCode  | STRING    |          |                                                            |
+|                       |                    | city         | STRING    |          |                                                            |
+|                       |                    | localTime    | TIMESTAMP |          |                                                            |
+|                       | updatedCarrierName |              | STRING    |          |                                                            |
+| emptyBool             |                    |              | BOOLEAN   |          |                                                            |
+| clientVersion         |                    |              | STRING    |          |                                                            |
+| measurementUUID       |                    |              | STRING    |          |                                                            |
+
+
+
+### ClientXputs_SCHEMA
+
+| Field Name   | Type    | Required | Description                                                 |
+|--------------|---------|----------|-------------------------------------------------------------|
+| userID       | STRING  | REQUIRED |                                                             |
+| historyCount | INTEGER | REQUIRED |                                                             |
+| testID       | STRING  | REQUIRED | Replay type (0 for original and 1 for bit-inverted replay)  |
+| xputSamples  | FLOAT   | REPEATED | throughput samples collected at client                      |
+| intervals    | FLOAT   | REPEATED | time intervals at which the throughput samples are recorded |
+
+
+
+### Decisions_SCHEMA
+
+| Field             | Nested Field | Type   | Mode     | Description                                                |
+|-------------------|--------------|--------|----------|------------------------------------------------------------|
+| userID            |              | STRING | REQUIRED |                                                            |
+| historyCount      |              | STRING | REQUIRED |                                                            |
+| testID            |              | STRING | REQUIRED | Replay type (0 for original and 1 for bit-inverted replay) |
+| avgXputDiffPct    |              | FLOAT  |          | avgXputDiff / max(control's avgXput, original's avgXput)   |
+| KSAcceptRatio     |              | FLOAT  |          | KS test acceptance ratio                                   |
+| avgXputDiff       |              | FLOAT  |          | control's avgXput - original's avgXput                     |
+| emptyField        |              | STRING |          | not used anymore                                           |
+| originalXputStats |              | RECORD |          |                                                            |
+|                   | max          | FLOAT  |          |                                                            |
+|                   | min          | FLOAT  |          |                                                            |
+|                   | average      | FLOAT  |          |                                                            |
+|                   | median       | FLOAT  |          |                                                            |
+|                   | std          | FLOAT  |          |                                                            |
+| controlXputStats  |              | RECORD |          |                                                            |
+|                   | max          | FLOAT  |          |                                                            |
+|                   | min          | FLOAT  |          |                                                            |
+|                   | average      | FLOAT  |          |                                                            |
+|                   | median       | FLOAT  |          |                                                            |
+|                   | std          | FLOAT  |          |                                                            |
+| minXput           |              | FLOAT  |          |                                                            |
+| KSAvgDVal         |              | FLOAT  |          | Average D value of the sampled KS test                     |
+| KSAvgPVal         |              | FLOAT  |          | Average P value of the sampled KS test                     |
+| KSDVal            |              | FLOAT  |          | D value of the KS test                                     |
+| KSPVal            |              | FLOAT  |          | P value of the KS test                                     |
+
+
+## Sample Queries
+
+Listing tests where differentiation was detected: 
+
+    WITH info AS (
+    SELECT raw.*
+    FROM `measurement-lab.wehe_raw.replayInfo1`
+    WHERE (date = "2023-09-01") AND NOT (raw.userID LIKE '@%')
+    ),
+    result AS (
+    SELECT raw.*
+    FROM `measurement-lab.wehe_raw.decisions1`
+    WHERE (date = "2023-09-01") AND (raw.KSAcceptRatio > 0.95) AND (raw.KSPVal < 0.05) AND (raw.avgXputDiffPct > 0.1)
+    )
+    SELECT *
+    FROM info INNER JOIN result
+    ON (info.userID = result.userID) AND (info.historyCount = CAST(result.historyCount AS INT64))
+    LIMIT 1000
+
+
+Counting the number of total tests performed and the number of tests with differentiation per network:
+
+    WITH info AS (
+    SELECT raw.*
+    FROM `measurement-lab.wehe_raw.replayInfo1`
+    WHERE (date = "2023-09-01") AND NOT (raw.userID LIKE '@%')
+    ),
+    result AS (
+    SELECT raw.*
+    FROM `measurement-lab.wehe_raw.decisions1`
+    WHERE (date = "2023-09-01")
+    )
+    SELECT 
+    info.metadata.updatedCarrierName as network, 
+    COUNT(*) as total_nb_tests,
+    COUNTIF((result.KSAcceptRatio > 0.95) AND (result.KSPVal < 0.05) AND (result.avgXputDiffPct > 0.1)) as nb_tests_with_TD
+    FROM info INNER JOIN result
+    ON (info.userID = result.userID) AND (info.historyCount = CAST(result.historyCount AS INT64))
+    GROUP BY info.metadata.updatedCarrierName
+    ORDER BY total_nb_tests DESC
+    LIMIT 1000
