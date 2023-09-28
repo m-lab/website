@@ -39,7 +39,7 @@ Note that we sometimes use the terms “table” and “view” interchangeably:
 
 Note that each WeHe test consists of two replays: a replay of the original application traces and a bit-inverted version of it. Therefore, in some of the tables (ClientXputs1) you will find two rows that belong to the same test. While in others, we only report for one of the two replays to avoid repetitions (ReplayInfo and Decisions1). 
 
-The WeHe data has three tables. 
+The WeHe data has three tables. The userID and historyCount fields together represent a unique id for each WeHe test performed, and can be used to map records between the three tables. 
 
 | Tables       | Description                                                                                                                                                                                                                                              |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -140,12 +140,17 @@ Listing tests where differentiation was detected:
     WITH info AS (
     SELECT raw.*
     FROM `measurement-lab.wehe_raw.replayInfo1`
-    WHERE (date = "2023-09-01") AND NOT (raw.userID LIKE '@%')
+    WHERE
+    (date BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) AND CURRENT_DATE())
+    AND NOT (raw.userID LIKE '@%')
+    AND (raw.metadata.updatedCarrierName like '%(cellular)')
     ),
     result AS (
     SELECT raw.*
     FROM `measurement-lab.wehe_raw.decisions1`
-    WHERE (date = "2023-09-01") AND (raw.KSAcceptRatio > 0.95) AND (raw.KSPVal < 0.05) AND (raw.avgXputDiffPct > 0.1)
+    WHERE
+    (date BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) AND CURRENT_DATE())
+    AND (raw.KSAcceptRatio > 0.95) AND (raw.KSPVal < 0.05) AND (raw.avgXputDiffPct > 0.1)
     )
     SELECT *
     FROM info INNER JOIN result
@@ -155,18 +160,23 @@ Listing tests where differentiation was detected:
 
 Counting the number of total tests performed and the number of tests with differentiation per network:
 
+    
     WITH info AS (
     SELECT raw.*
     FROM `measurement-lab.wehe_raw.replayInfo1`
-    WHERE (date = "2023-09-01") AND NOT (raw.userID LIKE '@%')
+    WHERE
+    (date BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) AND CURRENT_DATE())
+    AND NOT (raw.userID LIKE '@%')
+    AND (raw.metadata.updatedCarrierName like '%(cellular)')
     ),
     result AS (
     SELECT raw.*
     FROM `measurement-lab.wehe_raw.decisions1`
-    WHERE (date = "2023-09-01")
+    WHERE
+    (date BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) AND CURRENT_DATE())
     )
-    SELECT 
-    info.metadata.updatedCarrierName as network, 
+    SELECT
+    info.metadata.updatedCarrierName as network,
     COUNT(*) as total_nb_tests,
     COUNTIF((result.KSAcceptRatio > 0.95) AND (result.KSPVal < 0.05) AND (result.avgXputDiffPct > 0.1)) as nb_tests_with_TD
     FROM info INNER JOIN result
