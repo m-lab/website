@@ -71,7 +71,7 @@ New Wehe test data is added daily to M-Lab’s public BigQuery.
 
 ## Community Call 
 
-To learn more about Wehe, please join us at our monthly M-Lab community call on October 5th, 2023 at 11am EDT (link to registration). The call will be recorded for those who cannot attend. 
+To learn more about Wehe, please join us at our monthly M-Lab community call on October 5th, 2023 at 11am EDT (link to registration)[https://us02web.zoom.us/j/81069975204?pwd=VVdTOFVYTElVc1huQVVSUzJERXdndz09]. The call will be recorded for those who cannot attend. 
 
 
 ## Acknowledgement 
