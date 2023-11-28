@@ -12,9 +12,11 @@
 | parser.**Version** | STRING | Version is the symbolic version (if any) of the running server code that produced this measurement. |
 | parser.**Time** | TIMESTAMP | The time that the parser processed this row. |
 | parser.**ArchiveURL** | STRING | The Google Cloud Storage URL to the archive containing the Filename for this row. |
-| parser.**Filename** | STRING |  |
+| parser.**Filename** | STRING | The name of the file within the ArchiveURL originally created by the measurement service. Results in the raw record are derived from measurements in this file. |
 | parser.**Priority** | INTEGER |  |
-| parser.**GitCommit** | STRING |  |
+| parser.**GitCommit** | STRING | The git commit of this build of the parser. |
+| parser.**ArchiveSize** | INTEGER | The original archive size as found in GCS. |
+| parser.**FileSize** | INTEGER | The size of the file data provided to the parser for this row. |
 | **date** | DATE | Date is used by BigQuery to partition data to improve query performance. |
 | **raw** | RECORD | Fields from the raw data. |
 | raw.**GitShortCommit** | STRING | GitShortCommit is the Git commit (short form) of the running server code that produced this measurement. |
@@ -33,9 +35,13 @@
 | raw.Upload.ServerMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
 | raw.Upload.ServerMeasurements.AppInfo.**NumBytes** | INTEGER | The number of bytes written to or read from the socket during the measurement. |
 | raw.Upload.ServerMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Upload.ServerMeasurements.**ConnectionInfo** | RECORD |  |
+| raw.Upload.ServerMeasurements.ConnectionInfo.**Client** | STRING |  |
+| raw.Upload.ServerMeasurements.ConnectionInfo.**Server** | STRING |  |
+| raw.Upload.ServerMeasurements.ConnectionInfo.**UUID** | STRING | UUID for TCP connection for this measurement. |
 | raw.Upload.ServerMeasurements.**BBRInfo** | RECORD | Instrumentation in the BBR TCP module in the kernel. |
 | raw.Upload.ServerMeasurements.BBRInfo.**BW** | INTEGER | The maximum end-to-end bandwidth from the server to the client as measured by BBR. |
-| raw.Upload.ServerMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. |
+| raw.Upload.ServerMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. Recorded in microseconds. |
 | raw.Upload.ServerMeasurements.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.  The binary point varies by kernel version but the statistical mode is always 1.0. |
 | raw.Upload.ServerMeasurements.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT.   The denominator varies by kernel version. |
 | raw.Upload.ServerMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
@@ -79,7 +85,7 @@
 | raw.Upload.ServerMeasurements.TCPInfo.**SegsOut** | INTEGER | The number of segments transmitted. Includes data and pure ACKs.<br>Kernel: segs_out in include/linux/tcp.h |
 | raw.Upload.ServerMeasurements.TCPInfo.**SegsIn** | INTEGER | The number of segments received. Includes data and pure ACKs.<br>Kernel: segs_in in include/linux/tcp.h |
 | raw.Upload.ServerMeasurements.TCPInfo.**NotsentBytes** | INTEGER | Number of bytes queued in the send buffer that have not been sent.<br>Kernel: tcpi_notsent_bytes() in net/ipv4/tcp.c |
-| raw.Upload.ServerMeasurements.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. From an older, pre-BBR algorithm.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
+| raw.Upload.ServerMeasurements.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. Recorded in microseconds.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
 | raw.Upload.ServerMeasurements.TCPInfo.**DataSegsIn** | INTEGER | Input segments carrying data (len>0).<br>Kernel: data_segs_in in include/net/tcp.h |
 | raw.Upload.ServerMeasurements.TCPInfo.**DataSegsOut** | INTEGER | Transmitted segments carrying data (len>0).<br>Kernel: data_segs_out in include/net/tcp.h |
 | raw.Upload.ServerMeasurements.TCPInfo.**DeliveryRate** | INTEGER | Observed Maximum Delivery Rate.<br>Kernel: tcp_compute_delivery_rate() in net/ipv4/tcp.c |
@@ -99,9 +105,13 @@
 | raw.Upload.ClientMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
 | raw.Upload.ClientMeasurements.AppInfo.**NumBytes** | INTEGER | The number of bytes written to or read from the socket during the measurement. |
 | raw.Upload.ClientMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Upload.ClientMeasurements.**ConnectionInfo** | RECORD |  |
+| raw.Upload.ClientMeasurements.ConnectionInfo.**Client** | STRING |  |
+| raw.Upload.ClientMeasurements.ConnectionInfo.**Server** | STRING |  |
+| raw.Upload.ClientMeasurements.ConnectionInfo.**UUID** | STRING | UUID for TCP connection for this measurement. |
 | raw.Upload.ClientMeasurements.**BBRInfo** | RECORD | Instrumentation in the BBR TCP module in the kernel. |
 | raw.Upload.ClientMeasurements.BBRInfo.**BW** | INTEGER | The maximum end-to-end bandwidth from the server to the client as measured by BBR. |
-| raw.Upload.ClientMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. |
+| raw.Upload.ClientMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. Recorded in microseconds. |
 | raw.Upload.ClientMeasurements.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.  The binary point varies by kernel version but the statistical mode is always 1.0. |
 | raw.Upload.ClientMeasurements.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT.   The denominator varies by kernel version. |
 | raw.Upload.ClientMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
@@ -145,7 +155,7 @@
 | raw.Upload.ClientMeasurements.TCPInfo.**SegsOut** | INTEGER | The number of segments transmitted. Includes data and pure ACKs.<br>Kernel: segs_out in include/linux/tcp.h |
 | raw.Upload.ClientMeasurements.TCPInfo.**SegsIn** | INTEGER | The number of segments received. Includes data and pure ACKs.<br>Kernel: segs_in in include/linux/tcp.h |
 | raw.Upload.ClientMeasurements.TCPInfo.**NotsentBytes** | INTEGER | Number of bytes queued in the send buffer that have not been sent.<br>Kernel: tcpi_notsent_bytes() in net/ipv4/tcp.c |
-| raw.Upload.ClientMeasurements.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. From an older, pre-BBR algorithm.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
+| raw.Upload.ClientMeasurements.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. Recorded in microseconds.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
 | raw.Upload.ClientMeasurements.TCPInfo.**DataSegsIn** | INTEGER | Input segments carrying data (len>0).<br>Kernel: data_segs_in in include/net/tcp.h |
 | raw.Upload.ClientMeasurements.TCPInfo.**DataSegsOut** | INTEGER | Transmitted segments carrying data (len>0).<br>Kernel: data_segs_out in include/net/tcp.h |
 | raw.Upload.ClientMeasurements.TCPInfo.**DeliveryRate** | INTEGER | Observed Maximum Delivery Rate.<br>Kernel: tcp_compute_delivery_rate() in net/ipv4/tcp.c |
@@ -175,9 +185,13 @@
 | raw.Download.ServerMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
 | raw.Download.ServerMeasurements.AppInfo.**NumBytes** | INTEGER | The number of bytes written to or read from the socket during the measurement. |
 | raw.Download.ServerMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Download.ServerMeasurements.**ConnectionInfo** | RECORD |  |
+| raw.Download.ServerMeasurements.ConnectionInfo.**Client** | STRING |  |
+| raw.Download.ServerMeasurements.ConnectionInfo.**Server** | STRING |  |
+| raw.Download.ServerMeasurements.ConnectionInfo.**UUID** | STRING | UUID for TCP connection for this measurement. |
 | raw.Download.ServerMeasurements.**BBRInfo** | RECORD | Instrumentation in the BBR TCP module in the kernel. |
 | raw.Download.ServerMeasurements.BBRInfo.**BW** | INTEGER | The maximum end-to-end bandwidth from the server to the client as measured by BBR. |
-| raw.Download.ServerMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. |
+| raw.Download.ServerMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. Recorded in microseconds. |
 | raw.Download.ServerMeasurements.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.  The binary point varies by kernel version but the statistical mode is always 1.0. |
 | raw.Download.ServerMeasurements.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT.   The denominator varies by kernel version. |
 | raw.Download.ServerMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
@@ -221,7 +235,7 @@
 | raw.Download.ServerMeasurements.TCPInfo.**SegsOut** | INTEGER | The number of segments transmitted. Includes data and pure ACKs.<br>Kernel: segs_out in include/linux/tcp.h |
 | raw.Download.ServerMeasurements.TCPInfo.**SegsIn** | INTEGER | The number of segments received. Includes data and pure ACKs.<br>Kernel: segs_in in include/linux/tcp.h |
 | raw.Download.ServerMeasurements.TCPInfo.**NotsentBytes** | INTEGER | Number of bytes queued in the send buffer that have not been sent.<br>Kernel: tcpi_notsent_bytes() in net/ipv4/tcp.c |
-| raw.Download.ServerMeasurements.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. From an older, pre-BBR algorithm.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
+| raw.Download.ServerMeasurements.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. Recorded in microseconds.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
 | raw.Download.ServerMeasurements.TCPInfo.**DataSegsIn** | INTEGER | Input segments carrying data (len>0).<br>Kernel: data_segs_in in include/net/tcp.h |
 | raw.Download.ServerMeasurements.TCPInfo.**DataSegsOut** | INTEGER | Transmitted segments carrying data (len>0).<br>Kernel: data_segs_out in include/net/tcp.h |
 | raw.Download.ServerMeasurements.TCPInfo.**DeliveryRate** | INTEGER | Observed Maximum Delivery Rate.<br>Kernel: tcp_compute_delivery_rate() in net/ipv4/tcp.c |
@@ -241,9 +255,13 @@
 | raw.Download.ClientMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
 | raw.Download.ClientMeasurements.AppInfo.**NumBytes** | INTEGER | The number of bytes written to or read from the socket during the measurement. |
 | raw.Download.ClientMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Download.ClientMeasurements.**ConnectionInfo** | RECORD |  |
+| raw.Download.ClientMeasurements.ConnectionInfo.**Client** | STRING |  |
+| raw.Download.ClientMeasurements.ConnectionInfo.**Server** | STRING |  |
+| raw.Download.ClientMeasurements.ConnectionInfo.**UUID** | STRING | UUID for TCP connection for this measurement. |
 | raw.Download.ClientMeasurements.**BBRInfo** | RECORD | Instrumentation in the BBR TCP module in the kernel. |
 | raw.Download.ClientMeasurements.BBRInfo.**BW** | INTEGER | The maximum end-to-end bandwidth from the server to the client as measured by BBR. |
-| raw.Download.ClientMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. |
+| raw.Download.ClientMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. Recorded in microseconds. |
 | raw.Download.ClientMeasurements.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.  The binary point varies by kernel version but the statistical mode is always 1.0. |
 | raw.Download.ClientMeasurements.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT.   The denominator varies by kernel version. |
 | raw.Download.ClientMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
@@ -287,7 +305,7 @@
 | raw.Download.ClientMeasurements.TCPInfo.**SegsOut** | INTEGER | The number of segments transmitted. Includes data and pure ACKs.<br>Kernel: segs_out in include/linux/tcp.h |
 | raw.Download.ClientMeasurements.TCPInfo.**SegsIn** | INTEGER | The number of segments received. Includes data and pure ACKs.<br>Kernel: segs_in in include/linux/tcp.h |
 | raw.Download.ClientMeasurements.TCPInfo.**NotsentBytes** | INTEGER | Number of bytes queued in the send buffer that have not been sent.<br>Kernel: tcpi_notsent_bytes() in net/ipv4/tcp.c |
-| raw.Download.ClientMeasurements.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. From an older, pre-BBR algorithm.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
+| raw.Download.ClientMeasurements.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. Recorded in microseconds.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
 | raw.Download.ClientMeasurements.TCPInfo.**DataSegsIn** | INTEGER | Input segments carrying data (len>0).<br>Kernel: data_segs_in in include/net/tcp.h |
 | raw.Download.ClientMeasurements.TCPInfo.**DataSegsOut** | INTEGER | Transmitted segments carrying data (len>0).<br>Kernel: data_segs_out in include/net/tcp.h |
 | raw.Download.ClientMeasurements.TCPInfo.**DeliveryRate** | INTEGER | Observed Maximum Delivery Rate.<br>Kernel: tcp_compute_delivery_rate() in net/ipv4/tcp.c |
