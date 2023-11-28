@@ -6,15 +6,17 @@
 | a.**TestTime** | TIMESTAMP | The date and time of the measurement in UTC. |
 | a.**CongestionControl** | STRING | The congestion control algorithm used for connection. |
 | a.**MeanThroughputMbps** | FLOAT | The measured rate as calculated by the server. Presented in megabits per second, or Mbit/s, this value is the average of tcp-info snapshots taken at the beginning and end of an ndt7 measurement. Therefore it is identified as "MeanThroughputMbps". |
-| a.**MinRTT** | FLOAT | The minimum Round Trip Time observed during the measurement, recorded in milliseconds. |
+| a.**MinRTT** | FLOAT | The minimum Round Trip Time observed during the measurement, recorded in milliseconds. Derived from TCPInfo.MinRTT after 2020-06-18. |
 | a.**LossRate** | FLOAT | Loss rate from the lifetime of the connection. |
 | **parser** | RECORD | Metadata about how the parser processed this measurement row. |
 | parser.**Version** | STRING | Version is the symbolic version (if any) of the running server code that produced this measurement. |
 | parser.**Time** | TIMESTAMP | The time that the parser processed this row. |
 | parser.**ArchiveURL** | STRING | The Google Cloud Storage URL to the archive containing the Filename for this row. |
-| parser.**Filename** | STRING |  |
+| parser.**Filename** | STRING | The name of the file within the ArchiveURL originally created by the measurement service. Results in the raw record are derived from measurements in this file. |
 | parser.**Priority** | INTEGER |  |
-| parser.**GitCommit** | STRING |  |
+| parser.**GitCommit** | STRING | The git commit of this build of the parser. |
+| parser.**ArchiveSize** | INTEGER | The original archive size as found in GCS. |
+| parser.**FileSize** | INTEGER | The size of the file data provided to the parser for this row. |
 | **date** | DATE | Date is used by BigQuery to partition data to improve query performance. |
 | **raw** | RECORD | Fields from the raw data. |
 | raw.**GitShortCommit** | STRING | GitShortCommit is the Git commit (short form) of the running server code that produced this measurement. |
@@ -54,10 +56,10 @@
 | raw.S2C.**StartTime** | TIMESTAMP | The date and time when the measurement began in UTC. |
 | raw.S2C.**EndTime** | TIMESTAMP | The date and time when the measurement ended in UTC. |
 | raw.S2C.**MeanThroughputMbps** | FLOAT | The measured rate as calculated by the server. Presented in megabits per second, or Mbit/s, this value is the average of tcp-info snapshots taken at the beginning and end of an ndt5 measurement. Therefore it is identified as "MeanThroughputMbps". |
-| raw.S2C.**MinRTT** | INTEGER | The minimum RTT observed during the download measurement, recorded in milliseconds. |
-| raw.S2C.**MaxRTT** | INTEGER | The maximum sampled round trip time, recorded in milliseconds. |
-| raw.S2C.**SumRTT** | INTEGER | The sum of all sampled round trip times, recorded in milliseconds. |
-| raw.S2C.**CountRTT** | INTEGER | The number of round trip time samples included in S2C.SumRTT, reported in milliseconds. |
+| raw.S2C.**MinRTT** | INTEGER | The application measured minimum observed round trip time, recorded in nanoseconds. |
+| raw.S2C.**MaxRTT** | INTEGER | The application measured maximum sampled round trip time, recorded in nanoseconds. |
+| raw.S2C.**SumRTT** | INTEGER | The sum of all sampled round trip times, recorded in nanoseconds. |
+| raw.S2C.**CountRTT** | INTEGER | The number of round trip time samples included in S2C.SumRTT. |
 | raw.S2C.**ClientReportedMbps** | FLOAT | The download rate as calculated by the client, in megabits per second, or Mbit/s. Not all clients report this value. |
 | raw.S2C.**TCPInfo** | RECORD | The TCPInfo record provides results from the TCP_INFO netlink socket. These are the same values returned to clients at the end of the download (S2C) measurement. |
 | raw.S2C.TCPInfo.**State** | INTEGER | TCP state is nominally 1 (Established). Other values reflect transient states having incomplete rows.<br>Kernel: See TCP_ESTABLISHED in include/net/tcp_states.h |
@@ -99,7 +101,7 @@
 | raw.S2C.TCPInfo.**SegsOut** | INTEGER | The number of segments transmitted. Includes data and pure ACKs.<br>Kernel: segs_out in include/linux/tcp.h |
 | raw.S2C.TCPInfo.**SegsIn** | INTEGER | The number of segments received. Includes data and pure ACKs.<br>Kernel: segs_in in include/linux/tcp.h |
 | raw.S2C.TCPInfo.**NotsentBytes** | INTEGER | Number of bytes queued in the send buffer that have not been sent.<br>Kernel: tcpi_notsent_bytes() in net/ipv4/tcp.c |
-| raw.S2C.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. From an older, pre-BBR algorithm.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
+| raw.S2C.TCPInfo.**MinRTT** | INTEGER | Minimum Round Trip Time. From an older, pre-BBR algorithm. Recorded in microseconds.<br>Kernel: tcp_min_rtt in include/net/tcp.h |
 | raw.S2C.TCPInfo.**DataSegsIn** | INTEGER | Input segments carrying data (len>0).<br>Kernel: data_segs_in in include/net/tcp.h |
 | raw.S2C.TCPInfo.**DataSegsOut** | INTEGER | Transmitted segments carrying data (len>0).<br>Kernel: data_segs_out in include/net/tcp.h |
 | raw.S2C.TCPInfo.**DeliveryRate** | INTEGER | Observed Maximum Delivery Rate.<br>Kernel: tcp_compute_delivery_rate() in net/ipv4/tcp.c |
