@@ -1,10 +1,15 @@
 dist: focal
 language: ruby
+rvm:
+- 2.7
 
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - NODE_VERSION=v14
+
+before_install:
+- gem install bundler:2.3.9
 
 script:
 - set -e

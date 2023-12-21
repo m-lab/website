@@ -9,7 +9,7 @@ RUN apt install -y git ruby-dev gcc g++ make libgmp-dev build-essential \
 WORKDIR /home/website
 COPY Gemfile .
 COPY Gemfile.lock .
-RUN gem install bundler
+RUN gem install bundler:2.4.22
 RUN bundle install
 RUN gem cleanup
 
