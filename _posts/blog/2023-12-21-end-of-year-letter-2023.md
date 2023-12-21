@@ -6,20 +6,19 @@ date: 2023-12-21
 breadcrumb: blog
 categories:
   - annual-review
-  - 2023
 ---
 
-2023 was a big year! Here’s a summary of what we were up to. <!--more-->
+2023 was a big year! Here’s a summary of what we were up to and what's coming up next. <!--more-->
 
 ## Executive Summary
 
-In 2023 we…
+In 2023 we:
 * Published three new datasets to BigQuery: Wehe, Reverse Traceroute and Cloudflare’s speed test and AIM data. 
 * Expanded the virtual presence of the platform and developed MSAK, a tool for prototyping throughput performance measurements.  
 * Began new partnerships with Cloudflare and Dioptra, hosted monthly Community Calls and presented M-Lab and the importance of open Internet Measurement data at 10+ conferences, gatherings and webinars. 
 
  
-In 2024 we plan to…
+In 2024 we plan to:
 * Increase the number of virtual sites and diversify cloud providers, pursue client integration partnerships and make it easier to contribute infrastructure to the M-Lab platform.
 * Enable calibrated measurements by increasing the number of client vantage points, redefine Internet Quality, and build out our Research and Technical Advisory Committee. 
 
@@ -43,9 +42,6 @@ We introduced the [autoloading pipeline](https://github.com/m-lab/autoloader) in
 * **More Reverse Traceroute data is being collected and [published to BigQuery.](https://console.cloud.google.com/bigquery?project=measurement-lab&ws=!1m4!1m3!3m2!1smeasurement-lab!2srevtr_raw)**. Reverse traceroute, which constructs traceroutes from a client to an M-Lab server, has run on M-Lab for over a decade. Recently, M-Lab & the reverse traceroute team are generating reverse traceroutes for 1% of NDT measurements, which are then available in BigQuery. Combined with the traceroute datasets this provides forward and reverse path information for NDT tests. Look forward to announcements and more information soon.
 
 Platform
-
-
-
 * **Over 30% of our traffic measures performance to Cloud servers.** In the 15 years since M-Lab started, the Internet has changed significantly! In 2022, we started introducing testing to cloud servers to better measure performance aligned with the most common user experience. After completing a comparative analysis to ensure that there would be no adverse effects on the data, we began migrating an increasing amount of traffic. Learn more from our update at the September [community call](https://youtu.be/fcC2qSmMIy8?si=tA3ikfpVadoBjzip&t=1365). 
 * **We started using Terraform for our automated Cloud management**. Terraform, an infrastructure as code tool, will enable us to better support current and future partnerships.
 * **Measurement Swiss Army Knife (MSAK) [launched this year](https://www.measurementlab.net/blog/introducing-msak/)**. This new measurement service provides multi-stream throughput and UDP latency measurements -- the first open UDP latency measurement of its kind on the platform. The [Go client](https://github.com/m-lab/msak/tree/main/cmd/msak-client) is available now, with the javascript client available soon. Learn more about MSAK from the July [community call](https://www.youtube.com/watch?v=Lvo-nlX5YeM&t=1s).
