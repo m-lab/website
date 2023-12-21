@@ -21,8 +21,6 @@ if [ "$1" = "--quick" ]; then
   htmlproofer_args_extra="--disable-external"
 fi
 
-export PATH=$PATH:$(ruby -e 'puts Gem.user_dir')/bin
-
 # Run HTMLProofer
 bundle exec jekyll build --config _config-deploy.yml
 #bundle exec htmlproofer ./_site --only-4xx --file-ignore "/ndt/" "$htmlproofer_args_extra"
