@@ -6,6 +6,10 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - NODE_VERSION=v14
 
+before_install:
+  - gem install bundler:2.4.22
+  - bundle install
+
 script:
 - set -e
 - "$TRAVIS_BUILD_DIR/travis/install_gcloud.sh"
