@@ -23,10 +23,10 @@ categories:
 * Enable calibrated measurements by increasing the number of client vantage points, redefine Internet Quality, and build out our Research and Technical Advisory Committee. 
 
 [You can support M-Lab in the following ways](#get-involved):
-* Donate data or resources 
 * Partner with us
-* Include our data and tools in your research
+* Donate data or resources 
 * Sponsor a site
+* Include our data and tools in your research
 
 
 ## Year in Review
@@ -88,7 +88,7 @@ Research & Community
 * After a year of leadership, Katherine Townsend has moved on from her role as Director. We thank her for her contributions over 2023. 
 * Thank you to our measurement, data and research partners including: 
     * Thank you to the [Wehe](https://wehe.meddle.mobi/) team (Dave Choffnes, Zeinab Shmeis, and Phillipa Gill), the Reverse Traceroute team (Ethan Katz-Bassett, Kevin Vermulen) for their work getting Wehe and Reverse Traceroute data, respectively, into BigQuery. 
-    * Thank you to Timur Friedman and the Dioptra team for their long engagement with M-Lab and their work to publish Internet scale route trace datasets from [Iris](https://iris.dioptra.io/#/).
+    * Thank you to Timur Friedman and the [Dioptra]( https://dioptra.io/) team for their long engagement with M-Lab and their work to publish Internet scale route trace datasets from [Iris](https://iris.dioptra.io/#/).
 * Thank you to our infrastructure partners including: 
     * [ISC](https://www.isc.org/) who has sponsored M-Lab sites for over a decade and helped provide the first minimal site configuration, which will serve as a template for more sites in the future. 
     * Cogent, Hurricane Electric, Transteloco and Vodafone who continue to support infrastructure in over 20 sites globally. 
@@ -100,13 +100,13 @@ Research & Community
 
 ## Get Involved
 
-**Donate Data**. As ever, testing your Internet is the easiest and best way to get involved with M-Lab — every time you measure your internet with one of the M-Lab hosted tests, you are helping to make it possible for us to improve the internet. 
+**Donate Data**. As ever, testing your Internet is the easiest and best way to get involved with M-Lab — every time you measure your Internet with one of the M-Lab hosted tests, you are helping to make it possible for us to improve the Internet. 
 
 **Donate Resources**. We also welcome tax-deductible donations of all sizes via our fiscal sponsor, [Code for Science & Society](https://donorbox.org/measurement-lab). If you have technical assets, such as cloud resources or other technical infrastructure that might benefit M-Lab, reach out and we’d love to discuss more!
 
-**Partner with us.** The M-Lab team is here to help, and can support projects that need to work with the internet measurement data, or are interested in integrating the platform or generally thinking about ways to approach internet measurement.
+**Partner with us.** The M-Lab team is here to help, and can support projects that need to work with the Internet measurement data, or are interested in integrating the platform or generally thinking about ways to approach Internet measurement.
 
-**More ways to contribute**. Let’s talk about ways to partner on open internet data, new metrics, diversifying testing infrastructure and more. If you’re interested in ways to get involved with any of the efforts mentioned above, specifically:  
+**More ways to contribute**. Let’s talk about ways to partner on open Internet data, new metrics, diversifying testing infrastructure and more. If you’re interested in ways to get involved with any of the efforts mentioned above, specifically:  
 * Contributing to the M-Lab platform as a cloud or content provider 
 * Sponsoring a researcher to use M-Lab data
 * Using M-Lab data in your research and letting us know
