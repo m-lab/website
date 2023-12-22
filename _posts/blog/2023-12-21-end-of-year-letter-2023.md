@@ -12,17 +12,17 @@ categories:
 
 ## Executive Summary
 
-In 2023 we:
+[In 2023 we](#year-in-review):
 * Published three new datasets to BigQuery: Wehe, Reverse Traceroute and Cloudflare’s speed test and AIM data. 
 * Expanded the virtual presence of the platform and developed MSAK, a tool for prototyping throughput performance measurements.  
 * Began new partnerships with Cloudflare and Dioptra, hosted monthly Community Calls and presented M-Lab and the importance of open Internet Measurement data at 10+ conferences, gatherings and webinars. 
 
  
-In 2024 we plan to:
+[In 2024 we plan to](#looking-ahead):
 * Increase the number of virtual sites and diversify cloud providers, pursue client integration partnerships and make it easier to contribute infrastructure to the M-Lab platform.
 * Enable calibrated measurements by increasing the number of client vantage points, redefine Internet Quality, and build out our Research and Technical Advisory Committee. 
 
-You can support M-Lab in the following ways:
+[You can support M-Lab in the following ways](#get-involved):
 * Donate data or resources 
 * Partner with us
 * Include our data and tools in your research
