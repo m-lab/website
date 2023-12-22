@@ -111,6 +111,6 @@ Research & Community
 * Sponsoring a researcher to use M-Lab data
 * Using M-Lab data in your research and letting us know
 * Joining our Research and Technical Advisory Committee 
-* Being involved in our Internet Society Research grant defining Internet Quality 
+* Be involved in our effort to redefine Internet Quality 
 
 Reach out to [hello@measurementlab.net](mailto:hello@measurementlab.net) — we’d love to chat and see what we can do next year and the years to come. 
