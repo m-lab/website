@@ -18,7 +18,7 @@ Over the past decade, network and Internet measurement experts have been reachin
 
 ## Join our Commmunity Call to Contribute
 
-With support from the Internet Society Foundation, M-Lab is excited to be leading a research initiative that will consider all the relevant complexities in the context of their practical application within policy. Together with our diverse ecosystem of experts, we aim to create an Internet Quality Barometr (working title), a standardized approach to measuring Internet quality that decision-makers can use to make data-driven improvements to the Internet in their region.
+With support from the Internet Society Foundation, M-Lab is excited to be leading a research initiative that will consider all the relevant complexities in the context of their practical application within policy. Together with our diverse ecosystem of experts, we aim to create an Internet Quality Barometer (working title), a standardized approach to measuring Internet quality that decision-makers can use to make data-driven improvements to the Internet in their region.
 
 We invite you to join us on February 2, 2024 at 11am ET for our first monthly community call of 2024, where we will gather community feedback about who and what will make the research a success. Specifically:
 
