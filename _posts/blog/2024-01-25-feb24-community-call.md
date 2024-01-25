@@ -20,15 +20,15 @@ Over the past decade, network and Internet measurement experts have been reachin
 
 With support from the Internet Society Foundation, M-Lab is excited to be leading a research initiative that will consider all the relevant complexities in the context of their practical application within policy. Together with our diverse ecosystem of experts, we aim to create an Internet Quality Barometr (working title), a standardized approach to measuring Internet quality that decision-makers can use to make data-driven improvements to the Internet in their region.
 
-We invite you to join us on February 2, 2024 at 11am EDT for our first monthly community call of 2024, where we will gather community feedback about who and what will make the research a success. Specifically:
+We invite you to join us on February 2, 2024 at 11am ET for our first monthly community call of 2024, where we will gather community feedback about who and what will make the research a success. Specifically:
 
 * What datasets, tools and methodologies should be included?
 * What organizations, consortiums and experts should be consulted?
-* What conversations (e.g. newsletters, mailing lists etc.) should we be part of?
+* What conversations (e.g., newsletters, mailing lists etc.) should we be part of?
 * If you are interested in helping shape this work, how are you interested in contributing? Through an advisory committee? Through a survey? A workshop? Other formats?
 
-Can't join the call but want to contribute or give feedback? Feel free to reach out to [hello@measurementlab.net](mailto:hello@measurementalb.net).
+Can't join the call but want to contribute or give feedback? Feel free to reach out to [hello@measurementlab.net](mailto:hello@measurementlab.net).
 
 ## Registration
 
-Please register for our community calls [here](https://us02web.zoom.us/meeting/register/tZwucuCgqTIiHdd1OVBDlvHVHKGfyGGoMn6U) and reach out to [hello@measurementlab.net](mailto:hello@measurementalb.net) if you have any questions.
+Please [register](https://us02web.zoom.us/meeting/register/tZwucuCgqTIiHdd1OVBDlvHVHKGfyGGoMn6U) for our community calls and reach out to [hello@measurementlab.net](mailto:hello@measurementlab.net) if you have any questions.
