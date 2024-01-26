@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "How should Internet quality be measured? Join us for our Community Call on February 2, 2024"
+title: "How should Internet quality be measured? Join us for our Community Call on February 1, 2024"
 author: "Lai Yi Ohlsen"
 date: 2024-01-23
 breadcrumb: blog
@@ -10,7 +10,7 @@ categories:
   - research
 ---
 
-Access to high speed Internet does not necessarily mean access to high quality Internet. But if not speed then what? How *should* we measure Internet quality? Join our monthly community call on February 2, 2024 at 11am ET to discuss and contribute to our latest research initiative, sponsored by Internet Society Foundation. <!--more-->
+Access to high speed Internet does not necessarily mean access to high quality Internet. But if not speed then what? How *should* we measure Internet quality? Join our monthly community call on February 1, 2024 at 11am ET to discuss and contribute to our latest research initiative, sponsored by Internet Society Foundation. <!--more-->
 
 ## Introducing Internet Quality Barometer
 
@@ -20,7 +20,7 @@ With support from the Internet Society Foundation, M-Lab is excited to be leadin
 
 ## Join our Commmunity Call to Contribute
 
-We invite you to join us on February 2, 2024 at 11am ET for our first monthly community call of 2024, where we will gather community feedback about who and what will make the research a success. Specifically:
+We invite you to join us on February 1, 2024 at 11am ET for our first monthly community call of 2024, where we will gather community feedback about who and what will make the research a success. Specifically:
 
 * What datasets, tools and methodologies should be included?
 * What organizations, consortiums and experts should be consulted?
