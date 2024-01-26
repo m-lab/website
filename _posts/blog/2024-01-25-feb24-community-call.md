@@ -16,9 +16,9 @@ Access to high speed Internet does not necessarily mean access to high quality I
 
 Over the past decade, network and Internet measurement experts have been reaching a consensus that throughput measurements, more commonly referred to as “speed” tests, are not the only suitable proxy for the quality of an user’s experience using the Internet and that other metrics such as unloaded and loaded latency, jitter, and packet loss should also be considered. Additionally, experts often discuss the need for measurements that account for the impact of local wi-fi networks, as well as metadata to differentiate between different types of access technologies such as fiber and DSL. These characteristics are complex to consider when assessing the quality of an individual connection and only become more layered when analyzing the connectivity of a region in aggregate - for example, where should the data be collected from?  How often? From which access technologies and using which measurement methodologies? And so on.
 
-## Join our Commmunity Call to Contribute
-
 With support from the Internet Society Foundation, M-Lab is excited to be leading a research initiative that will consider all the relevant complexities in the context of their practical application within policy. Together with our diverse ecosystem of experts, we aim to create an Internet Quality Barometer (working title), a standardized approach to measuring Internet quality that decision-makers can use to make data-driven improvements to the Internet in their region.
+
+## Join our Commmunity Call to Contribute
 
 We invite you to join us on February 2, 2024 at 11am ET for our first monthly community call of 2024, where we will gather community feedback about who and what will make the research a success. Specifically:
 
