@@ -225,11 +225,6 @@ Information collected under our Acceptable Use Policy includes:
 
 Specific information on what type of data is collected by each M-Lab test and how it can be accessed is available on our [tests page](https://www.measurementlab.net/tests).
 
-Who is collecting data? Where is it stored?
-
-For most tests, M-Lab collects and stores raw test data and makes the data publicly available using [Google Cloud Storage](https://www.measurementlab.net/data/docs/gcs/). Data for some tests is additionally made available through [Google BigQuery](https://www.measurementlab.net/data/docs/bq/quickstart) so that users can run SQL queries on the data. Schema descriptions of the data for [test](https://measurementlab.net/tests) that publish to BigQuery are available on the individual page for each test.
-
-
 ### Who is collecting data? Where is it stored?
 
 For most tests, M-Lab collects and stores raw test data and makes the data publicly available using [Google Cloud Storage](https://www.measurementlab.net/data/docs/gcs/). Data for some tests is additionally made available through [Google BigQuery](https://www.measurementlab.net/data/docs/bq/quickstart) so that users can run SQL queries on the data. Schema descriptions of the data for [test](https://measurementlab.net/tests) that publish to BigQuery are available on the individual page for each test.
