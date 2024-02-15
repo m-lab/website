@@ -12,11 +12,11 @@ There are many ways to work with M-Lab, whether as a direct hire, through a fell
 
 ## Open Postions at Measurement Lab
 
-* [M-Lab Director]({{ site.baseurl }}/jobs/2022-05/director/)
+* [M-Lab Program Manager]({{ site.baseurl }}/jobs/2024-02/program-manager)
 
 ## Contract Opportunities with M-Lab
 
- * None at this time
+* None at this time
 
 ## Open Opportunities in the M-Lab Community
 
