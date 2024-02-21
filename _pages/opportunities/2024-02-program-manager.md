@@ -60,3 +60,4 @@ We are looking for a Program Manager to help drive delivery of Measurement Labâ€
 * Apply on [Greenhouse](https://boards.greenhouse.io/codeforsciencesociety/jobs/4251181007?gh_jid=4251181007).
 * Submit a resume and cover letter, highlighting 2-3 projects that you have worked on and see as relevant to the role, including any possible links to where we can learn more about the project.
 * The final date to submit applications is March 10, 2024. Weâ€™ll review applicants on a rolling basis.
+* If you have questions, please reach out to [jobs@measurementlab.net](mailto:jobs@measurementlab.net).
