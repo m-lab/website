@@ -26,7 +26,7 @@ Please review M-Lab’s [Privacy Policy]({{ site.baseurl }}/privacy) to understa
 ## Raw data in Google Cloud Storage
 
 All of the raw data and log files from the measurement fleet are archived in
-their original format and available:
+their original format and publicly available:
 
 * [throughput and latency results](https://console.cloud.google.com/storage/browser/archive-measurement-lab/autoload/v1/msak){:target="_blank"}
 * [sidecar data](https://console.cloud.google.com/storage/browser/archive-measurement-lab/msak){:target="_blank"}, including tcpinfo snapshots
@@ -36,9 +36,15 @@ Details on how M-Lab publishes test data in raw form are provided on our
 [Google Cloud Storage documentation page]({{ site.baseurl }}/data/docs/gcs).
 
 ## MSAK data in BigQuery
+
 To make MSAK data more readily available for research and analysis, M-Lab loads
 it into BigQuery tables and views, and makes query access available for free by
-subscription to a Google Group. Find out more about how to get access on our
+subscription to a Google Group. The MSAK data is available in the following datasets:
+
+* measurement-lab.msak
+* measurement-lab.msak_raw
+
+Find out more about how to get access on our
 [BigQuery QuickStart page]({{ site.baseurl }}/quickstart/).
 
 ## Source code
