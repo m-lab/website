@@ -9,13 +9,19 @@ breadcrumb: tests
 
 MSAK is a measurement service hosted by M-Lab that implements two different test protocols:
 
-* **throughput**: A configurable multi-stream, Websocket-based throughput measurement protocol. Its design is partially based on M-Lab's single-stream measurement protocol, [NDT](ndt/ndt.md).
+* **throughput**: A configurable Websocket-based throughput measurement protocol capable of multi-stream tests. Its design is partially based on M-Lab's single-stream measurement protocol, [NDT](ndt/ndt.md). Configurable parameters currently include:
+  * Number of streams
+  * Congestion control algorithm
+  * Test duration
+  * Per-stream byte limit
 * **latency**: A UDP-based latency measurement protocol.
 
 ## Run an MSAK throughput test
 
 If you are interested in running an MSAK test, please visit our
 [official speedtest](https://speed.measurementlab.net){:target="_blank"}.
+
+We also provide a standalone Go client on the [Github repository](https://github.com/m-lab/msak/){:target="_blank"}.
 
 ## Data collected by MSAK
 
