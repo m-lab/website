@@ -35,15 +35,83 @@ You can find out more information:
 
 ## Host or Sponsor an M-Lab Measurement Site
 
-M-Lab supporting partners may contribute or donate resources to provide new measurement points around the world. M-Lab places servers in datacenters where last mile ISPs interconnect with transit to the Internet. At a minimum, sponsoring a measurement point requires a commitment to provide:
+In 2024, joining the M-Lab platform will be easier than ever with our new flexible options for contributing infrastructure. This following information provides an overview of the options for supporting the platform, increasing resilience, diversity, and reach of the platform in service of M-Lab’s mission.
 
+All contributions are considered tax-deductible donations to Code for Science & Society, M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at [hello@measurementlab.net](mailto:hello@measurementlab.net) and if you are interested in contributing, please fill out our [Infrastructure Contribution Form](https://docs.google.com/forms/d/e/1FAIpQLSe1wXKfQ0VIt_hZFatCwCaoOeeDpRv3JZDM_eAmIaksMuwB4g/viewform?usp=sf_link).
+
+### Cloud Credits for Virtual Servers
+
+The easiest way to donate infrastructure to M-Lab is by donating resources for cloud credits from providers such as Google Cloud, Amazon Web Services, Azure, Equinix, Linode, IBM and others. M-Lab can host 1 site for $30,000 to $360,000 credits annually, where total price depends on user demand, service availability, and market rates. M-Lab services are highly configurable and can work within any budget in any market at lower availability.
+
+This option is best for contributors who
+
+* Currently offer Cloud services and want their infrastructure represented in reports using M-Lab data
+* Only have access to virtual networks and resources
+* Want M-Lab to manage the virtual resources on your behalf
+
+### Full Hardware Deployment managed by M-Lab
+
+To contribute resources to be managed and deployed by M-Lab using our full deployment model, the following will be required:
+
+* A /26 IPv4 prefix and /64 IPv6 prefix, both globally routed, and statically assigned to M-Lab equipment
+* Standard hardware[^1] including:
+  * 4x Dell PowerEdges server with iDRAC
+  * 1x Juniper switch with 10Gbit/s uplink
 * 5U rackspace and power
-* a /26 IPv4 block and /64 IPv6 block if available, both globally routed, and statically assigned to M-Lab equipment
-* a 1G dedicated, burstable to 10G uplink to a single transit provider
-* remote support in coordination with M-Lab for installation and periodic maintenance
-* three year commitment to sponsor costs of the above items
+* A 10Gbit/s uplink to the Internet
+* Remote support in coordination with M-Lab for installation and periodic maintenance
 
-If you represent an organization interested in becoming an M-Lab supporting partner, please [contact us](mailto:support@measurementlab.net).
+This option is best for contributors who:
+
+* Currently offer rack space and power
+* Have network capacity to support high user demand
+* Can sponsor all costs associated with a full site deployment managed by M-Lab on your behalf
+* Can provide network locations that measure paths relevant for user experience accessing content & services on the Internet
+
+### Minimal Hardware Deployment managed by M-Lab
+
+To contribute resources to be managed and deployed by M-Lab using our minimal deployment model, the following will be required: 
+
+* A /28 or /29 IPv4 prefix and /64 IPv6 prefix, both globally routed, and statically assigned to M-Lab equipment
+* Standard hardware* including:
+  * 1x Dell PowerEdge server with iDRAC
+* 1U rackspace and power
+* A 10Gbit/s uplink to the Internet
+* Remote support in coordination with M-Lab for installation and periodic maintenance, including secure access to the iDRAC
+
+This option is best for contributors who:
+
+* Can sponsor all costs associated with a minimal site deployment managed by M-Lab on your behalf
+* Can provide network locations that measure paths relevant for user experience accessing content & services on the Internet
+* Are not able to support a full scale deployment
+
+We are open to Trusted Testers for Minimal Deployments in 2024 Q2 and plan to make this option generally available by 2024 Q3.
+
+\* New hardware models may need to be qualified by M-Lab before we can accept them as part of the platform, but additional resources could be required to support the qualification process.
+
+### Self-Managed Deployment
+
+Self-managed hardware is managed and deployed by the contributor and can be physical or virtual. All data is collected and archived to the M-Lab data pipeline.
+
+To run a self-managed M-Lab server, the following is needed:
+
+* Registration with M-Lab for a self-managed deployment
+* An IPv4/32 address and IPv6/128 address, both globally routed, and statically assigned to the contributed server
+* A physical or virtual server with at least 4GB RAM & 4 CPUs (Intel class)
+* At least 1Gbit/s uplink to the Internet
+
+This option is best for contributors who:
+
+* Currently offer or have easy access to a single physical or virtual server
+* Already maintain an Network Diagnostic Tool, Measurement Swiss Army Knife, or Reverse Traceroute server and want to contribute data to M-Lab’s public dataset or
+* Already maintain other speed test servers in their network or
+* Are not able to to provide the resources necessary for M-Lab managed servers but are still interested in contributing infrastructure
+
+We are open to Trusted Testers for Minimal Deployment in 2024 Q3 and plan to make this option generally available by 2024 Q4.
+
+### Interested?
+
+Please fill out our [Infrastructure Contribution Form](https://docs.google.com/forms/d/e/1FAIpQLSe1wXKfQ0VIt_hZFatCwCaoOeeDpRv3JZDM_eAmIaksMuwB4g/viewform?usp=sf_link) and feel free to reach out to [hello@measurementlab.net](mailto:hello@measurementlab.net).
 
 ## Analyze and Visualize M-Lab Data
 
