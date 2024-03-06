@@ -11,7 +11,11 @@ Reverse traceroute measures the network path back to a user from selected networ
 
 Please cite this data set as follows: **The M-Lab Reverse Traceroute Data Set, &lt;date range used&gt;. https://measurementlab.net/tests/reverse_traceroute**
 
-**Data** collected by Reverse Traceroute is available in raw format at[https://console.cloud.google.com/storage/browser/thirdparty-revtr0-measurement-lab](https://console.cloud.google.com/storage/browser/thirdparty-revtr0-measurement-lab).
+**Data**
+
+Data exported since 2023 is available in raw format at [https://console.cloud.google.com/storage/browser/archive-measurement-lab/autoload/v1/revtr](https://console.cloud.google.com/storage/browser/archive-measurement-lab/autoload/v1/revtr).
+
+Data exported before 2023 is available in raw format at [https://console.cloud.google.com/storage/browser/thirdparty-revtr0-measurement-lab](https://console.cloud.google.com/storage/browser/thirdparty-revtr0-measurement-lab).
 
 If you are interested in accessing data from the Reverse Traceroute test in BigQuery, please [contact us](mailto:support@measurementlab.net)!
 
