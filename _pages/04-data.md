@@ -38,7 +38,7 @@ There is typically at least a 24-hour delay between data collection and data pub
   * Reverse traceroute measures the network path back to a user from selected network endpoints, and provides a rich source of information on network routing and topology.
   * Reverse Traceroute data is not processed by the M-Lab ETL Pipeline.
   * More information is available at [Reverse Traceroute](https://research.cs.washington.edu/networking/astronomy/reverse-traceroute.html){:target="_blank"}
-  * [Reverse Traceroute Raw Data](https://console.cloud.google.com/storage/browser/thirdparty-revtr0-measurement-lab){:target="_blank"}
+  * [Reverse Traceroute Raw Data](https://console.cloud.google.com/storage/browser/archive-measurement-lab/autoload/v1/revtr){:target="_blank"}
 * [WeHe]({{site.baseurl}}/tests/wehe)
   * Wehe uses your device to exchange Internet traffic recorded from real, popular apps like YouTube and Spotify, and attempts to tell you whether your ISP is giving different performance to an app's network traffic.
   * More information is available from the [WeHe website](https://dd.meddle.mobi/){:target="_blank"} and [GitHub](https://dd.meddle.mobi/codeanddata.html){:target="_blank"}.
