@@ -14,7 +14,7 @@ As of March 18th, access procedures for M-Lab’s archival data will change.<!--
 
 ## What’s Changing
 
-As of March 18th, access procedures for M-Lab’s archival data will change. M-Lab archival data, the raw data archived in Cloud Storage, will continue to be openly accessible, but will be stored in a more resource efficient way. This does not impact access to M-Lab’s data published in BigQuery.
+M-Lab archival data, the raw data archived in Cloud Storage, will continue to be openly accessible, but will be stored in a more resource efficient way. This does not impact access to M-Lab’s data published in BigQuery.
 
 ## What You Need to Do
 
