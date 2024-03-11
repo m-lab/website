@@ -1,15 +1,23 @@
 ---
 layout: page
-title: Google Cloud Storage
-permalink: /data/docs/gcs/
+title: Archival Data
+permalink: /data/docs/archival-data/
 breadcrumb: data
 ---
 
-# Google Cloud Storage
-
+# Archival Data
 M-Lab publishes all data it collects in raw form as archives on Google Cloud Storage (GCS) at the following location:
 
 [https://console.developers.google.com/storage/browser/archive-measurement-lab/](https://console.developers.google.com/storage/browser/archive-measurement-lab/){:target="_blank"}
+
+## Acceptable Use Policy
+
+Access to the M-Lab raw data archives requires accepting the [Acceptable Use Agreement](https://docs.google.com/forms/d/e/1FAIpQLSfDGsEqfE3Lh3qtRSMy621O_bzBMZtnrw5sDgR42tGWpymJ2w/viewform). Accepting this agreement helps the M-Lab team ensure responsible use of our data resources and better understand data usage needs and patterns. If you have any questions or need support accessing the data, contact M-Lab for support: [support@measurementlab.net](mailto:support@measurementlab.net).
+
+User Responsibilities:
+
+* Authenticated access: Your email address is required to access M-Lab's data, and usage will be monitored by the M-Lab team.
+* Responsible Resource Use: M-Lab has been collecting large amounts of data since 2008. Please exercise caution when using the raw data by refraining from executing large downloads or attempting to download the entire M-Lab public archive. Such actions can put excessive strain on resources and impact accessibility for others. M-Lab monitors usage and may remove access without warning if it is excessive.
 
 ## File Layout
 
