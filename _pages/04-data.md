@@ -11,9 +11,9 @@ breadcrumb: data
 
 Measurement data from many experiments hosted on M-Lab are processed via the ETL pipeline and published in two forms:
 
-* Google Cloud Storage
+* Archival Data
   * M-Lab publishes raw output from many measurement tests on Google Cloud Storage as file archives.
-  * See [M-Lab Google Cloud Storage documentation]({{ site.baseurl }}/data/docs/gcs) for more information.
+  * See [M-Lab Archival Data documentation]({{ site.baseurl }}/data/docs/archival-data) for more information.
 * Google BigQuery
   * M-Lab parses data for a subset of tests and publishes the data on BigQuery so that users can run SQL queries on the data.
   * See [M-Lab BigQuery QuickStart]({{ site.baseurl }}/data/docs/bq/quickstart) for more information.
