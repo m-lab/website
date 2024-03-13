@@ -8,7 +8,9 @@ breadcrumb: "contribute"
 
 # Measurement Lab (M-Lab) Program Manager
 
-We are looking for a Program Manager to help drive delivery of Measurement Lab’s projects and programs in the open internet measurement ecosystem. Read more about the role below and [apply on Greenhouse](https://boards.greenhouse.io/codeforsciencesociety/jobs/4251181007?gh_jid=4251181007).
+We are looking for a Program Manager to help drive delivery of Measurement Lab’s projects and programs in the open internet measurement ecosystem.
+
+**As of March 10, 2024 we are no longer reviewing applications for this role. If you have questions, please reach out to [jobs@measurementlab.net](mailto:jobs@measurementlab.net).**
 
 ## About the Role
 
