@@ -10,7 +10,7 @@ breadcrumb: "contribute"
 
 We are looking for a Program Manager to help drive delivery of Measurement Lab’s projects and programs in the open internet measurement ecosystem.
 
-**As of March 10, 2024 we are no longer reviewing applications for this role. If you have questions, please reach out to [jobs@measurementlab.net](mailto:jobs@measurementlab.net).**
+**As of March 10, 2024 we are no longer accepting applications for this role. If you have questions, please reach out to [jobs@measurementlab.net](mailto:jobs@measurementlab.net).**
 
 ## About the Role
 
