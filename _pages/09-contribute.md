@@ -70,7 +70,7 @@ This option is best for contributors who:
 
 ### Minimal Hardware Deployment managed by M-Lab
 
-To contribute resources to be managed and deployed by M-Lab using our minimal deployment model, the following will be required: 
+To contribute resources to be managed and deployed by M-Lab using our minimal deployment model, the following will be required:
 
 * A /28 or /29 IPv4 prefix and /64 IPv6 prefix, both globally routed, and statically assigned to M-Lab equipment
 * Standard hardware* including:
@@ -89,13 +89,13 @@ We are open to Trusted Testers for Minimal Deployments in 2024 Q2 and plan to ma
 
 \* New hardware models may need to be qualified by M-Lab before we can accept them as part of the platform, but additional resources could be required to support the qualification process.
 
-### Self-Managed Deployment
+### Host Managed Deployment
 
-Self-managed hardware is managed and deployed by the contributor and can be physical or virtual. All data is collected and archived to the M-Lab data pipeline.
+Host managed deployments are managed and deployed by the contributor and can be physical or virtual. All data is collected and archived to the M-Lab data pipeline.
 
-To run a self-managed M-Lab server, the following is needed:
+To run a host managed M-Lab server, the following is needed:
 
-* Registration with M-Lab for a self-managed deployment
+* Registration with M-Lab for a host managed deployment
 * An IPv4/32 address and IPv6/128 address, both globally routed, and statically assigned to the contributed server
 * A physical or virtual server with at least 4GB RAM & 4 CPUs (Intel class)
 * At least 1Gbit/s uplink to the Internet
