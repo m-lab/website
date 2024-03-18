@@ -10,7 +10,9 @@ categories:
   - contribution
 ---
 
-We've added a new, flexible set of options to expand and diversify our global fleet of measurement vantage points. <!--more-->
+We've added a new, flexible set of options to expand and diversify our global fleet of measurement vantage points. 
+![Diagram of Infrastructure Options]({{ site.baseurl }}/images/blog/2024-03-infrastructure/infra-options-diagram.png){: width="750"}{:style="display:block; margin-left:auto; margin-right:auto"}
+<!--more-->
 
 ## Motivations
 
@@ -26,10 +28,6 @@ As a continuation of those efforts, we've added a new, flexible set of options f
 ## A new, flexible set of options
 
 New vantage points can be managed by M-Lab or managed by their host. They can be virtual or physical, and scaled to support either a full site or a minimal site. All options can be placed in “on-net” or “off-net” networks, or in other words, located in edge, access or interconnection points.
-
-### Summary
-
-![Diagram of Infrastructure Options]({{ site.baseurl }}/images/blog/2024-03-infrastructure/infra-options-diagram.png){: width="750"}{:style="display:block; margin-left:auto; margin-right:auto"}
 
 <table>
   <tr>
@@ -83,8 +81,6 @@ New vantage points can be managed by M-Lab or managed by their host. They can be
    </td>
   </tr>
 </table>
-
-### Details
 
 For a full overview of specifications, please see our [Contribute](https://www.measurementlab.net/contribute/#host-or-sponsor-an-m-lab-measurement-site) page.
 
