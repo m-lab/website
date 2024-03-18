@@ -107,7 +107,7 @@ This option is best for contributors who:
 * Already maintain other speed test servers in their network or
 * Are not able to to provide the resources necessary for M-Lab managed servers but are still interested in contributing infrastructure
 
-We are open to Trusted Testers for Minimal Deployment in 2024 Q3 and plan to make this option generally available by 2024 Q4.
+We are open to Trusted Testers for Host-Managed deployment in 2024 Q3 and plan to make this option generally available by 2024 Q4.
 
 ### Interested?
 
