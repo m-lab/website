@@ -65,7 +65,7 @@ The URLs shown in [M-Lab's GCS web interface](https://console.developers.google.
 
 To access M-Lab files programatically, you will need to generate an OAuth 2.0 [access token](https://cloud.google.com/iam/docs/create-short-lived-credentials-direct#gcloud_2). The access token and the project will need to be passed in the request headers.
 
-Additionally, you will need to replace`storage.cloud.google.com` with `storage.googleapis.com` in GCS URLs.
+Additionally, you will need to replace `storage.cloud.google.com` with `storage.googleapis.com` in GCS URLs.
 
 For example, if the URL of a raw NDT archive on the GCS web application is:
 
@@ -74,7 +74,7 @@ For example, if the URL of a raw NDT archive on the GCS web application is:
 The request will be:
 
 ~~~ shell
- curl -H "X-Goog-User-Project: measurement-lab" -H "Authorization: Bearer $TOKEN" https://storage.googleapis.com/archive-measurement-lab/ndt/2018/11/01/20181101T000001Z-mlab3-lga07-ndt-0000.tgz]
+ curl -H "X-Goog-User-Project: measurement-lab" -H "Authorization: Bearer $TOKEN" https://storage.googleapis.com/archive-measurement-lab/ndt/2018/11/01/20181101T000001Z-mlab3-lga07-ndt-0000.tgz
 ~~~
 
 ### GCS File Index
