@@ -42,11 +42,11 @@ For example, the compressed .tgz file `20090218T000000Z-mlab1-lga01-ndt-0000.tgz
 
 The easiest way to access M-Lab data on GCS programmatically is by using the [`gsutil`](https://cloud.google.com/storage/docs/gsutil) command-line utility.
 
-Authorization is required to run [`gsutil`] commands.
+Authorization is required to run `gsutil` commands.
 
-Users who have accepted the Acceptable Use Agreement can run the `gcloud auth login [ACCOUNT]` command to obtain access through an interactive workflow.
+Users who have accepted the [Acceptable Use Agreement](https://docs.google.com/forms/d/e/1FAIpQLSfDGsEqfE3Lh3qtRSMy621O_bzBMZtnrw5sDgR42tGWpymJ2w/viewform) can run the `gcloud auth login $ACCOUNT` command to obtain access through an interactive workflow.
 
-Fully programmatic access requires a service account. Contact support@measurementlab.net if you need to request one. Please include a justification and a contact email in your message. M-Lab staff will provide you with an account ID and a credential key file.
+Fully programmatic (non-interactive) access requires a service account. Contact [support@measurementlab.net](mailto:support@measurementlab.net) if you need to request one. Please include a justification and a contact email in your message. M-Lab staff will provide you with an account ID and a credential key file. The file will be needed for authorization.
 
 ~~~ shell
 # Authorize access.
