@@ -42,7 +42,16 @@ For example, the compressed .tgz file `20090218T000000Z-mlab1-lga01-ndt-0000.tgz
 
 The easiest way to access M-Lab data on GCS programmatically is by using the [`gsutil`](https://cloud.google.com/storage/docs/gsutil) command-line utility.
 
+Authorization is required to run [`gsutil`] commands.
+
+Users who have accepted the Acceptable Use Agreement can run the `gcloud auth login [ACCOUNT]` command to obtain access through an interactive workflow.
+
+Fully programmatic access requires a service account. Contact support@measurementlab.net if you need to request one. Please include a justification and a contact email in your message. M-Lab staff will provide you with an account ID and a credential key file.
+
 ~~~ shell
+# Authorize access.
+$ gcloud auth login --cred-file=$CREDENTIALS_FILE
+
 # List the contents of the M-Lab NDT data in GCS.
 $ gsutil ls -l gs://archive-measurement-lab/
 
@@ -54,23 +63,19 @@ $ gsutil cp gs://archive-measurement-lab/ndt/2009/02/18/20090218T000000Z-mlab1-l
 
 The URLs shown in [M-Lab's GCS web interface](https://console.developers.google.com/storage/browser/archive-measurement-lab/){:target="_blank"} require the user to be logged in, which can present challenges when attempting to access the data with common HTTP utilities like `curl` or `wget`.
 
-You can access M-Lab files programmatically by replacing:
+To access M-Lab files programatically, you will need to generate an OAuth 2.0 [access token](https://cloud.google.com/iam/docs/create-short-lived-credentials-direct#gcloud_2). The access token and the project will need to be passed in the request headers.
 
-`storage.cloud.google.com`
-
-with
-
-`storage.googleapis.com`
-
-in any GCS URL.
+Additionally, you will need to replace`storage.cloud.google.com` with `storage.googleapis.com` in GCS URLs.
 
 For example, if the URL of a raw NDT archive on the GCS web application is:
 
 [https://storage.cloud.google.com/archive-measurement-lab/ndt/2018/11/01/20181101T000001Z-mlab3-lga07-ndt-0000.tgz](https://storage.cloud.google.com/archive-measurement-lab/ndt/2018/11/01/20181101T000001Z-mlab3-lga07-ndt-0000.tgz)
 
-You can access it without authentication via this URL:
+The request will be:
 
-[https://storage.googleapis.com/archive-measurement-lab/ndt/2018/11/01/20181101T000001Z-mlab3-lga07-ndt-0000.tgz](https://storage.googleapis.com/archive-measurement-lab/ndt/2018/11/01/20181101T000001Z-mlab3-lga07-ndt-0000.tgz)
+~~~ shell
+ curl -H "X-Goog-User-Project: measurement-lab" -H "Authorization: Bearer $TOKEN" https://storage.googleapis.com/archive-measurement-lab/ndt/2018/11/01/20181101T000001Z-mlab3-lga07-ndt-0000.tgz]
+~~~
 
 ### GCS File Index
 
@@ -79,10 +84,3 @@ A list of all M-Lab files in GCS is available at:
 [https://storage.googleapis.com/archive-measurement-lab/list/all_mlab_tarfiles.txt.gz](https://storage.googleapis.com/archive-measurement-lab/list/all_mlab_tarfiles.txt.gz)
 
 This file provides gs:// URLs to M-Lab data.
-
-To change these URLs to https:// URLs (compatible with common HTTP tools), you can convert the file using the following [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script:
-
-~~~ shell
-$ curl https://storage.googleapis.com/archive-measurement-lab/list/all_mlab_tarfiles.txt.gz | gunzip | \
-while read; do echo ${REPLY/gs:\/\//https://storage.googleapis.com/}; done
-~~~
