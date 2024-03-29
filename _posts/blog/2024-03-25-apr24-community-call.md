@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Measuring Internet Quality from the User's Perspective"
+title: "Measuring the Quality of an Individual's Connection"
 author: "Lai Yi Ohlsen"
 date: 2024-03-26
 breadcrumb: blog
@@ -11,7 +11,7 @@ categories:
 ---
 Interested in metrics that measure an Internet connection's quality from the end user perspective? Join us at our April M-Lab Community Call on April 4, 2042 at 11am EDT. <!--more-->
 
-## Metrics for Measuring Your Internet's Quality
+## Measuring the Quality of an Individual's Connection
 
 In February 2024 we introduced our latest research intiative Internet Quality Barometer (IQB), which aims to define Internet quality beyond “speed” for use by high-level decision makers. As part of IQB, M-Lab is taking inventory of the metrics and tools available today to test an individual's Internet quality and consider how they can be used in aggregate and at scale to inform public policy and planning processes.
 
@@ -30,4 +30,4 @@ Want to hear about a metric not listed above? [Let us know](hello@measurementlab
 M-Lab's Community Calls take place on the first Thursday of every month at 11am Eastern Time. Please [register via Zoom](https://us02web.zoom.us/meeting/register/tZwucuCgqTIiHdd1OVBDlvHVHKGfyGGoMn6U) and reach out to [hello@measurementlab.net](mailto:hello@measurementlab.net) with any questions.
 
 ## Support
-Internet Quality Barometer is generously supported by an [Internet Society Research Grant](https://www.isocfoundation.org/2024/01/announcing-our-2023-research-grantee-cohort-14-projects-examining-the-future-of-the-internet/). 
+Internet Quality Barometer is generously supported by an [Internet Society Foundation Research Grant](https://www.isocfoundation.org/2024/01/announcing-our-2023-research-grantee-cohort-14-projects-examining-the-future-of-the-internet/).
