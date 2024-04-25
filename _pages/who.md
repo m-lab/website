@@ -28,7 +28,7 @@ grid-section:
         desc: "Independent Contributor"
       - image: "laiyi.jpg"
         heading: "Lai Yi Ohlsen"
-        desc: "Lead Data Scientist, Code for Science & Society"
+        desc: "Research and Data Lead, Code for Science & Society"
       - image: "soltesz.jpeg"
         heading: "Stephen Soltesz"
         desc: "Software Engineer, Google"
