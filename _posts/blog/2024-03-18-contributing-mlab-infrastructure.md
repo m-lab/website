@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Contributing to M-Lab's Infrastruture is Easier Than Ever"
+title: "Contributing to M-Lab's Infrastructure is Easier Than Ever"
 author: "Lai Yi Ohlsen, Nathan Kinkade, Stephen Soltesz"
 date: 2024-03-18
 breadcrumb: blog
