@@ -13,7 +13,8 @@ Join our monthly community call on June 6, 2024 at 11am ET to discuss [Dioptra�
  <!--more-->
 
 ## Description
-“Fast-mda-traceroute aims at efficiently discovering multi-paths in network topologies. The latest work on fmda consists in more precise and faster probing, and extensive testing. While testing in the lab is valuable and gave reasonable confidence in the validity of the implementation, nothing can substitute to real-world testing. With this presentation, we hope to trigger interest in the community and gather feedback from as many use cases as possible.” 
+
+“Fast-mda-traceroute aims at efficiently discovering multi-paths in network topologies. The latest work on fmda consists in more precise and faster probing, and extensive testing. While testing in the lab is valuable and gives reasonable confidence in the validity of the implementation, nothing can substitute for real-world testing. With this presentation, we hope to trigger interest in the community and gather feedback from as many use cases as possible.”
 
 Téo Lohrer is an IT Engineer at [SUMMIT](https://summit.sorbonne-universite.fr/), an Engineering unit at Sorbonne Université in Paris where he collaborates with [Dioptra](https://dioptra.io/). Dioptra is an Internet cartography research group within the Networks and Performance Analysis (NPA) team at the LIP6 computer science laboratory in Paris, France.
 
