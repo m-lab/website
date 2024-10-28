@@ -80,7 +80,7 @@ M-Lab does not authenticate users or allow storage of information on the platfor
 ## Where can I explore M-Lab data?
 {:.no_toc}
 
-You can explore [visualizations]({{ site.baseurl }}/visualizations/) of M-Lab’s NDT speed test data. M-Lab data for NDT, Paris Traceroute, and Sidestream tests are searchable [using BigQuery]({{ site.baseurl }}/data/docs/bq/quickstart/), and data for all tests can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
+M-Lab data for NDT, Paris Traceroute, and Sidestream tests are searchable [using BigQuery]({{ site.baseurl }}/data/docs/bq/quickstart/), and data for all tests can be downloaded in raw compressed file format. Please visit the tests page and click on the [section on data]({{ site.baseurl }}/data/) for more information about how to access the data using BigQuery or other tools.
 
 ## Why are my M-Lab results different from other speed tests?
 {:.no_toc}
@@ -106,7 +106,7 @@ M-Lab's measurements are always conducted off-net. This way, M-Lab is able to me
 
 Different Internet performance tests measure different things in different ways. M-Lab's NDT test tries to transfer as much data as it can in ten seconds (both up and down), using a single connection to an M-Lab server. Other popular tests try to transfer as much data as possible at once across multiple connections to their server. Neither method is "right" or "wrong," but using a single stream is more likely to help diagnose problems in the network than multiple streams would. [Learn more about M-Lab's NDT methodology](https://github.com/ndt-project/ndt/wiki/NDTTestMethodology).
 
-All NDT data collected by M-Lab are publicly available in both [visualized]({{ site.baseurl }}/visualizations/) (graphic), [queryable](https://console.cloud.google.com/bigquery?project=measurement-lab), and [raw (unanalyzed) forms](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/).
+All NDT data collected by M-Lab are publicly available in [queryable](https://console.cloud.google.com/bigquery?project=measurement-lab) and [raw (unanalyzed) forms](https://console.developers.google.com/storage/browser/archive-measurement-lab/ndt/) forms.
 
 **3. Changing network conditions and distinct test paths**
 
