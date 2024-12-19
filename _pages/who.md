@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /who/
-title: "Who we are"
+title: "Who We Are"
 breadcrumb: "about"
 grid-section:
   - group-heading: "Maintainers"
@@ -26,12 +26,12 @@ grid-section:
       - image: "matt.jpg"
         heading: "Matt Mathis"
         desc: "Independent Contributor"
+      - image: "melissa.jpeg"
+        heading: "Melissa Newcomb"
+        desc: "Senior Program Manager, Code for Science & Society"
       - image: "laiyi.jpg"
         heading: "Lai Yi Ohlsen"
         desc: "Research and Data Lead, Code for Science & Society"
-      - image: "soltesz.jpeg"
-        heading: "Stephen Soltesz"
-        desc: "Software Engineer, Google"
       - image: "arthur.png"
         heading: "Arthur Terry"
         desc: "Program Manager, Google"
@@ -39,10 +39,10 @@ grid-section:
     group-list-class: "l-grid l-3col"
     grid-img-class: " framed"
     grid-items:
-      - link: "https://simplysecure.org/who-we-are/georgia.html"
+      - link: "https://superbloom.design/about/people/georgia/"
         image: "georgia-bullen.png"
         heading: "Georgia Bullen"
-        desc: "Simply Secure"
+        desc: "Superbloom Design"
       - link: "https://ai.google/research/people/author32412"
         image: "vint-cerf.png"
         heading: "Vint Cerf"
@@ -67,6 +67,14 @@ grid-section:
         image: "stephen-stuart.png"
         heading: "Stephen Stuart"
         desc: "Google"
+  - group-heading: "Advisory Committee"
+    group-list-class: "l-grid l-3col"
+    grid-img-class: " framed"
+    grid-items:
+      - link: "https://superbloom.design/about/people/georgia/"
+        image: "georgia-bullen.png"
+        heading: "Georgia Bullen, Chair"
+        desc: "Superbloom Design"
   - group-heading: "M-Lab Founders"
     group-list-class: "l-grid l-3col"
     grid-img-class: " framed"
@@ -201,7 +209,6 @@ grid-section:
       - link: "http://www.wide.ad.jp/"
         image: "wide.png"
         heading: "WIDE Project"
-
 ---
 
 # Who We Are
@@ -209,4 +216,3 @@ grid-section:
 M-Lab is an open source project with contributors from civil society organizations, educational institutions, and private sector companies, and is a fiscally sponsored project of Code for Science & Society.
 
 M-Lab is a community-based open source project made possible by every contributor who runs a measurement, and from supporters from civil society organizations, educational institutions, and private sector companies dedicating time, expertise, and financial resources. M-Lab operates as a not-for-profit as and is a fiscally sponsored project of Code for Science & Society. Learn how to [get involved]({{ site.baseurl }}/contribute).
-
