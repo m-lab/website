@@ -8,6 +8,8 @@ breadcrumb: "contribute"
 
 # Measurement Lab (M-Lab) Director,Technical Lead
 
+**<span style="color:red">January 13, 2025 update: Deadline extended to January 20 to apply!</span>**
+
 We are looking for a **Director, Technical Lead** to help drive delivery of Measurement Lab’s projects and programs in the open internet measurement ecosystem. M-Lab’s Director, Technical Lead is a key member of the leadership team that guides and oversees M-Lab as an organization and convener in the field of internet measurement for the public interest.
 
 ## About the Role
@@ -72,4 +74,4 @@ As a small team, there are many ways to contribute. The role of the **Director, 
 
 - [Apply on Greenhouse](https://job-boards.greenhouse.io/codeforsciencesociety/jobs/4607021007?gh_jid=4607021007).
 - Submit a resume and cover letter, highlighting 2-3 projects that you have worked on and see as relevant to the role, including any possible links to where we can learn more about the project.
-- Applications submitted by January 10, 2025 will be given priority. We’ll review applicants on a rolling basis.
+- **<span style="color:red">January 13, 2025 update: Deadline extended to January 20 to apply!</span>**  We’ll review applicants on a rolling basis.
