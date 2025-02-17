@@ -17,7 +17,7 @@ breadcrumb: "about"
 
   * ## [**\[v2\] July 1, 2019**](https://www.measurementlab.net/privacy-v2)
 
-  * ## [**\[v3\] July 14, 2020**](https://www.measurementlab.net/privacy/)
+  * ## [**\[v3\] July 14, 2020**](https://www.measurementlab.net/privacy-v3/)
 
 ## Measurement Lab Data Collection Ov**erview**
 

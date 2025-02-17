@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /privacy/
+permalink: /privacy-v3/
 title: "M-Lab Privacy Policy"
 breadcrumb: "about"
 ---
