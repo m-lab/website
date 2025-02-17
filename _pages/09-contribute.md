@@ -125,4 +125,4 @@ If you have experience in web or application development, data analysis, or visu
 
 ## Donate to M-Lab
 
-M-Lab welcomes the direct financial contributions of organizations that find our work beneficial. If your organization is interested in supporting the M-Lab platform, please review our [sponsorship offerings]({{ site.baseurl }}/documents/mlab-sponsorship.pdf) and [contact us](mailto:hello@measurementlab.net).
+M-Lab welcomes the direct financial contributions of organizations that find our work beneficial. If your organization is interested in supporting the M-Lab platform, please review our [sponsorship offerings](https://docs.google.com/document/d/1PaS7NGpdePb3fjPlAjPMiuws2GblKEFtlQS4Nevin2s/) and [contact us](mailto:hello@measurementlab.net).
