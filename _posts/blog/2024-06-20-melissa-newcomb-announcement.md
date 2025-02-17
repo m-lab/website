@@ -12,7 +12,7 @@ categories:
 Measurement Lab is pleased to announce the addition of Melissa Newcomb to our team as our new Senior Program Manager.<!--more-->
 
 ## New Senior Program Manager 
-After an extensive search which included many highly qualified and inspiring candidates, we are pleased to announce Melissa Newcomb as our new Senior Program Manager at Measurement Lab. Melissa will bring 10 years of program management experience in the non-profit and advoacy sector. We are so excited to have Melissa on board and we can't wait for you to meet her.
+After an extensive search which included many highly qualified and inspiring candidates, we are pleased to announce Melissa Newcomb as our new Senior Program Manager at Measurement Lab. Melissa will bring 10 years of program management experience in the non-profit and advocacy sector. We are so excited to have Melissa on board and we can't wait for you to meet her.
 
 Thank you also to everyone who showed interest in working with M-Lab and for taking the time to apply. We hope to work with you in the future.
 
