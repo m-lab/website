@@ -1,3 +1,10 @@
+---
+layout: page
+permalink: /privacy/
+title: "M-Lab Privacy Policy"
+breadcrumb: "about"
+---
+
 # Measurement Lab Privacy Policy
 
 ## **Active and previous versions**
