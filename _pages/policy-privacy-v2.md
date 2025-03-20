@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /privacy-v2/
-title: "M-Lab Privacy Policy"
+title: "M-Lab Privacy Policy [v2]"
 breadcrumb: "about"
 ---
 
