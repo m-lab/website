@@ -64,7 +64,7 @@ services they collect.
 ## Who we are and why we do what we do
 
 Measurement Lab (further “**M-Lab**”) is a fiscally sponsored project of [Code
-for Science & Society](https://codeforscience.org/) (CS\&S) operating at 3439 SE
+for Science & Society](https://codeforscience.org/) (CS&S) operating at 3439 SE
 Hawthorne Blvd. \#247, Portland, Oregon 97214-5048.
 
 ### Purpose of the processing of personal data
@@ -177,7 +177,7 @@ would like it to be provided through another medium, please let us know. You
 have the right to request the **rectification** of your personal data. You have
 the right to request the **erasure** or **restriction** of your personal data
 and to object to its processing. In response to an erasure request, M-Lab will
-anonymise your data, thus taking it out of scope of the GDPR and LGPD. You have
+anonymize your data, thus taking it out of scope of the GDPR and LGPD. You have
 the right to object to automated decision-making and the right to be informed
 about whether or not your data is subject to automated decision making.
 Automated decision-making is involved in determining which server is nearest to
@@ -189,11 +189,11 @@ restrict your data from further processing. Please note that the rights above
 may differ depending on your location, our ability to verify your identity, and
 any legal exceptions or obligations we may have
 
-#### Privacy by design and data minimisation when exercising your GDPR rights
+#### Privacy by design and data minimization when exercising your GDPR rights
 
 Exercising the above-mentioned rights will require you to prove your identity.
 M-Lab is committed to data privacy and specifically one of its core principles:
-data minimisation. As such, we will not request a copy of your ID to prove your
+data minimization. As such, we will not request a copy of your ID to prove your
 identity. Because we collect only your IP address at the time the test is run,
 we have no means of proving the test data belongs to you. Should you wish to
 exercise the rights listed above, we require proof that this IP address belonged
