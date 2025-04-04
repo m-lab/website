@@ -80,7 +80,7 @@ There is typically at least a 24-hour delay between data collection and data pub
   * MobiPerf is an open source application for measuring network performance on mobile platforms.
   * MobiPerf data is not processed by the M-Lab ETL Pipeline.
   * More information is available on the [MobiPerf website](http://www.mobiperf.com/){:target="_blank"}
-  * [MobiPerf Raw Data](https://console.cloud.google.com/storage/browser/openmobiledata_public){:target="_blank"}
+  * [MobiPerf Raw Data](https://console.cloud.google.com/storage/browser/archive-measurement-lab/mobiperf){:target="_blank"}
 * [NPAD]({{site.baseurl}}/tests/npad)
   * Network Path and Application Diagnosis (NPAD) diagnoses issues in a network path that can degrade network performance.
   * NPAD data is processed by the M-Lab ETL Pipeline.
