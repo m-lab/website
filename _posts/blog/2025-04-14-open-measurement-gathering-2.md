@@ -2,7 +2,7 @@
 layout: blog
 title: "OMG! Measurement Lab organized the second Open Measurement Gathering"
 author: "Melissa Newcomb"
-date: 2025-04-17
+date: 2025-04-14
 breadcrumb: blog
 categories:
   - event
@@ -28,7 +28,7 @@ As Internet measurement datasets continue to grow, they will demand increasing r
 The platforms and data for OMG groups are vulnerable to several risks such as: DDOS attacks, blocks from adversarial governments, and software dependencies, insufficient staff, and data losses. Each groups’ threats are unique, but sharing the challenges and risks helped highlight common areas where OMG groups can build collaboration to increase resilience.
 
 **Theory of Change for an open Internet**
-All OMG groups agreed that their ultimate goal is a free, open, transparent, accountable, resilient, equitable Internet. During the initial Theory of Change discussion, each group shared a scenario of how to achieve that ultimate goal in a broad sense, exploring individual action and social conditions that it would require. In a breakout session during the Unconference Day, select participants went through a Strength, Weakness, Opportunity, and Threat (SWOT) analysis to expose entry points for OMG groups to achieve their shared vision. Our preliminary long term goal is an Internet that is uncensored, open, transparent, accountable, resilient, and equitable. OMG groups will continue the conversation in OMG 3 to better refine a shared Theory of Change which will inform future collaboration.
+All OMG groups agreed that their ultimate goal is a free, open, transparent, accountable, resilient, equitable Internet. During the initial Theory of Change discussion, each group shared a scenario of how to achieve that ultimate goal in a broad sense, exploring individual action and social conditions that it would require. In a breakout session during the Unconference Day, select participants went through a Strength, Weakness, Opportunity, and Threat (SWOT) analysis to expose entry points for OMG groups to achieve their shared vision. OMG groups will continue the conversation in OMG 3 to better refine a shared Theory of Change which will inform future collaboration.
 
 In the next convening, the OMG groups will focus on the opportunities to meet the challenges mentioned above and how to deepen collaboration to ultimately strengthen the Internet measurement community. If you want to know more, read the [public report]({{ site.baseurl }}/documents/OMG2_PublicReport.pdf) for details!
 
