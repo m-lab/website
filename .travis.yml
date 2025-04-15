@@ -1,7 +1,7 @@
 dist: focal
 language: ruby
 rvm:
-  - 2.7
+  - 3.1
 
 env:
   global:
@@ -10,7 +10,6 @@ env:
 
 before_install:
   - gem install bundler:2.3.9
-  - gem install dpl -v 1.10.16
 
 script:
   - set -e
@@ -25,7 +24,6 @@ deploy:
   # Separate deployments to various places based on branch and push type
   ## - sandbox
   - provider: script
-    edge: true
     skip_cleanup: true
     script:
       "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
