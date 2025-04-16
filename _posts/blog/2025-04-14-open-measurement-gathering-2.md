@@ -14,7 +14,7 @@ The second Open Measurement Gathering took place in December 2024, organized by 
 
 The OMG project is funded by the [Open Technology Fund (OTF)](https://www.opentech.fund/) and is an opportunity for participating open Internet and censorship measurement groups to coordinate more closely and become more knowledgeable about one another’s work. The goal of the OMG project is to increase trust and coordination between Internet measurement groups so that we can support the Internet Freedom community more sustainably and efficiently.
 
-![Image]({{ site.baseurl }}/images/blog/2025-04-omg/omg.jpg)
+![Image]({{ site.baseurl }}/images/blog/2025-04-omg2/omg.jpg)
 
 During the three-day convening, four key issues emerged as areas for collaboration among the OMG groups:
 
@@ -32,4 +32,4 @@ All OMG groups agreed that their ultimate goal is a free, open, transparent, acc
 
 In the next convening, the OMG groups will focus on the opportunities to meet the challenges mentioned above and how to deepen collaboration to ultimately strengthen the Internet measurement community. If you want to know more, read the [public report]({{ site.baseurl }}/documents/OMG2_PublicReport.pdf) for details!
 
-![Image]({{ site.baseurl }}/images/blog/2025-04-omg/logos.pdf)
+![Image]({{ site.baseurl }}/images/blog/2025-04-omg2/logos.pdf)
