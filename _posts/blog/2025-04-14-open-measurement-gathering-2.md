@@ -32,4 +32,4 @@ All OMG groups agreed that their ultimate goal is a free, open, transparent, acc
 
 In the next convening, the OMG groups will focus on the opportunities to meet the challenges mentioned above and how to deepen collaboration to ultimately strengthen the Internet measurement community. If you want to know more, read the [public report]({{ site.baseurl }}/documents/OMG2_PublicReport.pdf) for details!
 
-![Image]({{ site.baseurl }}/images/blog/2025-04-omg2/logos.pdf)
+![Image]({{ site.baseurl }}/images/blog/2025-04-omg2/logos.jpg)
