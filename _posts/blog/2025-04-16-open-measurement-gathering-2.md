@@ -2,7 +2,7 @@
 layout: blog
 title: "OMG! Measurement Lab organized the second Open Measurement Gathering"
 author: "Melissa Newcomb"
-date: 2025-04-14
+date: 2025-04-16
 breadcrumb: blog
 categories:
   - event
