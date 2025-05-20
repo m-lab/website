@@ -33,85 +33,18 @@ You can find out more information:
 * In our [Developers Guide]({{ site.baseurl }}/develop).
 * In our support answer: [How can I add an M-Lab test to my website, mobile app, or other software?](https://support.measurementlab.net/help/en-us/5-supporting-or-contributing-to-m-lab/24-how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software), in our [data documentation]({{ site.baseurl }}/data/docs)
 
-## Host or Sponsor an M-Lab Measurement Site
+## Host or Sponsor M-Lab Measurement Sites
 
-In 2024, joining the M-Lab platform will be easier than ever with our new flexible options for contributing infrastructure. This following information provides an overview of the options for supporting the platform, increasing resilience, diversity, and reach of the platform in service of M-Lab’s mission.
+It is now easier than ever to contribute to the Measurement Lab platform.  The process is almost entirely automated and 
+any reasonably modern, high performance and well connected physical or virtual server can be added to M-Lab's fleet.
 
-All contributions are considered tax-deductible donations to Code for Science & Society, M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at [hello@measurementlab.net](mailto:hello@measurementlab.net) and if you are interested in contributing, please fill out our [Infrastructure Contribution Form](https://docs.google.com/forms/d/e/1FAIpQLSe1wXKfQ0VIt_hZFatCwCaoOeeDpRv3JZDM_eAmIaksMuwB4g/viewform?usp=sf_link).
+Review M-Lab's [Acceptable Use Policy](https://www.measurementlab.net/aup/), [Privacy Policy](https://www.measurementlab.net/privacy/), and the technical and operational requirements at the top of [Setting up a host-managed server](https://github.com/m-lab/autonode/wiki/Host%E2%80%90managed-Deployments).
 
-### Cloud Credits for Virtual Servers
+Register your organization by completing the online [registration form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog).   M-Lab will review your submission and confirm that you qualify to become an M-Lab site host.  Under some circumstances we may suggest drafting a Memorandum of Understanding (MOU), for example if your contribute more than 10 servers or are exceptional in some other way.   Once you qualify, M-Lab will provide you with an API key and other information necessary to build and configure measurement servers.
 
-The easiest way to donate infrastructure to M-Lab is by donating resources for cloud credits from providers such as Google Cloud, Amazon Web Services, Azure, Equinix, Linode, IBM and others. M-Lab can host 1 site for $30,000 to $360,000 credits annually, where total price depends on user demand, service availability, and market rates. M-Lab services are highly configurable and can work within any budget in any market at lower availability.
+All contributions are considered tax-deductible donations to Code for Science & Society, M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at [hello@measurementlab.net](mailto:hello@measurementlab.net).    [@@@ Add a question about tax information to the host form?]
 
-This option is best for contributors who
-
-* Currently offer Cloud services and want their infrastructure represented in reports using M-Lab data
-* Only have access to virtual networks and resources
-* Want M-Lab to manage the virtual resources on your behalf
-
-### Full Hardware Deployment managed by M-Lab
-
-To contribute resources to be managed and deployed by M-Lab using our full deployment model, the following will be required:
-
-* A /26 IPv4 prefix and /64 IPv6 prefix, both globally routed, and statically assigned to M-Lab equipment
-* Standard hardware[^1] including:
-  * 4x Dell PowerEdges server with iDRAC
-  * 1x Juniper switch with 10Gbit/s uplink
-* 5U rackspace and power
-* A 10Gbit/s uplink to the Internet
-* Remote support in coordination with M-Lab for installation and periodic maintenance
-
-This option is best for contributors who:
-
-* Currently offer rack space and power
-* Have network capacity to support high user demand
-* Can sponsor all costs associated with a full site deployment managed by M-Lab on your behalf
-* Can provide network locations that measure paths relevant for user experience accessing content & services on the Internet
-
-### Minimal Hardware Deployment managed by M-Lab
-
-To contribute resources to be managed and deployed by M-Lab using our minimal deployment model, the following will be required:
-
-* A /28 or /29 IPv4 prefix and /64 IPv6 prefix, both globally routed, and statically assigned to M-Lab equipment
-* Standard hardware* including:
-  * 1x Dell PowerEdge server with iDRAC
-* 1U rackspace and power
-* A 10Gbit/s uplink to the Internet
-* Remote support in coordination with M-Lab for installation and periodic maintenance, including secure access to the iDRAC
-
-This option is best for contributors who:
-
-* Can sponsor all costs associated with a minimal site deployment managed by M-Lab on your behalf
-* Can provide network locations that measure paths relevant for user experience accessing content & services on the Internet
-* Are not able to support a full scale deployment
-
-We are open to Trusted Testers for Minimal Deployments in 2024 Q2 and plan to make this option generally available by 2024 Q3.
-
-\* New hardware models may need to be qualified by M-Lab before we can accept them as part of the platform, but additional resources could be required to support the qualification process.
-
-### Host Managed Deployment
-
-Host managed deployments are managed and deployed by the contributor and can be physical or virtual. All data is collected and archived to the M-Lab data pipeline.
-
-To run a host managed M-Lab server, the following is needed:
-
-* Registration with M-Lab for a host managed deployment
-* An IPv4/32 address and IPv6/128 address, both globally routed, and statically assigned to the contributed server
-* A physical or virtual server with at least 4GB RAM & 4 CPUs (Intel class)
-* At least 1Gbit/s uplink to the Internet
-
-This option is best for contributors who:
-
-* Currently offer or have easy access to a single physical or virtual server
-* Already maintain an Network Diagnostic Tool, Measurement Swiss Army Knife, or Reverse Traceroute server and want to contribute data to M-Lab’s public dataset or
-* Already maintain other speed test servers in their network or
-* Are not able to to provide the resources necessary for M-Lab managed servers but are still interested in contributing infrastructure
-
-We are open to Trusted Testers for Host-Managed deployment in 2024 Q3 and plan to make this option generally available by 2024 Q4.
-
-### Interested?
-
-Please fill out our [Infrastructure Contribution Form](https://docs.google.com/forms/d/e/1FAIpQLSe1wXKfQ0VIt_hZFatCwCaoOeeDpRv3JZDM_eAmIaksMuwB4g/viewform?usp=sf_link) and feel free to reach out to [hello@measurementlab.net](mailto:hello@measurementlab.net).
+Other methods for deploying M-Lab servers are gradually being phased out. 
 
 ## Analyze and Visualize M-Lab Data
 
