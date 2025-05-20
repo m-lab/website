@@ -35,14 +35,13 @@ You can find out more information:
 
 ## Host or Sponsor M-Lab Measurement Sites
 
-It is now easier than ever to contribute to the Measurement Lab platform.  The process is almost entirely automated and 
-any reasonably modern, high performance and well connected physical or virtual server can be added to M-Lab's fleet.
+It is now easier than ever to contribute to the Measurement Lab platform.  The process is almost entirely automated and any reasonably modern, high performance and well connected physical or virtual server can be added to M-Lab's fleet.
 
 Review M-Lab's [Acceptable Use Policy](https://www.measurementlab.net/aup/), [Privacy Policy](https://www.measurementlab.net/privacy/), and the technical and operational requirements at the top of [Setting up a host-managed server](https://github.com/m-lab/autonode/wiki/Host%E2%80%90managed-Deployments).
 
 Register your organization by completing the online [registration form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog).   M-Lab will review your submission and confirm that you qualify to become an M-Lab site host.  Under some circumstances we may suggest drafting a Memorandum of Understanding (MOU), for example if your contribute more than 10 servers or are exceptional in some other way.   Once you qualify, M-Lab will provide you with an API key and other information necessary to build and configure measurement servers.
 
-All contributions are considered tax-deductible donations to Code for Science & Society, M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at [hello@measurementlab.net](mailto:hello@measurementlab.net).    [@@@ Add a question about tax information to the host form?]
+All contributions are considered tax-deductible donations to Code for Science & Society, M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at [hello@measurementlab.net](mailto:hello@measurementlab.net).    [@@@ International contributors? Add a question about tax information to the host form?]
 
 Other methods for deploying M-Lab servers are gradually being phased out. 
 
