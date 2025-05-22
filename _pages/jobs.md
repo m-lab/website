@@ -12,8 +12,7 @@ There are many ways to work with M-Lab, whether as a direct hire, through a fell
 
 ## Open Postions at Measurement Lab
 
-- [M-Lab Director, Technical Lead]({{ site.baseurl }}/jobs/2024-12/director-tech-lead)
-- [IQB Formula Development Consultant]({{ site.baseurl }}/jobs/2024-12/iqb-formula-development-consultant/)
+- None at this time
 
 ## Contract Opportunities with M-Lab
 
