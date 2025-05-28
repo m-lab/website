@@ -33,7 +33,7 @@ Software clients developed by third parties using open source test(s) provided b
 
 ## Who we are and why we do what we do.
 
-Measurement Lab (further “**M-Lab**”) is a fiscally sponsored project of [Code for Science & Society](https://codeforscience.org){:target="_blank"} (CS&S) operating at 3439 SE Hawthorne Blvd. #247, Portland, Oregon 97214-5048.
+Measurement Lab (further “**M-Lab**”) is a fiscally sponsored project of [Code for Science & Society](https://codeforsociety.org){:target="_blank"} (CS&S) operating at 3439 SE Hawthorne Blvd. #247, Portland, Oregon 97214-5048.
 
 ### Purpose of the processing of personal data
 
