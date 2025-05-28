@@ -174,4 +174,4 @@ To assess the impact of filtering, we computed the number of unique client IPs r
 
 **Phillipa Gill** is a research scientist at Google. Her research interests include network measurement, BGP security, broadband connectivity and network operations. She was previously a faculty member at the University of Massachusetts – Amherst and Stony Brook University.
 
-[^1]:  The metro\_rank flag can be found ndt.raw.Download.ClientMetadata array
+[^1]:  The metro\_rank flag can be found in the ndt.raw.Download.ClientMetadata array
