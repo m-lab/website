@@ -134,7 +134,7 @@ grid-section:
       - link: "https://dioptra.io/"
         image: "dioptra.svg"
         heading: "IP Route Survey"
-        desc: "Dioptra Group at<br>Sorbonne Université"
+        desc: "Dioptra group at<br>Sorbonne Université"
   - group-heading: "Supporting Partners"
     group-list-class: "partner-logos"
     grid-items:
