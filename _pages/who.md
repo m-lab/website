@@ -133,8 +133,8 @@ grid-section:
         desc: "University of Washington"
       - link: "https://dioptra.io/"
         image: "dioptra.svg"
-        heading: "Dioptra"
-        desc: "Sorbonne Université"
+        heading: "IP Route Survey"
+        desc: "Dioptra Group at<br>Sorbonne Université"
   - group-heading: "Supporting Partners"
     group-list-class: "partner-logos"
     grid-items:
