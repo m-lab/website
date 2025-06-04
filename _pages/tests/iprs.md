@@ -7,33 +7,68 @@ breadcrumb: tests
 
 # IP Route Survey (IPRS)
 
-[ IPRS](https://iprs.dioptra.io/) is an initiative to continuously monitor IP-level routing across the internet. This is done through the regular collection of traceroute-style measurements from multiple vantage points towards a significant portion of the internet's routable address blocks. The survey is conducted by the [Dioptra research group](https://dioptra.io) at [Sorbonne University](https://www.sorbonne-universite.fr/en/)'s [LIP6 computer science laboratory](https://www.lip6.fr/?LANG=en).
+[IPRS](https://iprs.dioptra.io/) is an initiative to continuously monitor IP-level routing across the internet. 
+This is done through the regular collection of traceroute-style measurements that are launched from multiple vantage points towards a significant portion of the internet's routable address blocks. 
+The survey is conducted by the [Dioptra research group](https://dioptra.io) at [Sorbonne University](https://www.sorbonne-universite.fr/en/)'s [LIP6 computer science laboratory](https://www.lip6.fr/?LANG=en).
 
-As of December 2023, IPRS conducts four daily IPv4 snapshots featuring multipath route traces from ten vantage points towards all routable IPv4 /24 prefixes. So as to economize on M-Lab data storage, a subset of these measurements is being selected to be offered through M-Lab.
+As of December 2023, IPRS collects four daily IPv4 snapshots featuring multipath route traces from ten vantage points towards all routable IPv4 /24 prefixes.
+IPRS also collects one daily IPv6 snapshot with single-path route traces towards a substantial number of routable prefixes.
+
+**For more information, see the IPRS website:** [https://iprs.dioptra.io/](https://iprs.dioptra.io/)
+
+## Accessing and Citing IPRS Data
+
+Much of the IPRS data is being published to M-Lab's BigQuery databases.
+To access it, you need to join the Google Cloud mlab-collaboration project.
+Then navigate in BigQuery to sorbonne, where you will find two data series: metadata in iprs_index1, and the route trace data in iprs_data1.
+For assistance, [contact the M-Lab team](mailto:support@measurementlab.net).
 
 Please cite this data set as follows: **M-Lab's Sorbonne IPRS Data Set, \<date range used\>. [https://measurementlab.net/tests/iprs](https://measurementlab.net/tests/iprs)** 
 
-Any IPRS IPv4 snapshots that are not yet available through M-Lab can be obtained upon request from the Dioptra group.
+At this time, most IPv4 snapshots are being published via M-Lab, whereas IPv6 snapshots are not.
+The publication status of each snapshot is indicated in the metadata, as described below.
+If you wish to obtain IPRS data that is not published via M-Lab, or if you would like to receive data in another format, [contact the Dioptra group](mailto:iprs@dioptra.io).
 
-In addition, IPRS conducts one daily IPv6 snapshot with single-path route traces towards a substantial number of routable prefixes. These, too, can be obtained upon request from the Dioptra group.
+## Metadata
 
-## Data
+The metadata data series in iprs_index1 includes, for each snapshot:
 
-We provide two series of data sets for the IPRS data. 
-
-The first, iprs_index1, consists of metadata. As mentioned, IPRS data consists of a series of snapshots of IP-level routing in the internet. Each snapshot is associated with a unique identifier, or UUID. The metadata data set includes, for each snapshot:
-
-* its UUID  
+* its unique identifier, or UUID  
 * its date and time  
-* whether it is present on M-Lab (if not, it can be obtained upon request from the Dioptra group)  
+* whether it is published via M-Lab (if not, it can be obtained upon request from the Dioptra group)  
 * whether it contains IPv4 data, IPv6 data, or both  
 * additional metadata concerning the software versions that were used to obtain the snapshot, and their configuration
 
-The second, iprs_data1, consists of the route trace data itself. The iprs1 schema is purposely compatible with the [scamper1 schema](https://www.measurementlab.net/tests/traceroute/scamper1/) that is used for M-Lab's extensive existing Traceroute data set, so as to ease users' ability to conduct queries across both data sets.
+## iprs_index1 Schema
 
-The differences between iprs1 and scamper1 are:
+| Field name | Type | Description |
+| :---- | :---: | :---- |
+| **id** | STRING | UUID of the snapshot. |
+| **start_time** | TIMESTAMP | When snapshot started U UTC YYYY-MM-DD HH:MM:SS |
+| **duration** | INTEGER | Duration of the snapshots in seconds. |
+| **snapshot_status** | STRING | The status of the snapshot. Possible values: **finished** (completed successfully), **canceled** (manually stopped), **agent_failure** (failed due to agents issues). |
+| **snapshot_labels** | STRING | Labels of the snapshot. |
+| **num_agents** | INTEGER | The number of agents that participated in carrying out the snapshot. |
+| **num_succesful_agents** | INTEGER | The number of agents that successfully completed the snapshot. |
+| **sw_versions** | RECORD |  |
+| sw_versions.**iris** | STRING | iris version |
+| sw_versions.**diamond_miner** | STRING | diamond-miner version |
+| sw_versions.**zeph** | STRING | zeph version |
+| sw_versions.**caracal** | STRING | caracal version |
+| sw_versions.**parser** | STRING | parser version |
+| **IPV4** | BOOLEAN | Indicates whether the snapshot included route traces toward IPv4 addresses. |
+| **IPV6** | BOOLEAN | Indicates whether the snapshot included route traces toward IPv6 addresses. |
+| **is_published** | BOOLEAN | Indicates whether the snapshot has been published to the iprs_data1 table. |
 
-* An iprs1 route trace is not towards a single destination address, but towards a destination prefix (currently /24 prefix)  
+## Data
+
+The route trace data is in the iprs_data1 data series.
+It is provided in a schema called iprs1 that is purposely compatible with the [scamper1 schema](https://www.measurementlab.net/tests/traceroute/scamper1/). 
+The scamper1 schema is used for M-Lab's extensive existing Traceroute data set, and iprs1 is designed to ease users' ability to conduct queries across both data sets.
+
+There are nonethless differences between iprs1 and scamper1:
+
+* An iprs1 route trace is not towards a single destination address, but towards a destination prefix (currently, for IPv4, a /24 prefix)  
 * iprs1's **id** field allows IPRS data to be selected by snapshot, as indicated in the iprs_index1 table.  
 * For the following data types that call for an integer value, iprs1 uses the INTEGER data type whereas scamper1 uses FLOAT:  
   * raw.CycleStart.**ID**  
@@ -83,35 +118,8 @@ The differences between iprs1 and scamper1 are:
   * raw.Tracelb.nodes.links.Links.Probes.Replies.**icmp_q_tos**  
   * raw.CycleStop.**ID**  
       
-* Links do not include unresponsive hosts  
-* In the case of amplification (one probe receiving more than one reply), only one reply is retained, while raw.Tracelb.nodes.links.Links.Probes.**Replyc** indicates the total number of replies the probe received from this address.
-
-If you wish to obtain IPRS data in other formats, or in greater detail, or additional data not published here, such as data obtained from IPv6 measurements, please contact the Dioptra team at Sorbonne University.
-
-If you are interested in accessing IPRS data in BigQuery, please [contact the M-Lab team](mailto:support@measurementlab.net)!
-
-**Get more information** at [https://iprs.dioptra.io/](https://iprs.dioptra.io/)
-
-## iprs_index1 Schema
-
-| Field name | Type | Description |
-| :---- | :---: | :---- |
-| **id** | STRING | UUID of the snapshot. |
-| **start_time** | TIMESTAMP | When snapshot started U UTC YYYY-MM-DD HH:MM:SS |
-| **duration** | INTEGER | Duration of the snapshots in seconds. |
-| **snapshot_status** | STRING | The status of the snapshot. Possible values: **finished** (completed successfully), **canceled** (manually stopped), **agent_failure** (failed due to agents issues). |
-| **snapshot_labels** | STRING | Labels of the snapshot. |
-| **num_agents** | INTEGER | The number of agents that participated in carrying out the snapshot. |
-| **num_succesful_agents** | INTEGER | The number of agents that successfully completed the snapshot. |
-| **sw_versions** | RECORD |  |
-| sw_versions.**iris** | STRING | iris version |
-| sw_versions.**diamond_miner** | STRING | diamond-miner version |
-| sw_versions.**zeph** | STRING | zeph version |
-| sw_versions.**caracal** | STRING | caracal version |
-| sw_versions.**parser** | STRING | parser version |
-| **IPV4** | BOOLEAN | Indicates whether the snapshot included route traces toward IPv4 addresses. |
-| **IPV6** | BOOLEAN | Indicates whether the snapshot included route traces toward IPv6 addresses. |
-| **is_published** | BOOLEAN | Indicates whether the snapshot has been published to the iprs_data1 table. |
+* iprs1 links do not include unresponsive hosts  
+* In the case of a rare phenomenon that we term _amplification_ (one probe receiving more than one reply), only one reply is retained, while raw.Tracelb.nodes.links.Links.Probes.**Replyc** indicates the total number of replies the probe received from this address.
 
 ## iprs_data1 Schema
 
