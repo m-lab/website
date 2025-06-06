@@ -8,38 +8,38 @@ breadcrumb: tests
 # IP Route Survey (IPRS)
 
 [IPRS](https://iprs.dioptra.io/) is an initiative to continuously monitor IP-level routing across the internet. 
-This is done through the regular collection of traceroute-style measurements that are launched from multiple vantage points towards a significant portion of the internet's routable address blocks. 
-The survey is conducted by the [Dioptra research group](https://dioptra.io) at [Sorbonne University](https://www.sorbonne-universite.fr/en/)'s [LIP6 computer science laboratory](https://www.lip6.fr/?LANG=en).
+This is done through the regular collection of `traceroute`-style measurements that are launched from multiple vantage points towards a significant portion of the internet's routable address blocks. 
+The survey is conducted by the [Dioptra](https://dioptra.io) research group at [Sorbonne University](https://www.sorbonne-universite.fr/en/)'s [LIP6](https://www.lip6.fr/?LANG=en) computer science laboratory.
 
-As of December 2023, IPRS collects four daily IPv4 snapshots featuring multipath route traces from ten vantage points towards all routable IPv4 /24 prefixes.
-IPRS also collects one daily IPv6 snapshot with single-path route traces towards a substantial number of routable prefixes.
+As of December 2023, IPRS collects four daily IPv4 snapshots, each one featuring multipath route traces from ten vantage points, with each vantage point tracing towards 200,000 /24 prefixes.
+IPRS also collects one daily IPv6 snapshot with single-path route traces from the ten vantage points towards the /48 prefixes in the [IPv6 hitlist](https://ipv6hitlist.github.io/).
 
-**For more information, see the IPRS website:** [https://iprs.dioptra.io/](https://iprs.dioptra.io/)
+For more information, visit the IPRS website: [https://iprs.dioptra.io/](https://iprs.dioptra.io/)
 
-## Accessing and Citing IPRS Data
+## Accessing and citing M-Lab's Sorbonne IPRS Data
 
-Much of the IPRS data is being published to M-Lab's BigQuery databases.
-To access it, you need to join the Google Cloud mlab-collaboration project.
-Then navigate in BigQuery to sorbonne, where you will find two data series: metadata in iprs_index1, and the route trace data in iprs_data1.
-For assistance, [contact the M-Lab team](mailto:support@measurementlab.net).
+M-Lab hosts IPRS data on BigQuery in the [`mlab-collaboration.sorbonne`](https://console.cloud.google.com/bigquery?project=mlab-collaboration&p=mlab-collaboration&d=sorbonne&page=dataset) data set.
+
+This contains two tables: [`iprs_index1`](https://console.cloud.google.com/bigquery?project=mlab-collaboration&p=mlab-collaboration&d=sorbonne&t=iprs_index1&page=table) for metadata, and [`iprs_data1`](https://console.cloud.google.com/bigquery?project=mlab-collaboration&p=mlab-collaboration&d=sorbonne&t=iprs_data1&page=table) for the route traces.
+If clicking on these links does not bring you to the tables, we encourage you to [contact the M-Lab team](mailto:support@measurementlab.net) for help in accessing them.
 
 Please cite this data set as follows: **M-Lab's Sorbonne IPRS Data Set, \<date range used\>. [https://measurementlab.net/tests/iprs](https://measurementlab.net/tests/iprs)** 
 
-At this time, most IPv4 snapshots are being published via M-Lab, whereas IPv6 snapshots are not.
+At this time, all new IPv4 snapshots are being published via M-Lab, whereas IPv6 snapshots are not.
 The publication status of each snapshot is indicated in the metadata, as described below.
-If you wish to obtain IPRS data that is not published via M-Lab, or if you would like to receive data in another format, [contact the Dioptra group](mailto:iprs@dioptra.io).
+If you wish to obtain IPRS data that is not hosted by M-Lab, or if you would like to receive data in another format, you are invited to [contact the Dioptra group](mailto:iprs@dioptra.io).
 
 ## Metadata
 
-The metadata data series in iprs_index1 includes, for each snapshot:
+The metadata in the `iprs_index1` table includes, for each snapshot:
 
-* its unique identifier, or UUID  
+* the snapshot's unique identifier, or UUID  
 * its date and time  
 * whether it is published via M-Lab (if not, it can be obtained upon request from the Dioptra group)  
 * whether it contains IPv4 data, IPv6 data, or both  
 * additional metadata concerning the software versions that were used to obtain the snapshot, and their configuration
 
-## iprs_index1 Schema
+## Metadata schema
 
 | Field name | Type | Description |
 | :---- | :---: | :---- |
@@ -62,15 +62,15 @@ The metadata data series in iprs_index1 includes, for each snapshot:
 
 ## Data
 
-The route trace data is in the iprs_data1 data series.
-It is provided in a schema called iprs1 that is purposely compatible with the [scamper1 schema](https://www.measurementlab.net/tests/traceroute/scamper1/). 
-The scamper1 schema is used for M-Lab's extensive existing Traceroute data set, and iprs1 is designed to ease users' ability to conduct queries across both data sets.
+The route trace data is in the `iprs_data1` table.
+It is provided in a schema called `iprs1` that is purposely compatible with the [`scamper1` schema](https://www.measurementlab.net/tests/traceroute/scamper1/). 
+The `scamper1` schema is used for M-Lab's extensive existing Traceroute data set, and `iprs1` is designed to ease users' ability to conduct queries across tables from both data sets.
 
-There are nonethless differences between iprs1 and scamper1:
+There are nonethless differences between `iprs1` and `scamper1`:
 
-* An iprs1 route trace is not towards a single destination address, but towards a destination prefix (currently, for IPv4, a /24 prefix)  
-* iprs1's **id** field allows IPRS data to be selected by snapshot, as indicated in the iprs_index1 table.  
-* For the following data types that call for an integer value, iprs1 uses the INTEGER data type whereas scamper1 uses FLOAT:  
+* An `iprs1` route trace is not towards a single destination address, but towards a destination prefix (currently, for IPv4, a /24 prefix)  
+* `iprs1`'s **id** field allows IPRS data to be selected by snapshot, as indicated in the `iprs_index1` table.  
+* For the following data types that call for an integer value, `iprs1` uses the INTEGER data type whereas `scamper1` uses FLOAT:  
   * raw.CycleStart.**ID**  
   * raw.CycleStart.**start_time**  
   * raw.Tracelb.**userid**  
@@ -118,10 +118,10 @@ There are nonethless differences between iprs1 and scamper1:
   * raw.Tracelb.nodes.links.Links.Probes.Replies.**icmp_q_tos**  
   * raw.CycleStop.**ID**  
       
-* iprs1 links do not include unresponsive hosts  
+* `iprs1` links do not include unresponsive hosts  
 * In the case of a rare phenomenon that we term _amplification_ (one probe receiving more than one reply), only one reply is retained, while raw.Tracelb.nodes.links.Links.Probes.**Replyc** indicates the total number of replies the probe received from this address.
 
-## iprs_data1 Schema
+## Data schema
 
 | Field name | Type | Description |
 | :---- | :---: | :---- |
@@ -206,22 +206,26 @@ There are nonethless differences between iprs1 and scamper1:
 
 The following query provides an overview of metadata for snapshots that have been published:
 
-**SELECT \***    
-**FROM \`mlab-collaboration.sorbonne.iprs_index1\`**    
-**WHERE is_published \= true;**
+```sql
+SELECT *
+FROM `mlab-collaboration.sorbonne.iprs_index1`
+WHERE is_published = true;
+```
 
-The following query fetches records from the **iprs_data1** table, but only for snapshots that meet specific criteria in the **iprs_index1** table.
+The following query fetches records from the `iprs_data1` table, but only for snapshots that meet specific criteria in the `iprs_index1` table.
 
 Filtering Criteria:
 
 * Timeframe: Includes snapshots taken in March 2025\.  
 * Duration: Includes only snapshots lasting less than 2 hours.
 
-**SELECT \***    
-**FROM \`mlab-collaboration.sorbonne.iprs_data1\`**    
-**WHERE id IN (**    
-  **SELECT id**    
-  **FROM \`mlab-collaboration.sorbonne.iprs_index1\`**    
-  **WHERE start_time BETWEEN "2025-03-01" AND "2025-03-30"**    
-	**AND duration \< 7200**    
-**);**
+```sql
+SELECT *
+FROM `mlab-collaboration.sorbonne.iprs_data1`
+WHERE id IN (
+  SELECT id    
+  FROM `mlab-collaboration.sorbonne.iprs_index1`
+  WHERE start_time BETWEEN "2025-03-01" AND "2025-03-30"
+    AND duration < 7200  
+);
+```
