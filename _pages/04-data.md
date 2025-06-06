@@ -43,6 +43,11 @@ There is typically at least a 24-hour delay between data collection and data pub
   * Wehe uses your device to exchange Internet traffic recorded from real, popular apps like YouTube and Spotify, and attempts to tell you whether your ISP is giving different performance to an app's network traffic.
   * More information is available from the [WeHe website](https://dd.meddle.mobi/){:target="_blank"} and [GitHub](https://dd.meddle.mobi/codeanddata.html){:target="_blank"}.
   * [WeHe Raw Data](https://console.cloud.google.com/storage/browser/archive-measurement-lab/wehe/){:target="_blank"}
+* [IPRS]({{site.baseurl}}/tests/iprs)
+  * The IP Route Survey (IPRS) is a continuous survey of IP-level routing across the internet.
+  * IPRS data is not processed by the M-Lab ETL Pipeline.
+  * More information is available from the [IPRS home page](https://iprs.dioptra.io/)
+  * [IPRS Data]({{site.baseurl}}/tests/iprs/#data)
 
 ## Current M-Lab Core Services and Platform Data
 
