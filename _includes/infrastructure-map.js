@@ -6,7 +6,6 @@ var map = new mapboxgl.Map({
   zoom: 1.2
 });
 
-//var url = 'https://siteinfo.mlab-oti.measurementlab.net/v1/sites/geo.json';
 var url = 'https://locate-dot-mlab-sandbox.appspot.com/v2/siteinfo/registrations?format=geo&exp=ndt';
 
 map.on('load', function () {
