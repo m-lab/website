@@ -30,7 +30,7 @@ deploy:
     cleanup: false
     script:
       "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_sandbox
-      && gsutil setmeta -h 'Cache-Control:no-store' -m cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/"
+      && gsutil -h 'Cache-Control:no-store' -m cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-sandbox.measurementlab.net/"
     on:
       repo: m-lab/website
       all_branches: true
@@ -42,7 +42,7 @@ deploy:
     cleanup: false
     script:
       "$TRAVIS_BUILD_DIR/travis/activate_service_account.sh SERVICE_ACCOUNT_mlab_staging
-      && gsutil setmeta -h 'Cache-Control:no-store' -m cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/"
+      && gsutil -h 'Cache-Control:no-store' -m cp -r $TRAVIS_BUILD_DIR/_site/* gs://website.mlab-staging.measurementlab.net/"
     on:
       repo: m-lab/website
       all_branches: true
