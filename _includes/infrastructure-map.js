@@ -6,7 +6,7 @@ var map = new mapboxgl.Map({
   zoom: 1.2
 });
 
-var url = 'https://siteinfo.mlab-oti.measurementlab.net/v1/sites/geo.json';
+var url = 'https://locate.measurementlab.net/v2/siteinfo/registrations?format=geo'
 
 map.on('load', function () {
 
@@ -95,14 +95,10 @@ map.on('load', function () {
     clusterNodes = clusterSource.getClusterLeaves(clusterId, point_count, 0, function(err, aFeatures){
       var desc = "";
       for (c=0; c < aFeatures.length; c++) {
-        desc += "<div class='pod-popup'><h4>"+aFeatures[c].properties.city+" - "+
-          aFeatures[c].properties.name+" - "+aFeatures[c].properties.uplink+"</h4>"+
-          aFeatures[c].properties.provider + " ("+aFeatures[c].properties.asn+")<br>"+
-          "IPv4 Prefix: "+aFeatures[c].properties.ipv4_prefix;
-        if (aFeatures[c].properties.ipv6_prefix != null) {
-          desc += "<br>IPv6 Prefix: "+aFeatures[c].properties.ipv6_prefix;
-        }
-        desc += "</div>";
+        desc += "<div class='pod-popup'><h4>"+aFeatures[c].properties.machine</h4>+"<br>"+
+          "Org: "+aFeatures[c].properties.org+"<br>"+
+          "Type: "+aFeatures[c].properties.type+"<br>"+
+          "Uplink: "+aFeatures[c].properties.uplink+"</div>";
       }
       var coordinates = e.lngLat;
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
@@ -114,13 +110,10 @@ map.on('load', function () {
 
   map.on('click','unclustered-point', function(e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
-    var description = "<h4>" + e.features[0].properties.city + " - " +
-      e.features[0].properties.name + " - "+ e.features[0].properties.uplink +"</h4>" +
-      e.features[0].properties.provider + " ("+e.features[0].properties.asn + ")<br>" +
-      "IPv4 Prefix: " + e.features[0].properties.ipv4_prefix;
-      if (e.features[0].properties.ipv6_prefix != null ) {
-        description += "<br>IPv6 Prefix: " + e.features[0].properties.ipv6_prefix;
-      }
+    var description = "<div class='pod-popup'><h4>"+aFeatures[c].properties.machine</h4>+"<br>"+
+      "Org: "+aFeatures[c].properties.org+"<br>"+
+      "Type: "+aFeatures[c].properties.type+"<br>"+
+      "Uplink: "+aFeatures[c].properties.uplink+"</div>";
 
     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
