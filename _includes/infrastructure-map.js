@@ -110,10 +110,10 @@ map.on('load', function () {
 
   map.on('click','unclustered-point', function(e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
-    var description = "<div class='pod-popup'><h4>"+aFeatures[c].properties.machine+"</h4>"+
-      "Org: "+aFeatures[c].properties.org+"<br>"+
-      "Type: "+aFeatures[c].properties.type+"<br>"+
-      "Uplink: "+aFeatures[c].properties.uplink+"</div>";
+    var description = "<div class='pod-popup'><h4>"+e.features[0].properties.machine+"</h4>"+
+      "Org: "+e.features[0].properties.org+"<br>"+
+      "Type: "+e.features[0].properties.type+"<br>"+
+      "Uplink: "+e.features[0].properties.uplink+"</div>";
 
     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
