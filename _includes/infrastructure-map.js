@@ -95,7 +95,7 @@ map.on('load', function () {
     clusterNodes = clusterSource.getClusterLeaves(clusterId, point_count, 0, function(err, aFeatures){
       var desc = "";
       for (c=0; c < aFeatures.length; c++) {
-        desc += "<div class='pod-popup'><h4>"+aFeatures[c].properties.machine+"</h4><br>"+
+        desc += "<div class='pod-popup'><h4>"+aFeatures[c].properties.machine+"</h4>"+
           "Org: "+aFeatures[c].properties.org+"<br>"+
           "Type: "+aFeatures[c].properties.type+"<br>"+
           "Uplink: "+aFeatures[c].properties.uplink+"</div>";
@@ -110,7 +110,7 @@ map.on('load', function () {
 
   map.on('click','unclustered-point', function(e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
-    var description = "<div class='pod-popup'><h4>"+aFeatures[c].properties.machine+"</h4><br>"+
+    var description = "<div class='pod-popup'><h4>"+aFeatures[c].properties.machine+"</h4>"+
       "Org: "+aFeatures[c].properties.org+"<br>"+
       "Type: "+aFeatures[c].properties.type+"<br>"+
       "Uplink: "+aFeatures[c].properties.uplink+"</div>";
