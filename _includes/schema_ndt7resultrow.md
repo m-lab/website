@@ -34,7 +34,7 @@
 | raw.Upload.**ServerMeasurements** | RECORD | Measurements reported by the M-Lab server.  Not all fields are reported by all versions of the server. |
 | raw.Upload.ServerMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
 | raw.Upload.ServerMeasurements.AppInfo.**NumBytes** | INTEGER | The number of bytes written to or read from the socket during the measurement. |
-| raw.Upload.ServerMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Upload.ServerMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Upload.ServerMeasurements.**ConnectionInfo** | RECORD |  |
 | raw.Upload.ServerMeasurements.ConnectionInfo.**Client** | STRING |  |
 | raw.Upload.ServerMeasurements.ConnectionInfo.**Server** | STRING |  |
@@ -44,7 +44,7 @@
 | raw.Upload.ServerMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. Recorded in microseconds. |
 | raw.Upload.ServerMeasurements.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.  The binary point varies by kernel version but the statistical mode is always 1.0. |
 | raw.Upload.ServerMeasurements.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT.   The denominator varies by kernel version. |
-| raw.Upload.ServerMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Upload.ServerMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Upload.ServerMeasurements.**TCPInfo** | RECORD | TCP Instrumentation in the kernel, as accessed by the server. |
 | raw.Upload.ServerMeasurements.TCPInfo.**State** | INTEGER | TCP state is nominally 1 (Established). Other values reflect transient states having incomplete rows.<br>Kernel: See TCP_ESTABLISHED in include/net/tcp_states.h |
 | raw.Upload.ServerMeasurements.TCPInfo.**CAState** | INTEGER | Loss recovery state machine. For traditional loss based congestion control algorithms, CAState is also used to control window adjustments.<br>Kernel: tcp_set_ca_state in include/net/tcp.h |
@@ -100,11 +100,11 @@
 | raw.Upload.ServerMeasurements.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
 | raw.Upload.ServerMeasurements.TCPInfo.**RcvOooPack** | INTEGER |  |
 | raw.Upload.ServerMeasurements.TCPInfo.**SndWnd** | INTEGER |  |
-| raw.Upload.ServerMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Upload.ServerMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Upload.**ClientMeasurements** | RECORD | Periodic measurements reported by the client. Not all clients report this information. |
 | raw.Upload.ClientMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
 | raw.Upload.ClientMeasurements.AppInfo.**NumBytes** | INTEGER | The number of bytes written to or read from the socket during the measurement. |
-| raw.Upload.ClientMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Upload.ClientMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Upload.ClientMeasurements.**ConnectionInfo** | RECORD |  |
 | raw.Upload.ClientMeasurements.ConnectionInfo.**Client** | STRING |  |
 | raw.Upload.ClientMeasurements.ConnectionInfo.**Server** | STRING |  |
@@ -114,7 +114,7 @@
 | raw.Upload.ClientMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. Recorded in microseconds. |
 | raw.Upload.ClientMeasurements.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.  The binary point varies by kernel version but the statistical mode is always 1.0. |
 | raw.Upload.ClientMeasurements.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT.   The denominator varies by kernel version. |
-| raw.Upload.ClientMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Upload.ClientMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Upload.ClientMeasurements.**TCPInfo** | RECORD | TCP Instrumentation in the kernel, as accessed by the server. |
 | raw.Upload.ClientMeasurements.TCPInfo.**State** | INTEGER | TCP state is nominally 1 (Established). Other values reflect transient states having incomplete rows.<br>Kernel: See TCP_ESTABLISHED in include/net/tcp_states.h |
 | raw.Upload.ClientMeasurements.TCPInfo.**CAState** | INTEGER | Loss recovery state machine. For traditional loss based congestion control algorithms, CAState is also used to control window adjustments.<br>Kernel: tcp_set_ca_state in include/net/tcp.h |
@@ -170,7 +170,7 @@
 | raw.Upload.ClientMeasurements.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
 | raw.Upload.ClientMeasurements.TCPInfo.**RcvOooPack** | INTEGER |  |
 | raw.Upload.ClientMeasurements.TCPInfo.**SndWnd** | INTEGER |  |
-| raw.Upload.ClientMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Upload.ClientMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Upload.**ClientMetadata** | RECORD | Client-reported metadata as name/value pairs. |
 | raw.Upload.ClientMetadata.**Name** | STRING | If set, contains text that identifies and provides context for the corresponding metadata value. For example, "OS" or "clientApplication" |
 | raw.Upload.ClientMetadata.**Value** | STRING | If set, contains a value corresponding to metadata name. For example, "Windows 10" or "ndtJS" |
@@ -184,7 +184,7 @@
 | raw.Download.**ServerMeasurements** | RECORD | Measurements reported by the M-Lab server.  Not all fields are reported by all versions of the server. |
 | raw.Download.ServerMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
 | raw.Download.ServerMeasurements.AppInfo.**NumBytes** | INTEGER | The number of bytes written to or read from the socket during the measurement. |
-| raw.Download.ServerMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Download.ServerMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Download.ServerMeasurements.**ConnectionInfo** | RECORD |  |
 | raw.Download.ServerMeasurements.ConnectionInfo.**Client** | STRING |  |
 | raw.Download.ServerMeasurements.ConnectionInfo.**Server** | STRING |  |
@@ -194,7 +194,7 @@
 | raw.Download.ServerMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. Recorded in microseconds. |
 | raw.Download.ServerMeasurements.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.  The binary point varies by kernel version but the statistical mode is always 1.0. |
 | raw.Download.ServerMeasurements.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT.   The denominator varies by kernel version. |
-| raw.Download.ServerMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Download.ServerMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Download.ServerMeasurements.**TCPInfo** | RECORD | TCP Instrumentation in the kernel, as accessed by the server. |
 | raw.Download.ServerMeasurements.TCPInfo.**State** | INTEGER | TCP state is nominally 1 (Established). Other values reflect transient states having incomplete rows.<br>Kernel: See TCP_ESTABLISHED in include/net/tcp_states.h |
 | raw.Download.ServerMeasurements.TCPInfo.**CAState** | INTEGER | Loss recovery state machine. For traditional loss based congestion control algorithms, CAState is also used to control window adjustments.<br>Kernel: tcp_set_ca_state in include/net/tcp.h |
@@ -250,11 +250,11 @@
 | raw.Download.ServerMeasurements.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
 | raw.Download.ServerMeasurements.TCPInfo.**RcvOooPack** | INTEGER |  |
 | raw.Download.ServerMeasurements.TCPInfo.**SndWnd** | INTEGER |  |
-| raw.Download.ServerMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Download.ServerMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Download.**ClientMeasurements** | RECORD | Periodic measurements reported by the client. Not all clients report this information. |
 | raw.Download.ClientMeasurements.**AppInfo** | RECORD | Server measurements performed outside of the kernel |
 | raw.Download.ClientMeasurements.AppInfo.**NumBytes** | INTEGER | The number of bytes written to or read from the socket during the measurement. |
-| raw.Download.ClientMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Download.ClientMeasurements.AppInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Download.ClientMeasurements.**ConnectionInfo** | RECORD |  |
 | raw.Download.ClientMeasurements.ConnectionInfo.**Client** | STRING |  |
 | raw.Download.ClientMeasurements.ConnectionInfo.**Server** | STRING |  |
@@ -264,7 +264,7 @@
 | raw.Download.ClientMeasurements.BBRInfo.**MinRTT** | INTEGER | The minimum round trip time as measured by BBR. Recorded in microseconds. |
 | raw.Download.ClientMeasurements.BBRInfo.**PacingGain** | INTEGER | Fixed point multiplier used to set the pacing rate from the maximum bandwidth.  The binary point varies by kernel version but the statistical mode is always 1.0. |
 | raw.Download.ClientMeasurements.BBRInfo.**CwndGain** | INTEGER | Fixed point multiplier used to set the maximum window size from BW*MinRTT.   The denominator varies by kernel version. |
-| raw.Download.ClientMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Download.ClientMeasurements.BBRInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Download.ClientMeasurements.**TCPInfo** | RECORD | TCP Instrumentation in the kernel, as accessed by the server. |
 | raw.Download.ClientMeasurements.TCPInfo.**State** | INTEGER | TCP state is nominally 1 (Established). Other values reflect transient states having incomplete rows.<br>Kernel: See TCP_ESTABLISHED in include/net/tcp_states.h |
 | raw.Download.ClientMeasurements.TCPInfo.**CAState** | INTEGER | Loss recovery state machine. For traditional loss based congestion control algorithms, CAState is also used to control window adjustments.<br>Kernel: tcp_set_ca_state in include/net/tcp.h |
@@ -320,7 +320,7 @@
 | raw.Download.ClientMeasurements.TCPInfo.**ReordSeen** | INTEGER | Received ACKs that were out of order. Estimates reordering on the return path.<br>Kernel: reord_seen |
 | raw.Download.ClientMeasurements.TCPInfo.**RcvOooPack** | INTEGER |  |
 | raw.Download.ClientMeasurements.TCPInfo.**SndWnd** | INTEGER |  |
-| raw.Download.ClientMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in milliseconds. |
+| raw.Download.ClientMeasurements.TCPInfo.**ElapsedTime** | INTEGER | The duration of the measurement as measured by the M-Lab server in microseconds. |
 | raw.Download.**ClientMetadata** | RECORD | Client-reported metadata as name/value pairs. |
 | raw.Download.ClientMetadata.**Name** | STRING | If set, contains text that identifies and provides context for the corresponding metadata value. For example, "OS" or "clientApplication" |
 | raw.Download.ClientMetadata.**Value** | STRING | If set, contains a value corresponding to metadata name. For example, "Windows 10" or "ndtJS" |
