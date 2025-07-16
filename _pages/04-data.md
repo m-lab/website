@@ -48,6 +48,10 @@ There is typically at least a 24-hour delay between data collection and data pub
   * IPRS data is not processed by the M-Lab ETL Pipeline.
   * More information is available from the [IPRS home page](https://iprs.dioptra.io/)
   * [IPRS Data]({{site.baseurl}}/tests/iprs/#data)
+* [MSAK]({{site.baseurl}}/tests/msak)
+  * MSAK (Measurement Swiss-Army Knife) is a measurement service hosted by M-Lab that implements a configurable Websocket-based throughput measurement protocol capable of multi-stream tests, and a UDP-based latency measurement protocol.
+  * More technical information is available on [GitHub](https://github.com/m-lab/msak/){:target="_blank"}.
+  * [MSAK Data](https://console.cloud.google.com/storage/browser/archive-measurement-lab/autoload/v1/msak){:target="_blank"}
 
 ## Current M-Lab Core Services and Platform Data
 
