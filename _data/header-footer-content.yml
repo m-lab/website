@@ -90,6 +90,10 @@ footer:
       link: "/feed.xml"
       link-title: "RSS"
       link-class: "rss-share"
+    -
+      link: "https://www.linkedin.com/company/measurementlab"
+      link-title: "LinkedIn"
+      link-class: "linkedin-share"
   other-links:
     column-one:
       items:
