@@ -1,9 +1,8 @@
 ---
 layout: page
-permalink: /host-managed/
 title: "Host-Managed Documentation"
-menu-item: false
-breadcrumb: host-managed
+permalink: /contribute/host-managed/
+breadcrumb: contribute
 ---
 
 # Setting up a host-managed server
