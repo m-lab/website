@@ -69,7 +69,9 @@ second pilot phase.
 
 To contribute servers:
 
-* Review M-Lab's [Acceptable Use Policy](https://www.measurementlab.net/aup/), [Privacy Policy](https://www.measurementlab.net/privacy/), and the technical and operational requirements at the top of [Setting up a host-managed server](https://www.measurementlab.net/host-managed).
+* Review M-Lab's [Acceptable Use Policy](https://www.measurementlab.net/aup/),
+  [Privacy Policy](https://www.measurementlab.net/privacy/), and the technical
+  and operational requirements at the top of [host-managed](https://www.measurementlab.net/contribute/host-managed/).
 * Complete the [registration form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog). M-Lab will review and contact applicants if approved.
 * Under some circumstances we may suggest drafting a Memorandum of Understanding (MOU), for example if you contribute more than 10 servers or are exceptional in some other way.
 
