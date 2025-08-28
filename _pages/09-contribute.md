@@ -47,7 +47,7 @@ Use](https://www.measurementlab.net/aup) policies.
 
 You can find out more information in our [Developers
 Guide](https://www.measurementlab.net/develop) and [data
-documentation](https://www.measurementlab.net/data/docs)
+documentation](https://www.measurementlab.net/data/docs).
 
 ## Host or Sponsor an M-Lab Measurement Site
 
@@ -64,28 +64,32 @@ Society, M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at
 ### Host-Managed Deployment
 
 This is the best way for small to medium sized ISPs or other organizations to
-contribute M-Lab servers.  We are now accepting new host organizations in a
+contribute M-Lab servers. We are now accepting new host organizations in a
 second pilot phase.
 
 To contribute servers:
 
 * Review M-Lab's [Acceptable Use Policy](https://www.measurementlab.net/aup/),
   [Privacy Policy](https://www.measurementlab.net/privacy/), and the technical
-  and operational requirements at the top of [host-managed](https://www.measurementlab.net/contribute/host-managed/).
-* Complete the [registration form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog). M-Lab will review and contact applicants if approved.
-* Under some circumstances we may suggest drafting a Memorandum of Understanding (MOU), for example if you contribute more than 10 servers or are exceptional in some other way.
+  and operational requirements in the [host-managed documentation](https://www.measurementlab.net/contribute/host-managed/).
+* Complete the [Infrastructure Contribution
+* Form](<https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog>).
+* M-Lab will review the submission and contact applicants if approved.  Under some
+* circumstances we may suggest drafting a Memorandum of Understanding (MOU), for
+* example if you contribute more than 10 servers or are exceptional in some
+* other way.
 
 M-Lab will provide successful applicants with an API key and other information
 necessary to build and configure measurement servers.
 
 ### Jointly Managed Deployment
 
-We are developing a new deployment model suitable for organizations that can
-automatically manage a fleet of physical or virtual servers.
+We are investigating a new deployment model where management of the machines is
+split between an organization and M-Lab in some way.
 
 If this is a possibility for your organization, please get in touch with us at
 [hello@measurementlab.net](mailto:hello@measurementlab.net). We want to ensure
-our new deployment model is compatible with existing fleet orchestration
+any new deployment model is compatible with existing fleet orchestration
 technologies and would love to hear from you.
 
 ### Cloud Credits for Virtual Servers
@@ -116,8 +120,8 @@ interested in piloting new server specifications. Please contact us at
 
 ### Interested?
 
-Please fill out our online [infrastructure contribution
-form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog)
+Please fill out our online [Infrastructure Ccontribution
+Form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog)
 and feel free to reach out to <hello@measurementlab.net>.
 
 ## **Analyze and Visualize M-Lab Data**
