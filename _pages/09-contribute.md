@@ -120,7 +120,7 @@ interested in piloting new server specifications. Please contact us at
 
 ### Interested?
 
-Please fill out our online [Infrastructure Ccontribution
+Please fill out our online [Infrastructure Contribution
 Form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog)
 and feel free to reach out to <hello@measurementlab.net>.
 
