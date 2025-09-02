@@ -73,7 +73,7 @@ To contribute servers:
   [Privacy Policy](https://www.measurementlab.net/privacy/), and the technical
   and operational requirements in the [host-managed documentation](https://www.measurementlab.net/contribute/host-managed/).
 * Complete the [Infrastructure Contribution
-* Form](<https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog>).
+  Form](<https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog>).
 * M-Lab will review the submission and contact applicants if approved.  Under some
 * circumstances we may suggest drafting a Memorandum of Understanding (MOU), for
 * example if you contribute more than 10 servers or are exceptional in some
