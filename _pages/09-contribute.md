@@ -75,9 +75,9 @@ To contribute servers:
 * Complete the [Infrastructure Contribution
   Form](<https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog>).
 * M-Lab will review the submission and contact applicants if approved.  Under some
-* circumstances we may suggest drafting a Memorandum of Understanding (MOU), for
-* example if you contribute more than 10 servers or are exceptional in some
-* other way.
+  circumstances we may suggest drafting a Memorandum of Understanding (MOU), for
+  example if you contribute more than 10 servers or are exceptional in some
+  other way.
 
 M-Lab will provide successful applicants with an API key and other information
 necessary to build and configure measurement servers.
