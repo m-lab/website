@@ -10,119 +10,141 @@ breadcrumb: contribute
 {:toc}
 
 # Supporting or Contributing to M-Lab
-{:.no_toc}
 
-M-Lab welcomes the participation of individuals and researchers, as well as companies, organizations, and other institutions, that would like to help expand the platform and ensure its growth and success.
+M-Lab welcomes the participation of individuals researchers and ISPs, as well as
+companies, organizations, and other institutions that would like to help expand
+the platform and ensure its growth and success.
+
+Note that all M-Lab usage and contributions are subject to M-Lab’s [Acceptable
+Use Policy](https://www.measurementlab.net/aup/) and [Privacy
+Policy](https://www.measurementlab.net/privacy/). For any contribution of
+significant resources, it might be appropriate to draft a Memorandum of
+Understanding.
 
 ## Develop a Test
 
-Researchers developing and maintaining open source network measurement tests may apply to host a new test on M-Lab. If your project fits within M-Lab's guidelines and principles, we invite you to [email us about M-Lab hosting](mailto:suppport@measurementlab.net).
+Researchers developing and maintaining open source network measurement tests may
+apply to host a new test on M-Lab. If your project fits within M-Lab’s
+guidelines and principles, we invite you to email us about M-Lab hosting.
 
-Please review the documents below before applying:
+Please review these documents below before contacting us:
 
-* [M-Lab Conceptual & Technical Scope & Related Policies]({{ site.baseurl }}/mlab-scope/)
-* [M-Lab Memorandum of Understanding for Experiment Developers]({{ site.baseurl }}/experimenter-mou/)
-* [M-Lab Experiment Developer Responsibilities, Requirements, and Guidelines]({{ site.baseurl }}/experimenter-requirements-guidelines/)
+* [M-Lab Conceptual & Technical Scope & Related Policies](https://www.measurementlab.net/mlab-scope/)
+* [M-Lab Experiment Developer Responsibilities, Requirements, and Guidelines](https://www.measurementlab.net/experimenter-requirements-guidelines/)
 
 ## Use an M-Lab Test in Your Website or Application
 
-M-Lab's open source tests can be added to your website, mobile application, or other software, providing a service to your users and allowing M-Lab to reach more people and generate more data. If you are considering building an M-Lab test into your website or application, you should be familiar with M-Lab's [Privacy]({{ site.basurl }}/privacy) and [Acceptable Use]({{ site.baseurl }}/aup) policies.
+M-Lab’s open source tests can be added to your website, mobile application, or
+other software, providing a service to your users and allowing M-Lab to reach
+more people and generate more data.  The Network Diagnostic Tool (NDT) has been
+used by a number of third party websites and application developers, including
+Google Search, Speedup America, Fing, and several others.
 
-You can find out more information:
+If you are considering building an M-Lab test into your website or application,
+you should be familiar with M-Lab’s
+[Privacy](https://www.measurementlab.net/privacy) and [Acceptable
+Use](https://www.measurementlab.net/aup) policies.
 
-* In our [Developers Guide]({{ site.baseurl }}/develop).
-* In our support answer: [How can I add an M-Lab test to my website, mobile app, or other software?](https://support.measurementlab.net/help/en-us/5-supporting-or-contributing-to-m-lab/24-how-can-i-add-an-m-lab-test-to-my-website-app-or-other-software), in our [data documentation]({{ site.baseurl }}/data/docs)
+You can find out more information in our [Developers
+Guide](https://www.measurementlab.net/develop) and [data
+documentation](https://www.measurementlab.net/data/docs).
 
 ## Host or Sponsor an M-Lab Measurement Site
 
-In 2024, joining the M-Lab platform will be easier than ever with our new flexible options for contributing infrastructure. This following information provides an overview of the options for supporting the platform, increasing resilience, diversity, and reach of the platform in service of M-Lab’s mission.
+It's easier than ever to contribute to Measurement Lab’s platform. The process
+is almost entirely automated, allowing any reasonably modern, high-performance,
+and well-connected physical or virtual server to be added to M-Lab's fleet. This
+will increase the platform's resilience, diversity, and reach, supporting
+M-Lab’s mission.
 
-All contributions are considered tax-deductible donations to Code for Science & Society, M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at [hello@measurementlab.net](mailto:hello@measurementlab.net) and if you are interested in contributing, please fill out our [Infrastructure Contribution Form](https://docs.google.com/forms/d/e/1FAIpQLSe1wXKfQ0VIt_hZFatCwCaoOeeDpRv3JZDM_eAmIaksMuwB4g/viewform?usp=sf_link).
+All contributions are considered tax-deductible donations to Code for Science &
+Society, M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at
+<hello@measurementlab.net>.
+
+### Host-Managed Deployment
+
+This is the best way for small to medium sized ISPs or other organizations to
+contribute M-Lab servers. We are now accepting new host organizations in a
+second pilot phase.
+
+To contribute servers:
+
+* Review M-Lab's [Acceptable Use Policy](https://www.measurementlab.net/aup/),
+  [Privacy Policy](https://www.measurementlab.net/privacy/), and the technical
+  and operational requirements in the [host-managed documentation](https://www.measurementlab.net/contribute/host-managed/).
+* Complete the [Infrastructure Contribution
+  Form](<https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog>).
+* M-Lab will review the submission and contact applicants if approved.  Under some
+  circumstances we may suggest drafting a Memorandum of Understanding (MOU), for
+  example if you contribute more than 10 servers or are exceptional in some
+  other way.
+
+M-Lab will provide successful applicants with an API key and other information
+necessary to build and configure measurement servers.
+
+### Jointly Managed Deployment
+
+We are investigating a new deployment model where management of the machines is
+split between an organization and M-Lab in some way.
+
+If this is a possibility for your organization, please get in touch with us at
+[hello@measurementlab.net](mailto:hello@measurementlab.net). We want to ensure
+any new deployment model is compatible with existing fleet orchestration
+technologies and would love to hear from you.
 
 ### Cloud Credits for Virtual Servers
 
-The easiest way to donate infrastructure to M-Lab is by donating resources for cloud credits from providers such as Google Cloud, Amazon Web Services, Azure, Equinix, Linode, IBM and others. M-Lab can host 1 site for $30,000 to $360,000 credits annually, where total price depends on user demand, service availability, and market rates. M-Lab services are highly configurable and can work within any budget in any market at lower availability.
+The easiest way to donate infrastructure to M-Lab is by providing cloud credits
+from major providers such as **Google Cloud**, **Amazon Web Services**,
+**Azure**, **Equinix**, **Linode**, **IBM**, etc.
 
-This option is best for contributors who
+On average, our fleet's egress load (typically the most expensive cost) is about
+**100 Mb/s** per server.  However, our busiest servers can average almost **3
+Gb/s**. We can steer measurement traffic to limit the load on any individual
+server, allowing us to tune traffic to fit your budget.
 
-* Currently offer Cloud services and want their infrastructure represented in reports using M-Lab data
-* Only have access to virtual networks and resources
-* Want M-Lab to manage the virtual resources on your behalf
+This option is ideal for contributors who offer large-scale cloud services, but
+are not interested in co-managing their contribution to our fleet.
 
-### Full Hardware Deployment managed by M-Lab
+### Hardware Deployment Managed by M-Lab
 
-To contribute resources to be managed and deployed by M-Lab using our full deployment model, the following will be required:
+The current M-Lab physical fleet consists of bare metal servers with Dell’s
+iDRAC remote console and software fully managed by M-Lab.  A minimal deployment
+would consist of one server with statically assigned, globally routed /28 or /29
+IPv4 prefix and one /64 IPv6 prefix.  The legacy full deployment (4 servers and
+a switch) is no longer necessary.
 
-* A /26 IPv4 prefix and /64 IPv6 prefix, both globally routed, and statically assigned to M-Lab equipment
-* Standard hardware[^1] including:
-  * 4x Dell PowerEdges server with iDRAC
-  * 1x Juniper switch with 10Gbit/s uplink
-* 5U rackspace and power
-* A 10Gbit/s uplink to the Internet
-* Remote support in coordination with M-Lab for installation and periodic maintenance
-
-This option is best for contributors who:
-
-* Currently offer rack space and power
-* Have network capacity to support high user demand
-* Can sponsor all costs associated with a full site deployment managed by M-Lab on your behalf
-* Can provide network locations that measure paths relevant for user experience accessing content & services on the Internet
-
-### Minimal Hardware Deployment managed by M-Lab
-
-To contribute resources to be managed and deployed by M-Lab using our minimal deployment model, the following will be required:
-
-* A /28 or /29 IPv4 prefix and /64 IPv6 prefix, both globally routed, and statically assigned to M-Lab equipment
-* Standard hardware* including:
-  * 1x Dell PowerEdge server with iDRAC
-* 1U rackspace and power
-* A 10Gbit/s uplink to the Internet
-* Remote support in coordination with M-Lab for installation and periodic maintenance, including secure access to the iDRAC
-
-This option is best for contributors who:
-
-* Can sponsor all costs associated with a minimal site deployment managed by M-Lab on your behalf
-* Can provide network locations that measure paths relevant for user experience accessing content & services on the Internet
-* Are not able to support a full scale deployment
-
-We are open to Trusted Testers for Minimal Deployments in 2024 Q2 and plan to make this option generally available by 2024 Q3.
-
-\* New hardware models may need to be qualified by M-Lab before we can accept them as part of the platform, but additional resources could be required to support the qualification process.
-
-### Host Managed Deployment
-
-Host managed deployments are managed and deployed by the contributor and can be physical or virtual. All data is collected and archived to the M-Lab data pipeline.
-
-To run a host managed M-Lab server, the following is needed:
-
-* Registration with M-Lab for a host managed deployment
-* An IPv4/32 address and IPv6/128 address, both globally routed, and statically assigned to the contributed server
-* A physical or virtual server with at least 4GB RAM & 4 CPUs (Intel class)
-* At least 1Gbit/s uplink to the Internet
-
-This option is best for contributors who:
-
-* Currently offer or have easy access to a single physical or virtual server
-* Already maintain an Network Diagnostic Tool, Measurement Swiss Army Knife, or Reverse Traceroute server and want to contribute data to M-Lab’s public dataset or
-* Already maintain other speed test servers in their network or
-* Are not able to to provide the resources necessary for M-Lab managed servers but are still interested in contributing infrastructure
-
-We are open to Trusted Testers for Host-Managed deployment in 2024 Q3 and plan to make this option generally available by 2024 Q4.
+If you are interested in contributing hardware to the M-Lab platform we would be
+interested in piloting new server specifications. Please contact us at
+[hello@measurementlab.net](mailto:hello@measurementlab.net).
 
 ### Interested?
 
-Please fill out our [Infrastructure Contribution Form](https://docs.google.com/forms/d/e/1FAIpQLSe1wXKfQ0VIt_hZFatCwCaoOeeDpRv3JZDM_eAmIaksMuwB4g/viewform?usp=sf_link) and feel free to reach out to [hello@measurementlab.net](mailto:hello@measurementlab.net).
+Please fill out our online [Infrastructure Contribution
+Form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog)
+and feel free to reach out to <hello@measurementlab.net>.
 
-## Analyze and Visualize M-Lab Data
+## **Analyze and Visualize M-Lab Data**
 
-M-Lab welcomes researchers who want to dig into the M-Lab data, providing documentation and best-effort email support. If you are interested in working with M-Lab data in your research, please review our [data documentation]({{ site.baseurl }}/data) to help get you started, and [contact us](mailto:support@measurementlab.net) with any questions. We also suggest that you join our [public mailing list](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss){:target="_blank"} for news and announcements.
+M-Lab welcomes researchers who want to dig into the M-Lab data, providing
+documentation and best-effort email support. If you are interested in working
+with M-Lab data in your research, please review our [data
+documentation](https://www.measurementlab.net/data) to help get you started, and
+contact us with any questions. We also suggest that you join our [public mailing
+list](https://groups.google.com/a/measurementlab.net/forum/?fromgroups#!forum/discuss)
+for news and announcements.  If you have experience in web or application
+development, data analysis, or visualization, you may be interested in working
+with M-Lab’s tests, data, and analysis tools, all of which are open source and
+openly licensed.
 
-If you have experience in web or application development, data analysis, or visualization, you may be interested in working with M-Lab's tests, data, and analysis tools, all of which are open source and openly licensed.
+* [M-Lab’s conceptual and technical scope and policies](https://www.measurementlab.net/publications/mlab-founding-vision.pdf)
+* [M-Lab’s Roles & Responsibilities for new researchers](https://www.measurementlab.net/publications/mlab-roles-responsibilities.pdf)
+* [M-Lab’s requirements and procedures for accepting new tools](https://www.measurementlab.net/publications/mlab-procedures-new-tools.pdf)
 
-* [M-Lab's conceptual and technical scope and policies]({{ site.baseurl }}/publications/mlab-founding-vision.pdf)
-* [M-Lab's Roles &amp; Responsibilities for new researchers]({{ site.baseurl }}/publications/mlab-roles-responsibilities.pdf)
-* [M-Lab's requirements and procedures for accepting new tools]({{ site.baseurl }}/publications/mlab-procedures-new-tools.pdf)
+## **Donate to M-Lab**
 
-## Donate to M-Lab
-
-M-Lab welcomes the direct financial contributions of organizations that find our work beneficial. If your organization is interested in supporting the M-Lab platform, please review our [sponsorship offerings]({{ site.baseurl }}/documents/mlab-sponsorship.pdf) and [contact us](mailto:hello@measurementlab.net).
+M-Lab welcomes the direct financial contributions of organizations that find our
+work beneficial. If your organization is interested in supporting the M-Lab
+platform, please review our [sponsorship
+offerings](https://www.measurementlab.net/documents/mlab-sponsorship.pdf) and
+contact us.
