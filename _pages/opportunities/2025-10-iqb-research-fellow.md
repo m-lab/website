@@ -14,48 +14,48 @@ We are seeking a motivated Research Fellow with a background in data science and
 
 **Hours per week**: About 20 hours per week
 
-**Hourly Rate:** $30.00 to $40.00 USD 
+**Hourly Rate:** $30.00 to $40.00 USD
 
-**Location:** Remote (Central Europe / US Eastern working hours) 
+**Location:** Remote (Central Europe / US Eastern working hours)
 
-**Deadline:** **15 Oct 2025 (first round), applicants will be reviewed on rolling basis** 
+**Deadline:** **15 Oct 2025 (first round), applicants will be reviewed on rolling basis**
 
 
 ## Duties & Responsibilities
 
-* Contribute to the development of an open-source software library for IQB methods, including data collection, aggregation, processing, analysis, and visualization. 
-* Build a prototype web application (e.g., using Python’s *streamlit* library) to visualize IQB results, facilitate access, and support experimentation. 
-* Conduct experiments with IQB framework parametrization (e.g., weights, datasets, thresholds) and analyze results for sensitivity, reliability, and robustness. 
-* Perform data analysis using Internet measurement datasets to support IQB evaluations. 
-* Contribute to writing research reports summarizing findings and methodological improvements. 
-* Collaborate with the IQB development team, advisory committee, community experts, and partner researchers. 
-* Integrate feedback to improve the IQB methodology, prototype, and research plan. 
+* Contribute to the development of an open-source software library for IQB methods, including data collection, aggregation, processing, analysis, and visualization.
+* Build a prototype web application (e.g., using Python’s *streamlit* library) to visualize IQB results, facilitate access, and support experimentation.
+* Conduct experiments with IQB framework parametrization (e.g., weights, datasets, thresholds) and analyze results for sensitivity, reliability, and robustness.
+* Perform data analysis using Internet measurement datasets to support IQB evaluations.
+* Contribute to writing research reports summarizing findings and methodological improvements.
+* Collaborate with the IQB development team, advisory committee, community experts, and partner researchers.
+* Integrate feedback to improve the IQB methodology, prototype, and research plan.
 * Participate in ideation and co-creation activities for advancing IQB research.
 
 
 ## Required Skills and Qualifications
 
-* Strong proficiency in Python (including Jupyter/Colab, data science, visualization libraries). 
-* Proficiency with SQL 
-* Solid background in data analysis, visualization, and reporting. 
-* Familiarity with Internet measurement protocols and datasets 
+* Strong proficiency in Python (including Jupyter/Colab, data science, visualization libraries).
+* Proficiency with SQL.
+* Solid background in data analysis, visualization, and reporting.
+* Familiarity with Internet measurement protocols and datasets.
 * Strong written and verbal communication skills.
 
 ## Nice to Have
 
-* Familiarity with Internet speedtest datasets (M-Lab’s NDT, Ookla, Cloudflare) 
-* Experience with Python’s streamlit library 
-* Experience contributing to or maintaining open-source software projects. 
-* Hands-on experience with Google BigQuery. 
+* Familiarity with Internet speedtest datasets (M-Lab’s NDT, Ookla, Cloudflare).
+* Experience with Python’s streamlit library.
+* Experience contributing to or maintaining open-source software projects.
+* Hands-on experience with Google BigQuery.
 * Research experience with a track record of publications or technical reports.
 
 ## How to Apply
 
 * [Fill out this application form](https://docs.google.com/forms/d/e/1FAIpQLSdgJnx-RQ_oyLWev8Pbf6unEdEcjNxGjR4Hl68q7motzKFIqQ/viewform?usp=header) which requires a CV, a motivation statement (written or video) and a work sample (video preferred). 
-* **Apply by October 15 for priority review\!** We will review applicants on a rolling basis. 
+* **Apply by October 15 for priority review\!** We will review applicants on a rolling basis.
 
 
-## About M-Lab 
+## About M-Lab
 
 [Measurement Lab (M-Lab)](https://www.measurementlab.net/about/) is an open Internet measurement platform invested in the improvement of the Internet in the public interest. We collect and publish over 4 million tests per day for open access to help inform policy, advocacy, research, industry and more about how the Internet is performing and evolving over time.
 
