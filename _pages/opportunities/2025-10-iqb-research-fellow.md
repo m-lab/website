@@ -63,6 +63,4 @@ We are seeking a motivated Research Fellow with a background in data science and
 
 Our focus areas include internet freedom, censorship measurement, digital divide advocacy, broadband mapping, and more. Our contributor ecosystems include experts in policy, advocacy (at the local, national and international level), public interest technology, software engineering, network engineering and operation, academic research, philanthropy, and more.   
 
-We are an all-remote team and participate in a 4-day work week. We prioritize flexibility and balance to support people to work in a way that they need. We are a fiscally sponsored project of Code for Science & Society  
-
-Read about our work: [Internet Quality Barometer Framework](https://www.measurementlab.net/blog/iqb/), [partnership with Cloudflare](https://www.measurementlab.net/blog/cloudflare-aimscoredata-announcement/), [Network Interference Hackathon](https://www.measurementlab.net/blog/imc-hackathon-2023/), [Measurement Swiss Army Knife (MSAK)](https://www.measurementlab.net/blog/introducing-msak/), [our shift to the cloud](https://www.measurementlab.net/blog/virtual-sites-gcp/), and our work measuring public anchor institutions such as [libraries](https://slis.simmons.edu/blogs/mlbn/about/) and [schools](https://projectconnect.unicef.org/about).  
+We are an all-remote team and participate in a 4-day work week. We prioritize flexibility and balance to support people to work in a way that they need. We are a fiscally sponsored project of Code for Science & Society.
