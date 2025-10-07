@@ -10,9 +10,9 @@ breadcrumb: "contribute"
 
 There are many ways to work with M-Lab, whether as a direct hire, through a fellowship or internship; as a contracor, collaborator, or researcher at another institution; or as an open source contributor. Here we list open opportunities to work for or with M-Lab directly, and also opportunities within other organizations with whom we collaborate.
 
-## Open Postions at Measurement Lab
+## Open Positions at Measurement Lab
 
-- None at this time
+- [Research Fellow (data science and Internet measurements)]({{ site.baseurl }}/jobs/2025-10/iqb-research-fellow/)
 
 ## Contract Opportunities with M-Lab
 
