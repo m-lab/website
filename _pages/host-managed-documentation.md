@@ -9,11 +9,24 @@ breadcrumb: contribute
 
 ## Register with M-Lab
 
-The first step in becoming an M-Lab site host is to complete the [Infrastructure Contribution Form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog), which includes agreeing to [M-Lab’s Acceptable Use Policy](https://www.measurementlab.net/aup/), [Privacy Policy](https://www.measurementlab.net/privacy/), and the Technical Requirements listed below.
+The first step in becoming an M-Lab site host is to complete the [Infrastructure
+Contribution
+Form](https://docs.google.com/forms/d/e/1FAIpQLSejtmZJrW8BPuuhjG4FlGm0fFmN3cW6onvLsCxkd3UnECVd9Q/viewform?usp=dialog),
+which includes agreeing to [M-Lab’s Acceptable Use
+Policy](https://www.measurementlab.net/aup/), [Privacy
+Policy](https://www.measurementlab.net/privacy/), and the Technical Requirements
+listed below.
 
-M-Lab will review your submission and confirm that you qualify to become an M-Lab site host.  Under some circumstances we may suggest drafting a Memorandum of Understanding (MoU) if, for example, you contribute more than 10 servers or are exceptional in some other way.   Once you qualify, M-Lab will provide you with an API key and other information necessary to build and configure measurement servers.
+M-Lab will review your submission and confirm that you qualify to become an
+M-Lab site host.  Under some circumstances we may suggest drafting a Memorandum
+of Understanding (MoU) if, for example, you contribute more than 10 servers or
+are exceptional in some other way.   Once you qualify, M-Lab will provide you
+with an API key and other information necessary to build and configure
+measurement servers.
 
-If a host-managed deployment does not appear to be the best way for your organization to contribute to M-Lab, consider [other options](https://www.measurementlab.net/contribute/).
+If a host-managed deployment does not appear to be the best way for your
+organization to contribute to M-Lab, consider [other
+options](https://www.measurementlab.net/contribute/).
 
 ## Serving Requirements
 
@@ -47,7 +60,8 @@ to:
 
 ## Deploying the software
 
-The first step is cloning this repository to the machine. It doesn't matter where on the machine the repository is located:
+The first step is cloning this repository to the machine. It doesn't matter
+where on the machine the repository is located:
 
 ```shell
 git clone https://github.com/m-lab/autonode
@@ -70,20 +84,33 @@ values they should have:
 - **API_KEY**: the API key that M-Lab provides you after you register.
 - **IATA**: the 3-character [IATA
   code](https://www.iata.org/en/publications/directories/code-search/) of the
-  nearest airport. If the nearest airport doesn't have an IATA code, then find
-  the nearest one that does. M-Lab will work with you on the proper value for
-  this variable.
+  nearest airport. If the nearest airport doesn't have an IATA
+  code, then find the nearest one that does. If needed, M-Lab can work with you
+  on the proper value for this variable. The IATA code must exist in this
+  database: <https://github.com/ip2location/ip2location-iata-icao/>
 - **PROBABILITY**: this is the probability that M-Lab's load balancing service
   ([Locate Service](https://github.com/m-lab/locate)) will send a test to your
   server. The M-Lab platform gets many millions of tests per day. Depending on
   where your server is located, its resources, and the speed of the machine's
   uplink, the test volume could possible overwhelm the machine and/or your
   network. You can modify this to suit your needs, either increasing or
-  decreasing the traffic load as necessary.   This is the preffered mechanism for regulating server load.
+  decreasing the traffic load as necessary. This is the preffered mechanism
+  for regulating server load. The value is a percentage expressed as a floating
+  number between 0.0 and 1.0.
 - **INTERFACE_NAME**: the NDT server needs to know the name of the primary network
   interface on the machine (e.g., eth0, enp114s0, etc.)
-- **UPLINK**: the speed of the machine's connection to the Internet.
-- **INTERFACE_MAXRATE**: when the bitrate on the interface exceeds this value the NDT server will start refusing connections.  INTERFACE_MAXRATE is intended to limit the load during flash crowds to prevent the server from saturating its own uplink which would result in inaccurate measurements of other portions of the path.  In the absence of other nearby network bottlenecks the recommended value is 70% of the uplink capacity.   You may set it lower, for example to limit serving costs, but if you do so, please adjust the probability down to avoid sending unnecessary errors to users.
+- **UPLINK**: the speed of the machine's connection to the Internet in
+  gigabits/second, expressed as an integer value followed by "g" e.g., 1g, 5g,
+  10g, etc.
+- **INTERFACE_MAXRATE**: when the bitrate on the interface exceeds this value
+  the NDT server will start refusing connections.  INTERFACE_MAXRATE is intended
+  to limit the load during flash crowds to prevent the server from saturating
+  its own uplink which would result in inaccurate measurements of other portions
+  of the path.  In the absence of other nearby network bottlenecks the
+  recommended value is 70% of the uplink capacity.   You may set it lower, for
+  example to limit serving costs, but if you do so, please adjust the
+  probability down to avoid sending unnecessary errors to users. The value is
+  expressed as bits/second.
 - **IPV4**: the public IPv4 address of the primary network interface.
 - **IPV6**: the public IPv6 address of the primary network interface.
 - **TYPE**: the type of the machine, either "physical" or "virtual".
@@ -107,17 +134,58 @@ M-Lab tests within less than a minute.
 
 ## Test volume and probability
 
-It is important to note that your M-Lab node will receive traffic from many networks, not just your own. The M-Lab [Locate Service](https://github.com/m-lab/locate), which all clients query to get a list of servers to test against, will generally direct clients to the geographically closest server. This is true for your own users, as well as users on other networks. If your server is the only M-Lab server for a large region, depending on various factors it may attract a significant amount of test traffic.
+It is important to note that your M-Lab node will receive traffic from many
+networks, not just your own. The M-Lab [Locate
+Service](https://github.com/m-lab/locate), which all clients query to get a list
+of servers to test against, will generally direct clients to the geographically
+closest server. This is true for your own users, as well as users on other
+networks. If your server is the only M-Lab server for a large region, depending
+on various factors it may attract a significant amount of test traffic.
 
-The *PROBABILITY* environment variable is designed to allow you to modify how often the Locate Service directs traffic to your server. This can help you reduce the load on your server and network. However, it is **important to note** that the probability will apply to your own network users as well.
-M-Lab explicitly does not use network topology or measurements (e.g. RTT) to select servers.
+The *PROBABILITY* environment variable is designed to allow you to modify how
+often the Locate Service directs traffic to your server. This can help you
+reduce the load on your server and network. However, it is **important to note**
+that the probability will apply to your own network users as well.  M-Lab
+explicitly does not use network topology or measurements (e.g., RTT) to select
+servers.
 
-Once you have modified the value of the *PROBABILITY* variable in the env file (or any other parameter), you will need to stop and restart all Docker containers:
+Once you have modified the value of the *PROBABILITY* variable in the env file
+(or any other parameter), you will need to stop and restart all Docker
+containers:
 
 ```shell
 docker compose --profile ndt --env-file env down
 docker compose --profile ndt --env-file env up -d
 ```
+
+## Server selection criteria
+
+Expanding on the "Test volume and probability" section above, it is important to
+understand that M-Lab's server selection criteria does **not** take into account
+network topology or latency. M-Lab's server selection criteria is currently 100%
+based on geolocation. That is, M-Lab's Locate Service will always attempt to
+direct any client to the geographically closest server, regardless of any other
+criteria. It is entirely possible that the selected server could be in a
+different network than yours or in an entirely different country.
+
+This architecture is intentional, and is specifically designed to test
+interconnects. However, M-Lab understands that in some regions of the world good
+interconnection may be prohibitively expensive or even impossible, especially
+internationally.  M-Lab is considering implementing server selection criteria
+that may help take some of these cases better into account. For example,
+implementing an in-country bias in some regions of the world.
+
+The M-Lab Locate Service uses [Google App Engine's built-in
+geolocation](https://cloud.google.com/appengine/docs/flexible/reference/request-headers#app_engine-specific_headers).
+App Engine geolocation is generally quite accurate, but in some cases it may not
+be, or may be unable to geolocate a client at all. In the cases where
+App Engine is unable to geolocate a client, the Locate Service falls back to
+geolocating a client using a [Maxmind GeoLite2
+database.](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/). To
+gain more insight into how the client was geolocated, you can use your browser's
+developer tools to view the X-LOCATE-CLIENTLATLON and
+X-LOCATE-CLIENTLATLON-METHOD response headers from the [Locate
+Service](https://locate.measurementlab.net/v2/nearest/ndt/ndt7).
 
 ## Host names
 
@@ -143,7 +211,12 @@ ndt-oma396982-22486078.mlab.autojoin.measurement-lab.org
 
 ## Monitoring and Server Availability
 
-M-Lab will collect metrics from the various services that are running on your machine, but will **not** alert or notify you when a problem is detected. You should set up monitoring and alerting of your own, possibly collecting some or all of the same metrics that M-Lab collects. The following [Prometheus](https://github.com/prometheus/prometheus) metrics endpoints are exposed:
+M-Lab will collect metrics from the various services that are running on your
+machine, but will **not** alert or notify you when a problem is detected. You
+should set up monitoring and alerting of your own, possibly collecting some or
+all of the same metrics that M-Lab collects. The following
+[Prometheus](https://github.com/prometheus/prometheus) metrics endpoints are
+exposed:
 
 - [ndt-server](https://github.com/m-lab/ndt-server): http://<hostname/ip>:9990/metrics
 - [jostler](https://github.com/m-lab/jostler): http://<hostname/ip>:9991/metrics
@@ -152,17 +225,29 @@ M-Lab will collect metrics from the various services that are running on your ma
 - [traceroute-caller](https://github.com/m-lab/traceroute-caller): http://<hostname/ip>:9994/metrics
 - [node_exporter](https://github.com/prometheus/node_exporter): http://<hostname/ip>:9995/metrics
 
-Of those metrics, you are probably only interested in those from ndt-server and node_exporter. The main metric from ndt-server that you may be interested in is *ndt7_client_test_results_total*, which allows you to calculate test rates on your server using [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/). For example, the following PromQL query would tell you how many tests your machine is serving per minute:
+Of those metrics, you are probably only interested in those from ndt-server and
+node_exporter. The main metric from ndt-server that you may be interested in is
+*ndt7_client_test_results_total*, which allows you to calculate test rates on
+your server using
+[PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/). For
+example, the following PromQL query would tell you how many tests your machine
+is serving per minute:
 
 ```shell
 60 * sum(rate(ndt7_client_test_results_total{result!="error-without-rate"}[5m]))
 ```
 
-node_exporter metrics allow you to monitor resource usage on your machine (e.g., CPU, memory, disk, etc.). There a many very good tutorials on the Web about how to set up Prometheus to scrape metrics, and how to visualize those using [Grafana](https://grafana.com/).
+node_exporter metrics allow you to monitor resource usage on your machine (e.g.,
+CPU, memory, disk, etc.). There a many very good tutorials on the Web about how
+to set up Prometheus to scrape metrics, and how to visualize those using
+[Grafana](https://grafana.com/).
 
 ## Calibration
 
-M-Lab will monitor server resource consumption and evidence of accuracy problems with the data. We may ask you to make configuration changes or other improvements. If your results are deemed inaccurate we reserve the right to minimize your test volume to protect M-Lab’s overall data quality.
+M-Lab will monitor server resource consumption and evidence of accuracy problems
+with the data. We may ask you to make configuration changes or other
+improvements. If your results are deemed inaccurate we reserve the right to
+minimize your test volume to protect M-Lab’s overall data quality.
 
 ## Autojoin Implementation
 
