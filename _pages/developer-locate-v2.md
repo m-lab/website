@@ -15,13 +15,12 @@ parameters are already embedded in the reply.
 
 ## TL;DR Find Nearby Measurement Services
 
-The Locate API v2 currently supports two measurement services, with others
-planned:
+The Locate API v2 currently supports four measurement services:
 
 * ndt/ndt5
 * ndt/ndt7
-* wehe/replay (planned)
-* neubot/dash (planned)
+* wehe/replay
+* neubot/dash
 
 The measurement service name (e.g. "ndt") and type (e.g. "ndt7") are the last
 two part of the Locate API v2 request URL. For example:
@@ -67,22 +66,5 @@ possible, and consistent, expected measurement quality is achieved.
 * [USAGE.md][locate-usage] is a technical overview of the Locate API's
   capabilities and usage.
 
-* [Locate API Developer Portal][developer-locate] is a browser-based "API
-  explorer" user interface that documents resource types and allows developers
-  to experiment with real API requests and responses.
-
-> NOTE: to access the Locate API Developer Portal your Google account must be
-a member of the [api-announce@measurementlab.net][api-announce] mailing list.
-
-When accessing the developer portal, you will be asked to login and grant
-permissions to the app. These permissions only verify that you are a member
-of the above group.
-
-![locate-developer-iam](/images/developer/locate-developer-iam.png){:height="30%" width="30%"}
-**Grant the developer portal permissions to verify that your account is a**
-**member of the api-announce@ group**
-
 [locate-usage]: https://github.com/m-lab/locate/blob/master/USAGE.md
-[developer-locate]: https://developer-locate.measurementlab.net/
-[api-announce]: https://groups.google.com/a/measurementlab.net/g/api-announce
 
