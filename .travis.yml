@@ -1,4 +1,4 @@
-dist: focal
+dist: noble
 language: ruby
 rvm:
   - 3.1
