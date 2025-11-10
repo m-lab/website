@@ -12,7 +12,7 @@ There are many ways to work with M-Lab, whether as a direct hire, through a fell
 
 ## Open Positions at Measurement Lab
 
-- [Research Fellow (data science and Internet measurements)]({{ site.baseurl }}/jobs/2025-10/iqb-research-fellow/)
+- None at this time
 
 ## Contract Opportunities with M-Lab
 
