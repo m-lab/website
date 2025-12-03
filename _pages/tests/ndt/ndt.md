@@ -81,7 +81,7 @@ on them in any way. With "host-managed" deployments, it is more difficult for M-
 to make assertions about the quality of the data, hence it is kept separate from
 data produced by M-Lab-managed servers. In this way it is left to the discretion
 of the researcher whether they would like to query all ndt7 data, just data from
-M-Lab-managed servers, or just data from "host-managed" servers. This also makes
+M-Lab-managed servers, or just data from "Host-Managed" servers. This also makes
 it easy for researches to compare and contrast data from the different
 deployment models.
 
@@ -117,8 +117,8 @@ general usage.
 This view in the `ndt` dataset represents **all** ndt7 data collected by the
 M-Lab platform, and includes annotations. No tests are filtered or validated in
 any way. It is the union of of data from M-Lab-managed servers and Host-Managed
-servers. While subject to change, this is currently the recommended view for
-general usage.
+servers. **While subject to change, this is currently the recommended view for
+general usage**.
 
 ### measurement-lab.ndt.ndt7
 
@@ -154,8 +154,8 @@ ndt7. This transition happened in 2020 and today the [vast majority of data is
 ndt7](https://www.measurementlab.net/blog/most-ndt-clients-migrated-to-ndt7/).
 These views introduce a non-trivial amount of complexity to the underlying
 queries and are therefore considerably more expensive to run than similar
-queries against the other ndt7 views. These views are currently **not**
-recommended unless you have a specific to need be able to query the very small
+queries against the other ndt7 views. **These views are currently not
+recommended** unless you have a specific to need be able to query the very small
 amount of ndt5 data at the same time as ndt7 data.
 
 ### measurement-lab.ndt_intermediate.*
