@@ -148,3 +148,8 @@ work beneficial. If your organization is interested in supporting the M-Lab
 platform, please review our [sponsorship
 offerings](https://www.measurementlab.net/documents/mlab-sponsorship.pdf) and
 contact us.
+
+## Github Sponsorship
+
+You can support us through [GitHub Sponsors](https://github.com/sponsors/m-lab). Every contribution helps!
+
