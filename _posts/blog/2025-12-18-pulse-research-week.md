@@ -17,8 +17,8 @@ Week](https://www.internetsociety.org/events/internet-society-pulse-research-wee
 On Day 4 Pavlos Sermpezis, M-Lab’s Director, Technical Lead, presented the
 [Internet Quality
 Barometer](https://www.measurementlab.net/blog/iqb/#measurement-lab-publishes-the-internet-quality-barometer-framework)
-prototype at the Giga offices in Barcelona. M-Lab discussed with the audience
-how IQB could be adapted for education.<!--more-->
+prototype at the [Giga](https://giga.global/) offices in Barcelona. M-Lab
+discussed with the audience how IQB could be adapted for education.<!--more-->
 
 During the closing session, Melissa Newcomb, M-Lab’s Senior Program Manager,
 led a reflection session featuring Georgia Bullen (M-Lab Advisory Committee
