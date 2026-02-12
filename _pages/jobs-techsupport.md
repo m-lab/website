@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /jobs/tech-support
+permalink: /jobs/tech-support/
 title: "Technical Support and Community Manager Job Description"
 page-title: "Technical Support and Community Manager Job Description"
 breadcrumb: "jobs"
