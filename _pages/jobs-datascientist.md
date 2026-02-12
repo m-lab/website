@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /jobs/data-scientist
+permalink: /jobs/data-scientist/
 title: "Data Scientist, Internet Researcher Job Description"
 page-title: "Data Scientist, Internet Researcher Job Description"
 breadcrumb: "jobs"
