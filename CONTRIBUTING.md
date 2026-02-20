@@ -41,7 +41,7 @@ Docker builds. Remove locally installed dependencies if this happens to you.
 The website publication process uses a combination of continuous integration
 using Travis CI, pull requests, code review and release tagging.
 
-The file `.travis.tml` is configured to do the following actions:
+The file `.travis.yml` is configured to do the following actions:
 
 * When a branch matching the pattern `sandbox-*` is pushed:
 
@@ -172,7 +172,7 @@ docker run -v $PWD:/_includes -it measurementlab/generate-schema-docs:latest -do
 ## Including Jupyter Notebooks in Pages or Posts
 
 * Notebooks are included using the `jekyll-jupyter-notebook` gem
-* Save `.ipynb` notebook files in `/notebook`
+* Save `.ipynb` notebook files in `/notebooks`
 * And include them in website pages using this syntax:
 
   ```yaml
