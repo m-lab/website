@@ -19,7 +19,7 @@ Measurement Lab (M-Lab) is excited to announce the early launch of a new Connect
 
 As the world’s largest open collection of Ιnternet performance data, M-Lab provides powerful, real-world telemetry that helps illuminate how networks actually perform. Through this collaboration, we’re working with Giga to strengthen how connectivity is measured and understood for public facilities, especially schools, using open measurement approaches that reflect on-the-ground conditions.
 
-[Giga](https://giga.global/) is a joint initiative of UNICEF and the International Telecommunication Union (ITU), working to connect every school to the internet and every young person to information, opportunity, and choice. Through its global focus on school connectivity, Giga supports governments and partners with data, technical expertise, and financing tools to accelerate meaningful access to the internet for education.
+[Giga](https://giga.global/) is a joint initiative of UNICEF and the International Telecommunication Union (ITU), working to connect every school to the Internet and every young person to information, opportunity, and choice. Through its global focus on school connectivity, Giga supports governments and partners with data, technical expertise, and financing tools to accelerate meaningful access to the Internet for education.
 
 **Objectives**  
 This Community of Practice (CoP) builds on that shared foundation. It brings together researchers, network engineers, implementers, and policymakers to advance measurement approaches that are:
