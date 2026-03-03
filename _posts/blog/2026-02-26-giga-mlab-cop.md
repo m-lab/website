@@ -39,4 +39,4 @@ Whether you’re an engineer, researcher, educator, advocate, or policymaker, we
 
 [**Register to attend here**](https://us02web.zoom.us/meeting/register/Md7jAQrcQo2iKuPusBiXpQ)\! 
 
-*Can’t attend live? Join the [CoP Connectivity group](https://groups.google.com/a/measurementlab.net/g/connectivity-cop) to receive event materials and updates on future activities.*
+*Can’t attend live? Join the [CoP Connectivity group](https://forms.gle/rU9o5vuT4mmzYE7p7) to receive event materials and updates on future activities.*
