@@ -33,7 +33,7 @@ Together, the community will first explore what meaningful measurement looks lik
 At its core, the CoP reflects a shared commitment to openness in data, in tools, and in collaboration. As the community grows, we look forward to shaping inclusive participation and governance models with contributors, ensuring this work remains durable, representative, and grounded in shared priorities.
 
 **Join us!**  
-We’ll host a virtual launch event on March 11, 2026 at 15:00 CET / 9:00 Eastern Time  to introduce the Community of Practice’s initial focus areas and invite input into its first-year agenda.
+We’ll host a virtual launch event on March 11, 2026 at 14:00 CET / 9:00 Eastern Time  to introduce the Community of Practice’s initial focus areas and invite input into its first-year agenda.
 
 Whether you’re an engineer, researcher, educator, advocate, or policymaker, we welcome everyone working at the intersection of Ιnternet measurement and school connectivity to join us and help shape what comes next. If you’re interested in joining the CoP, *click on the registration link below*.
 
