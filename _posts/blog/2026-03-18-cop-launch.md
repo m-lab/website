@@ -28,14 +28,13 @@ Melissa Newcomb, Director, Programs and Partnerships at Measurement Lab, provide
 * Globally comparable  
 * Practical for real-world connectivity contexts, including underserved regions
 
-Pavlos Sermpezis, Director, Technical Lead at Measurement Lab, introduced the M-Lab platform and the initial research agenda for the CCoP. 
-
-The four initial workstreams for the  CCoP are:
+Pavlos Sermpezis, Director, Technical Lead at Measurement Lab, introduced the M-Lab platform and the initial research agenda for the CCoP. The four initial workstreams for the  CCoP are:
 
 1. Improving measurement tools  
 2. Characterization of facility-based connectivity  
 3. Internet Quality Barometer for Education (“IQB - Edu”)  
 4. New insights from existing measurement data
+
 
 In addition, we invited CCoP members to BYOI (Bring Your Own Ideas)! Initial questions and areas of work participant mentioned included:
 
