@@ -35,7 +35,6 @@ Pavlos Sermpezis, Director, Technical Lead at Measurement Lab, introduced the M-
 3. Internet Quality Barometer for Education (“IQB - Edu”)  
 4. New insights from existing measurement data
 
-
 In addition, we invited CCoP members to BYOI (Bring Your Own Ideas)! Initial questions and areas of work participant mentioned included:
 
 * Insights into usage of the Internet by students in addition to the connectivity   
