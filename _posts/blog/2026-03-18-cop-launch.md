@@ -11,7 +11,7 @@ categories:
   - partnership
 ---
 
-On March 11, 2026, M-Lab and Giga formally launched the Connectivity Community of Practice (CCoP) and held the inaugural session with 51 global participants representing backgrounds from academia, industry, civil society and international NGOs. The event introduced the CoP’s initial focus areas and invited participants to help shape its first-year agenda through an [interactive Community document. ](https://docs.google.com/document/d/10LuFzy9Pyz98GcoagzutCZ4nsi9TWl6G3HLO7yNwVbY/edit?tab=t.0)<!--more-->
+On March 11, 2026, M-Lab and Giga formally launched the Connectivity Community of Practice (CCoP) and held the inaugural session with 51 global participants representing backgrounds from academia, industry, civil society and international NGOs. The event introduced the CoP’s initial focus areas and invited participants to help shape its first-year agenda through an [interactive Community document.](https://docs.google.com/document/d/10LuFzy9Pyz98GcoagzutCZ4nsi9TWl6G3HLO7yNwVbY/edit?tab=t.0)<!--more-->
 
 **Resources**  
  🛝 [Slides](https://github.com/unicef/giga-mlab-school-connectivity-cop/blob/5e85eed4ef8fcd1edc9bd1b19fe1f6208e01b758/materials/20260311_Connectivity_CoP_Launch_Event_Slides.pdf)   
