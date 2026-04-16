@@ -58,6 +58,25 @@ to:
 - Provide their own server health monitors and alerts.
 - Monitor traffic volumes and server loads, and adjust the serving probability as necessary.
 
+## Eligibility                                                                                                      
+                                                                                                                      
+M-Lab accepts host-managed infrastructure contributions from **organizations**, not individuals. Eligible organizations include:                                                                                              
+                                                                                
+- Internet service providers, hosting providers, and network operators                                              
+- Universities, research institutions, and public-sector bodies
+- Non-profits operating network infrastructure or public internet services                                          
+- Other organizations operating publicly documented internet services                                               
+
+To be considered, your organization must:                                                                           
+                                                                              
+- Have a **verifiable public presence** — a working website, registry entry, or equivalent reference that lets M-Lab
+ confirm the organization exists and that the applicant is authorized to represent it.
+- Provide a **NOC/support email address on your organization's own domain**. Personal addresses (e.g. `@gmail.com`, 
+`@outlook.com`, `@yahoo.com`) are not accepted for this role.                                                       
+- Designate a named operational point of contact responsible for the server's health and for responding to messages
+from `host-managed@measurementlab.net`.
+
+
 ## Deploying the software
 
 The first step is cloning this repository to the machine. It doesn't matter
