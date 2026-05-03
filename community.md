@@ -194,7 +194,7 @@ Track these indicators to assess whether the community is thriving:
 | **Dioptra / Sorbonne** | IPRS data, traceroute expertise |
 | **Cloudflare Radar** | AIM data; hackathon collaboration |
 | **Internet Society Foundation** | IQB funding; fellowship potential |
-| **Code for Science & Society** | M-Lab fiscal sponsor; donation conduit |
+| **Superbloom** | M-Lab fiscal sponsor; donation conduit |
 
 ---
 
