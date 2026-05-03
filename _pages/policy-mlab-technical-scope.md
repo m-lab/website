@@ -13,8 +13,10 @@ This working document outlines the general motivations, organization, and techni
 
 **Document history**
 
-* Version 2.0 2019-07-01 (this document)
+* Version 3.0 2026-05-3] (this document, operating at Superbloom) 
+* Version 2.0 2019-07-01 (Operating at CS&S)
 * [Version 1.0 2009-01-28]({{ site.baseurl }}/publications/mlab-founding-vision.pdf) (archived)
+
 
 ## 1. Measurement Lab Defined
 
@@ -28,7 +30,7 @@ In 2008, Vint Cerf and others at Google initiated conversations with network res
 
 In addition, researchers lack the means to easily share large data sets with one another. Thus, was difficult for researchers to build new experiments on previous network measurement experiments, compare or independently verify results, or publicize data.
 
-M-Lab was founded by New America Foundation’s Open Technology Institute (OTI), Princeton University’s PlanetLab Consortium, Google Inc., and academic researchers in order to help address these barriers to research. M-Lab is now led by teams based at Code for Science & Society; New America’s Open Technology Institute; Google, Inc; Princeton University’s PlanetLab; and supported by partners around the world.
+M-Lab was founded by New America Foundation’s Open Technology Institute (OTI), Princeton University’s PlanetLab Consortium, Google Inc., and academic researchers in order to help address these barriers to research. M-Lab is now led by teams based at Superbloom; New America’s Open Technology Institute; Google, Inc; Princeton University’s PlanetLab; and supported by partners around the world.
 
 ### 1.2 Goals
 
@@ -46,7 +48,7 @@ M-Lab operates as a community-based effort. In order for M-Lab to achieve its ob
 
 ### 1.3 Scope
 
-Measurement Lab is jointly developed by staff teams at Code for Science & Society, Google Inc., and external open source contributors. M-Lab’s operations, administration, and maintenance (OA&M) framework is a managed Kubernetes cluster, with each experiment running as a daemonset. These daemonsets are deployed to physical servers using Docker containers. M-Lab’s platform is designed to:
+Measurement Lab is jointly developed by staff teams at Superbloom, Google Inc., and external open source contributors. M-Lab’s operations, administration, and maintenance (OA&M) framework is a managed Kubernetes cluster, with each experiment running as a daemonset. These daemonsets are deployed to physical servers using Docker containers. M-Lab’s platform is designed to:
 
 * Provide passive server-side resources for client-initiated active network measurement of Internet users’ broadband connections.
 * Provide resource allocation on each server that will ensure sufficient bandwidth and machine resources.
@@ -78,14 +80,14 @@ Participants in M-Lab serve a number of roles.
   * Acting as point of first contact for parties having questions about the activities of M-Lab.
 * **Measurement Experiment Developers**: Individual researchers create active Internet measurement experiments that run on the servers (instrumented versions of application protocols). Researchers whose experiments are approved and meet M-Lab’s open access goals (described below, section 2) then coordinate with M-Lab staff to package, test, and deploy their experiment container to M-Lab infrastructure.
 * **Data Hosting, Analysis, and Other Resources**: Organizations and institutions can contribute to M-Lab by providing data aggregation and publishing resources and by collecting and archiving data from M-Lab’s servers (“repository”). They might also provide other technical resources, such as computing resources for data analysis. Other contributions might include the integration of experiments’ client side code into web properties, software, or hardware products, using M-Lab as a platform-as-a-service.
-* **Management & Organization**: Measurement Lab is sponsored project of [Code for Science & Society](https://codeforsociety.org/){:target="_blank"} (CS&S), a US-based 501(c)(3) nonprofit supporting open collaboration in public interest technology through fiscal sponsorship and other programs supporting sustainable open source. M-Lab is overseen by an advisory board at CS&S, who, define and implement the platform’s policies and processes in light of the project’s objectives in consultation with M-Lab management staff. Operationally, M-Lab is led by teams working for CS&S; Google, Inc.; Princeton University’s PlanetLab; and is supported by partners around the world. Together, these organizations comprise the “Measurement Lab Consortium” or MLC. Organizationally, M-Lab maintains several committees that advise on various aspects of M-Lab operations, notably, the [Experiment Review Committee]({{ site.baseurl }}/who/#experiment-review-committee), who review applications for new measurement experiments.
+* **Management & Organization**: Measurement Lab is sponsored project of [Superbloom](https://superbloom.design){:target="_blank"}, a US-based 501(c)(3) nonprofit supporting open collaboration in public interest technology through fiscal sponsorship and other programs supporting sustainable open source. M-Lab is overseen by an advisory board at Superbloom, who, define and implement the platform’s policies and processes in light of the project’s objectives in consultation with M-Lab management staff. Operationally, M-Lab is led by teams working for Superbloom; Google, Inc.; Princeton University’s PlanetLab; and is supported by partners around the world. Together, these organizations comprise the “Measurement Lab Consortium” or MLC. Organizationally, M-Lab maintains several committees that advise on various aspects of M-Lab operations, notably, the [Experiment Review Committee]({{ site.baseurl }}/who/#experiment-review-committee), who review applications for new measurement experiments.
 * **User and researcher outreach**: M-Lab directs users to the various experiments running on the platform, through a public facing website, mailing list, and other means. M-Labalso seeks to actively engage the research community in order to extend the platform and its usefulness to a wide variety of audiences.
 
 ## 2. Organization, Policies and Processes
 
 ### 2.1 Organization
 
-Measurement Lab is sponsored project of [Code for Science & Society](https://codeforsociety.org/){:target="_blank"} (CS&S), a US-based 501(c)(3) nonprofit supporting open collaboration in public interest technology through fiscal sponsorship and other programs supporting sustainable open source. M-Lab is overseen by an advisory board at CS&S, who, define and implement the platform’s policies and processes in light of the project’s objectives in consultation with M-Lab management staff. Operationally, M-Lab is led by teams working for CS&S; Google, Inc.; Princeton University’s PlanetLab; and is supported by partners around the world. Together, these organizations comprise the “Measurement Lab Consortium” or MLC.
+Measurement Lab is sponsored project of [Superbloom](https://superbloom.design/){:target="_blank"}, a US-based 501(c)(3) nonprofit supporting open collaboration in public interest technology through fiscal sponsorship and other programs supporting sustainable open source. M-Lab is overseen by an advisory board at Superbloom, who, define and implement the platform’s policies and processes in light of the project’s objectives in consultation with M-Lab management staff. Operationally, M-Lab is led by teams working for Superbloom; Google, Inc.; Princeton University’s PlanetLab; and is supported by partners around the world. Together, these organizations comprise the “Measurement Lab Consortium” or MLC.
 
 ### 2.2 Policies
 

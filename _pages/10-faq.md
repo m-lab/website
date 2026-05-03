@@ -99,7 +99,7 @@ If you have questions after reviewing the brochure please let us know.
 
 ### Who is M-Lab? 
 
-M-Lab is an open source project with contributors from civil society organizations, educational institutions, and private sector companies, and is a fiscally sponsored project of Code for Science & Society.
+M-Lab is an open source project with contributors from civil society organizations, educational institutions, and private sector companies, and is a fiscally sponsored project of Superbloom.
 
 M-Lab operates as a community-based effort. We currently receive assistance from M-Lab supporting partners, and we welcome others who would like to contribute to the platform’s growth and success. In order for M-Lab to achieve its objectives, it depends on the participation of additional companies, institutions, and researchers. Learn how to [get involved](https://www.measurementlab.net/contribute).
 

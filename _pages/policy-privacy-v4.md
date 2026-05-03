@@ -9,13 +9,12 @@ breadcrumb: "about"
 
 ## Active and previous versions
 
-* Current version (this document):  \[v5\] May 3, 2026
+* Current version (this document):  \[v4\] February 17, 2025
 
 * Previous versions
   * [[v1] July 12, 2018](https://www.measurementlab.net/privacy-v1/)
   * [[v2] July 1, 2019](https://www.measurementlab.net/privacy-v2)
   * [[v3] July 14, 2020](https://www.measurementlab.net/privacy-v3/)
-  * [[v4] February 7, 2026](https://www.measurementlab.net/privacy-v4)
 
 ## Measurement Lab Data Collection Overview
 
@@ -64,7 +63,9 @@ services they collect.
 
 ## Who we are and why we do what we do
 
-Measurement Lab (further “**M-Lab**”) is a fiscally sponsored project of [Superbloom](https://superbloom.design/) operating at 276 Fifth Ave, Suite 704-33 New York, NY 10001.
+Measurement Lab (further “**M-Lab**”) is a fiscally sponsored project of [Code
+for Science & Society](https://codeforsociety.org/) (CS&S) operating at 3439 SE
+Hawthorne Blvd. \#247, Portland, Oregon 97214-5048.
 
 ### Purpose of the processing of personal data
 
