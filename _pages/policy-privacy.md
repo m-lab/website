@@ -302,8 +302,8 @@ date and time.
 
 For data processed in the scope of this policy where M-Lab assumes the role of
 data controller (GDPR Art. 4.7 | LGPD Art.5 inc VI), please write to us at
-<privacy@measurementlab.net> or by post at Measurement Lab, 3439 SE Hawthorne
-Blvd. \#247, Portland, Oregon 97214-5048; please explain which right you wish to
+<privacy@measurementlab.net> or by post at Measurement Lab, 276 Fifth Ave,
+Suite 704-33 New York, NY 10001; please explain which right you wish to
 exercise and in which capacity. For instance you may be a website visitor
 wishing to exercise your right to erasure.
 

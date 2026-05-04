@@ -57,8 +57,8 @@ and well-connected physical or virtual server to be added to M-Lab's fleet. This
 will increase the platform's resilience, diversity, and reach, supporting
 M-Lab’s mission.
 
-All contributions are considered tax-deductible donations to Code for Science &
-Society, M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at
+All contributions are considered tax-deductible donations to Superbloom,
+M-Lab’s nonprofit fiscal sponsor. To learn more, contact us at
 <hello@measurementlab.net>.
 
 ### Host-Managed Deployment
