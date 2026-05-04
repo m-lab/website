@@ -7,7 +7,7 @@ breadcrumb: "about"
 
 # Memorandum of Understanding for M-Lab Experiment Developers
 
-This is the standard agreement between Measurement Lab and Experiment Developers whose network measurement experiment(s) has been [approved]({{ site.baseurl }}/contribute/#develop-a-test) to be hosted on M-Lab infrastructure. M-Lab is a fiscally sponsored project of Code for Science & Society. This MOU is an agreement between Code for Science & Society and each Experiment Developer, covering Measurement Lab team support of experiments. This agreement is non-negotiable, and is signed by the Experiment Developer as authorized by their host organization, an authorized member of the Measurement Lab team, and an officer of Code for Science and Society, Inc.
+This is the standard agreement between Measurement Lab and Experiment Developers whose network measurement experiment(s) has been [approved]({{ site.baseurl }}/contribute/#develop-a-test) to be hosted on M-Lab infrastructure. M-Lab is a fiscally sponsored project of Superbloom. This MOU is an agreement between Superbloom and each Experiment Developer, covering Measurement Lab team support of experiments. This agreement is non-negotiable, and is signed by the Experiment Developer as authorized by their host organization, an authorized member of the Measurement Lab team, and an officer of Superbloom.
 
 ## Memorandum of Understanding - Measurement Lab, Experiment Developers
 
