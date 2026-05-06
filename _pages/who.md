@@ -10,7 +10,7 @@ grid-section:
     grid-items:
       - image: "roberto.jpg"
         heading: "Roberto D'Auria"
-        desc: "Platform Engineer, Code for Science & Society"
+        desc: "Senior Software Engineer"
       - image: "christophe.png"
         heading: "Christophe Diot"
         desc: "Principal Engineer, Google"
@@ -19,7 +19,7 @@ grid-section:
         desc: "Research Scientist, Google"
       - image: "nathan.jpg"
         heading: "Nathan Kinkade"
-        desc: "Platform Engineer, Code for Science & Society"
+        desc: "Platform Engineer, Superbloom"
       - image: "cristina.jpg"
         heading: "Cristina Leon"
         desc: "Software Engineer, Google"
@@ -28,10 +28,10 @@ grid-section:
         desc: "Independent Contributor"
       - image: "melissa.jpeg"
         heading: "Melissa Newcomb"
-        desc: "Senior Program Manager, Code for Science & Society"
+        desc: "Senior Program Manager, Superbloom"
       - image: "pavlos_sermpezis.jpg"
         heading: "Pavlos Sermpezis"
-        desc: "Director, Technical Lead, Code for Science & Society"
+        desc: "Director, Technical Lead, Superbloom"
       - image: "arthur.png"
         heading: "Arthur Terry"
         desc: "Program Manager, Google"
@@ -232,6 +232,6 @@ grid-section:
 
 # Who We Are
 
-M-Lab is an open source project with contributors from civil society organizations, educational institutions, and private sector companies, and is a fiscally sponsored project of Code for Science & Society.
+M-Lab is an open source project with contributors from civil society organizations, educational institutions, and private sector companies, and is a fiscally sponsored project of Superbloom.
 
-M-Lab is a community-based open source project made possible by every contributor who runs a measurement, and from supporters from civil society organizations, educational institutions, and private sector companies dedicating time, expertise, and financial resources. M-Lab operates as a not-for-profit as and is a fiscally sponsored project of Code for Science & Society. Learn how to [get involved]({{ site.baseurl }}/contribute).
+M-Lab is a community-based open source project made possible by every contributor who runs a measurement, and from supporters from civil society organizations, educational institutions, and private sector companies dedicating time, expertise, and financial resources. M-Lab operates as a not-for-profit and is a fiscally sponsored project of Superbloom. Learn how to [get involved]({{ site.baseurl }}/contribute).
