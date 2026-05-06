@@ -10,7 +10,7 @@ grid-section:
     grid-items:
       - image: "roberto.jpg"
         heading: "Roberto D'Auria"
-        desc: "Senior Software Engineer, Superbloom"
+        desc: "Senior Software Engineer"
       - image: "christophe.png"
         heading: "Christophe Diot"
         desc: "Principal Engineer, Google"
