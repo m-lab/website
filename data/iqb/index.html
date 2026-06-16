@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IQB Available Data</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 2rem;
+    color: #24292f;
+    background: #fff;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  p.subtitle {
+    color: #57606a;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  #filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  #filters label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #57606a;
+  }
+  #filters select {
+    margin-top: 0.25rem;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.875rem;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    background: #fff;
+    color: #24292f;
+  }
+  #row-count {
+    font-size: 0.8rem;
+    color: #57606a;
+    margin-bottom: 0.75rem;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.875rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d0d7de;
+  }
+  th {
+    background: #f6f8fa;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+  }
+  tr:hover {
+    background: #f6f8fa;
+  }
+  a {
+    color: #0969da;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  #error {
+    color: #cf222e;
+    display: none;
+  }
+  #loading {
+    color: #57606a;
+  }
+</style>
+</head>
+<body>
+
+<h1>IQB Available Data</h1>
+<p class="subtitle">
+  Cached M-Lab query results available for download.
+  See <a href="https://github.com/m-lab/iqb">m-lab/iqb</a> for details.
+</p>
+
+<p id="loading">Loading manifest&hellip;</p>
+<p id="error">Failed to load manifest.</p>
+
+<div id="filters" hidden>
+  <label>Period
+    <select id="filter-period"><option value="">All</option></select>
+  </label>
+  <label>Direction
+    <select id="filter-direction"><option value="">All</option></select>
+  </label>
+  <label>Granularity
+    <select id="filter-granularity"><option value="">All</option></select>
+  </label>
+  <label>File Type
+    <select id="filter-filetype"><option value="">All</option></select>
+  </label>
+</div>
+
+<p id="row-count" hidden></p>
+
+<table id="data-table" hidden>
+  <thead>
+    <tr>
+      <th>Period</th>
+      <th>Direction</th>
+      <th>Granularity</th>
+      <th>File Type</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+(function () {
+  "use strict";
+
+  // Parse a manifest key like:
+  //   cache/v1/20241001T000000Z/20241101T000000Z/downloads_by_country_asn/data.parquet
+  // into structured columns.
+  function parseKey(key) {
+    var parts = key.split("/");
+    // parts: ["cache", "v1", start, end, queryType, filename]
+    if (parts.length !== 6) return null;
+
+    var start = formatDate(parts[2]);
+    var end = formatDate(parts[3]);
+    var queryType = parts[4];
+    var filename = parts[5];
+
+    // Direction: downloads or uploads
+    var direction = queryType.startsWith("downloads") ? "downloads" : "uploads";
+
+    // Granularity: everything after "downloads_by_" or "uploads_by_"
+    var granularity = queryType.replace(/^(?:downloads|uploads)_by_/, "").replace(/_/g, " + ");
+
+    // File type
+    var fileType = filename === "data.parquet" ? "parquet" : "stats.json";
+
+    return {
+      period: start + " \u2013 " + end,
+      direction: direction,
+      granularity: granularity,
+      fileType: fileType,
+    };
+  }
+
+  // Format "20241001T000000Z" as "2024-10"
+  function formatDate(s) {
+    if (s.length < 6) return s;
+    return s.slice(0, 4) + "-" + s.slice(4, 6);
+  }
+
+  function populateDropdown(selectId, values) {
+    var sel = document.getElementById(selectId);
+    var sorted = Array.from(values).sort();
+    for (var i = 0; i < sorted.length; i++) {
+      var opt = document.createElement("option");
+      opt.value = sorted[i];
+      opt.textContent = sorted[i];
+      sel.appendChild(opt);
+    }
+  }
+
+  function applyFilters() {
+    var fPeriod = document.getElementById("filter-period").value;
+    var fDirection = document.getElementById("filter-direction").value;
+    var fGranularity = document.getElementById("filter-granularity").value;
+    var fFileType = document.getElementById("filter-filetype").value;
+
+    var rows = document.querySelectorAll("#data-table tbody tr");
+    var visible = 0;
+
+    for (var i = 0; i < rows.length; i++) {
+      var cells = rows[i].cells;
+      var match =
+        (!fPeriod || cells[0].textContent === fPeriod) &&
+        (!fDirection || cells[1].textContent === fDirection) &&
+        (!fGranularity || cells[2].textContent === fGranularity) &&
+        (!fFileType || cells[3].textContent === fFileType);
+
+      rows[i].hidden = !match;
+      if (match) visible++;
+    }
+
+    document.getElementById("row-count").textContent =
+      "Showing " + visible + " of " + rows.length + " entries";
+  }
+
+  function render(manifest) {
+    var tbody = document.querySelector("#data-table tbody");
+    var keys = Object.keys(manifest.files).sort();
+
+    var periods = new Set();
+    var directions = new Set();
+    var granularities = new Set();
+    var fileTypes = new Set();
+
+    for (var i = 0; i < keys.length; i++) {
+      var key = keys[i];
+      var entry = manifest.files[key];
+      var parsed = parseKey(key);
+      if (!parsed) continue;
+
+      periods.add(parsed.period);
+      directions.add(parsed.direction);
+      granularities.add(parsed.granularity);
+      fileTypes.add(parsed.fileType);
+
+      var tr = document.createElement("tr");
+
+      var cells = [
+        parsed.period,
+        parsed.direction,
+        parsed.granularity,
+        parsed.fileType,
+      ];
+
+      for (var j = 0; j < cells.length; j++) {
+        var td = document.createElement("td");
+        td.textContent = cells[j];
+        tr.appendChild(td);
+      }
+
+      // URL column with clickable link
+      var tdUrl = document.createElement("td");
+      var a = document.createElement("a");
+      a.href = entry.url;
+      a.textContent = key.split("/").slice(2).join("/");
+      a.setAttribute("rel", "noopener");
+      tdUrl.appendChild(a);
+      tr.appendChild(tdUrl);
+
+      tbody.appendChild(tr);
+    }
+
+    populateDropdown("filter-period", periods);
+    populateDropdown("filter-direction", directions);
+    populateDropdown("filter-granularity", granularities);
+    populateDropdown("filter-filetype", fileTypes);
+
+    document.getElementById("filters").hidden = false;
+    document.getElementById("row-count").hidden = false;
+    document.getElementById("loading").hidden = true;
+    document.getElementById("data-table").hidden = false;
+
+    // Wire up filter change events
+    var selects = document.querySelectorAll("#filters select");
+    for (var k = 0; k < selects.length; k++) {
+      selects[k].addEventListener("change", applyFilters);
+    }
+
+    applyFilters();
+  }
+
+  fetch("manifest.json")
+    .then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    })
+    .then(render)
+    .catch(function () {
+      document.getElementById("loading").hidden = true;
+      document.getElementById("error").style.display = "block";
+    });
+})();
+</script>
+
+</body>
+</html>
