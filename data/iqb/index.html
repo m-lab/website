@@ -265,6 +265,9 @@
     applyFilters();
   }
 
+  // TODO(bassosimone): we are currently embedding a manifest. Pros: we cannot break
+  // this website by changing IQB in incompatible ways. Cons: the content may become
+  // stale. For now this is fine, but we should see to improve upon this in the future.
   fetch("manifest.json")
     .then(function (r) {
       if (!r.ok) throw new Error(r.status);
