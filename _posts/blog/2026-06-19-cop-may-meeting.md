@@ -60,7 +60,7 @@ Contributions could take several forms: written recommendations on thresholds gr
 📃 [CCoP GitHub Repository](https://github.com/unicef/giga-mlab-school-connectivity-cop)  
 🔗 [Join the CCoP Google Group](https://forms.gle/SBrd63EgMja1owDt8)  
 📧 [connectivity-cop@measurementlab.net](mailto:connectivity-cop@measurementlab.net)  
-📊 [IQB-Edu Moldova Notebooks](https://mybinder.org/v2/gh/m-lab/ccop-notebooks/main)
+📊 [IQB-Edu Moldova Notebooks](https://mybinder.org/v2/gh/unicef/giga-mlab-school-connectivity-cop/HEAD?urlpath=%2Fdoc%2Ftree%2F%2Fmaterials%2F2026-05-IQB-Edu%2Fnotebooks%2FIQB-Edu_Moldova_schools.ipynb)
 
 Can't make it live? Join the [CCoP Google Group](https://groups.google.com/a/measurementlab.net/g/connectivity-cop) for materials and updates. Meeting notes and resources live on the [CoP Community GitHub](https://github.com/unicef/giga-mlab-school-connectivity-cop).
 
