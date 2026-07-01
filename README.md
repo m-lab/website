@@ -3,7 +3,6 @@
 This is the source code of the Measurement Lab website built using
 [Jekyll](http://jekyllrb.com).
 
-Current Build Status is: [![Build Status](https://secure.travis-ci.org/m-lab/website.png?branch=master)](http://travis-ci.org/m-lab/website)
 
 ## Contributing
 
