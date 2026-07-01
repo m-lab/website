@@ -1,0 +1,28 @@
+# Builder image for the M-Lab website.
+#
+# Bundles the full toolchain the Jekyll build needs, replacing what Travis used
+# to install inline:
+#   * Ruby 3.1 + bundler   -> jekyll build
+#   * Node 18              -> js/libs/r.js RequireJS optimizer (minified app.js)
+#   * jupyter + nbconvert  -> the jekyll-jupyter-notebook plugin shells out to
+#                             `jupyter nbconvert` while rendering .ipynb pages
+#   * firebase-tools       -> production deploy to Firebase Hosting (mlab-oti)
+#   * gcloud/gsutil come from dedicated cloud-builders steps, not this image.
+FROM ruby:3.1-slim-bookworm
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# build-essential + the -dev headers are needed to compile native gems
+# (openssl, nokogiri, sassc, ...) that Travis's fuller base image already had.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      build-essential ca-certificates curl git pkg-config \
+      libssl-dev zlib1g-dev libyaml-dev libxml2-dev libxslt1-dev \
+      python3 python3-pip \
+  && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+  && apt-get install -y --no-install-recommends nodejs \
+  && pip3 install --no-cache-dir --break-system-packages jupyter nbconvert \
+  && npm install -g firebase-tools@13 \
+  && gem install bundler:2.3.9 \
+  && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
