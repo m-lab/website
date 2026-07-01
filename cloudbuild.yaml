@@ -1,0 +1,70 @@
+# Build + deploy for the M-Lab website, replacing .travis.yml.
+#
+# One config, three per-project triggers (see repo docs / gcloud commands):
+#   * mlab-sandbox  trigger: push to  ^sandbox-.*$   -> GCS  website.mlab-sandbox...
+#   * mlab-staging  trigger: push to  ^main$         -> GCS  website.mlab-staging...
+#   * mlab-oti      trigger: any tag  .*             -> Firebase Hosting
+#
+# Each deploy step is guarded by $$PROJECT_ID so the same file is safe in every
+# project: a trigger only ever runs the deploy that matches its project. Deploys
+# authenticate as the project's Cloud Build service account -- no service
+# account key env vars (the old SERVICE_ACCOUNT_* secrets are no longer needed).
+timeout: 1800s
+
+options:
+  machineType: 'N1_HIGHCPU_8'
+  env:
+  # Expose the substituted project id to steps as a real env var. Referenced in
+  # scripts as $$PROJECT_ID so the shell (not Cloud Build) expands it.
+  - PROJECT_ID=$PROJECT_ID
+
+steps:
+# 1. Build the toolchain image (Ruby + Node + Jupyter + Firebase CLI).
+- id: build-image
+  name: gcr.io/cloud-builders/docker
+  args: ['build', '-t', 'website-builder', '-f', 'Dockerfile.build', '.']
+
+# 2. Build the Jekyll site into _site/. Reuses the exact build logic that Travis
+#    ran (r.js optimize -> rewrite basejs -> jekyll build), living in
+#    _tests/travis-checks so build and deploy stay in one place.
+- id: build-site
+  name: website-builder
+  entrypoint: bash
+  args:
+  - -c
+  - |
+    set -euxo pipefail
+    bundle install
+    ./_tests/travis-checks --quick
+
+# 3. sandbox + staging: publish _site/ to the per-project GCS bucket.
+- id: deploy-gcs
+  name: gcr.io/cloud-builders/gsutil
+  entrypoint: bash
+  args:
+  - -c
+  - |
+    set -euo pipefail
+    case "$$PROJECT_ID" in
+      mlab-sandbox|mlab-staging)
+        gsutil -h 'Cache-Control:no-store' -m cp -r _site/* \
+          "gs://website.$$PROJECT_ID.measurementlab.net/"
+        ;;
+      *)
+        echo "Not a GCS-deploy project ($$PROJECT_ID); skipping."
+        ;;
+    esac
+
+# 4. production: deploy _site/ to Firebase Hosting (mlab-oti only).
+- id: deploy-firebase
+  name: website-builder
+  entrypoint: bash
+  args:
+  - -c
+  - |
+    set -euo pipefail
+    if [ "$$PROJECT_ID" = "mlab-oti" ]; then
+      firebase deploy --only hosting --project mlab-oti --non-interactive
+    else
+      echo "Not the production project ($$PROJECT_ID); skipping Firebase deploy."
+    fi
