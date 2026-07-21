@@ -30,10 +30,10 @@ contribute to our initial design.<!--more-->
 ## Background
 
 Measurement Lab (M-Lab) runs the world's largest open collection of
-internet performance data and provides real-world telemetry that helps
+Internet performance data and provides real-world telemetry that helps
 illuminate how networks actually perform. [Giga][giga] is a joint
 initiative by [UNICEF][unicef] and the [ITU][itu] aiming to connect every
-school to the internet and every young person worldwide to information,
+school to the Internet and every young person worldwide to information,
 opportunity, and choice.
 
 [unicef]: https://www.unicef.org/
@@ -79,13 +79,13 @@ student in a school facility).
 
 2. However, [ndt7][ndt7] exercises the network under a bulk transfer
 regime (e.g. how fast can I download software updates or how fast
-can I start streaming a video?) and additional internet usage regimes
+can I start streaming a video?) and additional Internet usage regimes
 exist, including the latency-bound (e.g. resolving domain names using
 the DNS and browsing the web) and real-time (e.g. audio or video
-calls using the internet) regimes.
+calls using the Internet) regimes.
 
 3. Therefore, while [ndt7][ndt7] helps to characterize the envelope,
-additional network measurements could pinpoint how the internet
+additional network measurements could pinpoint how the Internet
 connection behaves under different stress regimes.
 
 To this end, the design document introduces additional network
