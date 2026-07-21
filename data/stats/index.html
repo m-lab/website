@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IQB Available Data</title>
+<title>Stats Available Data</title>
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -84,10 +84,11 @@
 </head>
 <body>
 
-<h1>IQB Available Data</h1>
+<h1>Stats Available Data</h1>
 <p class="subtitle">
-  Cached M-Lab query results available for download.
-  See <a href="https://github.com/m-lab/iqb">m-lab/iqb</a> for details.
+  These data are cached M-Lab summary query results available for download.
+  These data are used to calculate the <a href="https://github.com/m-lab/iqb">Internet Quality Barometer</a> (IQB),
+  but are generally useful as aggregate statistics of M-Lab's global measurements.
 </p>
 
 <p id="loading">Loading manifest&hellip;</p>
@@ -201,7 +202,7 @@
 
   function render(manifest) {
     var tbody = document.querySelector("#data-table tbody");
-    var keys = Object.keys(manifest.files).sort();
+    var keys = Object.keys(manifest.files).sort().reverse();
 
     var periods = new Set();
     var directions = new Set();
