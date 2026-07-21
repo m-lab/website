@@ -15,12 +15,11 @@ categories:
 <img src="{{ site.baseurl }}/images/blog/2026-02-26-giga-mlab-cop/giga_x_m-lab.jpg" alt="Giga M-Lab"/> 
 
 We are excited to announce [the first public draft of a design document][dd]
-describing [quality-of-experience][qoe] measurements for schools. This design
+describing Quality of Experience (QoE) measurements for schools. This design
 document has been co-authored by M-Lab and [Giga][giga] staff members as
 part of our collaboration to strengthen how connectivity is measured and
 understood for public facilities, and especially schools. We encourage
-all members of the [related Community of Practice to advance School
-Connectivity Measurement][cop-launch] to review, provide feedback, and
+all members of the [Connectivity Community of Practice (CoP)][cop-launch] to review, provide feedback, and
 contribute to our initial design.<!--more-->
 
 [cop-launch]: https://www.measurementlab.net/blog/giga-mlab-cop/
@@ -40,9 +39,7 @@ opportunity, and choice.
 [unicef]: https://www.unicef.org/
 [itu]: https://www.itu.int/
 
-On 2026-02-26, M-Lab and Giga [announced the launch of a Community of
-Practice (CoP)][cop-launch], which held its [inaugural session on
-March 11, 2026][cop-launch-event], bringing together researchers, network
+The [Connectivity Community of Practice (CoP)][cop-launch], launched by M-Lab and Giga, brings together researchers, network
 engineers, implementers, and policymakers, to advance network measurement
 approaches for public facilities with specific focus on schools. The CoP
 goals include supporting the design of network measurements that are
@@ -56,23 +53,22 @@ computer program, which schools can install to periodically run network
 measurements including M-Lab's flagship network performance test,
 [ndt7][ndt7].
 
-As part of their ongoing collaboration and with the [CoP][cop-launch]
-context in mind specifically, in recent months, the [Giga][giga] and
-M-Lab staff have been collaborating on extending and improving upon the
+Part of the CoP's [research agenda][cop-research-agenda] is to extend and improve upon the
 measurements currently performed by [Giga Meter][giga-meter].
 
 This effort produced [a draft design document][dd] that today we are
-opening up and submitting to the [Community of Practice][cop-launch]
+opening up and sharing with our community 
 for additional comments, feedback, and suggestions.
 
 [giga-meter]: https://meter.giga.global/
 [ndt7]: https://www.measurementlab.net/tests/ndt/ndt7/
+[cop-research-agenda]: https://github.com/unicef/giga-mlab-school-connectivity-cop/blob/main/research_agenda.md
 
 ## Design Document Overview
 
 The [draft design document][dd]'s main objective is to perform additional
-network measurements for surfacing network metrics related to the [quality
-of experience][qoe]. The basic idea is the following:
+network measurements for surfacing network metrics related to the QoE. 
+The basic idea is the following:
 
 1. [ndt7][ndt7] collects network metrics including [tcp-info][tcp-info]
 providing a baseline of the expected network performance for a single
@@ -116,21 +112,21 @@ be the control plane for scheduling the measurements.
 
 ## Prototype
 
-An initial prototype implementing part of the [design document][dd] is
+An initial prototype implementing part of the design document is
 available at [bassosimone/sonda][bassosimone/sonda].
 
 [bassosimone/sonda]: https://github.com/bassosimone/sonda
 
 ## Asks for the CoP
 
-In light of the above context, we are now asking the [CoP][cop-launch] to
-review the [design document][dd] providing feedback and comments. In doing
-this exercise, one should keep in mind that the [design document][dd] is
-focused only on the measurement capabilities and that [Giga Meter][giga-meter]
+In light of the above context, we are now asking the CoP to
+review the design document providing feedback and comments. In doing
+this exercise, one should keep in mind that the design document is
+focused only on the measurement capabilities and that Giga Meter
 will provide the control layer, as mentioned above.
 
 Beyond doing a review of the document text itself, we are specifically
-asking the [CoP][cop-launch] the following questions:
+asking the CoP the following questions:
 
 1. Do you find the set of measurements adequate?
 
@@ -145,9 +141,8 @@ set of measurements?
 5. Is there anything else that our questions above do not cover
 and do you think it is important that we take into account?
 
-You can share your feedback directly as comments on [the design
-document's pull request][pr9], by opening an issue on the [CoP GitHub
-repository][cop-repo], or by emailing
+You can share your feedback directly by opening an issue on the [CoP GitHub
+repository][cop-repo] or by emailing
 [connectivity-cop@measurementlab.net](mailto:connectivity-cop@measurementlab.net).
 
 [pr9]: https://github.com/unicef/giga-mlab-school-connectivity-cop/pull/9
@@ -155,18 +150,3 @@ repository][cop-repo], or by emailing
 
 Thank you for your time!
 
-## Conclusion
-
-This blog post introduced a [draft design document][dd] for expanding the
-set of measurements currently collected by [Giga Meter][giga-meter] and for
-which a prototype exists at [bassosimone/sonda][bassosimone/sonda].
-
-This [design document][dd] has been drafted by M-Lab and [Giga][giga]
-as part of our collaboration to measure the connectivity of school
-facilities, and which recently led to the creation of a [Community of
-Practice (CoP)][cop-launch] to support our joint efforts.
-
-In addition to announcing the existence of the [design document][dd],
-in this blog post we also ask specific targeted questions to the
-[CoP][cop-launch] community, whose feedback we will incorporate into
-the next iteration of the [design document][dd].
