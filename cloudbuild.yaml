@@ -34,6 +34,17 @@ steps:
   - -c
   - |
     set -euxo pipefail
+    # Cloud Build does not fetch git submodules, but the site embeds static
+    # assets from the `ndt` and `mlab_observatory` submodules (Travis fetched
+    # submodules by default). Populate them before the Jekyll build, else the
+    # /ndt test widget and /observatory pages ship with broken (404) scripts.
+    git config --global --add safe.directory '*' || true
+    git submodule update --init 2>/dev/null || true
+    # Fallback for a source tree without a usable .git (e.g. `gcloud builds
+    # submit`): these are frozen legacy repos, so the default branch matches the
+    # pinned content. Only clones a submodule that isn't already populated.
+    [ -f ndt/HTML5-frontend/script.js ] || { rm -rf ndt; git clone --depth 1 https://github.com/m-lab/ndt ndt; }
+    [ -f mlab_observatory/static/js/observatory/js/dataLoader.js ] || { rm -rf mlab_observatory; git clone --depth 1 https://github.com/m-lab/mlab-observatory.git mlab_observatory; }
     bundle install
     ./_tests/travis-checks --quick
 
