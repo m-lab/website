@@ -1,0 +1,5 @@
+.git
+_site
+node_modules
+vendor
+travis
