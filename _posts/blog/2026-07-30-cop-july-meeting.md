@@ -11,9 +11,7 @@ categories:
   - education
 ---
 
-On July 23, 2026, M-Lab and Giga hosted the monthly Connectivity Community of Practice (CoP) call. Hunter Thompson, Director of Telecommunications and Connectivity for the Vermont Department of Public Service, walked the group through Vermont's Mobile Wireless Drive Test Program, and the community shared updates on the IQB-Edu framework, M-Lab's historical stats dataset, a new QoE measurements design document, and UNHCR's cellular data work in displacement contexts.
-
-<!-- more --> 
+On July 23, 2026, M-Lab and Giga hosted the monthly Connectivity Community of Practice (CoP) call. Hunter Thompson, Director of Telecommunications and Connectivity for the Vermont Department of Public Service, walked the group through Vermont's Mobile Wireless Drive Test Program, and the community shared updates on the IQB-Edu framework, M-Lab's historical stats dataset, a new QoE measurements design document, and UNHCR's cellular data work in displacement contexts.<!-- more --> 
 
 Fifteen people participated in the call, from a wide swath of internet measurement perspectives, including: international development, independent consultants, and researchers.
 
