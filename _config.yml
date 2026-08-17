@@ -23,9 +23,16 @@ sass:
 include: ['_pages']
 exclude:
   - .gitignore
+  - AGENTS.md
+  - CONTRIBUTING.md
+  - Dockerfile
+  - Dockerfile.build
+  - LICENSE
   - README.md
   - Gemfile
   - Gemfile.lock
+  - cloudbuild.yaml
+  - firebase.json
   - _scripts
   - _site
   - vendor
