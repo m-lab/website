@@ -56,8 +56,15 @@ steps:
     set -euo pipefail
     case "$$PROJECT_ID" in
       mlab-sandbox|mlab-staging)
-        gsutil -h 'Cache-Control:no-store' -m cp -r _site/* \
-          "gs://website.$$PROJECT_ID.measurementlab.net/"
+        # rsync -d mirrors _site/ exactly, deleting objects that are no longer
+        # in the built site (with cp -r, pages from long-deleted sandbox
+        # branches accumulated in the bucket forever). robots.txt exists only
+        # in these non-production buckets and is re-published after every
+        # sync so crawlers never index sandbox/staging.
+        gsutil -m -h 'Cache-Control:no-store' rsync -r -d _site \
+          "gs://website.$$PROJECT_ID.measurementlab.net"
+        gsutil -h 'Cache-Control:no-store' cp _deploy/robots-nocrawl.txt \
+          "gs://website.$$PROJECT_ID.measurementlab.net/robots.txt"
         ;;
       *)
         echo "Not a GCS-deploy project ($$PROJECT_ID); skipping."
