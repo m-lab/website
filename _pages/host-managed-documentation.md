@@ -34,6 +34,7 @@ In order to maintain the highest data quality we require all measurement servers
 to:
 
 - Have at least four 2 GHz CPUs with 4GB RAM (Intel class).  More is better, especially at a busy site.
+- Have at least 50 GB of disk space; 100 GB or more is recommended. Under normal operation, measurement data is uploaded to M-Lab's archive and removed from the local disk. If the upload is interrupted for any reason, however, data will accumulate until the connection is restored. Based on data from existing deployments, typical nodes generate around 4 GB/month of measurement data, while busier nodes can reach 20 GB/month or more.
 - They can be either physical or virtual machines but should not have significant shared workloads on the underlying hardware.
 - Must run some reasonably up-to-date version of Linux that supports the tcp_bbr kernel module and Docker.
   - At this time we are not aware of any restrictions on distro
@@ -92,6 +93,24 @@ Compose. This, of course, implies that the machine must have [Docker
 installed](https://docs.docker.com/engine/install/). The root of the repository contains
 [the Docker Compose configuration
 file](https://github.com/m-lab/autonode/blob/main/docker-compose.yml), which is named *docker-compose.yml*.
+
+### Configure Docker logging
+
+Docker's default logging driver (`json-file`) does not rotate logs, and the containers in this stack generate a significant volume of log output. To prevent logs from filling up your disk over time, configure Docker to use the `local` logging driver, which rotates logs automatically. Add the following to `/etc/docker/daemon.json` (create the file if it doesn't exist):
+
+```json
+{
+  "log-driver": "local"
+}
+```
+
+Then restart the Docker daemon:
+
+```shell
+sudo systemctl restart docker
+```
+
+### Configure environment variables
 
 The Docker Compose file should *not* be modified. Any required, user-configurable
 settings should be set in [the environment variable

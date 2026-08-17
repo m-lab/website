@@ -2,7 +2,7 @@
 
 This document outlines setup, standards, and practices for contributing to
 the M-Lab website. Content is written in markdown, and Jekyll applies templates
-and formatting when generating the final static site. We use Travis-ci to test
+and formatting when generating the final static site. We use Google Cloud Build to test
 site builds and deployments, previewing branches matching the pattern
 `sandbox-*` 
 
@@ -39,13 +39,13 @@ Docker builds. Remove locally installed dependencies if this happens to you.
 ## Publication Process
 
 The website publication process uses a combination of continuous integration
-using Travis CI, pull requests, code review and release tagging.
+using Google Cloud Build, pull requests, code review and release tagging.
 
-The file `.travis.tml` is configured to do the following actions:
+The file `cloudbuild.yaml` is run by per-project Cloud Build triggers to do the following actions:
 
 * When a branch matching the pattern `sandbox-*` is pushed:
 
-  * Travis CI builds the site and publishes it to the GCS bucket
+  * Cloud Build builds the site and publishes it to the GCS bucket
     `gs://website.mlab-sandbox.measurementlab.net` in the project
     `mlab-sandbox`
   * Content can then be previewed at
@@ -53,7 +53,7 @@ The file `.travis.tml` is configured to do the following actions:
 
 * When a pull request is approved and merged into the `main` branch:
 
-  * Travis CI builds the site and publishes to the GCS bucket
+  * Cloud Build builds the site and publishes to the GCS bucket
     `gs://website.mlab-staging.measurementlab.net` in the project
     `mlab-staging`
   * Content can then be previewed at
@@ -61,7 +61,7 @@ The file `.travis.tml` is configured to do the following actions:
 
 * When a repository owner tags a release in Github:
 
-  * Travis CI builds the site and publishes it to a Google Firebase project
+  * Cloud Build builds the site and publishes it to a Google Firebase project
   * The [production website][website-prod] is then updated with the content
     from this release
 
@@ -132,11 +132,11 @@ View the generated site by visiting: [http://localhost:4000/](http://localhost:4
 | notebooks | Contains Jupyter notebooks to be included on pages or posts. |
 | publications | Contains all the pdfs and docs that are included or linked in the site. |
 | static | Contains additional static content. |
-| travis | Submodule for [m-lab/travis](https://github.com/m-lab/travis) to support deployment automation in Travis CI. |
-| .firebaserc | Defines the Firebase project and hosting. Used by Travis CI to automate publishing of tagged releases. |
+| .firebaserc | Defines the Firebase project and hosting. Used by Cloud Build to publish tagged releases. |
 | .gitignore | Defines which files and file patterns should be excluded from Git commits. |
 | .gitmodules | Defines the Git submodules used in this repo. |
-| .travis.yml | Travis CI build and deployment configurations. |
+| cloudbuild.yaml | Google Cloud Build build and deployment configuration. |
+| Dockerfile.build | Builder image Cloud Build uses to build the site. |
 | CONTRIBUTING.md | Provides onboarding details for new contributors. |
 | Dockerfile | Defines the Docker container for building and previewing the site locally. |
 | LICENSE | Software license for the code in this repository. |

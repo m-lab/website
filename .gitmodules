@@ -4,6 +4,3 @@
 [submodule "ndt"]
 	path = ndt
 	url = https://github.com/m-lab/ndt
-[submodule "travis"]
-	path = travis
-	url = https://github.com/m-lab/travis.git

@@ -7,7 +7,7 @@ breadcrumb: "about"
 
 # Memorandum of Understanding for M-Lab Site Hosts
 
-This is the standard agreement between Measurement Lab and organizations contributing to M-Lab by providing rackspace, IP, transit, and power to host M-Lab servers (Host Entity). M-Lab is a fiscally sponsored project of Code for Science & Society. This MOU is an agreement between Code for Science & Society and the Host Entity, relevant to Measurement Lab Site Hosting responsibilities. This agreement is non-negotiable, and is signed by the Host Entity as authorized by their host organization and  an authorized member of the Measurement Lab team, and an officer of Code for Science and Society, Inc.
+This is the standard agreement between Measurement Lab and organizations contributing to M-Lab by providing rackspace, IP, transit, and power to host M-Lab servers (Host Entity). M-Lab is a fiscally sponsored project of Superbloom. This MOU is an agreement between Superbloom and the Host Entity, relevant to Measurement Lab Site Hosting responsibilities. This agreement is non-negotiable, and is signed by the Host Entity as authorized by their host organization and an authorized member of the Measurement Lab team, and an officer of Superbloom.
 
 ## Memorandum of Understanding - Measurement Lab, M-Lab Host Entity
 
