@@ -74,6 +74,14 @@ There is typically at least a 24-hour delay between data collection and data pub
   * [M-Lab _utilization_ Raw Data](https://console.developers.google.com/storage/browser/archive-measurement-lab/utilization/){:target="_blank"}
   * [M-Lab _utilization_ Data in BigQuery]({{ site.baseurl }}/tests/utilization)
 
+## Analysis Data (Derived Datasets)
+
+* [HERMES]({{site.baseurl}}/tests/hermes/)
+  * HERMES identifies when groups of Internet users experience a statistically significant drop in performance, and reports the parts of the network most closely associated with that drop.
+  * HERMES analyzes M-Lab NDT, traceroute, and reverse traceroute data; it does not collect measurements of its own.
+  * More information is available in the [HERMES Methodology]({{ site.baseurl }}/tests/hermes/methodology/) and the [SIGCOMM 2026 paper](https://doi.org/10.1145/3789240.3829129){:target="_blank"}.
+  * [HERMES Data in BigQuery]({{ site.baseurl }}/tests/hermes/schema/) - [HERMES Access and QuickStart]({{ site.baseurl }}/tests/hermes/quickstart/)
+
 ## Historical Data Sets (Inactive/Retired Tests)
 
 * [BISmark]({{site.baseurl}}/tests/bismark)

@@ -33,6 +33,11 @@ M-Lab publishes BigQuery tables and views for tests that have implemented a pars
 * [TCP INFO]({{ site.base_url }}/tests/tcp-info/)
 * [Traceroute]({{ site.base_url }}/data/docs/bq/schema/traceroute)
 
+### Analysis Data (Derived Datasets)
+
+* [HERMES]({{ site.base_url }}/tests/hermes/)
+  * [events_enriched and events_with_as_and_geoloc schema]({{ site.baseurl }}/tests/hermes/schema/)
+
 ### Retired Core Services and Platform Data for Historical Analysis
 
 * [Sidestream]({{ site.base_url }}/data/docs/bq/schema/sidestream)
