@@ -94,7 +94,7 @@ Filter on these before any claim about where a problem sits. A path that never r
 
 ## Limitations
 
-These are properties of traceroute and of IP annotation generally, not defects in HERMES. They bound what any path-based localization can conclude.
+These are properties of traceroute and of IP annotation generally. They bound what any path-based localization can conclude.
 
 **Unresponsive hops.** Routers may be configured not to reply, or to rate-limit replies. A gap in a path is not an absence of infrastructure; it is an absence of information. `responsive_hop_count` and `total_hop_count` tell you how much of the path you are actually seeing.
 
