@@ -22,6 +22,8 @@ To address this limitation, the Reverse Traceroute group —led by Ethan Katz-Ba
 
 Reverse traceroute measurements have now been integrated into M-Lab. As of today, roughly **25% of everyday NDT speed tests** are paired with a reverse traceroute, enabling a more complete view of the end-to-end network path. 
 
+New to traceroutes? [Introduction to traceroutes]({{ site.baseurl }}/learn/traceroute/) covers what a traceroute measures and why paths are asymmetric. Reverse traceroute data is used by [HERMES]({{ site.baseurl }}/tests/hermes/) to localize Internet performance degradations.
+
 This documentation is intended for network researchers and engineers familiar with traceroute and IP routing. It walks through how to access and interpret reverse traceroute data from M-Lab, and includes example queries and code snippets to help you get started. Reverse traceroutes can be powerful but also a bit tricky; this documentation aims to make them approachable and useful.
 
 ## **Crash Course on Reverse Traceroute**

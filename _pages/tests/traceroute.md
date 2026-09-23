@@ -28,6 +28,10 @@ In short, for every TCP connection from a client to an M-Lab server, `traceroute
 
 
 
+New to traceroutes? [Introduction to traceroutes]({{ site.baseurl }}/learn/traceroute/) explains what a traceroute measures, how to read one, and the ways it can mislead.
+
+M-Lab traceroute data is used by [HERMES]({{ site.baseurl }}/tests/hermes/) to localize Internet performance degradations.
+
 ## Source Code
 
 * [`traceroute-caller` source code](https://github.com/m-lab/traceroute-caller/)
