@@ -30,7 +30,7 @@ Advanced users may also be interested in obtaining raw M-Lab test data for detai
 
 * [DISCO dataset]({{ site.baseurl }}/blog/disco-dataset/)
 
-## Derived Datasets
+### Derived Datasets
 
 Datasets M-Lab computes from its own measurements, rather than collecting directly.
 
