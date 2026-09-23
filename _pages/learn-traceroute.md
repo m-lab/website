@@ -88,5 +88,4 @@ M-Lab collects traceroutes continuously and publishes them openly.
 * [**Traceroute**]({{ site.baseurl }}/tests/traceroute/) — for every TCP connection to an M-Lab server, M-Lab runs a traceroute from the server back toward the client using `scamper`, and publishes it as the `scamper1` datatype along with per-hop annotations.
 * [**Reverse traceroute**]({{ site.baseurl }}/tests/reverse_traceroute/) — measures the path back from a client toward M-Lab, filling in the direction a server-side traceroute cannot see.
 * [**IPRS**]({{ site.baseurl }}/tests/iprs/) — a continuous survey of IP-level routing across the Internet.
-
-[**HERMES**]({{ site.baseurl }}/tests/hermes/) is one system built on these measurements. It combines M-Lab speed test data with both directions of the network path to detect performance degradations and identify the network segments associated with them — an example of the "combine many traceroutes rather than trusting one" posture in practice.
+* [**HERMES**]({{ site.baseurl }}/tests/hermes/) is one system built on the M-Lab traceroute measurements. It combines M-Lab speed test data with both directions of the network path (traceroute and reverse traceroute) to detect performance degradations and identify the network segments associated with them — an example of the "combine many traceroutes rather than trusting one" posture in practice.
