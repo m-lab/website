@@ -15,6 +15,17 @@
     padding-left: 0px;
   }
 
+  // Tile lists lay out with Bootstrap's floated .col-* classes. Floats snag on
+  // the tallest tile in the previous row, so a group whose descriptions differ
+  // in length leaves whitespace holes in the grid (most visible in "Retired
+  // Tests", which has the widest spread). Flex-wrap breaks rows on count rather
+  // than on cleared height. Scoped to ul.l-grid so .partner-logos is untouched.
+  ul.l-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
   .grid-group {
     padding-top: 20px;
   }
