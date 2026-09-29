@@ -19,15 +19,11 @@ Ten participants joined from universities, research networks, and nonprofits acr
 
 ## Community updates
 
-**Giga Meter v3 MVP.** Vipul Bhavsar (Giga) shared an MVP of Giga Meter v3, the next generation of the school connectivity measurement platform ([slides](https://giga-meter.ddns.net/docs/Giga-Meter-v3-Architecture.pdf)). The discussion focused on openness and flexibility:
-
-* Pavlos Sermpezis (M-Lab) asked which parts of the code will be open source, so the community knows how to contribute or re-use the tool for other use cases, such as monitoring other infrastructures.
-* Prince Bhardwaj (University of Surrey) asked how flexible the measurement app is, for example whether a custom plugin could support Direct-to-cell (satellite) measurements.
+**Giga Meter v3 MVP.** Vipul Bhavsar (Giga) shared an MVP of Giga Meter v3, the next generation of the school connectivity measurement platform ([slides](https://giga-meter.ddns.net/docs/Giga-Meter-v3-Architecture.pdf)). 
 
 **Giga Traceroutes.** Loqman Salamatian (Assistant Professor, University of Maryland / M-Lab) walked the group through the [Giga Traceroutes dashboard](https://giga-traceroutes.measurementlab.net/), which visualizes the network paths between M-Lab servers and schools (slide deck [PDF](https://drive.google.com/file/d/1g9JNPZ-cAF0-YDq788auVEcjISDwFSVw/view?usp=sharing)).
 
-Tauhid Nabi (Virginia Tech) asked whether school measurements carry metadata that distinguishes mobile from fixed access. Salamatian said there's no direct indicator; the measurements include some extra metadata beyond a typical M-Lab test, such as device name, which can hint at the access type but not much more. Nabi also asked about the traceroutes' direction and how to get the raw data. Two answers:
-
+* The traceroutes include some extra metadata beyond a typical M-Lab test
 * All traceroutes currently run from the M-Lab server to the client. Giga Meter v3 will add client-side traceroutes, giving both directions, but that isn't in place yet.
 * Raw data is downloadable from the dashboard (select a country, then the "Download raw data" button). M-Lab also plans to publish tutorials on accessing the data in BigQuery soon.
 
