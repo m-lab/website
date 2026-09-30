@@ -444,6 +444,20 @@ The view also adds fields the operational table does not have at all: `direction
 
 ## Changelog
 
+### 2026-09-30 — statistical tests corrected, and every group tested
+
+From analysis date 2026-09-30, detection uses corrected implementations of two of its three statistical tests:
+
+* **Welch's *t*** computed its p-value with an error that overestimated it by up to about 0.2 when the *t* statistic was roughly between 1 and 1.8.
+* **Mann-Whitney U** applied its continuity correction in the wrong direction, which underestimated the p-value for small groups.
+* **Both** skipped the test and reported a `p_value` of `1e-10` whenever either sample exceeded 20,000 measurements. Every group is now actually tested.
+
+The size of the change, measured on 2026-08-04 by running detection both ways on identical inputs: about 5% fewer groups flagged for RTT (3,713 to 3,526) and about 3% fewer for download throughput (2,764 to 2,684). Almost all of the RTT change comes from small groups. Upload and loss verdicts are essentially unchanged.
+
+Earlier analysis dates keep the verdicts and test results produced by the previous implementation. Treat 2026-09-30 as a methodological boundary, in the same way as the grouping change below: event counts shift there for methodological reasons, not because network performance changed.
+
+The same date is the first on which `client_to_server_path.loop_detected` and `client_to_server_path.unresponsive_within_as` are populated. They are NULL before it.
+
 ### 2026-08-01 — client grouping and geolocation source changed
 
 From 2026-08-01, client grouping moved from **city** to **metro** granularity, and the client geolocation source moved from **MaxMind** to **IPinfo**. Both changed on the same date.
