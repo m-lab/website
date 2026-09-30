@@ -9,9 +9,9 @@ breadcrumb: tests
 
 # Traceroute Enrichment
 
-> Traceroute enrichment is **one stage** of the HERMES pipeline. It produces the annotated paths that HERMES uses as evidence when localizing a performance degradation; it is not the HERMES data product. For the product, see the [HERMES overview]({{ site.baseurl }}/tests/hermes/); for the stage's place in the pipeline, see the [methodology]({{ site.baseurl }}/tests/hermes/methodology/).
+A raw traceroute hop is an IP address and some round-trip times. On its own that cannot answer "which network was this, and where was it?" — the questions localization depends on. This page describes how the traceroute enrichment pipeline turns each hop into an annotated hop, which sources it uses, how it records where each annotation came from, and how it flags annotations that are probably wrong.
 
-A raw traceroute hop is an IP address and some round-trip times. On its own that cannot answer "which network was this, and where was it?" — the questions localization depends on. This page describes how HERMES turns each hop into an annotated hop, which sources it uses, how it records where each annotation came from, and how it flags annotations that are probably wrong.
+The traceroute enrichment pipeline is part of HERMES. It produces the annotated paths that HERMES uses as evidence when localizing a performance degradation. For the HERMES system, see the [HERMES overview]({{ site.baseurl }}/tests/hermes/); for the stage's place in the pipeline, see the [methodology]({{ site.baseurl }}/tests/hermes/methodology/).
 
 If traceroutes are unfamiliar, read [Introduction to traceroutes]({{ site.baseurl }}/learn/traceroute/) first.
 
@@ -19,7 +19,7 @@ If traceroutes are unfamiliar, read [Introduction to traceroutes]({{ site.baseur
 
 HERMES enriches two path measurements per NDT test, where both are available.
 
-**The path from the M-Lab server toward the client** comes from M-Lab's own [traceroute]({{ site.baseurl }}/tests/traceroute/) core service. For every TCP connection to an M-Lab server, `traceroute-caller` runs `scamper` back toward the client and publishes the result as the `scamper1` datatype. HERMES consumes this, together with M-Lab's `hopannotation` data.
+**The path from the M-Lab server toward the client** comes from M-Lab's own [traceroute]({{ site.baseurl }}/tests/traceroute/) core service. For every TCP connection to an M-Lab server, `traceroute-caller` runs `scamper` back toward the client and publishes the result as the `scamper1` datatype. HERMES consumes this, together with M-Lab's `hopannotation` data. Where no `scamper1` trace exists for a measurement, as on bring-your-own-server (BYOS) deployments, HERMES uses the standard traceroute those servers publish in the `scamper2` format instead.
 
 **The path from the client back toward the server** comes from [reverse traceroute]({{ site.baseurl }}/tests/reverse_traceroute/). Reverse paths cannot be measured directly from the server, so they are inferred using vantage points and IP options. This is an inference, and HERMES keeps the reverse-traceroute system's own metadata about it in the row: which system produced the path, why the measurement stopped, why it failed where it did, whether a vantage point in the client's AS was attempted, and per-hop, whether the hop relies on an assumption of interdomain path symmetry.
 
@@ -52,9 +52,11 @@ Two distinct mappings place a hop in the network: one puts the address in an aut
 | IP → hostname | zDNS | `rdns_name` | `hermes.unified_ip_to_rdns`, `…_ipv6` |
 | Hostname → location | HOIHO | `clli`, and contributes to placement | folded into the geolocation tables |
 
+> The lookup tables above live in the `mlab-collaboration.hermes` dataset, which is currently available on request: email [support@measurementlab.net](mailto:support@measurementlab.net). The annotated paths themselves are in `mlab-collaboration.hermes_union.events_enriched`, which members of the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/g/discuss){:target="_blank"} can query.
+
 Because the AS and IXP mappings are independent, a hop can carry one without the other: an address may resolve to an AS with no IXP match, or sit in an IXP peering LAN whose address the prefix mapping attributes to the IXP operator rather than to either peer. Read `asn` and `ixp` together rather than treating one as a fallback for the other.
 
-Client geolocation moved from MaxMind to IPinfo on 2026-08-01. Rows carry `client.geo_source` so you can tell which source placed a given client. See the [schema changelog]({{ site.baseurl }}/tests/hermes/schema/#changelog).
+Client geolocation moved from MaxMind to IPinfo on 2026-08-01; backfilled dates through 2025-07-31 also use IPinfo. Rows carry `client.geo_source` so you can tell which source placed a given client. See the [schema changelog]({{ site.baseurl }}/tests/hermes/schema/#changelog).
 
 ## Trustworthiness checks
 
@@ -67,8 +69,6 @@ Signals in fiber propagate at roughly **200,000 km/s** — about two thirds of t
 For each hop, HERMES records the assumed propagation speed (`propagation_speed_km_s`) and the resulting lower bound on RTT (`fiber_lower_bound_rtt_ms`), then compares that bound against the RTT actually measured. `distance_rtt_check` reports the result.
 
 When a measured RTT is *lower* than physics allows for the geolocated distance, the physics is not wrong: the geolocation is. This is the single most useful signal for spotting a bad hop location.
-
-> In the operational table this bound is stored in a column named `speed_of_internet_fiber`. Despite the name it is a lower-bound RTT in milliseconds, not a speed. The published view exposes it truthfully as `fiber_lower_bound_rtt_ms` and records the assumed speed separately.
 
 ### Distance accumulation
 
@@ -90,7 +90,7 @@ Carried on the path records rather than per hop:
 * `is_virtual` — the path shows signs of being a virtual or tunnelled route rather than the physical topology.
 * `geolocation_coverage` — what fraction of hops could be geolocated at all.
 
-Filter on these before any claim about where a problem sits. A path that never reached the client cannot support a statement about the last mile.
+Filter on these carefully before drawing conclusions from any traceroute analysis. A path that never reached the client cannot support a statement about the last mile.
 
 ## Limitations
 
@@ -106,7 +106,7 @@ These are properties of traceroute and of IP annotation generally. They bound wh
 
 **Load balancing.** Consecutive probes may take different paths through a load-balanced network, so a single traceroute is one sample of a set of possible routes.
 
-**A hop's RTT is not a link's latency.** RTT to a hop is a round trip that includes the return path from that hop, which may differ entirely from the path back from the destination. Rising RTT at a hop does not localize a problem to that hop by itself — which is precisely why HERMES combines path evidence across many measurements rather than reading a single traceroute.
+**A hop's RTT is not a link's latency.** RTT to a hop is a round trip that includes the return path from that hop, which may differ entirely from the path back from the destination. Rising RTT at a hop does not localize a problem to that hop by itself.
 
 ## Source
 

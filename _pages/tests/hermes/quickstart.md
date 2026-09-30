@@ -5,7 +5,7 @@ title: "HERMES Access and QuickStart"
 breadcrumb: tests
 ---
 
-> **DRAFT — for review, not published.** The access section below records an unresolved decision and must not ship until it is settled. Byte figures marked _[measure]_ are placeholders.
+> **DRAFT — for review, not published.**
 
 # HERMES Access and QuickStart
 
@@ -13,21 +13,19 @@ This page takes you from no access to one successful, inexpensive query against 
 
 ## Getting access
 
-> **Unresolved — do not publish this page until this section is written.**
-> HERMES currently lives in the `mlab-collaboration` project, where access is granted per user. That is not the path the rest of M-Lab's data uses: for `measurement-lab` datasets, subscribing to the M-Lab Discuss group grants query access and M-Lab pays for the queries. Two options:
->
-> 1. **Publish into `measurement-lab`.** The existing [BigQuery QuickStart]({{ site.baseurl }}/data/docs/bq/quickstart/) then applies unchanged, and this section becomes a link to it. This is the option consistent with calling HERMES a first-class M-Lab data product.
-> 2. **Document access by request.** Keep the data where it is and state plainly that access is granted on request, with the contact address and what to expect.
+HERMES is published in BigQuery in the `mlab-collaboration.hermes_union` dataset. Access works the same way as for the rest of M-Lab's data: subscribe to the [M-Lab Discuss group](https://groups.google.com/a/measurementlab.net/g/discuss){:target="_blank"} with a Google account, then query the tables from that account. The [BigQuery QuickStart]({{ site.baseurl }}/data/docs/bq/quickstart/) walks through the steps.
+
+The lookup tables HERMES uses for annotation (IP-to-AS, geolocation, reverse DNS), in the `mlab-collaboration.hermes` dataset, are available on request: email [support@measurementlab.net](mailto:support@measurementlab.net).
 
 ## Which table to query
 
-HERMES publishes two tables. Unless you need the raw statistical test outputs, use the stable interface:
+Query the stable interface:
 
 ```
-mlab-collaboration.hermes.events_enriched
+mlab-collaboration.hermes_union.events_enriched
 ```
 
-Its fields are organised into `client`, `server`, `performance`, `server_to_client_path`, `client_to_server_path`, and `quality` records, and its names are a contract. The underlying `mlab-collaboration.hermes_union.events_with_as_and_geoloc` table has 75 flat columns and is documented in the [schema]({{ site.baseurl }}/tests/hermes/schema/) for people who need it.
+Its fields are organised into `client`, `server`, `performance`, `server_to_client_path`, `client_to_server_path`, and `quality` records, and its names are a contract. It exposes every column of the underlying operational table, so it is the only table you need.
 
 ## Before you run anything: cost
 
@@ -35,7 +33,7 @@ This is the part of HERMES that differs most from the rest of M-Lab's data. The 
 
 Three habits, in order of importance:
 
-**1. Always filter on `partition_date`.** The table is partitioned by day. A query without a `partition_date` predicate scans every day HERMES has ever produced. A query with one scans only the days you asked for.
+**1. Always filter on `partition_date`.** The tables are partitioned by day, and every partitioned table in `hermes_union` requires a `partition_date` filter: BigQuery rejects a query without one rather than scanning every day HERMES has ever produced. With the filter, a query scans only the days you asked for.
 
 ```sql
 WHERE partition_date = "2025-07-04"
@@ -53,7 +51,7 @@ In the Cloud Console, the validator in the top right of the query editor shows t
 bq query --dry_run --use_legacy_sql=false 'SELECT ...'
 ```
 
-If the estimate surprises you, the usual cause is a missing `partition_date` filter.
+If the estimate surprises you, the usual cause is a wide `partition_date` range or a `SELECT` that reaches into the `hops` arrays.
 
 ## Your first query
 
@@ -66,19 +64,21 @@ SELECT
   client.metro,
   client.country_code,
   server.site,
+  ip_version,
   COUNT(*) AS measurements
-FROM `mlab-collaboration.hermes.events_enriched`
+FROM `mlab-collaboration.hermes_union.events_enriched`
 WHERE partition_date = "2025-07-04"
+  AND DATE(measurement_time) = partition_date
   AND client.country_code = "US"
-GROUP BY client.asn, client.as_name, client.metro, client.country_code, server.site
+GROUP BY client.asn, client.as_name, client.metro, client.country_code, server.site, ip_version
 HAVING measurements >= 25
 ORDER BY measurements DESC
 LIMIT 50
 ```
 
-Scans roughly _[measure]_ for one day.
+Scans roughly 10GB to 15GB for one day.
 
-Each row is one monitored group: an access network, in a metro area, testing against one M-Lab site. Groups are the unit HERMES analyzes — a performance change is only interesting when it shows up across a group rather than in one connection.
+In the result of this query, each row is one group: an access network, in a metro area, testing against one M-Lab site over one IP version. Groups are the unit HERMES analyzes — a performance change is only interesting when it shows up across a group rather than in one connection.
 
 ## Your second query: what degraded
 
@@ -90,16 +90,19 @@ SELECT
   client.as_name,
   client.metro,
   server.site,
+  ip_version,
   COUNT(*) AS measurements,
-  AVG(performance.ndt_rtt_ms) AS rtt_ms,
-  AVG(performance.baseline.ndt_rtt_ms) AS baseline_rtt_ms,
-  AVG(performance.anomaly.rtt_difference_ms) AS rtt_difference_ms,
-  AVG(performance.download_mbps) AS download_mbps,
-  AVG(performance.baseline.download_mbps) AS baseline_download_mbps
-FROM `mlab-collaboration.hermes.events_enriched`
+  APPROX_QUANTILES(performance.ndt_rtt_ms, 100)[SAFE_ORDINAL(50)] AS rtt_ms,
+  ANY_VALUE(performance.baseline.ndt_rtt_ms) AS baseline_rtt_ms,
+  ANY_VALUE(performance.anomaly.rtt_difference_ms) AS rtt_difference_ms,
+  LOGICAL_OR(performance.anomaly.rtt_significant) AS rtt_significant,
+  APPROX_QUANTILES(performance.download_mbps, 100)[SAFE_ORDINAL(50)] AS download_mbps,
+  ANY_VALUE(performance.baseline.download_mbps) AS baseline_download_mbps
+FROM `mlab-collaboration.hermes_union.events_enriched`
 WHERE partition_date = "2025-07-04"
+  AND DATE(measurement_time) = partition_date
   AND client.country_code = "US"
-GROUP BY client.asn, client.as_name, client.metro, server.site
+GROUP BY client.asn, client.as_name, client.metro, server.site, ip_version
 HAVING measurements >= 25
 ORDER BY rtt_difference_ms DESC
 LIMIT 25
@@ -111,10 +114,10 @@ From here, [Example queries and tutorials]({{ site.baseurl }}/tests/hermes/examp
 
 ## Coverage and update schedule
 
-* **Earliest data available:** _[confirm]_
-* **Latest data available:** _[confirm]_
-* **Update cadence:** the pipeline runs daily. _[confirm the lag between measurement and publication]_
-* **Continuity:** _[confirm whether coverage is unbroken across the full range]_
+* **Earliest data available:** 2025-02-21. A backfill is extending coverage further back, toward 2025-01-25.
+* **Latest data available:** normally the previous day, once the daily run has completed.
+* **Update cadence:** the pipeline runs daily at 15:00 UTC and processes the previous day, so a day's data is normally available by the evening (UTC) of the following day.
+* **Continuity:** coverage is daily with these gaps: 2025-02-24, 2025-02-26 to 2025-02-27, 2025-03-01, 2025-03-07 to 2025-03-14, and 2025-08-26 to 2025-08-31. The method changes at 2025-08-01 and 2026-08-01 also matter for any range crossing them; see the [schema changelog]({{ site.baseurl }}/tests/hermes/schema/#changelog).
 
 A gap in coverage and a period of stable performance look identical in a query result. If you are making a claim about a date range, check that HERMES actually has data for it.
 

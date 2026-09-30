@@ -38,12 +38,12 @@ Every one of these steps leaves its inputs and outputs in the published data, so
 
 ## The published data
 
-HERMES publishes one row per NDT measurement that belongs to a monitored group _[confirm]_, carrying everything HERMES computed around that measurement: the group's baseline, how far the measurement sits from it, both directions of the annotated network path, and the metadata that says how much weight the path evidence deserves.
+HERMES publishes one row per NDT measurement that has an accompanying traceroute and belongs to a group HERMES analyzed that day, whether or not the group was found to have degraded. A **group** is the set of measurements from one access network (ASN), in one metro area, against one M-Lab site, over one IP version; see [Grouping]({{ site.baseurl }}/tests/hermes/methodology/#1-grouping). Each row carries everything HERMES computed around that measurement: the group's baseline, how far the measurement sits from it, both directions of the annotated network path, and the metadata that says how much weight the path evidence deserves.
 
-Two tables expose it. Start with the first.
+The first table below is the one to use.
 
 ```
-mlab-collaboration.hermes.events_enriched
+mlab-collaboration.hermes_union.events_enriched
 ```
 
 The **stable published interface**. Each row is organised into six records — `client`, `server`, `performance`, `server_to_client_path`, `client_to_server_path`, and `quality` — with names that describe what the fields mean. It also derives things you would otherwise have to compute: AS, country, metro, and IXP paths; hop counts and geolocation coverage; the direct geodesic distance between endpoints and the resulting detour ratio. Column names here are a contract and will not change under you.
@@ -52,7 +52,7 @@ The **stable published interface**. Each row is organised into six records — `
 mlab-collaboration.hermes_union.events_with_as_and_geoloc
 ```
 
-The **underlying operational table**: 75 flat columns, written directly by the pipeline. Use it when you need the raw statistical test outputs, which the published interface does not currently expose _[confirm]_, or when you are working with the pipeline itself.
+The **underlying operational table**, written directly by the pipeline under its original column names. `events_enriched` exposes every one of its columns, so you should not need it; the [schema]({{ site.baseurl }}/tests/hermes/schema/#events_with_as_and_geoloc) maps its names to the view's for anyone translating older queries.
 
 What a row contains, in either form:
 
@@ -61,7 +61,7 @@ What a row contains, in either form:
 | **Measurement** | The NDT observation itself: round-trip time, download and upload throughput, loss rate, and the RTT measured by the accompanying traceroute. |
 | **Client and server** | Who and where: the client's ASN and AS name, city, metro, region and country; the M-Lab site the test ran against, its AS and location; and how the client was grouped and geolocated. |
 | **Baseline and deviation** | What this group normally does — median RTT, download, upload, and loss over the preceding window, the sample sizes those medians rest on — and how far this day sits from them. |
-| **Statistical output** | Whether the change is real and how large: Mann-Whitney U and Welch's *t* results for latency and throughput, Wasserstein distance results, and per-group anomaly ratios and counts. |
+| **Statistical output** | Whether the change is real and how large: Mann-Whitney U and Welch's *t* results for latency and throughput, Wasserstein distance results, and per-group verdicts and anomalous-sample fractions. |
 | **Network paths** | Both directions, hop by hop: address, reverse DNS name, RTTs, AS number and organization, IXP membership, geolocation, and the provenance of every annotation — plus AS, country, metro, and IXP path summaries and distances. |
 | **Path trustworthiness** | Whether the path evidence should be believed: whether the trace reached the client or its AS, whether hops are consistent with the speed of light in fiber, whether the path loops or goes unresponsive inside an AS, and the status of the reverse-traceroute system for that measurement. |
 

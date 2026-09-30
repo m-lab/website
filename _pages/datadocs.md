@@ -35,10 +35,6 @@ Advanced users may also be interested in obtaining raw M-Lab test data for detai
 Datasets M-Lab computes from its own measurements, rather than collecting directly.
 
 * [HERMES]({{ site.baseurl }}/tests/hermes/) - detects statistically significant Internet performance degradations in groups of NDT measurements and identifies the network segments associated with them.
-  * [Access and QuickStart]({{ site.baseurl }}/tests/hermes/quickstart/)
-  * [Table schema]({{ site.baseurl }}/tests/hermes/schema/)
-  * [Example queries and tutorials]({{ site.baseurl }}/tests/hermes/examples/)
-  * [Methodology]({{ site.baseurl }}/tests/hermes/methodology/)
 
 ### Analyses
 

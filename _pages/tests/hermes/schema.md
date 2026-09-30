@@ -9,35 +9,44 @@ breadcrumb: tests
 
 # HERMES Table Schema
 
-HERMES publishes two tables. Which one you want depends on whether you need the raw statistical test outputs.
+HERMES publishes one interface for analysis, `events_enriched`, a view that carries every column of the table underneath it under clear, stable names. The underlying operational table is documented at the end of this page only as a reference for translating older queries.
 
 | Table | Use it for |
 | --- | --- |
-| [`mlab-collaboration.hermes.events_enriched`](#events_enriched) | Almost everything. Nested, clearly named, stable, with path summaries precomputed. |
-| [`mlab-collaboration.hermes_union.events_with_as_and_geoloc`](#events_with_as_and_geoloc) | The raw statistical test outputs, and pipeline work. 75 flat columns, historical names. |
+| [`mlab-collaboration.hermes_union.events_enriched`](#events_enriched) | Everything. Nested, clearly named, stable, with path summaries precomputed. |
+| [`mlab-collaboration.hermes_union.events_with_as_and_geoloc`](#events_with_as_and_geoloc) | Translating queries written against the pipeline's original column names, several of which are misleading (see the [legacy name map](#legacy-name-map)). 79 flat columns, all exposed by the view. |
 
 ## What a row is
 
-A row is **one NDT measurement that belongs to a monitored group** _[confirm]_, carried together with everything HERMES computed around it.
+A row is **one NDT measurement that has an accompanying traceroute and belongs to a group HERMES analyzed on that date**, carried together with everything HERMES computed around it. A group is the set of measurements from one access network (ASN), in one metro area, against one M-Lab site, over one IP version (see [Grouping]({{ site.baseurl }}/tests/hermes/methodology/#1-grouping)). Rows are written for every analyzed group, not only for groups that degraded; whether a group degraded is recorded in the `performance.anomaly` fields.
 
 A row is **not** an event. A performance event is a property of a group — an access network, in a metro area, testing against one M-Lab site, on one day — and it is expressed across the many rows belonging to that group. To reason about events, aggregate by the group key:
 
 ```sql
-GROUP BY partition_date, client.asn, client.metro, server.site
+GROUP BY partition_date, client.asn, client.metro, server.site, ip_version
 ```
 
-Both tables are partitioned by `partition_date`. `partition_date` is the **analysis date**, not necessarily the date the underlying traceroute was measured: path measurements are drawn from a lookback window and attached to the day being analyzed.
+Both tables are partitioned by `partition_date`. The field `partition_date` is the **analysis date**, not necessarily the date the underlying traceroute was measured: path measurements are drawn from a lookback window and attached to the day being analyzed. The field that records when the measurement itself was taken is `measurement_time`.
+
+That lookback has a consequence for every count and per-measurement statistic. Each partition carries the measurements from the analysis date **and the seven days before it**, so one measurement typically appears in eight consecutive partitions, and only about one row in eight belongs to the analysis date itself. The group-level fields (`performance.baseline.*`, `performance.anomaly.*`) are computed from the right data and repeat on every row of the group. But `COUNT(*)`, or a median of `performance.ndt_rtt_ms`, over a whole partition mixes a week of measurements. To work with the analysis date's own measurements, add:
+
+```sql
+AND DATE(measurement_time) = partition_date
+```
+
+Do not use that filter to deduplicate across a range of dates without thinking it through: a measurement is attached to a date only if its group was analyzed that day, so the filter drops groups that were not analyzed on the day they were measured.
 
 ## Field summary
 
 Every field in both tables, in one place. Dotted names are nested record fields, addressed in SQL exactly as written here. The sections after this one explain what the records are for and how to read them.
 
-### `events_enriched`
+### Fields of the events_enriched table
 
 | Field Name | Type | Mode | Description |
 | ----- | ----- | ----- | ----- |
 | measurement_id | STRING | NULLABLE | Identifier of the NDT measurement this row describes. |
 | measurement_time | TIMESTAMP | NULLABLE | When the measurement was taken. |
+| traceroute_hour | TIMESTAMP | NULLABLE | When the accompanying traceroute started, truncated to the hour. |
 | partition_date | DATE | NULLABLE | HERMES analysis date (**required as a filter in all queries**). |
 | ip_version | STRING | NULLABLE | IP version of the measurement. A string, not a number. |
 | client | RECORD | NULLABLE | The user side of the measurement, and how it was grouped. |
@@ -76,19 +85,44 @@ Every field in both tables, in one place. Dotted names are nested record fields,
 | performance.baseline.download_mbps | FLOAT64 | NULLABLE | Group's median download throughput over the baseline window. |
 | performance.baseline.upload_mbps | FLOAT64 | NULLABLE | Group's median upload throughput over the baseline window. |
 | performance.baseline.loss_rate | FLOAT64 | NULLABLE | Group's median loss rate over the baseline window. |
-| performance.baseline.measurement_count | INT64 | NULLABLE | Measurements the baseline rests on. Read every baseline next to this. |
-| performance.baseline.unique_client_ip_count | INT64 | NULLABLE | Distinct client IPs the baseline rests on. |
+| performance.baseline.measurement_count | FLOAT64 | NULLABLE | Measurements the baseline rests on. Read every baseline next to this. |
+| performance.baseline.unique_client_ip_count | FLOAT64 | NULLABLE | Distinct client IPs the baseline rests on. |
 | performance.anomaly | RECORD | NULLABLE | How far this day sits from the baseline. |
-| performance.anomaly.rtt_ratio | FLOAT64 | NULLABLE | Fraction of the group's measurements flagged anomalous on RTT. |
-| performance.anomaly.rtt_count | INT64 | NULLABLE | Count of those measurements. |
-| performance.anomaly.download_ratio | FLOAT64 | NULLABLE | Fraction of the group's measurements flagged anomalous on download throughput. |
-| performance.anomaly.download_count | INT64 | NULLABLE | Count of those measurements. |
-| performance.anomaly.upload_ratio | FLOAT64 | NULLABLE | Fraction of the group's measurements flagged anomalous on upload throughput. |
-| performance.anomaly.upload_count | INT64 | NULLABLE | Count of those measurements. |
-| performance.anomaly.loss_ratio | FLOAT64 | NULLABLE | Fraction of the group's measurements flagged anomalous on loss. |
-| performance.anomaly.rtt_difference_ms | FLOAT64 | NULLABLE | Current median minus baseline median, RTT. |
-| performance.anomaly.download_difference_mbps | FLOAT64 | NULLABLE | Current median minus baseline median, download. |
-| performance.anomaly.upload_difference_mbps | FLOAT64 | NULLABLE | Current median minus baseline median, upload. |
+| performance.anomaly.rtt_anomalous_sample_fraction | FLOAT64 | NULLABLE | Fraction of the group's measurements on the analysis date with RTT more than 5 ms above the baseline median. NULL when the group was too small to test. |
+| performance.anomaly.rtt_significant | BOOL | NULLABLE | HERMES's RTT verdict for the group: Welch's *t* or Mann-Whitney U p < 0.05, **and** the day's median RTT at least 5 ms above the baseline median. |
+| performance.anomaly.download_anomalous_sample_fraction | FLOAT64 | NULLABLE | Fraction of the group's measurements on the analysis date with download throughput below the baseline median. |
+| performance.anomaly.download_significant | BOOL | NULLABLE | HERMES's download verdict for the group: Welch's *t*, Mann-Whitney U, **and** Wasserstein p < 0.05, **and** the day's median at least 20% below the baseline median. |
+| performance.anomaly.upload_anomalous_sample_fraction | FLOAT64 | NULLABLE | Fraction of the group's measurements on the analysis date with upload throughput below the baseline median. |
+| performance.anomaly.upload_significant | BOOL | NULLABLE | HERMES's upload verdict, with the same gate as download, evaluated only when the group has at least 10 upload samples on the day and 25 in the baseline. |
+| performance.anomaly.loss_ratio | FLOAT64 | NULLABLE | Despite the name, HERMES's 0/1 loss verdict for the group, not a fraction. |
+| performance.anomaly.rtt_difference_ms | FLOAT64 | NULLABLE | The group's median RTT on the analysis date minus its baseline median. |
+| performance.anomaly.download_difference_mbps | FLOAT64 | NULLABLE | The group's median download throughput on the analysis date minus its baseline median. |
+| performance.anomaly.upload_difference_mbps | FLOAT64 | NULLABLE | The group's median upload throughput on the analysis date minus its baseline median. |
+| performance.tests | RECORD | NULLABLE | The statistical test results behind the `*_significant` verdicts. Group-level, and NULL for groups too small to test. |
+| performance.tests.mann_whitney | RECORD | NULLABLE | Mann-Whitney U tests of the analysis day against the baseline, with sub-records `rtt`, `download`, and `upload`. |
+| performance.tests.mann_whitney.rtt.u_statistic | FLOAT64 | NULLABLE | The U statistic, the smaller of the two samples' U values (two-sided). |
+| performance.tests.mann_whitney.rtt.z_score | FLOAT64 | NULLABLE | Normal approximation of U, with continuity correction. |
+| performance.tests.mann_whitney.rtt.p_value | FLOAT64 | NULLABLE | Two-sided p-value. |
+| performance.tests.mann_whitney.rtt.expected_u | FLOAT64 | NULLABLE | Expected U under the null hypothesis. |
+| performance.tests.mann_whitney.rtt.u_standard_deviation | FLOAT64 | NULLABLE | Standard deviation of U under the null hypothesis, corrected for ties. |
+| performance.tests.welch_t | RECORD | NULLABLE | Welch's *t* test of the analysis day against the baseline. Only `rtt` is available. |
+| performance.tests.welch_t.rtt.t_statistic | FLOAT64 | NULLABLE | The *t* statistic: positive when the analysis-day mean is higher. |
+| performance.tests.welch_t.rtt.degrees_of_freedom | FLOAT64 | NULLABLE | Welch–Satterthwaite degrees of freedom. |
+| performance.tests.welch_t.rtt.p_value | FLOAT64 | NULLABLE | Two-sided p-value. |
+| performance.tests.welch_t.rtt.analysis_day_mean | FLOAT64 | NULLABLE | Mean RTT on the analysis day. |
+| performance.tests.welch_t.rtt.baseline_mean | FLOAT64 | NULLABLE | Mean RTT over the baseline window. |
+| performance.tests.welch_t.rtt.analysis_day_standard_error | FLOAT64 | NULLABLE | Standard error of the analysis-day mean. |
+| performance.tests.welch_t.rtt.baseline_standard_error | FLOAT64 | NULLABLE | Standard error of the baseline mean. |
+| performance.tests.wasserstein | RECORD | NULLABLE | Wasserstein distance tests, with sub-records `download` and `upload`. |
+| performance.tests.wasserstein.download.distance | FLOAT64 | NULLABLE | Wasserstein distance between the analysis-day and baseline distributions. |
+| performance.tests.wasserstein.download.p_value | FLOAT64 | NULLABLE | p-value for that distance. |
+| performance.analysis_day | RECORD | NULLABLE | The group's distribution on the analysis day, over all of its NDT measurements that day, including those without a traceroute. Group-level. |
+| performance.analysis_day.rtt_p01_ms | FLOAT64 | NULLABLE | 1st percentile RTT. |
+| performance.analysis_day.rtt_p10_ms | FLOAT64 | NULLABLE | 10th percentile RTT. |
+| performance.analysis_day.rtt_median_ms | FLOAT64 | NULLABLE | Median RTT. |
+| performance.analysis_day.rtt_p90_ms | FLOAT64 | NULLABLE | 90th percentile RTT. |
+| performance.analysis_day.download_median_mbps | FLOAT64 | NULLABLE | Median download throughput. |
+| performance.analysis_day.download_p90_mbps | FLOAT64 | NULLABLE | 90th percentile download throughput. |
 | server_to_client_path | RECORD | NULLABLE | The path measured from the M-Lab server toward the client, by scamper. |
 | server_to_client_path.direction | STRING | NULLABLE | Always `server_to_client`. |
 | server_to_client_path.measurement_method | STRING | NULLABLE | Always `scamper`. |
@@ -137,6 +171,8 @@ Every field in both tables, in one place. Dotted names are nested record fields,
 | server_to_client_path.hops.facilities | RECORD | REPEATED | Colocation facilities near the hop. Currently always empty. |
 | client_to_server_path | RECORD | NULLABLE | The path measured from the client back toward the server, by reverse traceroute. |
 
+`performance.tests.mann_whitney.download` and `.upload` carry the same fields as `.rtt`; `performance.tests.wasserstein.upload` carries the same fields as `.download`.
+
 `client_to_server_path` carries every field listed above for `server_to_client_path`, with `direction` = `client_to_server` and `measurement_method` = `reverse_traceroute`, plus the fields below. Its hops do not carry `baseline_consistency_flag`.
 
 | Field Name | Type | Mode | Description |
@@ -160,12 +196,12 @@ Every field in both tables, in one place. Dotted names are nested record fields,
 | quality.is_virtual | BOOL | NULLABLE | Whether the path shows signs of being virtual or tunnelled. |
 | quality.reaches_client_asn | BOOL | NULLABLE | Whether the path measurement at least reached the client's AS. |
 | quality.total_windows | INT64 | NULLABLE | Analysis windows contributing to this group. |
-| quality.unique_ip_count_per_site | INT64 | NULLABLE | Distinct client IPs in this group and site. |
-| quality.measurement_count_per_site | INT64 | NULLABLE | Measurements in this group and site. |
+| quality.unique_ip_count_per_site | FLOAT64 | NULLABLE | Distinct client IPs in this group and site. |
+| quality.measurement_count_per_site | FLOAT64 | NULLABLE | Measurements in this group and site. |
 
-### `events_with_as_and_geoloc`
+### Fields of the events_with_as_and_geoloc table
 
-The 75 flat columns of the operational table. Fields the published view renames are noted.
+The 79 flat columns of the operational table, each with the view field that exposes it.
 
 | Field Name | Type | Mode | Description |
 | ----- | ----- | ----- | ----- |
@@ -173,7 +209,7 @@ The 75 flat columns of the operational table. Fields the published view renames 
 | src | STRING | NULLABLE | Client IP address. View: `client.ip`. |
 | dst | STRING | NULLABLE | M-Lab server IP address. View: `server.ip`. |
 | start | INT64 | NULLABLE | Measurement start, UNIX seconds. View: `measurement_time`, as a TIMESTAMP. |
-| window_start | TIMESTAMP | NULLABLE | Start of the analysis window this row was attached to. |
+| window_start | TIMESTAMP | NULLABLE | Traceroute start, truncated to the hour. View: `traceroute_hour`. |
 | partition_date | DATE | NULLABLE | HERMES analysis date (**required as a filter in all queries**). |
 | ip_version | STRING | NULLABLE | IP version of the measurement. |
 | ndt_rtt | FLOAT64 | NULLABLE | Round-trip time measured by NDT, in milliseconds. |
@@ -208,25 +244,25 @@ The 75 flat columns of the operational table. Fields the published view renames 
 | unique_ip_count_per_site | INT64 | NULLABLE | Distinct client IPs in this group and site. |
 | measurement_count_per_site | INT64 | NULLABLE | Measurements in this group and site. |
 | total_windows | INT64 | NULLABLE | Analysis windows contributing to this group. |
-| city_median_rtt | FLOAT64 | NULLABLE | Median RTT across the client's city, for context. |
-| city_oneth_percentile_rtt | FLOAT64 | NULLABLE | 1st percentile RTT across the client's city. |
-| city_tenth_percentile_rtt | FLOAT64 | NULLABLE | 10th percentile RTT across the client's city. |
-| city_ninetyth_percentile_rtt | FLOAT64 | NULLABLE | 90th percentile RTT across the client's city. |
-| city_median_throughput | FLOAT64 | NULLABLE | Median download throughput across the client's city. |
-| city_ninetyth_percentile_throughput | FLOAT64 | NULLABLE | 90th percentile download throughput across the client's city. |
-| mann_whitney_latency | FLOAT64 | NULLABLE | Mann-Whitney U test result for latency against the baseline. Not exposed by the view. |
-| mann_whitney_throughput | FLOAT64 | NULLABLE | Mann-Whitney U test result for download throughput. Not exposed by the view. |
-| mann_whitney_upload_throughput | FLOAT64 | NULLABLE | Mann-Whitney U test result for upload throughput. Not exposed by the view. |
-| t_test_latency | FLOAT64 | NULLABLE | Welch's *t* test result for latency. Not exposed by the view. |
-| wasserstein_throughput_result | FLOAT64 | NULLABLE | Wasserstein distance result for download throughput. Not exposed by the view. |
-| wasserstein_upload_throughput_result | FLOAT64 | NULLABLE | Wasserstein distance result for upload throughput. Not exposed by the view. |
+| city_median_rtt | FLOAT64 | NULLABLE | Median RTT for the detection group on the analysis day, not the city. View: `performance.analysis_day.rtt_median_ms`. |
+| city_oneth_percentile_rtt | FLOAT64 | NULLABLE | 1st percentile RTT for the detection group on the analysis day, not the city. View: `performance.analysis_day.rtt_p01_ms`. |
+| city_tenth_percentile_rtt | FLOAT64 | NULLABLE | 10th percentile RTT for the detection group on the analysis day, not the city. View: `performance.analysis_day.rtt_p10_ms`. |
+| city_ninetyth_percentile_rtt | FLOAT64 | NULLABLE | 90th percentile RTT for the detection group on the analysis day, not the city. View: `performance.analysis_day.rtt_p90_ms`. |
+| city_median_throughput | FLOAT64 | NULLABLE | Median download throughput for the detection group on the analysis day, not the city. View: `performance.analysis_day.download_median_mbps`. |
+| city_ninetyth_percentile_throughput | FLOAT64 | NULLABLE | 90th percentile download throughput for the detection group on the analysis day, not the city. View: `performance.analysis_day.download_p90_mbps`. |
+| mann_whitney_latency | RECORD | NULLABLE | Mann-Whitney U test result for latency against the baseline. View: `performance.tests.mann_whitney.rtt`. |
+| mann_whitney_throughput | RECORD | NULLABLE | Mann-Whitney U test result for download throughput. View: `performance.tests.mann_whitney.download`. |
+| mann_whitney_upload_throughput | RECORD | NULLABLE | Mann-Whitney U test result for upload throughput. View: `performance.tests.mann_whitney.upload`. |
+| t_test_latency | RECORD | NULLABLE | Welch's *t* test result for latency. View: `performance.tests.welch_t.rtt`. |
+| wasserstein_throughput_result | RECORD | NULLABLE | Wasserstein distance result for download throughput. View: `performance.tests.wasserstein.download`. |
+| wasserstein_upload_throughput_result | RECORD | NULLABLE | Wasserstein distance result for upload throughput. View: `performance.tests.wasserstein.upload`. |
 | anomaly_ratio_rtt | FLOAT64 | NULLABLE | Fraction of the group's measurements flagged anomalous on RTT. |
-| anomaly_rtt_count | INT64 | NULLABLE | Count of those measurements. |
+| anomaly_rtt_count | INT64 | NULLABLE | Not a count: HERMES's 0/1 RTT verdict for the group. View: `performance.anomaly.rtt_significant`. |
 | anomaly_ratio_throughput | FLOAT64 | NULLABLE | Fraction flagged anomalous on download throughput. |
-| anomaly_throughput_count | INT64 | NULLABLE | Count of those measurements. |
+| anomaly_throughput_count | INT64 | NULLABLE | Not a count: HERMES's 0/1 download verdict for the group. View: `performance.anomaly.download_significant`. |
 | anomaly_ratio_upload_throughput | FLOAT64 | NULLABLE | Fraction flagged anomalous on upload throughput. |
-| anomaly_upload_throughput_count | INT64 | NULLABLE | Count of those measurements. |
-| anomaly_loss_ratio | FLOAT64 | NULLABLE | Fraction flagged anomalous on loss. |
+| anomaly_upload_throughput_count | INT64 | NULLABLE | Not a count: HERMES's 0/1 upload verdict for the group. View: `performance.anomaly.upload_significant`. |
+| anomaly_loss_ratio | FLOAT64 | NULLABLE | Despite the name, HERMES's 0/1 loss verdict for the group. |
 | difference_latency | FLOAT64 | NULLABLE | Current median minus baseline median, RTT. |
 | difference_throughput | FLOAT64 | NULLABLE | Current median minus baseline median, download. |
 | difference_upload_throughput | FLOAT64 | NULLABLE | Current median minus baseline median, upload. |
@@ -253,19 +289,19 @@ The hop records `forward_updated_node_details` and `reverse_updated_node_details
 
 <a name="events_enriched"></a>
 
-## `mlab-collaboration.hermes.events_enriched`
+## How to read the events_enriched table
 
 The stable published interface. Field names here are a contract; the underlying table's names are not. Every field is listed in the [field summary](#field-summary) above — this section explains what the six records are for and how to read them.
 
 Because HERMES measures in both directions with two different tools, the path records name the direction they were actually measured in rather than borrowing traceroute's "forward" and "reverse". `server_to_client_path` is scamper, measured from the M-Lab server. `client_to_server_path` is reverse traceroute, measured back toward the server. Hop order and RTT vantage point are preserved as measured in both.
 
-### `client` and `server`
+### The client and server records
 
-The two endpoints of the measurement. Beyond location, `client` carries how the measurement was grouped: `group_label` names the group, `grouping_granularity` says whether that group was formed at city or metro level, and `geo_source` says which database placed the client. Those three are what let you tell measurements from before and after the [2026-08-01 change](#changelog) apart, and they are the fields to group on when you span it.
+The two endpoints of the measurement. Beyond location, `client` carries how the measurement was grouped: `group_label` names the group, `grouping_granularity` says whether that group was formed at city or metro level, and `geo_source` says which database placed the client. Those three are what let you tell measurements from the city and metro periods (see the [changelog](#changelog)) apart, and they are the fields to group on when you span it.
 
 `server.geo_source` is always `server_metadata`. M-Lab server locations come from M-Lab's own records rather than IP geolocation, so they are not subject to the caveats that apply to the hop locations further down.
 
-### `performance`
+### The performance record
 
 The measurement itself, the group's baseline, and the distance between them.
 
@@ -273,11 +309,13 @@ The comparison that matters is between `performance.*` and `performance.baseline
 
 Read every baseline next to `baseline.measurement_count` and `baseline.unique_client_ip_count`. A baseline resting on the minimum admissible sample is a far weaker reference than one resting on thousands of measurements, and the row tells you which you have.
 
-The `anomaly` record holds two different kinds of number. The `*_ratio` and `*_count` fields say how much of the group was affected; the `*_difference_*` fields say how far the group's median moved. A large difference with a small ratio usually means a few very bad measurements, while a large difference with a large ratio means the whole group moved.
+The `anomaly` record holds three different kinds of value. The `*_significant` fields are HERMES's verdict: whether the group's change passed the statistical tests and the size gate. The `*_anomalous_sample_fraction` fields say how much of the group was affected; the `*_difference_*` fields say how far the group's median moved. A large difference with a small fraction usually means a few very bad measurements, while a large difference with a large fraction means the whole group moved. `loss_ratio` is, despite its name, a 0/1 verdict like the `*_significant` fields.
 
-> **The statistical test outputs are not in this view** _[confirm]_. Mann-Whitney U, Welch's *t*, and Wasserstein results are written to the underlying table but are not currently projected into `events_enriched`. If your analysis depends on the test results rather than the anomaly ratios, query [`events_with_as_and_geoloc`](#events_with_as_and_geoloc).
+`tests` holds the results behind the verdicts: Mann-Whitney U for RTT, download, and upload; Welch's *t* for RTT; and Wasserstein distance for download and upload. `analysis_day` holds the group's RTT and download percentiles over every NDT measurement that day, which is the distribution the verdict was reached on. A median you compute over this view's rows will differ from it, because rows exist only for measurements with a traceroute and include the lookback week.
 
-### `server_to_client_path` and `client_to_server_path`
+> **Very large groups are not actually tested.** When either the analysis-day or the baseline sample has more than 20,000 measurements, the test implementations return a `p_value` of `1e-10` and zeros in every other field, without running the test. Treat a `p_value` of exactly `1e-10` with a zero statistic as "not tested", not as overwhelming evidence.
+
+### The path records
 
 Both records carry the same fields, distinguished by `direction` and `measurement_method`. `client_to_server_path` adds a `revtr` record describing the reverse traceroute measurement itself — which system produced the path, why it stopped, why it failed, and whether a vantage point in the client's AS was attempted.
 
@@ -285,7 +323,7 @@ Both records carry the same fields, distinguished by `direction` and `measuremen
 
 `detour_ratio` is `distance_km / geodesic_distance_km`: how much further traffic travelled than the straight line between endpoints. Always read it next to `geolocation_coverage`. A path where a third of hops could be geolocated still reports a distance, and that distance is a lower bound assembled from the hops that happened to be placed — not a measurement of the route.
 
-### `hops`
+### The hops arrays
 
 One record per hop, ordered by TTL, carrying the hop's address and RTT alongside everything HERMES inferred about it: its network, its organization and PeeringDB name, IXP membership, a location, and a reverse DNS name.
 
@@ -297,7 +335,7 @@ The reverse path's hops carry three fields the forward path's do not: `revtr_hop
 
 For how each annotation is produced and where it fails, see [Traceroute enrichment]({{ site.baseurl }}/tests/hermes/methodology/path-enrichment/).
 
-### `quality`
+### The quality record
 
 Whether this row's evidence should be trusted at all, and how much data stands behind the group.
 
@@ -305,9 +343,9 @@ A path that never reached the client, or reached only its AS, still carries usef
 
 <a name="events_with_as_and_geoloc"></a>
 
-## `mlab-collaboration.hermes_union.events_with_as_and_geoloc`
+## How to read the events_with_as_and_geoloc table
 
-The operational table underneath the view: 75 flat columns, written directly by the pipeline. Query it when you need the statistical test outputs, or when you are working on HERMES itself.
+The operational table underneath the view: 79 flat columns, written directly by the pipeline. The view exposes every one of them, so there is no need to query this table for analysis. This section exists to translate queries written against its original names.
 
 Its column names are historical, and several of them describe the data inaccurately. The published view exists partly to correct that, so the mapping below is also the list of names worth being careful with.
 
@@ -357,9 +395,9 @@ Four of these are not cosmetic. If you query the operational table directly, the
 | `baseline_median_loss` | `performance.baseline.loss_rate` |
 | `number_of_measurements_baseline` | `performance.baseline.measurement_count` |
 | `number_of_unique_src_ips_baseline` | `performance.baseline.unique_client_ip_count` |
-| `anomaly_ratio_rtt`, `anomaly_rtt_count` | `performance.anomaly.rtt_ratio`, `.rtt_count` |
-| `anomaly_ratio_throughput`, `anomaly_throughput_count` | `performance.anomaly.download_ratio`, `.download_count` |
-| `anomaly_ratio_upload_throughput`, `anomaly_upload_throughput_count` | `performance.anomaly.upload_ratio`, `.upload_count` |
+| `anomaly_ratio_rtt`, `anomaly_rtt_count` | `performance.anomaly.rtt_anomalous_sample_fraction`, `.rtt_significant` (BOOL) |
+| `anomaly_ratio_throughput`, `anomaly_throughput_count` | `performance.anomaly.download_anomalous_sample_fraction`, `.download_significant` (BOOL) |
+| `anomaly_ratio_upload_throughput`, `anomaly_upload_throughput_count` | `performance.anomaly.upload_anomalous_sample_fraction`, `.upload_significant` (BOOL) |
 | `anomaly_loss_ratio` | `performance.anomaly.loss_ratio` |
 | `difference_latency` | `performance.anomaly.rtt_difference_ms` |
 | `difference_throughput` | `performance.anomaly.download_difference_mbps` |
@@ -406,10 +444,18 @@ The view also adds fields the operational table does not have at all: `direction
 
 ### 2026-08-01 — client grouping and geolocation source changed
 
-Client grouping moved from **city** to **metro** granularity, and the client geolocation source moved from **MaxMind** to **IPinfo**. Both changed on the same date.
+From 2026-08-01, client grouping moved from **city** to **metro** granularity, and the client geolocation source moved from **MaxMind** to **IPinfo**. Both changed on the same date.
 
-This affects any analysis spanning 2026-08-01. Group counts and event counts shift at the boundary for methodological reasons, not because the Internet changed. In `events_enriched`, `client.grouping_granularity` and `client.geo_source` tell you which regime a row belongs to; rows from before the change are projected as `city` and `maxmind`. In the underlying table the corresponding historical columns are NULL.
+Dates added later by backfill were computed with the new method, so the published data has three periods by `partition_date`:
+
+| Analysis dates | Grouping | Client geolocation |
+| --- | --- | --- |
+| Through 2025-07-31 (backfilled) | metro | IPinfo |
+| 2025-08-01 to 2026-07-31 | city | MaxMind |
+| From 2026-08-01 | metro | IPinfo |
+
+This affects any analysis spanning 2025-08-01 or 2026-08-01. Group counts and event counts shift at those boundaries for methodological reasons, not because the Internet changed. In `events_enriched`, `client.grouping_granularity` and `client.geo_source` tell you which regime a row belongs to; city-period rows are projected as `city` and `maxmind`, and have no `client.metro`. In the underlying table the corresponding columns are NULL for the city period.
 
 If your query spans the boundary, group on `client.group_label` together with `client.grouping_granularity` rather than assuming one key applies throughout.
 
-_[confirm the exact effect on event counts before publishing, and state the direction and rough magnitude]_
+Expect detected event counts to roughly halve at the boundary, from about 2,900 to about 1,450 per day, because metro groups aggregate measurements that city groups split apart. That drop reflects the change in grouping, not a change in network performance.

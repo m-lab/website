@@ -30,7 +30,7 @@ In short, for every TCP connection from a client to an M-Lab server, `traceroute
 
 New to traceroutes? [Introduction to traceroutes]({{ site.baseurl }}/learn/traceroute/) explains what a traceroute measures, how to read one, and the ways it can mislead.
 
-M-Lab traceroute data is used by [HERMES]({{ site.baseurl }}/tests/hermes/) to localize Internet performance degradations.
+M-Lab traceroute data is used by [HERMES]({{ site.baseurl }}/tests/hermes/) to localize Internet performance degradations. As part of that work, HERMES annotates every traceroute hop with its AS, IXP membership, geolocation, and reverse DNS name; the [traceroute enrichment pipeline]({{ site.baseurl }}/tests/hermes/methodology/path-enrichment/) documents how those annotations are produced and how far to trust them.
 
 ## Source Code
 
