@@ -5,8 +5,6 @@ title: "HERMES Table Schema"
 breadcrumb: tests
 ---
 
-> **DRAFT — for review, not published.** Field names and structure below are read from the HERMES pipeline source (`create_events_enriched.sql` and `04_mapping_union.sql` in `m-lab/hermes`). Types and modes are derived from the pipeline DDLs and SQL, not read from the live tables; confirm them against `INFORMATION_SCHEMA.COLUMNS` before this page is published.
-
 # HERMES Table Schema
 
 HERMES publishes one interface for analysis, `events_enriched`, a view that carries every column of the table underneath it under clear, stable names. The underlying operational table is documented at the end of this page only as a reference for translating older queries.

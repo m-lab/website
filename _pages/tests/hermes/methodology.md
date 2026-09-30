@@ -5,8 +5,6 @@ title: "HERMES Methodology"
 breadcrumb: tests
 ---
 
-> **DRAFT — for review, not published.** Thresholds and parameters below come from the HERMES paper and blog post. Anything marked _[confirm]_ needs checking against the deployed pipeline before publication.
-
 # HERMES Methodology
 
 This page describes how HERMES turns M-Lab NDT measurements into performance events with localization evidence, stage by stage. For each stage it names the fields that stage produces, so you can trace any value in the published data back to the step that computed it.

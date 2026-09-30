@@ -5,8 +5,6 @@ title: "HERMES"
 breadcrumb: tests
 ---
 
-> **DRAFT — for review, not published.** Items marked _[confirm]_ are read from the HERMES pipeline source and still need checking against the live tables.
-
 # HERMES
 
 HERMES is an M-Lab data product that identifies when groups of Internet users experience a statistically significant drop in performance, and reports the parts of the network most closely associated with that drop.

@@ -5,8 +5,6 @@ title: "Introduction to Traceroutes"
 breadcrumb: learn
 ---
 
-> **DRAFT — for review, not published.**
-
 # Introduction to Traceroutes
 
 When you load a web page, your data does not travel in a straight line to the server. It passes through a sequence of routers, often crossing several independent networks along the way. A **traceroute** is a measurement that tries to reveal that sequence.

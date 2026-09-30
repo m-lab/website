@@ -5,8 +5,6 @@ title: "HERMES Traceroute Enrichment"
 breadcrumb: tests
 ---
 
-> **DRAFT — for review, not published.** Data sources and behaviours below are read from the HERMES pipeline source. Items marked _[confirm]_ need checking before publication.
-
 # Traceroute Enrichment
 
 A raw traceroute hop is an IP address and some round-trip times. On its own that cannot answer "which network was this, and where was it?" — the questions localization depends on. This page describes how the traceroute enrichment pipeline turns each hop into an annotated hop, which sources it uses, how it records where each annotation came from, and how it flags annotations that are probably wrong.
@@ -45,7 +43,7 @@ Two distinct mappings place a hop in the network: one puts the address in an aut
 
 | Mapping | Source | Fields | Where HERMES stores it |
 | --- | --- | --- | --- |
-| IP → AS | CAIDA IP-to-prefix mapping | `asn` | `hermes.unified_ip_to_as`, `hermes.unified_ip_to_as_ipv6` |
+| IP → AS | CAIDA's RouteViews prefix-to-AS datasets (IPv4 and IPv6), plus IXP peering-LAN prefixes from PeeringDB and PCH; M-Lab's own `hopannotation2` annotations where they apply | `asn` | `hermes.unified_ip_to_as`, `hermes.unified_ip_to_as_ipv6` |
 | IP → IXP | PeeringDB and EuroIX | `ixp` | `ix_data.ixp_members` |
 | AS → organization and PeeringDB name | PeeringDB and CAIDA AS Rank | `as_name`, `peeringdb_name` | `hermes.as_metadata` |
 | IP → geolocation | IPinfo, RIPE IPmap, and HOIHO | `latitude`, `longitude`, `city`, `metro`, `country_code` | `hermes.unified_ip_to_geoloc`, `…_ipv6` |

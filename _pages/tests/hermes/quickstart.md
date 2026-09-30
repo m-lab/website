@@ -5,8 +5,6 @@ title: "HERMES Access and QuickStart"
 breadcrumb: tests
 ---
 
-> **DRAFT — for review, not published.**
-
 # HERMES Access and QuickStart
 
 This page takes you from no access to one successful, inexpensive query against the HERMES data. For what HERMES is and what the fields mean, start at the [HERMES overview]({{ site.baseurl }}/tests/hermes/) and the [table schema]({{ site.baseurl }}/tests/hermes/schema/).

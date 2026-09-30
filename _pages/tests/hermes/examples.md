@@ -5,8 +5,6 @@ title: "HERMES Example Queries and Tutorials"
 breadcrumb: tests
 ---
 
-> **DRAFT — for review, not published.** None of the queries on this page have been run against the live tables yet. They are structurally correct against the documented schema, but every one needs to be executed and its scanned-byte figure recorded before publication.
-
 # HERMES Example Queries and Tutorials
 
 Queries here run against `mlab-collaboration.hermes_union.events_enriched`, the stable published interface. See [Access and QuickStart]({{ site.baseurl }}/tests/hermes/quickstart/) for access and cost, and the [schema]({{ site.baseurl }}/tests/hermes/schema/) for what each field means.
