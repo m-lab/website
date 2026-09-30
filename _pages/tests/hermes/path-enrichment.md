@@ -84,8 +84,8 @@ A detour ratio well above 1 means traffic travelled substantially further than i
 
 Carried on the path records rather than per hop:
 
-* `loop_detected` — the path revisits an AS, which usually indicates a routing problem or a measurement artifact.
-* `unresponsive_within_as` — a run of hops inside one AS failed to respond, so that AS's internal path is invisible.
+* `loop_detected` — an AS reappears after a different AS (A B A). This can be a real routing loop, but it is also the signature of third-party addresses and mis-mapped hops, so treat it as a reason for caution rather than a diagnosis. Staying in one AS for several hops is normal and is not a loop.
+* `unresponsive_within_as` — an AS reappears after hops with no ASN (A … A): part of that AS's internal path did not reply or could not be mapped, so it is invisible.
 * `reaches_client` / `reaches_client_asn` — whether the measurement got all the way to the client, or only as far as its AS.
 * `is_virtual` — the path shows signs of being a virtual or tunnelled route rather than the physical topology.
 * `geolocation_coverage` — what fraction of hops could be geolocated at all.

@@ -133,8 +133,8 @@ Every field in both tables, in one place. Dotted names are nested record fields,
 | server_to_client_path.responsive_hop_count | INT64 | NULLABLE | Hops that returned an address. |
 | server_to_client_path.geolocated_hop_count | INT64 | NULLABLE | Hops that could be geolocated. |
 | server_to_client_path.geolocation_coverage | FLOAT64 | NULLABLE | `geolocated_hop_count / total_hop_count`. |
-| server_to_client_path.loop_detected | BOOL | NULLABLE | Whether the path revisits an AS. |
-| server_to_client_path.unresponsive_within_as | BOOL | NULLABLE | Whether a run of hops inside one AS failed to respond. |
+| server_to_client_path.loop_detected | BOOL | NULLABLE | Whether an AS reappears on the path after a *different* AS (A B A). Consecutive hops in the same AS do not count, and hops with no ASN are ignored. NULL when the path has no hops. |
+| server_to_client_path.unresponsive_within_as | BOOL | NULLABLE | Whether an AS reappears after one or more hops with no ASN (A … A): hops that did not reply, or replied from an address that could not be mapped, so part of that AS's internal path is unknown. NULL when the path has no hops. |
 | server_to_client_path.as_path | INT64 | REPEATED | ASes traversed, in path order. |
 | server_to_client_path.country_path | STRING | REPEATED | Countries traversed, in path order. |
 | server_to_client_path.metro_path | STRING | REPEATED | Metro areas traversed, in path order. |
@@ -172,6 +172,8 @@ Every field in both tables, in one place. Dotted names are nested record fields,
 | client_to_server_path | RECORD | NULLABLE | The path measured from the client back toward the server, by reverse traceroute. |
 
 `performance.tests.mann_whitney.download` and `.upload` carry the same fields as `.rtt`; `performance.tests.wasserstein.upload` carries the same fields as `.download`.
+
+On `client_to_server_path`, `loop_detected` and `unresponsive_within_as` use the same definitions but describe the reverse path **as measured**, before HERMES removes ambiguous hops and truncates the path at the first AS re-entry. A loop therefore never appears in the published reverse hops, and these two flags are how you learn that one was measured. They are NULL for analysis dates processed before this definition was introduced.
 
 `client_to_server_path` carries every field listed above for `server_to_client_path`, with `direction` = `client_to_server` and `measurement_method` = `reverse_traceroute`, plus the fields below. Its hops do not carry `baseline_consistency_flag`.
 
@@ -275,10 +277,10 @@ The 79 flat columns of the operational table, each with the view field that expo
 | reach_dest | BOOL | NULLABLE | Whether the path measurement reached the client. View: `quality.reaches_client`. |
 | is_reaching_dst_asn | BOOL | NULLABLE | Whether it at least reached the client's AS. View: `quality.reaches_client_asn`. |
 | is_virtual | BOOL | NULLABLE | Whether the path shows signs of being virtual or tunnelled. |
-| forward_loop | BOOL | NULLABLE | Whether the server-to-client path revisits an AS. |
-| reverse_loop | BOOL | NULLABLE | Whether the client-to-server path revisits an AS. |
-| forward_unresponse_within_AS | BOOL | NULLABLE | Unresponsive run inside one AS, server-to-client. |
-| reverse_unresponsive_within_AS | BOOL | NULLABLE | Unresponsive run inside one AS, client-to-server. |
+| forward_loop | BOOL | NULLABLE | Server-to-client AS loop. Written with an incorrect definition before the fix; the view recomputes it for every date. View: `server_to_client_path.loop_detected`. |
+| reverse_loop | BOOL | NULLABLE | Client-to-server AS loop, on the path as measured. Incorrect before the fix, so the view exposes it only from the fix onward. View: `client_to_server_path.loop_detected`. |
+| forward_unresponse_within_AS | BOOL | NULLABLE | Server-to-client gap inside an AS. Written with an incorrect definition before the fix; the view recomputes it for every date. View: `server_to_client_path.unresponsive_within_as`. |
+| reverse_unresponsive_within_AS | BOOL | NULLABLE | Client-to-server gap inside an AS, on the path as measured. Incorrect before the fix, so the view exposes it only from the fix onward. View: `client_to_server_path.unresponsive_within_as`. |
 | revtr_id | INT64 | NULLABLE | Reverse traceroute identifier. |
 | revtr_system_label | STRING | NULLABLE | Which reverse traceroute system produced the path. |
 | revtr_stop_reason | STRING | NULLABLE | Why the reverse traceroute stopped. |

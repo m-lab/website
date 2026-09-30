@@ -170,17 +170,18 @@ ORDER BY hop.ttl
 Before any claim about *where* a problem sits, filter on path quality:
 
 ```sql
-SELECT ...
+SELECT COUNT(*) AS trustworthy_measurements
 FROM `mlab-collaboration.hermes_union.events_enriched`
 WHERE partition_date = "2025-07-04"
-  AND quality.reaches_client                       -- the trace got to the user
-  AND NOT server_to_client_path.loop_detected      -- no routing loop
-  AND NOT server_to_client_path.unresponsive_within_as
+  AND DATE(measurement_time) = partition_date
+  AND quality.reaches_client                         -- the trace got to the user
+  AND NOT server_to_client_path.loop_detected        -- no AS reappears after another AS
+  AND NOT server_to_client_path.unresponsive_within_as  -- no hidden stretch inside an AS
   AND server_to_client_path.geolocation_coverage >= 0.5
   AND NOT quality.is_virtual
 ```
 
-These filters reduce your sample, sometimes substantially. That is the point: they trade coverage for the ability to say something specific about a network segment.
+These filters reduce your sample substantially. On 2025-07-04 they keep 9.4% of the day's measurements, mostly because only 22.7% of traces reach the client itself; requiring only `quality.reaches_client_asn` instead keeps 28.1%. That is the point: they trade coverage for the ability to say something specific about a network segment. Loops are rare (0.7% of paths), while a hidden stretch inside an AS is common (29.5%), so decide whether your question needs the latter filter before applying it.
 
 ## Get the statistical test outputs
 
