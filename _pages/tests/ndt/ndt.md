@@ -89,8 +89,9 @@ deployment models.
 
 To make NDT data more readily available for research and analysis, M-Lab parses
 all NDT data into BigQuery tables and views, and makes query access available
-for free by subscription to a Google Group. Find out more about how to get
-access on our [BigQuery QuickStart page]({{ site.baseurl }}/quickstart/).
+for free (subject to a 10TB per user per day quota) by subscription to a Google Group.
+Find out more about how to get access on our [BigQuery QuickStart page]({{ site.baseurl }}/quickstart/),
+and see [Quota Strategies](#quota-strategies) for tips on managing usage efficiently.
 
 Note that we sometimes use the terms "table" and "view" interchangeably: they
 reflect different internal implementations, but due to billing and access controls
@@ -287,6 +288,29 @@ current BigQuery Views, please review the pages below:
 
 [migrate-queries-unified-views]: {{ site.baseurl }}/tests/ndt/views/migrate
 [example-queries]: {{ site.baseurl }}/tests/ndt/views/examples
+
+## Quota Strategies
+
+While the [Unified Views](#unified-views) (`ndt.unified_uploads`
+and `ndt.unified_downloads`) are the recommended long-term supported views,
+they are also significantly more resource-intensive — queries against them
+typically consume **10–20× more quota** than queries against the underlying
+raw tables.
+
+A good compromise, especially during the exploration phase of a project, is
+to query the `ndt.ndt7` table (for data from 2020 onward) or the `ndt5` and
+`web100` tables (for earlier periods). These tables use a schema very similar
+to the unified views, and on large windows of analysis (aggregations of thousands
+of samples or more) they produce results that are statistically almost identical.
+
+One important difference is that the raw tables contain **both upload and download
+measurements**. These can be separated using the `raw` field attributes. For
+example, in ndt7 filtering with:
+* `raw.Download.UUID IS NOT NULL` selects only download tests
+* `raw.Upload.UUID IS NOT NULL` selects only upload tests
+
+This approach allows researchers to conserve their daily quota while still
+producing high-quality, reproducible results.
 
 ## Source Code
 
