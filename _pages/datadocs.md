@@ -30,6 +30,12 @@ Advanced users may also be interested in obtaining raw M-Lab test data for detai
 
 * [DISCO dataset]({{ site.baseurl }}/blog/disco-dataset/)
 
+### Derived Datasets
+
+Datasets M-Lab computes from its own measurements, rather than collecting directly.
+
+* [HERMES]({{ site.baseurl }}/tests/hermes/) - detects statistically significant Internet performance degradations in groups of NDT measurements and identifies the network segments associated with them.
+
 ### Analyses
 
 * [Discard Analysis 2018]({{ site.baseurl }}/data/docs/analysis/discard-analysis-2018/)
