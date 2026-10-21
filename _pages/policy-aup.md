@@ -153,7 +153,7 @@ You acknowledge and agree that the foregoing disclaimer and limitation of liabil
 
 ## Miscellaneous
 
-This AUP constitutes a binding agreement between you and M-Lab. If any provision of this AUP is deemed invalid by a court of competent jurisdiction, the invalidity of such provision shall not affect the validity of the remaining provisions, which shall remain in full force and effect. No waiver of any term of this AUP shall be deemed a further or continuing waiver of such term or any other term, and our failure to assert any right or provision under this AUP shall not constitute a waiver of such right or provision.  This AUP shall be governed by the laws of the State of Delaware, without regard to conflict of laws principles.
+This AUP constitutes a binding agreement between you and M-Lab. If any provision of this AUP is deemed invalid by a court of competent jurisdiction, the invalidity of such provision shall not affect the validity of the remaining provisions, which shall remain in full force and effect. No waiver of any term of this AUP shall be deemed a further or continuing waiver of such term or any other term, and our failure to assert any right or provision under this AUP shall not constitute a waiver of such right or provision.  This AUP shall be governed by the laws of the State of California, without regard to conflict of laws principles.
 
 ## Contact Us
 
